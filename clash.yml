@@ -60,6 +60,7 @@ Proxy Group:
       - 杭港
       - google
 Rule:
+  - 'DOMAIN-SUFFIX,pximg.net,Proxy'
   - 'DOMAIN-SUFFIX,youtube.com,Proxy'
   - 'DOMAIN-SUFFIX,googlevideo.com,Proxy'
   - 'DOMAIN-SUFFIX,youtube.com,Proxy'
