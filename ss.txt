@@ -1,6 +1,6 @@
 shadowsocks=hz-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-杭港
-shadowsocks,=sz-hk02.bgp.yoyu.site,:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-深港
-shadowsocks,=sh-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-上港
+shadowsocks=sz-hk02.bgp.yoyu.site,:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-深港
+shadowsocks=sh-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-上港
 shadowsocks=jpidcf.001.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-1
 shadowsocks=jpidcf.002.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-2
 shadowsocks=jpidcf.003.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-3
