@@ -1,6 +1,6 @@
-游鱼-杭港 = shadowsocks, hz-hk.bgp.yoyu.site, 15099, chacha20, "ss745201", upstream-proxy=false, upstream-proxy-auth=false
-游鱼-深港 = shadowsocks, sz-hk02.bgp.yoyu.site, 15099, chacha20, "ss745201", upstream-proxy=false, upstream-proxy-auth=false
-游鱼-上港 = shadowsocks, sh-hk.bgp.yoyu.site, 15099, chacha20, "ss745201", upstream-proxy=false, upstream-proxy-auth=false
+游鱼-杭港 = shadowsocks, hz-hk.bgp.yoyu.site, 15099, chacha20, "ss745201",  fast-open=false, udp-relay=true, tag=olo
+游鱼-深港 = shadowsocks, sz-hk02.bgp.yoyu.site, 15099, chacha20, "ss745201", fast-open=false, udp-relay=true, tag=olo
+游鱼-上港 = shadowsocks, sh-hk.bgp.yoyu.site, 15099, chacha20, "ss745201", fast-open=false, udp-relay=true, tag=olo
 日本IDCF无限速(0.5倍率) -- 1 = shadowsocks, jpidcf.001.bilibili.center, 11173, chacha20, "qv4aZtT608", group=MunCloud, upstream-proxy=false, upstream-proxy-auth=false
 日本IDCF无限速(0.5倍率) -- 2 = shadowsocks, jpidcf.002.bilibili.center, 11173, chacha20, "qv4aZtT608", group=MunCloud, upstream-proxy=false, upstream-proxy-auth=false
 日本IDCF无限速(0.5倍率) -- 3 = shadowsocks, jpidcf.003.bilibili.center, 11173, chacha20, "qv4aZtT608", group=MunCloud, upstream-proxy=false, upstream-proxy-auth=false
