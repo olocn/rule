@@ -2,8 +2,6 @@ shadowsocks=hz-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-
 shadowsocks=sz-hk02.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-深港
 shadowsocks=sh-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-上港
 shadowsocks=jp.003.idcf.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本软银
-shadowsocks=zure.002.hk.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=香港Azure
-shadowsocks=hk.wtt.dynamic-001.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=WTT
 shadowsocks=hugang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-1
 shadowsocks=hugang.002.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-2
 shadowsocks=hanggang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=杭港IPLC-1
@@ -11,6 +9,4 @@ shadowsocks=hanggang.002.jtmg.bilibili.center:11173, method=chacha20, password=q
 shadowsocks=no5834650419.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V436-深圳东京NTT
 shadowsocks=o4842021067.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host= fast-open=false, udp-relay=true, tag=V519-杭州香港AZ
 shadowsocks=no3075577901.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V520-杭州香港AZ
-shadowsocks=no2376021160.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V521-杭州香港GCP
-shadowsocks=no7502208439.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V522-杭州香港GCP
 shadowsocks=no5574817083.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V435-深圳东京KDDI
