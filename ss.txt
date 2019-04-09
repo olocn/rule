@@ -6,7 +6,6 @@ shadowsocks=jpidcf.002.bilibili.center:11173, method=chacha20, password=qv4aZtT6
 shadowsocks=jpidcf.003.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-3
 shadowsocks=jpidcf.004.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-4
 shadowsocks=jpidcf.005.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本IDCF-5
-沪港IPLC无限速(2倍率) -- 1 = shadowsocks, hugang.001.jtmg.bilibili.center, 11173, chacha20, "qv4aZtT608", group=MunCloud, upstream-proxy=false, upstream-proxy-auth=false
 shadowsocks=hugang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-1
 shadowsocks=hugang.002.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-2
 shadowsocks=hanggang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=杭港IPLC-1
