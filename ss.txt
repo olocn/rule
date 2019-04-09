@@ -2,6 +2,7 @@ shadowsocks=hz-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-
 shadowsocks=sz-hk02.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-深港
 shadowsocks=sh-hk.bgp.yoyu.site:15099, method=chacha20, password=ss745201, fast-open=false, udp-relay=true, tag=游鱼-上港
 shadowsocks=jp.003.idcf.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=日本软银
+shadowsocks=zure.002.hk.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=香港Azure
 shadowsocks=hugang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-1
 shadowsocks=hugang.002.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=沪港IPLC-2
 shadowsocks=hanggang.001.jtmg.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=杭港IPLC-1
