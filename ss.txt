@@ -9,3 +9,5 @@ shadowsocks=o4842021067.internetworld.cloud:443, method=chacha20, password=wzoUW
 shadowsocks=no3075577901.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V520-杭州香港AZ
 shadowsocks=hk.game.002.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=香港游戏
 shadowsocks=tw.hinet.001.bilibili.center:11173, method=chacha20, password=qv4aZtT608, fast-open=false, udp-relay=true,tag=台湾HINET
+shadowsocks=no7418261142.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=itunes.apple.com/cn/app/455, fast-open=false, udp-relay=true, tag=上海首尔-GS
+shadowsocks=no1220239206.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=itunes.apple.com/cn/app/455, fast-open=false, udp-relay=true, tag=上海东京-GS
