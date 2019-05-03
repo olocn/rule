@@ -1,0 +1,46 @@
+DOMAIN,experiment.appadhoc.com
+
+# > KFC
+DOMAIN,tracker.appadhoc.com
+DOMAIN,fp.hwwt8.com
+DOMAIN,trackingprd.hwwt8.com
+
+DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,appbaqend.com
+DOMAIN-SUFFIX,data.flurry.com
+DOMAIN-SUFFIX,qchannel01.cn
+DOMAIN,g-assets.daily.taobao.net
+DOMAIN-SUFFIX,nuomi.com
+
+# > 高德
+DOMAIN,aoscdn.amap.com
+DOMAIN,page.amap.com
+DOMAIN,sync.amap.com
+DOMAIN,mps.amap.com
+DOMAIN,aos-cdn-image.amap.com
+DOMAIN,wb.amap.com
+DOMAIN,f.amap.com
+DOMAIN-SUFFIX,ac.mmstat.com
+DOMAIN-SUFFIX,go.mmstat.com
+DOMAIN-SUFFIX,gxb.mmstat.com
+DOMAIN-SUFFIX,hz.mmstat.com
+DOMAIN-SUFFIX,p3p.mmstat.com
+DOMAIN-SUFFIX,res.mmstat.com
+DOMAIN-SUFFIX,yt.mmstat.com
+DOMAIN-SUFFIX,wgo.mmstat.com
+DOMAIN-SUFFIX,hockeyapp.net
+DOMAIN,fuwu.wap.sogou.com
+
+DOMAIN-SUFFIX,appodeal.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN,x.appbaqend.com
+DOMAIN-SUFFIX,inner-active.mobi
+DOMAIN-SUFFIX,applovin.com
+DOMAIN,union.uc.cn
+DOMAIN-SUFFIX,tlnk.io
+DOMAIN-SUFFIX,alexametrics.com
+
+# > WPS
+DOMAIN,ad-stat.ksosoft.com
+DOMAIN-SUFFIX,kingsoft-office-service.com
+USER-AGENT,wpsoffice*
