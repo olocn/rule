@@ -1,10 +1,10 @@
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,cdn-apple.com
 
-
 # > App Store Download 
 USER-AGENT,AppStore*
 DOMAIN-SUFFIX,itunes.apple.com,Apple
+DOMAIN-SUFFIX,appstore.com
 
 # > Apple Music
 DOMAIN,aod.itunes.apple.com
