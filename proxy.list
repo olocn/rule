@@ -1,7 +1,6 @@
 # > rsshub
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,acompli.net
-DOMAIN-SUFFIX,helpshift.com
 DOMAIN-SUFFIX,evernote.com
 DOMAIN-SUFFIX,ssr.sh
 DOMAIN-SUFFIX,sehuatang.org
@@ -18,7 +17,20 @@ DOMAIN-SUFFIX,dlercloud.org
 DOMAIN-SUFFIX,muncloud.com
 DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,pixhost.to
+
+
+// Microsoft
+USER-AGENT,OneDrive*
+DOMAIN-KEYWORD,microsoft
+DOMAIN-SUFFIX,hotmail.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,live.net
+DOMAIN-SUFFIX,msn.com
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office365.com
+DOMAIN-SUFFIX,office.net
+DOMAIN-SUFFIX,outlook.com
+DOMAIN-SUFFIX,helpshift.com
 DOMAIN-SUFFIX,ampproject.net
 DOMAIN-SUFFIX,ampproject.org
-
 
