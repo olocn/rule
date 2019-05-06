@@ -7,6 +7,10 @@ IP-CIDR,198.11.128.0/18,no-resolve
 IP-CIDR,192.126.125.210/32,no-resolve
 IP-CIDR,34.80.56.62/32,no-resolve
 DOMAIN,e.crashlytics.com
+DOMAIN-SUFFIX,rdimg.com,
+DOMAIN-SUFFIX,rrys.tv,DIRECT
+DOMAIN-SUFFIX,rssdiy.com
+DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,cmbchina.com
