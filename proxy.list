@@ -1,3 +1,4 @@
+DOMAIN,image.weserv.nl
 DOMAIN-SUFFIX,feedx.co
 DOMAIN-SUFFIX,feedx.net
 DOMAIN-SUFFIX,liuli.in
@@ -19,10 +20,11 @@ DOMAIN-SUFFIX,pximg.net
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,pixhost.to
-
+DOMAIN-SUFFIX,ft.com
 
 
 // Microsoft
+DOMAIN-SUFFIX,onedrive.com
 USER-AGENT,OneDrive*
 DOMAIN-KEYWORD,microsoft
 DOMAIN-SUFFIX,hotmail.com
