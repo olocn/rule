@@ -8,6 +8,7 @@ DOMAIN-SUFFIX,evernote.com
 DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.com
 DOMAIN-SUFFIX,zaobao.com
+DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,dlercloud.me
 DOMAIN-SUFFIX,muncloud.com
 DOMAIN-SUFFIX,ssr.sh
@@ -18,6 +19,7 @@ DOMAIN-SUFFIX,pximg.net
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,pixhost.to
+
 
 
 // Microsoft
@@ -35,4 +37,3 @@ DOMAIN-SUFFIX,helpshift.com
 DOMAIN-SUFFIX,ampproject.net
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,acompli.net
-
