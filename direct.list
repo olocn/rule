@@ -1,3 +1,4 @@
+
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
 IP-CIDR,205.204.96.0/19,no-resolve
@@ -20,6 +21,7 @@ DOMAIN-SUFFIX,mtvip.net
 DOMAIN-SUFFIX,lxysh.xyz
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,pthome.net
+DOMAIN-SUFFIX,gtimg.com
 
 # > Tencent
 USER-AGENT,MicroMessenger%20Client
