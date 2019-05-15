@@ -36,3 +36,9 @@ DOMAIN,api-glb-sea.smoot.apple.com
 
 # > Apple TV
 DOMAIN,ocvideo.apple.com
+
+//Siri
+USER-AGENT,*AssistantServices*
+USER-AGENT,MobileAsset*
+USER-AGENT,Siri*
+USER-AGENT,*siri*
