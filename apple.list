@@ -32,7 +32,7 @@ USER-AGENT,TestFlight*
 DOMAIN,itunes.apple.com
 
 # > Spotlight
-DOMAIN,api-glb-sea.smoot.apple.com
+#DOMAIN,api-glb-sea.smoot.apple.com
 
 # > Apple TV
 DOMAIN,ocvideo.apple.com
