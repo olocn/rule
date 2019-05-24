@@ -34,6 +34,7 @@ DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,ft.com
 DOMAIN,rss.rrys.tv
 
+DOMAIN-SUFFIX,msedge.net
 // Microsoft
 DOMAIN-SUFFIX,onedrive.com
 USER-AGENT,OneDrive*
