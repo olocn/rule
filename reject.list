@@ -7,6 +7,9 @@ DOMAIN,biaozhu.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN-SUFFIX,pingma.qq.com
 DOMAIN,loc.map.baidu.com
+DOMAIN,nsclick.baidu.com
+DOMAIN,hmma.baidu.com
+DOMAIN-SUFFIX,nuomi.com
 
 DOMAIN,logs.amap.com
 DOMAIN,stats.jpush.cn
