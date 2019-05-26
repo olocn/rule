@@ -5,6 +5,6 @@ shadowsocks=no5172976453.internetworld.cloud:443, method=chacha20, password=wzoU
 shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
 shadowsocks=47.100.193.49:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海2
 shadowsocks=47.100.175.206:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾1
-shadowsocks=40.73.112.74:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海3
+shadowsocks=47.245.5.195:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本1
 shadowsocks=193.110.201.134:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港GT2
 shadowsocks=52.175.79.144:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ2
