@@ -34,6 +34,12 @@ DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,ft.com
 DOMAIN,rss.rrys.tv
 
+//spark
+DOMAIN,api.amplitude.com
+DOMAIN,app.smartmailcloud.com
+DOMAIN,gate.hockeyapp.net
+DOMAIN-SUFFIX,smartmailcloud.com
+
 DOMAIN-SUFFIX,msedge.net
 // Microsoft
 DOMAIN-SUFFIX,onedrive.com
