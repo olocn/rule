@@ -1,12 +1,14 @@
-shadowsocks=103.121.209.11:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-1
-shadowsocks=103.121.209.70:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-3
+shadowsocks=jp.001.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-1
+shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-3
 shadowsocks=47.110.86.112:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V520-杭州香港AZ
-shadowsocks=no5172976453.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V534-gce
+shadowsocks=no1381706330.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=, fast-open=false, udp-relay=true, tag=V534-gce
 shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
 shadowsocks=47.100.193.49:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海2
 shadowsocks=47.100.175.206:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾1
+shadowsocks=125.227.83.18:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT3
 shadowsocks=47.245.5.195:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本1
-shadowsocks=122.100.173.150:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
+shadowsocks=125.6.64.129:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本NTN
+shadowsocks=ctm2.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
 shadowsocks=52.175.79.144:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ2
 shadowsocks=193.110.201.134:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=GT2
 shadowsocks=120.79.73.29:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC
