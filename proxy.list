@@ -32,7 +32,7 @@ DOMAIN,videos-f.jwpsrv.com
 DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,beautylegmm.com
 DOMAIN-SUFFIX,ft.com
-DOMAIN,rss.rrys.tv
+DOMAIN-SUFFIX,rrys.tv
 
 //spark
 DOMAIN,api.amplitude.com
