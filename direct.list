@@ -10,7 +10,6 @@ IP-CIDR,192.126.125.210/32,no-resolve
 IP-CIDR,34.80.56.62/32,no-resolve
 DOMAIN,e.crashlytics.com
 DOMAIN-SUFFIX,rdimg.com,
-DOMAIN-SUFFIX,rrys.tv,DIRECT
 DOMAIN-SUFFIX,rssdiy.com
 DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,digicert.com
@@ -23,6 +22,7 @@ DOMAIN-SUFFIX,lxysh.xyz
 DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,pthome.net
 DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,ifanr.com
 
 # > Tencent
 USER-AGENT,MicroMessenger%20Client
@@ -170,5 +170,4 @@ DOMAIN-SUFFIX,zhangzishi.cc
 DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zhuihd.com
-USER-AGENT,NeteaseMusic*
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*
