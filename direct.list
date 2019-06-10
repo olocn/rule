@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,itunes.com
 
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
