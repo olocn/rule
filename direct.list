@@ -7,7 +7,7 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,itunes.com
-IP-CIDR,17.0.0.0/18,no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
 
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
