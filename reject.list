@@ -263,7 +263,7 @@ DOMAIN-SUFFIX,deliver.ifeng.com
 DOMAIN,log.umsns.com
 DOMAIN,log.snssdk.com
 DOMAIN,toblog.snssdk.com
-DOMAIN-SUFFIX,mmstat.com
+DOMAIN,log.mmstat.com
 DOMAIN,report.jpush.cn
 DOMAIN,static.jpush.cn
 DOMAIN,stats.jpush.cn
@@ -274,8 +274,6 @@ DOMAIN,appnext-a.akamaihd.net
 DOMAIN,abema-adx.ameba.jp
 DOMAIN,ad.caiyunapp.com
 DOMAIN,ad.hzyoka.com
-DOMAIN,ad.jiemian.com
-DOMAIN,ad.qingting.fm
 DOMAIN,ad.wappalyzer.com
 DOMAIN,ad-cn.jovcloud.com
 DOMAIN,adsapi.manhuaren.com
