@@ -1,6 +1,6 @@
 shadowsocks=jp.001.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-1
 shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-3
-shadowsocks=47.110.86.112:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V520-Z
+shadowsocks=no3075577901.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V520-Z
 shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V534-gce
 shadowsocks=no3174266524.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V434-iij
 shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
