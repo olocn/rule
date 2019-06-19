@@ -472,7 +472,7 @@ DOMAIN-SUFFIX,sehuatang.com,PROXY
 DOMAIN-SUFFIX,zaobao.com,PROXY
 DOMAIN-SUFFIX,zaobao.com.sg,PROXY
 DOMAIN-SUFFIX,dlercloud.io,PROXY
-DOMAIN-SUFFIX,muncloud.net,PROXY
+DOMAIN-SUFFIX,muncloud.asia,PROXY
 DOMAIN-SUFFIX,ssr.sh,PROXY
 DOMAIN-SUFFIX,maying.co,PROXY
 DOMAIN,content.jwplatform.com,PROXY
