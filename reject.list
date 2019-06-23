@@ -1,10 +1,8 @@
-DOMAIN,c.isdspeed.qq.com
+
 DOMAIN-SUFFIX,51la.net
 DOMAIN,cig.com.cn
 DOMAIN,ta.trs.cn
 
-DOMAIN,tcss.qq.com
-DOMAIN,tingyun.com
 
 DOMAIN,api.share.mob.com
 
@@ -306,6 +304,7 @@ DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 
 # > Alibaba
+DOMAIN,audid-api.taobao.com
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,adash.m.taobao.com
 DOMAIN,adash.man.aliyuncs.com
@@ -354,7 +353,6 @@ DOMAIN,adv.sec.miui.com
 DOMAIN,adv.sec.intl.miui.com
 DOMAIN,o2o.api.xiaomi.com
 
-# (N)
 # > NetEase
 DOMAIN,ad.bn.netease.com
 DOMAIN,ad.yixin.im
@@ -370,9 +368,10 @@ DOMAIN,n.3g.163.com
 DOMAIN,nex.163.com
 DOMAIN,yt-adp.nosdn.127.net
 
-
-# (T)
 # > Tencent
+DOMAIN-SUFFIX,isdspeed.qq.com
+DOMAIN,tcss.qq.com
+DOMAIN-SUFFIX,tingyun.com
 DOMAIN-SUFFIX,bugly.qq.com
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
@@ -388,4 +387,4 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,tajs.qq.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-DOMAIN,isdspeed.qq.com
+
