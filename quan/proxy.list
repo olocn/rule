@@ -541,7 +541,5 @@ IP-CIDR,91.108.56.0/22,PROXY,no-resolve
 IP-CIDR,109.239.140.0/24,PROXY,no-resolve
 IP-CIDR,149.154.160.0/20,PROXY,no-resolve
 
-DOMAIN-SUFFIX,akamaihd.net,Proxy
-DOMAIN-SUFFIX,steampowered.com,Proxy
 DOMAIN-SUFFIX,msauth.net,Proxy
 DOMAIN,mobile.pipe.aria.microsoft.com,Proxy
