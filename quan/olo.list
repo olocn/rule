@@ -1,0 +1,13 @@
+//油管
+USER-AGENT,*youtube*,olo
+DOMAIN-SUFFIX,googlevideo.com,olo
+DOMAIN-SUFFIX,youtube.com,olo
+DOMAIN,youtubei.googleapis.com,olo
+USER-AGENT,com.google.ios.youtube*,olo
+USER-AGENT,YouTubeMusic*,olo
+
+//动画疯
+USER-AGENT,Anime*,tw
+DOMAIN-SUFFIX,bahamut.com.tw,tw
+DOMAIN-SUFFIX,gamer.com.tw,tw
+DOMAIN-SUFFIX,hinet.net,tw
