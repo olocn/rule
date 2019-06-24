@@ -1,3 +1,12 @@
+//Apple
+# > App Stor
+DOMAIN-SUFFIX,itunes.apple.com,PROXY
+DOMAIN,appleiphonecell.com,PROXY
+DOMAIN-SUFFIX,aaplimg.com,PROXY
+DOMAIN-SUFFIX,appsto.re,PROXY
+DOMAIN-SUFFIX,cdn-apple.com,PROXY
+DOMAIN-SUFFIX,icloud-content.com,PROXY
+
 DOMAIN-SUFFIX,imagetwist.com,PROXY
 DOMAIN-KEYWORD,github,PROXY
 IP-CIDR,140.101.144.0/20,PROXY,no-resolve
@@ -41,14 +50,6 @@ DOMAIN-SUFFIX,beautylegmm.com,PROXY
 DOMAIN-SUFFIX,ft.com,PROXY
 DOMAIN,rss.rrys.tv,PROXY
 
-//油管
-USER-AGENT,*youtube*,olo
-DOMAIN-SUFFIX,googlevideo.com,olo
-DOMAIN-SUFFIX,youtube.com,olo
-DOMAIN,youtubei.googleapis.com,olo
-USER-AGENT,com.google.ios.youtube*,olo
-USER-AGENT,YouTubeMusic*,olo
-
 
 //spark
 DOMAIN,api.amplitude.com,PROXY
@@ -82,18 +83,6 @@ DOMAIN-SUFFIX,windows.com,PROXY
 DOMAIN-SUFFIX,windows.net,PROXY
 DOMAIN-SUFFIX,windowsupdate.com,PROXY
 
-//Apple
-# > App Store Download || iBooks Sample
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
-
-
-DOMAIN,appleiphonecell.com,PROXY
-
-DOMAIN-SUFFIX,aaplimg.com,PROXY
-DOMAIN-SUFFIX,appsto.re,PROXY
-DOMAIN-SUFFIX,cdn-apple.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
-
 USER-AGENT,Argo*,PROXY
 DOMAIN-SUFFIX,netflix.com,PROXY
 DOMAIN-SUFFIX,netflix.net,PROXY
@@ -108,12 +97,6 @@ DOMAIN-SUFFIX,bbc.co.uk,PROXY
 DOMAIN-SUFFIX,bbci.co.uk,PROXY
 DOMAIN-KEYWORD,bbcfmt,PROXY
 DOMAIN-KEYWORD,uk-live,PROXY
-
-//动画疯
-USER-AGENT,Anime*,tw
-DOMAIN-SUFFIX,bahamut.com.tw,tw
-DOMAIN-SUFFIX,gamer.com.tw,tw
-DOMAIN-SUFFIX,hinet.net,tw
 
 USER-AGENT,mytv*,PROXY
 DOMAIN-SUFFIX,mytvsuper.com,PROXY
@@ -421,7 +404,6 @@ DOMAIN,abc.go.com,PROXY
 DOMAIN,abc.net.au,PROXY
 DOMAIN,wego.here.com,PROXY
 USER-AGENT,Roam*,PROXY
-
 
 
 IP-CIDR,153.254.0.0/16,game,no-resolve
