@@ -1,5 +1,7 @@
-//game
-
+//supercell
+DOMAIN-SUFFIX,supercell.com,game
+DOMAIN-SUFFIX,brawlstars.com,game
+DOMAIN-SUFFIX,brawlstarsgame.com,game
 IP-CIDR,35.0.0.0/8,game,no-resolve
 IP-CIDR,63.0.0.0/8,game,no-resolve
 IP-CIDR,184.0.0.0/8,game,no-resolve
@@ -10,7 +12,9 @@ IP-CIDR,13.0.0.0/8,game,no-resolve
 IP-CIDR,34.0.0.0/8,game,no-resolve
 IP-CIDR,18.0.0.0/8,game,no-resolve
 
-
+//steam
+DOMAIN-SUFFIX,akamaihd.net,game
+DOMAIN-SUFFIX,steampowered.com,game
 DOMAIN-SUFFIX,steamstatic.com,game
 IP-CIDR,155.133.0.0/16,game,no-resolve
 IP-CIDR,205.196.0.0/16,game,no-resolve
