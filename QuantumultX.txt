@@ -46,6 +46,7 @@ DOMAIN-SUFFIX,vd.l.qq.com,DIRECT
 DOMAIN-SUFFIX,goodreads.com,PROXY
 
 #reject
+DOMAIN,log.mmstat.com,REJECT
 DOMAIN-SUFFIX,51la.net,REJECT
 DOMAIN,cig.com.cn,REJECT
 DOMAIN,ta.trs.cn,REJECT
@@ -877,15 +878,28 @@ USER-AGENT,Roam*,PROXY
 
 
 //game
-IP-CIDR,35.0.0.0/8,game
-IP-CIDR,63.0.0.0/8,game
-IP-CIDR,184.0.0.0/8,game
-IP-CIDR,52.0.0.0/8,game
-IP-CIDR,3.0.0.0/8,game
-IP-CIDR,54.0.0.0/8,game
-IP-CIDR,13.0.0.0/8,game
-IP-CIDR,34.0.0.0/8,game
-IP-CIDR,18.0.0.0/8,game
+
+IP-CIDR,35.0.0.0/8,game,no-resolve
+IP-CIDR,63.0.0.0/8,game,no-resolve
+IP-CIDR,184.0.0.0/8,game,no-resolve
+IP-CIDR,52.0.0.0/8,game,no-resolve
+IP-CIDR,3.0.0.0/8,game,no-resolve
+IP-CIDR,54.0.0.0/8,game,no-resolve
+IP-CIDR,13.0.0.0/8,game,no-resolve
+IP-CIDR,34.0.0.0/8,game,no-resolve
+IP-CIDR,18.0.0.0/8,game,no-resolve
+
+IP-CIDR,155.133.0.0/16,game,no-resolve
+IP-CIDR,205.196.0.0/16,game,no-resolve
+IP-CIDR,162.254.0.0/16,game,no-resolve
+IP-CIDR,34.85.0.0/16,game,no-resolve
+IP-CIDR,185.25.0.0/16,game,no-resolve
+IP-CIDR,205.185.0.0/16,game,no-resolve
+IP-CIDR,146.66.0.0/16,game,no-resolve
+IP-CIDR,103.10.0.0/16,game,no-resolve
+IP-CIDR,130.211.0.0/16,game,no-resolve
+IP-CIDR,190.217.0.0/16,game,no-resolve
+IP-CIDR,153.254.0.0/16,game,no-resolve
 
 // Facebook
 IP-CIDR,103.4.96.0/22,PROXY,no-resolve
@@ -1020,9 +1034,14 @@ IP-CIDR,91.108.56.0/22,PROXY,no-resolve
 IP-CIDR,109.239.140.0/24,PROXY,no-resolve
 IP-CIDR,149.154.160.0/20,PROXY,no-resolve
 
+DOMAIN-SUFFIX,akamaihd.net,Proxy
+DOMAIN-SUFFIX,steampowered.com,Proxy
+DOMAIN-SUFFIX,msauth.net,Proxy
+DOMAIN,mobile.pipe.aria.microsoft.com,Proxy
+
 
 # DIRECT
-
+DOMAIN-SUFFIX,thefatherofsalmon.com,DIRECT
 DOMAIN-SUFFIX,12306.com,DIRECT
 DOMAIN-SUFFIX,126.net,DIRECT
 DOMAIN-SUFFIX,163.com,DIRECT
