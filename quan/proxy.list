@@ -1,5 +1,5 @@
 //Apple
-# > App Stor
+# > App Store
 DOMAIN-SUFFIX,itunes.apple.com,PROXY
 DOMAIN,appleiphonecell.com,PROXY
 DOMAIN-SUFFIX,aaplimg.com,PROXY
