@@ -7,6 +7,8 @@ DOMAIN-SUFFIX,appsto.re,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
 
+DOMAIN-SUFFIX,getpocket.com,PROXY
+DOMAIN-SUFFIX,pocket-image-cache.com,PROXY
 DOMAIN-SUFFIX,imagetwist.com,PROXY
 DOMAIN-KEYWORD,github,PROXY
 IP-CIDR,140.101.144.0/20,PROXY,no-resolve
