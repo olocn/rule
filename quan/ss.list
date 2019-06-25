@@ -7,8 +7,9 @@ shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT
 shadowsocks=23.101.2.108:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ7
 shadowsocks=ctm2.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
 shadowsocks=ctm8.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门8
+shadowsocks=ctm17.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
-shadowsocks=47.245.5.195:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本1
+shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本BBTEC1
 shadowsocks=104.251.225.61:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国GIA6
 shadowsocks=kt3.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=TK3
 shadowsocks=120.79.106.40:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港IPLC
