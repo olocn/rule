@@ -7,6 +7,8 @@ DOMAIN-SUFFIX,appsto.re,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
 
+DOMAIN-SUFFIX,sentry.io,PROXY
+DOMAIN-SUFFIX,typekit.net,PROXY
 DOMAIN-SUFFIX,getpocket.com,PROXY
 DOMAIN-SUFFIX,pocket-image-cache.com,PROXY
 DOMAIN-SUFFIX,imagetwist.com,PROXY
