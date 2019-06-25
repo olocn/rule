@@ -10,7 +10,7 @@ IP-CIDR,3.0.0.0/8,game,no-resolve
 IP-CIDR,54.0.0.0/8,game,no-resolve
 IP-CIDR,13.0.0.0/8,game,no-resolve
 IP-CIDR,34.0.0.0/8,game,no-resolve
-IP-CIDR,18.0.0.0/8,game,no-resolve
+IP-CIDR,18.0.0.0/8,no-resolve,game
 
 //steam
 DOMAIN-SUFFIX,akamaihd.net,game
