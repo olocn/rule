@@ -14,6 +14,7 @@ DOMAIN,vd.l.qq.com
 
 DOMAIN-SUFFIX,huami.com
 DOMAIN-SUFFIX,sspai.com
+DOMAIN-SUFFIX,okjike.com
 
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
