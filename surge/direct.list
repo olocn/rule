@@ -11,7 +11,7 @@ USER-AGENT,*siri*
 
 
 DOMAIN,api.dizhensubao.igexin.com
-DOMAIN-SUFFIX,vd.l.qq.com
+DOMAIN,vd.l.qq.com
 
 
 # > ali
