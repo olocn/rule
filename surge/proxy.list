@@ -16,6 +16,9 @@ DOMAIN,analytics.google.com
 DOMAIN,analyticsinsights-pa.googleapis.com
 DOMAIN,analyticsreporting.googleapis.com
 
+DOMAIN-SUFFIX,rakuen.thec.me
+
+DOMAIN-SUFFIX,dapenti.com
 
 DOMAIN-SUFFIX,baldrsky.com
 DOMAIN-SUFFIX,right.com.cn
