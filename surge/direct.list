@@ -4,10 +4,15 @@ DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,crashlytics.com
 
 //Siri
-USER-AGENT,*AssistantServices*,DIRECT
-USER-AGENT,MobileAsset*,DIRECT
-USER-AGENT,Siri*,DIRECT
-USER-AGENT,*siri*,DIRECT
+USER-AGENT,*AssistantServices*
+USER-AGENT,MobileAsset*
+USER-AGENT,Siri*
+USER-AGENT,*siri*
+
+
+DOMAIN,api.dizhensubao.igexin.com
+DOMAIN-SUFFIX,vd.l.qq.com
+
 
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
