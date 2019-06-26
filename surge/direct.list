@@ -12,6 +12,7 @@ USER-AGENT,*siri*
 DOMAIN,api.dizhensubao.igexin.com
 DOMAIN,vd.l.qq.com
 
+DOMAIN-SUFFIX,sspai.com
 
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
