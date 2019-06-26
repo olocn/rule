@@ -1,7 +1,6 @@
 # > Apple
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,crashlytics.com
 
 //Siri
 USER-AGENT,*AssistantServices*
@@ -44,6 +43,7 @@ USER-AGENT,MicroMessenger%20Client
 USER-AGENT,WeChat*
 DOMAIN-SUFFIX,qq.com
 DOMAIN-SUFFIX,tencent.com
+
 # > Alibaba
 DOMAIN-SUFFIX,alibaba.com
 DOMAIN-SUFFIX,alicdn.com
@@ -140,10 +140,7 @@ DOMAIN-SUFFIX,ipv6-test.com
 DOMAIN-SUFFIX,test-ipv6.com
 DOMAIN-SUFFIX,whatismyip.com
 DOMAIN,ip.bjango.com
-# > Speed Test
-# DOMAIN-SUFFIX,speedtest.net
-# DOMAIN-SUFFIX,netspeedtestmaster.com
-DOMAIN,speedtest.macpaw.com
+
 # > Other
 DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,cailianpress.com
