@@ -65,7 +65,7 @@ DOMAIN-SUFFIX,smartmailcloud.com
 
 // Microsoft
 
-
+DOMAIN,mobile.pipe.aria.microsoft.com
 DOMAIN-SUFFIX,onedrive.com
 USER-AGENT,OneDrive*
 DOMAIN-SUFFIX,hotmail.com
