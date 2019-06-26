@@ -11,6 +11,11 @@ DOMAIN-SUFFIX,mzstatic.com
 IP-CIDR,17.0.0.0/8,no-resolve
 
 
+DOMAIN,analytics.google.com
+DOMAIN,analyticsinsights-pa.googleapis.com
+DOMAIN,analyticsreporting.googleapis.com
+
+
 DOMAIN-SUFFIX,baldrsky.com
 DOMAIN-SUFFIX,right.com.cn
 DOMAIN-SUFFIX,pixiv.cat
