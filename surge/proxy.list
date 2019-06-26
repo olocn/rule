@@ -11,7 +11,7 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,apps.apple.com
 IP-CIDR,17.0.0.0/8,no-resolve
 
-
+DOMAIN-SUFFIX,googleapis.com
 DOMAIN,analytics.google.com
 DOMAIN,analyticsinsights-pa.googleapis.com
 DOMAIN,analyticsreporting.googleapis.com
