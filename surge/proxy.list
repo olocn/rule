@@ -10,6 +10,8 @@ DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,apps.apple.com
 IP-CIDR,17.0.0.0/8,no-resolve
+DOMAIN-SUFFIX,testflight.apple.com
+
 
 DOMAIN-SUFFIX,googleapis.com
 DOMAIN,analytics.google.com
