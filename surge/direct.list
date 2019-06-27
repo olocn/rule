@@ -17,6 +17,8 @@ DOMAIN-SUFFIX,sspai.com
 DOMAIN-SUFFIX,okjike.com
 DOMAIN-SUFFIX,douban.com
 DOMAIN-SUFFIX,jysq.net
+DOMAIN-SUFFIX,pingwest.com
+
 
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
