@@ -18,16 +18,13 @@ DOMAIN,captive.apple.com,DIRECT
 DOMAIN,configuration.apple.com,DIRECT
 DOMAIN,guzzoni.apple.com,DIRECT
 DOMAIN,smp-device-content.apple.com,DIRECT
-DOMAIN,xp.apple.com,DIRECT
+
 DOMAIN-SUFFIX,ess.apple.com,DIRECT
 DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
 DOMAIN-SUFFIX,push.apple.com,DIRECT
-DOMAIN,aod.itunes.apple.com,DIRECT
 DOMAIN,mesu.apple.com,DIRECT
 DOMAIN,api.smoot.apple.cn,DIRECT
 DOMAIN,gs-loc.apple.com,DIRECT
-DOMAIN,mvod.itunes.apple.com,DIRECT
-DOMAIN,streamingaudio.itunes.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
@@ -38,18 +35,21 @@ USER-AGENT,MobileAsset*,DIRECT
 USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
-DOMAIN-SUFFIX,itunes.com,DIRECT
-DOMAIN-SUFFIX,apple.co,DIRECT
-DOMAIN-SUFFIX,apple.com,DIRECT
-DOMAIN-SUFFIX,appstore.com,DIRECT
-DOMAIN-SUFFIX,crashlytics.com,DIRECT
-DOMAIN-SUFFIX,icloud.com,DIRECT
-DOMAIN-SUFFIX,me.com,DIRECT
-DOMAIN-SUFFIX,mzstatic.com,DIRECT
-IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
 
 
 
+DOMAIN-SUFFIX,huami.com,DIRECT
+DOMAIN-SUFFIX,sspai.com,DIRECT
+DOMAIN-SUFFIX,okjike.com,DIRECT
+DOMAIN-SUFFIX,douban.com,DIRECT
+DOMAIN-SUFFIX,jysq.net,DIRECT
+DOMAIN-SUFFIX,pingwest.com,DIRECT
+DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
+DOMAIN-SUFFIX,0513.org,DIRECT
+DOMAIN-SUFFIX,uuu9.com,DIRECT
+DOMAIN-SUFFIX,ampproject.org,DIRECT
+DOMAIN-SUFFIX,ampproject.net,DIRECT
+DOMAIN-SUFFIX,v2ex.com,DIRECT
 # > Exclusions
 DOMAIN,analytics.google.com,DIRECT
 DOMAIN,analyticsinsights-pa.googleapis.com,DIRECT
