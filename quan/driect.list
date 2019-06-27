@@ -29,6 +29,9 @@ DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
 
+DOMAIN-SUFFIX,apple.co,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
+
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
 USER-AGENT,MobileAsset*,DIRECT
@@ -36,7 +39,8 @@ USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
 
-
+DOMAIN-SUFFIX,ampproject.net,DIRECT
+DOMAIN-SUFFIX,ampproject.org,DIRECT
 
 DOMAIN-SUFFIX,huami.com,DIRECT
 DOMAIN-SUFFIX,sspai.com,DIRECT
