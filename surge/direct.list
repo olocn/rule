@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,pingwest.com
 DOMAIN-SUFFIX,cnbetacdn.com
 IP-CIDR,240.0.0.3/32,no-resolve
 DOMAIN-SUFFIX,0513.org
+DOMAIN-SUFFIX,uuu9.com
 
 # > ali
 IP-CIDR,47.246.16.0/24,no-resolve
