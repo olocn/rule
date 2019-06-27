@@ -6,6 +6,26 @@ DOMAIN-SUFFIX,aaplimg.com,PROXY
 DOMAIN-SUFFIX,appsto.re,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
+DOMAIN,xp.apple.com,PROXY
+DOMAIN-SUFFIX,itunes.com,PROXY
+DOMAIN-SUFFIX,apple.co,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN-SUFFIX,appstore.com,PROXY
+DOMAIN-SUFFIX,crashlytics.com,PROXY
+DOMAIN-SUFFIX,icloud.com,PROXY
+DOMAIN-SUFFIX,me.com,PROXY
+DOMAIN-SUFFIX,mzstatic.com,PROXY
+IP-CIDR,17.0.0.0/8,PROXY,no-resolve
+
+DOMAIN-SUFFIX,testflight.apple.com
+
+
+DOMAIN-SUFFIX,googleapis.com,PROXY
+
+
+DOMAIN-SUFFIX,rakuen.thec.me,PROXY
+DOMAIN-SUFFIX,ftimg.net,PROXY
+DOMAIN-SUFFIX,dapenti.com,PROXY
 
 DOMAIN-SUFFIX,sentry.io,PROXY
 DOMAIN-SUFFIX,typekit.net,PROXY
@@ -15,8 +35,7 @@ DOMAIN-SUFFIX,imagetwist.com,PROXY
 DOMAIN-KEYWORD,github,PROXY
 IP-CIDR,140.101.144.0/20,PROXY,no-resolve
 DOMAIN-SUFFIX,digicert.com,PROXY
-DOMAIN-SUFFIX,ampproject.net,PROXY
-DOMAIN-SUFFIX,ampproject.org,PROXY
+
 DOMAIN-SUFFIX,acompli.net,PROXY
 DOMAIN-SUFFIX,helpshift.com,PROXY
 DOMAIN-SUFFIX,baldrsky.com,PROXY
