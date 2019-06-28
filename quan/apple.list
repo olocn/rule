@@ -51,5 +51,6 @@ DOMAIN-SUFFIX,appstore.com,PROXY
 DOMAIN-SUFFIX,icloud.com,PROXY
 DOMAIN-SUFFIX,me.com,PROXY
 DOMAIN-SUFFIX,mzstatic.com,PROXY
+DOMAIN-SUFFIX,apps.apple.com,PROXY
 IP-CIDR,17.0.0.0/8,PROXY,no-resolve
 DOMAIN-SUFFIX,testflight.apple.com,PROXY
