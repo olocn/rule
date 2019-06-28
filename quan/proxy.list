@@ -1,21 +1,4 @@
 //Apple
-# > App Store
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
-DOMAIN,appleiphonecell.com,PROXY
-DOMAIN-SUFFIX,aaplimg.com,PROXY
-DOMAIN-SUFFIX,appsto.re,PROXY
-DOMAIN-SUFFIX,cdn-apple.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN,xp.apple.com,PROXY
-DOMAIN-SUFFIX,itunes.com,PROXY
-DOMAIN-SUFFIX,appstore.com,PROXY
-DOMAIN-SUFFIX,crashlytics.com,PROXY
-DOMAIN-SUFFIX,icloud.com,PROXY
-DOMAIN-SUFFIX,me.com,PROXY
-DOMAIN-SUFFIX,mzstatic.com,PROXY
-IP-CIDR,17.0.0.0/8,PROXY,no-resolve
-
-DOMAIN-SUFFIX,testflight.apple.com,PROXY
 
 
 DOMAIN-SUFFIX,googleapis.com,PROXY
