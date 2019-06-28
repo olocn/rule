@@ -39,10 +39,6 @@ USER-AGENT,MobileAsset*,DIRECT
 USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
-
-DOMAIN-SUFFIX,apple.co,DIRECT
-
-DOMAIN-SUFFIX,apple.com,DIRECT
 DOMAIN-SUFFIX,itunes.apple.com,PROXY
 DOMAIN,appleiphonecell.com,PROXY
 DOMAIN-SUFFIX,aaplimg.com,PROXY
@@ -58,3 +54,5 @@ DOMAIN-SUFFIX,mzstatic.com,PROXY
 DOMAIN-SUFFIX,apps.apple.com,PROXY
 IP-CIDR,17.0.0.0/8,PROXY,no-resolve
 DOMAIN-SUFFIX,testflight.apple.com,PROXY
+DOMAIN-SUFFIX,apple.co,DIRECT
+DOMAIN-SUFFIX,apple.com,DIRECT
