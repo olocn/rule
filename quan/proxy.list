@@ -15,7 +15,7 @@ DOMAIN-SUFFIX,me.com,PROXY
 DOMAIN-SUFFIX,mzstatic.com,PROXY
 IP-CIDR,17.0.0.0/8,PROXY,no-resolve
 
-DOMAIN-SUFFIX,testflight.apple.com
+DOMAIN-SUFFIX,testflight.apple.com,PROXY
 
 
 DOMAIN-SUFFIX,googleapis.com,PROXY
