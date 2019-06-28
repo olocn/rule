@@ -39,6 +39,10 @@ USER-AGENT,MobileAsset*,DIRECT
 USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
+
+DOMAIN-SUFFIX,apple.co,DIRECT
+
+DOMAIN-SUFFIX,apple.com,DIRECT
 DOMAIN-SUFFIX,itunes.apple.com,PROXY
 DOMAIN,appleiphonecell.com,PROXY
 DOMAIN-SUFFIX,aaplimg.com,PROXY
