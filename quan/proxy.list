@@ -405,9 +405,6 @@ DOMAIN,abc.net.au,PROXY
 DOMAIN,wego.here.com,PROXY
 USER-AGENT,Roam*,PROXY
 
-
-IP-CIDR,153.254.0.0/16,game,no-resolve
-
 // Facebook
 IP-CIDR,103.4.96.0/22,PROXY,no-resolve
 IP-CIDR,129.134.0.0/17,PROXY,no-resolve
