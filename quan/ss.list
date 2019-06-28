@@ -1,15 +1,15 @@
 shadowsocks=jp.001.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-1
 shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-3
-shadowsocks=no4842021067.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V520-Z
-shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V534-gce
-shadowsocks=no3174266524.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=false, udp-relay=true, tag=V434-iij
-shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
-shadowsocks=23.101.2.108:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ7
-shadowsocks=ctm2.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
-shadowsocks=ctm8.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门8
-shadowsocks=ctm17.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
-shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
-shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本BBTEC1
-shadowsocks=104.251.225.61:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国GIA6
-shadowsocks=kt3.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=TK3
-shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港IPLC
+shadowsocks=no4842021067.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=true, udp-relay=true, tag=V520-Z
+shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=true, udp-relay=true, tag=V534-gce
+shadowsocks=no3174266524.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, fast-open=true, udp-relay=true, tag=V434-iij
+shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=杭州
+shadowsocks=23.101.2.108:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=AZ7
+shadowsocks=ctm2.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=澳门2
+shadowsocks=ctm8.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=澳门8
+shadowsocks=ctm17.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=澳门17
+shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=台湾CHT2
+shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=日本BBTEC1
+shadowsocks=104.251.225.61:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=美国GIA6
+shadowsocks=kt3.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=TK3
+shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, fast-open=true, udp-relay=true,tag=香港IPLC
