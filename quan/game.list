@@ -17,7 +17,7 @@ DOMAIN-SUFFIX,akamaihd.net,game
 DOMAIN-SUFFIX,steampowered.com,game
 DOMAIN-SUFFIX,steamstatic.com,game
 IP-CIDR,155.133.0.0/16,game,no-resolve
-IP-CIDR,153.254.86.0/24,game,no-resolve
+IP-CIDR,153.254.0.0/15,game,no-resolve
 IP-CIDR,205.196.0.0/16,game,no-resolve
 IP-CIDR,162.254.0.0/16,game,no-resolve
 IP-CIDR,34.85.0.0/16,game,no-resolve
