@@ -24,6 +24,9 @@ DOMAIN-SUFFIX,googleapis.com,PROXY
 DOMAIN-SUFFIX,rakuen.thec.me,PROXY
 DOMAIN-SUFFIX,ftimg.net,PROXY
 DOMAIN-SUFFIX,dapenti.com,PROXY
+DOMAIN-SUFFIX,ftimg.net,PROXY
+
+
 
 DOMAIN-SUFFIX,sentry.io,PROXY
 DOMAIN-SUFFIX,typekit.net,PROXY
