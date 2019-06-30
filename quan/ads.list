@@ -3,7 +3,7 @@ DOMAIN-SUFFIX,51la.net,REJECT
 DOMAIN,cig.com.cn,REJECT
 DOMAIN,ta.trs.cn,REJECT
 DOMAIN,tingyun.com,REJECT
-DOMAIN,api.share.mob.com,REJECT
+DOMAIN-SUFFIX,mob.com,REJECT
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
