@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,ampproject.net,DIRECT
 DOMAIN-SUFFIX,ampproject.org,DIRECT
+DOMAIN-SUFFIX,digicert.com,DIRECT
 
 DOMAIN,stun.services.mozilla.com,DIRECT
 DOMAIN-SUFFIX,huami.com,DIRECT
