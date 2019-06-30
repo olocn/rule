@@ -30,7 +30,7 @@ DOMAIN,streamingaudio.itunes.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
-	
+DOMAIN,xp.apple.com,DIRECT
 DOMAIN-SUFFIX,crashlytics.com,DIRECT
 
 //Siri
@@ -45,7 +45,6 @@ DOMAIN-SUFFIX,aaplimg.com,PROXY
 DOMAIN-SUFFIX,appsto.re,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN,xp.apple.com,PROXY
 DOMAIN-SUFFIX,itunes.com,PROXY
 DOMAIN-SUFFIX,appstore.com,PROXY
 DOMAIN-SUFFIX,icloud.com,PROXY
