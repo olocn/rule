@@ -14,3 +14,4 @@ shadowsocks=140.227.237.211:37852, method=xchacha20-ietf-poly1305, password=bpdf
 shadowsocks=104.251.225.61:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国GIA6
 shadowsocks=119.192.136.233:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=TK4
 shadowsocks=193.110.202.198:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港GT
+shadowsocks=13.88.219.214:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港AZ8
