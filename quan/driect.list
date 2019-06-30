@@ -12,8 +12,6 @@ DOMAIN-SUFFIX,pingwest.com,DIRECT
 DOMAIN-SUFFIX,cnbetacdn.com,DIRECT
 DOMAIN-SUFFIX,0513.org,DIRECT
 DOMAIN-SUFFIX,uuu9.com,DIRECT
-DOMAIN-SUFFIX,ampproject.org,DIRECT
-DOMAIN-SUFFIX,ampproject.net,DIRECT
 DOMAIN-SUFFIX,v2ex.com,DIRECT
 # > Exclusions
 DOMAIN,analytics.google.com,DIRECT
