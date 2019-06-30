@@ -48,8 +48,8 @@ DOMAIN-SUFFIX,aaplimg.com,PROXY
 DOMAIN-SUFFIX,appsto.re,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN-SUFFIX,apps.apple.com,PROXY
-DOMAIN-SUFFIX,testflight.apple.com,PROXY
+DOMAIN,apps.apple.com,PROXY
+DOMAIN,testflight.apple.com,PROXY
 DOMAIN-SUFFIX,icloud.com,DIRECT
 DOMAIN-SUFFIX,me.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
