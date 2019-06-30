@@ -40,18 +40,34 @@ USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
 IP-CIDR,17.0.0.0/8,DIRECT
-DOMAIN-SUFFIX,itunes.com,PROXY
-DOMAIN-SUFFIX,appstore.com,PROXY
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
-DOMAIN,appleiphonecell.com,PROXY
+
+# >> App Store Preview
+DOMAIN-SUFFIX,itunes.apple.com,proxy
+DOMAIN,apps.apple.com,proxy
+
+DOMAIN,appleiphonecell.com,PROXY 
 DOMAIN-SUFFIX,aaplimg.com,PROXY
+
+# >> Apple URL Shortener
 DOMAIN-SUFFIX,appsto.re,PROXY
-DOMAIN-SUFFIX,cdn-apple.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN,apps.apple.com,PROXY
+
+
+# >> TestFlight
+DOMAIN,beta.itunes.apple.com,PROXY
 DOMAIN,testflight.apple.com,PROXY
+
+
+# >> Spotlight
+DOMAIN,api-glb-sea.smoot.apple.com,proxy
+# >> Dictionary
+DOMAIN,lookup-api.apple.com,proxy
+
 DOMAIN-SUFFIX,icloud.com,DIRECT
 DOMAIN-SUFFIX,me.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
+DOMAIN-SUFFIX,itunes.com,DIRECT
+DOMAIN-SUFFIX,appstore.com,DIRECT
+DOMAIN-SUFFIX,cdn-apple.com,direct
+DOMAIN-SUFFIX,icloud-content.com,direct
 DOMAIN-SUFFIX,apple.co,DIRECT
 DOMAIN-SUFFIX,apple.com,DIRECT
