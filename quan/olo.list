@@ -5,6 +5,8 @@ DOMAIN-SUFFIX,youtube.com,olo
 DOMAIN,youtubei.googleapis.com,olo
 USER-AGENT,com.google.ios.youtube*,olo
 USER-AGENT,YouTubeMusic*,olo
+DOMAIN-SUFFIX,ggpht.com,olo
+DOMAIN-SUFFIX,ytimg.com,olo
 
 //动画疯
 USER-AGENT,Anime*,tw
