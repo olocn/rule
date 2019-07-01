@@ -4,6 +4,7 @@ shadowsocks=47.110.78.63:443, method=chacha20, password=wzoUWAr1, ssr-protocol=a
 shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V534-gce
 shadowsocks=120.78.156.90:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V434-iij
 shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
+shadowsocks=175.102.11.148:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海8
 shadowsocks=23.101.2.108:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ7
 shadowsocks=60.246.119.101:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
 shadowsocks=60.246.231.135:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门14
