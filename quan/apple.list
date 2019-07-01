@@ -42,11 +42,8 @@ USER-AGENT,*siri*,DIRECT
 IP-CIDR,17.0.0.0/8,DIRECT
 
 # >> App Store Preview
-DOMAIN-SUFFIX,itunes.apple.com,proxy
+DOMAIN,itunes.apple.com,proxy
 DOMAIN,apps.apple.com,proxy
-
-DOMAIN,appleiphonecell.com,PROXY 
-DOMAIN-SUFFIX,aaplimg.com,PROXY
 
 # >> Apple URL Shortener
 DOMAIN-SUFFIX,appsto.re,PROXY
@@ -62,6 +59,9 @@ DOMAIN,api-glb-sea.smoot.apple.com,proxy
 # >> Dictionary
 DOMAIN,lookup-api.apple.com,proxy
 
+
+DOMAIN,appleiphonecell.com,DIRECT
+DOMAIN-SUFFIX,aaplimg.com,DIRECT
 DOMAIN-SUFFIX,icloud.com,DIRECT
 DOMAIN-SUFFIX,me.com,DIRECT
 DOMAIN-SUFFIX,mzstatic.com,DIRECT
