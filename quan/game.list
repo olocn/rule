@@ -16,6 +16,12 @@ IP-CIDR,184.0.0.0/8,game,no-resolve
 IP-CIDR,18.0.0.0/8,game,no-resolve
 
 //steam
+# > Steam
+DOMAIN-SUFFIX,steam-chat.com,game
+DOMAIN-KEYWORD,steamcdn,game
+DOMAIN-KEYWORD,steamstore,game
+DOMAIN-KEYWORD,steamuserimages,game
+DOMAIN-KEYWORD,steambroadcast,game
 DOMAIN-SUFFIX,akamaihd.net,game
 DOMAIN-SUFFIX,steampowered.com,game
 DOMAIN-SUFFIX,steamstatic.com,game
