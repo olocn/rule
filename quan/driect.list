@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,ampproject.org,DIRECT
 DOMAIN-SUFFIX,digicert.com,DIRECT
 
 DOMAIN,stun.services.mozilla.com,DIRECT
+DOMAIN-SUFFIX,ifanr.com,DIRECT
 DOMAIN-SUFFIX,huami.com,DIRECT
 DOMAIN-SUFFIX,app.so,DIRECT
 DOMAIN-SUFFIX,sspai.com,DIRECT
