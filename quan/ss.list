@@ -8,7 +8,7 @@ shadowsocks=175.102.11.149:37852, method=xchacha20-ietf-poly1305, password=bpdft
 shadowsocks=175.102.11.143:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海12
 shadowsocks=13.88.219.214:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ8
 shadowsocks=60.246.119.101:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
-shadowsocks=120.78.255.29:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC8
+shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC1
 shadowsocks=122.100.182.95:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
 shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本BBTEC1
