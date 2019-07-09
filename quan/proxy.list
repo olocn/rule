@@ -13,6 +13,8 @@ IP-CIDR,140.101.144.0/20,PROXY
 IP-CIDR,104.249.59.0/24,proxy
 DOMAIN-SUFFIX,enpass.io,PROXY
 
+DOMAIN,jp.netcdn.space,PROXY
+DOMAIN-SUFFIX,assdrty.com,PROXY
 DOMAIN,quantumult.crossutility.com,PROXY
 
 DOMAIN-SUFFIX,acompli.net,PROXY
