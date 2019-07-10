@@ -72,6 +72,8 @@ DOMAIN-SUFFIX,icloud-content.com,DIRECT
 DOMAIN-SUFFIX,apple.co,DIRECT
 DOMAIN-SUFFIX,apple.com,DIRECT
 
+//额外
 DOMAIN,analytics.google.com,PROXY
 DOMAIN,analyticsinsights-pa.googleapis.com,PROXY
 DOMAIN,analyticsreporting.googleapis.com,PROXY
+DOMAIN-SUFFIX,vd.l.qq.com,DIRECT
