@@ -1,12 +1,3 @@
-
-// Accelerate direct sites
-// Prior
-// TeamViewer
-// UA
-//腾讯
-DOMAIN,analytics.google.com,DIRECT
-DOMAIN,analyticsinsights-pa.googleapis.com,DIRECT
-DOMAIN,analyticsreporting.googleapis.com,DIRECT
 DOMAIN,client.amplifi.com,DIRECT
 DOMAIN,ip.bjango.com,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
