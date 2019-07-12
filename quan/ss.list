@@ -6,10 +6,11 @@ shadowsocks=120.78.156.90:443, method=chacha20, password=wzoUWAr1, ssr-protocol=
 shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
 shadowsocks=175.102.11.149:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海10
 shadowsocks=175.102.11.143:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海12
-shadowsocks=13.88.219.214:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ8
+shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ6
 shadowsocks=60.246.119.101:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
 shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC1
 shadowsocks=120.79.73.29:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC2
+shadowsocks=47.107.53.186:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC6
 shadowsocks=122.100.182.95:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
 shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本BBTEC1
