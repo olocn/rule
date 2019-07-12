@@ -19,3 +19,12 @@ shadowsocks=119.192.136.233:37852, method=xchacha20-ietf-poly1305, password=bpdf
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CMI4
 shadowsocks=103.135.250.210:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CN3
 shadowsocks=52.141.35.77:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=韩国AZ2
+
+shadowsocks=hkg-5.node.mynero.net:11701, method=chacha20-ietf-poly1305, password=hh745201, fast-open=false, udp-relay=true, tag=香港 Azure
+shadowsocks=zj-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=中韩IPLC镇江
+shadowsocks=pdx-2.node.mynero.net:11701, method=aes-256-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=美国CN2-0.5
+shadowsocks=sz-vip.node.mynero.net:31701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深美-0.1
+shadowsocks=sh-vip.node.mynero.net:31701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=沪美-0.1
+shadowsocks=hz-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭港
+shadowsocks=sz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深港B
+shadowsocks=hz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭韩
