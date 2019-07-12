@@ -125,6 +125,7 @@ DOMAIN-SUFFIX,clearsurance.com,PROXY
 DOMAIN-SUFFIX,cloudappsecurity.com,PROXY
 DOMAIN-SUFFIX,cloudfront.net,PROXY
 DOMAIN-SUFFIX,clyp.it,PROXY
+DOMAIN-SUFFIX,cn.gravatar.com,PROXY
 DOMAIN-SUFFIX,cna.com.tw,PROXY
 DOMAIN-SUFFIX,comparitech.com,PROXY
 DOMAIN-SUFFIX,conoha.jp,PROXY
@@ -295,6 +296,7 @@ DOMAIN-SUFFIX,msn.com,PROXY
 DOMAIN-SUFFIX,muncloud.asia,PROXY
 DOMAIN-SUFFIX,myactimes.com,PROXY
 DOMAIN-SUFFIX,mytvsuper.com,PROXY
+DOMAIN-SUFFIX,n3ro.net,PROXY
 DOMAIN-SUFFIX,nationwide.com,PROXY
 DOMAIN-SUFFIX,naver.com,PROXY
 DOMAIN-SUFFIX,nbc.com,PROXY
