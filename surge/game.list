@@ -4,21 +4,19 @@ DOMAIN-SUFFIX,brawlstars.com
 DOMAIN-SUFFIX,brawlstarsgame.com
 IP-CIDR,34.84.0.0/14,no-resolve
 IP-CIDR,35.220.0.0/14,no-resolve
-
 IP-CIDR,13.0.0.0/8,no-resolve
 IP-CIDR,63.0.0.0/8,no-resolve
-
 IP-CIDR,52.0.0.0/8,no-resolve
 IP-CIDR,3.0.0.0/8,no-resolve
 IP-CIDR,54.0.0.0/8,no-resolve
 IP-CIDR,184.0.0.0/8,no-resolve
-
 IP-CIDR,18.0.0.0/8,no-resolve
 
 //steam
+# > Steam
+DOMAIN-SUFFIX,steam-chat.com
+DOMAIN-KEYWORD,steam
 DOMAIN-SUFFIX,akamaihd.net
-DOMAIN-SUFFIX,steampowered.com
-DOMAIN-SUFFIX,steamstatic.com
 IP-CIDR,34.85.0.0/16,no-resolve
 IP-CIDR,103.10.0.0/16,no-resolve
 IP-CIDR,130.211.0.0/16,no-resolve
