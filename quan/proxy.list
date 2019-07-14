@@ -14,6 +14,7 @@ DOMAIN,quantumult.crossutility.com,PROXY
 DOMAIN,rss.rrys.tv,PROXY
 DOMAIN,videos-f.jwpsrv.com,PROXY
 DOMAIN,wego.here.com,PROXY
+DOMAIN,api.onedrive.com,PROXY
 DOMAIN-KEYWORD,bbcfmt,PROXY
 DOMAIN-KEYWORD,blogspot,PROXY
 DOMAIN-KEYWORD,facebook,PROXY
@@ -331,7 +332,6 @@ DOMAIN-SUFFIX,office365.com,PROXY
 DOMAIN-SUFFIX,ok.ru,PROXY
 DOMAIN-SUFFIX,okex.com,PROXY
 DOMAIN-SUFFIX,onedrive.live.com,PROXY
-DOMAIN-SUFFIX,onedrive.com,PROXY
 DOMAIN-SUFFIX,onenote.com,PROXY
 DOMAIN-SUFFIX,onenote.net,PROXY
 DOMAIN-SUFFIX,onmicrosoft.com,PROXY
