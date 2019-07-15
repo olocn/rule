@@ -20,9 +20,9 @@ shadowsocks=hkg-5.node.mynero.net:11701, method=chacha20-ietf-poly1305, password
 shadowsocks=hz-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭港
 shadowsocks=sz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深港B
 
-shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
-shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
-shadowsocks=rohi.nbclouds.co:1606, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰7
-shadowsocks=vtyk.nbclouds.co:1645, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇯🇵2
-shadowsocks=vtyk.nbclouds.co:1660, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇯🇵7
-shadowsocks=rohi.nbclouds.co:1733, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇸🇬3
+shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
+shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
+shadowsocks=rohi.nbclouds.co:1606, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰7
+shadowsocks=vtyk.nbclouds.co:1645, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇯🇵2
+shadowsocks=vtyk.nbclouds.co:1660, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇯🇵7
+shadowsocks=rohi.nbclouds.co:1733, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇸🇬3
