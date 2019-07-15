@@ -123,6 +123,8 @@ DOMAIN,mopnativeadv.037201.com,REJECT
 DOMAIN,nativeadv.dftoutiao.com,REJECT
 DOMAIN,optimus-ads.amap.com,REJECT
 DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,oia.zhihu.com,REJECT
+DOMAIN,zhihu-web-analytics.zhihu.com,REJECT
 DOMAIN,track.tiara.daum.net,REJECT
 DOMAIN,track.tiara.kakao.com,REJECT
 DOMAIN,trackapp.guahao.cn,REJECT
