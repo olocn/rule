@@ -3,7 +3,6 @@ shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss74520
 shadowsocks=47.110.78.63:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V520-Z
 shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V534-gce
 shadowsocks=120.78.156.90:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V434-iij
-shadowsocks=47.99.140.189:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=杭州
 shadowsocks=175.102.11.138:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海美国
 shadowsocks=175.102.11.143:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海12
 shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ6
@@ -13,18 +12,17 @@ shadowsocks=120.79.73.29:37852, method=xchacha20-ietf-poly1305, password=bpdftT,
 shadowsocks=47.107.53.186:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC6
 shadowsocks=122.100.182.95:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
-shadowsocks=103.96.3.229:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=日本BBTEC1
 shadowsocks=120.79.75.225:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国AZ3
-shadowsocks=119.192.136.233:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=TK4
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CMI4
 shadowsocks=103.135.250.210:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CN3
-shadowsocks=52.141.35.77:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=韩国AZ2
 
 shadowsocks=hkg-5.node.mynero.net:11701, method=chacha20-ietf-poly1305, password=hh745201, fast-open=false, udp-relay=true, tag=香港 Azure
-shadowsocks=zj-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=中韩IPLC镇江
-shadowsocks=pdx-2.node.mynero.net:11701, method=aes-256-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=美国CN2-0.5
-shadowsocks=sz-vip.node.mynero.net:31701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深美-0.1
-shadowsocks=sh-vip.node.mynero.net:31701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=沪美-0.1
 shadowsocks=hz-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭港
 shadowsocks=sz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深港B
-shadowsocks=hz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭韩
+
+shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
+shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
+shadowsocks=rohi.nbclouds.co:1606, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=8424058:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰7
+shadowsocks=vtyk.nbclouds.co:1645, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇯🇵2
+shadowsocks=vtyk.nbclouds.co:1660, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇯🇵7
+shadowsocks=rohi.nbclouds.co:1733, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=false, tag=🇸🇬3
