@@ -5,6 +5,11 @@ DOMAIN,ta.trs.cn,REJECT
 DOMAIN,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
 
+
+//mifit
+DOMAIN,circle-prod.cdn.bcebos.com,REJECT
+DOMAIN-SUFFIX,fds.api.mi-img.com,REJECT
+
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
