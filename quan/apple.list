@@ -31,7 +31,7 @@ DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
 DOMAIN,xp.apple.com,DIRECT
-DOMAIN-SUFFIX,crashlytics.com,DIRECT
+DOMAIN,e.crashlytics.com,DIRECT
 
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
@@ -43,7 +43,7 @@ IP-CIDR,17.0.0.0/8,DIRECT
 
 # >> App Store Preview
 DOMAIN,itunes.apple.com,PROXY
-DOMAIN,apps.apple.com,PROXY
+DOMAIN-SUFFIX,apps.apple.com,PROXY
 
 # >> Apple URL Shortener
 DOMAIN-SUFFIX,appsto.re,PROXY
