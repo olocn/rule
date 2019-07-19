@@ -31,7 +31,7 @@ DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
 DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
 DOMAIN-SUFFIX,ls.apple.com,DIRECT
 DOMAIN,xp.apple.com,DIRECT
-DOMAIN,e.crashlytics.com,DIRECT
+DOMAIN-SUFFIX,crashlytics.com,DIRECT
 
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
