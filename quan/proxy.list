@@ -1,6 +1,7 @@
 DOMAIN,abc.com,PROXY
 DOMAIN,abc.go.com,PROXY
 DOMAIN,abc.net.au,PROXY
+DOMAIN,api.lireapp.com,PROXY
 DOMAIN,api.amplitude.com,PROXY
 DOMAIN,app.smartmailcloud.com,PROXY
 DOMAIN,cdn-images.mailchimp.com,PROXY
@@ -169,6 +170,7 @@ DOMAIN-SUFFIX,dropbox.com,PROXY
 DOMAIN-SUFFIX,dropboxapi.com,PROXY
 DOMAIN-SUFFIX,dropboxusercontent.com,PROXY
 DOMAIN-SUFFIX,duckduckgo.com,PROXY
+DOMAIN-SUFFIX,dsndsht23.com,PROXY
 DOMAIN-SUFFIX,dw.com,PROXY
 DOMAIN-SUFFIX,dynu.com,PROXY
 DOMAIN-SUFFIX,earthcam.com,PROXY
@@ -368,7 +370,7 @@ DOMAIN-SUFFIX,scmp.com,PROXY
 DOMAIN-SUFFIX,scribd.com,PROXY
 DOMAIN-SUFFIX,seatguru.com,PROXY
 DOMAIN-SUFFIX,segment.io,PROXY
-DOMAIN-SUFFIX,sehuatang.com,PROXY
+DOMAIN-SUFFIX,sehuatang.net,PROXY
 DOMAIN-SUFFIX,sehuatang.org,PROXY
 DOMAIN-SUFFIX,sehuatuchuang.com,PROXY
 DOMAIN-SUFFIX,sentry.io,PROXY
