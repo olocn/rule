@@ -43,6 +43,8 @@ DOMAIN-SUFFIX,admin.recaptcha.net,PROXY
 DOMAIN-SUFFIX,aex.com,PROXY
 DOMAIN-SUFFIX,akamaihd.net,PROXY
 DOMAIN-SUFFIX,allconnected.co,PROXY
+DOMAIN-SUFFIX,ampproject.net,PROXY
+DOMAIN-SUFFIX,ampproject.org,PROXY
 DOMAIN-SUFFIX,amazon.co.jp,PROXY
 DOMAIN-SUFFIX,amazon.com,PROXY
 DOMAIN-SUFFIX,amazonaws.com,PROXY
