@@ -7,7 +7,7 @@ shadowsocks=175.102.11.138:37852, method=xchacha20-ietf-poly1305, password=bpdft
 shadowsocks=175.102.11.143:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=上海12
 shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=AZ6
 shadowsocks=60.246.119.101:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门2
-shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC1
+shadowsocks=47.74.248.155:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=新CN2
 shadowsocks=120.79.75.225:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC4
 shadowsocks=47.107.53.186:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=IPLC6
 shadowsocks=122.100.182.95:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
@@ -19,6 +19,7 @@ shadowsocks=103.135.250.210:37852, method=xchacha20-ietf-poly1305, password=bpdf
 shadowsocks=hkg-5.node.mynero.net:11701, method=chacha20-ietf-poly1305, password=hh745201, fast-open=false, udp-relay=true, tag=香港 Azure
 shadowsocks=hz-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭港
 shadowsocks=sz-2.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=深港B
+shadowsocks=sh-8.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=沪新
 
 shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
 shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
