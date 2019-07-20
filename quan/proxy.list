@@ -41,6 +41,7 @@ DOMAIN-SUFFIX,acg.gy,PROXY
 DOMAIN-SUFFIX,acompli.net,PROXY
 DOMAIN-SUFFIX,admin.recaptcha.net,PROXY
 DOMAIN-SUFFIX,aex.com,PROXY
+DOMAIN-SUFFIX,akamaized.net,PROXY
 DOMAIN-SUFFIX,akamaihd.net,PROXY
 DOMAIN-SUFFIX,allconnected.co,PROXY
 DOMAIN-SUFFIX,ampproject.net,PROXY
@@ -350,6 +351,7 @@ DOMAIN-SUFFIX,pixhost.to,PROXY
 DOMAIN-SUFFIX,pocket-image-cache.com,PROXY
 DOMAIN-SUFFIX,polymer-project.org,PROXY
 DOMAIN-SUFFIX,pscp.tv,PROXY
+DOMAIN-SUFFIX,pscdn.co,PROXY
 DOMAIN-SUFFIX,pureapk.com,PROXY
 DOMAIN-SUFFIX,pximg.net,PROXY
 DOMAIN-SUFFIX,qualaroo.com,PROXY
