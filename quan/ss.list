@@ -13,6 +13,7 @@ shadowsocks=47.107.53.186:37852, method=xchacha20-ietf-poly1305, password=bpdftT
 shadowsocks=122.100.182.95:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=澳门17
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=台湾CHT2
 shadowsocks=120.79.75.225:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国AZ3
+shadowsocks=104.251.225.64:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=美国CN8
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CMI4
 shadowsocks=103.135.250.210:37852, method=xchacha20-ietf-poly1305, password=bpdftT, udp-relay=true,tag=香港CN3
 
