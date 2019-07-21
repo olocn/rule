@@ -1,6 +1,7 @@
 DOMAIN,client.amplifi.com,DIRECT
 DOMAIN,ip.bjango.com,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
+DOMAIN,cdp.cloud.unity3d.com,DIRECT
 DOMAIN-KEYWORD,officecdn,DIRECT
 DOMAIN-KEYWORD,torrent,DIRECT
 DOMAIN-SUFFIX,0513.org,DIRECT
