@@ -4,7 +4,7 @@ DOMAIN,cig.com.cn,REJECT
 DOMAIN,ta.trs.cn,REJECT
 DOMAIN,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
-
+DOMAIN-SUFFIX,trackingio.com,REJECT
 
 //mifit
 DOMAIN,circle-prod.cdn.bcebos.com,REJECT
