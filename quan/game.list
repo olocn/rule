@@ -4,16 +4,22 @@ DOMAIN-SUFFIX,brawlstars.com,game
 DOMAIN-SUFFIX,brawlstarsgame.com,game
 IP-CIDR,34.84.0.0/14,game
 IP-CIDR,35.220.0.0/14,game
-
+IP-CIDR,34.238.40.182/32,game
 IP-CIDR,13.0.0.0/8,game
 IP-CIDR,63.0.0.0/8,game
-
 IP-CIDR,52.194.0.0/16,game
 IP-CIDR,3.0.0.0/8,game
 IP-CIDR,54.0.0.0/8,game
 IP-CIDR,184.0.0.0/8,game
-
 IP-CIDR,18.0.0.0/8,game
+IP-CIDR,34.238.40.182/32,game
+IP-CIDR,54.154.230.92/32,game
+IP-CIDR,54.190.30.165/32,game
+IP-CIDR,54.250.250.15/32,game
+IP-CIDR,52.59.198.112/32,game
+IP-CIDR,52.221.184.98/32,game
+IP-CIDR,18.231.183.234/32,game
+IP-CIDR,13.233.138.86/32,game
 
 //steam
 # > Steam
