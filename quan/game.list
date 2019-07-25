@@ -18,6 +18,9 @@ IP-CIDR,18.0.0.0/8,game
 DOMAIN-SUFFIX,steam-chat.com,game
 DOMAIN-KEYWORD,steam,game
 DOMAIN-SUFFIX,akamaihd.net,game
+
+DOMAIN-SUFFIX,underlords.com,game
+DOMAIN-SUFFIX,dota2.com,game
 IP-CIDR,34.85.0.0/16,game
 IP-CIDR,103.10.0.0/16,game
 IP-CIDR,130.211.0.0/16,game
