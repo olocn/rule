@@ -8,7 +8,7 @@ shadowsocks=175.102.11.143:37852, method=xchacha20-ietf-poly1305, password=bpdft
 shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=AZ6
 shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=AZ5
 shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=CHT2
-shadowsocks=104.251.225.64:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=美国CN
+shadowsocks=120.79.75.225:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=IPLC-美国AZ
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=CMI4
 
 shadowsocks=hkg-5.node.mynero.net:11701, method=chacha20-ietf-poly1305, password=hh745201, fast-open=false, udp-relay=true, tag=香港 Azure
