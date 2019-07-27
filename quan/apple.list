@@ -39,8 +39,6 @@ USER-AGENT,MobileAsset*,DIRECT
 USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
-IP-CIDR,17.0.0.0/8,DIRECT
-
 # >> App Store Preview
 DOMAIN,itunes.apple.com,PROXY
 DOMAIN-SUFFIX,apps.apple.com,PROXY
@@ -60,17 +58,18 @@ DOMAIN,api-glb-sea.smoot.apple.com,PROXY
 DOMAIN,lookup-api.apple.com,PROXY
 
 
-DOMAIN,appleiphonecell.com,DIRECT
-DOMAIN-SUFFIX,aaplimg.com,DIRECT
-DOMAIN-SUFFIX,icloud.com,DIRECT
-DOMAIN-SUFFIX,me.com,DIRECT
-DOMAIN-SUFFIX,mzstatic.com,DIRECT
-DOMAIN-SUFFIX,itunes.com,DIRECT
-DOMAIN-SUFFIX,appstore.com,DIRECT
-DOMAIN-SUFFIX,cdn-apple.com,DIRECT
-DOMAIN-SUFFIX,icloud-content.com,DIRECT
-DOMAIN-SUFFIX,apple.co,DIRECT
-DOMAIN-SUFFIX,apple.com,DIRECT
+DOMAIN,appleiphonecell.com,apple
+DOMAIN-SUFFIX,aaplimg.com,apple
+DOMAIN-SUFFIX,icloud.com,apple
+DOMAIN-SUFFIX,me.com,apple
+DOMAIN-SUFFIX,mzstatic.com,apple
+DOMAIN-SUFFIX,itunes.com,apple
+DOMAIN-SUFFIX,appstore.com,apple
+DOMAIN-SUFFIX,cdn-apple.com,apple
+DOMAIN-SUFFIX,icloud-content.com,apple
+DOMAIN-SUFFIX,apple.co,apple
+DOMAIN-SUFFIX,apple.com,apple
+IP-CIDR,17.0.0.0/8,apple
 
 //额外
 DOMAIN,analytics.google.com,PROXY
