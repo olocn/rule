@@ -53,6 +53,7 @@ DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
 
 # > General
+DOMAIN-KEYWORD,umeng,REJECT
 DOMAIN-KEYWORD,adservice,REJECT
 DOMAIN-KEYWORD,analytics,REJECT
 DOMAIN-KEYWORD,analysis,REJECT
