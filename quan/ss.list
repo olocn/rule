@@ -12,7 +12,6 @@ shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT,
 shadowsocks=39.108.162.170:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=IPLC9
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=CMI4
 
-shadowsocks=hz-1.node.mynero.net:11701, method=aes-128-gcm, password=hh745201, fast-open=false, udp-relay=true, tag=杭港
 
 shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
 shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586:aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
