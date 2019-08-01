@@ -3,14 +3,14 @@ shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss74520
 shadowsocks=47.110.78.63:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V520-Z
 shadowsocks=47.106.141.18:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V534-gce
 
-shadowsocks=175.102.11.145:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=美国2
-shadowsocks=175.102.11.144:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=日本3
-shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=AZ6
-shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=AZ5
-shadowsocks=175.102.11.148:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=台湾1
-shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CHT2
-shadowsocks=39.108.162.170:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=IPLC9
-shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=world.taobao.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CMI4
+shadowsocks=175.102.11.145:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=美国2
+shadowsocks=175.102.11.144:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=日本3
+shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=AZ6
+shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=AZ5
+shadowsocks=175.102.11.148:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=台湾1
+shadowsocks=211.75.30.99:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CHT2
+shadowsocks=39.108.162.170:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=IPLC9
+shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CMI4
 
 
 shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
