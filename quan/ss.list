@@ -17,5 +17,5 @@ shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-prot
 shadowsocks=rohi.nbclouds.co:1610, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰5
 shadowsocks=rohi.nbclouds.co:1606, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰7
 shadowsocks=vtyk.nbclouds.co:1645, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇯🇵2
-shadowsocks=vtyk.nbclouds.co:1660, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇯🇵7
-shadowsocks=rohi.nbclouds.co:1733, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇸🇬3
+shadowsocks=rohi.nbclouds.co:1627, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇺🇸8
+shadowsocks=rohi.nbclouds.co:1633, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇺🇸10
