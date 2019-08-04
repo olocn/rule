@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,ggpht.com,olo
 DOMAIN-SUFFIX,ytimg.com,olo
 
 //动画疯
-USER-AGENT,Anime*,tw
-DOMAIN-SUFFIX,bahamut.com.tw,tw
-DOMAIN-SUFFIX,gamer.com.tw,tw
-DOMAIN-SUFFIX,hinet.net,tw
+USER-AGENT,Anime*,proxy
+DOMAIN-SUFFIX,bahamut.com.tw,proxy
+DOMAIN-SUFFIX,gamer.com.tw,proxy
+DOMAIN-SUFFIX,hinet.net,proxy
