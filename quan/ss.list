@@ -11,6 +11,7 @@ shadowsocks=175.102.11.148:37852, method=xchacha20-ietf-poly1305, password=bpdft
 shadowsocks=211.75.30.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CHT11
 shadowsocks=39.108.162.170:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=false, udp-relay=true, tag=IPLC9
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=CMI4
+shadowsocks=47.74.248.155:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=新加坡
 
 
 shadowsocks=rohi.nbclouds.co:1602, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84240586     :aadf9626ed35484e, fast-open=false, udp-relay=true, tag=🇭🇰4
