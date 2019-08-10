@@ -1,6 +1,7 @@
 DOMAIN,abc.com
 DOMAIN,abc.go.com
 DOMAIN,abc.net.au
+DOMAIN,api.lireapp.com
 DOMAIN,api.amplitude.com
 DOMAIN,app.smartmailcloud.com
 DOMAIN,cdn-images.mailchimp.com
@@ -14,6 +15,7 @@ DOMAIN,quantumult.crossutility.com
 DOMAIN,rss.rrys.tv
 DOMAIN,videos-f.jwpsrv.com
 DOMAIN,wego.here.com
+DOMAIN,api.onedrive.com
 DOMAIN-KEYWORD,bbcfmt
 DOMAIN-KEYWORD,blogspot
 DOMAIN-KEYWORD,facebook
@@ -39,8 +41,11 @@ DOMAIN-SUFFIX,acg.gy
 DOMAIN-SUFFIX,acompli.net
 DOMAIN-SUFFIX,admin.recaptcha.net
 DOMAIN-SUFFIX,aex.com
+DOMAIN-SUFFIX,akamaized.net
 DOMAIN-SUFFIX,akamaihd.net
 DOMAIN-SUFFIX,allconnected.co
+DOMAIN-SUFFIX,ampproject.net
+DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN-SUFFIX,amazon.com
 DOMAIN-SUFFIX,amazonaws.com
@@ -49,6 +54,7 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
 DOMAIN-SUFFIX,aol.com
+DOMAIN-SUFFIX,anime1.me
 DOMAIN-SUFFIX,apartmentratings.com
 DOMAIN-SUFFIX,apartments.com
 DOMAIN-SUFFIX,apigee.com
@@ -58,6 +64,7 @@ DOMAIN-SUFFIX,apkmonk.com
 DOMAIN-SUFFIX,apkpure.com
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,aptoide.com
+DOMAIN-SUFFIX,aralego.com
 DOMAIN-SUFFIX,archive.is
 DOMAIN-SUFFIX,archive.org
 DOMAIN-SUFFIX,arte.tv
@@ -135,6 +142,7 @@ DOMAIN-SUFFIX,creativelab5.com
 DOMAIN-SUFFIX,crucial.com
 DOMAIN-SUFFIX,ctitv.com.tw
 DOMAIN-SUFFIX,cts.com.tw
+DOMAIN-SUFFIX,creativecdn.com
 DOMAIN-SUFFIX,cuhk.edu.hk
 DOMAIN-SUFFIX,cusu.hk
 DOMAIN-SUFFIX,cw.com.tw
@@ -168,6 +176,7 @@ DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropboxapi.com
 DOMAIN-SUFFIX,dropboxusercontent.com
 DOMAIN-SUFFIX,duckduckgo.com
+DOMAIN-SUFFIX,dsndsht23.com
 DOMAIN-SUFFIX,dw.com
 DOMAIN-SUFFIX,dynu.com
 DOMAIN-SUFFIX,earthcam.com
@@ -331,7 +340,6 @@ DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,ok.ru
 DOMAIN-SUFFIX,okex.com
 DOMAIN-SUFFIX,onedrive.live.com
-DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,onenote.com
 DOMAIN-SUFFIX,onenote.net
 DOMAIN-SUFFIX,onmicrosoft.com
@@ -346,6 +354,7 @@ DOMAIN-SUFFIX,pixhost.to
 DOMAIN-SUFFIX,pocket-image-cache.com
 DOMAIN-SUFFIX,polymer-project.org
 DOMAIN-SUFFIX,pscp.tv
+DOMAIN-SUFFIX,pscdn.co
 DOMAIN-SUFFIX,pureapk.com
 DOMAIN-SUFFIX,pximg.net
 DOMAIN-SUFFIX,qualaroo.com
@@ -365,10 +374,11 @@ DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,scmp.com
-DOMAIN-SUFFIX,scribd.com
+DOMAIN-SUFFIX,scribd.com 
+DOMAIN-SUFFIX,scupio.com
 DOMAIN-SUFFIX,seatguru.com
 DOMAIN-SUFFIX,segment.io
-DOMAIN-SUFFIX,sehuatang.com
+DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatuchuang.com
 DOMAIN-SUFFIX,sentry.io
