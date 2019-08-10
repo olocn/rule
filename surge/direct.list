@@ -1,6 +1,7 @@
 DOMAIN,client.amplifi.com
 DOMAIN,ip.bjango.com
 DOMAIN,stun.services.mozilla.com
+DOMAIN,cdp.cloud.unity3d.com
 DOMAIN-KEYWORD,officecdn
 DOMAIN-KEYWORD,torrent
 DOMAIN-SUFFIX,0513.org
@@ -31,8 +32,6 @@ DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,aliyun.com
 DOMAIN-SUFFIX,alphassl.com
 DOMAIN-SUFFIX,amap.com
-DOMAIN-SUFFIX,ampproject.net
-DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,aolcdn.com
 DOMAIN-SUFFIX,apache.org
 DOMAIN-SUFFIX,api.crisp.chat
@@ -148,6 +147,7 @@ DOMAIN-SUFFIX,okjike.com
 DOMAIN-SUFFIX,ourdvs.com
 DOMAIN-SUFFIX,outlookmobile.com
 DOMAIN-SUFFIX,overcast.fm
+DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,pgyer.com
 DOMAIN-SUFFIX,pingwest.com
 DOMAIN-SUFFIX,pstatp.com
@@ -247,7 +247,6 @@ DOMAIN-SUFFIX,zhihu.com
 DOMAIN-SUFFIX,zhimg.com
 DOMAIN-SUFFIX,zimuzu.tv
 DOMAIN-SUFFIX,zmz002.com
-
 
 USER-AGENT,%E5%8D%B3%E5%88%BB*
 USER-AGENT,*Vainglory* 
