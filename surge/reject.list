@@ -4,6 +4,8 @@ DOMAIN,cig.com.cn
 DOMAIN,ta.trs.cn
 DOMAIN,tingyun.com
 DOMAIN-SUFFIX,mob.com
+DOMAIN-SUFFIX,trackingio.com
+
 
 //江阴bus
 DOMAIN,stats.jpush.cn
@@ -48,6 +50,7 @@ DOMAIN-SUFFIX,kingsoft-office-service.com
 USER-AGENT,wpsoffice*
 
 # > General
+DOMAIN-KEYWORD,umeng
 DOMAIN-KEYWORD,adservice
 DOMAIN-KEYWORD,analytics
 DOMAIN-KEYWORD,analysis
@@ -123,6 +126,8 @@ DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
 DOMAIN,optimus-ads.amap.com
 DOMAIN,sugar.zhihu.com
+DOMAIN,oia.zhihu.com
+DOMAIN,zhihu-web-analytics.zhihu.com
 DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
 DOMAIN,trackapp.guahao.cn
