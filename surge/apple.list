@@ -1,12 +1,44 @@
 DOMAIN,appleiphonecell.com
 DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,me.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,icloud-content.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 IP-CIDR,17.0.0.0/8,no-resolve
+
+# Siri
+DOMAIN,guzzoni.apple.com
+
+# geod
+DOMAIN-SUFFIX,ls.apple.com
+
+# Apple Music
+USER-AGENT,Music*
+DOMAIN,aod.itunes.apple.com
+DOMAIN,audio.itunes.apple.com
+DOMAIN,audio-ssl.itunes.apple.com
+DOMAIN,streamingaudio.itunes.apple.com
+
+# App Store Preview
+DOMAIN,itunes.apple.com
+DOMAIN,apps.apple.com
+
+# Apple URL Shortener
+DOMAIN-SUFFIX,appsto.re
+
+# TestFlight
+DOMAIN,beta.itunes.apple.com
+DOMAIN,testflight.apple.com
+
+# Spotlight
+DOMAIN,api-glb-sea.smoot.apple.com
+
+# Dictionary
+DOMAIN,lookup-api.apple.com
+
+
