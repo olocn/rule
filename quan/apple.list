@@ -70,6 +70,8 @@ DOMAIN-SUFFIX,icloud-content.com,apple
 DOMAIN-SUFFIX,apple.co,apple
 DOMAIN-SUFFIX,apple.com,apple
 IP-CIDR,17.0.0.0/8,apple
+DOMAIN,guzzoni.apple.com,apple
+DOMAIN-SUFFIX,ls.apple.com,apple
 
 //额外
 DOMAIN,analytics.google.com,PROXY
