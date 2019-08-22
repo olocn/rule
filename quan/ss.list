@@ -11,3 +11,4 @@ shadowsocks=211.75.30.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT
 shadowsocks=118.178.241.44:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=🇭🇰IPLC32
 shadowsocks=cmi4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=🇭🇰CMI4
 shadowsocks=175.102.11.142:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=🇯🇵2
+shadowsocks=47.99.140.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, obfs-uri=/, fast-open=true, udp-relay=true, tag=🇯🇵6
