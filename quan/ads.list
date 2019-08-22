@@ -5,7 +5,7 @@ DOMAIN,ta.trs.cn,REJECT
 DOMAIN,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
 DOMAIN-SUFFIX,trackingio.com,REJECT
-
+DOMAIN-SUFFIX,inmobi.cn,REJECT
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
