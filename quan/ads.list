@@ -6,7 +6,8 @@ DOMAIN,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
 DOMAIN-SUFFIX,trackingio.com,REJECT
 DOMAIN-SUFFIX,inmobi.cn,REJECT
-
+DOMAIN-SUFFIX,moatads.com,REJECT
+DOMAIN-SUFFIX,inmobi.com,REJECT
 DOMAIN-SUFFIX,inmobicdn.cn,REJECT
 
 //江阴bus
