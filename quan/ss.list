@@ -9,6 +9,7 @@ shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT
 shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇭🇰AZ5
 shadowsocks=211.75.30.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=CHT11
 shadowsocks=120.24.59.40:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇸🇬IPLC
+shadowsocks=3.1.24.98:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇸🇬1
 shadowsocks=139.196.122.193:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇺🇸IPLC
 shadowsocks=175.102.11.139:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇰🇷1
 shadowsocks=47.99.140.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵6
