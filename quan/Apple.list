@@ -58,20 +58,20 @@ DOMAIN,api-glb-sea.smoot.apple.com,PROXY
 DOMAIN,lookup-api.apple.com,PROXY
 
 
-DOMAIN,appleiphonecell.com,apple
-DOMAIN-SUFFIX,aaplimg.com,apple
-DOMAIN-SUFFIX,icloud.com,apple
-DOMAIN-SUFFIX,me.com,apple
-DOMAIN-SUFFIX,mzstatic.com,apple
-DOMAIN-SUFFIX,itunes.com,apple
-DOMAIN-SUFFIX,appstore.com,apple
-DOMAIN-SUFFIX,cdn-apple.com,apple
-DOMAIN-SUFFIX,icloud-content.com,apple
-DOMAIN-SUFFIX,apple.co,apple
-DOMAIN-SUFFIX,apple.com,apple
-IP-CIDR,17.0.0.0/8,apple
-DOMAIN,guzzoni.apple.com,apple
-DOMAIN-SUFFIX,ls.apple.com,apple
+DOMAIN,appleiphonecell.com,Apple
+DOMAIN-SUFFIX,aaplimg.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN-SUFFIX,itunes.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,apple.co,Apple
+DOMAIN-SUFFIX,apple.com,Apple
+IP-CIDR,17.0.0.0/8,Apple
+DOMAIN,guzzoni.apple.com,Apple
+DOMAIN-SUFFIX,ls.apple.com,Apple
 
 //额外
 DOMAIN,analytics.google.com,PROXY
