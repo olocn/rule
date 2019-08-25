@@ -9,7 +9,7 @@ DOMAIN-SUFFIX,inmobi.cn,REJECT
 DOMAIN-SUFFIX,moatads.com,REJECT
 DOMAIN-SUFFIX,inmobi.com,REJECT
 DOMAIN-SUFFIX,inmobicdn.cn,REJECT
-
+DOMAIN-SUFFIX,hockeyapp.net,REJECT
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
