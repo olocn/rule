@@ -4,6 +4,7 @@ shadowsocks=no1381706330.internetworld.cloud:443, method=chacha20, password=wzoU
 shadowsocks=no1277392735.internetworld.cloud:443, method=chacha20, password=wzoUWAr1, ssr-protocol=auth_aes128_md5, ssr-protocol-param=455:ss745201, obfs=tls1.2_ticket_fastauth, obfs-host=a5a1629811.wns.windows.com, udp-relay=true, tag=V533
 
 shadowsocks=175.102.11.145:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇺🇸3
+shadowsocks=175.102.11.142:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵1
 shadowsocks=175.102.11.185:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵7
 shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇭🇰AZ6
 shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇭🇰AZ5
