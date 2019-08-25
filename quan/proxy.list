@@ -6,16 +6,15 @@ DOMAIN,api.amplitude.com,PROXY
 DOMAIN,app.smartmailcloud.com,PROXY
 DOMAIN,cdn-images.mailchimp.com,PROXY
 DOMAIN,content.jwplatform.com,PROXY
-DOMAIN,gate.hockeyapp.net,PROXY
 DOMAIN,id.heroku.com,PROXY
 DOMAIN,jp.netcdn.space,PROXY
-DOMAIN,linear-abematv.akamaized.net,PROXY
+DOMAIN,oneclient.sfx.ms,PROXY
 DOMAIN,mobile.pipe.aria.microsoft.com,Proxy
 DOMAIN,quantumult.crossutility.com,PROXY
+DOMAIN-SUFFIX,storage.msn.com,PROXY
 DOMAIN,rss.rrys.tv,PROXY
 DOMAIN,videos-f.jwpsrv.com,PROXY
 DOMAIN,wego.here.com,PROXY
-DOMAIN,api.onedrive.com,PROXY
 DOMAIN-KEYWORD,bbcfmt,PROXY
 DOMAIN-KEYWORD,blogspot,PROXY
 DOMAIN-KEYWORD,facebook,PROXY
@@ -29,6 +28,8 @@ DOMAIN-KEYWORD,twitter,PROXY
 DOMAIN-KEYWORD,uk-live,PROXY
 DOMAIN-KEYWORD,wikileaks,PROXY
 DOMAIN-SUFFIX,0rz.tw,PROXY
+DOMAIN-SUFFIX,1drv.com,PROXY
+DOMAIN-SUFFIX,1drv.ms,PROXY
 DOMAIN-SUFFIX,4bluestones.biz,PROXY
 DOMAIN-SUFFIX,4shared.com,PROXY
 DOMAIN-SUFFIX,881903.com,PROXY
@@ -287,7 +288,7 @@ DOMAIN-SUFFIX,linksalpha.com,PROXY
 DOMAIN-SUFFIX,liuli.in,PROXY
 DOMAIN-SUFFIX,liuli.uk,PROXY
 DOMAIN-SUFFIX,live.com,PROXY
-DOMAIN-SUFFIX,live.net,PROXY
+DOMAIN-SUFFIX,livefilestore.com,PROXY
 DOMAIN-SUFFIX,m.me,PROXY
 DOMAIN-SUFFIX,madewithcode.com,PROXY
 DOMAIN-SUFFIX,mail.ru,PROXY
@@ -339,7 +340,7 @@ DOMAIN-SUFFIX,office.net,PROXY
 DOMAIN-SUFFIX,office365.com,PROXY
 DOMAIN-SUFFIX,ok.ru,PROXY
 DOMAIN-SUFFIX,okex.com,PROXY
-DOMAIN-SUFFIX,onedrive.live.com,PROXY
+DOMAIN-SUFFIX,onedrive.com,PROXY
 DOMAIN-SUFFIX,onenote.com,PROXY
 DOMAIN-SUFFIX,onenote.net,PROXY
 DOMAIN-SUFFIX,onmicrosoft.com,PROXY
@@ -491,6 +492,8 @@ DOMAIN-SUFFIX,zattoo.com,PROXY
 DOMAIN-SUFFIX,zb.com,PROXY
 DOMAIN-SUFFIX,zello.com,PROXY
 DOMAIN-SUFFIX,zeronet.io,PROXY
+
+
 IP-CIDR,104.249.59.0/24,proxy
 IP-CIDR,109.239.140.0/24,PROXY
 IP-CIDR,13.32.0.0/16,PROXY
@@ -522,6 +525,8 @@ IP-CIDR,91.108.4.0/22,PROXY
 IP-CIDR,91.108.56.0/22,PROXY
 IP-CIDR,91.108.8.0/22,PROXY
 IP-CIDR,104.108.96.0/19,PROXY
+
+
 USER-AGENT,AbemaTV*,PROXY
 USER-AGENT,Argo*,PROXY
 USER-AGENT,BBCiPlayer*,PROXY
