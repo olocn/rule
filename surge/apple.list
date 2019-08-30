@@ -10,12 +10,9 @@ DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 IP-CIDR,17.0.0.0/8,no-resolve
-
-# Siri
+DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,guzzoni.apple.com
 
-# geod
-DOMAIN-SUFFIX,ls.apple.com
 
 # Apple Music
 USER-AGENT,Music*
