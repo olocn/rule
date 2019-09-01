@@ -1,37 +1,28 @@
-//apple
-USER-AGENT,*com.apple.mobileme.fmip1,DIRECT
-USER-AGENT,*WeatherFoundation*,DIRECT
-USER-AGENT,%E5%9C%B0%E5%9B%BE*,DIRECT
-USER-AGENT,%E8%AE%BE%E7%BD%AE*,DIRECT
-USER-AGENT,com.apple.geod*,DIRECT
-USER-AGENT,com.apple.Maps,DIRECT
-USER-AGENT,FindMyFriends*,DIRECT
-USER-AGENT,FindMyiPhone*,DIRECT
-USER-AGENT,FMDClient*,DIRECT
-USER-AGENT,FMFD*,DIRECT
-USER-AGENT,fmflocatord*,DIRECT
-USER-AGENT,geod*,DIRECT
-USER-AGENT,locationd*,DIRECT
-USER-AGENT,Maps*,DIRECT
-DOMAIN,api.smoot.apple.com,DIRECT
-DOMAIN,captive.apple.com,DIRECT
-DOMAIN,configuration.apple.com,DIRECT
-DOMAIN,guzzoni.apple.com,DIRECT
-DOMAIN,smp-device-content.apple.com,DIRECT
-DOMAIN-SUFFIX,ess.apple.com,DIRECT
-DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
-DOMAIN-SUFFIX,push.apple.com,DIRECT
-DOMAIN,aod.itunes.apple.com,DIRECT
-DOMAIN,mesu.apple.com,DIRECT
-DOMAIN,api.smoot.apple.cn,DIRECT
-DOMAIN,gs-loc.apple.com,DIRECT
-DOMAIN,mvod.itunes.apple.com,DIRECT
-DOMAIN,streamingaudio.itunes.apple.com,DIRECT
-DOMAIN-SUFFIX,lcdn-locator.apple.com,DIRECT
-DOMAIN-SUFFIX,lcdn-registration.apple.com,DIRECT
-DOMAIN-SUFFIX,ls.apple.com,DIRECT
-DOMAIN,xp.apple.com,DIRECT
-DOMAIN-SUFFIX,crashlytics.com,DIRECT
+# > Apple
+# >> TestFlight
+DOMAIN,testflight.apple.com,PROXY
+# >> Apple URL Shortener
+DOMAIN-SUFFIX,appsto.re,PROXY
+# >> iBooks Store download
+DOMAIN,books.itunes.apple.com,PROXY
+# >> iTunes Store Moveis Trailers
+DOMAIN,hls.itunes.apple.com,PROXY
+# >> App Store Preview
+DOMAIN,apps.apple.com,PROXY
+DOMAIN,itunes.apple.com,PROXY
+# >> Spotlight
+DOMAIN,api-glb-sea.smoot.apple.com,PROXY
+# >> Dictionary
+DOMAIN,lookup-api.apple.com,PROXY
+# >> Apple News and Apple Map TOMTOM Version
+DOMAIN,gspe1-ssl.ls.apple.com,PROXY
+USER-AGENT,AppleNews*,PROXY
+USER-AGENT,com.apple.news*,PROXY
+DOMAIN-SUFFIX,apple.news,PROXY
+DOMAIN,news-client.apple.com,PROXY
+DOMAIN,news-edge.apple.com,PROXY
+DOMAIN,news-events.apple.com,PROXY
+DOMAIN,apple.comscoreresearch.com,PROXY
 
 //Siri
 USER-AGENT,*AssistantServices*,DIRECT
@@ -39,42 +30,17 @@ USER-AGENT,MobileAsset*,DIRECT
 USER-AGENT,Siri*,DIRECT
 USER-AGENT,*siri*,DIRECT
 
-# >> App Store Preview
-DOMAIN,itunes.apple.com,PROXY
-DOMAIN-SUFFIX,apps.apple.com,PROXY
-
-# >> Apple URL Shortener
-DOMAIN-SUFFIX,appsto.re,PROXY
-
-
-# >> TestFlight
-DOMAIN,beta.itunes.apple.com,PROXY
-DOMAIN,testflight.apple.com,PROXY
-
-
-# >> Spotlight
-DOMAIN,api-glb-sea.smoot.apple.com,PROXY
-# >> Dictionary
-DOMAIN,lookup-api.apple.com,PROXY
-
-
-DOMAIN,appleiphonecell.com,Apple
+# > Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,me.com,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
-DOMAIN-SUFFIX,itunes.com,Apple
-DOMAIN-SUFFIX,appstore.com,Apple
-DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-SUFFIX,icloud-content.com,Apple
 DOMAIN-SUFFIX,apple.co,Apple
 DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,appstore.com,Apple
+DOMAIN-SUFFIX,cdn-apple.com,Apple
+DOMAIN-SUFFIX,crashlytics.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
-DOMAIN,guzzoni.apple.com,Apple
-DOMAIN-SUFFIX,ls.apple.com,Apple
 
-//额外
-DOMAIN,analytics.google.com,PROXY
-DOMAIN,analyticsinsights-pa.googleapis.com,PROXY
-DOMAIN,analyticsreporting.googleapis.com,PROXY
-DOMAIN,vd.l.qq.com,DIRECT
