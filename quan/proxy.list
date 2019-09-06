@@ -9,6 +9,7 @@ DOMAIN,content.jwplatform.com,PROXY
 DOMAIN,id.heroku.com,PROXY
 DOMAIN,jp.netcdn.space,PROXY
 DOMAIN,oneclient.sfx.ms,PROXY
+DOMAIN,graph.microsoft.com,PROXY
 DOMAIN,mobile.pipe.aria.microsoft.com,Proxy
 DOMAIN,quantumult.crossutility.com,PROXY
 DOMAIN-SUFFIX,storage.msn.com,PROXY
