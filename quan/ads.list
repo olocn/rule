@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,inmobi.com,REJECT
 DOMAIN-SUFFIX,inmobicdn.cn,REJECT
 DOMAIN-SUFFIX,hockeyapp.net,REJECT
 DOMAIN,ipm.atm.youku.com,REJECT
+DOMAIN,iyes.youku.com,REJECT
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
