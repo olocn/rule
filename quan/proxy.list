@@ -304,7 +304,8 @@ DOMAIN-SUFFIX,mil,PROXY
 DOMAIN-SUFFIX,mobile01.com,PROXY
 DOMAIN-SUFFIX,msauth.net,Proxy
 DOMAIN-SUFFIX,msn.com,PROXY
-DOMAIN-SUFFIX,muncloud.asia,PROXY
+DOMAIN-SUFFIX,microsoftonline.com,Proxy
+DOMAIN-SUFFIX,muncloud.me,PROXY
 DOMAIN-SUFFIX,myactimes.com,PROXY
 DOMAIN-SUFFIX,mytvsuper.com,PROXY
 DOMAIN-SUFFIX,n3ro.net,PROXY
