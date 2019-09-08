@@ -73,3 +73,5 @@ DOMAIN-SUFFIX,pscdn.co,PROXY
 DOMAIN-SUFFIX,akamaized.net,PROXY
 DOMAIN-SUFFIX,ampproject.net,PROXY
 DOMAIN-SUFFIX,ampproject.org,PROXY
+DOMAIN-SUFFIX,app-measurement.com,PROXY
+DOMAIN-SUFFIX,msauth.net,PROXY
