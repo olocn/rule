@@ -78,7 +78,7 @@ DOMAIN-SUFFIX,ampproject.org,PROXY
 DOMAIN-SUFFIX,app-measurement.com,PROXY
 DOMAIN-SUFFIX,msauth.net,PROXY
 DOMAIN-SUFFIX,hotmail.com,PROXY
-DOMAIN-SUFFIX,graph.facebook.com,reject-img
-DOMAIN-SUFFIX,nuomi.com,reject-img
-DOMAIN-SUFFIX,opnstat.baidu.com,reject-200
-DOMAIN-SUFFIX,zt.baidu.com,reject-200
+DOMAIN-SUFFIX,graph.facebook.com,reject
+DOMAIN-SUFFIX,nuomi.com,reject
+DOMAIN-SUFFIX,opnstat.baidu.com,reject
+DOMAIN-SUFFIX,zt.baidu.com,reject
