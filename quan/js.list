@@ -57,6 +57,8 @@ DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
 
 # Proxy
+
+DOMAIN-SUFFIX,inoreader.com,Proxy
 DOMAIN-SUFFIX,microsoftonline.com,Proxy
 DOMAIN-SUFFIX,muncloud.me,PROXY
 DOMAIN-SUFFIX,nexitcore.com,PROXY
