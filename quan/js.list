@@ -55,3 +55,19 @@ DOMAIN,img.auction-ads.wpscdn.cn,REJECT
 DOMAIN,ad-stat.ksosoft.com,REJECT
 DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
+
+# Proxy
+DOMAIN-SUFFIX,microsoftonline.com,Proxy
+DOMAIN-SUFFIX,muncloud.me,PROXY
+DOMAIN-SUFFIX,nexitcore.com,PROXY
+DOMAIN,graph.microsoft.com,PROXY
+DOMAIN,oneclient.sfx.ms,PROXY
+DOMAIN-SUFFIX,scribd.com,PROXY 
+DOMAIN-SUFFIX,scupio.com,PROXY
+DOMAIN-SUFFIX,creativecdn.com,PROXY
+DOMAIN-SUFFIX,aralego.com,PROXY
+DOMAIN-SUFFIX,anime1.me,PROXY
+DOMAIN-SUFFIX,pscdn.co,PROXY
+DOMAIN-SUFFIX,akamaized.net,PROXY
+DOMAIN-SUFFIX,ampproject.net,PROXY
+DOMAIN-SUFFIX,ampproject.org,PROXY
