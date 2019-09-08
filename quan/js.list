@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,inmobicdn.cn,REJECT
 DOMAIN-SUFFIX,hockeyapp.net,REJECT
 DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,iyes.youku.com,REJECT
+DOMAIN-SUFFIX,criteo.com,REJECT
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
@@ -68,6 +69,7 @@ DOMAIN-SUFFIX,scribd.com,PROXY
 DOMAIN-SUFFIX,scupio.com,PROXY
 DOMAIN-SUFFIX,creativecdn.com,PROXY
 DOMAIN-SUFFIX,aralego.com,PROXY
+DOMAIN-SUFFIX,animeone.me,PROXY
 DOMAIN-SUFFIX,anime1.me,PROXY
 DOMAIN-SUFFIX,pscdn.co,PROXY
 DOMAIN-SUFFIX,akamaized.net,PROXY
