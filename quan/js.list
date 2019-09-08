@@ -78,3 +78,4 @@ DOMAIN-SUFFIX,ampproject.org,PROXY
 DOMAIN-SUFFIX,app-measurement.com,PROXY
 DOMAIN-SUFFIX,msauth.net,PROXY
 DOMAIN-SUFFIX,hotmail.com,PROXY
+DOMAIN-SUFFIX,graph.facebook.com,direct
