@@ -15,6 +15,8 @@ DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,iyes.youku.com,REJECT
 DOMAIN-SUFFIX,criteo.com,REJECT
 
+DOMAIN-SUFFIX,mobileapptracking.com,reject
+
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
