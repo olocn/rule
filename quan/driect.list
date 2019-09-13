@@ -4,6 +4,15 @@ DOMAIN,stun.services.mozilla.com,DIRECT
 DOMAIN,cdp.cloud.unity3d.com,DIRECT
 DOMAIN-KEYWORD,officecdn,DIRECT
 DOMAIN-KEYWORD,torrent,DIRECT
+
+# > Akamai
+DOMAIN-SUFFIX,akadns.net,DIRECT
+# DOMAIN-SUFFIX,akamai.net,DIRECT
+# DOMAIN-SUFFIX,akamaiedge.net,DIRECT
+# DOMAIN-SUFFIX,akamaihd.net,DIRECT
+# DOMAIN-SUFFIX,akamaistream.net,DIRECT
+# DOMAIN-SUFFIX,akamaized.net,DIRECT
+
 DOMAIN-SUFFIX,0513.org,DIRECT
 DOMAIN-SUFFIX,12306.com,DIRECT
 DOMAIN-SUFFIX,126.net,DIRECT
