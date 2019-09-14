@@ -61,7 +61,7 @@ USER-AGENT,wpsoffice*,REJECT
 
 # Proxy
 
-DOMAIN-SUFFIX,inoreader.com.PROXY
+DOMAIN-SUFFIX,inoreader.com,PROXY
 DOMAIN-SUFFIX,muncloud.me,PROXY
 DOMAIN-SUFFIX,nexitcore.com,PROXY
 DOMAIN,graph.microsoft.com,PROXY
