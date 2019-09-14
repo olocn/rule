@@ -85,3 +85,4 @@ DOMAIN-SUFFIX,zt.baidu.com,reject
 
 DOMAIN-SUFFIX,services.mozilla.com,direct
 IP-CIDR,239.255.255.250/32,DIRECT
+IP-CIDR,224.0.0.251/32,DIRECT
