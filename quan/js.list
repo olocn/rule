@@ -61,8 +61,7 @@ USER-AGENT,wpsoffice*,REJECT
 
 # Proxy
 
-DOMAIN-SUFFIX,inoreader.com,Proxy
-DOMAIN-SUFFIX,microsoftonline.com,Proxy
+DOMAIN-SUFFIX,inoreader.com.PROXY
 DOMAIN-SUFFIX,muncloud.me,PROXY
 DOMAIN-SUFFIX,nexitcore.com,PROXY
 DOMAIN,graph.microsoft.com,PROXY
@@ -74,7 +73,6 @@ DOMAIN-SUFFIX,aralego.com,PROXY
 DOMAIN-SUFFIX,animeone.me,PROXY
 DOMAIN-SUFFIX,anime1.me,PROXY
 DOMAIN-SUFFIX,pscdn.co,PROXY
-DOMAIN-SUFFIX,akamaized.net,PROXY
 DOMAIN-SUFFIX,ampproject.net,PROXY
 DOMAIN-SUFFIX,ampproject.org,PROXY
 DOMAIN-SUFFIX,app-measurement.com,PROXY
