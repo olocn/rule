@@ -79,6 +79,7 @@ DOMAIN-SUFFIX,msauth.net,PROXY
 DOMAIN-SUFFIX,hotmail.com,PROXY
 DOMAIN-SUFFIX,pixiv.cat,proxy
 
+DOMAIN-SUFFIX,pximg.net,proxy
 DOMAIN-SUFFIX,zaobao.com.sg,proxy
 DOMAIN-SUFFIX,playno1.com,proxy
 DOMAIN-SUFFIX,sehuatang.net,proxy
