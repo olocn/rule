@@ -99,3 +99,4 @@ IP-CIDR,239.255.255.250/32,DIRECT,no-resolve
 IP-CIDR,224.0.0.251/32,DIRECT,no-resolve
 DOMAIN,login.microsoftonline.com,direct
 DOMAIN-SUFFIX,v2ex.com,direct
+DOMAIN-SUFFIX,letsencrypt.org,direct
