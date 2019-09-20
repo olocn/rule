@@ -79,6 +79,7 @@ DOMAIN-SUFFIX,msauth.net,PROXY
 DOMAIN-SUFFIX,hotmail.com,PROXY
 DOMAIN-SUFFIX,pixiv.cat,proxy
 
+DOMAIN-SUFFIX,sehuatang.net,proxy
 DOMAIN-SUFFIX,cloudflare.com,Proxy
 DOMAIN-SUFFIX,qualtrics.com,Proxy
 DOMAIN-SUFFIX,evernote.com,Proxy
