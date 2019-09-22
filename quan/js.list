@@ -89,7 +89,7 @@ DOMAIN-SUFFIX,evernote.com,Proxy
 
 DOMAIN-SUFFIX,nationalgeographic.com,proxy
 DOMAIN-SUFFIX,liuli.uk,proxy
-DOMAIN-SUFFIX,graph.facebook.com,reject
+DOMAIN-SUFFIX,graph.facebook.com,direct
 DOMAIN-SUFFIX,nuomi.com,reject
 DOMAIN-SUFFIX,opnstat.baidu.com,reject
 DOMAIN-SUFFIX,zt.baidu.com,reject
