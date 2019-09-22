@@ -87,6 +87,10 @@ DOMAIN-SUFFIX,cloudflare.com,Proxy
 DOMAIN-SUFFIX,qualtrics.com,Proxy
 DOMAIN-SUFFIX,evernote.com,Proxy
 
+DOMAIN,login.live.com,proxy
+
+DOMAIN-SUFFIX,vfast.cc,proxy
+
 DOMAIN-SUFFIX,nationalgeographic.com,proxy
 DOMAIN-SUFFIX,liuli.uk,proxy
 DOMAIN-SUFFIX,graph.facebook.com,direct
