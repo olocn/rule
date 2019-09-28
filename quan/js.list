@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,appadhoc.com,REJECT
 DOMAIN,log.mmstat.com,REJECT
 DOMAIN-SUFFIX,51la.net,REJECT
 DOMAIN,cig.com.cn,REJECT
@@ -5,30 +6,23 @@ DOMAIN,ta.trs.cn,REJECT
 DOMAIN,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
 DOMAIN-SUFFIX,trackingio.com,REJECT
-DOMAIN-SUFFIX,inmobi.cn,REJECT
 DOMAIN-SUFFIX,moatads.com,REJECT
-DOMAIN-SUFFIX,inmobi.com,REJECT
-DOMAIN-SUFFIX,inmobicdn.cn,REJECT
 DOMAIN-SUFFIX,hockeyapp.net,REJECT
 DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,iyes.youku.com,REJECT
 DOMAIN-SUFFIX,criteo.com,REJECT
-
-DOMAIN-SUFFIX,mobileapptracking.com,reject
+DOMAIN-SUFFIX,mobileapptracking.com,REJECT
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
 DOMAIN,ali-stats.jpush.cn,REJECT
-DOMAIN,experiment.appadhoc.com,REJECT
 
 # > KFC
-DOMAIN,tracker.appadhoc.com,REJECT
 DOMAIN,fp.hwwt8.com,REJECT
 DOMAIN,trackingprd.hwwt8.com,REJECT
 
 DOMAIN-SUFFIX,appbaqend.com,REJECT
-DOMAIN-SUFFIX,data.flurry.com,REJECT
 DOMAIN-SUFFIX,qchannel01.cn,REJECT
 
 # > 高德
@@ -44,10 +38,7 @@ DOMAIN-SUFFIX,wgo.mmstat.com,REJECT
 DOMAIN,fuwu.wap.sogou.com,REJECT
 
 DOMAIN-SUFFIX,appodeal.com,REJECT
-DOMAIN-SUFFIX,applvn.com,REJECT
-DOMAIN,x.appbaqend.com,REJECT
 DOMAIN-SUFFIX,inner-active.mobi,REJECT
-DOMAIN-SUFFIX,applovin.com,REJECT
 DOMAIN,union.uc.cn,REJECT
 DOMAIN-SUFFIX,tlnk.io,REJECT
 DOMAIN-SUFFIX,alexametrics.com,REJECT
@@ -58,49 +49,50 @@ DOMAIN,ad-stat.ksosoft.com,REJECT
 DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
 
+DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN-SUFFIX,nuomi.com,REJECT
+DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
+DOMAIN-SUFFIX,zt.baidu.com,REJECT
+
 # Proxy
 
-DOMAIN-SUFFIX,inoreader.com,PROXY
-DOMAIN-SUFFIX,muncloud.me,PROXY
-DOMAIN-SUFFIX,nexitcore.com,PROXY
-DOMAIN,graph.microsoft.com,PROXY
-DOMAIN,oneclient.sfx.ms,PROXY
-DOMAIN-SUFFIX,scribd.com,PROXY 
-DOMAIN-SUFFIX,scupio.com,PROXY
-DOMAIN-SUFFIX,creativecdn.com,PROXY
-DOMAIN-SUFFIX,aralego.com,PROXY
-DOMAIN-SUFFIX,animeone.me,PROXY
-DOMAIN-SUFFIX,anime1.me,PROXY
-DOMAIN-SUFFIX,pscdn.co,PROXY
-DOMAIN-SUFFIX,ampproject.net,PROXY
-DOMAIN-SUFFIX,ampproject.org,PROXY
-DOMAIN-SUFFIX,app-measurement.com,PROXY
-DOMAIN-SUFFIX,msauth.net,PROXY
-DOMAIN-SUFFIX,hotmail.com,PROXY
-DOMAIN-SUFFIX,pixiv.cat,proxy
-
-DOMAIN-SUFFIX,pximg.net,proxy
-DOMAIN-SUFFIX,zaobao.com.sg,proxy
-DOMAIN-SUFFIX,playno1.com,proxy
-DOMAIN-SUFFIX,sehuatang.net,proxy
+DOMAIN,e.crashlytics.com,Proxy
+DOMAIN-SUFFIX,inoreader.com,Proxy
+DOMAIN-SUFFIX,muncloud.me,Proxy
+DOMAIN-SUFFIX,nexitcore.com,Proxy
+DOMAIN,graph.microsoft.com,Proxy
+DOMAIN,oneclient.sfx.ms,Proxy
+DOMAIN-SUFFIX,scribd.com,Proxy 
+DOMAIN-SUFFIX,scupio.com,Proxy
+DOMAIN-SUFFIX,creativecdn.com,Proxy
+DOMAIN-SUFFIX,aralego.com,Proxy
+DOMAIN-SUFFIX,animeone.me,Proxy
+DOMAIN-SUFFIX,anime1.me,Proxy
+DOMAIN-SUFFIX,pscdn.co,Proxy
+DOMAIN-SUFFIX,ampproject.net,Proxy
+DOMAIN-SUFFIX,ampproject.org,Proxy
+DOMAIN-SUFFIX,app-measurement.com,Proxy
+DOMAIN-SUFFIX,msauth.net,Proxy
+DOMAIN-SUFFIX,hotmail.com,Proxy
+DOMAIN-SUFFIX,pixiv.cat,Proxy
+DOMAIN-SUFFIX,pximg.net,Proxy
+DOMAIN-SUFFIX,zaobao.com.sg,Proxy
+DOMAIN-SUFFIX,playno1.com,Proxy
+DOMAIN-SUFFIX,sehuatang.net,Proxy
 DOMAIN-SUFFIX,cloudflare.com,Proxy
 DOMAIN-SUFFIX,qualtrics.com,Proxy
 DOMAIN-SUFFIX,evernote.com,Proxy
+DOMAIN,login.live.com,Proxy
+DOMAIN-SUFFIX,vfast.cc,Proxy
+DOMAIN-SUFFIX,nationalgeographic.com,Proxy
+DOMAIN-SUFFIX,liuli.uk,Proxy
 
-DOMAIN,login.live.com,proxy
-
-DOMAIN-SUFFIX,vfast.cc,proxy
-
-DOMAIN-SUFFIX,nationalgeographic.com,proxy
-DOMAIN-SUFFIX,liuli.uk,proxy
-DOMAIN-SUFFIX,graph.facebook.com,direct
-DOMAIN-SUFFIX,nuomi.com,reject
-DOMAIN-SUFFIX,opnstat.baidu.com,reject
-DOMAIN-SUFFIX,zt.baidu.com,reject
-
-DOMAIN-SUFFIX,services.mozilla.com,direct
+DOMAIN,app.adjust.com,DIRECT
+DOMAIN-SUFFIX,graph.facebook.com,DIRECT
+DOMAIN-SUFFIX,services.mozilla.com,DIRECT
 IP-CIDR,239.255.255.250/32,DIRECT,no-resolve
 IP-CIDR,224.0.0.251/32,DIRECT,no-resolve
-DOMAIN,login.microsoftonline.com,direct
-DOMAIN-SUFFIX,v2ex.com,direct
-DOMAIN-SUFFIX,letsencrypt.org,direct
+IP-CIDR,17.0.0.0/8,DIRECT
+DOMAIN,login.microsoftonline.com,DIRECT
+DOMAIN-SUFFIX,v2ex.com,DIRECT
+DOMAIN-SUFFIX,letsencrypt.org,DIRECT
