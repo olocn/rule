@@ -99,3 +99,4 @@ IP-CIDR,17.0.0.0/8,DIRECT
 DOMAIN,login.microsoftonline.com,DIRECT
 DOMAIN-SUFFIX,v2ex.com,DIRECT
 DOMAIN-SUFFIX,letsencrypt.org,DIRECT
+DOMAIN-SUFFIX,digicert.com,direct
