@@ -87,6 +87,9 @@ DOMAIN-SUFFIX,vfast.cc,Proxy
 DOMAIN-SUFFIX,nationalgeographic.com,Proxy
 DOMAIN-SUFFIX,liuli.uk,Proxy
 
+DOMAIN-SUFFIX,imagetwist.com,proxy
+
+
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN-SUFFIX,graph.facebook.com,DIRECT
 DOMAIN-SUFFIX,services.mozilla.com,DIRECT
