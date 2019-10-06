@@ -110,7 +110,6 @@ DOMAIN-SUFFIX,graph.facebook.com,DIRECT
 DOMAIN-SUFFIX,services.mozilla.com,DIRECT
 IP-CIDR,239.255.255.250/32,DIRECT,no-resolve
 IP-CIDR,224.0.0.251/32,DIRECT,no-resolve
-IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
 DOMAIN,login.microsoftonline.com,DIRECT
 DOMAIN-SUFFIX,v2ex.com,DIRECT
 DOMAIN-SUFFIX,letsencrypt.org,DIRECT
