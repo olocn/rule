@@ -1,3 +1,17 @@
+#Apple
+
+DOMAIN,api.smoot.apple.com,DIRECT
+DOMAIN,api.smoot.apple.com.cn,DIRECT
+DOMAIN,configuration.apple.com,DIRECT
+DOMAIN,xp.apple.com,DIRECT
+DOMAIN,smp-device-content.apple.com,DIRECT
+DOMAIN,guzzoni.apple.com,DIRECT
+DOMAIN,captive.apple.com,DIRECT
+DOMAIN-SUFFIX,ess.apple.com,DIRECT
+DOMAIN-SUFFIX,push.apple.com,DIRECT
+DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
+
+#Reject
 DOMAIN-SUFFIX,appadhoc.com,REJECT
 DOMAIN,log.mmstat.com,REJECT
 DOMAIN-SUFFIX,51la.net,REJECT
@@ -12,6 +26,8 @@ DOMAIN,ipm.atm.youku.com,REJECT
 DOMAIN,iyes.youku.com,REJECT
 DOMAIN-SUFFIX,criteo.com,REJECT
 DOMAIN-SUFFIX,mobileapptracking.com,REJECT
+DOMAIN-SUFFIX,taboola.com,reject
+
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
@@ -55,7 +71,6 @@ DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
 DOMAIN-SUFFIX,zt.baidu.com,REJECT
 
 # Proxy
-
 DOMAIN,e.crashlytics.com,Proxy
 DOMAIN-SUFFIX,inoreader.com,Proxy
 DOMAIN-SUFFIX,muncloud.me,Proxy
@@ -86,9 +101,7 @@ DOMAIN,login.live.com,Proxy
 DOMAIN-SUFFIX,vfast.cc,Proxy
 DOMAIN-SUFFIX,nationalgeographic.com,Proxy
 DOMAIN-SUFFIX,liuli.uk,Proxy
-
 DOMAIN-SUFFIX,p0rn-downloads.com,proxy
-
 DOMAIN-SUFFIX,imagetwist.com,proxy
 
 
@@ -97,8 +110,8 @@ DOMAIN-SUFFIX,graph.facebook.com,DIRECT
 DOMAIN-SUFFIX,services.mozilla.com,DIRECT
 IP-CIDR,239.255.255.250/32,DIRECT,no-resolve
 IP-CIDR,224.0.0.251/32,DIRECT,no-resolve
-IP-CIDR,17.0.0.0/8,DIRECT
+IP-CIDR,17.0.0.0/8,DIRECT,no-resolve
 DOMAIN,login.microsoftonline.com,DIRECT
 DOMAIN-SUFFIX,v2ex.com,DIRECT
 DOMAIN-SUFFIX,letsencrypt.org,DIRECT
-DOMAIN-SUFFIX,digicert.com,direct
+DOMAIN-SUFFIX,digicert.com,DIRECT
