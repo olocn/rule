@@ -9,11 +9,11 @@ DOMAIN,books.itunes.apple.com,PROXY
 DOMAIN,hls.itunes.apple.com,PROXY
 # >> App Store Preview
 DOMAIN,apps.apple.com,PROXY
-DOMAIN,itunes.apple.com,PROXY
-# >> Spotlight
-DOMAIN,api-glb-sea.smoot.apple.com,PROXY
+DOMAIN-SUFFIX,itunes.apple.com,PROXY
+
 # >> Dictionary
 DOMAIN,lookup-api.apple.com,PROXY
+
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
 USER-AGENT,AppleNews*,PROXY
