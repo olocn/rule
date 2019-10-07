@@ -9,7 +9,8 @@ DOMAIN,books.itunes.apple.com,PROXY
 DOMAIN,hls.itunes.apple.com,PROXY
 # >> App Store Preview
 DOMAIN,apps.apple.com,PROXY
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
+DOMAIN,itunes.apple.com,PROXY
+DOMAIN,iosapps.itunes.apple.com,PROXY
 
 # >> Dictionary
 DOMAIN,lookup-api.apple.com,PROXY
