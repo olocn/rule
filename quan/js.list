@@ -103,8 +103,9 @@ DOMAIN-SUFFIX,nationalgeographic.com,Proxy
 DOMAIN-SUFFIX,liuli.uk,Proxy
 DOMAIN-SUFFIX,p0rn-downloads.com,proxy
 DOMAIN-SUFFIX,imagetwist.com,proxy
-
+DOMAIN-SUFFIX,gravatar.com,proxy
 DOMAIN-SUFFIX,dlercloud.io,proxy
+
 DOMAIN-SUFFIX,digitalcertvalidation.com,direct
 DOMAIN,app.adjust.com,DIRECT
 DOMAIN-SUFFIX,graph.facebook.com,DIRECT
