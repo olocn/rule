@@ -105,6 +105,17 @@ DOMAIN-SUFFIX,p0rn-downloads.com,proxy
 DOMAIN-SUFFIX,imagetwist.com,proxy
 DOMAIN-SUFFIX,gravatar.com,proxy
 DOMAIN-SUFFIX,dlercloud.io,proxy
+DOMAIN-SUFFIX,hacg.fi,proxy
+DOMAIN-SUFFIX,feedx.net,proxy
+DOMAIN-SUFFIX,v2ex.com,proxy
+DOMAIN-SUFFIX,feedburner.com,proxy
+DOMAIN-SUFFIX,rrys.tv,proxy
+DOMAIN-SUFFIX,kindle4rss.com,proxy
+DOMAIN-SUFFIX,rsshub.app,proxy
+DOMAIN-SUFFIX,dmhy.org,proxy
+DOMAIN-SUFFIX,feedx.co,proxy
+
+
 
 DOMAIN-SUFFIX,digitalcertvalidation.com,direct
 DOMAIN,app.adjust.com,DIRECT
@@ -113,6 +124,7 @@ DOMAIN-SUFFIX,services.mozilla.com,DIRECT
 IP-CIDR,239.255.255.250/32,DIRECT,no-resolve
 IP-CIDR,224.0.0.251/32,DIRECT,no-resolve
 DOMAIN,login.microsoftonline.com,DIRECT
-DOMAIN-SUFFIX,v2ex.com,DIRECT
 DOMAIN-SUFFIX,letsencrypt.org,DIRECT
 DOMAIN-SUFFIX,digicert.com,DIRECT
+DOMAIN-SUFFIX,ifanr.com,direct
+DOMAIN-SUFFIX,engadget.com,direct
