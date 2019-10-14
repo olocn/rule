@@ -116,6 +116,7 @@ DOMAIN-SUFFIX,dmhy.org,proxy
 DOMAIN-SUFFIX,feedx.co,proxy
 DOMAIN-SUFFIX,vol.moe,proxy
 
+DOMAIN-SUFFIX,volmoe.com,proxy
 
 DOMAIN-SUFFIX,digitalcertvalidation.com,direct
 DOMAIN,app.adjust.com,DIRECT
