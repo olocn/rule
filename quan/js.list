@@ -115,8 +115,28 @@ DOMAIN-SUFFIX,rsshub.app,proxy
 DOMAIN-SUFFIX,dmhy.org,proxy
 DOMAIN-SUFFIX,feedx.co,proxy
 DOMAIN-SUFFIX,vol.moe,proxy
-
+DOMAIN-SUFFIX,xuite.net,proxy
+DOMAIN-SUFFIX,playio1.com,proxy
 DOMAIN-SUFFIX,volmoe.com,proxy
+
+# > Spotify
+USER-AGENT,Spotify*,proxy
+DOMAIN-SUFFIX,pscdn.co,proxy
+DOMAIN-SUFFIX,scdn.co,proxy
+DOMAIN-SUFFIX,spotify.com,proxy
+DOMAIN-SUFFIX,spoti.fi,proxy
+
+# > Pornhub
+DOMAIN-SUFFIX,phncdn.com,proxy
+DOMAIN-SUFFIX,pornhub.com,proxy
+DOMAIN-SUFFIX,pornhubpremium.com,proxy
+
+# > BBC iPlayer
+USER-AGENT,BBCiPlayer*,proxy
+DOMAIN-SUFFIX,bbc.co.uk,proxy
+DOMAIN-SUFFIX,bbci.co.uk,proxy
+DOMAIN-KEYWORD,bbcfmt,proxy
+DOMAIN-KEYWORD,uk-live,proxy
 
 DOMAIN-SUFFIX,digitalcertvalidation.com,direct
 DOMAIN,app.adjust.com,DIRECT
@@ -129,3 +149,4 @@ DOMAIN-SUFFIX,letsencrypt.org,DIRECT
 DOMAIN-SUFFIX,digicert.com,DIRECT
 DOMAIN-SUFFIX,ifanr.com,direct
 DOMAIN-SUFFIX,engadget.com,direct
+DOMAIN-SUFFIX,95516.com,direct
