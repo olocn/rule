@@ -1,12 +1,14 @@
 //油管
-USER-AGENT,*youtube*,Google
+USER-AGENT,youtube*,Google
 DOMAIN-SUFFIX,googlevideo.com,Google
 DOMAIN-SUFFIX,youtube.com,Google
 DOMAIN,youtubei.googleapis.com,Google
 USER-AGENT,com.google.ios.youtube*,Google
 USER-AGENT,YouTubeMusic*,Google
-DOMAIN-SUFFIX,ggpht.com,Google
-DOMAIN-SUFFIX,ytimg.com,Google
+
+DOMAIN-SUFFIX,ggpht.com,proxy
+DOMAIN-SUFFIX,ytimg.com,proxy
+
 
 //动画疯
 USER-AGENT,Anime*,proxy
