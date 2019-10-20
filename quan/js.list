@@ -125,7 +125,7 @@ DOMAIN-SUFFIX,pscdn.co,proxy
 DOMAIN-SUFFIX,scdn.co,proxy
 DOMAIN-SUFFIX,spotify.com,proxy
 DOMAIN-SUFFIX,spoti.fi,proxy
-
+IP-CIDR,35.186.224.47/32,proxy
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com,proxy
 DOMAIN-SUFFIX,pornhub.com,proxy
