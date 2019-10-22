@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,criteo.com,REJECT
 DOMAIN-SUFFIX,mobileapptracking.com,REJECT
 DOMAIN-SUFFIX,taboola.com,reject
 
+DOMAIN-SUFFIX,inmobi.cn,reject
 DOMAIN,ad.caiyunapp.com,reject
 
 //江阴bus
