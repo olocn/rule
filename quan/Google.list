@@ -6,6 +6,14 @@ DOMAIN,youtubei.googleapis.com,Google
 USER-AGENT,com.google.ios.youtube*,Google
 USER-AGENT,YouTubeMusic*,Google
 
+# > Spotify
+USER-AGENT,Spotify*,Google
+DOMAIN-SUFFIX,pscdn.co,Google
+DOMAIN-SUFFIX,scdn.co,Google
+DOMAIN-SUFFIX,spotify.com,Google
+DOMAIN-SUFFIX,spoti.fi,Google
+IP-CIDR,35.186.224.47/32,Google
+
 DOMAIN-SUFFIX,ggpht.com,proxy
 DOMAIN-SUFFIX,ytimg.com,proxy
 
