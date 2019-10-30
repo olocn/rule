@@ -1,12 +1,8 @@
 shadowsocks=jp.001.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-1
 shadowsocks=jp.002.idcf.bilibili.center:11173, method=chacha20, password=ss745201, fast-open=false, udp-relay=true,tag=日本软银-3
 
-shadowsocks=103.102.7.28:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=false, tag=🇺🇸8
-shadowsocks=175.102.11.142:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵1
-shadowsocks=52.175.18.188:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇭🇰AZ6
-shadowsocks=13.70.21.164:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇭🇰AZ5
+shadowsocks= hkazure8.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=false, tag= 🇭🇰AZ8
+shadowsocks= jpazure4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵AZ4
 shadowsocks=211.75.30.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=CHT11
 shadowsocks=120.24.59.40:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇸🇬IPLC
-shadowsocks=47.106.59.183:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=dba6929811.wns.windows.com, fast-open=false, udp-relay=true, tag=新加坡IPLC 02
-shadowsocks=175.102.11.139:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇰🇷1
-shadowsocks=103.101.223.5:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇯🇵SB
+
