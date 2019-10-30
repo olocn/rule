@@ -132,7 +132,8 @@ DOMAIN-SUFFIX,pornhub.com,proxy
 DOMAIN-SUFFIX,pornhubpremium.com,proxy
 
 # > BBC iPlayer
-USER-AGENT,BBCiPlayer*,proxy
+
+DOMAIN-SUFFIX,bbc.in,proxy
 DOMAIN-SUFFIX,bbc.co.uk,proxy
 DOMAIN-SUFFIX,bbci.co.uk,proxy
 DOMAIN-KEYWORD,bbcfmt,proxy
