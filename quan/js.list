@@ -124,6 +124,7 @@ DOMAIN-SUFFIX,dler.cloud,proxy
 DOMAIN-SUFFIX,wikimedia.org,proxy
 DOMAIN-SUFFIX,adtidy.org,proxy
 DOMAIN-SUFFIX,adguard.com,proxy
+DOMAIN-SUFFIX,trib.al,proxy
 
 # > Pornhub
 DOMAIN-SUFFIX,phncdn.com,proxy
