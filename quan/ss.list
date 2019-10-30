@@ -6,3 +6,5 @@ shadowsocks= jpazure4.0tk8a3a1q4t94dler.com:37852, method=xchacha20-ietf-poly130
 shadowsocks=211.75.30.245:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=CHT11
 shadowsocks=120.24.59.40:37852, method=xchacha20-ietf-poly1305, password=bpdftT, obfs=http, obfs-host=itunes.apple.com, udp-relay=true, tag=🇸🇬IPLC
 
+shadowsocks=vtyk.nbclouds.co:1651, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84584607     :58adf269daeb4b76, fast-open=false, udp-relay=false, tag=🇯🇵12
+shadowsocks=vtyk.nbclouds.co:1708, method=chacha20, password=nexitally, ssr-protocol=auth_aes128_sha1, ssr-protocol-param=84584607     :58adf269daeb4b76, fast-open=false, udp-relay=false, tag=🇨🇳6
