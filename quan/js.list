@@ -12,6 +12,8 @@ DOMAIN-SUFFIX,push.apple.com,DIRECT
 DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
 
 #Reject
+
+DOMAIN-keyword,analytics,reject
 DOMAIN-SUFFIX,appadhoc.com,REJECT
 DOMAIN,log.mmstat.com,REJECT
 DOMAIN-SUFFIX,51la.net,REJECT
