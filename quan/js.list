@@ -150,7 +150,6 @@ DOMAIN,stats.v.duowan.com,reject
 DOMAIN,ta.trs.cn,reject
 DOMAIN,tajs.qq.com,reject
 DOMAIN,tcss.qq.com,reject
-DOMAIN,tingyun.com,reject
 DOMAIN,tj.21ic.com,reject
 DOMAIN,tjj.com,reject
 DOMAIN,tongji.xinmin.cn,reject
@@ -291,8 +290,7 @@ DOMAIN-KEYWORD,analytics,reject
 DOMAIN-SUFFIX,appadhoc.com,REJECT
 DOMAIN,log.mmstat.com,REJECT
 DOMAIN,cig.com.cn,REJECT
-DOMAIN,ta.trs.cn,REJECT
-DOMAIN,tingyun.com,REJECT
+DOMAIN-SUFFIX,tingyun.com,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
 DOMAIN-SUFFIX,trackingio.com,REJECT
 DOMAIN-SUFFIX,moatads.com,REJECT
