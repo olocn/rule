@@ -351,6 +351,9 @@ host, loc.map.baidu.com, reject
 host, himg.bdimg.com, reject
 host, wappass.bdimg.com, reject
 
+
+
+DOMAIN,www.4ghhff.info,reject
 # Proxy
 
 DOMAIN,www.yuoimg.com,proxy
