@@ -352,6 +352,7 @@ host, himg.bdimg.com, reject
 host, wappass.bdimg.com, reject
 
 # Proxy
+DOMAIN-SUFFIX,aventertainments.com,proxy
 host-suffix, assdrty.com, proxy
 DOMAIN,e.crashlytics.com,Proxy
 DOMAIN-SUFFIX,inoreader.com,Proxy
