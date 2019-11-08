@@ -345,7 +345,14 @@ DOMAIN-SUFFIX,nuomi.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
 DOMAIN-SUFFIX,zt.baidu.com,REJECT
 
+#百度地图
+host, carowner.baidu.com, reject
+host, loc.map.baidu.com, reject
+host, himg.bdimg.com, reject
+host, wappass.bdimg.com, reject
+
 # Proxy
+host-suffix, assdrty.com, proxy
 DOMAIN,e.crashlytics.com,Proxy
 DOMAIN-SUFFIX,inoreader.com,Proxy
 DOMAIN-SUFFIX,muncloud.me,Proxy
