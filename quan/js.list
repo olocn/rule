@@ -353,10 +353,11 @@ host, wappass.bdimg.com, reject
 
 # Proxy
 
+DOMAIN,www.yuoimg.com,proxy
 DOMAIN-SUFFIX,jdbimgs.com,proxy
 DOMAIN-SUFFIX,mgstage.com,proxy
 DOMAIN-SUFFIX,aventertainments.com,proxy
-host-suffix, assdrty.com, proxy
+DOMAIN,www.assdrty.com,proxy
 DOMAIN,e.crashlytics.com,Proxy
 DOMAIN-SUFFIX,inoreader.com,Proxy
 DOMAIN-SUFFIX,muncloud.me,Proxy
