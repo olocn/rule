@@ -1,18 +1,18 @@
 //油管
-USER-AGENT,youtube*,Google
-DOMAIN-SUFFIX,googlevideo.com,Google
-DOMAIN-SUFFIX,youtube.com,Google
-DOMAIN,youtubei.googleapis.com,Google
-USER-AGENT,com.google.ios.youtube*,Google
-USER-AGENT,YouTubeMusic*,Google
+USER-AGENT,youtube*,proxy
+DOMAIN-SUFFIX,googlevideo.com,proxy
+DOMAIN-SUFFIX,youtube.com,proxy
+DOMAIN,youtubei.googleapis.com,proxy
+USER-AGENT,com.google.ios.youtube*,proxy
+USER-AGENT,YouTubeMusic*,proxy
 
 # > Spotify
-USER-AGENT,Spotify*,Google
-DOMAIN-SUFFIX,pscdn.co,Google
-DOMAIN-SUFFIX,scdn.co,Google
-DOMAIN-SUFFIX,spotify.com,Google
-DOMAIN-SUFFIX,spoti.fi,Google
-IP-CIDR,35.186.224.47/32,Google
+USER-AGENT,Spotify*,proxy
+DOMAIN-SUFFIX,pscdn.co,proxy
+DOMAIN-SUFFIX,scdn.co,proxy
+DOMAIN-SUFFIX,spotify.com,proxy
+DOMAIN-SUFFIX,spoti.fi,proxy
+IP-CIDR,35.186.224.47/32,proxy
 
 DOMAIN-SUFFIX,ggpht.com,proxy
 DOMAIN-SUFFIX,ytimg.com,proxy
