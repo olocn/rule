@@ -37,6 +37,57 @@ USER-AGENT,wpsoffice*,REJECT
 DOMAIN-SUFFIX,umeng.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
+#百度地图
+host, carowner.baidu.com, reject
+host, loc.map.baidu.com, reject
+host, himg.bdimg.com, reject
+host, wappass.bdimg.com, reject
+DOMAIN,opnstat.baidu.com,REJECT
+
+DOMAIN-SUFFIX,ad.daum.net,REJECT
+DOMAIN-SUFFIX,track.xiachufang.com,REJECT
+DOMAIN,abema-adx.ameba.jp,REJECT
+DOMAIN,ad.12306.cn,REJECT
+DOMAIN,ad.360in.com,REJECT
+DOMAIN,ad.51wnl-cq.com,REJECT
+DOMAIN,ad.caiyunapp.com,REJECT
+DOMAIN,ad.huajiao.com,REJECT
+DOMAIN,ad.hzyoka.com,REJECT
+DOMAIN,ad.jiemian.com,REJECT
+DOMAIN,ad.qingting.fm,REJECT
+DOMAIN,ad.wappalyzer.com,REJECT
+DOMAIN,ad-cn.jovcloud.com,REJECT
+DOMAIN,adextra.51wnl-cq.com,REJECT
+DOMAIN,ads.adadapted.com,REJECT
+DOMAIN,ads.daydaycook.com.cn,REJECT
+DOMAIN,ads.weilitoutiao.net,REJECT
+DOMAIN,adsapi.manhuaren.com,REJECT
+DOMAIN,adsdk.dmzj.com,REJECT
+DOMAIN,adserver.pandora.com,REJECT
+DOMAIN,adui.tg.meitu.com,REJECT
+DOMAIN,adv.bandi.so,REJECT
+DOMAIN,adxserver.ad.cmvideo.cn,REJECT
+DOMAIN,app-ad.variflight.com,REJECT
+DOMAIN,applog.mobike.com,REJECT
+DOMAIN,appnext.hs.llnwd.net,REJECT
+DOMAIN,appnext-a.akamaihd.net,REJECT
+DOMAIN,ggs.myzaker.com,REJECT
+DOMAIN,gs.getui.com,REJECT
+DOMAIN,itad.linetv.tw,REJECT
+DOMAIN,ja.chushou.tv,REJECT
+DOMAIN,log.b612kaji.com,REJECT
+DOMAIN,mads.suning.com,REJECT
+DOMAIN,mobileads.msn.com,REJECT
+DOMAIN,mopnativeadv.037201.com,REJECT
+DOMAIN,nativeadv.dftoutiao.com,REJECT
+DOMAIN,sugar.zhihu.com,REJECT
+DOMAIN,toots-a.akamaihd.net,REJECT
+DOMAIN,track.tiara.daum.net,REJECT
+DOMAIN,track.tiara.kakao.com,REJECT
+DOMAIN,trackapp.guahao.cn,REJECT
+DOMAIN,traffic.mogujie.com,REJECT
+DOMAIN,wmlog.meituan.com,REJECT
+
 
 
 #百度地图
