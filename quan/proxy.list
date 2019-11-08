@@ -335,6 +335,8 @@ DOMAIN-SUFFIX,netflix.com,PROXY
 DOMAIN-SUFFIX,netflix.net,PROXY
 DOMAIN-SUFFIX,newsblur.com,PROXY
 DOMAIN-SUFFIX,nexitcore.com,PROXY
+
+DOMAIN-SUFFIX,nenode.best,PROXY
 DOMAIN-SUFFIX,nflxext.com,PROXY
 DOMAIN-SUFFIX,nflximg.com,PROXY
 DOMAIN-SUFFIX,nflximg.net,PROXY
