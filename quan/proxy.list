@@ -398,6 +398,7 @@ DOMAIN-SUFFIX,youtube.com,proxy
 DOMAIN-SUFFIX,ytimg.com,proxy
 DOMAIN-SUFFIX,zaobao.com.sg,Proxy
 IP-CIDR,35.186.224.47/32,proxy
+IP-CIDR,104.244.42.0/24,proxy
 USER-AGENT,Anime*,proxy
 USER-AGENT,com.google.ios.youtube*,proxy
 USER-AGENT,Spotify*,proxy
