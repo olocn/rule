@@ -35,11 +35,9 @@ DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
 
 DOMAIN-SUFFIX,umeng.com,REJECT
-DOMAIN-SUFFIX,nuomi.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
 #百度地图
 host, carowner.baidu.com, reject
-host, loc.map.baidu.com, reject
 host, himg.bdimg.com, reject
 host, wappass.bdimg.com, reject
 DOMAIN,opnstat.baidu.com,REJECT
