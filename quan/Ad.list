@@ -87,6 +87,11 @@ DOMAIN,traffic.mogujie.com,REJECT
 DOMAIN,wmlog.meituan.com,REJECT
 DOMAIN-SUFFIX,doubleclick.net,REJECT
 
+DOMAIN,log.nuomi.com,reject
+DOMAIN,xiongzhang.baidu.com,reject
+DOMAIN,msite.baidu.com,reject
+DOMAIN,airsend.feeperfect.com,reject
+IP-CIDR,159.89.159.234/32,reject
 
 #百度地图
 DOMAIN,zt.baidu.com,REJECT
