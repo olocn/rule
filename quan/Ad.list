@@ -85,7 +85,7 @@ DOMAIN,track.tiara.kakao.com,REJECT
 DOMAIN,trackapp.guahao.cn,REJECT
 DOMAIN,traffic.mogujie.com,REJECT
 DOMAIN,wmlog.meituan.com,REJECT
-
+DOMAIN-SUFFIX,doubleclick.net,REJECT
 
 
 #百度地图
