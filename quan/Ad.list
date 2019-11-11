@@ -51,6 +51,8 @@ DOMAIN,ad.51wnl-cq.com,REJECT
 DOMAIN,ad.caiyunapp.com,REJECT
 DOMAIN,ad.huajiao.com,REJECT
 DOMAIN,ad.hzyoka.com,REJECT
+
+DOMAIN,ad.ihuman.com,reject
 DOMAIN,ad.jiemian.com,REJECT
 DOMAIN,ad.qingting.fm,REJECT
 DOMAIN,ad.wappalyzer.com,REJECT
