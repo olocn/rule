@@ -101,3 +101,4 @@ DOMAIN,himg.bdimg.com,REJECT
 DOMAIN,wappass.bdimg.com,REJECT
 
 DOMAIN,www.4ghhff.info,REJECT
+DOMAIN-SUFFIX,umengcloud.com,reject
