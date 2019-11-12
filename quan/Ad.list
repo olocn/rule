@@ -36,10 +36,11 @@ USER-AGENT,wpsoffice*,REJECT
 
 DOMAIN-SUFFIX,umeng.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
+
 #百度地图
-host, carowner.baidu.com, reject
-host, himg.bdimg.com, reject
-host, wappass.bdimg.com, reject
+DOMAIN,carowner.baidu.com,REJECT
+DOMAIN,himg.bdimg.com,REJECT
+DOMAIN,wappass.bdimg.com,REJECT
 DOMAIN,opnstat.baidu.com,REJECT
 
 DOMAIN-SUFFIX,ad.daum.net,REJECT
