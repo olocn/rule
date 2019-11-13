@@ -419,6 +419,7 @@ DOMAIN-SUFFIX,webrtc.org,proxy
 DOMAIN-SUFFIX,whatbrowser.org,proxy
 DOMAIN-SUFFIX,widevine.com,proxy
 DOMAIN-SUFFIX,wikimedia.org,proxy
+DOMAIN-SUFFIX,wikipedia.org,proxy
 DOMAIN-SUFFIX,x.company,proxy
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com,proxy
 DOMAIN-SUFFIX,xuite.net,proxy
