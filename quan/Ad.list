@@ -1,7 +1,3 @@
-DOMAIN-KEYWORD,adservice,REJECT
-DOMAIN-KEYWORD,analytics,REJECT
-DOMAIN-KEYWORD,analysis,REJECT
-
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
 DOMAIN,wx.hfxing.cn,REJECT
