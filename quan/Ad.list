@@ -16,7 +16,6 @@ DOMAIN,aoscdn.amap.com,REJECT
 DOMAIN,page.amap.com,REJECT
 DOMAIN,sync.amap.com,REJECT
 DOMAIN,aos-cdn-image.amap.com,REJECT
-DOMAIN,wb.amap.com,REJECT
 DOMAIN,f.amap.com,REJECT
 
 DOMAIN-SUFFIX,wgo.mmstat.com,REJECT
