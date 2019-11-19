@@ -12,14 +12,8 @@ DOMAIN-SUFFIX,qchannel01.cn,REJECT
 
 # > 高德
 DOMAIN,logs.amap.com,REJECT
-DOMAIN,aoscdn.amap.com,REJECT
-DOMAIN,page.amap.com,REJECT
-DOMAIN,sync.amap.com,REJECT
-DOMAIN,aos-cdn-image.amap.com,REJECT
-DOMAIN,f.amap.com,REJECT
 
 DOMAIN-SUFFIX,wgo.mmstat.com,REJECT
-DOMAIN,fuwu.wap.sogou.com,REJECT
 
 DOMAIN-SUFFIX,appodeal.com,REJECT
 DOMAIN-SUFFIX,inner-active.mobi,REJECT
@@ -37,9 +31,8 @@ DOMAIN-SUFFIX,umeng.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
 
 #百度地图
+DOMAIN,zt.baidu.com,REJECT
 DOMAIN,carowner.baidu.com,REJECT
-DOMAIN,himg.bdimg.com,REJECT
-DOMAIN,wappass.bdimg.com,REJECT
 DOMAIN,opnstat.baidu.com,REJECT
 
 DOMAIN-SUFFIX,ad.daum.net,REJECT
@@ -94,11 +87,6 @@ DOMAIN,msite.baidu.com,reject
 DOMAIN,airsend.feeperfect.com,reject
 IP-CIDR,159.89.159.234/32,reject
 
-#百度地图
-DOMAIN,zt.baidu.com,REJECT
-DOMAIN,carowner.baidu.com,REJECT
-DOMAIN,himg.bdimg.com,REJECT
-DOMAIN,wappass.bdimg.com,REJECT
 
 DOMAIN,www.4ghhff.info,REJECT
 DOMAIN-SUFFIX,umengcloud.com,reject
