@@ -27,7 +27,6 @@ DOMAIN,ad-stat.ksosoft.com,REJECT
 DOMAIN-SUFFIX,kingsoft-office-service.com,REJECT
 USER-AGENT,wpsoffice*,REJECT
 
-DOMAIN-SUFFIX,umeng.com,REJECT
 DOMAIN-SUFFIX,opnstat.baidu.com,REJECT
 
 #百度地图
@@ -75,12 +74,9 @@ DOMAIN,mopnativeadv.037201.com,REJECT
 DOMAIN,nativeadv.dftoutiao.com,REJECT
 DOMAIN,sugar.zhihu.com,REJECT
 DOMAIN,toots-a.akamaihd.net,REJECT
-DOMAIN,track.tiara.daum.net,REJECT
-DOMAIN,track.tiara.kakao.com,REJECT
-DOMAIN,trackapp.guahao.cn,REJECT
-DOMAIN,traffic.mogujie.com,REJECT
+
 DOMAIN,wmlog.meituan.com,REJECT
-DOMAIN-SUFFIX,doubleclick.net,REJECT
+
 
 DOMAIN,xiongzhang.baidu.com,reject
 DOMAIN,msite.baidu.com,reject
@@ -89,4 +85,4 @@ IP-CIDR,159.89.159.234/32,reject
 
 
 DOMAIN,www.4ghhff.info,REJECT
-DOMAIN-SUFFIX,umengcloud.com,reject
+
