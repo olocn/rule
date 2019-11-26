@@ -145,6 +145,8 @@ DOMAIN-SUFFIX,chromestatus.com,PROXY
 DOMAIN-SUFFIX,chromium.org,PROXY
 DOMAIN-SUFFIX,citypopulation.de,PROXY
 DOMAIN-SUFFIX,ck101.com,PROXY
+
+DOMAIN-SUFFIX,clickme.net,proxy
 DOMAIN-SUFFIX,clarionproject.org,PROXY
 DOMAIN-SUFFIX,clearsurance.com,PROXY
 DOMAIN-SUFFIX,cloudappsecurity.com,PROXY
@@ -336,6 +338,7 @@ DOMAIN-SUFFIX,muncloud.me,PROXY
 DOMAIN-SUFFIX,myactimes.com,PROXY
 DOMAIN-SUFFIX,mytvsuper.com,PROXY
 DOMAIN-SUFFIX,n3ro.net,PROXY
+DOMAIN-SUFFIX,nanrenvip.bid,proxy
 DOMAIN-SUFFIX,nationalgeographic.com,Proxy
 DOMAIN-SUFFIX,nationwide.com,PROXY
 DOMAIN-SUFFIX,naver.com,PROXY
