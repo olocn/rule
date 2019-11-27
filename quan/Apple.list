@@ -1,14 +1,3 @@
-DOMAIN,api.smoot.apple.com,DIRECT
-DOMAIN,api.smoot.apple.com.cn,DIRECT
-DOMAIN,configuration.apple.com,DIRECT
-DOMAIN,xp.apple.com,DIRECT
-DOMAIN,smp-device-content.apple.com,DIRECT
-DOMAIN,guzzoni.apple.com,DIRECT
-DOMAIN,captive.apple.com,DIRECT
-DOMAIN-SUFFIX,ess.apple.com,DIRECT
-DOMAIN-SUFFIX,push.apple.com,DIRECT
-DOMAIN-SUFFIX,push-apple.com.akadns.net,DIRECT
-
 # >> TestFlight
 DOMAIN,testflight.apple.com,PROXY
 # >> Apple URL Shortener
@@ -33,12 +22,6 @@ DOMAIN,news-client.apple.com,PROXY
 DOMAIN,news-edge.apple.com,PROXY
 DOMAIN,news-events.apple.com,PROXY
 DOMAIN,apple.comscoreresearch.com,PROXY
-
-//Siri
-#USER-AGENT,*AssistantServices*,DIRECT
-#USER-AGENT,MobileAsset*,DIRECT
-#USER-AGENT,Siri*,DIRECT
-#USER-AGENT,*siri*,DIRECT
 
 DOMAIN-SUFFIX,aaplimg.com,Apple
 DOMAIN-SUFFIX,apple.co,Apple
