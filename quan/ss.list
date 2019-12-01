@@ -1,12 +1,12 @@
-shadowsocks=47.99.140.245:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=🇯🇵BGP6
-shadowsocks=47.100.175.206:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag= 🇯🇵BGP7
-shadowsocks=139.226.186.55:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=台湾BGP5
-shadowsocks=175.102.179.234:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=台湾BGP2
+shadowsocks=47.99.140.245:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=🇯🇵BGP6
+shadowsocks=47.100.175.206:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag= 🇯🇵BGP7
+shadowsocks=139.226.186.55:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=台湾BGP5
+shadowsocks=175.102.179.234:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=台湾BGP2
 shadowsocks=120.24.59.40:37852, method=rc4-md5, password=bpdftT, fast-open=false, udp-relay=true, tag=🇸🇬IPLC1
-shadowsocks=sh_us4.0tk8a3a1q4t94dler.com:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=🇺🇸BGP4
-shadowsocks=103.56.62.71:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=🇺🇸BGP3
+shadowsocks=sh_us4.0tk8a3a1q4t94dler.com:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=🇺🇸BGP4
+shadowsocks=103.56.62.71:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=🇺🇸BGP3
 
-shadowsocks=47.99.140.189:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=true, tag=🇭🇰BGP6
+shadowsocks=47.99.140.189:152, method=chacha20-ietf-poly1305, password=UrTAdN, obfs=tls, obfs-host=1915929811.wns.windows.com, fast-open=false, udp-relay=false, tag=🇭🇰BGP6
 shadowsocks=47.107.112.193:37852, method=rc4-md5, password=bpdftT, fast-open=false, udp-relay=true, tag=🇭🇰IPLC16
 
 
