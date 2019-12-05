@@ -409,6 +409,7 @@ DOMAIN-SUFFIX,spotify.com,proxy
 DOMAIN-SUFFIX,storage.msn.com,PROXY
 DOMAIN-SUFFIX,synergyse.com,proxy
 DOMAIN-SUFFIX,t.me,proxy
+DOMAIN-SUFFIX,t.co,proxy
 DOMAIN-SUFFIX,twimg.com,proxy
 DOMAIN-SUFFIX,tdesktop.com,proxy
 DOMAIN-SUFFIX,telegra.ph,proxy
