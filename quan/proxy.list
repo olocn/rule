@@ -67,8 +67,6 @@ DOMAIN-SUFFIX,ampproject.net,PROXY
 DOMAIN-SUFFIX,ampproject.org,PROXY
 DOMAIN-SUFFIX,android.com,PROXY
 DOMAIN-SUFFIX,androidify.com,PROXY
-DOMAIN-SUFFIX,anime1.me,PROXY
-DOMAIN-SUFFIX,animeone.me,Proxy
 DOMAIN-SUFFIX,aol.com,PROXY
 DOMAIN-SUFFIX,apartmentratings.com,PROXY
 DOMAIN-SUFFIX,apartments.com,PROXY
@@ -145,7 +143,6 @@ DOMAIN-SUFFIX,chromestatus.com,PROXY
 DOMAIN-SUFFIX,chromium.org,PROXY
 DOMAIN-SUFFIX,citypopulation.de,PROXY
 DOMAIN-SUFFIX,ck101.com,PROXY
-
 DOMAIN-SUFFIX,clickme.net,proxy
 DOMAIN-SUFFIX,clarionproject.org,PROXY
 DOMAIN-SUFFIX,clearsurance.com,PROXY
