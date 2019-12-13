@@ -4,6 +4,15 @@
 # DOMAIN-SUFFIX,akamaistream.net,DIRECT
 # DOMAIN-SUFFIX,akamaized.net,DIRECT
 # DOMAIN-SUFFIX,speedtest.net,DIRECT
+DOMAIN,cdn.bootcss.com,DIRECT
+DOMAIN-SUFFIX,10010.com,DIRECT
+DOMAIN,license.pdfexpert.com,DIRECT
+DOMAIN-SUFFIX,docstransfer.com,DIRECT
+DOMAIN,com.yinxiang.iphoneci,DIRECT
+DOMAIN,com.yinxiang.iphone,DIRECT
+DOMAIN,com.yinxiang.iphonepre,DIRECT
+DOMAIN-SUFFIX,alicnd.com,DIRECT
+USER-AGENT,com.apple.trustd*,DIRECT
 DOMAIN,blzddist1-a.akamaihd.net,DIRECT
 DOMAIN,cdp.cloud.unity3d.com,DIRECT
 DOMAIN,client.amplifi.com,DIRECT
