@@ -6,6 +6,11 @@ DOMAIN,ads.aralego.com,REJECT
 DOMAIN-SUFFIX,criteo.net,REJECT
 DOMAIN-SUFFIX,ad287.com,REJECT
 DOMAIN-SUFFIX,umsns.com,REJECT
+DOMAIN-SUFFIX, umeng.co, reject
+DOMAIN, loc.map.baidu.com, reject
+DOMAIN, analytics.yinxiang.com, reject
+DOMAIN-SUFFIX, duxiaoman.com, reject
+DOMAIN-SUFFIX, baifubao.com, reject
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
