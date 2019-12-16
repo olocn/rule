@@ -1,3 +1,5 @@
+DOMAIN-SUFFIX,appcenter.ms,proxy
+DOMAIN-SUFFIX,crossutility.com,proxy
 DOMAIN,abc.com,PROXY
 DOMAIN,abc.go.com,PROXY
 DOMAIN,abc.net.au,PROXY
