@@ -340,6 +340,7 @@ DOMAIN-SUFFIX,liuli.in,PROXY
 DOMAIN-SUFFIX,liuli.uk,PROXY
 DOMAIN-SUFFIX,live.com,PROXY
 DOMAIN-SUFFIX,livefilestore.com,PROXY
+DOMAIN-SUFFIX,imgur.com,PROXY
 DOMAIN-SUFFIX,manhuagui.com,proxy
 DOMAIN-SUFFIX,m.me,PROXY
 DOMAIN-SUFFIX,madewithcode.com,proxy
