@@ -443,6 +443,7 @@ DOMAIN-SUFFIX,v2ex.com,proxy
 DOMAIN-SUFFIX,vfast.cc,Proxy
 DOMAIN-SUFFIX,vol.moe,proxy
 DOMAIN-SUFFIX,volmoe.com,proxy
+DOMAIN-SUFFIX,upload.cc,proxy
 DOMAIN-SUFFIX,waveprotocol.org,proxy
 DOMAIN-SUFFIX,waymo.com,proxy
 DOMAIN-SUFFIX,webmproject.org,proxy
