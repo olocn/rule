@@ -5,6 +5,8 @@ DOMAIN,abc.go.com,PROXY
 DOMAIN,abc.net.au,PROXY
 DOMAIN,api.amplitude.com,PROXY
 DOMAIN,api.lireapp.com,PROXY
+
+DOMAIN,apis.live.net,proxy
 DOMAIN,app.smartmailcloud.com,PROXY
 DOMAIN,cdn-images.mailchimp.com,PROXY
 DOMAIN,content.jwplatform.com,PROXY
