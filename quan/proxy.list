@@ -49,7 +49,6 @@ DOMAIN-SUFFIX,yimg.com,PROXY
 DOMAIN-SUFFIX,addtoany.com,PROXY
 DOMAIN,ipfs.lolicdn.net,PROXY
 DOMAIN-SUFFIX,telesco.pe,PROXY
-DOMAIN-SUFFIX,telegram.org,PROXY
 DOMAIN-SUFFIX,azureedge.net,PROXY
 DOMAIN-SUFFIX,pinimg.com,PROXY
 DOMAIN,image.email.microsoftemail.com,PROXY
@@ -432,11 +431,8 @@ DOMAIN-SUFFIX,spoti.fi,proxy
 DOMAIN-SUFFIX,spotify.com,proxy
 DOMAIN-SUFFIX,storage.msn.com,PROXY
 DOMAIN-SUFFIX,synergyse.com,proxy
-DOMAIN-SUFFIX,t.me,proxy
 DOMAIN-SUFFIX,t.co,proxy
 DOMAIN-SUFFIX,twimg.com,proxy
-DOMAIN-SUFFIX,tdesktop.com,proxy
-DOMAIN-SUFFIX,telegra.ph,proxy
 DOMAIN-SUFFIX,tensorflow.org,proxy
 DOMAIN-SUFFIX,tfhub.dev,proxy
 DOMAIN-SUFFIX,tiltbrush.com,proxy
@@ -464,15 +460,9 @@ DOMAIN-SUFFIX,ytimg.com,proxy
 DOMAIN-SUFFIX,zaobao.com.sg,Proxy
 IP-CIDR,104.244.42.0/24,proxy
 IP-CIDR,109.239.140.0/24,proxy
-IP-CIDR,149.154.160.0/20,proxy
 IP-CIDR,205.172.60.0/22,proxy
 IP-CIDR,35.186.224.47/32,proxy
 IP-CIDR,67.198.55.0/24,proxy
-IP-CIDR,91.108.12.0/22,proxy
-IP-CIDR,91.108.16.0/22,proxy
-IP-CIDR,91.108.4.0/22,proxy
-IP-CIDR,91.108.56.0/22,proxy
-IP-CIDR,91.108.8.0/22,proxy
 USER-AGENT,Anime*,proxy
 USER-AGENT,com.google.ios.youtube*,proxy
 USER-AGENT,Spotify*,proxy
