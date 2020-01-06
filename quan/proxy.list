@@ -433,6 +433,7 @@ DOMAIN-SUFFIX,twimg.com,proxy
 DOMAIN-SUFFIX,unpkg.com,PROXY
 DOMAIN-SUFFIX,upload.cc,proxy
 DOMAIN-SUFFIX,v2ex.com,proxy
+DOMAIN-SUFFIX,v2ex.co,proxy
 DOMAIN-SUFFIX,vfast.cc,Proxy
 DOMAIN-SUFFIX,vol.moe,proxy
 DOMAIN-SUFFIX,volmoe.com,proxy
