@@ -8,6 +8,8 @@ DOMAIN,app.smartmailcloud.com,PROXY
 DOMAIN,cdn-images.mailchimp.com,PROXY
 DOMAIN,content.jwplatform.com,PROXY
 DOMAIN,e.crashlytics.com,Proxy
+
+DOMAIN,docs.live.net,proxy
 DOMAIN,graph.microsoft.com,PROXY
 DOMAIN,id.heroku.com,PROXY
 DOMAIN,image.email.microsoftemail.com,PROXY
