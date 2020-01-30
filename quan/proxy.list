@@ -20,7 +20,6 @@ DOMAIN,ipfs.lolicdn.net,PROXY
 DOMAIN,jp.netcdn.space,PROXY
 DOMAIN,login.live.com,Proxy
 DOMAIN,mobile.pipe.aria.microsoft.com,Proxy
-DOMAIN,oneclient.sfx.ms,PROXY
 DOMAIN,outlook.office365.com,proxy
 DOMAIN,pop.gproxy.com,proxy
 DOMAIN,quantumult.crossutility.com,PROXY
@@ -48,8 +47,6 @@ DOMAIN-KEYWORD,twitter,PROXY
 DOMAIN-KEYWORD,uk-live,PROXY
 DOMAIN-KEYWORD,wikileaks,PROXY
 DOMAIN-SUFFIX,0rz.tw,PROXY
-DOMAIN-SUFFIX,1drv.com,PROXY
-DOMAIN-SUFFIX,1drv.ms,PROXY
 DOMAIN-SUFFIX,4bluestones.biz,PROXY
 DOMAIN-SUFFIX,4shared.com,PROXY
 DOMAIN-SUFFIX,881903.com,PROXY
@@ -330,7 +327,6 @@ DOMAIN-SUFFIX,linksalpha.com,PROXY
 DOMAIN-SUFFIX,liuli.in,PROXY
 DOMAIN-SUFFIX,liuli.uk,PROXY
 DOMAIN-SUFFIX,live.com,PROXY
-DOMAIN-SUFFIX,livefilestore.com,PROXY
 DOMAIN-SUFFIX,m.me,PROXY
 DOMAIN-SUFFIX,madewithcode.com,proxy
 DOMAIN-SUFFIX,mail.ru,PROXY
@@ -392,7 +388,6 @@ DOMAIN-SUFFIX,office.net,PROXY
 DOMAIN-SUFFIX,office365.com,PROXY
 DOMAIN-SUFFIX,ok.ru,PROXY
 DOMAIN-SUFFIX,okex.com,PROXY
-DOMAIN-SUFFIX,onedrive.com,PROXY
 DOMAIN-SUFFIX,onenote.com,PROXY
 DOMAIN-SUFFIX,onenote.net,PROXY
 DOMAIN-SUFFIX,onmicrosoft.com,PROXY
@@ -423,7 +418,6 @@ DOMAIN-SUFFIX,sehuatang.org,proxy
 DOMAIN-SUFFIX,shattered.io,proxy
 DOMAIN-SUFFIX,spoti.fi,proxy
 DOMAIN-SUFFIX,spotify.com,proxy
-DOMAIN-SUFFIX,storage.msn.com,PROXY
 DOMAIN-SUFFIX,synergyse.com,proxy
 DOMAIN-SUFFIX,t.co,proxy
 DOMAIN-SUFFIX,telesco.pe,PROXY
