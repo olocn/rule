@@ -1,5 +1,4 @@
 DOMAIN,abc.com,proxy
-DOMAIN,abc.go.com,proxy
 DOMAIN,abc.net.au,proxy
 DOMAIN,api.amplitude.com,proxy
 DOMAIN,api.lireapp.com,proxy
@@ -7,7 +6,6 @@ DOMAIN,apis.live.net,proxy
 DOMAIN,app.smartmailcloud.com,proxy
 DOMAIN,cdn-images.mailchimp.com,proxy
 DOMAIN,content.jwplatform.com,proxy
-DOMAIN,e.crashlytics.com,proxy
 
 DOMAIN,docs.live.net,proxy
 DOMAIN,graph.microsoft.com,proxy
@@ -259,6 +257,7 @@ DOMAIN-SUFFIX,gigacircle.com,proxy
 DOMAIN-SUFFIX,globalvoices.org,proxy
 DOMAIN-SUFFIX,gmail.com,proxy
 DOMAIN-SUFFIX,gmodules.com,proxy
+DOMAIN-SUFFIX,go.com,proxy
 DOMAIN-SUFFIX,godoc.org,proxy
 DOMAIN-SUFFIX,golang.org,proxy
 DOMAIN-SUFFIX,goo.ne.jp,proxy
