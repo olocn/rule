@@ -1,4 +1,4 @@
-
+DOMAIN-KEYWORD,sogou,REJECT
 DOMAIN-SUFFIX,aralego.net,REJECT
 DOMAIN,ads.aralego.com,REJECT
 DOMAIN-SUFFIX,criteo.net,REJECT
