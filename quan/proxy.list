@@ -7,6 +7,11 @@ DOMAIN,app.smartmailcloud.com,proxy
 DOMAIN,cdn-images.mailchimp.com,proxy
 DOMAIN,content.jwplatform.com,proxy
 
+DOMAIN-SUFFIX,tits-guru.com, proxy
+DOMAIN-SUFFIX,jike.info, proxy
+DOMAIN-SUFFIX,photosync-app.com,proxy
+DOMAIN-SUFFIX,yande.re,proxy
+
 DOMAIN,docs.live.net,proxy
 DOMAIN,graph.microsoft.com,proxy
 DOMAIN,id.heroku.com,proxy
