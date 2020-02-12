@@ -1,5 +1,8 @@
 IP-CIDR,47.98.0.0/15,DIRECT	
 IP-CIDR,47.96.0.0/14,DIRECT
+DOMAIN-SUFFIX,rdimg.com,direct
+DOMAIN-SUFFIX,cnbetacdn.com,direct
+DOMAIN-SUFFIX,letsencrypt.org,direct
 # > 360
 DOMAIN-SUFFIX,qhres.com,DIRECT
 DOMAIN-SUFFIX,qhimg.com,DIRECT
