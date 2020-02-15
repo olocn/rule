@@ -99,6 +99,11 @@ DOMAIN-SUFFIX,miui.com,DIRECT
 DOMAIN-SUFFIX,miwifi.com,DIRECT
 DOMAIN-SUFFIX,xiaomi.com,DIRECT
 
+# > Microsoft
+DOMAIN-SUFFIX,msecnd.net,DIRECT
+DOMAIN-SUFFIX,s-microsoft.com,DIRECT
+DOMAIN,officecdn-microsoft-com.akamaized.net,DIRECT
+
 # > NetEase
 USER-AGENT,NeteaseMusic*,DIRECT
 USER-AGENT,%E7%BD%91%E6%98%93%E4%BA%91%E9%9F%B3%E4%B9%90*,DIRECT
@@ -367,11 +372,11 @@ DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
 # > Exclusions
 DOMAIN,translate.google.cn,PROXY
 
-# (HKMTMedia)
+
 # > bilibili
 DOMAIN-SUFFIX,bilibili.com,DIRECT
 DOMAIN,upos-hz-mirrorakam.akamaized.net,DIRECT
-# > 愛奇藝台灣站
+
 DOMAIN,cache.video.iqiyi.com,DIRECT
 
 # Local Area Network
