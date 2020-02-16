@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,brawlstarsgame.com,game
 DOMAIN,supercell.helpshift.com,game
 DOMAIN,profile.gc.apple.com,game
 DOMAIN,commnat-main-gc.ess.apple.com,game
-
+DOMAIN,commnat-cohort-gc.ess.apple.com,game
 IP-CIDR,3.80.0.0/12,game
 IP-CIDR,3.112.0.0/16,game
 
@@ -47,6 +47,7 @@ IP-CIDR,35.158.0.0/16,game
 IP-CIDR,50.112.0.0/17,game
 
 IP-CIDR,52.10.0.0/15,game
+IP-CIDR,52.36.0.0/14,game
 IP-CIDR,52.67.0.0/16,game
 IP-CIDR,52.220.0.0/15,game
 
@@ -57,6 +58,7 @@ IP-CIDR,54.179.128.0/18,game
 IP-CIDR,54.201.0.0/16,game
 IP-CIDR,54.207.0.0/17,game
 IP-CIDR,54.210.0.0/16,game
+IP-CIDR,54.233.128.0/17,game
 IP-CIDR,54.238.0.0/16,game
 IP-CIDR,54.248.0.0/15,game
 IP-CIDR,54.254.128.0/17,game
