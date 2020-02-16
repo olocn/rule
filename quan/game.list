@@ -1,9 +1,11 @@
 //supercell
 DOMAIN-SUFFIX,supercell.com,game
+DOMAIN-SUFFIX,supercell.net,game
 DOMAIN-SUFFIX,brawlstars.com,game
 DOMAIN-SUFFIX,brawlstarsgame.com,game
 DOMAIN,supercell.helpshift.com,game
 DOMAIN,profile.gc.apple.com,game
+
 
 IP-CIDR,3.80.0.0/12,game
 IP-CIDR,3.112.0.0/16,game
