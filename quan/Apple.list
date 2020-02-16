@@ -1,19 +1,25 @@
 # >> TestFlight
 DOMAIN,testflight.apple.com,PROXY
+
 # >> Apple URL Shortener
 DOMAIN-SUFFIX,appsto.re,PROXY
+
 # >> iBooks Store download
 DOMAIN,books.itunes.apple.com,PROXY
+
 # >> iTunes Store Moveis Trailers
 DOMAIN,hls.itunes.apple.com,PROXY
+DOMAIN,p43-buy.itunes.apple.com,PROXY
+DOMAIN,p14-buy.itunes.apple.com,PROXY
+
 # >> App Store Preview
 DOMAIN,apps.apple.com,PROXY
 DOMAIN,itunes.apple.com,PROXY
 DOMAIN,iosapps.itunes.apple.com,PROXY
+
 # >> Dictionary
 DOMAIN,lookup-api.apple.com,PROXY
 
-DOMAIN,p14-buy.itunes.apple.com,PROXY
 
 
 # >> Apple News and Apple Map TOMTOM Version
@@ -43,17 +49,21 @@ IP-CIDR,17.0.0.0/8,Apple
 USER-AGENT,coffeecorp*,DIRECT
 USER-AGENT,restaurant-mobile*,DIRECT
 DOMAIN,app.adjust.com,DIRECT
+
 # > Google
 DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
 DOMAIN,analyticsinsights-pa.googleapis.com,PROXY
 DOMAIN,analyticsreporting.googleapis.com,PROXY
 DOMAIN,dl.google.com,DIRECT
 DOMAIN,mtalk.google.com,DIRECT
+
 # > Tencent
 DOMAIN,livew.l.qq.com,DIRECT
 DOMAIN,vd.l.qq.com,DIRECT
+
 # > Strava
 DOMAIN,analytics.strava.com,DIRECT
+
 # > Umeng
 DOMAIN,msg.umeng.com,DIRECT
 DOMAIN,msg.umengcloud.com,DIRECT
