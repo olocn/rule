@@ -5,27 +5,32 @@ DOMAIN-SUFFIX,brawlstars.com,game
 DOMAIN-SUFFIX,brawlstarsgame.com,game
 DOMAIN,supercell.helpshift.com,game
 DOMAIN,profile.gc.apple.com,game
-
+DOMAIN,commnat-main-gc.ess.apple.com,game
 
 IP-CIDR,3.80.0.0/12,game
 IP-CIDR,3.112.0.0/16,game
 IP-CIDR,3.113.0.0/16,game
-IP-CIDR,13.120.0.0/14,game
+IP-CIDR,3.120.0.0/14,game
+IP-CIDR,3.224.0.0/12,game
+
+IP-CIDR,13.112.0.0/14,game
 IP-CIDR,13.115.0.0/16,game
+IP-CIDR,13.120.0.0/14,game
 IP-CIDR,13.221.0.0/16,game
-IP-CIDR,13.230.33.0/24,game
-IP-CIDR,13.231.87.0/24,game
+IP-CIDR,13.230.0.0/15,game
 IP-CIDR,13.232.0.0/14,game
 IP-CIDR,13.250.0.0/15,game
 IP-CIDR,13.228.0.0/15,game
+
 IP-CIDR,15.206.0.0/16,game
-IP-CIDR,18.229.131.0/24,game
+
 IP-CIDR,18.138.0.0/15,game
 IP-CIDR,18.141.0.0/16,game
 IP-CIDR,18.182.0.0/16,game
 IP-CIDR,18.184.0.0/15,game
 IP-CIDR,18.176.0.0/16,game
 IP-CIDR,18.194.0.0/15,game
+IP-CIDR,18.229.0.0/16,game
 IP-CIDR,18.231.0.0/16,game
 
 IP-CIDR,34.208.0.0/12,game
@@ -33,32 +38,31 @@ IP-CIDR,34.220.0.0/16,game
 IP-CIDR,34.226.0.0/16,game
 IP-CIDR,34.240.0.0/13,game
 IP-CIDR,34.251.0.0/16,game
+
 IP-CIDR,35.160.0.0/13,game
 IP-CIDR,35.168.0.0/13,game
 IP-CIDR,35.158.0.0/16,game
 
-IP-CIDR,157.175.0.0/16,game
 IP-CIDR,50.112.0.0/17,game
 
+IP-CIDR,52.10.0.0/15,game
+IP-CIDR,52.67.0.0/16,game
 IP-CIDR,52.220.0.0/15,game
-IP-CIDR,52.67.195.0/24,game
-IP-CIDR,54.93.195.0/24,game
+
+IP-CIDR,54.93.128.0/17,game
+IP-CIDR,54.154.0.0/16,game
 IP-CIDR,54.179.185.0/24,game
 IP-CIDR,54.201.0.0/16,game
 IP-CIDR,54.207.0.0/17,game
+IP-CIDR,54.210.0.0/16,game
 IP-CIDR,54.238.0.0/16,game
 IP-CIDR,54.248.0.0/15,game
-IP-CIDR,54.210.0.0/16,game
 IP-CIDR,54.254.128.0/17,game
 IP-CIDR,54.255.0.0/16,game
-IP-CIDR,63.32.46.0/24,game
-IP-CIDR,157.175.44.0/24,game
-IP-CIDR,184.0.0.0/8,game
 
+IP-CIDR,63.32.0.0/14,game
 
-
-
-
+IP-CIDR,157.175.0.0/16,game
 
 #DOMAIN-SUFFIX,underlords.com,game
 #DOMAIN-SUFFIX,dota2.com,game
