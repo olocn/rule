@@ -4,7 +4,7 @@ DOMAIN-SUFFIX,supercell.net,game
 DOMAIN-SUFFIX,brawlstars.com,game
 DOMAIN-SUFFIX,brawlstarsgame.com,game
 DOMAIN,supercell.helpshift.com,game
-DOMAIN,profile.gc.apple.com,game
+DOMAIN-SUFFIX,gc.apple.com,game
 DOMAIN,commnat-main-gc.ess.apple.com,game
 DOMAIN,commnat-cohort-gc.ess.apple.com,game
 
