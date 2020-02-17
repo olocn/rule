@@ -1,31 +1,24 @@
-# >> TestFlight
 DOMAIN,testflight.apple.com,PROXY
-
-# >> Apple URL Shortener
 DOMAIN-SUFFIX,appsto.re,PROXY
-
-# >> iBooks Store download
-#DOMAIN,books.itunes.apple.com,PROXY
-
-# >> iTunes Store Moveis Trailers
 DOMAIN-SUFFIX,itunes.apple.com,PROXY
-
-# >> App Store Preview
 DOMAIN-SUFFIX,apps.apple.com,PROXY
-#DOMAIN,iosapps.itunes.apple.com,PROXY
-
-# >> Dictionary
 DOMAIN,lookup-api.apple.com,proxy
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
 DOMAIN,music.apple.com,PROXY
-#DOMAIN,play.itunes.apple.com,PROXY
 DOMAIN,apps.mzstatic.com,PROXY
 DOMAIN,xp.apple.com,PROXY
-#DOMAIN,aod.itunes.apple.com,PROXY
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
 DOMAIN-SUFFIX,mzstatic.com,PROXY
+DOMAIN-SUFFIX,icloud.com,PROXY
+DOMAIN-SUFFIX,icloud-content.com,PROXY
+DOMAIN,www-cdn.icloud.com.akadns.net,PROXY
 
-DOMAIN,init.itunes.apple.com,proxy
+#DOMAIN,play.itunes.apple.com,PROXY
+#DOMAIN,radio-activity.itunes.apple.com,PROXY
+#DOMAIN,aod.itunes.apple.com,PROXY
+#DOMAIN,init.itunes.apple.com,proxy
+#DOMAIN,radio-activity.itunes.apple.com,PROXY
+#DOMAIN,iosapps.itunes.apple.com,PROXY
+#DOMAIN,books.itunes.apple.com,PROXY
+
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
 USER-AGENT,AppleNews*,PROXY
@@ -42,10 +35,7 @@ DOMAIN-SUFFIX,apple.com,Apple
 DOMAIN-SUFFIX,appstore.com,Apple
 DOMAIN-SUFFIX,cdn-apple.com,Apple
 DOMAIN-SUFFIX,crashlytics.com,Apple
-DOMAIN-SUFFIX,icloud.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
 DOMAIN-SUFFIX,me.com,Apple
-DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
 
 # > General
