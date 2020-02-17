@@ -5,29 +5,24 @@ DOMAIN,testflight.apple.com,PROXY
 DOMAIN-SUFFIX,appsto.re,PROXY
 
 # >> iBooks Store download
-DOMAIN,books.itunes.apple.com,PROXY
+#DOMAIN,books.itunes.apple.com,PROXY
 
 # >> iTunes Store Moveis Trailers
-DOMAIN,hls.itunes.apple.com,PROXY
-DOMAIN,p43-buy.itunes.apple.com,PROXY
-DOMAIN,p14-buy.itunes.apple.com,PROXY
+DOMAIN-SUFFIX,itunes.apple.com,PROXY
 
 # >> App Store Preview
 DOMAIN-SUFFIX,apps.apple.com,PROXY
-DOMAIN,itunes.apple.com,PROXY
-DOMAIN,iosapps.itunes.apple.com,PROXY
+#DOMAIN,iosapps.itunes.apple.com,PROXY
 
 # >> Dictionary
-DOMAIN,lookup-api.apple.com,PROXY
-
-DOMAIN,aod.itunes.apple.com,PROXY
-DOMAIN,radio-activity.itunes.apple.com,PROXY
+DOMAIN,lookup-api.apple.com,proxy
+#DOMAIN,radio-activity.itunes.apple.com,PROXY
 DOMAIN,music.apple.com,PROXY
-DOMAIN,play.itunes.apple.com,PROXY
+#DOMAIN,play.itunes.apple.com,PROXY
 DOMAIN,apps.mzstatic.com,PROXY
 DOMAIN,xp.apple.com,PROXY
-DOMAIN,aod.itunes.apple.com,PROXY
-DOMAIN,radio-activity.itunes.apple.com,PROXY
+#DOMAIN,aod.itunes.apple.com,PROXY
+#DOMAIN,radio-activity.itunes.apple.com,PROXY
 DOMAIN-SUFFIX,mzstatic.com,PROXY
 
 DOMAIN,init.itunes.apple.com,proxy
