@@ -20,7 +20,14 @@ DOMAIN,iosapps.itunes.apple.com,PROXY
 # >> Dictionary
 DOMAIN,lookup-api.apple.com,PROXY
 
-
+DOMAIN,aod.itunes.apple.com,PROXY
+DOMAIN,radio-activity.itunes.apple.com,PROXY
+DOMAIN,music.apple.com,PROXY
+DOMAIN,play.itunes.apple.com,PROXY
+DOMAIN,apps.mzstatic.com,PROXY
+DOMAIN,xp.apple.com,PROXY
+DOMAIN,aod.itunes.apple.com,PROXY
+DOMAIN,radio-activity.itunes.apple.com,PROXY
 
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
