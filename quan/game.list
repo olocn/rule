@@ -7,14 +7,16 @@ DOMAIN,supercell.helpshift.com,game
 DOMAIN,profile.gc.apple.com,game
 DOMAIN,commnat-main-gc.ess.apple.com,game
 DOMAIN,commnat-cohort-gc.ess.apple.com,game
+
+#3
 IP-CIDR,3.80.0.0/12,game
 IP-CIDR,3.112.0.0/16,game
-
 IP-CIDR,3.113.0.0/16,game
 IP-CIDR,3.115.0.0/16,game
 IP-CIDR,3.120.0.0/14,game
 IP-CIDR,3.224.0.0/12,game
 
+#13
 IP-CIDR,13.112.0.0/14,game
 IP-CIDR,13.115.0.0/16,game
 IP-CIDR,13.126.0.0/16,game
@@ -27,9 +29,10 @@ IP-CIDR,13.230.0.0/15,game
 IP-CIDR,13.232.0.0/14,game
 IP-CIDR,13.250.0.0/15,game
 
-
+#15
 IP-CIDR,15.206.0.0/16,game
 
+#18
 IP-CIDR,18.138.0.0/15,game
 IP-CIDR,18.141.0.0/16,game
 IP-CIDR,18.140.0.0/16,game
@@ -44,6 +47,7 @@ IP-CIDR,18.229.0.0/16,game
 IP-CIDR,18.230.0.0/16,game
 IP-CIDR,18.231.0.0/16,game
 
+#34
 IP-CIDR,34.208.0.0/12,game
 IP-CIDR,34.220.0.0/16,game
 IP-CIDR,34.226.0.0/16,game
@@ -51,21 +55,24 @@ IP-CIDR,34.240.0.0/13,game
 IP-CIDR,34.250.0.0/16,game
 IP-CIDR,34.251.0.0/16,game
 
+#35
 IP-CIDR,35.160.0.0/13,game
 IP-CIDR,35.168.0.0/13,game
 IP-CIDR,35.158.0.0/16,game
 
+#50
 IP-CIDR,50.112.0.0/17,game
 
+#52
 IP-CIDR,52.10.0.0/15,game
+IP-CIDR,52.17.0.0/16,game
 IP-CIDR,52.36.0.0/14,game
-
 IP-CIDR,52.41.0.0/16,game
 IP-CIDR,52.67.0.0/16,game
-IP-CIDR,52.17.0.0/16,game
 IP-CIDR,52.196.0.0/14,game
 IP-CIDR,52.220.0.0/15,game
 
+#54
 IP-CIDR,54.93.128.0/17,game
 IP-CIDR,54.94.0.0/16,game
 IP-CIDR,54.95.0.0/17,game
@@ -80,14 +87,17 @@ IP-CIDR,54.233.128.0/17,game
 IP-CIDR,54.238.0.0/16,game
 IP-CIDR,54.242.0.0/16,game
 IP-CIDR,54.248.0.0/15,game
-IP-CIDR,54.254.128.0/17,game 
 IP-CIDR,54.250.0.0/16,game
+IP-CIDR,54.254.128.0/17,game
 IP-CIDR,54.255.0.0/16,game
 
+#63
 IP-CIDR,63.32.0.0/14,game
 
+#100
 IP-CIDR,100.24.0.0/13,game
 
+#157
 IP-CIDR,157.175.0.0/16,game
 
 #DOMAIN-SUFFIX,underlords.com,game
