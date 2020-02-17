@@ -13,7 +13,7 @@ DOMAIN,p43-buy.itunes.apple.com,PROXY
 DOMAIN,p14-buy.itunes.apple.com,PROXY
 
 # >> App Store Preview
-DOMAIN,apps.apple.com,PROXY
+DOMAIN-SUFFIX,apps.apple.com,PROXY
 DOMAIN,itunes.apple.com,PROXY
 DOMAIN,iosapps.itunes.apple.com,PROXY
 
@@ -30,6 +30,7 @@ DOMAIN,aod.itunes.apple.com,PROXY
 DOMAIN,radio-activity.itunes.apple.com,PROXY
 DOMAIN-SUFFIX,mzstatic.com,PROXY
 
+DOMAIN,init.itunes.apple.com,proxy
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
 USER-AGENT,AppleNews*,PROXY
