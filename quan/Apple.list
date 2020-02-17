@@ -28,6 +28,7 @@ DOMAIN,apps.mzstatic.com,PROXY
 DOMAIN,xp.apple.com,PROXY
 DOMAIN,aod.itunes.apple.com,PROXY
 DOMAIN,radio-activity.itunes.apple.com,PROXY
+DOMAIN-SUFFIX,mzstatic.com,PROXY
 
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com,PROXY
@@ -45,10 +46,9 @@ DOMAIN-SUFFIX,apple.com,Apple
 DOMAIN-SUFFIX,appstore.com,Apple
 DOMAIN-SUFFIX,cdn-apple.com,Apple
 DOMAIN-SUFFIX,crashlytics.com,Apple
-DOMAIN-SUFFIX,icloud.com,Apple
-DOMAIN-SUFFIX,icloud-content.com,Apple
+DOMAIN-SUFFIX,icloud.com,PROXY
+DOMAIN-SUFFIX,icloud-content.com,PROXY
 DOMAIN-SUFFIX,me.com,Apple
-DOMAIN-SUFFIX,mzstatic.com,Apple
 DOMAIN,www-cdn.icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
 
