@@ -10,7 +10,7 @@ DOMAIN,commnat-cohort-gc.ess.apple.com,game
 
 #3
 IP-CIDR,3.80.0.0/12,game
-IP-CIDR,3.112.0.0/16,game
+IP-CIDR,3.112.0.0/14,game
 IP-CIDR,3.113.0.0/16,game
 IP-CIDR,3.115.0.0/16,game
 IP-CIDR,3.120.0.0/14,game
@@ -41,6 +41,7 @@ IP-CIDR,18.140.0.0/16,game
 IP-CIDR,18.182.0.0/16,game
 IP-CIDR,18.184.0.0/15,game
 IP-CIDR,18.176.0.0/16,game
+IP-CIDR,18.179.0.0/16,game
 IP-CIDR,18.194.0.0/15,game
 IP-CIDR,18.196.0.0/15,game
 IP-CIDR,18.202.0.0/15,game
@@ -50,6 +51,7 @@ IP-CIDR,18.230.0.0/16,game
 IP-CIDR,18.231.0.0/16,game
 
 #34
+IP-CIDR,34.192.0.0/12,game
 IP-CIDR,34.208.0.0/12,game
 IP-CIDR,34.220.0.0/16,game
 IP-CIDR,34.226.0.0/16,game
@@ -60,9 +62,11 @@ IP-CIDR,34.251.0.0/16,game
 
 
 #35
+IP-CIDR,35.158.0.0/16,game
+IP-CIDR,35.154.0.0/16,game
 IP-CIDR,35.160.0.0/13,game
 IP-CIDR,35.168.0.0/13,game
-IP-CIDR,35.158.0.0/16,game
+
 
 #50
 IP-CIDR,50.112.0.0/17,game
@@ -72,6 +76,8 @@ IP-CIDR,52.10.0.0/15,game
 IP-CIDR,52.17.0.0/16,game
 IP-CIDR,52.36.0.0/14,game
 IP-CIDR,52.41.0.0/16,game
+IP-CIDR,52.48.0.0/14,game
+IP-CIDR,52.54.0.0/15,game
 IP-CIDR,52.58.0.0/15,game
 IP-CIDR,52.67.0.0/16,game
 IP-CIDR,52.68.0.0/15,game
@@ -91,6 +97,8 @@ IP-CIDR,52.194.0.0/15,game
 IP-CIDR,54.201.0.0/16,game
 IP-CIDR,54.207.0.0/17,game
 IP-CIDR,54.210.0.0/16,game
+IP-CIDR,54.213.0.0/16,game
+IP-CIDR,54.214.0.0/17,game
 IP-CIDR,54.218.128.0/17,game
 IP-CIDR,54.233.128.0/17,game
 IP-CIDR,54.238.0.0/16,game
