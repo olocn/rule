@@ -1,4 +1,4 @@
-#olo
+# olo
 DOMAIN-SUFFIX,uservoice.com
 DOMAIN-SUFFIX,outlookmobile.com
 DOMAIN-SUFFIX,agefans.tv
@@ -18,13 +18,13 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN,www-cdn.icloud.com.akadns.net
 
-#DOMAIN,play.itunes.apple.com
-#DOMAIN,radio-activity.itunes.apple.com
-#DOMAIN,aod.itunes.apple.com
-#DOMAIN,init.itunes.apple.com
-#DOMAIN,radio-activity.itunes.apple.com
-#DOMAIN,iosapps.itunes.apple.com
-#DOMAIN,books.itunes.apple.com
+# DOMAIN,play.itunes.apple.com
+# DOMAIN,radio-activity.itunes.apple.com
+# DOMAIN,aod.itunes.apple.com
+# DOMAIN,init.itunes.apple.com
+# DOMAIN,radio-activity.itunes.apple.com
+# DOMAIN,iosapps.itunes.apple.com
+# DOMAIN,books.itunes.apple.com
 
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com
