@@ -1,3 +1,18 @@
+#olo
+IP-CIDR,239.255.255.250/32,no-resolve
+DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,ihumand.com
+DOMAIN-SUFFIX,ihuman.com
+DOMAIN-SUFFIX,ifengimg.com
+DOMAIN-SUFFIX,tongdun.net
+IP-CIDR,47.98.0.0/15,no-resolve
+IP-CIDR,47.96.0.0/14,no-resolve
+IP-CIDR,198.18.0.0/16,no-resolve
+IP-CIDR,45.192.177.0/24,no-resolve
+DOMAIN-SUFFIX,rdimg.com
+DOMAIN-SUFFIX,cnbetacdn.com
+DOMAIN-SUFFIX,letsencrypt.org
+
 # > General
 USER-AGENT,coffeecorp*
 USER-AGENT,restaurant-mobile*
@@ -14,20 +29,16 @@ DOMAIN,analytics.strava.com
 DOMAIN,msg.umeng.com
 DOMAIN,msg.umengcloud.com
 
-#olo
-IP-CIDR,239.255.255.250/32,no-resolve
-DOMAIN-SUFFIX,95516.com
-DOMAIN-SUFFIX,ihumand.com
-DOMAIN-SUFFIX,ihuman.com
-DOMAIN-SUFFIX,ifengimg.com
-DOMAIN-SUFFIX,tongdun.net
-IP-CIDR,47.98.0.0/15,no-resolve
-IP-CIDR,47.96.0.0/14,no-resolve
-IP-CIDR,198.18.0.0/16,no-resolve
-IP-CIDR,45.192.177.0/24,no-resolve
-DOMAIN-SUFFIX,rdimg.com
-DOMAIN-SUFFIX,cnbetacdn.com
-DOMAIN-SUFFIX,letsencrypt.org
+user-agent,com.apple.trustd*
+DOMAIN-SUFFIX,aaplimg.com
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-SUFFIX,appstore.com
+DOMAIN-SUFFIX,cdn-apple.com
+DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,me.com
+IP-CIDR,17.0.0.0/8,no-resolve
+
 
 # > 360
 DOMAIN-SUFFIX,qhres.com
