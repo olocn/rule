@@ -1,3 +1,19 @@
+# > General
+USER-AGENT,coffeecorp*
+USER-AGENT,restaurant-mobile*
+DOMAIN,app.adjust.com
+
+# > Tencent
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
+
+# > Strava
+DOMAIN,analytics.strava.com
+
+# > Umeng
+DOMAIN,msg.umeng.com
+DOMAIN,msg.umengcloud.com
+
 #olo
 IP-CIDR,239.255.255.250/32,no-resolve
 DOMAIN-SUFFIX,95516.com
