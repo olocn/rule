@@ -5,36 +5,36 @@ DOMAIN-SUFFIX,agefans.tv
 DOMAIN,msgamestudios.com
 DOMAIN,www.yymhh.com
 
-DOMAIN,testflight.apple.com,PROXY
-DOMAIN-SUFFIX,appsto.re,PROXY
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
-DOMAIN-SUFFIX,apps.apple.com,PROXY
-DOMAIN,lookup-api.apple.com,proxy
-DOMAIN,music.apple.com,PROXY
-DOMAIN,apps.mzstatic.com,PROXY
-DOMAIN,xp.apple.com,PROXY
-DOMAIN-SUFFIX,mzstatic.com,PROXY
-DOMAIN-SUFFIX,icloud.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN,www-cdn.icloud.com.akadns.net,PROXY
+DOMAIN,testflight.apple.com
+DOMAIN-SUFFIX,appsto.re
+DOMAIN-SUFFIX,itunes.apple.com
+DOMAIN-SUFFIX,apps.apple.com
+DOMAIN,lookup-api.apple.com
+DOMAIN,music.apple.com
+DOMAIN,apps.mzstatic.com
+DOMAIN,xp.apple.com
+DOMAIN-SUFFIX,mzstatic.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN,www-cdn.icloud.com.akadns.net
 
-#DOMAIN,play.itunes.apple.com,PROXY
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
-#DOMAIN,aod.itunes.apple.com,PROXY
-#DOMAIN,init.itunes.apple.com,proxy
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
-#DOMAIN,iosapps.itunes.apple.com,PROXY
-#DOMAIN,books.itunes.apple.com,PROXY
+#DOMAIN,play.itunes.apple.com
+#DOMAIN,radio-activity.itunes.apple.com
+#DOMAIN,aod.itunes.apple.com
+#DOMAIN,init.itunes.apple.com
+#DOMAIN,radio-activity.itunes.apple.com
+#DOMAIN,iosapps.itunes.apple.com
+#DOMAIN,books.itunes.apple.com
 
 # >> Apple News and Apple Map TOMTOM Version
-DOMAIN,gspe1-ssl.ls.apple.com,PROXY
-USER-AGENT,AppleNews*,PROXY
-USER-AGENT,com.apple.news*,PROXY
-DOMAIN-SUFFIX,apple.news,PROXY
-DOMAIN,news-client.apple.com,PROXY
-DOMAIN,news-edge.apple.com,PROXY
-DOMAIN,news-events.apple.com,PROXY
-DOMAIN,apple.comscoreresearch.com,PROXY
+DOMAIN,gspe1-ssl.ls.apple.com
+USER-AGENT,AppleNews*
+USER-AGENT,com.apple.news*
+DOMAIN-SUFFIX,apple.news
+DOMAIN,news-client.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+DOMAIN,apple.comscoreresearch.com
 
 
 # > Google
