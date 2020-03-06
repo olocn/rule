@@ -20,9 +20,9 @@ DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
-# DOMAIN-SUFFIX,crashlytics.com
+DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,me.com
-# IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
 
 
 # China Area Network
