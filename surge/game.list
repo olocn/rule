@@ -130,6 +130,7 @@ IP-CIDR,52.77.0.0/16,no-resolve
 IP-CIDR,52.90.0.0/16,no-resolve
 IP-CIDR,52.192.0.0/15,no-resolve
 IP-CIDR,52.196.0.0/16,no-resolve
+IP-CIDR,52.197.0.0/16,no-resolve
 IP-CIDR,52.207.0.0/16,no-resolve
 IP-CIDR,52.213.0.0/16,no-resolve
 IP-CIDR,52.214.0.0/16,no-resolve
