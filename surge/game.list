@@ -8,6 +8,7 @@ DOMAIN,supercell.helpshift.com
 DOMAIN-SUFFIX,gc.apple.com
 DOMAIN,commnat-main-gc.ess.apple.com
 DOMAIN,commnat-cohort-gc.ess.apple.com
+DOMAIN,in.appcenter.ms
 
 # 3
 IP-CIDR,3.0.0.0/8,no-resolve
