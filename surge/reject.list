@@ -34,7 +34,7 @@ DOMAIN-SUFFIX,qchannel01.cn
 
 # > 高德
 DOMAIN,logs.amap.com
-DOMAIN-SUFFIX,wgo.mmstat.com
+DOMAIN-SUFFIX,log.mmstat.com
 DOMAIN-SUFFIX,appodeal.com
 DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN,union.uc.cn
