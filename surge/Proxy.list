@@ -1,5 +1,6 @@
 # olo
-
+DOMAIN-SUFFIX,feedx.pw
+DOMAIN,www.zaobao.com.sg
 DOMAIN,cdn.v2ex.com
 DOMAIN,www.v2ex.com
 DOMAIN-SUFFIX,ntcloud.co
@@ -35,15 +36,12 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN,www-cdn.icloud.com.akadns.net
-
 # DOMAIN,play.itunes.apple.com
 # DOMAIN,radio-activity.itunes.apple.com
 # DOMAIN,aod.itunes.apple.com
 # DOMAIN,init.itunes.apple.com
-# DOMAIN,radio-activity.itunes.apple.com
 # DOMAIN,iosapps.itunes.apple.com
 # DOMAIN,books.itunes.apple.com
-
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com
 USER-AGENT,AppleNews*
@@ -53,16 +51,12 @@ DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
-
-
 # > Google
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN,analyticsinsights-pa.googleapis.com
 DOMAIN,analyticsreporting.googleapis.com
 DOMAIN,dl.google.com
 DOMAIN,mtalk.google.com
-
-# > Google
 DOMAIN-SUFFIX,ampproject.org
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,blogger.com
@@ -444,7 +438,6 @@ DOMAIN-KEYWORD,jav
 DOMAIN-KEYWORD,pinterest
 DOMAIN-KEYWORD,porn
 DOMAIN-KEYWORD,wikileaks
-
 # (Region-Restricted Access Denied)
 DOMAIN-SUFFIX,apartmentratings.com
 DOMAIN-SUFFIX,apartments.com
@@ -494,13 +487,10 @@ DOMAIN-SUFFIX,vsco.co
 DOMAIN-SUFFIX,xfinity.com
 DOMAIN-SUFFIX,zattoo.com
 USER-AGENT,Roam*
-
 # (The Most Popular Sites)
 # > Apple
 # >> TestFlight
-DOMAIN,testflight.apple.com
 # >> Apple URL Shortener
-DOMAIN-SUFFIX,appsto.re
 # >> iBooks Store download
 DOMAIN,books.itunes.apple.com
 # >> iTunes Store Moveis Trailers
@@ -511,9 +501,7 @@ DOMAIN,itunes.apple.com
 # >> Spotlight
 DOMAIN,api-glb-sea.smoot.apple.com
 # >> Dictionary
-DOMAIN,lookup-api.apple.com
 PROCESS-NAME,LookupViewService
-# > Google
 DOMAIN-SUFFIX,abc.xyz
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
@@ -559,7 +547,6 @@ DOMAIN-SUFFIX,x.company
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
-# > Microsoft
 # >> Microsoft OneDrive
 DOMAIN-SUFFIX,1drv.com
 DOMAIN-SUFFIX,1drv.ms
@@ -569,7 +556,6 @@ DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,storage.live.com
 DOMAIN-SUFFIX,storage.msn.com
 DOMAIN,oneclient.sfx.ms
-# > Other
 DOMAIN-SUFFIX,0rz.tw
 DOMAIN-SUFFIX,4bluestones.biz
 DOMAIN-SUFFIX,9bis.net
