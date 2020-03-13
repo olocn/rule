@@ -1,4 +1,4 @@
-# olo
+# ol
 DOMAIN-SUFFIX,aliapp.org
 DOMAIN,www.googleadservices.com
 DOMAIN,com.yinxiang.iphone
@@ -7,15 +7,16 @@ DOMAIN-SUFFIX,ihumand.com
 DOMAIN-SUFFIX,ihuman.com
 DOMAIN-SUFFIX,ifengimg.com
 DOMAIN-SUFFIX,tongdun.net
-IP-CIDR,47.98.0.0/15
-IP-CIDR,47.96.0.0/14
+IP-CIDR,47.98.0.0/15,no-resolve
+IP-CIDR,47.96.0.0/14,no-resolve
 IP-CIDR,198.18.0.0/16,no-resolve
-IP-CIDR,47.246.16.0/24
+IP-CIDR,47.246.16.0/24,no-resolve
 IP-CIDR,239.255.255.250/32,no-resolve
 IP-CIDR,45.192.177.0/24,no-resolve
 DOMAIN-SUFFIX,rdimg.com
 DOMAIN-SUFFIX,cnbetacdn.com
 DOMAIN-SUFFIX,letsencrypt.org
+
 
 USER-AGENT,com.apple.trustd*
 DOMAIN-SUFFIX,aaplimg.com
@@ -120,7 +121,6 @@ DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,miui.com
 DOMAIN-SUFFIX,miwifi.com
 DOMAIN-SUFFIX,xiaomi.com
-# > Microsoft
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,office365.com
@@ -285,7 +285,6 @@ DOMAIN-SUFFIX,westlaw.com
 DOMAIN-SUFFIX,wiley.com
 DOMAIN-SUFFIX,worldbank.org
 DOMAIN-SUFFIX,worldscientific.com
-# > Other
 DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,360in.com
 DOMAIN-SUFFIX,51ym.me
