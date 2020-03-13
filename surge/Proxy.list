@@ -25,6 +25,7 @@ DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,dler.io
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
+DOMAIN,graph.microsoft.com
 
 DOMAIN,testflight.apple.com
 DOMAIN-SUFFIX,appsto.re
