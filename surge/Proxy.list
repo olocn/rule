@@ -2,7 +2,7 @@
 DOMAIN-SUFFIX,feedx.pw
 DOMAIN,www.zaobao.com.sg
 DOMAIN,cdn.v2ex.com
-DOMAIN,www.v2ex.com
+DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,ntcloud.co
 DOMAIN-SUFFIX,savido.net
 DOMAIN,www.sehuatang.org
