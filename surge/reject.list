@@ -19,7 +19,7 @@ DOMAIN,ads.aerserv.com
 DOMAIN-SUFFIX,taboola.com
 DOMAIN,log.ihuman.com
 DOMAIN,stun.services.mozilla.com
-DOMAIN-SUFFIX,jpush.cn
+# DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,appadhoc.com
 
 # 江阴bus
