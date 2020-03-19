@@ -2,6 +2,7 @@
 DOMAIN,www.nenode.best
 DOMAIN-SUFFIX,paofusub.com
 DOMAIN,dler.cloud
+DOMAIN-SUFFIX,dler.io
 DOMAIN-SUFFIX,feedx.pw
 DOMAIN,www.zaobao.com.sg
 DOMAIN,cdn.v2ex.com
@@ -9,8 +10,10 @@ DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,ntcloud.co
 DOMAIN-SUFFIX,savido.net
 DOMAIN,www.sehuatang.org
+DOMAIN,www.sehuatang.net
 DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,pximg.net
+DOMAIN,pixiv.cat
 DOMAIN-SUFFIX,uservoice.com
 DOMAIN-SUFFIX,outlookmobile.com
 DOMAIN,msgamestudios.com
@@ -20,15 +23,16 @@ DOMAIN-SUFFIX,share.photo.xuite.net
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN,jp.netcdn.space
 DOMAIN,www.assdrty.com
-DOMAIN,www.sehuatang.net
 DOMAIN-SUFFIX,rakuen.thec.me
 DOMAIN-SUFFIX,tits-guru.com
-DOMAIN,pixiv.cat
-DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,yande.re
-DOMAIN-SUFFIX,dler.io
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
 DOMAIN,graph.microsoft.com
+
+# > Apple
+
+# >> Spotlight
+DOMAIN,api-glb-sea.smoot.apple.com
 
 DOMAIN,testflight.apple.com
 DOMAIN-SUFFIX,appsto.re
@@ -40,12 +44,14 @@ DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN,www-cdn.icloud.com.akadns.net
+
 # DOMAIN,play.itunes.apple.com
 # DOMAIN,radio-activity.itunes.apple.com
 # DOMAIN,aod.itunes.apple.com
 # DOMAIN,init.itunes.apple.com
 # DOMAIN,iosapps.itunes.apple.com
 # DOMAIN,books.itunes.apple.com
+
 # >> Apple News and Apple Map TOMTOM Version
 DOMAIN,gspe1-ssl.ls.apple.com
 USER-AGENT,AppleNews*
@@ -55,6 +61,7 @@ DOMAIN,news-client.apple.com
 DOMAIN,news-edge.apple.com
 DOMAIN,news-events.apple.com
 DOMAIN,apple.comscoreresearch.com
+
 # > Google
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN,analyticsinsights-pa.googleapis.com
@@ -91,6 +98,7 @@ DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
 DOMAIN-KEYWORD,facebook
+
 IP-CIDR,3.123.36.126/32,no-resolve
 IP-CIDR,35.157.215.84/32,no-resolve
 IP-CIDR,35.157.217.255/32,no-resolve
@@ -121,9 +129,11 @@ IP-CIDR,91.108.12.0/22,no-resolve
 IP-CIDR,91.108.16.0/22,no-resolve
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,149.154.160.0/20,no-resolve
-IP-CIDR6,2001:b28:f23d::/48,no-resolve
-IP-CIDR6,2001:b28:f23f::/48,no-resolve
-IP-CIDR6,2001:67c:4e8::/48,no-resolve
+# > Pornhub
+DOMAIN-SUFFIX,phncdn.com
+DOMAIN-SUFFIX,phprcdn.com
+DOMAIN-SUFFIX,pornhub.com
+DOMAIN-SUFFIX,pornhubpremium.com
 # > Line
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,line-apps.com
@@ -411,6 +421,7 @@ DOMAIN-SUFFIX,wattpad.com
 DOMAIN-SUFFIX,whoer.net
 DOMAIN-SUFFIX,wikimapia.org
 DOMAIN-SUFFIX,wikipedia.org
+DOMAIN-SUFFIX,wikimedia.org
 DOMAIN-SUFFIX,wikiquote.org
 DOMAIN-SUFFIX,wikiwand.com
 DOMAIN-SUFFIX,winudf.com
@@ -491,21 +502,7 @@ DOMAIN-SUFFIX,vsco.co
 DOMAIN-SUFFIX,xfinity.com
 DOMAIN-SUFFIX,zattoo.com
 USER-AGENT,Roam*
-# (The Most Popular Sites)
-# > Apple
-# >> TestFlight
-# >> Apple URL Shortener
-# >> iBooks Store download
-DOMAIN,books.itunes.apple.com
-# >> iTunes Store Moveis Trailers
-DOMAIN,hls.itunes.apple.com
-# >> App Store Preview
-DOMAIN,apps.apple.com
-DOMAIN,itunes.apple.com
-# >> Spotlight
-DOMAIN,api-glb-sea.smoot.apple.com
-# >> Dictionary
-PROCESS-NAME,LookupViewService
+
 DOMAIN-SUFFIX,abc.xyz
 DOMAIN-SUFFIX,android.com
 DOMAIN-SUFFIX,androidify.com
