@@ -34,23 +34,6 @@ DOMAIN-SUFFIX,tits-guru.com
 DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
 DOMAIN,graph.microsoft.com
-
-# > Apple
-
-# >> Spotlight
-DOMAIN,api-glb-sea.smoot.apple.com
-
-DOMAIN,testflight.apple.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN,lookup-api.apple.com
-DOMAIN,music.apple.com
-DOMAIN-SUFFIX,mzstatic.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN,www-cdn.icloud.com.akadns.net
-
 # DOMAIN,play.itunes.apple.com
 # DOMAIN,radio-activity.itunes.apple.com
 # DOMAIN,aod.itunes.apple.com
