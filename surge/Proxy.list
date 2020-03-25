@@ -48,7 +48,7 @@ DOMAIN,graph.microsoft.com
 # DOMAIN,iosapps.itunes.apple.com
 # DOMAIN,books.itunes.apple.com
 
-# >> Apple News and Apple Map TOMTOM Version
+# >> Apple News
 DOMAIN,gspe1-ssl.ls.apple.com
 USER-AGENT,AppleNews*
 USER-AGENT,com.apple.news*
@@ -73,9 +73,11 @@ DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,blogspot
+
 # > Microsoft
 DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN-SUFFIX,xboxlive.com
+
 # > Facebook
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,fb.com
@@ -103,6 +105,7 @@ IP-CIDR,54.162.243.80/32,no-resolve
 IP-CIDR,54.173.34.141/32,no-resolve
 IP-CIDR,54.235.23.242/32,no-resolve
 IP-CIDR,169.45.248.118/32,no-resolve
+
 # > Twitter
 DOMAIN-SUFFIX,pscp.tv
 DOMAIN-SUFFIX,periscope.tv
