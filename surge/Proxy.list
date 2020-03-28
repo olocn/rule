@@ -1,4 +1,6 @@
 # olo
+DOMAIN,www.4ghhff.info
+DOMAIN-SUFFIX,loli.net
 DOMAIN,www.skeimg.com
 DOMAIN-SUFFIX,myximage.com
 DOMAIN-SUFFIX,qualaroo.com
@@ -41,12 +43,6 @@ DOMAIN-SUFFIX,tits-guru.com
 DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
 DOMAIN,graph.microsoft.com
-# DOMAIN,play.itunes.apple.com
-# DOMAIN,radio-activity.itunes.apple.com
-# DOMAIN,aod.itunes.apple.com
-# DOMAIN,init.itunes.apple.com
-# DOMAIN,iosapps.itunes.apple.com
-# DOMAIN,books.itunes.apple.com
 
 # >> Apple News
 DOMAIN,gspe1-ssl.ls.apple.com
