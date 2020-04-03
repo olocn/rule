@@ -17,7 +17,7 @@ IP-CIDR,45.192.177.0/24,no-resolve
 DOMAIN-SUFFIX,rdimg.com
 DOMAIN-SUFFIX,cnbetacdn.com
 DOMAIN-SUFFIX,letsencrypt.org
-
+DOMAIN-SUFFIX,alibabausercontent.com
 
 USER-AGENT,com.apple.trustd*
 DOMAIN-SUFFIX,aaplimg.com
