@@ -1,25 +1,3 @@
-# olo
-DOMAIN-SUFFIX,mfkhm.com
-DOMAIN-SUFFIX,laiwang.com
-DOMAIN-SUFFIX,agefans.tv
-DOMAIN-SUFFIX,aliapp.org
-DOMAIN,com.yinxiang.iphone
-DOMAIN-SUFFIX,95516.com
-DOMAIN-SUFFIX,ihumand.com
-DOMAIN-SUFFIX,ihuman.com
-DOMAIN-SUFFIX,ifengimg.com
-DOMAIN-SUFFIX,tongdun.net
-IP-CIDR,47.98.0.0/15,no-resolve
-IP-CIDR,47.96.0.0/14,no-resolve
-IP-CIDR,198.18.0.0/16,no-resolve
-IP-CIDR,47.246.16.0/24,no-resolve
-IP-CIDR,239.255.255.250/32,no-resolve
-IP-CIDR,45.192.177.0/24,no-resolve
-DOMAIN-SUFFIX,rdimg.com
-DOMAIN-SUFFIX,cnbetacdn.com
-DOMAIN-SUFFIX,letsencrypt.org
-DOMAIN-SUFFIX,alibabausercontent.com
-
 USER-AGENT,com.apple.trustd*
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple.co
@@ -28,7 +6,6 @@ DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,me.com
 IP-CIDR,17.0.0.0/8,no-resolve
-
 # China Area Network
 # > 360
 DOMAIN-SUFFIX,qhres.com
@@ -181,7 +158,6 @@ DOMAIN-SUFFIX,tencent-cloud.net
 DOMAIN-SUFFIX,tenpay.com
 DOMAIN,file-igamecj.akamaized.net
 # > YYeTs
-USER-AGENT,YYeTs*
 DOMAIN-SUFFIX,jstucdn.com
 DOMAIN-SUFFIX,zimuzu.io
 DOMAIN-SUFFIX,zimuzu.tv
