@@ -392,3 +392,6 @@ DOMAIN,download.jetbrains.com
 DOMAIN,images-cn.ssl-images-amazon.com
 # DNSPod Public DNS+
 IP-CIDR,119.28.28.28/32,no-resolve
+IP-CIDR,1.255.62.0/24,no-resolve
+# > CN
+DOMAIN-SUFFIX,cn
