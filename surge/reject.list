@@ -225,14 +225,12 @@ DOMAIN,applogapi.autohome.com.cn
 # > Baidu
 DOMAIN-SUFFIX,baidustatic.com
 DOMAIN,duclick.baidu.com
-DOMAIN,hmma.baidu.com
 DOMAIN,mobads.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN,nsclick.baidu.com
 DOMAIN,wn.pos.baidu.com
 DOMAIN,ps.map.baidu.com
 DOMAIN,offnavi.map.baidu.com
-DOMAIN,newvector.map.baidu.com
 DOMAIN,ulog.imap.baidu.com
 DOMAIN,newloc.map.n.shifen.com
 URL-REGEX,^http:\/\/[\s\S]*baidu\.com/.*ad[xs]\.php
