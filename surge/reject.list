@@ -84,7 +84,6 @@ DOMAIN-SUFFIX,alexametrics.com
 DOMAIN,loc.map.baidu.com
 DOMAIN,hm.baidu.com
 DOMAIN,zt.baidu.com
-DOMAIN,carowner.baidu.com
 DOMAIN,opnstat.baidu.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN-SUFFIX,adinall.com
@@ -232,7 +231,6 @@ DOMAIN,mobads-logs.baidu.com
 DOMAIN,nsclick.baidu.com
 DOMAIN,wn.pos.baidu.com
 DOMAIN,ps.map.baidu.com
-DOMAIN,sv.map.baidu.com
 DOMAIN,offnavi.map.baidu.com
 DOMAIN,newvector.map.baidu.com
 DOMAIN,ulog.imap.baidu.com
