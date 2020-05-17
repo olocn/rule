@@ -47,7 +47,6 @@ DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,yande.re
 
-
 # > Microsoft
 USER-AGENT,OneDrive*
 DOMAIN-KEYWORD,microsoft
@@ -65,7 +64,6 @@ DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,skype.com
 DOMAIN-SUFFIX,xbox.com
 DOMAIN-SUFFIX,xboxlive.com
-
 # > Line
 DOMAIN-SUFFIX,lin.ee
 DOMAIN-SUFFIX,line.me
@@ -140,7 +138,6 @@ DOMAIN-SUFFIX,async.be
 DOMAIN-SUFFIX,att.com
 DOMAIN-SUFFIX,avgle.com
 DOMAIN-SUFFIX,awsstatic.com
-DOMAIN-SUFFIX,azure.com
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,badoo.com
@@ -785,7 +782,6 @@ IP-CIDR,74.86.0.0/16,no-resolve
 IP-CIDR,75.126.0.0/16,no-resolve
 IP-CIDR,174.37.0.0/16,no-resolve
 IP-CIDR,208.43.0.0/16,no-resolve
-
 # > Telegram
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tdesktop.com
