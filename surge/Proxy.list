@@ -11,14 +11,12 @@ DOMAIN,images.weserv.nl
 DOMAIN,jp.netcdn.space
 DOMAIN,msgamestudios.com
 DOMAIN,pixiv.cat
-DOMAIN,www.11tang.me
 DOMAIN,www.4ghhff.info
-DOMAIN,www.98tang.com
 DOMAIN,www.assdrty.com
 DOMAIN,www.louimg.com
 DOMAIN,www.nsaimg.com
-DOMAIN,www.sehuatang.net
-DOMAIN,www.sehuatang.org
+DOMAIN-SUFFIX,98rewer.me
+DOMAIN,www.sehuatang.com
 DOMAIN,www.skeimg.com
 DOMAIN,www.taotuleyuan.com
 DOMAIN,www.zaobao.com.sg
@@ -781,13 +779,3 @@ IP-CIDR,17.252.157.26/24,no-resolve
 IP-CIDR,74.86.0.0/16,no-resolve
 IP-CIDR,75.126.0.0/16,no-resolve
 IP-CIDR,174.37.0.0/16,no-resolve
-IP-CIDR,208.43.0.0/16,no-resolve
-# > Telegram
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,telegra.ph
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telegram.org
-IP-CIDR,91.108.0.0/16,no-resolve
-IP-CIDR,109.239.140.0/24,no-resolve
-IP-CIDR,149.154.160.0/20,no-resolve
