@@ -1,4 +1,13 @@
 # olo
+DOMAIN,app-site-association.networking.apple
+DOMAIN-SUFFIX,cdn77.org
+DOMAIN-SUFFIX,brawlstars.com
+DOMAIN,logx.optimizely.com
+DOMAIN,gm.mmstat.com
+DOMAIN,ocsp.sectigo.com
+DOMAIN,nike.sc.omtrdc.net
+DOMAIN-SUFFIX,brightcove.com
+DOMAIN,www.googleadservices.com
 USER-AGENT,*Nike*
 DOMAIN-SUFFIX,nike.com
 DOMAIN-SUFFIX,laiwang.com
