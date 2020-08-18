@@ -27,47 +27,6 @@ DOMAIN,stun.services.mozilla.com
 # DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,appadhoc.com
 
-# > Client
-DOMAIN-KEYWORD,admaster
-DOMAIN-KEYWORD,admdfs
-DOMAIN-KEYWORD,adnewnc
-DOMAIN-KEYWORD,adsage
-DOMAIN-KEYWORD,adsame
-DOMAIN-KEYWORD,adsensor
-DOMAIN-KEYWORD,adserver
-DOMAIN-KEYWORD,adservice
-DOMAIN-KEYWORD,adsmogo
-DOMAIN-KEYWORD,adsrvmedia
-DOMAIN-KEYWORD,adsserving
-DOMAIN-KEYWORD,adsystem
-DOMAIN-KEYWORD,advert
-DOMAIN-KEYWORD,adwords
-DOMAIN-KEYWORD,allyes
-DOMAIN-KEYWORD,analysis
-DOMAIN-KEYWORD,analysys
-DOMAIN-KEYWORD,applovin
-DOMAIN-KEYWORD,appsflyer
-DOMAIN-KEYWORD,dnserror
-DOMAIN-KEYWORD,domob
-DOMAIN-KEYWORD,duomeng
-DOMAIN-KEYWORD,dwtrack
-DOMAIN-KEYWORD,fenxi
-DOMAIN-KEYWORD,guanggao
-DOMAIN-KEYWORD,inmobi
-DOMAIN-KEYWORD,lianmeng
-DOMAIN-KEYWORD,mobaders
-DOMAIN-KEYWORD,omgmta
-DOMAIN-KEYWORD,openx
-DOMAIN-KEYWORD,partnerad
-DOMAIN-KEYWORD,securepubads
-DOMAIN-KEYWORD,socdm
-DOMAIN-KEYWORD,supersonicads
-DOMAIN-KEYWORD,taboola
-DOMAIN-KEYWORD,uedas
-DOMAIN-KEYWORD,umtrack
-DOMAIN-KEYWORD,uploadMobileData
-DOMAIN-KEYWORD,wlmonitor
-DOMAIN-KEYWORD,zjtoolbar
 # 江阴bus
 DOMAIN,stats.jpush.cn
 DOMAIN,wx.hfxing.cn
@@ -239,17 +198,6 @@ DOMAIN,ulog.imap.baidu.com
 DOMAIN,newloc.map.n.shifen.com
 URL-REGEX,^http:\/\/[\s\S]*baidu\.com/.*ad[xs]\.php
 URL-REGEX,^http:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule$
-# > BitAuto
-DOMAIN,adx.yiche.com
-DOMAIN,log.ycapp.yiche.com
-# > 百词斩
-DOMAIN,advertise.baicizhan.com
-DOMAIN,advertise.baicizhan.org
-# > CNTV
-DOMAIN,galaxy.bjcathay.com
-DOMAIN,mdrecv.app.cntvwb.cn
-DOMAIN,sdapprecv.app.cntvwb.cn
-DOMAIN,vdapprecv.app.cntvwb.cn
 # > ChinaTelecom
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
@@ -260,19 +208,7 @@ DOMAIN,logs.chelaile.net.cn
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,googleadsserving.cn
 DOMAIN-SUFFIX,googlesyndication.com
-# > HunanTV
-DOMAIN-SUFFIX,da.mgtv.com
-DOMAIN-SUFFIX,da.hunantv.com
-# > Hupu
-DOMAIN,adx.hupu.com
-DOMAIN,adx-api.hupu.com
-DOMAIN,goblin.hupu.com
-# > iQiyi
-DOMAIN,t7z.cupid.iqiyi.com
-IP-CIDR,101.227.97.240/32,no-resolve
-IP-CIDR,101.227.200.11/32,no-resolve
-IP-CIDR,101.227.200.28/32,no-resolve
-IP-CIDR,124.192.153.42/32,no-resolve
+
 # > Kingsoft
 DOMAIN,counter.kingsoft.com
 DOMAIN,counter.ksosoft.com
@@ -284,12 +220,6 @@ DOMAIN,img.auction-ads.wpscdn.cn
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN-SUFFIX,kingsoft-office-service.com
 USER-AGENT,wpsoffice*
-# > Le
-DOMAIN-SUFFIX,webp2p.letv.com
-DOMAIN,ark.letv.com
-DOMAIN,emma-414870e223.huodonghezi.com
-DOMAIN,g3.letv.com
-DOMAIN,n.mark.letv.com
 # > 乐播投屏
 DOMAIN,ad.hpplay.cn
 DOMAIN,adcdn.hpplay.cn
@@ -301,40 +231,6 @@ DOMAIN-SUFFIX,ad.xiaomi.com
 DOMAIN-SUFFIX,admob.xiaomi.com
 DOMAIN,adv.sec.intl.miui.com
 DOMAIN,adv.sec.miui.com
-# > NetEase
-DOMAIN,ad.bn.netease.com
-DOMAIN,ad.yixin.im
-DOMAIN,admusicpic.music.126.net
-DOMAIN,gorgon.youdao.com
-DOMAIN,iadmat.nosdn.127.net
-DOMAIN,iadmusicmat.music.126.net
-DOMAIN,iadmusicmatvideo.music.126.net
-DOMAIN,impservice.dictapp.youdao.com
-DOMAIN,impservice.youdao.com
-DOMAIN,log.yex.youdao.com
-DOMAIN,log-yex.youdao.com
-DOMAIN,n.3g.163.com
-DOMAIN,nex.163.com
-DOMAIN,yt-adp.nosdn.127.net
-DOMAIN,yt-adp.ws.126.net
-# > PPTV
-DOMAIN,asimgs.pplive.cn
-DOMAIN,de.as.pptv.com
-# > Sina
-DOMAIN-SUFFIX,beacon.sina.com.cn
-DOMAIN,adimg.vue.weibo.com
-DOMAIN,u1.img.mobile.sina.cn
-DOMAIN,sax.sina.com.cn
-DOMAIN,saxs.sina.com.cn
-DOMAIN,saxn.sina.com.cn
-# > Sohu
-DOMAIN-SUFFIX,ad.sohu.com
-DOMAIN-SUFFIX,ads.sohu.com
-DOMAIN-SUFFIX,aty.sohu.com
-DOMAIN,imp.optaim.com
-DOMAIN,v2.reachmax.cn
-DOMAIN,track.sohu.com
-DOMAIN,hui.sohu.com
 # > Tencent
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
@@ -349,16 +245,7 @@ DOMAIN,splashqqlive.gtimg.com
 DOMAIN,wa.gtimg.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-# > Youku
-DOMAIN-SUFFIX,atm.youku.com
-DOMAIN,ad.mobile.youku.com
-DOMAIN,iyes.youku.com
+
 # > Zhihu
 DOMAIN,mqtt.zhihu.com
 DOMAIN,sugar.zhihu.com
-URL-REGEX,https://api.zhihu.com/(fringe|zst|real_time|ad-style-service|banners|topstory/hot-lists|market/popover|mqtt|me|.*launch|.*featured-comment-ad|search/(top|tabs|preset)
-URL-REGEX,https://api.zhihu.com.*(launch|recommendations)
-URL-REGEX,https://api.zhihu.com/search/(top|tabs|preset)
-URL-REGEX,https://api.zhihu.com/answers/.*/comments/featured-comment-ad
-AND,((USER-AGENT,ZhihuHybrid*), (NOT,((DOMAIN,www.zhihu.com))), (NOT,((DOMAIN,static.zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))), (NOT,((DOMAIN,daily.zhihu.com))))
-AND,((USER-AGENT,osee2*), (NOT,((DOMAIN,api.zhihu.com))), (NOT,((DOMAIN,lens.zhihu.com))), (NOT,((DOMAIN,static.zhihu.com))), (NOT,((DOMAIN,www.zhihu.com))), (NOT,((DOMAIN-SUFFIX,zhimg.com))))
