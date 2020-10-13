@@ -80,7 +80,6 @@ www.zaobao.com.sg
 .msn.com
 .office.com
 .office.net
-.onedrive.com
 .outlook.com
 .p.sfx.ms
 .sharepoint.com
@@ -737,7 +736,6 @@ www.zaobao.com.sg
 .265.com
 .2mdn.net
 .adservice.google.com
-.app-measurement.com
 .beacons.gcp.gvt2.com
 .beacons.gvt2.com
 .beacons3.gvt2.com
@@ -780,7 +778,6 @@ www.zaobao.com.sg
 .khmdb.googleapis.com
 .ocsp.pki.goog
 .pagead-googlehosted.l.google.com
-.recaptcha.net
 .redirector.gvt1.com
 .safebrowsing-cache.google.com
 .safebrowsing.googleapis.com
@@ -795,7 +792,6 @@ www.zaobao.com.sg
 .www-googletagmanager.l.google.com
 .www.gstatic.com
 .1e100.net
-.2mdn.net
 .abc.xyz
 .akamai.net
 .appspot.com
