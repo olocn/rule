@@ -1,6 +1,8 @@
 # olo
 wx.qlogo.cn
 mmbiz.qpic.cn
+
+IP-CIDR,61.151.183.16/32
 IP-CIDR,203.205.254.0/24
 .bcebos.com
 www.ifanr.com
