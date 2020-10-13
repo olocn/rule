@@ -1,4 +1,6 @@
 # Youtube
+.googleapis.com
+.youtube.com
 .googlevideo.com
 .gvt2.com
 .youtu.be
