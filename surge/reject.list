@@ -1,4 +1,9 @@
 # olo
+DOMAIN,data.flurry.com
+DOMAIN-SUFFIX,umeng.co
+DOMAIN,api.zhihu.com
+DOMAIN,zhihu-web-analytics.zhihu.com
+DOMAIN,oia.zhihu.com
 DOMAIN,app.smzdm.com
 DOMAIN,msite.baidu.com
 DOMAIN,audid-api.taobao.com
