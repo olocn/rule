@@ -1,5 +1,5 @@
 # olo
-
+wx.qlogo.cn
 mmbiz.qpic.cn
 203.205.254.0/24
 .bcebos.com
