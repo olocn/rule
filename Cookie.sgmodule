@@ -1,11 +1,6 @@
 [Script]
-多看cookie = script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js,requires-body=true,type=http-request,pattern=^https:\/\/www\.duokan\.com\/checkin\/v0\/status
-多看 = type=cron,cronexp=20 4 0 * * *,script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js,script-update-interval=0
-
-115cookie = script-path=https://raw.githubusercontent.com/zZPiglet/Task/master/115/115.js,type=http-request,pattern=^https?:\/\/proapi\.115\.com\/ios\/user\/takespc\?
-
-http-request https:\/\/api\.m\.jd\.com\/client\.action.*functionId=signBean max-size=0,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/JD-DailyBonus/JD_DailyBonus.js
+http-request ^https:\/\/www\.duokan\.com\/checkin\/v0\/status max-size=0,script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js
+cron "5 9 * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js
 
 [MITM]
-hostname = %APPEND% api.m.jd.com , proapi.115.com, www.duokan.com
+hostname = %APPEND% www.duokan.com
