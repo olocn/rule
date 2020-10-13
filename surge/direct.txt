@@ -36,29 +36,22 @@ com.yinxiang.iphone
 .alibabausercontent.com
 
 182.254.116.0/24
-
-
 # > Blizzard
 cdp.cloud.unity3d.com
 .battle.net
 .battlenet.com
 .blizzard.com
-
 # > Prior
 client.amplifi.com
 ip.bjango.com
 .alphassl.com
 .edu.cn
-
 # > TeamViewer
 185.188.32.0/24
 185.188.33.0/24
 185.188.34.0/24
 185.188.35.0/24
-
 # > Tencent
-182.254.116.0/24
-
 .12306.cn
 .12306.com
 .126.net
@@ -111,7 +104,6 @@ ip.bjango.com
 .cmct.tv
 .cmfu.com
 .cnbeta.com
-.cnbetacdn.com
 .chdbits.co
 .cnlang.org
 .culturedcode.com
@@ -155,7 +147,6 @@ ip.bjango.com
 .icedropper.com
 .iciba.com
 .ifeng.com
-.ifengimg.com
 .images-amazon.com
 .img4me.com
 .ithome.com
@@ -301,3 +292,9 @@ ip.bjango.com
 .zmz002.com
 1.255.62.0/24
 .cn
+
+
+
+
+
+
