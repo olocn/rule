@@ -1,0 +1,4 @@
+# Youtube
+.googlevideo.com
+.gvt2.com
+.youtu.be
