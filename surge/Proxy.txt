@@ -13,15 +13,15 @@
 .jp.netcdn.space
 .msgamestudios.com
 .pixiv.cat
-.www.4ghhff.info
-.www.assdrty.com
-.www.louimg.com
-.www.nsaimg.com
+www.4ghhff.info
+www.assdrty.com
+www.louimg.com
+www.nsaimg.com
 .98rewer.me
-.www.sehuatang.com
-.www.skeimg.com
-.www.taotuleyuan.com
-.www.zaobao.com.sg
+www.sehuatang.com
+www.skeimg.com
+www.taotuleyuan.com
+www.zaobao.com.sg
 .cloudflare.com
 .crashlytics.com
 .dsndsht23.com
@@ -43,7 +43,6 @@
 .tits-guru.com
 .us-east-1.amazonaws.com
 .uservoice.com
-.cdn.v2ex.com
 .v2ex.co
 .v2ex.com
 .yande.re
@@ -109,9 +108,6 @@
 .app.smartmailcloud.com
 .gate.hockeyapp.net
 .smartmailcloud.com
-# > Zooba
-USER-AGENT,battleroyale*
-# > Top blocked sites
 .2o7.net
 .4everProxy.com
 .4shared.com
@@ -737,7 +733,6 @@ USER-AGENT,battleroyale*
 .githubhackathon.com
 .githubstatus.com
 .githubusercontent.com
-
 .265.com
 .2mdn.net
 .adservice.google.com
@@ -798,7 +793,6 @@ USER-AGENT,battleroyale*
 .update.googleapis.com
 .www-googletagmanager.l.google.com
 .www.gstatic.com
-
 .1e100.net
 .2mdn.net
 .abc.xyz
@@ -843,8 +837,6 @@ USER-AGENT,battleroyale*
 waveprotocol.org
 .webmproject.org
 .webrtc.org
-# > V2EX
-# > Amazon
 13.32.0.0/16
 13.33.0.0/16
 13.35.0.0/17
