@@ -1,4 +1,6 @@
 # olo
+203.205.254.220/32
+.bcebos.com
 www.ifanr.com
 app-measurement.com
 .unity3d.com
