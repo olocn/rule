@@ -746,6 +746,8 @@ www.zaobao.com.sg
 .clickserve.dartsearch.net
 .clientservices.googleapis.com
 .connectivitycheck.gstatic.com
+id.google.com.tw
+www.google.com.tw
 .corp.google.com
 .crl.pki.goog
 .csi.gstatic.com
