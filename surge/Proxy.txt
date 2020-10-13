@@ -1,4 +1,5 @@
 .chartbeat.net
+www-google-analytics.l.google.com
 .sessions.bugsnag.com
 .ark.to
 .m.svipmh.com
