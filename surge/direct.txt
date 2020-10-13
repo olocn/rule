@@ -1,7 +1,7 @@
 # olo
 wx.qlogo.cn
 mmbiz.qpic.cn
-203.205.254.0/24
+IP-CIDR,203.205.254.0/24
 .bcebos.com
 www.ifanr.com
 app-measurement.com
@@ -28,18 +28,18 @@ com.yinxiang.iphone
 .ihuman.com
 .ifengimg.com
 .tongdun.net
-47.98.0.0/15
-47.96.0.0/14
-198.18.0.0/16
-47.246.16.0/24
-239.255.255.250/32
-45.192.177.0/24
+IP-CIDR,47.98.0.0/15
+IP-CIDR,47.96.0.0/14
+IP-CIDR,198.18.0.0/16
+IP-CIDR,47.246.16.0/24
+IP-CIDR,239.255.255.250/32
+IP-CIDR,45.192.177.0/24
 .rdimg.com
 .cnbetacdn.com
 .letsencrypt.org
 .alibabausercontent.com
 
-182.254.116.0/24
+IP-CIDR,182.254.116.0/24
 # > Blizzard
 cdp.cloud.unity3d.com
 .battle.net
@@ -51,10 +51,10 @@ ip.bjango.com
 .alphassl.com
 .edu.cn
 # > TeamViewer
-185.188.32.0/24
-185.188.33.0/24
-185.188.34.0/24
-185.188.35.0/24
+IP-CIDR,185.188.32.0/24
+IP-CIDR,185.188.33.0/24
+IP-CIDR,185.188.34.0/24
+IP-CIDR,185.188.35.0/24
 # > Tencent
 .12306.cn
 .12306.com
@@ -294,8 +294,7 @@ ip.bjango.com
 .zhimg.com
 .zimuzu.tv
 .zmz002.com
-1.255.62.0/24
-.cn
+IP-CIDR,1.255.62.0/24
 
 
 
