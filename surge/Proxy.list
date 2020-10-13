@@ -43,9 +43,26 @@ DOMAIN-SUFFIX,xuite.net
 DOMAIN-SUFFIX,tits-guru.com
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
 DOMAIN-SUFFIX,uservoice.com
+DOMAIN,cdn.v2ex.com
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,yande.re
+DOMAIN-SUFFIX,kindle4rss.com
+DOMAIN-SUFFIX,feedx.pw
+DOMAIN-SUFFIX,feedx.co
+DOMAIN-SUFFIX,readdle.com
+DOMAIN-SUFFIX,feedbin.com
+DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,ft.com
+DOMAIN-SUFFIX,south-plus.org
+DOMAIN-SUFFIX,chkaja.com
+DOMAIN-SUFFIX,south-plus.net
+DOMAIN-SUFFIX,bbc.com
+DOMAIN-SUFFIX,18comic.org
+DOMAIN-SUFFIX,javcdn.pw
+DOMAIN-SUFFIX,enpass.io
+DOMAIN,arkdy.com
+DOMAIN,rsshub.app
 
 # > Microsoft
 USER-AGENT,OneDrive*
