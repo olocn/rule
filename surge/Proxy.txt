@@ -725,6 +725,7 @@ www.zaobao.com.sg
 .instagramtr.com
 .github-avatars.oss-cn-hongkong.aliyuncs.com
 .github.blog
+.github.map.fastly.net
 .github.com
 .github.community
 .github.io
