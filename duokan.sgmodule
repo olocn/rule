@@ -1,8 +1,0 @@
-#!name=多看
-#!system=ios
-[Script]
-http-request ^https:\/\/www\.duokan\.com\/checkin\/v0\/status max-size=0,script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.cookie.js
-cron "5 0 * * *" script-path= https://raw.githubusercontent.com/chavyleung/scripts/master/duokan/duokan.js
-
-[MITM]
-hostname = %APPEND% www.duokan.com
