@@ -1,37 +1,3 @@
-# olo
-DOMAIN,data.flurry.com
-DOMAIN-SUFFIX,umeng.co
-DOMAIN,api.zhihu.com
-DOMAIN,zhihu-web-analytics.zhihu.com
-DOMAIN,oia.zhihu.com
-DOMAIN,app.smzdm.com
-DOMAIN,msite.baidu.com
-DOMAIN,audid-api.taobao.com
-#DOMAIN,hmma.baidu.com
-DOMAIN-SUFFIX,cnzz.com
-DOMAIN,ad.ihuman.com
-DOMAIN-SUFFIX,mob.com
-DOMAIN-SUFFIX,aralego.net
-DOMAIN,ads.aralego.com
-DOMAIN-SUFFIX,mobileapptracking.com
-DOMAIN-SUFFIX,criteo.com
-DOMAIN-SUFFIX,criteo.net
-DOMAIN-SUFFIX,ad287.com
-DOMAIN-SUFFIX,umsns.com
-DOMAIN-SUFFIX,umengcloud.com
-DOMAIN-SUFFIX,umeng.com
-DOMAIN,analytics.yinxiang.com
-DOMAIN-SUFFIX,duxiaoman.com
-DOMAIN-SUFFIX,baifubao.com
-DOMAIN-SUFFIX,advertising.com
-DOMAIN-SUFFIX,uidh78.com
-DOMAIN,ads.aerserv.com
-DOMAIN-SUFFIX,taboola.com
-DOMAIN,log.ihuman.com
-DOMAIN,stun.services.mozilla.com
-# DOMAIN-SUFFIX,jpush.cn
-DOMAIN-SUFFIX,appadhoc.com
-
 # 江阴bus
 DOMAIN,stats.jpush.cn
 DOMAIN,wx.hfxing.cn
@@ -112,7 +78,6 @@ DOMAIN-SUFFIX,medialytics.com
 DOMAIN-SUFFIX,meetrics.com
 DOMAIN-SUFFIX,meetrics.net
 DOMAIN-SUFFIX,miaozhen.com
-DOMAIN-SUFFIX,mmstat.com
 DOMAIN-SUFFIX,moatads.com
 DOMAIN-SUFFIX,mobclix.com
 DOMAIN-SUFFIX,mopub.com
@@ -176,81 +141,3 @@ DOMAIN,mads.suning.com
 DOMAIN,mobileads.msn.com
 DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
-# > Apple
-DOMAIN-SUFFIX,iadsdk.apple.com
-DOMAIN-SUFFIX,ads.internal.unity3d.com
-DOMAIN-SUFFIX,ads.prd.ie.internal.unity3d.com
-DOMAIN-SUFFIX,unityads.unity3d.com
-# > Alibaba
-DOMAIN,optimus-ads.amap.com
-DOMAIN,optimus-ads.amap.com.w.alikunlun.com
-DOMAIN,tunion-api.m.taobao.com
-# > AutoHome
-DOMAIN,adproxy.autohome.com.cn
-DOMAIN,rd.autohome.com.cn
-DOMAIN,al.autohome.com.cn
-DOMAIN,applogapi.autohome.com.cn
-# > Baidu
-DOMAIN-SUFFIX,baidustatic.com
-DOMAIN,duclick.baidu.com
-DOMAIN,mobads.baidu.com
-DOMAIN,mobads-logs.baidu.com
-DOMAIN,nsclick.baidu.com
-DOMAIN,wn.pos.baidu.com
-DOMAIN,ps.map.baidu.com
-DOMAIN,offnavi.map.baidu.com
-DOMAIN,ulog.imap.baidu.com
-DOMAIN,newloc.map.n.shifen.com
-URL-REGEX,^http:\/\/[\s\S]*baidu\.com/.*ad[xs]\.php
-URL-REGEX,^http:\/\/c\.tieba\.baidu\.com\/c\/s\/splashSchedule$
-# > ChinaTelecom
-DOMAIN,admarket.21cn.com
-DOMAIN,adshows.21cn.com
-# > 车来了
-DOMAIN,atrace.chelaile.net.cn
-DOMAIN,logs.chelaile.net.cn
-# > Google
-DOMAIN-SUFFIX,doubleclick.net
-DOMAIN-SUFFIX,googleadsserving.cn
-DOMAIN-SUFFIX,googlesyndication.com
-
-# > Kingsoft
-DOMAIN,counter.kingsoft.com
-DOMAIN,counter.ksosoft.com
-DOMAIN,minfo.wps.cn
-DOMAIN,mobad.ijinshan.com
-DOMAIN,ups.ksmobile.net
-DOMAIN,ws.ksmobile.net
-DOMAIN,img.auction-ads.wpscdn.cn
-DOMAIN,ad-stat.ksosoft.com
-DOMAIN-SUFFIX,kingsoft-office-service.com
-USER-AGENT,wpsoffice*
-# > 乐播投屏
-DOMAIN,ad.hpplay.cn
-DOMAIN,adcdn.hpplay.cn
-DOMAIN,adeng.hpplay.cn
-DOMAIN,rp.hpplay.cn
-# > MI
-DOMAIN-SUFFIX,ad.intl.xiaomi.com
-DOMAIN-SUFFIX,ad.xiaomi.com
-DOMAIN-SUFFIX,admob.xiaomi.com
-DOMAIN,adv.sec.intl.miui.com
-DOMAIN,adv.sec.miui.com
-# > Tencent
-DOMAIN-SUFFIX,e.qq.com
-DOMAIN-SUFFIX,gdt.qq.com
-DOMAIN-SUFFIX,l.qq.com
-DOMAIN,adsmind.apdcdn.tc.qq.com
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,adsmind.tc.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,pgdt.gtimg.com
-DOMAIN,pgdt.ugdtimg.com
-DOMAIN,splashqqlive.gtimg.com
-DOMAIN,wa.gtimg.com
-DOMAIN,wxsnsdy.wxs.qq.com
-DOMAIN,wxsnsdythumb.wxs.qq.com
-
-# > Zhihu
-DOMAIN,mqtt.zhihu.com
-DOMAIN,sugar.zhihu.com
