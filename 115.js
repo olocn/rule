@@ -3,7 +3,7 @@ const $ = new cmp()
 let wp115 = "wx9b74cc2b355eef5f://"
 //let wp115 = "oof.disk://"
 
-$.notify("115", "", "点击跳转摇一摇领空间啦", wp115)
+$.notify("115", "", "点击跳转摇一摇", wp115)
 
 $done()
 
