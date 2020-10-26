@@ -1,4 +1,5 @@
 .chartbeat.net
+.facebook.com
 .google.com
 .blogspot.com
 .googleusercontent.com
