@@ -58,7 +58,6 @@ www.zaobao.com.sg
 .chkaja.com
 .south-plus.net
 .bbc.com
-.18comic.org
 .javcdn.pw
 .enpass.io
 .arkdy.com
