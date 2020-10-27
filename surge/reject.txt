@@ -1,5 +1,14 @@
 .360.cn
+.counter.kingsoft.com
+.counter.ksosoft.com
+.minfo.wps.cn
+.mobad.ijinshan.com
+.ups.ksmobile.net
+.ws.ksmobile.net
+.img.auction-ads.wpscdn.cn
+.ad-stat.ksosoft.com
 .umeng.com
+.umeng.co
 .360.com
 # 江阴bus
 .stats.jpush.cn
