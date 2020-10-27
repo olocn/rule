@@ -1,8 +1,8 @@
-.chartbeat.net
-.sessions.bugsnag.com
+DOMAIN-SUFFIX,chartbeat.net
+DOMAIN,sessions.bugsnag.com
 DOMAIN-SUFFIX,ark.to
-.m.svipmh.com
-.mangas.in
+DOMAIN-SUFFIX,svipmh.com
+DOMAIN-SUFFIX,mangas.in
 DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,bbc.in
 DOMAIN-SUFFIX,trib.al
