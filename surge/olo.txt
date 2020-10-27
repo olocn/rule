@@ -1,1 +1,4 @@
 .adtidy.org
+.adguard.com
+.kinnamansoftware.com
+.in.appcenter.ms
