@@ -4,3 +4,4 @@
 .googlevideo.com
 .gvt2.com
 .youtu.be
+.youtubei.googleapis.com
