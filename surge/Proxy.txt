@@ -1,5 +1,6 @@
 .chartbeat.net
 .facebook.com
+.cdninstagram.com
 .google.com
 .blogspot.com
 .googleusercontent.com
