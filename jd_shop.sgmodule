@@ -1,5 +1,0 @@
-#!name=进店领豆
-#!desc=
-#!system=ios
-
-cron "10 0 * * *" script-path=https://raw.githubusercontent.com/lxk0301/scripts/master/jd_shop.js,timeout=30, tag=进店领豆
