@@ -11,9 +11,7 @@
 .umeng.co
 .360.com
 # 江阴bus
-.stats.jpush.cn
 .wx.hfxing.cn
-.ali-stats.jpush.cn
 # > KFC
 .trackingprd.hwwt8.com
 .appbaqend.com
