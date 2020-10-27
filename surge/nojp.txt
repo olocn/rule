@@ -2,3 +2,5 @@
 .18comic.vip
 .cdn-msp.18comic.org
 .playno1.com
+.m.addthis.com
+.v1.addthisedge.com
