@@ -1,3 +1,9 @@
+# > WPS
+DOMAIN,img.auction-ads.wpscdn.cn
+DOMAIN,ad-stat.ksosoft.com
+DOMAIN-SUFFIX,kingsoft-office-service.com
+USER-AGENT,wpsoffice*
+
 DOMAIN-SUFFIX,360.cn
 DOMAIN-SUFFIX,kingsoft.com
 DOMAIN-SUFFIX,ksosoft.com
