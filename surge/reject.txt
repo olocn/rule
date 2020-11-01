@@ -7,9 +7,10 @@ USER-AGENT,wpsoffice*
 .kingsoft.com
 .ksosoft.com
 .ksmobile.net
-.umeng.com
 .umeng.co
 .360.com
+.log.umeng.com
+.logs.umengcloud.com
 # > KFC
 .trackingprd.hwwt8.com
 .appbaqend.com
