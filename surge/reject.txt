@@ -2,8 +2,10 @@
 .img.auction-ads.wpscdn.cn
 .ad-stat.ksosoft.com
 .kingsoft-office-service.com
-USER-AGENT,wpsoffice*
 .360.cn
+.errlog.umeng.com
+.ulogs.umeng.com
+.ads.95516.com
 .kingsoft.com
 .ksosoft.com
 .ksmobile.net
@@ -163,12 +165,6 @@ USER-AGENT,wpsoffice*
 .wa.gtimg.com
 .wxsnsdy.wxs.qq.com
 .wxsnsdythumb.wxs.qq.com
-# NAME: Privacy
-# GITHUB: https://github.com/blackmatrix7/ios_rule_script
-# UPDATE: 2020-10-28 23:07:21
-# DOMAIN: 19
-# DOMAIN-SUFFIX: 2691
-# TOTAL: 2710
 .0sbm.consobaby.co.uk
 .0x1f4b0.com
 .1l-hit.mail.ru
