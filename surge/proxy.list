@@ -3,6 +3,16 @@ DOMAIN-SUFFIX,nintendo.co.jp
 DOMAIN-SUFFIX,chartbeat.net
 DOMAIN,sessions.bugsnag.com
 DOMAIN-SUFFIX,ark.to
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,docs.live.net
+DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,doracdn.com
+DOMAIN-SUFFIX,letsencrypt.org
+DOMAIN-SUFFIX,microsoftonline.com
+DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,live.com
+DOMAIN,ocsp.sectigo.com
+DOMAIN-SUFFIX,hotmail.com 
 
 DOMAIN-SUFFIX,svipmh.com
 DOMAIN-SUFFIX,mangas.in
