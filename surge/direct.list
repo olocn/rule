@@ -8,6 +8,11 @@ DOMAIN-SUFFIX,unpkg.com
 IP-CIDR,47.246.37.0/24
 DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jysq.net
+DOMAIN-SUFFIX,iplaysoft.com
+DOMAIN-SUFFIX,wps.com
+DOMAIN-SUFFIX,amazfit.com
+DOMAIN-SUFFIX,jddebug.com
 
 # > Beplay
 DOMAIN-KEYWORD,beplay
