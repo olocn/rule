@@ -1,4 +1,10 @@
 # > WPS
+.app.smzdm.com
+.at.umtrack.com
+.analytics.yinxiang.com
+.ulogs.umengcloud.com
+.sdkconfig.ad.xiaomi.com
+.applog.uc.cn
 .img.auction-ads.wpscdn.cn
 .ad-stat.ksosoft.com
 .kingsoft-office-service.com
