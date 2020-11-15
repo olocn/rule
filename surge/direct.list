@@ -1,11 +1,14 @@
 # olo
+DOMAIN-SUFFIX,tv189.com
+DOMAIN,rdimg.com
+DOMAIN,rssdiy.com
 DOMAIN-SUFFIX,huami.com
 DOMAIN-SUFFIX,cmbimg.com
 DOMAIN-SUFFIX,joying.com
 DOMAIN-SUFFIX,mbcloud.com
 DOMAIN-SUFFIX,cmbchina.com
 DOMAIN-SUFFIX,unpkg.com
-IP-CIDR,47.246.37.0/24
+IP-CIDR,47.246.37.0/24,no-resolve
 DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jysq.net
