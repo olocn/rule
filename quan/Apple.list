@@ -1,64 +1,23 @@
-DOMAIN,testflight.apple.com,PROXY
-DOMAIN-SUFFIX,appsto.re,PROXY
-DOMAIN-SUFFIX,itunes.apple.com,PROXY
-DOMAIN-SUFFIX,apps.apple.com,PROXY
-DOMAIN,lookup-api.apple.com,proxy
-DOMAIN,music.apple.com,PROXY
-DOMAIN,apps.mzstatic.com,PROXY
-DOMAIN,xp.apple.com,PROXY
-DOMAIN-SUFFIX,mzstatic.com,PROXY
-DOMAIN-SUFFIX,icloud.com,PROXY
-DOMAIN-SUFFIX,icloud-content.com,PROXY
-DOMAIN,www-cdn.icloud.com.akadns.net,PROXY
-
-#DOMAIN,play.itunes.apple.com,PROXY
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
-#DOMAIN,aod.itunes.apple.com,PROXY
-#DOMAIN,init.itunes.apple.com,proxy
-#DOMAIN,radio-activity.itunes.apple.com,PROXY
-#DOMAIN,iosapps.itunes.apple.com,PROXY
-#DOMAIN,books.itunes.apple.com,PROXY
-
-# >> Apple News and Apple Map TOMTOM Version
-DOMAIN,gspe1-ssl.ls.apple.com,PROXY
-USER-AGENT,AppleNews*,PROXY
-USER-AGENT,com.apple.news*,PROXY
-DOMAIN-SUFFIX,apple.news,PROXY
-DOMAIN,news-client.apple.com,PROXY
-DOMAIN,news-edge.apple.com,PROXY
-DOMAIN,news-events.apple.com,PROXY
-DOMAIN,apple.comscoreresearch.com,PROXY
-
-user-agent,com.apple.trustd*,DIRECT
+# Apple
 DOMAIN-SUFFIX,aaplimg.com,Apple
 DOMAIN-SUFFIX,apple.co,Apple
 DOMAIN-SUFFIX,apple.com,Apple
+DOMAIN-SUFFIX,apple.com.cn,Apple
+DOMAIN-SUFFIX,apple-cloudkit.com,Apple
 DOMAIN-SUFFIX,appstore.com,Apple
 DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-SUFFIX,crashlytics.com,Apple
+DOMAIN-SUFFIX,icloud.com,Apple
+DOMAIN-SUFFIX,icloud.com.cn,Apple
+DOMAIN-SUFFIX,icloud-content.com,Apple
 DOMAIN-SUFFIX,me.com,Apple
+DOMAIN-SUFFIX,mzstatic.com,Apple
+DOMAIN-KEYWORD,apple.com.akadns.net,Apple
+DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
 IP-CIDR,17.0.0.0/8,Apple
-
-
-# > General
-USER-AGENT,coffeecorp*,DIRECT
-USER-AGENT,restaurant-mobile*,DIRECT
-DOMAIN,app.adjust.com,DIRECT
-
-# > Google
-DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
-DOMAIN,analyticsinsights-pa.googleapis.com,PROXY
-DOMAIN,analyticsreporting.googleapis.com,PROXY
-DOMAIN,dl.google.com,DIRECT
-DOMAIN,mtalk.google.com,DIRECT
-
-# > Tencent
-DOMAIN,livew.l.qq.com,DIRECT
-DOMAIN,vd.l.qq.com,DIRECT
-
-# > Strava
-DOMAIN,analytics.strava.com,DIRECT
-
-# > Umeng
-DOMAIN,msg.umeng.com,DIRECT
-DOMAIN,msg.umengcloud.com,DIRECT
+IP-CIDR,63.92.224.0/19,Apple
+IP-CIDR,65.199.22.0/23,Apple
+IP-CIDR,139.178.128.0/18,Apple
+IP-CIDR,144.178.0.0/19,Apple
+IP-CIDR,192.35.50.0/24,Apple
+IP-CIDR,198.183.17.0/24,Apple
+IP-CIDR,205.180.175.0/24,Apple
