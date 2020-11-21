@@ -24,6 +24,8 @@ DOMAIN-SUFFIX,jpush.cn,REJECT
 DOMAIN-SUFFIX,appadhoc.com,REJECT
 DOMAIN-SUFFIX,sogou.com,REJECT
 DOMAIN,uop.umeng.com,REJECT
+DOMAIN,ios.bugly.qq.com,REJECT
+DOMAIN,data.flurry.com,REJECT
 
 //江阴bus
 DOMAIN,stats.jpush.cn,REJECT
