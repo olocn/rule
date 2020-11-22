@@ -1,5 +1,6 @@
 //获取cookie重写配置:
 //Qx:https://youhui.95516.com/newsign/public/app/index.html url script-request-header https://gitee.com/passerby-b/javascript/raw/master/unipay.js
+//Qx:https://youhui.95516.com/newsign/public/app/index.html url script-request-header https://raw.githubusercontent.com/olocn/rule/master/uni.js
 //打开重写后进入云闪付签到页面,提示获得Cookie即可,一定要等签到页面加载完成,获取cookie成功后立刻划掉云闪付后台
 //添加MITM hostname:youhui.95516.com
 
