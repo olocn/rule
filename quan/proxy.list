@@ -1,4 +1,10 @@
 # olo
+DOMAIN-SUFFIX,hotmail.com,PROXY
+DOMAIN-SUFFIX,microsoftonline.com,PROXY
+DOMAIN-SUFFIX,readdle.com,PROXY
+DOMAIN,cdn.v2ex.com,PROXY
+DOMAIN,www.v2ex.com,PROXY
+DOMAIN,cdn-msp.msp-comic.xyz,PROXY
 DOMAIN,feedx.pw,PROXY
 DOMAIN,www.sehuatang.net,PROXY
 DOMAIN,cdn-msp.18comic.org,PROXY
