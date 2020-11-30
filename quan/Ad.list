@@ -1,10 +1,8 @@
 #olo
 DOMAIN,gm.mmstat.com,REJECT
-DOMAIN,ulogs.umeng.com,REJECT
-DOMAIN,applog.uc.cn,REJECT
 
+DOMAIN,applog.uc.cn,REJECT
 DOMAIN-SUFFIX,mob.com,REJECT
-DOMAIN,api.share.mob.com,REJECT
 DOMAIN,app.smzdm.com,REJECT
 
 DOMAIN-SUFFIX,aralego.net,REJECT
