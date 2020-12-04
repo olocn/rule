@@ -1,4 +1,10 @@
 .chartbeat.net
+.adtidy.org
+.adguard.com
+.kinnamansoftware.com
+.in.appcenter.ms
+.amysecure.com
+.nxtlnodes.com
 .facebook.com
 .cdninstagram.com
 .google.com
