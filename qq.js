@@ -1,8 +1,8 @@
 const $ = new cmp()
 
-let wp115 = "mqq://"
+let qq = "mqq://"
 
-$.notify("QQ", QQ)
+$.notify("qq", "", "企鹅阅读", qq)
 
 $done()
 
