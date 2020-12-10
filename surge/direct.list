@@ -1,4 +1,6 @@
 # olo
+DOMAIN-SUFFIX,alicloudwaf.com
+DOMAIN-SUFFIX,aliyundunwaf.com
 DOMAIN-SUFFIX,dmall.com
 DOMAIN-SUFFIX,dmallcdn.com
 DOMAIN-SUFFIX,jstucdn.com
