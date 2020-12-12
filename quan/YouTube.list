@@ -1,8 +1,31 @@
-# > YouTube
-USER-AGENT,com.google.ios.youtube*,YouTube
-USER-AGENT,YouTube*,YouTube
-DOMAIN-SUFFIX,googlevideo.com,YouTube
-DOMAIN-SUFFIX,youtube.com,YouTube
-DOMAIN-SUFFIX,ytimg.com,YouTube
+# Youtube
 DOMAIN,youtubei.googleapis.com,YouTube
 DOMAIN,yt3.ggpht.com,YouTube
+DOMAIN-SUFFIX,app-measurement.com,YouTube,YouTube
+DOMAIN-SUFFIX,googlevideo.com,YouTube
+DOMAIN-SUFFIX,gvt2.com,YouTube
+DOMAIN-SUFFIX,youtu.be,YouTube
+DOMAIN-SUFFIX,youtube.com,YouTube
+DOMAIN-SUFFIX,ytimg.com,YouTube
+DOMAIN-KEYWORD,youtube,YouTube
+USER-AGENT,*youtube*,YouTube
+USER-AGENT,youtube*,YouTube
+
+#nojp
+DOMAIN,cdn-msp.msp-comic1.xyz,YouTube
+DOMAIN-SUFFIX,18comic.vip,YouTube
+DOMAIN,cdn-msp.18comic.org,YouTube
+DOMAIN-SUFFIX,playno1.com,YouTube
+DOMAIN-SUFFIX,addthis.com,YouTube
+DOMAIN-SUFFIX,addthisedge.com,YouTube
+
+#TG
+DOMAIN-SUFFIX,t.me,YouTube
+DOMAIN-SUFFIX,tx.me,YouTube,YouTube
+DOMAIN-SUFFIX,tdesktop.com,YouTube
+DOMAIN-SUFFIX,telegra.ph,YouTube
+DOMAIN-SUFFIX,telegram.me,YouTube
+DOMAIN-SUFFIX,telegram.org,YouTube
+IP-CIDR,91.108.0.0/16,no-resolve,YouTube,YouTube
+IP-CIDR,109.239.140.0/24,no-resolve,YouTube
+IP-CIDR,149.154.160.0/20,no-resolve,YouTube
