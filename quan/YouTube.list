@@ -26,6 +26,6 @@ DOMAIN-SUFFIX,tdesktop.com,YouTube
 DOMAIN-SUFFIX,telegra.ph,YouTube
 DOMAIN-SUFFIX,telegram.me,YouTube
 DOMAIN-SUFFIX,telegram.org,YouTube
-IP-CIDR,91.108.0.0/16,no-resolve,YouTube
-IP-CIDR,109.239.140.0/24,no-resolve,YouTube
-IP-CIDR,149.154.160.0/20,no-resolve,YouTube
+IP-CIDR,91.108.0.0/16,YouTube
+IP-CIDR,109.239.140.0/24,YouTube
+IP-CIDR,149.154.160.0/20,YouTube
