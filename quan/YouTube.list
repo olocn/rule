@@ -1,7 +1,7 @@
 # Youtube
 DOMAIN,youtubei.googleapis.com,YouTube
 DOMAIN,yt3.ggpht.com,YouTube
-DOMAIN-SUFFIX,app-measurement.com,YouTube,YouTube
+DOMAIN-SUFFIX,app-measurement.com,YouTube
 DOMAIN-SUFFIX,googlevideo.com,YouTube
 DOMAIN-SUFFIX,gvt2.com,YouTube
 DOMAIN-SUFFIX,youtu.be,YouTube
