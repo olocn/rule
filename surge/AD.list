@@ -1,5 +1,12 @@
 DOMAIN,ads.nty.tv189.com
 DOMAIN,api.tuisong.baidu.com
+DOMAIN-SUFFIX,mob.com
+DOMAIN,applog.uc.cn
+DOMAIN-SUFFIX,jddebug.com
+DOMAIN,audid-api.taobao.com
+DOMAIN,ads.nty.tv189.com
+DOMAIN,app.smzdm.com
+
 # > General
 DOMAIN-KEYWORD,adservice
 
