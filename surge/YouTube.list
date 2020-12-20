@@ -12,6 +12,7 @@ USER-AGENT,*youtube*
 USER-AGENT,youtube*
 
 #nojp
+DOMAIN,cdn-msp.msp-comic.xyz
 DOMAIN,cdn-msp.msp-comic1.xyz
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN,cdn-msp.18comic.org
