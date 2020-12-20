@@ -9,7 +9,8 @@ DOMAIN-SUFFIX,rss.rrys.tv
 DOMAIN-SUFFIX,www.h3h2.com
 DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,alibabausercontent.com
-
+DOMAIN-SUFFIX,95516.com
+DOMAIN-SUFFIX,jingxi.com
 #Cloudflare
 IP-CIDR,104.20.0.0/20,no-resolve
 IP-CIDR,104.16.0.0/12,no-resolve
