@@ -9,10 +9,16 @@ DOMAIN-SUFFIX,rss.rrys.tv
 DOMAIN-SUFFIX,www.h3h2.com
 DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,alibabausercontent.com
+
+#Cloudflare
+IP-CIDR,104.20.0.0/20,no-resolve
+IP-CIDR,104.16.0.0/12,no-resolve
+
 IP-CIDR,163.181.36.0/24,no-resolve
 IP-CIDR,47.246.1.0/24,no-resolve
-DOMAIN,205.204.96.0/19,no-resolve
+IP-CIDR,205.204.96.0/19,no-resolve
 IP-CIDR,203.205.219.0/24,no-resolve
+
 DOMAIN-SUFFIX,alipaydns.com
 DOMAIN-SUFFIX,unity3d.com
 DOMAIN-SUFFIX,115.com
@@ -41,11 +47,13 @@ DOMAIN,cdp.cloud.unity3d.com
 DOMAIN-SUFFIX,battle.net
 DOMAIN-SUFFIX,battlenet.com
 DOMAIN-SUFFIX,blizzard.com
+
 # > Prior
 DOMAIN,client.amplifi.com
 DOMAIN,ip.bjango.com
 DOMAIN-SUFFIX,alphassl.com
 DOMAIN-SUFFIX,edu.cn
+
 # > RRYS
 DOMAIN-SUFFIX,p4pfile.com
 DOMAIN-SUFFIX,zmzfile.com
