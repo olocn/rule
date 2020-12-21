@@ -5,6 +5,11 @@ DOMAIN-SUFFIX,mob.com,REJECT
 DOMAIN,app.smzdm.com,REJECT
 DOMAIN,ads.nty.tv189.com,REJECT
 DOMAIN,api.tuisong.baidu.com,REJECT
+DOMAIN,ad.caiyunapp.com,REJECT
+DOMAIN-SUFFIX,jddebug.com,REJECT
+DOMAIN,audid-api.taobao.com,REJECT
+DOMAIN-SUFFIX,umeng.com,REJECT
+DOMAIN,analytics.95516.com,REJECT
 
 # > General,REJECT
 DOMAIN-KEYWORD,adservice,REJECT
