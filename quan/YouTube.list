@@ -12,13 +12,15 @@ USER-AGENT,*youtube*,YouTube
 USER-AGENT,youtube*,YouTube
 
 #nojp
-DOMAIN,cdn-msp.msp-comic1.xyz,YouTube
 DOMAIN-SUFFIX,18comic.vip,YouTube
 DOMAIN,cdn-msp.18comic.org,YouTube
-DOMAIN-SUFFIX,playno1.com,YouTube
 DOMAIN-SUFFIX,addthis.com,YouTube
 DOMAIN-SUFFIX,addthisedge.com,YouTube
-
+DOMAIN,cdn-msp.msp-comic.xyz,YouTube
+DOMAIN,cdn-msp.msp-comic1.xyz,YouTube
+DOMAIN-SUFFIX,playno1.com,YouTube
+DOMAIN-SUFFIX,sexyno1.com,YouTube
+DOMAIN-SUFFIX,www.playio1.com,YouTube
 #TG
 DOMAIN-SUFFIX,t.me,YouTube
 DOMAIN-SUFFIX,tx.me,YouTube
