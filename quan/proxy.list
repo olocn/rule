@@ -2,13 +2,20 @@
 DOMAIN-SUFFIX,readdle.com,PROXY
 DOMAIN,cdn.v2ex.com,PROXY
 DOMAIN,www.v2ex.com,PROXY
-DOMAIN,cdn-msp.msp-comic.xyz,PROXY
 DOMAIN,feedx.pw,PROXY
 DOMAIN,www.sehuatang.net,PROXY
-DOMAIN,cdn-msp.18comic.org,PROXY
-DOMAIN-SUFFIX,18comic.vip,PROXY
 DOMAIN,github.githubassets.com,PROXY
 DOMAIN-SUFFIX,docs.rsshub.app,PROXY
+
+# > Spotify
+USER-AGENT,Spotify*,PROXY
+DOMAIN-SUFFIX,pscdn.co,PROXY
+DOMAIN-SUFFIX,scdn.co,PROXY,PROXY
+DOMAIN-SUFFIX,spoti.fi,PROXY
+DOMAIN-SUFFIX,spotify.com,PROXY
+DOMAIN-SUFFIX,spotifycdn.net,PROXY
+DOMAIN-SUFFIX,scorecardresearch.com,PROXY
+DOMAIN-SUFFIX,branch.io,PROXY
 
 # > Microsoft
 DOMAIN-SUFFIX,microsoftonline.com,PROXY
@@ -24,8 +31,6 @@ DOMAIN-SUFFIX,windowsupdate.com,PROXY
 # DOMAIN-KEYWORD,-microsoft-com.akamaized.net,PROXY
 DOMAIN-SUFFIX,dapenti.com,PROXY
 DOMAIN-SUFFIX,eachwks.com,PROXY
-DOMAIN-SUFFIX,sexyno1.com,PROXY
-DOMAIN-SUFFIX,www.playio1.com,PROXY
 DOMAIN-SUFFIX,digitalcertvalidation.com,PROXY
 DOMAIN-SUFFIX,hwcdn.net,PROXY
 DOMAIN-SUFFIX,worldssl.net,PROXY
