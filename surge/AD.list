@@ -1,6 +1,7 @@
 DOMAIN,ads.nty.tv189.com
 DOMAIN,api.tuisong.baidu.com
 DOMAIN-SUFFIX,mob.com
+DOMAIN,ad.caiyunapp.com
 DOMAIN,applog.uc.cn
 DOMAIN-SUFFIX,jddebug.com
 DOMAIN,audid-api.taobao.com
@@ -289,7 +290,6 @@ DOMAIN,mopnativeadv.037201.com
 DOMAIN,nativeadv.dftoutiao.com
 DOMAIN,toots-a.akamaihd.net
 
-# (0~9)
 # > 51wnl
 DOMAIN,ad.51wnl-cq.com
 DOMAIN,adextra.51wnl-cq.com
@@ -313,8 +313,6 @@ DOMAIN,pl.cp31.ott.cibntv.net
 DOMAIN,optimus-ads.amap.com
 DOMAIN,optimus-ads.amap.com.w.alikunlun.com
 
-
-# (B)
 # --- (Baidu) ---
 DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,pos.baidu.com
@@ -338,8 +336,6 @@ DOMAIN,ad.k.21cn.com
 DOMAIN,admarket.21cn.com
 DOMAIN,adshows.21cn.com
 
-
-# (G)
 # > Google
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,googleadservices.com
@@ -348,7 +344,6 @@ DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,googletagservices.com
 DOMAIN,ads.youtube.com
 
-# (J)
 # > Kingsoft
 DOMAIN,ad-stat.ksosoft.com
 DOMAIN,img.auction-ads.wpscdn.cn
@@ -359,7 +354,6 @@ DOMAIN,mobad.ijinshan.com
 DOMAIN,ups.ksmobile.net
 DOMAIN,ws.ksmobile.net
 
-# (M)
 # > MI
 DOMAIN-SUFFIX,ad.intl.xiaomi.com
 DOMAIN-SUFFIX,ad.xiaomi.com
@@ -372,7 +366,6 @@ DOMAIN,adlaunch.moji.com
 DOMAIN,ads.mojicdn.com
 DOMAIN,v1.log.moji.com
 
-# (N)
 # > NetEase
 DOMAIN-SUFFIX,dsp.youdao.com
 DOMAIN-SUFFIX,union.youdao.com
@@ -397,7 +390,6 @@ DOMAIN-SUFFIX,deliver.ifeng.com
 DOMAIN,api.newad.ifeng.com
 DOMAIN,ifengad.3g.ifeng.com
 
-# (T)
 # --- (Tencent) ---
 DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
@@ -423,13 +415,8 @@ DOMAIN,kgmobilestatbak.kugou.com
 DOMAIN,mobilelog.kugou.com
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
-# ------
-# > TongHuaShun
-DOMAIN,adm.10jqka.com.cn
-DOMAIN,stat.10jqka.com.cn
 
 
-# (X)
 # > Ximalaya
 DOMAIN,ad.ximalaya.com
 DOMAIN,adbs.ximalaya.com
@@ -439,8 +426,6 @@ DOMAIN,adbehavior.wsa.ximalaya.com
 DOMAIN,adbehavior.ximalaya.com
 DOMAIN,adsebs.ximalaya.com
 
-
-# (Y)
 # > Yahoo
 DOMAIN-SUFFIX,adserver.yahoo.com
 DOMAIN-SUFFIX,adspecs.yahoo.com
@@ -452,7 +437,6 @@ DOMAIN,ads.finance.yahoo.com
 DOMAIN,ads.yahoo.com
 DOMAIN,ads.yahoo.de
 
-# (Z)
 # > Zhihu
 USER-AGENT,AVOS*
 DOMAIN,appcloud2.zhihu.com
