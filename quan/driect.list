@@ -1,4 +1,9 @@
 #olo
+
+#Cloudflare
+IP-CIDR,104.20.0.0/20,no-resolve
+IP-CIDR,104.16.0.0/12,no-resolve
+
 DOMAIN-SUFFIX,alicloudwaf.com,DIRECT       
 DOMAIN-SUFFIX,aliyundunwaf.com,DIRECT      
 DOMAIN-SUFFIX,alipayobjects.com,DIRECT  
