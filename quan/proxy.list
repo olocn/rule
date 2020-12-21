@@ -1,11 +1,6 @@
 # olo
 DOMAIN-SUFFIX,readdle.com,PROXY
-DOMAIN,cdn.v2ex.com,PROXY
-DOMAIN,www.v2ex.com,PROXY
-DOMAIN,feedx.pw,PROXY
-DOMAIN,www.sehuatang.net,PROXY
 DOMAIN,github.githubassets.com,PROXY
-DOMAIN-SUFFIX,docs.rsshub.app,PROXY
 
 # > Spotify
 USER-AGENT,Spotify*,PROXY
@@ -16,7 +11,6 @@ DOMAIN-SUFFIX,spotify.com,PROXY
 DOMAIN-SUFFIX,spotifycdn.net,PROXY
 DOMAIN-SUFFIX,scorecardresearch.com,PROXY
 DOMAIN-SUFFIX,branch.io,PROXY
-
 # > Microsoft
 DOMAIN-SUFFIX,microsoftonline.com,PROXY
 DOMAIN-SUFFIX,hotmail.com,PROXY
