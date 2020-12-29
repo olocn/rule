@@ -1,5 +1,18 @@
 #olo
 
+DOMAIN-SUFFIX,lxysh.xyz,DIRECT
+DOMAIN-SUFFIX,autoimg.cn,DIRECT
+DOMAIN-SUFFIX,autohome.com.cn,DIRECT
+DOMAIN-SUFFIX,gitee.com,DIRECT
+DOMAIN-SUFFIX,flyertea.com,DIRECT
+DOMAIN-SUFFIX,jdfcloud.com,DIRECT
+DOMAIN-SUFFIX,iappstoday.com,DIRECT
+DOMAIN-SUFFIX,iapps.im,DIRECT
+DOMAIN-SUFFIX,ifanr.com,DIRECT
+DOMAIN-SUFFIX,geekpark.net,DIRECT
+DOMAIN,jdlingyu.net,DIRECT
+DOMAIN-SUFFIX,jdlingyu.com,DIRECT
+
 #Cloudflare
 IP-CIDR,104.20.0.0/20,no-resolve
 IP-CIDR,104.16.0.0/12,no-resolve
