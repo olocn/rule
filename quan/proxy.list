@@ -1,6 +1,13 @@
 # olo
 DOMAIN-SUFFIX,readdle.com,PROXY
 DOMAIN,github.githubassets.com,PROXY
+DOMAIN,sub.arkdy.net,PROXY
+DOMAIN,img.201503.net,PROXY
+DOMAIN-SUFFIX,redditstatic.com,PROXY
+DOMAIN-SUFFIX,byzhihuo.com,PROXY
+DOMAIN,activation.crossutility.com,PROXY
+DOMAIN,www.bbppics.com,PROXY
+DOMAIN,www.vxotu.com,PROXY
 
 # > Spotify
 USER-AGENT,Spotify*,PROXY
