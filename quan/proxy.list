@@ -1,4 +1,8 @@
 # olo
+DOMAIN,img.shields.io,PROXY
+DOMAIN-SUFFIX,cool18.com,PROXY
+DOMAIN,www.sxotu.xyz,PROXY
+DOMAIN,images2.imgbox.com,PROXY
 DOMAIN-SUFFIX,readdle.com,PROXY
 DOMAIN,github.githubassets.com,PROXY
 DOMAIN,sub.arkdy.net,PROXY
