@@ -3,6 +3,9 @@ DOMAIN,img.shields.io,PROXY
 DOMAIN-SUFFIX,cool18.com,PROXY
 DOMAIN,www.sxotu.xyz,PROXY
 DOMAIN,images2.imgbox.com,PROXY
+DOMAIN,aadcdn.msftauth.net,PROXY
+DOMAIN,logincdn.msauth.net,PROXY
+DOMAIN-SUFFIX,onedrive.com,PROXY
 DOMAIN-SUFFIX,readdle.com,PROXY
 DOMAIN,github.githubassets.com,PROXY
 DOMAIN,sub.arkdy.net,PROXY
@@ -769,7 +772,6 @@ DOMAIN-SUFFIX,netmarble.com,PROXY
 DOMAIN-SUFFIX,nianticlabs.com,PROXY
 DOMAIN-SUFFIX,pinimg.com,PROXY
 DOMAIN-SUFFIX,pubnub.com,PROXY
-DOMAIN-SUFFIX,scdn.co,PROXY
 DOMAIN-SUFFIX,t.co,PROXY
 DOMAIN-SUFFIX,tensorflow.org,PROXY
 DOMAIN-SUFFIX,toggleable.com,PROXY
