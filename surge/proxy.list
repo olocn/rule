@@ -1,4 +1,19 @@
 #olo
+
+DOMAIN,api.turinglabs.net
+DOMAIN,home.6park.com
+DOMAIN,img.86uk.com
+DOMAIN,www.smximg.com
+DOMAIN,img.86uk.com
+DOMAIN,p.4c4crt.com
+DOMAIN,img.shields.io
+DOMAIN-SUFFIX,cool18.com
+DOMAIN,www.sxotu.xyz
+DOMAIN,images2.imgbox.com
+DOMAIN,aadcdn.msftauth.net
+DOMAIN,logincdn.msauth.net
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,dapenti.com
 DOMAIN-SUFFIX,eachwks.com
@@ -92,20 +107,6 @@ DOMAIN-SUFFIX,rsshub.app
 
 # > TestFlight
 DOMAIN,testflight.apple.com
-# > Line
-DOMAIN-SUFFIX,lin.ee
-DOMAIN-SUFFIX,line.me
-DOMAIN-SUFFIX,line.naver.jp
-DOMAIN-SUFFIX,line-apps.com
-DOMAIN-SUFFIX,line-cdn.net
-DOMAIN-SUFFIX,line-scdn.net
-DOMAIN-SUFFIX,nhncorp.jp
-# > Sony
-DOMAIN-SUFFIX,playstation.com
-DOMAIN-SUFFIX,playstation.net
-DOMAIN-SUFFIX,playstationnetwork.com
-DOMAIN-SUFFIX,sony.com
-DOMAIN-SUFFIX,sonyentertainmentnetwork.com
 
 # > Spotify
 USER-AGENT,Spotify*
