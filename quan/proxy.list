@@ -1,4 +1,10 @@
 # olo
+DOMAIN,api.turinglabs.net,Proxy
+DOMAIN,home.6park.com,PROXY
+DOMAIN,img.86uk.com,PROXY
+DOMAIN,www.smximg.com,PROXY
+DOMAIN,img.86uk.com,PROXY
+DOMAIN,p.4c4crt.com,PROXY
 DOMAIN,img.shields.io,PROXY
 DOMAIN-SUFFIX,cool18.com,PROXY
 DOMAIN,www.sxotu.xyz,PROXY
