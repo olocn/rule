@@ -1,4 +1,24 @@
 # olo
+
+DOMAIN-SUFFIX,jingxi.com,DIRECT
+DOMAIN,fliporn.biz,DIRECT
+DOMAIN-SUFFIX,xsspic.com,DIRECT
+DOMAIN-SUFFIX,flyert.com,DIRECT
+DOMAIN-SUFFIX,zdmimg.com,DIRECT
+DOMAIN-SUFFIX,0513.org,DIRECT
+DOMAIN-SUFFIX,lxysh.xyz,DIRECT
+DOMAIN-SUFFIX,autoimg.cn,DIRECT
+DOMAIN-SUFFIX,autohome.com.cn,DIRECT
+DOMAIN-SUFFIX,gitee.com,DIRECT
+DOMAIN-SUFFIX,flyertea.com,DIRECT
+DOMAIN-SUFFIX,jdfcloud.com,DIRECT
+DOMAIN-SUFFIX,iappstoday.com,DIRECT
+DOMAIN-SUFFIX,iapps.im,DIRECT
+DOMAIN-SUFFIX,ifanr.com,DIRECT
+DOMAIN-SUFFIX,geekpark.net,DIRECT
+DOMAIN,jdlingyu.net,DIRECT
+DOMAIN-SUFFIX,jdlingyu.com,DIRECT
+
 DOMAIN-SUFFIX,alicloudwaf.com
 DOMAIN-SUFFIX,aliyundunwaf.com
 DOMAIN-SUFFIX,dmall.com
@@ -11,6 +31,7 @@ DOMAIN-SUFFIX,mi-img.com
 DOMAIN-SUFFIX,alibabausercontent.com
 DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,jingxi.com
+
 #Cloudflare
 IP-CIDR,104.20.0.0/20,no-resolve
 IP-CIDR,104.16.0.0/12,no-resolve
