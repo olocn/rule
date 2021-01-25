@@ -1,5 +1,6 @@
 #olo
 
+.github.githubassets.com
 .notifications-pa.googleapis.com
 .growth-pa.googleapis.com
 .googleusercontent.com
