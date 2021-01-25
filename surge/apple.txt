@@ -121,3 +121,4 @@
 .www.apple.com.edgekey.net
 .www.apple.com
 .publicassets.cdn-apple.com
+.edge-026.dedus.icloud-content.com
