@@ -25,6 +25,7 @@
 .cloudflare-dns.com
 .dapenti.com
 .eachwks.com
+.googleapis.com
 .digitalcertvalidation.com
 .hwcdn.net
 .worldssl.net
