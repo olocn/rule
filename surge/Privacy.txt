@@ -1,5 +1,6 @@
 # Privacy
 
+.adapi.pandabus.cn
 .www.qchannel01.cn
 
 .track.tiara.daum.net
