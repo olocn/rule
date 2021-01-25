@@ -1,4 +1,7 @@
 # Privacy
+
+.www.qchannel01.cn
+
 .track.tiara.daum.net
 .track.tiara.kakao.com
 .zgsdk.zhugeio.com
