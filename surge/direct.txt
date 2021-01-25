@@ -1,4 +1,8 @@
 # olo
+
+.qnap.com
+.gm.mmstat.com
+.cdn.bcebos.com
 .300hu.com
 .jingxi.com
 .fliporn.biz
