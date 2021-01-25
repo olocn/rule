@@ -9,6 +9,7 @@
 .xp.apple.com
 .ess.apple.com
 .push-apple.com.akadns.net
+.31-courier.push.apple.com
 .push.apple.com
 .aod.itunes.apple.com
 .mesu.apple.com
