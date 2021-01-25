@@ -1,4 +1,8 @@
 #olo
+
+.notifications-pa.googleapis.com
+.growth-pa.googleapis.com
+.googleusercontent.com
 .avatars.githubusercontent.com
 .sub.arkdy.net
 .wikimedia.org
