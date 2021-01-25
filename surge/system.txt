@@ -1,4 +1,6 @@
 .api.smoot.apple.com
+.static.ess.apple.com
+.invitation.ess.apple.com
 .captive.apple.com
 .configuration.apple.com
 .guzzoni.apple.com
