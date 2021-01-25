@@ -1,5 +1,7 @@
 # olo
-
+.vipfengfei.com
+.apiadcdn.com
+.adcdn.com
 .qnap.com
 .gm.mmstat.com
 .cdn.bcebos.com
