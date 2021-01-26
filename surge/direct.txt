@@ -1,4 +1,6 @@
 # olo
+
+.upload.chinaz.com
 .tbcache.com
 .lencr.org
 .4008823823.com.cn
