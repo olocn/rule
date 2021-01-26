@@ -1,4 +1,11 @@
 # olo 
+.kunlungr.com
+.aliyunwaf.com
+.alikunlun.com
+.omniture.cn
+.networkbench.com
+.fengqiangwangluo.com
+.chinatelecom-ec.com
 .getui.com
 .dnspod.cn
 .thepaper.cn
