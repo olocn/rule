@@ -7,7 +7,6 @@
 .didistatic.com
 .diditaxi.com.cn
 .stun.services.mozilla.com
-.tanx.com
 .upload.chinaz.com
 .tbcache.com
 .lencr.org
