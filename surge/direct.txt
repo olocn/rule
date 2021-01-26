@@ -1,4 +1,6 @@
 # olo 
+.xycdn.com
+.p2cdn.com
 .189.cn
 .3.cn
 .edu.cn
