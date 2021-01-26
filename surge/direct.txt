@@ -1,4 +1,7 @@
-# olo
+# olo 
+
+.log.cmbchina.com
+.ocsp.dcocsp.cn
 .didistatic.com
 .diditaxi.com.cn
 .stun.services.mozilla.com
