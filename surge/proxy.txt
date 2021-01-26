@@ -1,5 +1,14 @@
 #olo
 
+.googletraveladservices.com
+.analyticsinsights-pa.googleapis.com
+.analyticsreporting.googleapis.com
+.blog.google
+.clientservices.googleapis.com
+.dl.google.com
+.dl.l.google.com
+.update.googleapis.com
+.translate.googleapis.com
 .github.githubassets.com
 .notifications-pa.googleapis.com
 .growth-pa.googleapis.com
