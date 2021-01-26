@@ -1,4 +1,6 @@
 # olo
+
+.xiaomi.cn
 .vipfengfei.com
 .apiadcdn.com
 .adcdn.com
