@@ -1,5 +1,6 @@
 # olo
-
+.stun.services.mozilla.com
+.tanx.com
 .upload.chinaz.com
 .tbcache.com
 .lencr.org
