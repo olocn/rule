@@ -1,4 +1,6 @@
 # Privacy
+
+.trackingprd.hwwt8.com
 .api.tuisong.baidu.com
 .mob.com
 .ad.caiyunapp.com
