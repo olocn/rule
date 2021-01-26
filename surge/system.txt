@@ -21,3 +21,22 @@
 .lcdn-locator.apple.com
 .lcdn-registration.apple.com
 .ls.apple.com
+
+# other
+.app.adjust.com
+.bdtj.tagtic.cn
+# > Alibaba
+.log.mmstat.com
+.sycm.mmstat.com
+
+# >> Google Fonts API
+.fonts.googleapis.com
+.fonts.gstatic.com
+# > Umeng
+.msg.umeng.com
+.msg.umengcloud.com
+# > Tencent
+.fairplay.l.qq.com
+.livew.l.qq.com
+.vd.l.qq.com
+.analytics.strava.com
