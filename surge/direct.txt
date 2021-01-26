@@ -1,4 +1,6 @@
 # olo 
+.qlogo.cn
+.qpic.cn
 .myapp.com
 .kunlungr.com
 .aliyunwaf.com
