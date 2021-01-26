@@ -1,5 +1,5 @@
 # olo
-
+.ftacademy.cn
 .xiaomi.cn
 .vipfengfei.com
 .apiadcdn.com
