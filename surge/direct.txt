@@ -1,4 +1,5 @@
 # olo 
+.thepaper.cn
 .xycdn.com
 .p2cdn.com
 .189.cn
