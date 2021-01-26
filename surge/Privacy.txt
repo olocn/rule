@@ -1,4 +1,6 @@
 # Privacy
+
+.sdkconfig.ad.xiaomi.com
 .umengcloud.com
 .adtrack.xiaojukeji.com
 .trackingprd.hwwt8.com
