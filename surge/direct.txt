@@ -1,4 +1,6 @@
 # olo 
+.edu.cn
+.ujinbi.com
 .xiaomiyoupin.com
 .log.cmbchina.com
 .ocsp.dcocsp.cn
