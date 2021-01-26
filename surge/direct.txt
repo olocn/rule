@@ -1,5 +1,5 @@
 # olo 
-
+.xiaomiyoupin.com
 .log.cmbchina.com
 .ocsp.dcocsp.cn
 .didistatic.com
