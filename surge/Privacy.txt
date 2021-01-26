@@ -1,5 +1,13 @@
 # Privacy
-
+.api.tuisong.baidu.com
+.mob.com
+.ad.caiyunapp.com
+.applog.uc.cn
+.jddebug.com
+# .audid-api.taobao.com
+.app.smzdm.com
+.umeng.com
+.analytics.95516.com
 .adapi.pandabus.cn
 .www.qchannel01.cn
 
