@@ -1,4 +1,5 @@
 # Privacy
+.umengcloud.com
 .adtrack.xiaojukeji.com
 .trackingprd.hwwt8.com
 .api.tuisong.baidu.com
