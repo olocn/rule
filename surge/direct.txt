@@ -1,4 +1,6 @@
 # olo 
+
+.cdn.zzdaye.com
 .aliapp.org
 .tencent.com
 .netease.im
