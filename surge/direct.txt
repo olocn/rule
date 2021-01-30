@@ -1,5 +1,5 @@
 # olo 
-
+.iqiyi.com
 .tiantang.mogencloud.com
 .cdn.zzdaye.com
 .aliapp.org
