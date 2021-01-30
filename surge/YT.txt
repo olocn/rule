@@ -1,14 +1,3 @@
-# Youtube
-.youtubei.googleapis.com
-.yt3.ggpht.com
-.app-measurement.com
-.googlevideo.com
-.gvt2.com
-.youtu.be
-.youtube.com
-ytimg.com
-.youtube.com
-
 #nojp
 .cdn-msp.msp-comic.xyz
 .cdn-msp.msp-comic1.xyz
