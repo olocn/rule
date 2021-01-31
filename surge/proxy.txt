@@ -1,5 +1,9 @@
 #olo
 
+.cdn-msp.msp-comic.xyz
+.cdn-msp.msp-comic1.xyz
+.cdn-msp.18comic.org
+
 # Youtube
 .youtubei.googleapis.com
 .yt3.ggpht.com
