@@ -1,4 +1,8 @@
 # olo 
+.tdnsv5.com
+.21cn.com
+.cl2009.com
+.iqiyipic.com
 .openinstall.io
 .iqiyi.com
 .tiantang.mogencloud.com
