@@ -1,4 +1,5 @@
 # olo 
+.openinstall.io
 .iqiyi.com
 .tiantang.mogencloud.com
 .cdn.zzdaye.com
