@@ -6,6 +6,7 @@
 .captive.apple.com
 .configuration.apple.com
 .guzzoni.apple.com
+app-site-association.cdn-apple.com
 .smp-device-content.apple.com
 .xp.apple.com
 .ess.apple.com
