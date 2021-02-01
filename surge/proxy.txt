@@ -3,7 +3,7 @@
 .cdn-msp.msp-comic.xyz
 .cdn-msp.msp-comic1.xyz
 .cdn-msp.18comic.org
-
+.zaobao.com
 # Youtube
 .youtubei.googleapis.com
 .yt3.ggpht.com
