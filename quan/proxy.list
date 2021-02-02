@@ -1,4 +1,7 @@
 # olo
+DOMAIN-SUFFIX,azioncdn.net,Proxy
+DOMAIN-SUFFIX,blazingcdn.net,Proxy
+DOMAIN-SUFFIX,cdn-tech.io,Proxy
 DOMAIN,api.turinglabs.net,Proxy
 DOMAIN,home.6park.com,PROXY
 DOMAIN,img.86uk.com,PROXY
