@@ -1,0 +1,27 @@
+# > General
+DOMAIN,app.adjust.com,DIRECT
+DOMAIN,bdtj.tagtic.cn,DIRECT
+# > Alibaba
+DOMAIN,log.mmstat.com,DIRECT
+DOMAIN,sycm.mmstat.com,DIRECT
+# > Google
+DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
+DOMAIN,analyticsinsights-pa.googleapis.com,DIRECT
+DOMAIN,analyticsreporting.googleapis.com,DIRECT
+DOMAIN-SUFFIX,blog.google,DIRECT
+DOMAIN,clientservices.googleapis.com,DIRECT
+DOMAIN,dl.google.com,DIRECT
+DOMAIN,dl.l.google.com,DIRECT
+DOMAIN,update.googleapis.com,DIRECT
+DOMAIN,translate.googleapis.com,DIRECT
+# >> Google Fonts API
+DOMAIN,fonts.googleapis.com,DIRECT
+DOMAIN,fonts.gstatic.com,DIRECT
+# > Umeng
+DOMAIN,msg.umeng.com,DIRECT
+DOMAIN,msg.umengcloud.com,DIRECT
+# > Tencent
+DOMAIN,fairplay.l.qq.com,DIRECT
+DOMAIN,livew.l.qq.com,DIRECT
+DOMAIN,vd.l.qq.com,DIRECT
+DOMAIN,analytics.strava.com,DIRECT
