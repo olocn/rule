@@ -4,8 +4,6 @@
 .cdn-msp.msp-comic1.xyz
 .cdn-msp.18comic.org
 .zaobao.com
-# Youtube
-.youtubei.googleapis.com
 .yt3.ggpht.com
 .app-measurement.com
 .googlevideo.com
@@ -17,18 +15,15 @@
 .internetworld.cloud
 .polyfill.io
 .github.githubassets.com
-.notifications-pa.googleapis.com
-.growth-pa.googleapis.com
+.githubusercontent.com
 .googleusercontent.com
-.avatars.githubusercontent.com
+.googleapis.com
 .sub.arkdy.net
 .wikimedia.org
 .api.themoviedb.org
 .3zhgtu910.xyz
 .intercomcdn.com
 .www.nameless13.com
-.raw.githubusercontent.com
-.githubusercontent.com
 .api.turinglabs.net
 .home.6park.com
 .img.86uk.com
