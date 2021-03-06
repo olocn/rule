@@ -1,4 +1,5 @@
 .applecsb.crm.189.cn
+.digitalcertvalidation.com
 .time.apple.com
 .api.smoot.apple.com
 .static.ess.apple.com
