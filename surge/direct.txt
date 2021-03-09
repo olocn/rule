@@ -1,4 +1,8 @@
 # olo 
+.app.so
+.hitokoto.cn
+wannianrili.bmcx.com
+wannianrili.51240.com
 .sentry.io
 .staysorted.com
 .bspapp.com,DIRECT
