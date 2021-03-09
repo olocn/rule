@@ -1,4 +1,9 @@
 # olo 
+.sentry.io
+.staysorted.com
+.bspapp.com,DIRECT
+.jegotrip.com.cn
+.taiyulink.com
 .cdn.jsdelivr.net
 .qiyukf.com
 .chengxinyouxuan.com
