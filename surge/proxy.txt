@@ -1,4 +1,8 @@
 #olo
+.amplitude.com
+.bbci.co.uk
+.spotifycdn.com
+.yandex.com
 .agefans.net
 .cdn-msp.msp-comic.xyz
 .cdn-msp.msp-comic1.xyz
