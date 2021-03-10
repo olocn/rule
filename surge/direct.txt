@@ -1,4 +1,6 @@
 # olo 
+.ifconfig.me
+.leadnew.cn
 .app.so
 .hitokoto.cn
 wannianrili.bmcx.com
