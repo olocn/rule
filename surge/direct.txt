@@ -1,4 +1,6 @@
 # olo 
+.csdn.net
+.csdnimg.cn
 .cdn.bspapp.com
 .ifconfig.me
 .leadnew.cn
