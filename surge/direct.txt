@@ -1,4 +1,5 @@
 # olo 
+.weijuju.com
 .csdn.net
 .csdnimg.cn
 .cdn.bspapp.com
