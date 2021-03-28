@@ -1,0 +1,12 @@
+#!desc=什么值得买
+#!name=什么值得买
+
+[Header Rewrite
+^https:\/\/post\.m\.smzdm\.com url 307 https://post.smzdm.com
+"^https:\/\/post\.smzdm\.com\/ " header-replace User-Agent  "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36$2"
+
+[Script]
+什么值得买  = type=http-response,pattern=^https:\/\/post\.smzdm\.com\/,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/elecV2/QuantumultX-Tools/master/betterweb/smzdm.res.js,script-update-interval=0
+
+[MITM]
+hostname =  %APPEND% post.smzdm.com, post.m.smzdm.com
