@@ -1,14 +1,18 @@
 # olo 
-dayugslb.com
-alibabadns.com
+.sinopec.com
+.jspec.cn
+.qianxun.com
+.jcloudedge.com
+.mwcloudcdn.com
+.alibabadns.com
+.dayugslb.com
 clash.razord.top
-ccb.com
-ip.cn
-bestpay.com.cn
-bestpay.cn
-spdbccc.com.cn
-alibabadns.com
-Daliyunddos1026.com
+.ccb.com
+.ip.cn
+.bestpay.com.cn
+.bestpay.cn
+.spdbccc.com.cn
+.Daliyunddos1026.com
 .weijuju.com
 .csdn.net
 .csdnimg.cn
