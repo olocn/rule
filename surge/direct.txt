@@ -1,4 +1,6 @@
 # olo 
+.servicewechat.com
+cdn.jsdelivr.net
 .sinopec.com
 .jspec.cn
 .qianxun.com
