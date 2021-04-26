@@ -22,7 +22,9 @@ cvws.icloud-content.com
 .cdn-msp.msp-comic1.xyz
 .cdn-msp.18comic.org
 .zaobao.com
+.iphonecalculator.com
 .yt3.ggpht.com
+www.tucahuand.com
 .app-measurement.com
 .googlevideo.com
 .gvt2.com
