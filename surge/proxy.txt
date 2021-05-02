@@ -31,7 +31,6 @@ www.tucahuand.com
 .youtu.be
 .youtube.com
 .ytimg.com
-.youtube.com
 .internetworld.cloud
 .polyfill.io
 .github.githubassets.com
@@ -48,7 +47,6 @@ www.tucahuand.com
 .home.6park.com
 .img.86uk.com
 .smximg.com
-.img.86uk.com
 .p.4c4crt.com
 .img.shields.io
 .cool18.com
@@ -61,7 +59,6 @@ www.tucahuand.com
 .cloudflare-dns.com
 .dapenti.com
 .eachwks.com
-.googleapis.com
 .digitalcertvalidation.com
 .hwcdn.net
 .worldssl.net
@@ -80,7 +77,6 @@ www.tucahuand.com
 .amysecure.com
 .nxtlnodes.com
 .nintendo.co.jp
-.chartbeat.net
 .sessions.bugsnag.com
 .ark.to
 .office.com
@@ -137,7 +133,6 @@ www.tucahuand.com
 .kindle4rss.com
 .feedx.pw
 .feedx.co
-.readdle.com
 .feedbin.com
 .sehuatang.net
 .ft.com
@@ -149,10 +144,8 @@ www.tucahuand.com
 .enpass.io
 .arkdy.com
 .rsshub.app
-
 # > TestFlight
 .testflight.apple.com
-
 # > Spotify
 .pscdn.co
 .scdn.co
@@ -161,13 +154,11 @@ www.tucahuand.com
 .spotifycdn.net
 .scorecardresearch.com
 .branch.io
-
 # > Spark
 .api.amplitude.com
 .app.smartmailcloud.com
 .gate.hockeyapp.net
 .smartmailcloud.com
-
 # > Top blocked sites
 .2o7.net
 .4everProxy.com
@@ -209,8 +200,6 @@ www.tucahuand.com
 .apk-dl.com
 .apkpure.com
 .appdownloader.net
-.apple-dns.net
-.app-measurement.com
 .appshopper.com
 .arcgis.com
 .archive.is
@@ -321,7 +310,6 @@ www.tucahuand.com
 .extmatrix.com
 .eyny.com
 .fabric.io
-.fastly.net
 .fastmail.com
 .fc2.com
 .feedburner.com
@@ -709,7 +697,6 @@ www.tucahuand.com
 .wikileaks.info
 .wikileaks.org
 .wikileaks-forum.com
-.wikimedia.org
 .wikipedia.com
 .wikipedia.org
 .wn.com
@@ -743,14 +730,11 @@ www.tucahuand.com
 .yorkbbs.ca
 .youmaker.com
 .yourlisten.com
-.youtu.be
 .yoyo.org
-.ytimg.com
 .zacebook.com
 .zalmos.com
 .zeutch.com
 .zynamics.com
-
 # > Force some domains
 .appledaily.com
 .beetalk.com
@@ -797,7 +781,6 @@ www.tucahuand.com
 .nianticlabs.com
 .pinimg.com
 .pubnub.com
-.scdn.co
 .t.co
 .tensorflow.org
 .toggleable.com
