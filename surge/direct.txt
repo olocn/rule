@@ -114,7 +114,6 @@ wannianrili.51240.com
 .mi-img.com
 .alibabausercontent.com
 .95516.com
-.jingxi.com
 .alipaydns.com
 .unity3d.com
 .115.com
@@ -134,23 +133,18 @@ wannianrili.51240.com
 .wps.com
 .amazfit.com
 .jddebug.com
-
 # > Blizzard
 .cdp.cloud.unity3d.com
 .battle.net
 .battlenet.com
 .blizzard.com
-
 # > Prior
 .client.amplifi.com
 .ip.bjango.com
 .alphassl.com
-.edu.cn
-
 # > RRYS
 .p4pfile.com
 .zmzfile.com
-
 .12306.cn
 .12306.com
 .126.net
