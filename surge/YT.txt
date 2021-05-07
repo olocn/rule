@@ -8,6 +8,9 @@
 .playio1.com
 .addthis.com
 .addthisedge.com
+.cdn-msp.18comic.org
+.cdn-msp.msp-comic.xyz
+.cdn-msp.msp-comic1.xyz
 
 #TG
 .t.me
