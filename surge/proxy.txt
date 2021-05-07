@@ -2,6 +2,9 @@
 developer.apple.com
 .digicert.com
 .apple-dns.net
+.turinglabs.net
+.newsblur.com
+.konachan.net
 testflight.apple.com
 sandbox.itunes.apple.com
 itunes.apple.com
@@ -24,7 +27,7 @@ cvws.icloud-content.com
 .zaobao.com
 .iphonecalculator.com
 .yt3.ggpht.com
-www.tucahuand.com
+.tucahuand.com
 .app-measurement.com
 .googlevideo.com
 .gvt2.com
