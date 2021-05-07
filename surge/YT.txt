@@ -1,9 +1,11 @@
 #nojp
 
+.18comic.art
+.18comic1.one
 .18comic.vip
 .playno1.com
 .sexyno1.com
-.www.playio1.com
+.playio1.com
 .addthis.com
 .addthisedge.com
 
