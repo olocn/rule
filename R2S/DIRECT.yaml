@@ -9,6 +9,7 @@ payload:
   - DOMAIN,msg.umeng.com
   - DOMAIN,msg.umengcloud.com
   - DOMAIN-SUFFIX,xiaomi.net
+  - DOMAIN,pb.bi.gitv.tv
   - DOMAIN-SUFFIX,ap.spotify.com
   - DOMAIN-SUFFIX,acg.tv
   - DOMAIN-SUFFIX,acgvideo.com
