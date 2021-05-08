@@ -6,6 +6,10 @@ payload:
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,twitter
   - DOMAIN-SUFFIX,zaobao.com.sg
+ - DOMAIN-SUFFIX,akamaiedge.net
+  - DOMAIN,favicon.yandex.net
+ - DOMAIN-SUFFIX,wikimedia.org
+  - DOMAIN,s4.itho.me
   - DOMAIN,js.stripe.com
   - DOMAIN,cdn.reimu.net
   - DOMAIN,img.shields.io
