@@ -91,7 +91,3 @@ payload:
   - DOMAIN-SUFFIX,xboxlive.com
   - DOMAIN-SUFFIX,yammer.com
   - DOMAIN-SUFFIX,yammerusercontent.com
-  - DOMAIN-KEYWORD,1drv
-  - DOMAIN-KEYWORD,microsoft
-  - DOMAIN-KEYWORD,onedrive
-  - DOMAIN-KEYWORD,skydrive
