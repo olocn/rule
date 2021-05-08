@@ -10,6 +10,7 @@ payload:
   - DOMAIN,analytics.strava.com
   - DOMAIN,msg.umeng.com
   - DOMAIN,msg.umengcloud.com
+  - DOMAIN-SUFFIX,xiaomi.net
   - DOMAIN-SUFFIX,ap.spotify.com
   - DOMAIN-SUFFIX,acg.tv
   - DOMAIN-SUFFIX,acgvideo.com
