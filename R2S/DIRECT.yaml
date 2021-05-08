@@ -3,8 +3,6 @@ payload:
   - DOMAIN,log.mmstat.com
   - DOMAIN,sycm.mmstat.com
   - DOMAIN-SUFFIX,googletraveladservices.com
-  - DOMAIN,dl.google.com
-  - DOMAIN,mtalk.google.com
   - DOMAIN,livew.l.qq.com
   - DOMAIN,vd.l.qq.com
   - DOMAIN,analytics.strava.com
