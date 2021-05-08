@@ -5,6 +5,8 @@ payload:
   - DOMAIN-KEYWORD,gstatic
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,twitter
+  - DOMAIN-SUFFIX,zaobao.com.sg
+  - DOMAIN,js.stripe.com
   - DOMAIN,cdn.reimu.net
   - DOMAIN,img.shields.io
   - DOMAIN,docs.rsshub.app
