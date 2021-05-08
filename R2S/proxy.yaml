@@ -1,5 +1,10 @@
 payload:
   - DOMAIN-SUFFIX,yande.re
+  - DOMAIN-SUFFIX,konachan.net 
+  - DOMAIN-SUFFIX,tucahuand.com  
+  - DOMAIN-SUFFIX,netcdn.space 
+  - DOMAIN-SUFFIX,cloudflare.com  
+  - DOMAIN-SUFFIX,inoreader.com
   - DOMAIN-SUFFIX,byteoversea.com
   - DOMAIN-SUFFIX,ibytedtos.com
   - DOMAIN-SUFFIX,ipstatp.com
