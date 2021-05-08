@@ -5,6 +5,8 @@ payload:
   - DOMAIN-KEYWORD,gstatic
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,twitter
+  - DOMAIN,docs.rsshub.app
+  - DOMAIN-SUFFIX,rsshub.app
   - DOMAIN-SUFFIX,skynightmidm.com
   - DOMAIN-SUFFIX,tits-guru.com
   - DOMAIN-SUFFIX,pixiv.cat
