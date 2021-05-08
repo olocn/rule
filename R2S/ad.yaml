@@ -1,7 +1,36 @@
 payload:
-  - DOMAIN-SUFFIX,qhres.com
+  - IP-CIDR,117.135.145.168/32
+  - IP-CIDR,117.135.145.165/32
+  - IP-CIDR,117.135.145.167/32
+  - IP-CIDR,117.135.145.166/32	
+  - DOMAIN-SUFFIX,qhres.com	
+  - DOMAIN-SUFFIX,qihuapi.com	
+  - DOMAIN-SUFFIX,360totalsecurity.com	
+  - DOMAIN-SUFFIX,qihuapi.cn	
+  - DOMAIN-SUFFIX,qhtui.cn	
+  - DOMAIN-SUFFIX,ics-sec.com	
+  - DOMAIN-SUFFIX,qhtui.com	
+  - DOMAIN-SUFFIX,qhres2.com	
+  - DOMAIN-SUFFIX,nelab-bdst.org.cn	
+  - DOMAIN-SUFFIX,syscan360.org
+  - DOMAIN-SUFFIX,qihu.com
+  - DOMAIN-SUFFIX,qhres.com	
+  - DOMAIN-SUFFIX,360wzb.com	
+  - DOMAIN-SUFFIX,360gtm.com	
+  - DOMAIN-SUFFIX,qhimgs.com	   
+  - DOMAIN-SUFFIX,qhimg.com
+  - DOMAIN-SUFFIX,360adlab.com	
+  - DOMAIN-SUFFIX,yunpan.com	
+  - DOMAIN-SUFFIX,dhrest.com	
+  - DOMAIN-SUFFIX,360src.com	
+  - DOMAIN-SUFFIX,kouxin.com	
+  - DOMAIN-SUFFIX,3600.com
   - DOMAIN-SUFFIX,360.cn
+  - DOMAIN-SUFFIX,360.com
   - DOMAIN-SUFFIX,360cdn.cc
+  - DOMAIN-SUFFIX,securityinsight.com
+  - DOMAIN-SUFFIX,so.com
+  - DOMAIN-SUFFIX,360sou.com
   - DOMAIN-SUFFIX,51.la
   - DOMAIN-SUFFIX,71360.com
   - DOMAIN-SUFFIX,ad7.com
