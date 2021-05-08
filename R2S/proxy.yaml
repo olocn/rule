@@ -5,6 +5,11 @@ payload:
   - DOMAIN-KEYWORD,gstatic
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,twitter
+  - DOMAIN-SUFFIX,skynightmidm.com
+  - DOMAIN-SUFFIX,tits-guru.com
+  - DOMAIN-SUFFIX,pixiv.cat
+  - DOMAIN-SUFFIX,rdimg.com
+  - DOMAIN-SUFFIX,trankynam.com
   - DOMAIN-SUFFIX,yande.re
   - DOMAIN-SUFFIX,konachan.com
   - DOMAIN-SUFFIX,konachan.net 
