@@ -5,6 +5,8 @@ payload:
   - DOMAIN-KEYWORD,gstatic
   - DOMAIN-KEYWORD,facebook
   - DOMAIN-KEYWORD,twitter
+  - DOMAIN,image.tmdb.org
+  - DOMAIN-SUFFIX,themoviedb.org
   - DOMAIN-SUFFIX,zaobao.com.sg
   - DOMAIN-SUFFIX,akamaiedge.net
   - DOMAIN,favicon.yandex.net
