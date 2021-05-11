@@ -9,6 +9,7 @@ payload:
   - DOMAIN-SUFFIX,akamaiedge.net
   - DOMAIN,favicon.yandex.net
   - DOMAIN-SUFFIX,wikimedia.org
+  - DOMAIN,download.qnap.com
   - DOMAIN,s4.itho.me
   - DOMAIN,js.stripe.com
   - DOMAIN,cdn.reimu.net
