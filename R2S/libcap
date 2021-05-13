@@ -16,12 +16,12 @@ arch aarch64_cortex-a53 300
 2) vim /etc/opkg/distfeeds.conf
 将/etc/opkg/distfeeds.conf的内容修改为以下内容：
 
-src/gz openwrt_19.07_base https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/
-src/gz openwrt_19.07_freifunk https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/freifunk/
-src/gz openwrt_19.07_luci https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/luci/
-src/gz openwrt_19.07_packages https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/packages/
-src/gz openwrt_19.07_routing https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/routing/
-src/gz openwrt_19.07_telephony https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/telephony/
+src/gz openwrt_19.07_base https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/
+src/gz openwrt_19.07_freifunk https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base/freifunk/
+src/gz openwrt_19.07_luci https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base/luci/
+src/gz openwrt_19.07_packages https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base/packages/
+src/gz openwrt_19.07_routing https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base/routing/
+src/gz openwrt_19.07_telephony https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/base/telephony/
 
 
 https://openwrt.proxy.ustclug.org/snapshots/packages/aarch64_cortex-a53/
