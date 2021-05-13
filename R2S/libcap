@@ -1,0 +1,24 @@
+2、OPKG相关
+本机架构为：aarch64_cortex-a53_neon-vfpv4
+
+1) vim /etc/opkg.conf
+将/etc/opkg.conf的内容修改为以下内容：
+
+dest root /
+dest ram /tmp
+lists_dir ext /var/opkg-lists
+option overlay_root /overlay
+#option check_signature
+arch all 100
+arch aarch64_cortex-a53_neon-vfpv4 200
+arch aarch64_cortex-a53 300
+
+2) vim /etc/opkg/distfeeds.conf
+将/etc/opkg/distfeeds.conf的内容修改为以下内容：
+
+src/gz openwrt_19.07_base https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/
+src/gz openwrt_19.07_freifunk https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/freifunk/
+src/gz openwrt_19.07_luci https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/luci/
+src/gz openwrt_19.07_packages https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/packages/
+src/gz openwrt_19.07_routing https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/routing/
+src/gz openwrt_19.07_telephony https://downloads.openwrt.org/releases/19.07-SNAPSHOT/packages/aarch64_cortex-a53/telephony/
