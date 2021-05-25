@@ -1,5 +1,4 @@
 # olo 
-app.plex.tv
 .appsflyer.com
 .plex.direct
 .plex.tv
