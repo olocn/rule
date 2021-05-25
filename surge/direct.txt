@@ -1,4 +1,7 @@
 # olo 
+.appsflyer.com
+.plex.direct
+.plex.tv
 .servicewechat.com
 cdn.jsdelivr.net
 .sinopec.com
@@ -102,7 +105,6 @@ wannianrili.51240.com
 .geekpark.net
 .jdlingyu.net
 .jdlingyu.com
-
 .alicloudwaf.com
 .aliyundunwaf.com
 .dmall.com
@@ -133,16 +135,13 @@ wannianrili.51240.com
 .wps.com
 .amazfit.com
 .jddebug.com
-# > Blizzard
 .cdp.cloud.unity3d.com
 .battle.net
 .battlenet.com
 .blizzard.com
-# > Prior
 .client.amplifi.com
 .ip.bjango.com
 .alphassl.com
-# > RRYS
 .p4pfile.com
 .zmzfile.com
 .12306.cn
