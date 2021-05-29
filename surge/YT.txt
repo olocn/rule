@@ -1,5 +1,5 @@
 #nojp
-
+.vol.moe
 .18comic.art
 .18comic1.one
 .18comic.vip
@@ -8,9 +8,9 @@
 .playio1.com
 .addthis.com
 .addthisedge.com
-.cdn-msp.18comic.org
-.cdn-msp.msp-comic.xyz
-.cdn-msp.msp-comic1.xyz
+cdn-msp.18comic.org
+cdn-msp.msp-comic.xyz
+cdn-msp.msp-comic1.xyz
 
 #TG
 .t.me
