@@ -1,4 +1,5 @@
 .51.la
+analytics.plex.tv
 .71360.com
 .ad7.com
 .alookbrowser.com
