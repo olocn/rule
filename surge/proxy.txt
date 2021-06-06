@@ -1,4 +1,5 @@
 #olo
+.akamaiedge.net
 .1e100.net
 .2mdn.net
 .2o7.net
