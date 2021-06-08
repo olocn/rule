@@ -275,6 +275,7 @@ DOMAIN-SUFFIX,goo.gl,PROXY
 DOMAIN-SUFFIX,goodreaders.com,PROXY
 DOMAIN-SUFFIX,goodreads.com,PROXY
 DOMAIN-SUFFIX,google.com,PROXY
+DOMAIN-SUFFIX,google.com.sg,PROXY
 DOMAIN-SUFFIX,google.com.tw,PROXY
 DOMAIN-SUFFIX,googleapis.com,PROXY
 DOMAIN-SUFFIX,googleusercontent.com,PROXY
@@ -497,6 +498,7 @@ DOMAIN-SUFFIX,qualaroo.com,PROXY
 DOMAIN-SUFFIX,quora.com,PROXY
 DOMAIN-SUFFIX,quoracdn.net,PROXY
 DOMAIN-SUFFIX,rakuen.thec.me,PROXY
+DOMAIN-SUFFIX,rarbg.to,PROXY
 DOMAIN-SUFFIX,readdle.com,PROXY
 DOMAIN-SUFFIX,readingtimes.com.tw,PROXY
 DOMAIN-SUFFIX,readmoo.com,PROXY
