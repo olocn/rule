@@ -1,4 +1,5 @@
 # olo 
+.wps.cn
 .ngaa.net.cn
 .appsflyer.com
 .plex.direct
