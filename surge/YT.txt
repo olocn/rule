@@ -19,3 +19,7 @@ cdn-msp.msp-comic1.xyz
 .telegra.ph
 .telegram.me
 .telegram.org
+104.20.9.218/32
+91.108.0.0/16
+109.239.140.0/24
+149.154.160.0/20
