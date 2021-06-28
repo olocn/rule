@@ -1,3 +1,6 @@
+.qhres.com
+.qhimg.com
+.360in.com
 .51.la
 track1.aniview.com
 token.safebrowsing.apple
