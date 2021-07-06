@@ -4,6 +4,14 @@
 .1e100.net
 .2mdn.net
 .2o7.net
+.pscp.tv
+.periscope.tv
+.t.co
+.twimg.co
+.twimg.com
+.twitpic.com
+.twitter.com
+.vine.co
 .3zhgtu910.xyz
 .4everProxy.com
 .4ghhff.info
@@ -12,6 +20,9 @@
 .51awe.info
 .98rewer.me
 .9to5mac.com
+.pixiv.net
+.pixiv.org
+.pximg.net
 .aadcdn.msftauth.net
 .abc.xyz
 .abpchina.org
@@ -464,7 +475,6 @@
 .parse.com
 .pdfexpert.com
 .perfops.io
-.periscope.tv
 .piaotian.net
 .picacomic.com
 .picasaweb.com
@@ -474,7 +484,6 @@
 .pinterest.com
 .pixelmator.com
 .pixiv.cat
-.pixiv.net
 .pixnet.net
 .playpcesor.com
 .pokemon.com
@@ -494,7 +503,6 @@
 .puffinbrowser.com
 .pushbullet.com
 .pushwoosh.com
-.pximg.net
 .qualaroo.com
 .quora.com
 .quoracdn.net
@@ -582,7 +590,6 @@
 .symauth.com
 .symcb.com
 .symcd.com
-.t.co
 .t66y.com
 .tablesgenerator.com
 .tabtter.jp
@@ -643,11 +650,7 @@
 .tv.com
 .tweetdeck.com
 .tweetmarker.net
-.twimg.co
-.twimg.com
 .twitch.tv
-.twitpic.com
-.twitter.com
 .twitthat.com
 .twtkr.com
 .twttr.com
@@ -701,7 +704,6 @@
 .vimeo.com
 .vimeocdn.com
 .vimperator.org
-.vine.co
 .visibletweets.com
 .viu.com
 .vivaldi.com
