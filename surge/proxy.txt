@@ -1,4 +1,7 @@
 #olo
+.masiro.me
+.masiro.moe
+.nextdns.io
 .oxygenplaza.net
 .akamaiedge.net
 .1e100.net
