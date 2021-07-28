@@ -275,7 +275,7 @@
 .git.io
 .gitbook.com
 .github.com
-.github.githubassets.com
+.githubassets.com
 .githubusercontent.com
 .globalsign.com
 .gmail.com
@@ -292,6 +292,7 @@
 .goodreads.com
 .google.com
 .google.com.tw
+.google.com.sg
 .googleapis.com
 .googleusercontent.com
 .googlevideo.com
@@ -359,7 +360,6 @@
 .javcdn.pw
 .jp.netcdn.space
 .js.revsci.net
-.jsdelivr.net
 .jshint.com
 .jtvnw.net
 .justgetflux.com
