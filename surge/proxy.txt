@@ -65,7 +65,7 @@ DOMAIN-SUFFIX,gvt3.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,.blogspot.
+DOMAIN-KEYWORD,.blogspot.,PROXY
 # > Line
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,line-apps.com
@@ -539,6 +539,7 @@ DOMAIN-SUFFIX,ifixit.com
 DOMAIN-SUFFIX,mangakakalot.com
 DOMAIN-SUFFIX,shopeemobile.com
 DOMAIN-SUFFIX,sushi.com
+
 
 # (Network Jitter)
 # > Apple
