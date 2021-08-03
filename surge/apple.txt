@@ -1,10 +1,10 @@
 DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX.co
-DOMAIN-SUFFIX.com
-DOMAIN-KEYWORD.com.akadns.net
+DOMAIN-SUFFIX,apple.co
+DOMAIN-SUFFIX,apple.com
+DOMAIN-KEYWORD,apple.com.akadns.net
 DOMAIN-KEYWORD,icloud.com.akadns.net
-DOMAIN-SUFFIX.com.cn
-DOMAIN-SUFFIX-cloudkit.com
+DOMAIN-SUFFIX,apple.com.cn
+DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud.com.cn
