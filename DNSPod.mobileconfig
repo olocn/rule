@@ -13,7 +13,7 @@
 				<array>
 					<string>1.12.34.56 </string>
 				</array>
-				<key>ServerURL</key>
+				<key>ServerName</key>
 				<string>dot-gcp2yife.dot.pub</string>
 			</dict>
 			<key>PayloadDescription</key>
