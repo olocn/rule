@@ -11,10 +11,10 @@
 				<string>TLS</string>
 				<key>ServerAddresses</key>
 				<array>
-					<string>162.14.21.56</string>
+					<string>1.12.34.56</string>
 				</array>
 				<key>ServerName</key>
-				<string>dot.pub</string>
+				<string>dot-gcp2yife.dot.pub</string>
 			</dict>
 			<key>PayloadDescription</key>
 			<string>Configures device to use DNSPod Encrypted DNS over TLS</string>
