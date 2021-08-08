@@ -1,48 +1,44 @@
-DOMAIN,time.apple.com
-DOMAIN-SUFFIX,olocn.fun
-DOMAIN,stun.services.mozilla.com
+# olo
+time.apple.com
+.olocn.fun
+stun.services.mozilla.com
 
-DOMAIN-SUFFIX,ocsp.identrust.com
 # Unbreak
 # > General
-USER-AGENT,archero*
-USER-AGENT,coffeecorp*
-USER-AGENT,Coffee%20Corp*
-USER-AGENT,restaurant-mobile*
-DOMAIN,app.adjust.com
-DOMAIN,bdtj.tagtic.cn
+app.adjust.com
+bdtj.tagtic.cn
 # > Alibaba
-DOMAIN,log.mmstat.com
-DOMAIN,sycm.mmstat.com
+log.mmstat.com
+sycm.mmstat.com
 # > Google
-DOMAIN-SUFFIX,blog.google
-DOMAIN-SUFFIX,googletraveladservices.com
-DOMAIN,clientservices.googleapis.com
-DOMAIN,dl.google.com
-DOMAIN,dl.l.google.com
-DOMAIN,update.googleapis.com
-DOMAIN,translate.googleapis.com
+.blog.google
+.googletraveladservices.com
+clientservices.googleapis.com
+dl.google.com
+dl.l.google.com
+update.googleapis.com
+translate.googleapis.com
 # >> Google Fonts API
-DOMAIN,fonts.googleapis.com
-DOMAIN,fonts.gstatic.com
+fonts.googleapis.com
+fonts.gstatic.com
 # >> Firebase Cloud Messaging
-DOMAIN,mtalk.google.com
-DOMAIN,alt1-mtalk.google.com
-DOMAIN,alt2-mtalk.google.com
-DOMAIN,alt3-mtalk.google.com
-DOMAIN,alt4-mtalk.google.com
-DOMAIN,alt5-mtalk.google.com
-DOMAIN,alt6-mtalk.google.com
-DOMAIN,alt7-mtalk.google.com
-DOMAIN,alt8-mtalk.google.com
+mtalk.google.com
+alt1-mtalk.google.com
+alt2-mtalk.google.com
+alt3-mtalk.google.com
+alt4-mtalk.google.com
+alt5-mtalk.google.com
+alt6-mtalk.google.com
+alt7-mtalk.google.com
+alt8-mtalk.google.com
 # >> Paramount+
-DOMAIN,pubads.g.doubleclick.net
+pubads.g.doubleclick.net
 # > Tencent
-DOMAIN,fairplay.l.qq.com
-DOMAIN,livew.l.qq.com
-DOMAIN,vd.l.qq.com
+fairplay.l.qq.com
+livew.l.qq.com
+vd.l.qq.com
 # > Strava
-DOMAIN,analytics.strava.com
+analytics.strava.com
 # > Umeng
-DOMAIN,msg.umeng.com
-DOMAIN,msg.umengcloud.com
+msg.umeng.com
+msg.umengcloud.com
