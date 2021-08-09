@@ -1,6 +1,7 @@
 # olo 
 .plex.direct
 .plex.tv
+.cn.engadget.com
 
 # > Alibaba
 .alibaba.com
