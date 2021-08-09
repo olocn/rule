@@ -1,6 +1,8 @@
 #olo
 .oxygenplaza.net
-
+.googleapis.com
+.githubassets.com
+.googleusercontent.com
 # (DNS Cache Pollution)
 # > Amazon
 .amazon.co.jp
