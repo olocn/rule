@@ -1,4 +1,5 @@
 #olo
+.google.com
 .oxygenplaza.net
 .googleapis.com
 .githubassets.com
