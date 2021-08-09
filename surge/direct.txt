@@ -1,4 +1,6 @@
 # olo 
+
+.bspapp.com
 .plex.direct
 .plex.tv
 .cn.engadget.com
