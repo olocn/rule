@@ -1,5 +1,7 @@
 #olo
 
+.ggpht.com
+.googlevideo.com
 .ampproject.org
 .gstatic.com
 .google.com.sg
