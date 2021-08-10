@@ -1,5 +1,7 @@
 #olo
 
+.ampproject.org
+.gstatic.com
 .google.com.sg
 .google.com
 .oxygenplaza.net
