@@ -4,7 +4,7 @@
 .plex.direct
 .plex.tv
 .cn.engadget.com
-
+.ifanr.com
 # > Alibaba
 .alibaba.com
 .alibabausercontent.com
