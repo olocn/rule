@@ -1,5 +1,6 @@
 #olo
-
+feeds.feedburner.com
+feedmaker.kindle4rss.com
 .ggpht.com
 .gvt2.com
 .ggpht.com
