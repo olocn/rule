@@ -1,5 +1,6 @@
 #olo
 
+.anti-ad.net
 .microsoft.com
 .onedrive.com
 feeds.feedburner.com
