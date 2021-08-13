@@ -2,7 +2,7 @@
 time.apple.com
 .olocn.fun
 stun.services.mozilla.com
-
+sessions.bugsnag.com
 # Unbreak
 # > General
 app.adjust.com
