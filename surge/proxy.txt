@@ -1,9 +1,7 @@
 #olo
-
-ocsp.sectigo.com
-.blogspot.com
-.yande.re
 .pixiv.cat
+ocsp.sectigo.com
+.bbc.co.uk
 .tits-guru.com
 .microsoftonline.com
 .anti-ad.net
