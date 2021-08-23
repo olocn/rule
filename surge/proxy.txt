@@ -1,5 +1,6 @@
 #olo
 
+ocsp.sectigo.com
 .blogspot.com
 .yande.re
 .pixiv.cat
