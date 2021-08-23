@@ -7,6 +7,10 @@
 .playno1.com
 .sexyno1.com
 .playio1.com
+.blogspot.com
+.yande.re
+.tucahuand.com
+.dmm.co.jp
 
 #TG
 .t.me
