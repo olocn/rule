@@ -1,4 +1,6 @@
 # olo 
+
+.amazonaws.com.cn
 rssdiy.com
 .huami.com
 .bspapp.com
