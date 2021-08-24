@@ -1,6 +1,7 @@
 .qhres.com
 .qhimg.com
 .360in.com
+.bugsnag.com
 .sensorsdata.cn
 .51.la
 tracking.intl.miui.com
