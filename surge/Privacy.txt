@@ -2,6 +2,7 @@
 .qhimg.com
 .360in.com
 .51.la
+tracking.intl.miui.com
 track1.aniview.com
 token.safebrowsing.apple
 tracker.ai.xiaomi.com
@@ -26,11 +27,8 @@ analytics.plex.tv
 .l.qq.com
 .log.byteoversea.com
 .log.tiktokv.com
-.log.umeng.com
 .log-hl-ipv6.snssdk.com
 .log-lq.snssdk.com
-.logs.umeng.com
-.logs.umengcloud.com
 .log-va.tiktokv.com
 .miaozhen.com
 .mob.com
@@ -44,7 +42,6 @@ analytics.plex.tv
 .umeng.com
 .umengcloud.com
 .union.youdao.com
-.wc.51.la
 .www.qchannel01.cn
 .xlog.snssdk.com
 .zgsdk.zhugeio.com
