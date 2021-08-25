@@ -1,38 +1,45 @@
 #olo
-.pixiv.cat
-ocsp.sectigo.com
+.javbus.com
+.javlibrary.com
+.mozilla.org
+.btdig.com
+.pianyuan.org
 .bbc.co.uk
 .tits-guru.com
-.microsoftonline.com
 .anti-ad.net
-.microsoft.com
-.onedrive.com
 feeds.feedburner.com
 feedmaker.kindle4rss.com
-.ggpht.com
-.gvt2.com
-.ggpht.com
-.googlevideo.com
-.ampproject.org
-.gstatic.com
-.google.com.sg
-.google.com
 .oxygenplaza.net
-.googleapis.com
-.githubassets.com
-.googleusercontent.com
-# (DNS Cache Pollution)
+
 # > Amazon
 .amazon.co.jp
 d3c33hcgiwev3.cloudfront.net
 payments-jp.amazon.com
 s3-ap-northeast-1.amazonaws.com
 s3-ap-southeast-2.amazonaws.com
+
+# > Apple
+.cdn-apple.com
+.testflight.apple.com
+.appleid.apple.com
+.developer.apple.com
+.icloud.com
+.ocsp.apple.com
+.xp.apple.com
+.appsto.re
+.itunes.apple.com
+api-glb-sea.smoot.apple.com
+.music.apple.com
+.tv.apple.com
+.apps.apple.com
+.itunes.apple.com
+.smoot.apple.com
+.lookup-api.apple.com
+
 # > Akamai
 a248.e.akamai.net
 a771.dscq.akamai.net
-# > Apple
-testflight.apple.com
+
 # > Crypto
 .aex.com
 .bibox.com
@@ -46,14 +53,17 @@ testflight.apple.com
 .okex.com
 .uniswap.org
 .zb.com
+
 # > Discord
 .discord.com
 .discordapp.com
 .discordapp.net
+
 # > Dropbox
 .dropbox.com
 .dropboxapi.com
 .dropboxusercontent.com
+
 # > Facebook
 .cdninstagram.com
 .facebook.com
@@ -72,37 +82,54 @@ testflight.apple.com
 .rocksdb.org
 .whatsapp.com
 .whatsapp.net
+
 # > Github
 .github.com
 .github.io
+.githubassets.com
 .githubusercontent.com
+
 # > Google
 .appspot.com
 .blogger.com
 .getoutline.org
 .gvt0.com
+.gvt2.com
 .gvt3.com
 .xn--ngstr-lra8j.com
 .ytimg.com
-DOMAIN-KEYWORD,google
-DOMAIN-KEYWORD,.blogspot.,PROXY
-# > Line
-.line.me
-.line-apps.com
-.line-scdn.net
-.naver.jp
-IP-CIDR,103.2.30.0/23
-IP-CIDR,125.209.208.0/20
-IP-CIDR,147.92.128.0/17
-IP-CIDR,203.104.144.0/21
+.youtube.com
+.googleusercontent.com
+.google.com.tw
+.csp.withgoogle.com
+.gstatic.com
+.ggpht.com
+.googlevideo.com
+.ampproject.org
+.google.com.sg
+.google.com
+.googleapis.com
+.githubassets.com
+.googleusercontent.com
+.blogspot.com
+
 # > Microsoft
+.microsoftonline.com
+.microsoft.com
+.onedrive.com
 .aka.ms
-.onedrive.live.com
+.live.com
+.skype.com
+.office.com
+.msftauth.net
+.akamaihd.net
+.office.net
+.office365.com
 .streaming.mediaservices.windows.net
-assets1.xboxlive.com
-assets2.xboxlive.com
+.xboxlive.com
 az416426.vo.msecnd.net
 az668014.vo.msecnd.net
+
 # > The New York Times
 .nyt.com
 .nytchina.com
@@ -121,15 +148,20 @@ az668014.vo.msecnd.net
 .pinterest.fr
 .pinterest.jp
 .pinterest.se
+
 # > pixiv
+.pixiv.cat
 .pixiv.net
 .pixiv.org
 .pximg.net
+
 # > Reddit
 .redd.it
 .reddit.com
 .redditmedia.com
+
 # > Twitter
+.twitter.jp
 .pscp.tv
 .periscope.tv
 .t.co
@@ -138,13 +170,15 @@ az668014.vo.msecnd.net
 .twitpic.com
 .twitter.com
 .vine.co
-# > Wikimedia Foundation
+
+# > Wikimedia
 .wikileaks.org
 .wikimapia.org
 .wikimedia.org
 .wikinews.org
 .wikipedia.org
 .wikiquote.org
+
 # > Others
 .4shared.com
 .9cache.com
@@ -488,23 +522,6 @@ us.weibo.com
 .noxinfluencer.com
 .smartmailcloud.com
 .weebly.com
-.twitter.jp
-
-# (Region-Restricted Access Denied)
-# ---(Apple)---
-.appsto.re
-books.itunes.apple.com
-api-glb-sea.smoot.apple.com
-beta.music.apple.com
-tv.apple.com
-# > App Store Web Preview
-apps.apple.com
-itunes.apple.com
-# > Look Up
-.smoot.apple.com
-lookup-api.apple.com
-# ------
-# > Others
 .bing.com
 .cccat.io
 .dubox.com
@@ -514,19 +531,12 @@ lookup-api.apple.com
 .shopeemobile.com
 .sushi.com
 
-
-# (Network Jitter)
-# > Apple
-appleid.apple.com
-developer.apple.com
-www.icloud.com
-ocsp.apple.com
-xp.apple.com
 # > DigiCert
 cacerts.digicert.com
 crl3.digicert.com
 crl4.digicert.com
 ocsp.digicert.com
+ocsp.sectigo.com
 # > Others
 .cloudcone.com.cn
 .inkbunny.net
