@@ -1,4 +1,6 @@
 #olo
+
+.v2ex.co
 .javbus.com
 .javlibrary.com
 .mozilla.org
