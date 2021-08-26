@@ -2,6 +2,8 @@
 .qhimg.com
 .360in.com
 .bugsnag.com
+.trackingio.com
+.getui.com
 .sensorsdata.cn
 .51.la
 tracking.intl.miui.com
