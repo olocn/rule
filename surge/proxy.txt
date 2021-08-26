@@ -1,5 +1,6 @@
 #olo
 
+.konachan.com
 .v2ex.co
 .javbus.com
 .javlibrary.com
