@@ -3,6 +3,7 @@
 .360in.com
 .bugsnag.com
 .trackingio.com
+.gepush.com
 .getui.com
 .sensorsdata.cn
 .51.la
