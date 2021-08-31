@@ -1,4 +1,6 @@
 #olo
+
+.nzagda.xyz
 .enpass.io
 .pterclub.com
 .konachan.com
