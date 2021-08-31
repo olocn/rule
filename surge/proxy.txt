@@ -1,4 +1,5 @@
 #olo
+.enpass.io
 .pterclub.com
 .konachan.com
 .v2ex.co
