@@ -1,5 +1,6 @@
 #olo
 
+.pthome.net
 .nzagda.xyz
 .enpass.io
 .pterclub.com
