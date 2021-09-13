@@ -1,5 +1,6 @@
 # olo 
 
+.aliapp.org
 .95516.com
 .amazonaws.com.cn
 rssdiy.com
