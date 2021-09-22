@@ -1,4 +1,6 @@
 #olo
+
+.cnzz.com
 sentry.io
 tracklog.jd.com
 .appsflyer.com
