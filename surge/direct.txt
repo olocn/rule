@@ -28,17 +28,6 @@ rssdiy.com
 .youku.com
 .xiami.com
 .xiami.net
-# > Apple
-.aaplimg.com
-.apple.co
-.apple.com
-.apple-cloudkit.com
-.appstore.com
-.cdn-apple.com
-.icloud.com
-.icloud-content.com
-.me.com
-.mzstatic.com
 
 # > Baidu
 .baidu.com
@@ -109,10 +98,6 @@ rssdiy.com
 .xiaomi.net
 # > Microsoft
 .visualstudio.com
-.hotmail.com
-.outlook.com
-outlook.office365.com
-smtp.office365.com
 # >> Windows Server Update Services
 .windowsupdate.microsoft.com
 .update.microsoft.com
@@ -130,7 +115,6 @@ ntservicepack.microsoft.com
 .netease.com
 .ydstatic.com
 # > PayPal
-USER-AGENT,PayPal*
 .paypal.com
 .paypal.me
 .paypalobjects.com
