@@ -1,5 +1,6 @@
 #olo
 
+.sentry.io
 .cnzz.com
 sentry.io
 tracklog.jd.com
