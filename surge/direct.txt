@@ -29,6 +29,12 @@ rssdiy.com
 .xiami.com
 .xiami.net
 
+# apple
+.apple.com.akadns.net
+.icloud.com.akadns.net
+.apple.com.cn
+.icloud.com.cn
+
 # > Baidu
 .baidu.com
 .baidubcr.com
