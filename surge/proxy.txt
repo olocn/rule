@@ -1,5 +1,7 @@
 #olo
 
+.sehuatang.net
+.rysuanaaser.com
 .pthome.net
 .nzagda.xyz
 .enpass.io
