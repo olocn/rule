@@ -1,5 +1,6 @@
 #olo
 
+.plex.tv
 .sehuatang.net
 .rysuanaaser.com
 .pthome.net
