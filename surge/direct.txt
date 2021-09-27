@@ -1,4 +1,8 @@
 # olo 
+
+.189.cn
+.bestpay.cn
+.sgcc.com.cn
 .spdbccc.com.cn
 .jspec.cn
 .aliapp.org
