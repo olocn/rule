@@ -1,10 +1,9 @@
 # olo
-
+pubsub.plex.tv
 gspe19-cn-ssl.ls.apple.com
 time.apple.com
 .olocn.fun
 stun.services.mozilla.com
-sessions.bugsnag.com
 # Unbreak
 # > General
 app.adjust.com
