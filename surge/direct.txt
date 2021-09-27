@@ -12,7 +12,6 @@ rssdiy.com
 .huami.com
 .bspapp.com
 .plex.direct
-.plex.tv
 .cn.engadget.com
 .ifanr.com
 # > Alibaba
