@@ -1,5 +1,6 @@
 #olo
 
+.adtidy.org
 .plex.tv
 .sehuatang.net
 .rysuanaaser.com
