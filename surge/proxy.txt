@@ -1,7 +1,6 @@
 #olo
 
 .firecore.com
-.github.io
 .adtidy.org
 .plex.tv
 .sehuatang.net
@@ -61,8 +60,7 @@ api-glb-sea.smoot.apple.com
 .lookup-api.apple.com
 
 # > Akamai
-a248.e.akamai.net
-a771.dscq.akamai.net
+.akamai.net
 
 # > Crypto
 .aex.com
@@ -108,8 +106,8 @@ a771.dscq.akamai.net
 .whatsapp.net
 
 # > Github
-.github.com
 .github.io
+.github.com
 .githubassets.com
 .githubusercontent.com
 
@@ -151,7 +149,6 @@ a771.dscq.akamai.net
 .office365.com
 .hotmail.com
 .outlook.com
-
 .streaming.mediaservices.windows.net
 .xboxlive.com
 az416426.vo.msecnd.net
