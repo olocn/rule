@@ -1,5 +1,6 @@
 #olo
 
+.github.io
 .adtidy.org
 .plex.tv
 .sehuatang.net
