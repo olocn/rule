@@ -38,7 +38,6 @@ rssdiy.com
 .icloud.com.akadns.net
 .apple.com.cn
 .icloud.com.cn
-
 # > Baidu
 .baidu.com
 .baidubcr.com
@@ -240,7 +239,6 @@ speedtest.macpaw.com
 .cailianpress.com
 .camera360.com
 .chaoxing.com
-.chaoxing.com
 .chinaso.com
 .chuimg.com
 .chunyu.mobi
@@ -340,6 +338,5 @@ speedtest.macpaw.com
 .zhihuishu.com
 .zhimg.com
 .zhuihd.com
-
 download.jetbrains.com
 images-cn.ssl-images-amazon.com
