@@ -1,5 +1,4 @@
 #olo
-
 .firecore.com
 .adtidy.org
 .plex.tv
@@ -22,16 +21,12 @@
 feeds.feedburner.com
 feedmaker.kindle4rss.com
 .oxygenplaza.net
-
 # > Amazon
 .amazon.co.jp
 d3c33hcgiwev3.cloudfront.net
 payments-jp.amazon.com
 s3-ap-northeast-1.amazonaws.com
 s3-ap-southeast-2.amazonaws.com
-
-# > Apple
-
 # > Apple
 .aaplimg.com
 .apple.co
@@ -42,7 +37,6 @@ s3-ap-southeast-2.amazonaws.com
 .icloud-content.com
 .me.com
 .mzstatic.com
-.cdn-apple.com
 .testflight.apple.com
 .appleid.apple.com
 .developer.apple.com
@@ -55,13 +49,10 @@ api-glb-sea.smoot.apple.com
 .music.apple.com
 .tv.apple.com
 .apps.apple.com
-.itunes.apple.com
 .smoot.apple.com
 .lookup-api.apple.com
-
 # > Akamai
 .akamai.net
-
 # > Crypto
 .aex.com
 .bibox.com
@@ -75,17 +66,14 @@ api-glb-sea.smoot.apple.com
 .okex.com
 .uniswap.org
 .zb.com
-
 # > Discord
 .discord.com
 .discordapp.com
 .discordapp.net
-
 # > Dropbox
 .dropbox.com
 .dropboxapi.com
 .dropboxusercontent.com
-
 # > Facebook
 .cdninstagram.com
 .facebook.com
@@ -104,13 +92,11 @@ api-glb-sea.smoot.apple.com
 .rocksdb.org
 .whatsapp.com
 .whatsapp.net
-
 # > Github
 .github.io
 .github.com
 .githubassets.com
 .githubusercontent.com
-
 # > Google
 .appspot.com
 .blogger.com
@@ -131,10 +117,7 @@ api-glb-sea.smoot.apple.com
 .google.com.sg
 .google.com
 .googleapis.com
-.githubassets.com
-.googleusercontent.com
 .blogspot.com
-
 # > Microsoft
 .microsoftonline.com
 .microsoft.com
@@ -153,7 +136,6 @@ api-glb-sea.smoot.apple.com
 .xboxlive.com
 az416426.vo.msecnd.net
 az668014.vo.msecnd.net
-
 # > The New York Times
 .nyt.com
 .nytchina.com
@@ -172,18 +154,15 @@ az668014.vo.msecnd.net
 .pinterest.fr
 .pinterest.jp
 .pinterest.se
-
 # > pixiv
 .pixiv.cat
 .pixiv.net
 .pixiv.org
 .pximg.net
-
 # > Reddit
 .redd.it
 .reddit.com
 .redditmedia.com
-
 # > Twitter
 .twitter.jp
 .pscp.tv
@@ -194,7 +173,6 @@ az668014.vo.msecnd.net
 .twitpic.com
 .twitter.com
 .vine.co
-
 # > Wikimedia
 .wikileaks.org
 .wikimapia.org
@@ -202,7 +180,6 @@ az668014.vo.msecnd.net
 .wikinews.org
 .wikipedia.org
 .wikiquote.org
-
 # > Others
 .4shared.com
 .9cache.com
@@ -533,16 +510,12 @@ az668014.vo.msecnd.net
 .zeronet.io
 .z-lib.org
 .zoom.us
-
 cc.tvbs.com.tw
 ocsp.int-x3.letsencrypt.org
 us.weibo.com
-
 .edu
 .gov
 .mil
-
-# > Others
 .noxinfluencer.com
 .smartmailcloud.com
 .weebly.com
@@ -554,14 +527,12 @@ us.weibo.com
 .mangakakalot.com
 .shopeemobile.com
 .sushi.com
-
 # > DigiCert
 cacerts.digicert.com
 crl3.digicert.com
 crl4.digicert.com
 ocsp.digicert.com
 ocsp.sectigo.com
-# > Others
 .cloudcone.com.cn
 .inkbunny.net
 .metapix.net
