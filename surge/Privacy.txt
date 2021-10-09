@@ -1,4 +1,6 @@
 #olo
+
+.revenuecat.com
 .jpush.cn
 .sentry.io
 .cnzz.com
