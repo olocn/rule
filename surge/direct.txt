@@ -1,5 +1,6 @@
 # olo 
 .wps.com
+.wps.cn
 .miguvideo.com
 .189.cn
 .bestpay.cn
