@@ -1,5 +1,6 @@
 #olo
 
+.koolshare.cn
 .revenuecat.com
 .jpush.cn
 .sentry.io
