@@ -1,4 +1,6 @@
 # olo 
+
+.qpic.cn
 .wps.com
 .wps.cn
 .miguvideo.com
