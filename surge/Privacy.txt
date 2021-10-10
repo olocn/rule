@@ -1,5 +1,6 @@
 #olo
 
+.analytics.126.net
 .koolshare.cn
 .revenuecat.com
 .jpush.cn
