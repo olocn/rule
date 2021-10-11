@@ -7,10 +7,6 @@ DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,sexyno1.com
 DOMAIN-SUFFIX,playio1.com
-DOMAIN-SUFFIX,blogspot.com
-DOMAIN-SUFFIX,yande.re
-DOMAIN-SUFFIX,tucahuand.com
-DOMAIN-SUFFIX,dmm.co.jp
 
 #TG
 DOMAIN-SUFFIX,t.me
