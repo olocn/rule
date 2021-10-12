@@ -173,7 +173,6 @@ trace.qq.com
 track.58.com
 track.tiara.daum.net
 track.tiara.kakao.com
-tracking.intl.miui.com
 tracking.miui.com
 trackingprd.hwwt8.com
 tracklog.58.com
@@ -190,7 +189,6 @@ wxsnsdythumb.wxs.qq.com
 yt-adp.nosdn.127.net
 yt-adp.ws.126.net
 zt.baidu.com
-
 .kuaizip.com
 .mackeeper.com
 .zryydi.com
