@@ -1,4 +1,6 @@
 #olo
+
+.photosync-app.com
 .blogspot.com
 .yande.re
 .tucahuand.com
