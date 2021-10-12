@@ -125,7 +125,6 @@ api-glb-sea.smoot.apple.com
 .google.com.sg
 .google.com
 .googleapis.com
-.blogspot.com
 # > Microsoft
 .microsoftonline.com
 .microsoft.com
