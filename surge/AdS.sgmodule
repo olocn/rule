@@ -1,8 +1,9 @@
 #!name=脚本去广告
 [URL Rewrite]
-^https?:\/\/slog\.trackingio\.com - reject
+^https?:\/\/*\.trackingio\.com - reject
 ^https?:\/\/sdk\.open\.talk\.gepush\.com - reject
 ^https?:\/\/*\.getui\.com - reject
 ^https?:\/\/tracker\.ai\.xiaomi\.com - reject
+
 [MITM]
-hostname = %APPEND% slog.trackingio.com,sdk.open.talk.gepush.com,*.getui.com,tracker.ai.xiaomi.com
+hostname = %APPEND% *.trackingio.com,sdk.open.talk.gepush.com,*.getui.com,tracker.ai.xiaomi.com
