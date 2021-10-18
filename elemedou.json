@@ -1,0 +1,42 @@
+{
+    "activity":{
+
+        "tip":"请在网络好的地方执行\n有些任务可能失败 需要手动\n有些任务需要饿了么账号绑定淘宝\n不做可以不用管\n\n",
+        "list":[
+                "❤️饿了么自动领豆 更新2021-10-12❤️"
+            ],
+        "mapping" :{
+            "❤️饿了么自动领豆 更新2021-10-12❤️":{
+                 "type":"task",
+                "key":["饿了么自动领豆"]
+            }
+        
+            
+        }
+                
+    },
+    "taskData":{
+        "饿了么自动领豆":{
+                "type":"task1",
+              
+                "endpage": "eleme://web?url=https://m.tb.cn/h.fVl1DQi",
+                "main": "eleme://home",
+             
+                
+                "task":{
+                    "tag":"eleme",
+                    "scheme":"eleme://web?url=",
+                    "baseurl":"https://api.mjt520.shop/static/html/elm.html?type=PAGEVIEW&id=占位参数1",
+                    "wait":20,
+                    "param":{
+                        "随机参数1":[999,888,777]
+                    },
+                    "before":[
+                  {"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1390001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1138001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1966001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1728001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D234001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1150001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1056001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1130001","wait":5}  ,{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1698001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D2768001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D2442001","wait":5}
+                  
+                  ],
+                    "item":["230003","350001","344001","228003","1036001","1306001","476001","250003","342001","478001","236002","912001","250003","230003","1036001","2578002","2484001","2774001"]
+                }
+            }
+    }
+}
