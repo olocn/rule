@@ -1,5 +1,6 @@
 #olo
 
+.jddebug.com
 .zhihu-web-analytics.zhihu.com
 .analytics.126.net
 .koolshare.cn
