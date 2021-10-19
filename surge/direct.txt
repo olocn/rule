@@ -1,5 +1,5 @@
 # olo 
-
+.awsglobalaccelerator.com
 .jegotrip.com.cn
 .blogsmithmedia.com
 .aliyuncs.com
