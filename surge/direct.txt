@@ -1,4 +1,5 @@
 # olo 
+.blogsmithmedia.com
 .aliyuncs.com
 .qpic.cn
 .wps.com
