@@ -21,6 +21,8 @@ rssdiy.com
 .plex.direct
 .cn.engadget.com
 .ifanr.com
+
+.ele.me
 # > Alibaba
 .alibaba.com
 .alibabausercontent.com
