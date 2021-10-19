@@ -1,4 +1,6 @@
 # olo 
+
+.jegotrip.com.cn
 .blogsmithmedia.com
 .aliyuncs.com
 .qpic.cn
