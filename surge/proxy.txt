@@ -1,4 +1,6 @@
 #olo
+
+.hcaptcha.com
 jp.netcdn.space
 www.sehuatang.org
 .greenhouseplaza.com
