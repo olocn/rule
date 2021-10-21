@@ -3,6 +3,7 @@
 aip.baidubce.com
 .nuomi.com
 
+nike.sc.omtrdc.net
 logx.optimizely.com
 .xhey.top
 .jddebug.com
