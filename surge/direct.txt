@@ -1,6 +1,5 @@
 # olo 
 
-nike.sc.omtrdc.net
 .urbanairship.com
 .nike.com
 .awsglobalaccelerator.com
