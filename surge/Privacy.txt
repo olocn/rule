@@ -3,6 +3,7 @@
 aip.baidubce.com
 .nuomi.com
 
+logx.optimizely.com
 .xhey.top
 .jddebug.com
 .zhihu-web-analytics.zhihu.com
