@@ -3,6 +3,7 @@
 .urbanairship.com
 .nike.com
 .awsglobalaccelerator.com
+.bestpay.com.cn
 .jegotrip.com.cn
 .blogsmithmedia.com
 .aliyuncs.com
