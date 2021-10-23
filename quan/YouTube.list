@@ -1,12 +1,11 @@
-#nojp
 DOMAIN-SUFFIX,18comic.vip,YouTube
-DOMAIN,cdn-msp.18comic.org,YouTube
+DOMAIN-SUFFIX,18comic.org,YouTube
 DOMAIN-SUFFIX,addthis.com,YouTube
 DOMAIN-SUFFIX,addthisedge.com,YouTube
 DOMAIN-SUFFIX,jkforum.net,YouTube
 DOMAIN-SUFFIX,playno1.com,YouTube
 DOMAIN-SUFFIX,sexyno1.com,YouTube
-DOMAIN-SUFFIX,www.playio1.com,YouTube
+DOMAIN-SUFFIX,playio1.com,YouTube
 
 #TG
 DOMAIN-SUFFIX,t.me,YouTube
@@ -15,6 +14,10 @@ DOMAIN-SUFFIX,tdesktop.com,YouTube
 DOMAIN-SUFFIX,telegra.ph,YouTube
 DOMAIN-SUFFIX,telegram.me,YouTube
 DOMAIN-SUFFIX,telegram.org,YouTube
-IP-CIDR,91.108.0.0/16,YouTube
-IP-CIDR,109.239.140.0/24,YouTube
-IP-CIDR,149.154.160.0/20,YouTube
+
+IP-CIDR,91.108.0.0/16,no-resolve,YouTube
+IP-CIDR,109.239.140.0/24,no-resolve,YouTube
+IP-CIDR,149.154.160.0/20,no-resolve,YouTube
+IP-CIDR,149.154.160.0/22,no-resolve,YouTube
+IP-CIDR,149.154.172.0/22,no-resolve,YouTube
+IP-CIDR,95.161.64.0/20,no-resolve,YouTube
