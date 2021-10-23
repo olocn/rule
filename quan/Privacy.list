@@ -1,8 +1,8 @@
-DOMAIN,#olo,REJECT
-DOMAIN,#百度地图,REJECT
+#olo
+#百度地图
 DOMAIN,aip.baidubce.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
-DOMAIN,,REJECT
+
 DOMAIN,nike.sc.omtrdc.net,REJECT
 DOMAIN,logx.optimizely.com,REJECT
 DOMAIN-SUFFIX,xhey.top,REJECT
