@@ -1,7 +1,7 @@
 #olo
 DOMAIN-SUFFIX,hcaptcha.com
-DOMAIN-SUFFIX,p.netcdn.space
-DOMAIN-SUFFIX,ww.sehuatang.org
+DOMAIN,jp.netcdn.space
+DOMAIN,www.sehuatang.org
 DOMAIN-SUFFIX,greenhouseplaza.com
 DOMAIN-SUFFIX,photosync-app.com
 DOMAIN-SUFFIX,blogspot.com
@@ -11,7 +11,7 @@ DOMAIN-SUFFIX,dmm.co.jp
 DOMAIN-SUFFIX,uplebz.xyz
 DOMAIN-SUFFIX,dapenti.com
 DOMAIN-SUFFIX,firecore.com
-DOMAIN-SUFFIX,adtidy.org
+DOMAIN-SUFFIX,adtidy.orgDOMAIN-SUFFIX,
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,rysuanaaser.com
@@ -29,8 +29,8 @@ DOMAIN-SUFFIX,pianyuan.org
 DOMAIN-SUFFIX,bbc.co.uk
 DOMAIN-SUFFIX,tits-guru.com
 DOMAIN-SUFFIX,anti-ad.net
-DOMAIN-SUFFIX,eeds.feedburner.com
-DOMAIN-SUFFIX,eedmaker.kindle4rss.com
+DOMAIN,feeds.feedburner.com
+DOMAIN,feedmaker.kindle4rss.com
 DOMAIN-SUFFIX,oxygenplaza.net
 # > Amazon
 DOMAIN-SUFFIX,amazon.co.jp,PROXY
