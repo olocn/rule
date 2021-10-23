@@ -503,13 +503,10 @@ DOMAIN-SUFFIX,zoom.us,PROXY
 DOMAIN,cc.tvbs.com.tw,PROXY
 DOMAIN,ocsp.int-x3.letsencrypt.org,PROXY
 DOMAIN,us.weibo.com,PROXY
-
 DOMAIN-SUFFIX,edu,PROXY
 DOMAIN-SUFFIX,gov,PROXY
 DOMAIN-SUFFIX,mil,PROXY
-
 # (IP Blackhole)
-# > Facebook
 IP-CIDR,31.13.24.0/21,PROXY
 IP-CIDR,31.13.64.0/18,PROXY
 IP-CIDR,45.64.40.0/22,PROXY
@@ -525,7 +522,6 @@ IP-CIDR,173.252.96.0/19,PROXY
 IP-CIDR,179.60.192.0/22,PROXY
 IP-CIDR,185.60.216.0/22,PROXY
 IP-CIDR,204.15.20.0/22,PROXY
-# > Google
 IP-CIDR,35.190.247.0/24,PROXY
 IP-CIDR,64.233.160.0/19,PROXY
 IP-CIDR,66.102.0.0/20,PROXY
@@ -538,7 +534,6 @@ IP-CIDR,173.194.0.0/16,PROXY
 IP-CIDR,209.85.128.0/17,PROXY
 IP-CIDR,216.58.192.0/19,PROXY
 IP-CIDR,216.239.32.0/19,PROXY
-# > Twitter
 IP-CIDR,69.195.160.0/19,PROXY
 IP-CIDR,104.244.42.0/21,PROXY
 IP-CIDR,192.133.76.0/22,PROXY
@@ -553,17 +548,14 @@ IP-CIDR,103.102.166.0/24,PROXY
 IP-CIDR,185.15.56.0/22,PROXY
 IP-CIDR,198.35.26.0/23,PROXY
 IP-CIDR,208.80.152.0/22,PROXY
-# > Telegram
 DOMAIN-SUFFIX,t.me,PROXY
 DOMAIN-SUFFIX,tdesktop.com,PROXY
 DOMAIN-SUFFIX,telegram.me,PROXY
 DOMAIN-SUFFIX,telesco.pe,PROXY
-# > Others
 DOMAIN-SUFFIX,noxinfluencer.com,PROXY
 DOMAIN-SUFFIX,smartmailcloud.com,PROXY
 DOMAIN-SUFFIX,weebly.com,PROXY
 DOMAIN-SUFFIX,twitter.jp,PROXY
-
 # (Region-Restricted Access Denied)
 # ---(Apple)---
 DOMAIN-SUFFIX,appsto.re,PROXY
@@ -578,7 +570,6 @@ DOMAIN,itunes.apple.com,PROXY
 DOMAIN-SUFFIX,smoot.apple.com,PROXY
 DOMAIN,lookup-api.apple.com,PROXY
 # ------
-# > Others
 DOMAIN-SUFFIX,bing.com,PROXY
 DOMAIN-SUFFIX,cccat.io,PROXY
 DOMAIN-SUFFIX,dubox.com,PROXY
@@ -588,9 +579,7 @@ DOMAIN-SUFFIX,mangakakalot.com,PROXY
 DOMAIN-SUFFIX,shopeemobile.com,PROXY
 DOMAIN-SUFFIX,sushi.com,PROXY
 # URL-REGEX,http:\/\/img\.sina\.com\/usweibo\/
-
 # (Network Jitter)
-# > Apple
 DOMAIN,appleid.apple.com,PROXY
 DOMAIN,developer.apple.com,PROXY
 DOMAIN,www.icloud.com,PROXY
@@ -601,7 +590,6 @@ DOMAIN,cacerts.digicert.com,PROXY
 DOMAIN,crl3.digicert.com,PROXY
 DOMAIN,crl4.digicert.com,PROXY
 DOMAIN,ocsp.digicert.com,PROXY
-# > Others
 DOMAIN-SUFFIX,cloudcone.com.cn,PROXY
 DOMAIN-SUFFIX,inkbunny.net,PROXY
 DOMAIN-SUFFIX,metapix.net,PROXY
