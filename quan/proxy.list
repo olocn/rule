@@ -2,7 +2,7 @@
 
 DOMAIN-SUFFIX,xuite.net,PROXY
 DOMAIN-SUFFIX,hinet.net,PROXY
-
+DOMAIN-SUFFIX,pixiv.cat,PROXY
 DOMAIN-SUFFIX,githubassets.com,PROXY
 DOMAIN-SUFFIX,hcaptcha.com,PROXY
 DOMAIN,jp.netcdn.space,PROXY
