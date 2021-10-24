@@ -3,6 +3,7 @@
 DOMAIN,aip.baidubce.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
 
+DOMAIN-SUFFIX,getui.net,REJECT
 DOMAIN,nike.sc.omtrdc.net,REJECT
 DOMAIN,logx.optimizely.com,REJECT
 DOMAIN-SUFFIX,xhey.top,REJECT
