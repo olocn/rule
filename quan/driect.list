@@ -1,8 +1,8 @@
 DOMAIN,download.jetbrains.com,DIRECT
 DOMAIN,images-cn.ssl-images-amazon.com,DIRECT
 
+DOMAIN-SUFFIX,95516.com,DIRECT
 DOMAIN-SUFFIX,plex.direct,DIRECT
-DOMAIN-SUFFIX,plex.tv,DIRECT
 
 # > Alibaba
 USER-AGENT,%E4%BC%98%E9%85%B7*,DIRECT
