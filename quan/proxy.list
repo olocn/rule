@@ -1,5 +1,12 @@
 #olo
 
+DOMAIN,www.rysuanaaser.com,PROXY
+DOMAIN-SUFFIX,yande.re,PROXY
+DOMAIN-SUFFIX,dmm.co.jp,PROXY
+DOMAIN-SUFFIX,xuite.net,PROXY
+DOMAIN-SUFFIX,hinet.net,PROXY
+DOMAIN,www.oxygenplaza.net,PROXY
+
 DOMAIN-SUFFIX,githubassets.com,PROXY
 DOMAIN-SUFFIX,hcaptcha.com,PROXY
 DOMAIN,jp.netcdn.space,PROXY
