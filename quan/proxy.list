@@ -1,5 +1,6 @@
 #olo
 
+DOMAIN-SUFFIX,cloudflare-dns.com,PROXY
 DOMAIN-SUFFIX,xuite.net,PROXY
 DOMAIN-SUFFIX,hinet.net,PROXY
 DOMAIN-SUFFIX,pixiv.cat,PROXY
