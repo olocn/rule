@@ -148,6 +148,24 @@ IP-CIDR,125.209.208.0/20,PROXY
 IP-CIDR,147.92.128.0/17,PROXY
 IP-CIDR,203.104.144.0/21,PROXY
 # > Microsoft
+DOMAIN-SUFFIX,microsoft.com,PROXY
+DOMAIN-SUFFIX,msecnd.net,PROXY
+DOMAIN-SUFFIX,s-microsoft.com,PROXY
+DOMAIN-SUFFIX,windows.com,PROXY
+DOMAIN-SUFFIX,visualstudio.com,PROXY
+# >> Microsoft Software Download
+DOMAIN,software-download.microsoft.com,PROXY
+DOMAIN-KEYWORD,-microsoft-com.akamaized.net,PROXY
+# >> OneDrive
+DOMAIN-SUFFIX,office.com,PROXY
+DOMAIN-SUFFIX,office365.com,PROXY
+DOMAIN-SUFFIX,1drv.com,PROXY
+DOMAIN-SUFFIX,storage.live.com,PROXY
+# >> Outlook
+DOMAIN-SUFFIX,hotmail.com,PROXY
+DOMAIN-SUFFIX,outlook.com,PROXY
+DOMAIN,outlook.office365.com,PROXY
+DOMAIN,smtp.office365.com,PROXY
 DOMAIN-SUFFIX,aka.ms,PROXY
 DOMAIN-SUFFIX,onedrive.live.com,PROXY
 DOMAIN-SUFFIX,streaming.mediaservices.windows.net,PROXY
