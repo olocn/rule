@@ -1,7 +1,7 @@
+#olo
 DOMAIN,time.apple.com,DIRECT
 DOMAIN-SUFFIX,olocn.fun,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
-
 DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT
 # Unbreak
 # > General
