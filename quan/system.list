@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,olocn.fun,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
 DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT
 
+ip-cidr, 18.163.76.110/32, direct
 ip-cidr, 18.163.20.51/32, direct
 
 # Unbreak
