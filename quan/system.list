@@ -1,4 +1,6 @@
 #olo
+
+host-suffix, awsglobalaccelerator.com, direct
 DOMAIN,time.apple.com,DIRECT
 DOMAIN-SUFFIX,olocn.fun,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
