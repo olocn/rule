@@ -40,20 +40,6 @@ DOMAIN,ppq.apple.com
 DOMAIN,appstoreconnect.apple.com
 DOMAIN,iosapps-ssl.itunes.apple.com
 DOMAIN,itcmobile.itunes.apple.com
-# > iOS and iPadOS updates
-DOMAIN,appldnld.apple.com
-DOMAIN,ns.itunes.apple.com
-# > iOS, iPadOS, tvOS, and macOS updates
-DOMAIN,gg.apple.com
-DOMAIN,gdmf.apple.com
-DOMAIN,mesu.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,updates-http.cdn-apple.com
-DOMAIN,xp.apple.com
-DOMAIN,appleid.apple.com
-DOMAIN,developer.apple.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN,ocsp.apple.com
 DOMAIN,testflight.apple.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,smoot.apple.com
