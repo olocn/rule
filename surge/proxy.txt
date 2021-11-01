@@ -31,7 +31,15 @@ DOMAIN,feeds.feedburner.com
 DOMAIN,feedmaker.kindle4rss.com
 DOMAIN-SUFFIX,oxygenplaza.net
 
-# > App Store 
+# Apple
+# iCloud
+DOMAIN-SUFFIX,apple-cloudkit.com
+DOMAIN-SUFFIX,icloud.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-SUFFIX,icloud-content.com
+DOMAIN,www-cdn.icloud.com.akadns.net
+
+# App Store 
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
@@ -46,6 +54,7 @@ DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,beta.music.apple.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,tv.apple.com
+
 # > Amazon
 DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN,d3c33hcgiwev3.cloudfront.net
