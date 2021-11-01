@@ -4,7 +4,6 @@ DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
 DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,mzstatic.com
 # > iOS and iPadOS updates
 DOMAIN,appldnld.apple.com
 DOMAIN,ns.itunes.apple.com
@@ -18,12 +17,6 @@ DOMAIN,xp.apple.com
 DOMAIN,appleid.apple.com
 DOMAIN,developer.apple.com
 DOMAIN,ocsp.apple.com
-# iCloud
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud.com.cn
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN,www-cdn.icloud.com.akadns.net
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,63.92.224.0/19,no-resolve
 IP-CIDR,65.199.22.0/23,no-resolve
