@@ -5,6 +5,8 @@ DOMAIN-SUFFIX,nuomi.com,REJECT
 
 DOMAIN-SUFFIX,applovin.com,REJECT
 DOMAIN-SUFFIX,adcolony.com,REJECT
+DOMAIN,track.atom-data.io,REJECT
+
 # Privacy
 DOMAIN-SUFFIX,adjust.com,REJECT
 DOMAIN-SUFFIX,cpatrk.net,REJECT
