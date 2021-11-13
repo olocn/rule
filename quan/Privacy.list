@@ -3,6 +3,8 @@
 DOMAIN,aip.baidubce.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
 
+DOMAIN-SUFFIX,applovin.com,REJECT
+DOMAIN-SUFFIX,adcolony.com,REJECT
 # Privacy
 DOMAIN-SUFFIX,adjust.com,REJECT
 DOMAIN-SUFFIX,cpatrk.net,REJECT
