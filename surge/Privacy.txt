@@ -2,7 +2,10 @@
 #百度地图
 aip.baidubce.com
 .nuomi.com
-
+.
+applovin.com
+.adcolony.com
+track.atom-data.io
 amdc.m.taobao.com
 nike.sc.omtrdc.net
 logx.optimizely.com
