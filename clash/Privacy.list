@@ -6,6 +6,9 @@ DOMAIN-SUFFIX,nuomi.com
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN,track.atom-data.io
+DOMAIN-SUFFIX,applvn.com
+DOMAIN,app-measurement.com
+DOMAIN,sessions.bugsnag.com
 
 # Privacy
 DOMAIN-SUFFIX,adjust.com
