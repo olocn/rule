@@ -554,9 +554,6 @@ DOMAIN,cc.tvbs.com.tw
 DOMAIN,clubhouse.pubnubapi.com
 DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,us.weibo.com
-DOMAIN-SUFFIX,edu
-DOMAIN-SUFFIX,gov
-DOMAIN-SUFFIX,mil
 # (IP Blackhole)
 IP-CIDR,31.13.24.0/21,no-resolve
 IP-CIDR,31.13.64.0/18,no-resolve
