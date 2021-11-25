@@ -1,9 +1,7 @@
 #olo
 DOMAIN-SUFFIX,push.apple.com
-
 #无忧行
 DOMAIN-SUFFIX,awsglobalaccelerator.com
-
 #wechat
 IP-CIDR,101.32.132.0/22,no-resolve
 IP-CIDR,129.226.2.0/23,no-resolve
@@ -11,7 +9,6 @@ IP-CIDR,101.32.118.0/23,no-resolve
 IP-CIDR,101.32.104.0/21,no-resolve
 DOMAIN,sgshort.wechat.com
 DOMAIN-SUFFIX,hcaptcha.com
-
 DOMAIN-SUFFIX,newsblur.com
 DOMAIN,jp.netcdn.space
 DOMAIN,www.sehuatang.org
@@ -43,7 +40,6 @@ DOMAIN-SUFFIX,anti-ad.net
 DOMAIN,feeds.feedburner.com
 DOMAIN,feedmaker.kindle4rss.com
 DOMAIN-SUFFIX,oxygenplaza.net
-
 # Apple
 # iCloud
 DOMAIN-SUFFIX,apple-cloudkit.com
@@ -51,7 +47,6 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,icloud-content.com
 DOMAIN,www-cdn.icloud.com.akadns.net
-
 # App Store 
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,itunes.apple.com
@@ -67,7 +62,6 @@ DOMAIN-SUFFIX,smoot.apple.com
 DOMAIN,beta.music.apple.com
 DOMAIN,lookup-api.apple.com
 DOMAIN,tv.apple.com
-
 # > Amazon
 DOMAIN-SUFFIX,amazon.co.jp
 DOMAIN,d3c33hcgiwev3.cloudfront.net
@@ -121,7 +115,6 @@ DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,github.io
 DOMAIN-SUFFIX,githubusercontent.com
-# > Google
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,blogger.com
 DOMAIN-SUFFIX,getoutline.org
@@ -155,7 +148,6 @@ IP-CIDR,103.2.30.0/23,no-resolve
 IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.144.0/21,no-resolve
-
 # > Microsoft
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,msecnd.net
@@ -381,7 +373,6 @@ DOMAIN-SUFFIX,istockphoto.com
 DOMAIN-SUFFIX,japantimes.co.jp
 DOMAIN-SUFFIX,jiji.com
 DOMAIN-SUFFIX,jinx.com
-DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,joinclubhouse.com
 DOMAIN-SUFFIX,joinmastodon.org
 DOMAIN-SUFFIX,justmysocks.net
