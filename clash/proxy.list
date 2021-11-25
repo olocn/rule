@@ -111,6 +111,7 @@ DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
 # > Github
+DOMAIN-SUFFIX,githubapp.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,github.io
@@ -149,11 +150,14 @@ IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.144.0/21,no-resolve
 # > Microsoft
+DOMAIN-SUFFIX,msauth.net
+DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,msecnd.net
 DOMAIN-SUFFIX,s-microsoft.com
 DOMAIN-SUFFIX,windows.com
 DOMAIN-SUFFIX,visualstudio.com
+DOMAIN-SUFFIX,skype.com
 # >> Microsoft Software Download
 DOMAIN,software-download.microsoft.com
 DOMAIN-KEYWORD,-microsoft-com.akamaized.net
