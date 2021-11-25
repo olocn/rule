@@ -19,8 +19,6 @@ DOMAIN,o2o.api.xiaomi.com
 DOMAIN,bss.pandora.xiaomi.com
 DOMAIN,api.miwifi.com
 DST-PORT,17788
-
-
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN,track.atom-data.io
@@ -29,7 +27,6 @@ DOMAIN,app-measurement.com
 DOMAIN,sessions.bugsnag.com
 DOMAIN-SUFFIX,supersonicads.com
 DOMAIN,draper.popcap.com
-
 # Privacy
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,cpatrk.net
@@ -62,7 +59,6 @@ DOMAIN,api.talkingdata.com
 DOMAIN,track.tiara.daum.net
 DOMAIN,track.tiara.kakao.com
 DOMAIN,zgsdk.zhugeio.com
-
 # > 58
 DOMAIN,track.58.com
 DOMAIN,tracklog.58.com
@@ -74,12 +70,10 @@ DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN,safebrowsing.googleapis.com
 # > MI
 DOMAIN-SUFFIX,tracking.miui.com
-DOMAIN,data.mistat.xiaomi.com
 DOMAIN,tracking.intl.miui.com
 # > Tencent
 DOMAIN,safebrowsing.urlsec.qq.com
 DOMAIN-SUFFIX,getui.net
-
 DOMAIN,nike.sc.omtrdc.net
 DOMAIN,logx.optimizely.com
 DOMAIN-SUFFIX,xhey.top
