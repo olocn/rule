@@ -1,4 +1,5 @@
 #olo
+DOMAIN-SUFFIX,yandex.net
 DOMAIN-SUFFIX,weserv.nl
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,pixhost.to
@@ -168,6 +169,7 @@ DOMAIN-SUFFIX,skype.com
 DOMAIN,software-download.microsoft.com
 DOMAIN-KEYWORD,-microsoft-com.akamaized.net
 # >> OneDrive
+DOMAIN-SUFFIX,sfx.ms
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,1drv.com
