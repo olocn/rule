@@ -25,6 +25,8 @@ dns:
   fake-ip-range: 198.18.0.1/16
   use-hosts: true
   fake-ip-filter:
+    - mempbtg.uplebz.xyz
+    - jdmscys.nzagda.xyz
     - "*.lan"
     - stun.*.*.*
     - stun.*.*
