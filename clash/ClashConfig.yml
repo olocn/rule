@@ -106,7 +106,7 @@ dns:
     - https://doh.pub/dns-query
   fallback:
     - https://dns.google/dns-query
-    - https://dns.cloudflare.com/dns-query
+    - 8.8.8.8
   fallback-filter:
     geoip: true
     ipcidr:
