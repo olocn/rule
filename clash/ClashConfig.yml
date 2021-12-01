@@ -20,6 +20,11 @@ dns:
   default-nameserver:
     - 114.114.114.114
     - 8.8.8.8
+  hosts:
+   'services.googleapis.cn': 216.58.200.67
+   'www.google.cn': 216.58.200.67
+   'mempbtg.uplebz.xyz': 162.14.10.52
+   'jdmscys.nzagda.xyz': 162.14.21.69
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
