@@ -157,6 +157,7 @@ IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.144.0/21,no-resolve
 # > Microsoft
+
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,microsoft.com
@@ -169,6 +170,7 @@ DOMAIN-SUFFIX,skype.com
 DOMAIN,software-download.microsoft.com
 DOMAIN-KEYWORD,-microsoft-com.akamaized.net
 # >> OneDrive
+DOMAIN-SUFFIX,onedrive.com
 DOMAIN-SUFFIX,sfx.ms
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,office365.com
