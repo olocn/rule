@@ -158,7 +158,6 @@ payload:
   - IP-CIDR,147.92.128.0/17,no-resolve
   - IP-CIDR,203.104.144.0/21,no-resolve
 # > Microsoft
-  - 
   - DOMAIN-SUFFIX,msauth.net
   - DOMAIN-SUFFIX,live.com
   - DOMAIN-SUFFIX,microsoft.com
