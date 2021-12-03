@@ -4,6 +4,8 @@
 .pangolin-sdk-toutiao.com
 tnc3-aliec2.snssdk.com
 
+access.speech.ai.xiaomi.com
+loc.map.baidu.com
 sdkconfig.ad.intl.xiaomi.com
 api.mousegesturesapi.com
 adashx.m.taobao.com
