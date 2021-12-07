@@ -35,7 +35,6 @@ DST-PORT,17788
 track.atom-data.io
 .applvn.com
 app-measurement.com
-sessions.bugsnag.com
 .supersonicads.com
 draper.popcap.com
 # Privacy
