@@ -7,10 +7,13 @@ DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,sexyno1.com
 DOMAIN-SUFFIX,playio1.com
+
+# > PayPal
+USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com
 DOMAIN-SUFFIX,paypal.me
 DOMAIN-SUFFIX,paypalobjects.com
-DOMAIN-KEYWORD,paypal
+
 #TG
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
