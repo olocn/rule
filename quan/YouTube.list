@@ -22,3 +22,9 @@ IP-CIDR,149.154.160.0/20, 🎬 YouTube
 IP-CIDR,149.154.160.0/22, 🎬 YouTube
 IP-CIDR,149.154.172.0/22, 🎬 YouTube
 IP-CIDR,95.161.64.0/20, 🎬 YouTube
+
+# > PayPal
+USER-AGENT,PayPal*, 🎬 YouTube
+DOMAIN-SUFFIX,paypal.com, 🎬 YouTube
+DOMAIN-SUFFIX,paypal.me, 🎬 YouTube
+DOMAIN-SUFFIX,paypalobjects.com, 🎬 YouTube
