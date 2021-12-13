@@ -1,23 +1,23 @@
 #olo
 
 DOMAIN-SUFFIX,aliyunwaf4.com,DIRECT
-host-suffix, awsglobalaccelerator.com, direct
+DOMAIN-SUFFIX,awsglobalaccelerator.com,DIRECT
 DOMAIN,time.apple.com,DIRECT
 DOMAIN-SUFFIX,olocn.fun,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
-DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT
-DOMAIN,gspe19-cn-ssl.ls.apple.com
-DOMAIN,time.apple.com
-DOMAIN-SUFFIX,olocn.fun
+DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT,DIRECT
+DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT,DIRECT
+DOMAIN,time.apple.com,DIRECT,DIRECT
+DOMAIN-SUFFIX,olocn.fun,DIRECT,DIRECT
 
-DOMAIN,r3.o.lencr.org
-DOMAIN,passportapi.115.com
-DOMAIN,dizhensubao.getui.com
-DOMAIN,origin-a.akamaihd.net
-DOMAIN,analytics.95516.com
-DOMAIN,tracking.miui.com
+DOMAIN,r3.o.lencr.org,DIRECT
+DOMAIN,passportapi.115.com,DIRECT
+DOMAIN,dizhensubao.getui.com,DIRECT
+DOMAIN,origin-a.akamaihd.net,DIRECT
+DOMAIN,analytics.95516.com,DIRECT
+DOMAIN,tracking.miui.com,DIRECT
 
-ip-cidr, 18.163.0.0/16, direct
+ip-cidr, 18.163.0.0/16,DIRECT
 
 # Unbreak
 # > General
