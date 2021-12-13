@@ -1,4 +1,15 @@
 #olo
+
+#CAD
+DOMAIN-SUFFIX,pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX,pangolin-sdk-toutiao.com,REJECT
+DOMAIN,tnc3-aliec2.snssdk.com,REJECT
+
+DOMAIN,access.speech.ai.xiaomi.com,REJECT
+DOMAIN,loc.map.baidu.com,REJECT
+DOMAIN,sdkconfig.ad.intl.xiaomi.com,REJECT
+DOMAIN,api.mousegesturesapi.com,REJECT
+DOMAIN,adashx.m.taobao.com,REJECT
 #百度地图
 DOMAIN,aip.baidubce.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
