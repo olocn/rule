@@ -6,6 +6,16 @@ DOMAIN,time.apple.com,DIRECT
 DOMAIN-SUFFIX,olocn.fun,DIRECT
 DOMAIN,stun.services.mozilla.com,DIRECT
 DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT
+DOMAIN,gspe19-cn-ssl.ls.apple.com
+DOMAIN,time.apple.com
+DOMAIN-SUFFIX,olocn.fun
+
+DOMAIN,r3.o.lencr.org
+DOMAIN,passportapi.115.com
+DOMAIN,dizhensubao.getui.com
+DOMAIN,origin-a.akamaihd.net
+DOMAIN,analytics.95516.com
+DOMAIN,tracking.miui.com
 
 ip-cidr, 18.163.0.0/16, direct
 
