@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,ap-southeast-1.amazonaws.com
+DOMAIN,s3.us-west-2.amazonaws.com
 
 #无忧行
 DOMAIN-SUFFIX,awsglobalaccelerator.com
