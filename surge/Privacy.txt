@@ -29,7 +29,6 @@ gallery.pandora.xiaomi.com
 o2o.api.xiaomi.com
 bss.pandora.xiaomi.com
 api.miwifi.com
-DST-PORT,17788
 .applovin.com
 .adcolony.com
 track.atom-data.io
@@ -98,7 +97,6 @@ tracklog.jd.com
 .appsflyer.com
 qZs.qq.com
 .bspapp.com
-msite.baidu.com
 baijiahao.baidu.com
 .qhres.com
 .qhimg.com
