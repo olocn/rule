@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,push.apple.com
 
 #everdale
 DOMAIN-SUFFIX,everdalegame.com
+DOMAIN,supercell.helpshift.com
 
 #notion
 DOMAIN-SUFFIX,intercom.io
