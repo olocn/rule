@@ -8,6 +8,9 @@ DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,typography.com
 DOMAIN-SUFFIX,push.apple.com
 
+#everdale
+DOMAIN-SUFFIX,everdalegame.com
+
 #notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
