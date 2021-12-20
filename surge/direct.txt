@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,jsdelivr.net
 
+DOMAIN-SUFFIX,huami.com
 DOMAIN,data.flurry.com
 # > Alibaba
 USER-AGENT,%E4%BC%98%E9%85%B7*
