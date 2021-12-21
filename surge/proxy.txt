@@ -6,7 +6,7 @@ DOMAIN-SUFFIX,pixhost.to
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,typography.com
-
+DOMAIN-SUFFIX,phncdn.com
 #everdale
 DOMAIN-SUFFIX,everdalegame.com
 DOMAIN,supercell.helpshift.com
