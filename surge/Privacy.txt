@@ -4,6 +4,7 @@
 .pangolin-sdk-toutiao.com
 tnc3-aliec2.snssdk.com
 
+poweredby.jads.co
 access.speech.ai.xiaomi.com
 loc.map.baidu.com
 sdkconfig.ad.intl.xiaomi.com
