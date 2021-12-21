@@ -5,6 +5,7 @@ DOMAIN-SUFFIX,caiyunapp.com
 DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,jsdelivr.net
+DOMAIN-SUFFIX,awsglobalaccelerator.com
 
 DOMAIN-SUFFIX,huami.com
 DOMAIN,data.flurry.com
