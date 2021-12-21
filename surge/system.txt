@@ -1,4 +1,6 @@
 # olo
+
+sessions.bugsnag.com
 gspe19-cn-ssl.ls.apple.com
 time.apple.com
 .olocn.fun
