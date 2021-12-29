@@ -3,7 +3,8 @@ DOMAIN-SUFFIX,apple.co
 DOMAIN-SUFFIX,apple.com
 DOMAIN-SUFFIX,appstore.com
 DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,me.com
+DOMAIN-SUFFIX,me.com 
+DOMAIN,ocsp.sectigo.com
 # > iOS and iPadOS updates
 DOMAIN,appldnld.apple.com
 DOMAIN,ns.itunes.apple.com
