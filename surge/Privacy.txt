@@ -90,7 +90,6 @@ logx.optimizely.com
 .xhey.top
 .jddebug.com
 .koolshare.cn
-.revenuecat.com
 .jpush.cn
 .sentry.io
 .cnzz.com
@@ -111,7 +110,6 @@ baijiahao.baidu.com
 track1.aniview.com
 token.safebrowsing.apple
 tracker.ai.xiaomi.com
-DOMAIN-KEYWORD,analytics
 .71360.com
 .ad7.com
 .alookbrowser.com
