@@ -11,6 +11,8 @@ DOMAIN,sdkconfig.ad.intl.xiaomi.com,REJECT
 DOMAIN,api.mousegesturesapi.com,REJECT
 DOMAIN,adashx.m.taobao.com,REJECT
 #百度地图
+
+DOMAIN,qianbao.baidu.com,REJECT
 DOMAIN,aip.baidubce.com,REJECT
 DOMAIN-SUFFIX,nuomi.com,REJECT
 
