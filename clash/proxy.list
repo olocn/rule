@@ -30,6 +30,8 @@ IP-CIDR,101.32.96.0/20,no-resolve
 IP-CIDR,203.205.220.0/23,no-resolve
 DOMAIN,sgshort.wechat.com
 
+DOMAIN-SUFFIX,jads.co
+DOMAIN-SUFFIX,javbus22.com
 DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,newsblur.com
 DOMAIN,jp.netcdn.space
