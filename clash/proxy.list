@@ -8,8 +8,11 @@ DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,typography.com
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,bing.com
+
+#qnap
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,fanart.tv
+DOMAIN,download.qnap.com
 
 #everdale
 DOMAIN-SUFFIX,everdalegame.com
