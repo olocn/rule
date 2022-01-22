@@ -5,6 +5,7 @@
 tnc3-aliec2.snssdk.com
 trackinghub.starbucks.com.cn
 
+log.umsns.com
 poweredby.jads.co
 access.speech.ai.xiaomi.com
 loc.map.baidu.com
