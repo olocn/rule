@@ -7,8 +7,8 @@ ipv6: false
 hosts:
   'services.googleapis.cn': 216.58.200.67
   'www.google.cn': 216.58.200.67
-  'mempbtg.uplebz.xyz': 162.14.10.52
-  'jdmscys.nzagda.xyz': 162.14.21.69
+  'mempbtg.uplebz.xyz': 42.157.161.3
+  'jdmscys.nzagda.xyz': 122.9.121.191
 external-controller: 0.0.0.0:9090
 profile:
   store-selected: true
