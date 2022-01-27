@@ -17,6 +17,7 @@ DOMAIN,download.qnap.com
 #everdale
 DOMAIN-SUFFIX,everdalegame.com
 DOMAIN,supercell.helpshift.com
+DOMAIN-SUFFIX,gc.apple.com,
 
 #notion
 DOMAIN-SUFFIX,intercom.io
