@@ -1,4 +1,11 @@
 #olo
+DOMAIN-SUFFIX,myqnapcloud.com
+DOMAIN-SUFFIX,sehuatang.org
+DOMAIN-SUFFIX,emby.media
+DOMAIN-SUFFIX,rsshub.app
+DOMAIN-SUFFIX,akamaihd.net
+DOMAIN-SUFFIX,livefilestore.com
+DOMAIN-SUFFIX,svc.ms
 DOMAIN-SUFFIX,yandex.net
 DOMAIN-SUFFIX,weserv.nl
 DOMAIN-SUFFIX,gstatic.com
@@ -6,28 +13,22 @@ DOMAIN-SUFFIX,pixhost.to
 DOMAIN-SUFFIX,cloudflare.com
 DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,typography.com
-DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,bing.com
-
 #qnap
 DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,fanart.tv
 DOMAIN,download.qnap.com
-
 #everdale
 DOMAIN-SUFFIX,everdalegame.com
 DOMAIN,supercell.helpshift.com
 DOMAIN-SUFFIX,gc.apple.com,
-
 #notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,ap-southeast-1.amazonaws.com
 DOMAIN,s3.us-west-2.amazonaws.com
-
 #无忧行
 DOMAIN-SUFFIX,awsglobalaccelerator.com
-
 DOMAIN-SUFFIX,jads.co
 DOMAIN-SUFFIX,javbus22.com
 DOMAIN-SUFFIX,hcaptcha.com
@@ -154,7 +155,6 @@ DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
 DOMAIN-SUFFIX,aicoin.com
 DOMAIN-SUFFIX,aimoon.com
-DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,cccat.io
 DOMAIN-SUFFIX,dubox.com
 DOMAIN-SUFFIX,duboxcdn.com
@@ -172,7 +172,6 @@ IP-CIDR,125.209.208.0/20,no-resolve
 IP-CIDR,147.92.128.0/17,no-resolve
 IP-CIDR,203.104.144.0/21,no-resolve
 # > Microsoft
-
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,microsoft.com
@@ -497,7 +496,6 @@ DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,reutersmedia.net
 DOMAIN-SUFFIX,rfi.fr
 DOMAIN-SUFFIX,roadshow.hk
-DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,scmp.com
 DOMAIN-SUFFIX,scribd.com
 DOMAIN-SUFFIX,seatguru.com
@@ -587,6 +585,7 @@ DOMAIN,cc.tvbs.com.tw
 DOMAIN,clubhouse.pubnubapi.com
 DOMAIN,ocsp.int-x3.letsencrypt.org
 DOMAIN,us.weibo.com
+
 # (IP Blackhole)
 IP-CIDR,31.13.24.0/21,no-resolve
 IP-CIDR,31.13.64.0/18,no-resolve
@@ -624,10 +623,12 @@ IP-CIDR,199.96.56.0/21,no-resolve
 IP-CIDR,202.160.128.0/22,no-resolve
 IP-CIDR,209.237.192.0/19,no-resolve
 IP-CIDR,20.0.0.0/11,no-resolve
+
 DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,noxinfluencer.com
 DOMAIN-SUFFIX,smartmailcloud.com
 DOMAIN-SUFFIX,weebly.com
+
 # > DigiCert
 DOMAIN,cacerts.digicert.com
 DOMAIN,crl3.digicert.com
@@ -642,3 +643,4 @@ DOMAIN,international-gfe.download.nvidia.com
 DOMAIN-SUFFIX,cloudflare-dns.com
 DOMAIN-SUFFIX,xuite.net
 DOMAIN-SUFFIX,hinet.net
+
