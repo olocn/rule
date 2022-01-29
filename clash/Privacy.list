@@ -31,7 +31,6 @@ DOMAIN,gallery.pandora.xiaomi.com
 DOMAIN,o2o.api.xiaomi.com
 DOMAIN,bss.pandora.xiaomi.com
 DOMAIN,api.miwifi.com
-DST-PORT,17788
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,adcolony.com
 DOMAIN,track.atom-data.io
