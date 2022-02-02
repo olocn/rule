@@ -1,6 +1,4 @@
 #o
-DOMAIN-SUFFIX,plex.tv
-DOMAIN,edge.api.myqnapcloud.com
 #wechat
 DOMAIN,resstatic.servicewechat.com
 DOMAIN-SUFFIX,wechat.com
