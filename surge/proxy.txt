@@ -1,6 +1,13 @@
 #olo
 IP-CIDR,5.28.192.0/18,no-resolve
 DOMAIN,img.xwbo.com
+DOMAIN-SUFFIX,emby.tv
+DOMAIN-SUFFIX,rarbg.is
+DOMAIN-SUFFIX,mymyimg.net
+DOMAIN-SUFFIX,mymypic.net
+DOMAIN-SUFFIX,npmjs.org
+DOMAIN-SUFFIX,asiantolick.com
+DOMAIN-SUFFIX,myqnapcloud.com
 DOMAIN-SUFFIX,yandex.net
 DOMAIN-SUFFIX,weserv.nl
 DOMAIN-SUFFIX,gstatic.com
