@@ -33,7 +33,6 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
 #无忧行
 DOMAIN-SUFFIX,awsglobalaccelerator.com
-
 DOMAIN-SUFFIX,hcaptcha.com
 DOMAIN-SUFFIX,newsblur.com
 DOMAIN,jp.netcdn.space
