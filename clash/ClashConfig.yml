@@ -16,10 +16,9 @@ profile:
   store-fake-ip: true
 dns:
   enable: true
-  listen: 0.0.0.0:53
   default-nameserver:
     - 114.114.114.114
-    - 8.8.8.8
+    - 223.5.5.5
   ipv6: false
   enhanced-mode: fake-ip
   fake-ip-range: 198.18.0.1/16
