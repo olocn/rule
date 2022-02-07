@@ -5,6 +5,7 @@
 tnc3-aliec2.snssdk.com
 trackinghub.starbucks.com.cn
 
+analytics.95516.com
 .uyunad.com
 .appcloudcdn.com
 adashbc.ut.taobao.com
