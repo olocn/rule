@@ -12,7 +12,6 @@ hosts:
 external-controller: 0.0.0.0:9090
 profile:
   store-selected: true
-  tracing: true
   store-fake-ip: true
 dns:
   enable: true
