@@ -5,6 +5,11 @@
 tnc3-aliec2.snssdk.com
 trackinghub.starbucks.com.cn
 
+.uyunad.com
+.appcloudcdn.com
+adashbc.ut.taobao.com
+analytics-api.smzdm.com
+.2q10.com
 log.umsns.com
 poweredby.jads.co
 access.speech.ai.xiaomi.com
