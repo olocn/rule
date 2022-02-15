@@ -1,5 +1,6 @@
 #olo
 IP-CIDR,5.28.192.0/18,no-resolve
+DOMAIN-SUFFIX,hifini.com
 DOMAIN,p.4c4crt.info
 DOMAIN,img.xwbo.com
 DOMAIN-SUFFIX,qnap.com
