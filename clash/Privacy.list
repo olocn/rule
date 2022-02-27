@@ -7,6 +7,7 @@ DOMAIN,analytics.plex.tv
 DOMAIN,safebrowsing.google.com
 DOMAIN,trackinghub.starbucks.com.cn
 DOMAIN,log.umsns.com
+DOMAIN-SUFFIX,js96110.com.cn
 #CAD
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
