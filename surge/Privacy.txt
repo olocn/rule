@@ -11,6 +11,7 @@ analytics.95516.com
 .appcloudcdn.com
 adashbc.ut.taobao.com
 analytics-api.smzdm.com
+.res-ga.smzdm.com
 .2q10.com
 log.umsns.com
 poweredby.jads.co
