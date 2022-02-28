@@ -4,7 +4,7 @@
 .pangolin-sdk-toutiao.com
 tnc3-aliec2.snssdk.com
 trackinghub.starbucks.com.cn
-
+analytics-api-01.smzdm.com
 .js96110.com.cn
 analytics.95516.com
 .uyunad.com
