@@ -1,15 +1,124 @@
 #olo
 #everdale
-DOMAIN-SUFFIX,everdalegame.com
-DOMAIN,supercell.helpshift.com
+.everdalegame.com
+supercell.helpshift.com
 
 #notion
-DOMAIN-SUFFIX,intercom.io
-DOMAIN-SUFFIX,branch.io
-DOMAIN-SUFFIX,ap-southeast-1.amazonaws.com
-DOMAIN,s3.us-west-2.amazonaws.com
-DOMAIN-SUFFIX,loggly.com
-DOMAIN-SUFFIX,segment.com
-DOMAIN-SUFFIX,intercomcdn.com
-DOMAIN-SUFFIX,amplitude.com
-DOMAIN-SUFFIX,notion.so
+.intercom.io
+.branch.io
+.ap-southeast-1.amazonaws.com
+.us-west-2.amazonaws.com
+.loggly.com
+.segment.com
+.intercomcdn.com
+.amplitude.com
+.notion.so
+
+# ---(Apple)---
+testflight.apple.com
+.appsto.re // Apple URL Shortener
+.smoot.apple.com // Spotlight
+amp-api.podcasts.apple.com // Podcasts
+beta.music.apple.com // Apple Music Web
+books.itunes.apple.com // iBooks Store download
+lookup-api.apple.com // Look Up
+radio.itunes.apple.com // Apple Music Radio
+# > Web Preview
+apps.apple.com
+books.apple.com
+itunes.apple.com
+tv.apple.com
+
+# > News
+gateway.icloud.com
+.apple.news
+news-assets.apple.com
+news-client.apple.com
+news-client-search.apple.com
+news-edge.apple.com
+news-events.apple.com
+apple.comscoreresearch.com
+
+# > Akamai
+a248.e.akamai.net
+a771.dscq.akamai.net
+# > Amazon
+.amazon.co.jp
+d3c33hcgiwev3.cloudfront.net
+payments-jp.amazon.com
+s3-ap-northeast-1.amazonaws.com
+s3-ap-southeast-2.amazonaws.com
+
+# > Microsoft
+.aka.ms
+.github.blog
+.github.com
+.github.io
+.githubusercontent.com
+.onedrive.live.com
+.streaming.mediaservices.windows.net
+assets1.xboxlive.com
+assets2.xboxlive.com
+az416426.vo.msecnd.net
+az668014.vo.msecnd.net
+
+# > Microsoft
+.bing.com
+.linkedin.com
+.licdn.com
+.msn.com
+.skype.com
+
+# > Twitter
+.periscope.tv
+.pscp.tv
+.t.co
+.tweetdeck.com
+.twimg.co
+.twimg.com
+.twitpic.com
+.twitter.com
+.twitter.jp
+.vine.co
+# > Wikimedia Foundation
+.mediawiki.org
+.wikibooks.org
+.wikidata.org
+.wikileaks.org
+.wikimedia.org
+.wikimediafoundation.org
+.wikinews.org
+.wikipedia.org
+.wikiquote.org
+.wikisource.org
+.wikiversity.org
+.wikivoyage.org
+.wiktionary.org
+
+# > pixiv
+.pixiv.net
+.pixiv.org
+.pximg.net
+
+# > Meta
+.accountkit.com
+.cdninstagram.com
+.f8.com
+.facebookmail.com
+.fb.com
+.fb.me
+.fb.watch
+.fbaddins.com
+.fbcdn.net
+.fbsbx.com
+.fbworkmail.com
+.instagram.com
+.m.me
+.messenger.com
+.oculus.com
+.oculuscdn.com
+.readyatdawn.com
+.rocksdb.org
+.whatsapp.com
+.whatsapp.net
+.facebook
