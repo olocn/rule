@@ -121,4 +121,4 @@ az668014.vo.msecnd.net
 .rocksdb.org
 .whatsapp.com
 .whatsapp.net
-.facebook
+.facebook.com
