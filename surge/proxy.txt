@@ -2,7 +2,15 @@
 #everdale
 .everdalegame.com
 supercell.helpshift.com
-
+.ytimg.com
+.googleapis.com
+yt3.ggpht.com
+.v2ex.co
+.yande.re
+.v2ex.com
+.youtube.com
+.googleapis.com
+.googlevideo.com
 #notion
 .intercom.io
 .branch.io
