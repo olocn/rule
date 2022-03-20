@@ -20,6 +20,7 @@ loc.map.baidu.com
 sdkconfig.ad.intl.xiaomi.com
 api.mousegesturesapi.com
 adashx.m.taobao.com
+tbm.snssdk.com
 
 .logs.amap.com
 .adashx.ut.amap.com
