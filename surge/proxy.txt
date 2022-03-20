@@ -257,6 +257,7 @@ s3-ap-southeast-2.amazonaws.com
 .xn--ngstr-lra8j.com
 .zynamics.com
 .google.com
+.google.cn
 .blogspot.com
 .goog.com
 # > Apple
