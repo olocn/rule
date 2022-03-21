@@ -3,7 +3,7 @@ supercell.helpshift.com
 .v2ex.co
 .yande.re
 .v2ex.com
-
+.konachan.com
 .javbus.com
 .us-east-2.amazonaws.com
 # notion
