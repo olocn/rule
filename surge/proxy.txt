@@ -9,6 +9,7 @@ yt3.ggpht.com
 .youtube.com
 .googlevideo.com
 .javbus.com
+.us-east-2.amazonaws.com
 # notion
 .intercom.io
 .branch.io
