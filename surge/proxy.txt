@@ -1,13 +1,9 @@
 .everdalegame.com
 supercell.helpshift.com
-.ytimg.com
-.googleapis.com
-yt3.ggpht.com
 .v2ex.co
 .yande.re
 .v2ex.com
-.youtube.com
-.googlevideo.com
+
 .javbus.com
 .us-east-2.amazonaws.com
 # notion
@@ -243,6 +239,12 @@ s3-ap-southeast-2.amazonaws.com
 .gvt0.com
 .gvt1.com
 .gvt3.com
+.youtube.com
+.googlevideo.com
+.ytimg.com
+.googleapis.com
+.gstatic.com
+yt3.ggpht.com
 .itasoftware.com
 .on2.com
 .recaptcha.net
