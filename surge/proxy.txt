@@ -374,6 +374,7 @@ az668014.vo.msecnd.net
 .pixiv.net
 .pixiv.org
 .pximg.net
+.pixiv.cat
 # > Reddit
 .redd.it
 .reddit.com
