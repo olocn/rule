@@ -21,7 +21,7 @@ sdkconfig.ad.intl.xiaomi.com
 api.mousegesturesapi.com
 adashx.m.taobao.com
 tbm.snssdk.com
-
+zhihu-web-analytics.zhihu.com
 .logs.amap.com
 .adashx.ut.amap.com
 .optimus-ads.amap.com
