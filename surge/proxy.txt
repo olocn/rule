@@ -8,7 +8,7 @@ yt3.ggpht.com
 .v2ex.com
 .youtube.com
 .googlevideo.com
-
+.javbus.com
 # notion
 .intercom.io
 .branch.io
@@ -258,6 +258,7 @@ s3-ap-southeast-2.amazonaws.com
 .zynamics.com
 .google.com
 .google.cn
+.google.com.hk
 .blogspot.com
 .goog.com
 # > Apple
@@ -356,6 +357,7 @@ nytimes.map.fastly.net
 .github.com
 .github.io
 .githubusercontent.com
+.githubassets.com
 .onedrive.live.com
 .streaming.mediaservices.windows.net
 assets1.xboxlive.com
