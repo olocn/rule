@@ -5,6 +5,10 @@ supercell.helpshift.com
 .v2ex.com
 .konachan.com
 .javbus.com
+.snapgram.co
+www.picnew.org
+www.98tuch.net
+www.sehuatang.org
 .us-east-2.amazonaws.com
 # notion
 .intercom.io
