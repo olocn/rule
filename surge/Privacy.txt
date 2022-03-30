@@ -22,6 +22,8 @@ track.atom-data.io
 app-measurement.com
 .supersonicads.com
 draper.popcap.com
+.pangolin-sdk-toutiao.com
+.snssdk.com
 .pangolin-sdk-toutiao-b.com
 # Privacy
 .adjust.com
