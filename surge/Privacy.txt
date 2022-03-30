@@ -25,6 +25,7 @@ draper.popcap.com
 .pangolin-sdk-toutiao.com
 .snssdk.com
 .pangolin-sdk-toutiao-b.com
+.pglstatp-toutiao.com
 # Privacy
 .adjust.com
 .cpatrk.net
