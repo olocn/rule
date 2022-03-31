@@ -1,13 +1,3 @@
-#nojp
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,18comic.org
-DOMAIN-SUFFIX,addthis.com
-DOMAIN-SUFFIX,addthisedge.com
-DOMAIN-SUFFIX,jkforum.net
-DOMAIN-SUFFIX,playno1.com
-DOMAIN-SUFFIX,sexyno1.com
-DOMAIN-SUFFIX,playio1.com
-
 # > PayPal
 USER-AGENT,PayPal*
 DOMAIN-SUFFIX,paypal.com
