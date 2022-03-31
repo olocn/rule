@@ -10,6 +10,17 @@ www.picnew.org
 www.98tuch.net
 www.sehuatang.org
 .us-east-2.amazonaws.com
+
+#nojp
+.18comic.vip
+.18comic.org
+.addthis.com
+.addthisedge.com
+.jkforum.net
+.playno1.com
+.sexyno1.com
+.playio1.com
+
 # notion
 .intercom.io
 .branch.io
