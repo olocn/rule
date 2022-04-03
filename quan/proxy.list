@@ -14,6 +14,16 @@ DOMAIN-SUFFIX,bing.com,PROXY
 DOMAIN-SUFFIX,everdalegame.com,PROXY
 DOMAIN,supercell.helpshift.com,PROXY
 
+DOMAIN-SUFFIX,18comic.vip,PROXY
+DOMAIN-SUFFIX,18comic.org,PROXY
+DOMAIN-SUFFIX,18comic.cc,PROXY
+DOMAIN-SUFFIX,addthis.com,PROXY
+DOMAIN-SUFFIX,addthisedge.com,PROXY
+DOMAIN-SUFFIX,jkforum.net,PROXY
+DOMAIN-SUFFIX,playno1.com,PROXY
+DOMAIN-SUFFIX,sexyno1.com,PROXY
+DOMAIN-SUFFIX,playio1.com,PROXY
+
 #notion
 DOMAIN-SUFFIX,intercom.io,PROXY
 DOMAIN-SUFFIX,branch.io,PROXY
