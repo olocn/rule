@@ -27,6 +27,7 @@ draper.popcap.com
 .pangolin-sdk-toutiao-b.com
 .pglstatp-toutiao.com
 analytics.95516.com
+tracert.alipay.com
 # Privacy
 .adjust.com
 .cpatrk.net
