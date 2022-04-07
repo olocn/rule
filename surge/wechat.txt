@@ -144,16 +144,16 @@ IP-CIDR,58.247.204.0/24
 IP-CIDR,58.247.205.0/24
 
 #DOMAIN-SUFFIX
-HOST-SUFFIX,wechat.com
-HOST-SUFFIX,weixin.com
-HOST-SUFFIX,qq.com
-HOST-SUFFIX,tenpay.com
-HOST-SUFFIX,gtimg.com
-HOST-SUFFIX,qpic.cn
-HOST-SUFFIX,qlogo.cn
-HOST-SUFFIX,iot-tencent.com
-HOST-SUFFIX,wechatos.net
-HOST-SUFFIX,servicewechat.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN-SUFFIX,weixin.com
+DOMAIN-SUFFIX,qq.com
+DOMAIN-SUFFIX,tenpay.com
+DOMAIN-SUFFIX,gtimg.com
+DOMAIN-SUFFIX,qpic.cn
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,iot-tencent.com
+DOMAIN-SUFFIX,wechatos.net
+DOMAIN-SUFFIX,servicewechat.com
 
 #USER-AGENT
 USER-AGENT,WeChat*
