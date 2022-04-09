@@ -272,6 +272,7 @@ DOMAIN-SUFFIX,webmproject.org
 DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,widevine.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
+DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,zynamics.com
 DOMAIN-KEYWORD,google
 DOMAIN-KEYWORD,.blogspot.
