@@ -32,6 +32,8 @@ DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
 
+
+# (D.C.S.G?)
 DOMAIN-SUFFIX,9cache.com
 DOMAIN-SUFFIX,9gag.com
 DOMAIN-SUFFIX,abc.com
@@ -189,6 +191,7 @@ DOMAIN-SUFFIX,turbobit.net
 DOMAIN-SUFFIX,tutanota.com
 DOMAIN-SUFFIX,urbandictionary.com
 DOMAIN-SUFFIX,ustream.tv
+DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,venturebeat.com
 DOMAIN-SUFFIX,viber.com
 DOMAIN-SUFFIX,vimeo.com
@@ -215,18 +218,18 @@ DOMAIN-SUFFIX,zeronet.io
 DOMAIN-SUFFIX,z-lib.org
 DOMAIN-SUFFIX,zophar.net
 DOMAIN-SUFFIX,zyxel.com
-DOMAIN-SUFFIX,ab.skk.moe
-DOMAIN-SUFFIX,csp.int-x3.letsencrypt.org
- > Akamai
-DOMAIN-SUFFIX,248.e.akamai.net
-DOMAIN-SUFFIX,771.dscq.akamai.net
-> Amazon
+DOMAIN,lab.skk.moe
+DOMAIN,ocsp.int-x3.letsencrypt.org
+# > Akamai
+DOMAIN,a248.e.akamai.net
+DOMAIN,a771.dscq.akamai.net
+# > Amazon
 DOMAIN-SUFFIX,amazon.co.jp
-DOMAIN-SUFFIX,3c33hcgiwev3.cloudfront.net
-DOMAIN-SUFFIX,ayments-jp.amazon.com
-DOMAIN-SUFFIX,3-ap-northeast-1.amazonaws.com
-DOMAIN-SUFFIX,3-ap-southeast-2.amazonaws.com
-> Alphabet
+DOMAIN,d3c33hcgiwev3.cloudfront.net
+DOMAIN,payments-jp.amazon.com
+DOMAIN,s3-ap-northeast-1.amazonaws.com
+DOMAIN,s3-ap-southeast-2.amazonaws.com
+# > Alphabet
 DOMAIN-SUFFIX,abc.xyz
 DOMAIN-SUFFIX,admob.com
 DOMAIN-SUFFIX,adsense.com
@@ -251,20 +254,16 @@ DOMAIN-SUFFIX,getoutline.org
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,gmodules.com
+# DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1.com
 DOMAIN-SUFFIX,gvt3.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,t3.ggpht.com
 DOMAIN-SUFFIX,itasoftware.com
 DOMAIN-SUFFIX,on2.com
 DOMAIN-SUFFIX,recaptcha.net
 DOMAIN-SUFFIX,schema.org
 DOMAIN-SUFFIX,tensorflow.org
+DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,tfhub.dev
 DOMAIN-SUFFIX,tiltbrush.com
 DOMAIN-SUFFIX,waymo.com
@@ -274,28 +273,26 @@ DOMAIN-SUFFIX,webrtc.org
 DOMAIN-SUFFIX,widevine.com
 DOMAIN-SUFFIX,xn--ngstr-lra8j.com
 DOMAIN-SUFFIX,zynamics.com
-DOMAIN-SUFFIX,google.com
-DOMAIN-SUFFIX,google.cn
-DOMAIN-SUFFIX,google.com.hk
-DOMAIN-SUFFIX,blogspot.com
-DOMAIN-SUFFIX,goog.com
- > Apple
-DOMAIN-SUFFIX,estflight.apple.com
- > Automattic
+DOMAIN-KEYWORD,google
+DOMAIN-KEYWORD,.blogspot.
+DOMAIN-SUFFIX,goog
+# > Apple
+DOMAIN,testflight.apple.com
+# > Automattic
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,videopress.com
 DOMAIN-SUFFIX,wordpress.com
- > Bloomberg
+# > Bloomberg
 DOMAIN-SUFFIX,bloomberg.cn
 DOMAIN-SUFFIX,bloomberg.com
 DOMAIN-SUFFIX,bloomberg.de
 DOMAIN-SUFFIX,bloombergview.com
- > Clubhouse
+# > Clubhouse
 DOMAIN-SUFFIX,clubhouseapi.com
 DOMAIN-SUFFIX,joinclubhouse.com
-DOMAIN-SUFFIX,lubhouse.pubnubapi.com
- > Crypto
+DOMAIN,clubhouse.pubnubapi.com
+# > Crypto
 DOMAIN-SUFFIX,aex.com
 DOMAIN-SUFFIX,bibox.com
 DOMAIN-SUFFIX,binance.cc
@@ -329,25 +326,29 @@ DOMAIN-SUFFIX,poloniex.com
 DOMAIN-SUFFIX,sushi.com
 DOMAIN-SUFFIX,uniswap.org
 DOMAIN-SUFFIX,zb.com
- > Discord
+# > Discord
 DOMAIN-SUFFIX,discord.com
 DOMAIN-SUFFIX,discordapp.com
 DOMAIN-SUFFIX,discordapp.net
- > Dropbox
+# > Dropbox
 DOMAIN-SUFFIX,dropbox.com
 DOMAIN-SUFFIX,dropboxapi.com
 DOMAIN-SUFFIX,dropboxusercontent.com
- > Fastly
+# > Fastly
 DOMAIN-SUFFIX,freetls.fastly.net
-DOMAIN-SUFFIX,loud-cdn-digitalocean-com.global.ssl.fastly.net
-DOMAIN-SUFFIX,ithub.global.ssl.fastly.net
-DOMAIN-SUFFIX,ytimes.map.fastly.net
- > Line
+DOMAIN,cloud-cdn-digitalocean-com.global.ssl.fastly.net
+DOMAIN,github.global.ssl.fastly.net
+DOMAIN,nytimes.map.fastly.net
+# > Line
 DOMAIN-SUFFIX,line.me
 DOMAIN-SUFFIX,line-apps.com
 DOMAIN-SUFFIX,line-scdn.net
 DOMAIN-SUFFIX,naver.jp
- > Meta
+IP-CIDR,103.2.30.0/23,no-resolve
+IP-CIDR,125.209.208.0/20,no-resolve
+IP-CIDR,147.92.128.0/17,no-resolve
+IP-CIDR,203.104.144.0/21,no-resolve
+# > Meta
 DOMAIN-SUFFIX,accountkit.com
 DOMAIN-SUFFIX,cdninstagram.com
 DOMAIN-SUFFIX,f8.com
@@ -368,42 +369,64 @@ DOMAIN-SUFFIX,readyatdawn.com
 DOMAIN-SUFFIX,rocksdb.org
 DOMAIN-SUFFIX,whatsapp.com
 DOMAIN-SUFFIX,whatsapp.net
-DOMAIN-SUFFIX,facebook.com
- > Microsoft
+DOMAIN-KEYWORD,.facebook.
+# > Microsoft
 DOMAIN-SUFFIX,aka.ms
 DOMAIN-SUFFIX,github.blog
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,github.io
-DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,githubassets.com
+DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,onedrive.live.com
 DOMAIN-SUFFIX,streaming.mediaservices.windows.net
-DOMAIN-SUFFIX,ssets1.xboxlive.com
-DOMAIN-SUFFIX,ssets2.xboxlive.com
-DOMAIN-SUFFIX,z416426.vo.msecnd.net
-DOMAIN-SUFFIX,z668014.vo.msecnd.net
- > Pinterest
+DOMAIN,assets1.xboxlive.com
+DOMAIN,assets2.xboxlive.com
+DOMAIN,az416426.vo.msecnd.net
+DOMAIN,az668014.vo.msecnd.net
+# > Pinterest
 DOMAIN-SUFFIX,pinimg.com
-DOMAIN-SUFFIX,pinterest.com
- > pixiv
+DOMAIN-KEYWORD,.pinterest.
+# > pixiv
 DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,pixiv.org
 DOMAIN-SUFFIX,pximg.net
-DOMAIN-SUFFIX,pixiv.cat
- > Reddit
+# > Reddit
 DOMAIN-SUFFIX,redd.it
 DOMAIN-SUFFIX,reddit.com
 DOMAIN-SUFFIX,redditmedia.com
 DOMAIN-SUFFIX,redditstatic.com
- > Reuters
+# > Reuters
 DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,reutersmedia.net
- > Steam
+# > Steam
 DOMAIN-SUFFIX,steamcommunity.com
- > The Economist
+# DOMAIN,store.steampowered.com
+# > Telegram
+DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,t.me
+DOMAIN-SUFFIX,tdesktop.com
+DOMAIN-SUFFIX,telegra.ph
+DOMAIN-SUFFIX,telegram.me
+DOMAIN-SUFFIX,telegram.org
+DOMAIN-SUFFIX,telesco.pe
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/22,no-resolve
+IP-CIDR,91.108.12.0/22,no-resolve
+IP-CIDR,91.108.16.0/22,no-resolve
+IP-CIDR,91.108.20.0/22,no-resolve
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,91.105.192.0/23,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR6,2001:b28:f23d::/48,no-resolve
+IP-CIDR6,2001:b28:f23f::/48,no-resolve
+IP-CIDR6,2001:67c:4e8::/48,no-resolve
+IP-CIDR6,2001:b28:f23c::/48,no-resolve
+IP-CIDR6,2a0a:f280::/32,no-resolve
+# > The Economist
 DOMAIN-SUFFIX,economist.com
 DOMAIN-SUFFIX,static-economist.com
- > The New York Times
+# > The New York Times
 DOMAIN-SUFFIX,newyorktimes.com
 DOMAIN-SUFFIX,nyt.com
 DOMAIN-SUFFIX,nytco.com
@@ -412,7 +435,7 @@ DOMAIN-SUFFIX,nytimg.com
 DOMAIN-SUFFIX,nytlog.com
 DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,tmagazine.com
- > Twitter
+# > Twitter
 DOMAIN-SUFFIX,periscope.tv
 DOMAIN-SUFFIX,pscp.tv
 DOMAIN-SUFFIX,t.co
@@ -423,7 +446,7 @@ DOMAIN-SUFFIX,twitpic.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,vine.co
- > Wikimedia Foundation
+# > Wikimedia Foundation
 DOMAIN-SUFFIX,mediawiki.org
 DOMAIN-SUFFIX,wikibooks.org
 DOMAIN-SUFFIX,wikidata.org
@@ -437,45 +460,49 @@ DOMAIN-SUFFIX,wikisource.org
 DOMAIN-SUFFIX,wikiversity.org
 DOMAIN-SUFFIX,wikivoyage.org
 DOMAIN-SUFFIX,wiktionary.org
- > Yahoo
+# > Yahoo
 DOMAIN-SUFFIX,yahoo.com
-DOMAIN-SUFFIX,earch.yahoo.co.jp
- > Yandex
+DOMAIN,search.yahoo.co.jp
+# > Yandex
 DOMAIN-SUFFIX,yadi.sk
-DOMAIN-SUFFIX,isk.yandex.com
+DOMAIN,disk.yandex.com
 
+# (Region-Restricted Access Denied)
 DOMAIN-SUFFIX,aicoin.com
 DOMAIN-SUFFIX,aimoon.com
 DOMAIN-SUFFIX,engadget.com
 DOMAIN-SUFFIX,ifixit.com
 DOMAIN-SUFFIX,terabox.com
 DOMAIN-SUFFIX,zaobao.com.sg
-DOMAIN-SUFFIX,ego.here.com
+DOMAIN,addons.mozilla.org // Firefox Add-ons HTTP 451
+DOMAIN,wego.here.com
+# > Alphabet
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
-
----(Apple)---
+# ---(Apple)---
 DOMAIN-SUFFIX,appsto.re // Apple URL Shortener
 DOMAIN-SUFFIX,smoot.apple.com // Spotlight
-DOMAIN-SUFFIX,mp-api.podcasts.apple.com // Podcasts
-DOMAIN-SUFFIX,eta.music.apple.com // Apple Music Web
-DOMAIN-SUFFIX,ooks.itunes.apple.com // iBooks Store download
-DOMAIN-SUFFIX,ookup-api.apple.com // Look Up
-DOMAIN-SUFFIX,adio.itunes.apple.com // Apple Music Radio
- > Web Preview
-DOMAIN-SUFFIX,pps.apple.com
-DOMAIN-SUFFIX,ooks.apple.com
-DOMAIN-SUFFIX,tunes.apple.com
-DOMAIN-SUFFIX,v.apple.com
- > News
-DOMAIN-SUFFIX,ateway.icloud.com
+DOMAIN,amp-api.podcasts.apple.com // Podcasts
+DOMAIN,beta.music.apple.com // Apple Music Web
+DOMAIN,books.itunes.apple.com // iBooks Store download
+DOMAIN,lookup-api.apple.com // Look Up
+DOMAIN,radio.itunes.apple.com // Apple Music Radio
+# > Web Preview
+DOMAIN,apps.apple.com
+DOMAIN,books.apple.com
+DOMAIN,itunes.apple.com
+DOMAIN,tv.apple.com
+# > News
+DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,ews-assets.apple.com
-DOMAIN-SUFFIX,ews-client.apple.com
-DOMAIN-SUFFIX,ews-client-search.apple.com
-DOMAIN-SUFFIX,ews-edge.apple.com
-DOMAIN-SUFFIX,ews-events.apple.com
-DOMAIN-SUFFIX,pple.comscoreresearch.com
+DOMAIN,news-assets.apple.com
+DOMAIN,news-client.apple.com
+DOMAIN,news-client-search.apple.com
+DOMAIN,news-edge.apple.com
+DOMAIN,news-events.apple.com
+DOMAIN,apple.comscoreresearch.com
+# ------
+# > Microsoft
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,licdn.com
