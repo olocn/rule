@@ -10,8 +10,9 @@ DOMAIN-SUFFIX,ww.picnew.org
 DOMAIN-SUFFIX,ww.98tuch.net
 DOMAIN-SUFFIX,ww.sehuatang.org
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
+DOMAIN-SUFFIX,pixiv.cat
 
-DOMAIN-SUFFIX,nojp
+#nojp
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,18comic.org
 DOMAIN-SUFFIX,addthis.com
@@ -21,7 +22,7 @@ DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,sexyno1.com
 DOMAIN-SUFFIX,playio1.com
 
-DOMAIN-SUFFIX, notion
+#notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,ap-southeast-1.amazonaws.com
