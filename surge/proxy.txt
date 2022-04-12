@@ -12,15 +12,7 @@ DOMAIN-SUFFIX,ww.sehuatang.org
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,pixiv.cat
 
-#nojp
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,18comic.org
-DOMAIN-SUFFIX,addthis.com
-DOMAIN-SUFFIX,addthisedge.com
-DOMAIN-SUFFIX,jkforum.net
-DOMAIN-SUFFIX,playno1.com
-DOMAIN-SUFFIX,sexyno1.com
-DOMAIN-SUFFIX,playio1.com
+
 
 #notion
 DOMAIN-SUFFIX,intercom.io
