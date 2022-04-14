@@ -11,8 +11,9 @@ r3.o.lencr.org
 passportapi.115.com
 dizhensubao.getui.com
 origin-a.akamaihd.net
-analytics.95516.com
-tracking.miui.com
+.ingest.sentry.io
+www.googletagservices.com
+www.google-analytics.com
 
 # Unbreak
 # > General
