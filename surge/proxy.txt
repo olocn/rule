@@ -11,7 +11,7 @@ DOMAIN-SUFFIX,ww.98tuch.net
 DOMAIN-SUFFIX,ww.sehuatang.org
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,pixiv.cat
-
+DOMAIN-SUFFIX,nhentai.net
 
 
 #notion
