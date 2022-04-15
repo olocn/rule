@@ -1,0 +1,24 @@
+# > PayPal
+.paypal.com
+.paypal.me
+.paypalobjects.com
+
+#TG
+
+.t.me
+.tdesktop.com
+.telegram.me
+.telesco.pe
+.telegra.ph
+.telegram.org
+.legra.ph
+
+#nojp
+.18comic.vip
+.18comic.org
+.addthis.com
+.addthisedge.com
+.jkforum.net
+.playno1.com
+.sexyno1.com
+.playio1.com
