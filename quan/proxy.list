@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,us-east-2.amazonaws.com,PROXY
 DOMAIN-SUFFIX,pixiv.cat,PROXY
 DOMAIN-SUFFIX,nhentai.net,PROXY
 DOMAIN,www.92hm.top,PROXY
+DOMAIN-SUFFIX,enpass.io,PROXY
 
 #notion
 DOMAIN-SUFFIX,intercom.io,PROXY
