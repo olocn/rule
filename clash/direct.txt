@@ -4,6 +4,8 @@
 .snapdrop.net
 download.jetbrains.com
 origin-a.akamaihd.net
+resstatic.servicewechat.com
+.wechat.com
 # ---(Microsoft)---
 # > Outlook
 outlook.office365.com
