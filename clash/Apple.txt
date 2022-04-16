@@ -1,4 +1,3 @@
-# Apple
 .aaplimg.com
 .apple.co
 .apple.com
