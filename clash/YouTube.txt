@@ -1,10 +1,6 @@
-# > PayPal
 .paypal.com
 .paypal.me
 .paypalobjects.com
-
-#TG
-
 .t.me
 .tdesktop.com
 .telegram.me
@@ -12,8 +8,6 @@
 .telegra.ph
 .telegram.org
 .legra.ph
-
-#nojp
 .18comic.vip
 .18comic.org
 .addthis.com
