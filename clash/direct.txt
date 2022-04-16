@@ -1,17 +1,13 @@
-# China Area Network
 .flyert.com
 .gandi.net
 .snapdrop.net
 download.jetbrains.com
 origin-a.akamaihd.net
-resstatic.servicewechat.com
+.servicewechat.com
 .wechat.com
-# ---(Microsoft)---
-# > Outlook
 outlook.office365.com
 smtp-mail.outlook.com
 smtp.office365.com
-# > Windows Server Update Services
 .dl.delivery.mp.microsoft.com
 .update.microsoft.com
 .windowsupdate.com
@@ -19,17 +15,12 @@ smtp.office365.com
 download.microsoft.com
 wustat.windows.com
 ntservicepack.microsoft.com
-
-# > Steam
 .cm.steampowered.com
 api.steampowered.com
-# > IP Query
 ip.istatmenus.app
 sms.imagetasks.com
-# > Speed Test
 .netspeedtestmaster.com
 speedtest.macpaw.com
-# > Private Tracker
 .acg.rip
 .animebytes.tv
 .awesome-hd.me
