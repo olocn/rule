@@ -270,6 +270,7 @@ s3-ap-southeast-2.amazonaws.com
 .blogspot.com
 .google
 .googleapis.com
+.googlevideo.com
 .goog
 # > Apple
 testflight.apple.com
