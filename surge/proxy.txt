@@ -13,7 +13,7 @@ DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,pixiv.cat
 DOMAIN-SUFFIX,nhentai.net
 DOMAIN,www.92hm.top
-
+DOMAIN-SUFFIX,newsblur.com
 #notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
