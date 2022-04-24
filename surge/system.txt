@@ -1,18 +1,19 @@
 # olo
 DOMAIN-SUFFIX,pki.goog
-DOMAIN-SUFFIX,essions.bugsnag.com
-DOMAIN-SUFFIX,spe19-cn-ssl.ls.apple.com
-DOMAIN-SUFFIX,ime.apple.com
+DOMAIN,essions.bugsnag.com
+DOMAIN,spe19-cn-ssl.ls.apple.com
+DOMAIN,time.apple.com
 DOMAIN-SUFFIX,olocn.fun
-DOMAIN-SUFFIX,tun.services.mozilla.com
-DOMAIN-SUFFIX,9.cnzz.com
+DOMAIN,tun.services.mozilla.com
+DOMAIN,9.cnzz.com
 DOMAIN-SUFFIX,3.o.lencr.org
 DOMAIN-SUFFIX,assportapi.115.com
 DOMAIN-SUFFIX,izhensubao.getui.com
 DOMAIN-SUFFIX,rigin-a.akamaihd.net
-DOMAIN-SUFFIX,ingest.sentry.io
-DOMAIN-SUFFIX,ww.googletagservices.com
-DOMAIN-SUFFIX,ww.google-analytics.com
+DOMAIN,ingest.sentry.io
+DOMAIN,ww.googletagservices.com
+DOMAIN,ww.google-analytics.com
+DOMAIN,edge.api.myqnapcloud.com
 
 # Unbreak
 # > General
