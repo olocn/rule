@@ -1,4 +1,6 @@
 # olo
+DOMAIN-SUFFIX,jegotrip.com.cn
+DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,rdimg.com
 # China Area Network
 DOMAIN-SUFFIX,flyert.com
