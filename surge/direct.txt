@@ -1,4 +1,5 @@
 # olo
+DOMAIN-SUFFIX,waqi.info
 DOMAIN-SUFFIX,jegotrip.com.cn
 DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,rdimg.com
