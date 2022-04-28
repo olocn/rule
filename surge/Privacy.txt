@@ -1,6 +1,7 @@
 # olo
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
+DOMAIN,api.mousegesturesapi.com
 #mitv
 DOMAIN,app.chat.xiaomi.net
 DOMAIN,gvod.aiseejapp.atianqi.com
