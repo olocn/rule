@@ -2,6 +2,10 @@
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN,api.mousegesturesapi.com
+DOMAIN-SUFFIX,getui.com
+DOMAIN-SUFFIX,getui.net
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
 #mitv
 DOMAIN,app.chat.xiaomi.net
 DOMAIN,gvod.aiseejapp.atianqi.com
