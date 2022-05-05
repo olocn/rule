@@ -1,9 +1,14 @@
 # olo
 DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,waqi.info
-DOMAIN-SUFFIX,jegotrip.com.cn
 DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,rdimg.com
+
+# 无忧行
+IP-CIDR,18.163.0.0/16,no-resolve
+IP-CIDR,15.184.0.0/16,no-resolve
+DOMAIN-SUFFIX,jegotrip.com.cn
+
 # China Area Network
 DOMAIN-SUFFIX,flyert.com
 DOMAIN-SUFFIX,gandi.net
