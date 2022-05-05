@@ -1,6 +1,5 @@
 # olo
 DOMAIN-SUFFIX,pki.goog
-DOMAIN,ulogs.umeng.com
 DOMAIN,essions.bugsnag.com
 DOMAIN,spe19-cn-ssl.ls.apple.com
 DOMAIN,time.apple.com
