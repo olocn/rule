@@ -3,6 +3,8 @@ DOMAIN-SUFFIX,aliyuncs.com
 DOMAIN-SUFFIX,waqi.info
 DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,rdimg.com
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.tv
 
 # 无忧行
 IP-CIDR,18.163.0.0/16,no-resolve
