@@ -138,7 +138,7 @@ DOMAIN-SUFFIX,giocdn.com
 DOMAIN-SUFFIX,growingio.com
 # > MI
 DOMAIN-SUFFIX,tracking.miui.com
-DOMAIN,#api.miwifi.com
+DOMAIN,api.miwifi.com
 DOMAIN,tracking.intl.miui.com
 # > TalkingData
 DOMAIN-SUFFIX,cpatrk.net
