@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,btsow.rest
 DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,18comic.vip
-
+DOMAIN-SUFFIX,pimg.tw
 # > notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
