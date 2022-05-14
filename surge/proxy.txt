@@ -17,6 +17,7 @@ DOMAIN-SUFFIX,enpass.io
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,btsow.rest
 DOMAIN-SUFFIX,dmhy.org
+DOMAIN-SUFFIX,18comic.vip
 
 # > notion
 DOMAIN-SUFFIX,intercom.io
