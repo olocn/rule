@@ -8,6 +8,10 @@ DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
 DOMAIN,sdkconfig.ad.intl.xiaomi.com
+DOMAIN-SUFFIX,exosrv.com
+DOMAIN-SUFFIX,realsrv.com
+DOMAIN,adserver.juicyads.com
+DOMAIN,proxy.safebrowsing.apple
 #mitv
 DOMAIN,app.chat.xiaomi.net
 DOMAIN,gvod.aiseejapp.atianqi.com
