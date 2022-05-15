@@ -19,11 +19,6 @@ DOMAIN,download.jetbrains.com
 DOMAIN,origin-a.akamaihd.net
 
 # ---(Microsoft)---
-# > Outlook
-DOMAIN,outlook.office365.com
-DOMAIN,smtp-mail.outlook.com
-DOMAIN,smtp.office365.com
-
 # > Windows Server Update Services
 DOMAIN-SUFFIX,dl.delivery.mp.microsoft.com
 DOMAIN-SUFFIX,update.microsoft.com
@@ -79,4 +74,5 @@ DOMAIN-SUFFIX,redacted.ch
 DOMAIN-SUFFIX,springsunday.net
 DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
-GEOIP,CN
+DOMAIN-SUFFIX,cn
+GEOIP,CN,,no-resolve
