@@ -74,5 +74,5 @@ DOMAIN-SUFFIX,redacted.ch
 DOMAIN-SUFFIX,springsunday.net
 DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
-DOMAIN-SUFFIX,cn
-GEOIP,CN,,no-resolve
+DOMAIN-SUFFIX,.cn
+GEOIP,CN,no-resolve
