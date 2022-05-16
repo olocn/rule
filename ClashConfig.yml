@@ -6,10 +6,6 @@ log-level: warning
 ipv6: false
 hosts:
   'mtalk.google.com': 108.177.125.188
-  'jdmscys.nzagda.xyz': 211.99.115.57
-  'zsiwlmc.uplebz.xyz': 42.157.161.14
-  'dob6xwc.tjyoqr.xyz': 124.71.2.4
-  'mempbtg.uplebz.xyz': 42.157.161.3
 external-controller: 0.0.0.0:9090
 profile:
   store-selected: true
