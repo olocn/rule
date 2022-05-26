@@ -5,7 +5,7 @@ DOMAIN-SUFFIX,huatuo.qq.com
 DOMAIN-SUFFIX,rdimg.com
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,plex.tv
-
+DOMAIN-SUFFIX,cdntips.net
 # 无忧行
 IP-CIDR,18.163.0.0/16,no-resolve
 IP-CIDR,15.184.0.0/16,no-resolve
