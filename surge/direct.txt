@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,rdimg.com
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,cdntips.net
+DOMAIN-SUFFIX,189store.com
 # 无忧行
 IP-CIDR,18.163.0.0/16,no-resolve
 IP-CIDR,15.184.0.0/16,no-resolve
@@ -75,4 +76,4 @@ DOMAIN-SUFFIX,springsunday.net
 DOMAIN-SUFFIX,tjupt.org
 DOMAIN-SUFFIX,totheglory.im
 DOMAIN-SUFFIX,.cn
-GEOIP,CN,no-resolve
+GEOIP,CN
