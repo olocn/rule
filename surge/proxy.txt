@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,appcenter.ms
+DOMAIN-SUFFIX,nexitally.com
 # > notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
