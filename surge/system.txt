@@ -1,6 +1,5 @@
 # olo
 DOMAIN-SUFFIX,pki.goog
-DOMAIN-SUFFIX,olocn.fun
 DOMAIN,codepush.appcenter.ms
 DOMAIN,essions.bugsnag.com
 DOMAIN,spe19-cn-ssl.ls.apple.com
