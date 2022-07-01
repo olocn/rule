@@ -6,13 +6,3 @@ DOMAIN-SUFFIX,telesco.pe
 DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,legra.ph
-# jav
-DOMAIN-KEYWORD,jav
-DOMAIN-SUFFIX,18comic.vip
-DOMAIN-SUFFIX,18comic.org
-DOMAIN-SUFFIX,addthis.com
-DOMAIN-SUFFIX,addthisedge.com
-DOMAIN-SUFFIX,jkforum.net
-DOMAIN-SUFFIX,playno1.com
-DOMAIN-SUFFIX,sexyno1.com
-DOMAIN-SUFFIX,playio1.com
