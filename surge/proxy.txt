@@ -5,10 +5,6 @@ DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,konachan.com
 DOMAIN-SUFFIX,snapgram.co
-DOMAIN,www.picnew.org
-DOMAIN,www.98tuch.net
-DOMAIN,www.sehuatang.org
-DOMAIN,www.92hm.top
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,pixiv.cat
 DOMAIN-SUFFIX,nhentai.net
@@ -22,6 +18,22 @@ DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,hotmail.com
+
+# jav
+DOMAIN,www.picnew.org
+DOMAIN,www.98tuch.net
+DOMAIN,www.sehuatang.org
+DOMAIN,www.92hm.top
+DOMAIN-KEYWORD,jav
+DOMAIN-SUFFIX,18comic.vip
+DOMAIN-SUFFIX,18comic.org
+DOMAIN-SUFFIX,addthis.com
+DOMAIN-SUFFIX,addthisedge.com
+DOMAIN-SUFFIX,jkforum.net
+DOMAIN-SUFFIX,playno1.com
+DOMAIN-SUFFIX,sexyno1.com
+DOMAIN-SUFFIX,playio1.com
+
 # > notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
