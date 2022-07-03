@@ -136,7 +136,8 @@ DOMAIN,track.tenjin.com
 DOMAIN,track.tenjin.io
 # >> Alibaba
 DOMAIN-KEYWORD,nbsdk-baichuan
-DOMAIN,DOMAIN,errlog.umeng.com
+
+DOMAIN,errlog.umeng.com
 DOMAIN,otheve.beacon.qq.com
 DOMAIN,av1.xdrig.com
 DOMAIN,me.xdrig.com
