@@ -31,7 +31,6 @@ DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,snssdk.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
-DOMAIN,analytics.95516.com
 DOMAIN,tracert.alipay.com
 DOMAIN-SUFFIX,vod.aiseejapp.atianqi.com
 DOMAIN-SUFFIX,ogonext.tv.kuyun.com
