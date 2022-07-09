@@ -10,6 +10,7 @@ DOMAIN-SUFFIX,189store.com
 DOMAIN-SUFFIX,gov.cn
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,lencr.org
+DOMAIN-SUFFIX,189store.com
 # 无忧行
 IP-CIDR,18.163.0.0/16,no-resolve
 IP-CIDR,15.184.0.0/16,no-resolve
