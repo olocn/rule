@@ -18,7 +18,8 @@ DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,appcenter.ms
 DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,hotmail.com
-
+DOMAIN-SUFFIX,kuromisubs.shop
+DOMAIN-SUFFIX,kuromis.com
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
