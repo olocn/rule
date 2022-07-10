@@ -1,8 +1,0 @@
-#!name=Everdale
-
-[Rule]
-
-#everdale
-DOMAIN-SUFFIX,everdalegame.com,🌑 Proxy
-DOMAIN,supercell.helpshift.com,🌑 Proxy
-DOMAIN-SUFFIX,gc.apple.com,🌑 Proxy
