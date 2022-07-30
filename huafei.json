@@ -1,0 +1,155 @@
+{
+    "activity":{
+
+        "tip":"请在网络好的地方执行\n有些任务可能失败 需要手动\n",
+        "list":[
+                
+                "薅羊毛赚话费",
+                "设置多账号|自动化",
+            
+              
+                
+            ],
+        "mapping" :{
+            "设置多账号|自动化":{
+                "tip":"多账号设置 不同APP登录不同账号",
+                "list":[
+                    "淘宝运行---初始形式",
+                    "淘宝+天猫运行",
+                    "淘+天+点淘运行",
+                    "自动化连接"
+                ],
+                "mapping":{
+                    "淘宝运行---初始形式":{
+                        "type":"set",
+                        "value":"1"
+                    },
+                    "淘宝+天猫运行":{
+                        "type":"set",
+                        "value":"2"
+                    },
+                    "淘+天+点淘运行":{
+                        "type":"set",
+                        "value":"3"
+                        },
+                    "自动化连接":{
+                        "type":"copy",
+                        "value":"shortcuts://run-shortcut?name=淘宝-薅羊毛赚话费&input=text&text=run"
+                    }   
+                    
+                    
+                }
+            },
+            "活动入口":{
+                "list":[
+                    "淘宝",
+                    "天猫",
+                    "点淘"
+                ],
+                "mapping":{
+                    "淘宝":{
+                        "url":"taobao://pages.tmall.com/wow/z/wt/daily-earn-shee/hymB?disableNav=YES&wh_biz=tm"
+                    },
+                    "天猫":{
+                        "url":"tmall://page.tm/appLink?&action=ali.open.nav&h5Url=https%3A%2F%2Fpages.tmall.com%2Fwow%2Fz%2Fwt%2Fdaily-earn-shee%2FhymB%3FdisableNav%3DYES%26wh_biz%3Dtm"
+                    },
+                    "点淘":{
+                        "url":"taobaoliveshare://pages.tmall.com/wow/z/wt/daily-earn-shee/hymB?disableNav=YES&wh_biz=tm"
+                    }
+                }
+                
+            },
+            
+          
+            
+            "薅羊毛赚话费":{
+                "type":"task",
+                "key":["赚话费"]
+                
+            }
+            
+            
+            
+        },
+
+        "taskList":["赚话费"]
+                
+    },
+
+    "taskData":{
+           
+            "tag":"zhuanhuafei",
+            "common":{
+            "url":"https://jiutiao.coding.net/p/shortcuts/d/updatejson/git/raw/master/auto/common/tb.txt"
+            
+            },
+
+            "赚话费":{
+                "type":"task1",
+              
+                "endpage": "taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.taobao.com",
+                "main":"taobao://m.taobao.com/tbopen/index.html?h5Url=https%3A%2F%2Fm.taobao.com",
+                "endMessage":"种树任务结束",
+                
+                "task":{
+                    "tag":"zhuanhuafei",
+                    "scheme":"taobao://m.taobao.com/tbopen/index.html?h5Url=",
+                    "baseurl":"://商品定位.m.tmall.com?deliveryId=占位参数1&sceneId=2203&hd_from_id=100130&fromToken=aR1DJg5c00K9LpnNUeOS9GgikUzUNU7&implId=占位参数2",
+                    "wait":23,
+                    "wait2":"",
+                    "param":{
+                        "商品定位":["nike","anta","adidas","chanel","dior","biotherm","oppo"]
+                    },
+                    "before":[
+                      
+                    ],
+                    "item":[
+
+
+                        "20079 linked_153_0_20079_0",
+                        "18799 other_185_516003_18799_0",
+                        "17804 other_231_490012_17804_0",
+                        
+                        "22557 other_121_669013_22557_0",
+                        "17807 other_231_490023_17807_0",
+                        "25189 other_24_759018_25189_0",
+                        
+                        "19004 other_6_525001_19004_0",
+                        "23774 other_70_706030_23774_0",
+                        "17800 other_231_490013_17800_0",
+                        
+                       
+                        "21577 other_121_490028_21577_0",
+                        "22596 other_150_665015_22596_0",
+                        
+                        "17822 other_231_490024_17822_0",
+                        "23648 other_231_695025_23648_0",
+                        
+                        "17233 other_229_490016_17233_0",
+                        
+                        
+                        
+                        "21563 other_5_618041_21563_0",
+                        "21743 alicom-dz_152_10119_21743_0",
+
+                        "28277 other_12_908015_28277_0",
+                        "19408 other_234_904058_19408_0",
+                        "22995 other_185_674005_22995_0",
+                        "23837 other_133_906026_23837_0",
+                        "25884 other_70_932001_25884_0",
+                        "26604 other_47_1_26604_0",
+                        "24853 other_97_660008_24853_0",
+                        "24949 other_91_889027_24949_0",
+                        "18491 other_276_0_18491_0",
+                        "17825 other_295_891017_17825_0"
+                       
+
+
+                    ]
+                }
+            }
+
+
+
+    }
+}
