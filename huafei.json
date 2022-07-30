@@ -4,12 +4,8 @@
         "tip":"请在网络好的地方执行\n有些任务可能失败 需要手动\n",
         "list":[
                 
-                "❤️薅羊毛赚话费 更新2022-05-23❤️",
+                "❤️薅羊毛赚话费 更新2022-07-11❤️",
                 "设置多账号|自动化",
-                "活动入口",
-                "美团红包",
-                "饿了么红包",
-                "交流·反馈 qq群"
             
               
                 
@@ -63,40 +59,12 @@
                 }
                 
             },
-            "交流·反馈 qq群":{
-                        "url":"mqqapi://card/show_pslcard?src_type=internal&version=1&uin=617186271&card_type=group&source=qrcode"
-                    },
-            "美团红包":{
-                "url":"imeituan://www.meituan.com/web?lch=cps:waimai:3:776c2adbab1063dbf7bb27b032eccb42:weixin194:2:80292&url=https%3A%2F%2Fclick.meituan.com%2Ft%3Ft%3D1%26c%3D1%26p%3DOWMpZ-uzIFOVe6JyOONs3dXuqV0qcAf-r-KCvHdXiNeHGrf99tjKfEFmfKD5wE8tIKFZ5trT0sOMBI8PYBI709TQrHSowZ35lT3KWxR5a72vQtwrwa1jUpHSHlsPQ3wBH50kzjqu3xTNw3PB3roiT2P2MWrO42CJ2lWJd7PKSHsq7SN-lPlsxVNr-c3nhOZlzawAIr5UyPJjc9kRfnAhGytXnltosMtnrJ4-9fEOLfYcYn1hYyDi1pO1mZxZYFcHVaTZ7wo6zUcGkJ9ItxKfslK20asctpDoufdkj2gOK66MIO_E0-GFVB9nJtuWIF02y5LhdVrEh5ZhzlUhXuwSs7abZ1dbqqz4iLIK-XMwHWFt8hqiPJDLqN1KPbyuqfK0C-muxSJTCZNQxRHJYI6zQAskG7LvEhXxrmu3vEcbJ4hhFalkXdPf0W5opucJJRXCEr47CL5dm9L95FIVMLqeCJJ5CE_ghZ2nAjHWmMLUIxXFy6IujV9DipHPcMPs8ZmoZ0SpSCfFgFHdEXj0cRllpHsledjfVhcds2gty75ozk5vwCDgaO6ixMXqlH1193CtPpMtUDqH-iLaM2A0gxcmJ3gXk5UWz5vX-oQbH-Yjy0Ql7Mn_OEV_b_qDyBYgyrb7unXIthK-lehqig2yh0Nd0PV85jl3TZYOTtcA3YycoWhilLGW2wcCjY31r1QDkEgP"
-            },
-            "饿了么红包":{
-                "url":"eleme://web?url=https://m.tb.cn/h.fHjEo2X"
-            },
-             "8月2-15支付宝天天领红包":{
-                "url":"alipays://platformapi/startapp?appId=68687715&url=https%3A%2F%2Frender.alipay.com%2Fp%2Fc%2F180020180000047875%2Fpages%2Findex%2Findex.html%3FuserId%3D2088802913327612&userId=2088802913327612&titlePenetrate=YES&chInfo=ch_share__chsub_CopyLink"
-            },
-           
-            "淘特-天天领红包 09-07":{
-                 "url":"taobao://m.tb.cn/h.fcElrTQ"
-            
-            },
-            "美食币活动入口":{
-                "url":"taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=1000473"
-            },
-            "交流群":{
-                "list":{
-                    "qq":""
-                }
-            },
-            "淘礼金情报群":{
-                "url":"mqqapi://card/show_pslcard?src_type=internal&version=1&uin=596783999&card_type=group&source=qrcode"
-            },
-            
+                   
 
            
 
             
-            "❤️薅羊毛赚话费 更新2022-05-23❤️":{
+            "❤️薅羊毛赚话费 更新2022-07-11❤️":{
                 "type":"task",
                 "key":["赚话费"]
                 
@@ -137,50 +105,9 @@
                     "before":[
                       
                     ],
-                    "item":[
-
-
-                        "20079 linked_153_0_20079_0",
-                        "18799 other_185_516003_18799_0",
-                        "17804 other_231_490012_17804_0",
-                        
-                        "22557 other_121_669013_22557_0",
-                        "17807 other_231_490023_17807_0",
-                        "25189 other_24_759018_25189_0",
-                        
-                        "19004 other_6_525001_19004_0",
-                        "23774 other_70_706030_23774_0",
-                        "17800 other_231_490013_17800_0",
-                        
+                    "item":["20079 linked_266_0_20079_0","24378 other_171_936022_24378_0","28277 other_61_908015_28277_0","18799 other_298_516003_18799_0","19408 other_283_904058_19408_0","17822 other_344_490024_17822_0","22557 other_234_669013_22557_0","17807 other_344_490023_17807_0","25884 other_119_932001_25884_0","21575 alicom-dz_234_52_21575_0","17233 other_342_490016_17233_0","21756 other_228_614042_21756_0","25189 other_137_759018_25189_0","19004 other_10_525001_19004_0","17800 other_344_490013_17800_0","21563 other_8_618041_21563_0","30908 other_4_943005_30908_0","17804 other_344_490012_17804_0","18491 other_325_0_18491_0"]
                        
-                        "21577 other_121_490028_21577_0",
-                        "22596 other_150_665015_22596_0",
-                        
-                        "17822 other_231_490024_17822_0",
-                        "23648 other_231_695025_23648_0",
-                        
-                        "17233 other_229_490016_17233_0",
-                        
-                        
-                        
-                        "21563 other_5_618041_21563_0",
-                        "21743 alicom-dz_152_10119_21743_0",
-
-                        "28277 other_12_908015_28277_0",
-                        "19408 other_234_904058_19408_0",
-                        "22995 other_185_674005_22995_0",
-                        "23837 other_133_906026_23837_0",
-                        "25884 other_70_932001_25884_0",
-                        "26604 other_47_1_26604_0",
-                        "24853 other_97_660008_24853_0",
-                        "24949 other_91_889027_24949_0",
-                        "18491 other_276_0_18491_0",
-                        "17825 other_295_891017_17825_0"
-                       
-
-
-                    ]
-                }
+                 }
             }
 
 
