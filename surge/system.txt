@@ -1,5 +1,6 @@
 # olo
 DOMAIN-SUFFIX,pki.goog
+DOMAIN,ocsp.sectigo.com
 DOMAIN-SUFFIX,digitalcertvalidation.com
 DOMAIN,codepush.appcenter.ms
 DOMAIN,essions.bugsnag.com
