@@ -45,6 +45,7 @@ DOMAIN-SUFFIX,segment.com
 DOMAIN-SUFFIX,intercomcdn.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
+DOMAIN-SUFFIX,splunkcloud.com
 
 # (D.C.S.G?)
 DOMAIN-SUFFIX,9cache.com
