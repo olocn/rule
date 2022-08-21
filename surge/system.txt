@@ -1,4 +1,4 @@
-# olo
+
 .pki.goog
 ocsp.sectigo.com
 .digitalcertvalidation.com
@@ -10,34 +10,26 @@ time.apple.com
 tun.services.mozilla.com
 9.cnzz.com
 .3.o.lencr.org
-.assportapi.115.com
 .izhensubao.getui.com
 .rigin-a.akamaihd.net
 ingest.sentry.io
 ww.googletagservices.com
 ww.google-analytics.com
 edge.api.myqnapcloud.com
-
-# Unbreak
-# > General
 .pp.adjust.com
 .dtj.tagtic.cn
-# > Alibaba
 .ce.alicdn.com
 .og.mmstat.com
 .ycm.mmstat.com
-# > Google
 .blog.google
 .googletraveladservices.com
 .lientservices.googleapis.com
 .l.google.com
 .l.l.google.com
 .pdate.googleapis.com
-.ranslate.googleapis.com
-# >> Google Fonts API
+.ranslate.googleapis.comI
 .onts.googleapis.com
 .onts.gstatic.com
-# >> Firebase Cloud Messaging
 .talk.google.com
 .lt1-mtalk.google.com
 .lt2-mtalk.google.com
@@ -47,14 +39,10 @@ edge.api.myqnapcloud.com
 .lt6-mtalk.google.com
 .lt7-mtalk.google.com
 .lt8-mtalk.google.com
-# >> Paramount+
 .ubads.g.doubleclick.net
-# > Tencent
 .airplay.l.qq.com
 .ivew.l.qq.com
 .d.l.qq.com
-# > Strava
 .nalytics.strava.com
-# > Umeng
 .sg.umeng.com
 .sg.umengcloud.com
