@@ -1,4 +1,3 @@
-# > olo
 .everdalegame.com
 .upercell.helpshift.com
 .v2ex.co
@@ -20,7 +19,6 @@
 .hotmail.com
 .kuromisubs.shop
 .kuromis.com
-# jav
 www.picnew.org
 www.98tuch.net
 www.sehuatang.org
@@ -35,8 +33,6 @@ www.92hm.top
 .playno1.com
 .sexyno1.com
 .playio1.com
-
-# > notion
 .intercom.io
 .branch.io
 .ap-southeast-1.amazonaws.com
@@ -47,8 +43,6 @@ www.92hm.top
 .amplitude.com
 .notion.so
 .splunkcloud.com
-
-# (D.C.S.G?)
 .9cache.com
 .9gag.com
 .abc.com
@@ -235,16 +229,13 @@ www.92hm.top
 .zyxel.com
 lab.skk.moe
 ocsp.int-x3.letsencrypt.org
-# > Akamai
 a248.e.akamai.net
 a771.dscq.akamai.net
-# > Amazon
 .amazon.co.jp
 d3c33hcgiwev3.cloudfront.net
 payments-jp.amazon.com
 s3-ap-northeast-1.amazonaws.com
 s3-ap-southeast-2.amazonaws.com
-# > Alphabet
 .abc.xyz
 .admob.com
 .adsense.com
@@ -305,24 +296,16 @@ s3-ap-southeast-2.amazonaws.com
 .blogspot.pt
 .blogspot.qa
 .blogspot.rs
-.goog
-# > Apple
 testflight.apple.com
-# > Automattic
 .gravatar.com
 .tumblr.com
 .videopress.com
 .wordpress.com
-
-# > Discord
 .discord.com
 .discordapp.com
 .discordapp.net
-# > Dropbox
 .dropbox.com
 .dropboxapi.com
-
-# > Meta
 .accountkit.com
 .cdninstagram.com
 .f8.com
@@ -344,7 +327,6 @@ testflight.apple.com
 .whatsapp.com
 .whatsapp.net
 .facebook.com
-# > Microsoft
 .aka.ms
 .github.blog
 .github.com
@@ -357,28 +339,21 @@ assets1.xboxlive.com
 assets2.xboxlive.com
 az416426.vo.msecnd.net
 az668014.vo.msecnd.net
-# > Pinterest
 .pinimg.com
 .pinterest.com
-# > pixiv
 .pixiv.net
 .pixiv.org
 .pximg.net
-# > Reddit
 .redd.it
 .reddit.com
 .redditmedia.com
 .redditstatic.com
-# > Reuters
 .reuters.com
 .reutersmedia.net
-# > Steam
 .steamcommunity.com
-# store.steampowered.com
-# > The Economist
+store.steampowered.com
 .economist.com
 .static-economist.com
-# > The New York Times
 .newyorktimes.com
 .nyt.com
 .nytco.com
@@ -387,7 +362,6 @@ az668014.vo.msecnd.net
 .nytlog.com
 .nytstyle.com
 .tmagazine.com
-# > Twitter
 .periscope.tv
 .pscp.tv
 .t.co
@@ -398,7 +372,6 @@ az668014.vo.msecnd.net
 .twitter.com
 .twitter.jp
 .vine.co
-# > Wikimedia Foundation
 .mediawiki.org
 .wikibooks.org
 .wikidata.org
@@ -412,13 +385,10 @@ az668014.vo.msecnd.net
 .wikiversity.org
 .wikivoyage.org
 .wiktionary.org
-# > Yahoo
 .yahoo.com
 search.yahoo.co.jp
-# > Yandex
 .yadi.sk
 disk.yandex.com
-
 .aicoin.com
 .aimoon.com
 .engadget.com
@@ -427,12 +397,8 @@ disk.yandex.com
 .zaobao.com.sg
 addons.mozilla.org
 wego.here.com
-
-# > Alphabet
 .go.dev
 .golang.org
-
-# > Apple
 .appsto.re
 .smoot.apple.com 
 amp-api.podcasts.apple.com
@@ -452,13 +418,11 @@ news-client-search.apple.com
 news-edge.apple.com
 news-events.apple.com
 apple.comscoreresearch.com
-
 .bing.com
 .linkedin.com
 .licdn.com
 .msn.com
 .skype.com
-
 .t.me
 .tdesktop.com
 .telegram.me
