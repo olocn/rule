@@ -1,60 +1,60 @@
 # olo
-DOMAIN-SUFFIX,pki.goog
-DOMAIN,ocsp.sectigo.com
-DOMAIN-SUFFIX,digitalcertvalidation.com
-DOMAIN,codepush.appcenter.ms
-DOMAIN,essions.bugsnag.com
-DOMAIN,spe19-cn-ssl.ls.apple.com
-DOMAIN,time.apple.com
-DOMAIN-SUFFIX,olocn.fun
-DOMAIN,tun.services.mozilla.com
-DOMAIN,9.cnzz.com
-DOMAIN-SUFFIX,3.o.lencr.org
-DOMAIN-SUFFIX,assportapi.115.com
-DOMAIN-SUFFIX,izhensubao.getui.com
-DOMAIN-SUFFIX,rigin-a.akamaihd.net
-DOMAIN,ingest.sentry.io
-DOMAIN,ww.googletagservices.com
-DOMAIN,ww.google-analytics.com
-DOMAIN,edge.api.myqnapcloud.com
+.pki.goog
+ocsp.sectigo.com
+.digitalcertvalidation.com
+codepush.appcenter.ms
+essions.bugsnag.com
+spe19-cn-ssl.ls.apple.com
+time.apple.com
+.olocn.fun
+tun.services.mozilla.com
+9.cnzz.com
+.3.o.lencr.org
+.assportapi.115.com
+.izhensubao.getui.com
+.rigin-a.akamaihd.net
+ingest.sentry.io
+ww.googletagservices.com
+ww.google-analytics.com
+edge.api.myqnapcloud.com
 
 # Unbreak
 # > General
-DOMAIN-SUFFIX,pp.adjust.com
-DOMAIN-SUFFIX,dtj.tagtic.cn
+.pp.adjust.com
+.dtj.tagtic.cn
 # > Alibaba
-DOMAIN-SUFFIX,ce.alicdn.com
-DOMAIN-SUFFIX,og.mmstat.com
-DOMAIN-SUFFIX,ycm.mmstat.com
+.ce.alicdn.com
+.og.mmstat.com
+.ycm.mmstat.com
 # > Google
-DOMAIN-SUFFIX,blog.google
-DOMAIN-SUFFIX,googletraveladservices.com
-DOMAIN-SUFFIX,lientservices.googleapis.com
-DOMAIN-SUFFIX,l.google.com
-DOMAIN-SUFFIX,l.l.google.com
-DOMAIN-SUFFIX,pdate.googleapis.com
-DOMAIN-SUFFIX,ranslate.googleapis.com
+.blog.google
+.googletraveladservices.com
+.lientservices.googleapis.com
+.l.google.com
+.l.l.google.com
+.pdate.googleapis.com
+.ranslate.googleapis.com
 # >> Google Fonts API
-DOMAIN-SUFFIX,onts.googleapis.com
-DOMAIN-SUFFIX,onts.gstatic.com
+.onts.googleapis.com
+.onts.gstatic.com
 # >> Firebase Cloud Messaging
-DOMAIN-SUFFIX,talk.google.com
-DOMAIN-SUFFIX,lt1-mtalk.google.com
-DOMAIN-SUFFIX,lt2-mtalk.google.com
-DOMAIN-SUFFIX,lt3-mtalk.google.com
-DOMAIN-SUFFIX,lt4-mtalk.google.com
-DOMAIN-SUFFIX,lt5-mtalk.google.com
-DOMAIN-SUFFIX,lt6-mtalk.google.com
-DOMAIN-SUFFIX,lt7-mtalk.google.com
-DOMAIN-SUFFIX,lt8-mtalk.google.com
+.talk.google.com
+.lt1-mtalk.google.com
+.lt2-mtalk.google.com
+.lt3-mtalk.google.com
+.lt4-mtalk.google.com
+.lt5-mtalk.google.com
+.lt6-mtalk.google.com
+.lt7-mtalk.google.com
+.lt8-mtalk.google.com
 # >> Paramount+
-DOMAIN-SUFFIX,ubads.g.doubleclick.net
+.ubads.g.doubleclick.net
 # > Tencent
-DOMAIN-SUFFIX,airplay.l.qq.com
-DOMAIN-SUFFIX,ivew.l.qq.com
-DOMAIN-SUFFIX,d.l.qq.com
+.airplay.l.qq.com
+.ivew.l.qq.com
+.d.l.qq.com
 # > Strava
-DOMAIN-SUFFIX,nalytics.strava.com
+.nalytics.strava.com
 # > Umeng
-DOMAIN-SUFFIX,sg.umeng.com
-DOMAIN-SUFFIX,sg.umengcloud.com
+.sg.umeng.com
+.sg.umengcloud.com
