@@ -14,7 +14,7 @@ DOMAIN-SUFFIX,realsrv.com
 DOMAIN,adserver.juicyads.com
 DOMAIN,proxy.safebrowsing.apple
 DOMAIN,analysis.tratao.com
-DOMAIN,h.trace.qq.com
+#DOMAIN,h.trace.qq.com
 DOMAIN,jgsjtj.189.cn
 DOMAIN-SUFFIX,cxy.niimbot.com
 
