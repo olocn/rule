@@ -20,6 +20,7 @@ DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,kuromisubs.shop
 DOMAIN-SUFFIX,kuromis.com
+DOMAIN-SUFFIX,adtidy.org
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
