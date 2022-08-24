@@ -1,8 +1,3 @@
 #TG
-DOMAIN-SUFFIX,t.me
-DOMAIN-SUFFIX,tdesktop.com
-DOMAIN-SUFFIX,telegram.me
-DOMAIN-SUFFIX,telesco.pe
-DOMAIN-SUFFIX,telegra.ph
-DOMAIN-SUFFIX,telegram.org
-DOMAIN-SUFFIX,legra.ph
+DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-SUFFIX,ggpht.com
