@@ -447,6 +447,11 @@ DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,skype.com
+DOMAIN,graph.microsoft.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,svc.ms
+DOMAIN-SUFFIX,onedrive.com
+DOMAIN-SUFFIX,1drv.com
 
 # > telegram
 DOMAIN-SUFFIX,t.me
