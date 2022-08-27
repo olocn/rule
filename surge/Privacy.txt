@@ -17,7 +17,8 @@ analysis.tratao.com
 #h.trace.qq.com
 jgsjtj.189.cn
 .cxy.niimbot.com
-
+.ingest.sentry.io
+astat.bugly.qq.com
 # mitv
 video.market.xiaomi.com
 gvod.aiseejapp.atianqi.com
