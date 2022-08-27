@@ -19,6 +19,7 @@ jgsjtj.189.cn
 .cxy.niimbot.com
 .ingest.sentry.io
 astat.bugly.qq.com
+.miaozhen.com
 # mitv
 video.market.xiaomi.com
 gvod.aiseejapp.atianqi.com
