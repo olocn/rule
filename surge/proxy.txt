@@ -27,6 +27,7 @@ DOMAIN,www.98tuch.net
 DOMAIN,www.sehuatang.org
 DOMAIN,www.92hm.top
 DOMAIN-KEYWORD,jav
+DOMAIN-SUFFIX,javcdn.cc
 DOMAIN-SUFFIX,jads.co
 DOMAIN-SUFFIX,dmm.co.jp
 DOMAIN-SUFFIX,18comic.vip
