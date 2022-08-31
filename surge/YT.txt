@@ -1,3 +1,0 @@
-#TG
-DOMAIN-SUFFIX,googlevideo.com
-DOMAIN-SUFFIX,ggpht.com
