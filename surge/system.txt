@@ -1,4 +1,5 @@
 # olo
+DOMAIN,pv.sohu.com
 DOMAIN-SUFFIX,pki.goog
 DOMAIN,ocsp.sectigo.com
 DOMAIN-SUFFIX,digitalcertvalidation.com
