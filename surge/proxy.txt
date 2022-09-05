@@ -20,6 +20,9 @@ DOMAIN-SUFFIX,hotmail.com
 DOMAIN-SUFFIX,kuromisubs.shop
 DOMAIN-SUFFIX,kuromis.com
 DOMAIN-SUFFIX,adtidy.org
+DOMAIN-SUFFIX,yandex.net
+DOMAIN,cdn.jsdelivr.net
+DOMAIN-SUFFIX,nel.cloudflare.com
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
