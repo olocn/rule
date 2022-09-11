@@ -1,4 +1,3 @@
-# olo
 amdc.m.taobao.com
 weather-analytics-events.apple.com
 .umeng.com
@@ -20,7 +19,6 @@ jgsjtj.189.cn
 .ingest.sentry.io
 astat.bugly.qq.com
 .miaozhen.com
-# mitv
 video.market.xiaomi.com
 gvod.aiseejapp.atianqi.com
 logonext.tv.kuyun.com
@@ -98,48 +96,33 @@ tracert.alipay.com
 .ads.linkedin.com
 analytics.slashdotmedia.com
 zgsdk.zhugeio.com
-# > 51.LA
 js.users.51.la
 mc.51.la
 wc.51.la
-# > 58
 track.58.com
 tracklog.58.com
-# > Baidu
 hm.baidu.com
 hmma.baidu.com
-# > Daum
 track.tiara.daum.net
 track.tiara.kakao.com
-# > Google
 .googletagmanager.com
 .google-analytics.com
 safebrowsing.googleapis.com
-# > GozenData
-# https://www.v2ex.com/t/772523
 .gozendata.com
 .gzads.com
 .gz-data.com
-# > GrowingIO
 .giocdn.com
 .growingio.com
-# > MI
 .tracking.miui.com
 api.miwifi.com
 tracking.intl.miui.com
-# > TalkingData
 .cpatrk.net
 .talkingdata.com
 .talkingdata.net
 .udrig.com
-# > Tencent
 safebrowsing.urlsec.qq.com
-# > Tenjin
 track.tenjin.com
 track.tenjin.io
-# >> Alibaba
-DOMAIN-KEYWORD,nbsdk-baichuan
-
 errlog.umeng.com
 otheve.beacon.qq.com
 av1.xdrig.com
