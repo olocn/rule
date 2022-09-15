@@ -11,3 +11,4 @@ DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,lookup-api.apple.com // Dictionary
 DOMAIN-SUFFIX,me.com
 USER-AGENT,com.apple.appstored* // iOS App Store
+IP-CIDR,17.0.0.0/8
