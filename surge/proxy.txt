@@ -24,6 +24,7 @@ DOMAIN-SUFFIX,adtidy.org
 DOMAIN-SUFFIX,yandex.net
 DOMAIN,cdn.jsdelivr.net
 DOMAIN-SUFFIX,nel.cloudflare.com
+DOMAIN,pixiv.rsshub.app
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
