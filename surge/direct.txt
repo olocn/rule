@@ -18,6 +18,9 @@ DOMAIN-SUFFIX,jegotrip.com.cn
 USER-AGENT,MicroMessenger Client
 USER-AGENT,WeChat*
 
+#wechat
+DOMAIN-SUFFIX,qlogo.cn
+DOMAIN-SUFFIX,qpic.cn 
 # Ali
 DOMAIN-KEYWORD,alipay
 DOMAIN-KEYWORD,taobao
