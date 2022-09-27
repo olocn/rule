@@ -57,7 +57,7 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,splunkcloud.com
 
-
+DOMAIN-SUFFIX,pximg.net
 DOMAIN-KEYWORD,github
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,gstatic.com
