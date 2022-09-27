@@ -57,7 +57,6 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,splunkcloud.com
 
-DOMAIN-SUFFIX,tw
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,ampproject.org
