@@ -7,7 +7,7 @@ DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,konachan.com
 DOMAIN-SUFFIX,snapgram.co
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
-DOMAIN-SUFFIX,pixiv.cat
+DOMAIN-SUFFIX,pixiv.net
 DOMAIN-SUFFIX,nhentai.net
 DOMAIN-SUFFIX,newsblur.com
 DOMAIN-SUFFIX,enpass.io
