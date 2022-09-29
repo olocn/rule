@@ -5,6 +5,7 @@ weather-analytics-events.apple.com
 api.mousegesturesapi.com
 .getui.com
 .getui.net
+.gepush.com
 .jpush.cn
 .jpush.io
 sdkconfig.ad.intl.xiaomi.com
