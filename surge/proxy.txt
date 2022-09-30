@@ -28,7 +28,9 @@ DOMAIN,pixiv.rsshub.app
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
-DOMAIN,www.sehuatang.org
+DOMAIN,www.4ghhff.info
+DOMAIN-SUFFIX,sehuatang.org
+DOMAIN,iming.fj5i3.com
 DOMAIN,www.92hm.top
 DOMAIN-KEYWORD,jav
 DOMAIN-SUFFIX,javbus.com
