@@ -46,7 +46,18 @@ DOMAIN-SUFFIX,jkforum.net
 DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,sexyno1.com
 DOMAIN-SUFFIX,playio1.com
+DOMAIN-KEYWORD,pinterest
+DOMAIN-KEYWORD,porn
 
+DOMAIN,onedrive.live.com
+
+DOMAIN-SUFFIX,south-plus.org
+DOMAIN-SUFFIX,south-plus.net
+
+# >> Academic
+
+DOMAIN,ees.elsevier.com
+DOMAIN-KEYWORD,sci-hub
 # > notion
 DOMAIN-SUFFIX,intercom.io
 DOMAIN-SUFFIX,branch.io
@@ -59,29 +70,45 @@ DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,notion.so
 DOMAIN-SUFFIX,splunkcloud.com
 
+# >> Twitter
 DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,twimg.co
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,twitpic.com
+DOMAIN-SUFFIX,twitter.com
+
+
+# >> Google
+DOMAIN-SUFFIX,appspot.com
+DOMAIN-SUFFIX,blogger.com
+DOMAIN-SUFFIX,getoutline.org
+DOMAIN-SUFFIX,gvt0.com
+DOMAIN-SUFFIX,gvt1.com
+DOMAIN-SUFFIX,gvt2.com
+DOMAIN-SUFFIX,gvt3.com
+DOMAIN-SUFFIX,googleapis.cn
+DOMAIN-KEYWORD,google
+DOMAIN-SUFFIX,gmail.com
+DOMAIN-KEYWORD,blogspot
+DOMAIN-SUFFIX,gstatic.com
+DOMAIN-KEYWORD,youtube
+DOMAIN-SUFFIX,ytimg.com
+DOMAIN-SUFFIX,youtu.be
+
 DOMAIN-SUFFIX,pximg.net
 DOMAIN-KEYWORD,github
-DOMAIN-KEYWORD,google
-DOMAIN-SUFFIX,gstatic.com
 DOMAIN-SUFFIX,ampproject.org
-DOMAIN-KEYWORD,gmail
-DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,facebook
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fbcdn.net
-DOMAIN-KEYWORD,twitter
 DOMAIN-KEYWORD,instagram
 DOMAIN-KEYWORD,dropbox
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-KEYWORD,blogspot
-DOMAIN-SUFFIX,youtu.be
 DOMAIN-SUFFIX,oculuscdn.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-KEYWORD,whatsapp
 DOMAIN-SUFFIX,letsencrypt.org
 DOMAIN-SUFFIX,android.com
-DOMAIN-SUFFIX,ytimg.com
+
 
 # > telegram
 DOMAIN-SUFFIX,t.me
