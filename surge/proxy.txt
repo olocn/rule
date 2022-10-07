@@ -54,8 +54,12 @@ DOMAIN,onedrive.live.com
 DOMAIN-SUFFIX,south-plus.org
 DOMAIN-SUFFIX,south-plus.net
 
-# >> Academic
 
+DOMAIN-SUFFIX,redd.it
+DOMAIN-SUFFIX,reddit.com
+DOMAIN-SUFFIX,redditmedia.com
+
+# >> Academic
 DOMAIN,ees.elsevier.com
 DOMAIN-KEYWORD,sci-hub
 # > notion
