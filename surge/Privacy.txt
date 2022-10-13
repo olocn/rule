@@ -1,4 +1,5 @@
 amdc.m.taobao.com
+zhihu-web-analytics.zhihu.com
 weather-analytics-events.apple.com
 .umeng.com
 .umengcloud.com
