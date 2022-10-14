@@ -25,6 +25,7 @@ DOMAIN-SUFFIX,yandex.net
 DOMAIN,cdn.jsdelivr.net
 DOMAIN-SUFFIX,nel.cloudflare.com
 DOMAIN,pixiv.rsshub.app
+
 # jav
 DOMAIN,www.picnew.org
 DOMAIN,www.98tuch.net
@@ -96,6 +97,7 @@ DOMAIN-SUFFIX,gmail.com
 DOMAIN-KEYWORD,blogspot
 DOMAIN-SUFFIX,gstatic.com
 DOMAIN-KEYWORD,youtube
+DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,youtu.be
 
