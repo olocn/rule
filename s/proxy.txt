@@ -85,6 +85,8 @@ payload:
 - "+.blogspot.com"
 - "+.gstatic.com"
 - "+.youtube.com"
+- "+.xn--ngstr-lra8j.com"
+- "+.googlevideo.com"
 - "+.ggpht.com"
 - "+.ytimg.com"
 - "+.youtu.be"
