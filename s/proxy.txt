@@ -16,6 +16,7 @@
 .pimg.tw
 .appcenter.ms
 .nexitally.com
+.naixisubs.com
 .hotmail.com
 .kuromisubs.shop
 .kuromis.com
@@ -79,6 +80,7 @@
 .gvt2.com
 .gvt3.com
 .googleapis.cn
+.googleapis.com
 .google.com
 .gmail.com
 .blogspot.com
@@ -92,6 +94,7 @@
 .pximg.net
 .github.com
 .githubusercontent.com
+.githubassets.com
 .ampproject.org
 .facebook.com
 .fb.me
