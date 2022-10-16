@@ -115,3 +115,7 @@
 .graph.org
 .legra.ph
 .telesco.pe
+.icloud-content.com
+.icloud.com
+.itunes.com
+.itunes.apple.com
