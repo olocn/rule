@@ -14,11 +14,10 @@ books.itunes.apple.com
 cloud-cdn-digitalocean-com.global.ssl.fastly.net
 clubhouse.pubnubapi.com
 d3c33hcgiwev3.cloudfront.net
-disk.yandex.com
 gateway.icloud.com
 github.global.ssl.fastly.net
 graph.microsoft.com
-itunes.apple.com
+.itunes.apple.com
 lab.skk.moe
 lookup-api.apple.com 
 news-assets.apple.com
@@ -29,9 +28,6 @@ news-events.apple.com
 nytimes.map.fastly.net
 ocsp.int-x3.letsencrypt.org
 payments-jp.amazon.com
-radio.itunes.apple.com 
-init.itunes.apple.com
-sanbox.itunes.apple.com
 s3-ap-northeast-1.amazonaws.com
 s3-ap-southeast-2.amazonaws.com
 search.yahoo.co.jp
