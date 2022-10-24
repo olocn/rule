@@ -279,6 +279,8 @@ s3-ap-southeast-2.amazonaws.com
 .gmail.com
 .gmodules.com
 .gstatic.com
+.google.com
+.googleapis.com
 .gvt0.com
 .gvt1.com
 .gvt3.com
@@ -298,9 +300,6 @@ s3-ap-southeast-2.amazonaws.com
 .xn--ngstr-lra8j.com
 .youtube.com
 .zynamics.com
-#NAME?
-- DOMAIN-KEYWORD,.blogspot.
-.goog
 testflight.apple.com
 .gravatar.com
 .tumblr.com
@@ -377,7 +376,6 @@ nytimes.map.fastly.net
 .rocksdb.org
 .whatsapp.com
 .whatsapp.net
-- DOMAIN-KEYWORD,.facebook.
 .aka.ms
 .github.blog
 .github.com
@@ -395,7 +393,6 @@ assets2.xboxlive.com
 az416426.vo.msecnd.net
 az668014.vo.msecnd.net
 .pinimg.com
-- DOMAIN-KEYWORD,.pinterest.
 .pixiv.net
 .pixiv.org
 .pximg.net
