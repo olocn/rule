@@ -30,6 +30,8 @@ nytimes.map.fastly.net
 ocsp.int-x3.letsencrypt.org
 payments-jp.amazon.com
 radio.itunes.apple.com 
+init.itunes.apple.com
+sanbox.itunes.apple.com
 s3-ap-northeast-1.amazonaws.com
 s3-ap-southeast-2.amazonaws.com
 search.yahoo.co.jp
