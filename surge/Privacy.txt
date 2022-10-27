@@ -1,3 +1,8 @@
+.nuomi.com
+mi.gdt.qq.com
+t.gdt.qq.com
+oia.zhihu.com
+sjarvis.taobao.com
 .stats.g.doubleclick.net
 .pagead2.googlesyndication.com
 .googleads.g.doubleclick.net
