@@ -61,7 +61,7 @@ DOMAIN-SUFFIX,icloud.com
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,lookup-api.apple.com
-
+DOMAIN-SUFFIX,podcasts.apple.com
 # >> Academic
 DOMAIN,ees.elsevier.com
 DOMAIN-KEYWORD,sci-hub
