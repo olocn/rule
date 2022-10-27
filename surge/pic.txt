@@ -4,3 +4,4 @@ DOMAIN,pixiv.rsshub.app
 DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,kuromisubs.shop
 DOMAIN-SUFFIX,kuromis.com
+DOMAIN-SUFFIX,imgur.com
