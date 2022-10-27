@@ -3,8 +3,6 @@ DOMAIN-SUFFIX,everdalegame.com
 DOMAIN-SUFFIX,upercell.helpshift.com
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,v2ex.com
-DOMAIN-SUFFIX,yande.re
-DOMAIN-SUFFIX,konachan.com
 DOMAIN-SUFFIX,snapgram.co
 DOMAIN-SUFFIX,us-east-2.amazonaws.com
 DOMAIN-SUFFIX,pixiv.net
@@ -16,15 +14,11 @@ DOMAIN-SUFFIX,btsow.rest
 DOMAIN-SUFFIX,dmhy.org
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,appcenter.ms
-DOMAIN-SUFFIX,nexitally.com
 DOMAIN-SUFFIX,hotmail.com
-DOMAIN-SUFFIX,kuromisubs.shop
-DOMAIN-SUFFIX,kuromis.com
 DOMAIN-SUFFIX,adtidy.org
 DOMAIN-SUFFIX,yandex.net
 DOMAIN,cdn.jsdelivr.net
 DOMAIN-SUFFIX,nel.cloudflare.com
-DOMAIN,pixiv.rsshub.app
 
 # jav
 DOMAIN,www.picnew.org
