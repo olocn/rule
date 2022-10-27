@@ -1,0 +1,6 @@
+DOMAIN-SUFFIX,yande.re
+DOMAIN-SUFFIX,konachan.com
+DOMAIN,pixiv.rsshub.app
+DOMAIN-SUFFIX,nexitally.com
+DOMAIN-SUFFIX,kuromisubs.shop
+DOMAIN-SUFFIX,kuromis.com
