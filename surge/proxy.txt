@@ -1,4 +1,10 @@
 # > olo
+DOMAIN-SUFFIX,aikonhey.com
+DOMAIN-SUFFIX,x-idol.net
+DOMAIN-SUFFIX,jpmediadl.com
+DOMAIN-SUFFIX,jpfunny.org
+DOMAIN-SUFFIX,micmicidol.com
+DOMAIN-SUFFIX,photos18.com
 DOMAIN-SUFFIX,manhuagui.com
 DOMAIN-SUFFIX,everdalegame.com
 DOMAIN-SUFFIX,upercell.helpshift.com
