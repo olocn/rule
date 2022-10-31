@@ -4,12 +4,10 @@ mi.gdt.qq.com
 t.gdt.qq.com
 oia.zhihu.com
 sjarvis.taobao.com
-.stats.g.doubleclick.net
 .pagead2.googlesyndication.com
-.googleads.g.doubleclick.net
+.doubleclick.net
 .app-measurement.com
 .ade.googlesyndication.com
-.googleads4.g.doubleclick.net
 appcloud2.in.zhihu.com
 mqtt.zhihu.com
 sugar.zhihu.com
@@ -201,7 +199,6 @@ othstr.beacon.qq.com
 videocloud.cn-hangzhou.log.aliyuncs.com
 android.bugly.qq.com
 aegis.qq.com
-googleads.g.doubleclick.net
 alog.umeng.co
 v2.gdt.qq.com
 toblog.ctobsnssdk.com
