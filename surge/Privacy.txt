@@ -154,7 +154,6 @@ cn.app.chat.xiaomi.net
 data.mistat.xiaomi.com
 ca.iadsdk.apple.com
 mtrace.qq.com
-metrics.icloud.com
 resolver.msg.xiaomi.net
 amdc.m.taobao.com
 stats.jpush.cn
