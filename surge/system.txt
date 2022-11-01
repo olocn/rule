@@ -11,7 +11,7 @@ tun.services.mozilla.com
 9.cnzz.com
 .3.o.lencr.org
 .izhensubao.getui.com
-DOMAIN,ingest.sentry.io
+ingest.sentry.io
 .ww.googletagservices.com
 .ww.google-analytics.com
 edge.api.myqnapcloud.com
