@@ -253,6 +253,7 @@
 .newyorktimes.com
 .nexitally.com
 .nhentai.net
+.splunkcloud.com
 .notion.so
 .notion-static.com
 .now.com
