@@ -73,4 +73,11 @@
 .gov.cn
 .internetofcity.cn
 .servicewechat.com
+.wechat.com
+.weixin.com
+.tenpay.com
+.gtimg.com
+.qpic.cn
+.qlogo.cn
+.iot-tencent.com
 edge.api.myqnapcloud.com
