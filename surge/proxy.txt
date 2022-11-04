@@ -145,7 +145,6 @@
 .flitto.com
 .foreignaffairs.com
 .foreignpolicy.com
-.freetls.fastly.net
 .ft.com
 .ftchinese.com
 .ftimg.net
@@ -469,12 +468,12 @@ az668014.vo.msecnd.net
 beta.music.apple.com
 books.apple.com
 books.itunes.apple.com 
-cloud-cdn-digitalocean-com.global.ssl.fastly.net
 clubhouse.pubnubapi.com
 d3c33hcgiwev3.cloudfront.net
 gateway.icloud.com
-github.global.ssl.fastly.net
-gitlab.io
+.fastly.net
+.gitlab.io
+.github.io
 graph.microsoft.com
 lab.skk.moe
 lookup-api.apple.com 
@@ -483,7 +482,6 @@ news-client.apple.com
 news-client-search.apple.com
 news-edge.apple.com
 news-events.apple.com
-nytimes.map.fastly.net
 ocsp.int-x3.letsencrypt.org
 payments-jp.amazon.com
 ppq.apple.com
