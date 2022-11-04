@@ -1,13 +1,19 @@
-.18comic.org
 .18comic.vip
+.18comic.org
+.addthis.com
+.addthisedge.com
+.jkforum.net
+.playno1.com
+.sexyno1.com
+.playio1.com
+.youtube.com
+.googlevideo.com
 .1drv.com
 .9cache.com
 .9gag.com
 .abc.com
 .abc.xyz
 .accountkit.com
-.addthis.com
-.addthisedge.com
 .admob.com
 .adsense.com
 .advertisercommunity.com
@@ -164,7 +170,6 @@
 .golang.org
 .google.com
 .googleapis.com
-.googlevideo.com
 .graph.org
 .graphql.org
 .gravatar.com
@@ -202,7 +207,6 @@
 .javbus22.com
 .javcdn.cc
 .javlibrary.com
-.jkforum.net
 .joinclubhouse.com
 .jpfunny.org
 .jpmediadl.com
@@ -290,8 +294,6 @@
 .pixiv.net
 .pixiv.org
 .player.fm
-.playio1.com
-.playno1.com
 .podbean.com
 .poloniex.com
 .prism-break.org
@@ -327,7 +329,6 @@
 .segment.com
 .sehuatang.org
 .sentry.io
-.sexyno1.com
 .shutterstock.com
 .signal.org
 .sketchappsources.com
@@ -446,7 +447,6 @@
 .yande.re
 .yandex.ru
 .you-get.org
-.youtube.com
 .ytimg.com
 .zaobao.com
 .zaobao.com.sg
