@@ -67,3 +67,9 @@
 .amap.com
 .jd.com
 .115.com
+.ruanmei.com
+.ithome.com
+.geekpark.net
+.gov.cn
+.internetofcity.cn
+.servicewechat.com
