@@ -1,6 +1,6 @@
 .aliyuncs.com
+.iqiyi.com
 .waqi.info
-.huatuo.qq.com
 .rdimg.com
 .plex.direct
 .plex.tv
