@@ -227,6 +227,7 @@
 .loggly.com
 .lowendtalk.com
 .m.me
+.me.com
 .mailchimp.com
 .manhuagui.com
 .matrix.org
