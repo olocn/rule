@@ -8,6 +8,8 @@
 .playio1.com
 .youtube.com
 .googlevideo.com
+.greencloudvps.com
+.tawk.to
 .weserv.nl
 .1drv.com
 .9cache.com
