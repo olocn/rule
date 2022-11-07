@@ -11,6 +11,7 @@
 .jegotrip.com.cn
 .qlogo.cn
 .qpic.cn 
+.right.com.cn
 .alipay.com
 .taobao.com
 .alicdn.com
