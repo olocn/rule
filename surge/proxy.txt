@@ -96,6 +96,7 @@
 .coinbase.com
 .coincheck.com
 .coingecko.com
+.cloudflare.com
 .coinmarketcap.com
 .coinone.co.kr
 .conoha.jp
