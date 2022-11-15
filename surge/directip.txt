@@ -5,6 +5,7 @@ IP-CIDR,127.0.0.0/8,no-resolve
 IP-CIDR,100.64.0.0/10,no-resolve
 IP-CIDR,224.0.0.0/4,no-resolve
 IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,52.8.0.0/16,no-resolve
 IP-CIDR,99.83.0.0/16,no-resolve
 IP-CIDR,75.2.104.0/24,no-resolve
 IP-CIDR,75.2.0.0/20,no-resolve
