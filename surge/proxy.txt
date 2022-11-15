@@ -173,6 +173,7 @@
 .go.dev
 .golang.org
 .google.com
+.google.com.tw
 .googleapis.com
 .graph.org
 .graphql.org
@@ -355,6 +356,8 @@
 .streaming.mediaservices.windows.net
 .substack.com
 .sushi.com
+south-plus.net
+.nssurge.com
 .svc.ms
 .swissinfo.ch
 .t.co
