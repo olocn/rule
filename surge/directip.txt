@@ -15,3 +15,6 @@ IP-CIDR,54.219.192.0/18,no-resolve
 IP-CIDR,182.254.116.0/24,no-resolve
 IP-CIDR,203.205.238.0/23,no-resolve
 IP-CIDR,203.205.254.0/23,no-resolve
+# wechat
+IP-CIDR,203.205.219.0/24,no-resolve
+IP-CIDR,203.205.232.0/23,no-resolve
