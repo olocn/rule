@@ -37,7 +37,7 @@ sdkconfig.ad.intl.xiaomi.com
 .exosrv.com
 .realsrv.com
 adserver.juicyads.com
-proxy.safebrowsing.apple
+.safebrowsing.apple
 analysis.tratao.com
 jgsjtj.189.cn
 .cxy.niimbot.com
