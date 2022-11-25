@@ -1,4 +1,5 @@
 .aliyuncs.com
+.jegotrip.cn
 .iqiyi.com
 .waqi.info
 .rdimg.com
