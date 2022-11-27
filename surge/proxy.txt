@@ -1,6 +1,8 @@
 .18comic.vip
 .18comic.org
 .addthis.com
+.googleusercontent.com
+.bbci.co.uk
 .addthisedge.com
 .jkforum.net
 .playno1.com
