@@ -1,6 +1,7 @@
 .18comic.vip
 .18comic.org
 .addthis.com
+sub.nexconvert.com
 cacerts.digicert.com
 .googleusercontent.com
 .bbci.co.uk
