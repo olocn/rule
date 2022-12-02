@@ -2,6 +2,7 @@
 .18comic.org
 .addthis.com
 sub.nexconvert.com
+cacerts.digitalcertvalidation.com
 cacerts.digicert.com
 .googleusercontent.com
 .bbci.co.uk
