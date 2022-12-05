@@ -4,6 +4,7 @@
 sub.nexconvert.com
 cacerts.digitalcertvalidation.com
 cacerts.digicert.com
+.githubassets.com
 .googleusercontent.com
 .bbci.co.uk
 .addthisedge.com
