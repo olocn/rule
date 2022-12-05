@@ -1,3 +1,4 @@
+api.revenuecat.com
 msg.qy.net
 .amdc.m.taobao.com
 .sessions.bugsnag.com
