@@ -1,6 +1,12 @@
 .18comic.vip
 .18comic.org
 .addthis.com
+.pixhost.to
+.javdb006.com
+.dmm.co.jp
+.btsow.beauty
+.blogjav.net
+.javstore.net
 sub.nexconvert.com
 cacerts.digitalcertvalidation.com
 cacerts.digicert.com
