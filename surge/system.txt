@@ -1,4 +1,5 @@
 api.revenuecat.com
+fonts.googleapis.com
 msg.qy.net
 .amdc.m.taobao.com
 .sessions.bugsnag.com
