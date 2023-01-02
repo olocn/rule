@@ -3,6 +3,7 @@
 .addthis.com
 .pixhost.to
 .m-team.cc
+.masiro.me
 .javdb006.com
 .dmm.co.jp
 .ibb.co
