@@ -41,7 +41,8 @@ cacerts.digicert.com
 .aikonhey.com
 .aimoon.com
 .aka.ms
-.akamai.net
+a248.e.akamai.net
+a771.dscq.akamai.net
 .amazon.co.jp
 .amplitude.com
 .ampproject.org
@@ -205,9 +206,6 @@ cacerts.digicert.com
 .huffpost.com
 .huobi.com
 .i-cable.com
-.icloud.com
-.icloud.com.cn
-.icloud-content.com
 .ifixit.com
 .imagetwist.com
 .imgur.com
@@ -489,7 +487,6 @@ az416426.vo.msecnd.net
 az668014.vo.msecnd.net
 beta.music.apple.com
 books.apple.com
-books.itunes.apple.com 
 clubhouse.pubnubapi.com
 d3c33hcgiwev3.cloudfront.net
 gateway.icloud.com
