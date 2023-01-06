@@ -5,3 +5,4 @@
 .apple.co
 .apple.com
 .me.com
+.icloud.com
