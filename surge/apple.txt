@@ -6,3 +6,5 @@
 .apple.com
 .me.com
 .icloud.com
+.icloud.com.cn
+.icloud-content.com
