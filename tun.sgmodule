@@ -1,9 +1,9 @@
-#!name=Tun Only [MITM] tcp-connection = true
+#!name=Tun Only
 #!desc=Enable tun and force 80 port HTTP proxy
 
 [General]
 compatibility-mode = 3
-force-http-engine-hosts = %APPEND% -<ip-address>, *a, *b, *c, *d, *e, *f, *g, *h, *i, *j, *k, *l, *m, *n, *o, *p, *q, *r, *s, *t, *u, *v, *w, *x, *y, *z
+force-http-engine-hosts = %APPEND% -<ip-address>, *
 
-
+ [MITM] tcp-connection = true
 
