@@ -1,0 +1,66 @@
+#!name=AdvertisingLite
+
+[URL Rewrite]
+# > aiqiyi
+"^https?:\/\/.+\/videos\/other\/" - reject
+
+# > baiduditu
+"^https:\/\/dss0\.bdstatic\.com\/.+/tam-ogel\/.+\.(jpg|mp4)" - reject
+"^https?:\/\/bp-api\.bestv\.com\.cn\/cms\/api\/(free\/open\/advertisingV2|c\/home\/searchMark)" - reject
+
+# > baiduwenku
+"^https?:\/\/appwk\.baidu\.com\/xpage\/interface\/wknaad" - reject
+# > baiduwangpan
+"^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list" - reject
+"^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad" - reject
+"^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry" - reject
+
+# > dashixiong
+"^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/.*?\/v\d\/(version|top_notice\?|advert\?position=[^2]+)" - reject
+
+# > didichuxing
+"https?://res\.xiaojukeji\.com\/resapi\/activity\/mget" - reject
+"https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices)" - reject
+
+# > elema
+"^https?:\/\/elemecdn.com\/.+\/sitemap" - reject
+"^https?:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4}" - reject
+"^https?:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4}" - reject
+"^https?:\/\/fuss10.elemecdn.com\/.+.mp4" - reject
+"^https?:\/\/www1.elecfans.com\/www\/delivery\/" - reject
+
+# > jingdong
+"^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts)" - reject
+"^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/" - reject
+# > jingdongjinrong
+"^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture" - reject
+# > jianhanglife
+"^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(2|9)" - reject
+
+# > kfc
+"^https?:\/\/res.kfc.com.cn\/advertisement\/" - reject
+
+# > weixindaihuo
+"^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info" - reject
+# > WeChatpublicarticle
+"^https?:\/\/mp\.weixin\.qq\.com\/(s|mp)\/(ad_|advertisement|getappmsgad|report|appmsgreport|appmsgpicreport)" - reject
+# > xiaomi
+"^https?:\/\/api\.m\.mi\.com\/v1\/app\/start" - reject
+"^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner" - reject
+
+# > zhangshangshenghuo
+#^https?:\/\/mlife\.cmbchina\.com\/ClientFaceService\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec" - reject
+# > zhongguoyidongjiangsu
+"^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query" - reject
+
+[Map Local]
+"^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&dis_dz=" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.gif
+"^https?:\/\/.+\/cdn\/qiyiapp\/\d{8}\/.+&z=\w" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.gif
+"^https?:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/fusion_switch" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.gif
+# > alibaba
+"^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.txt"
+"^https?:\/\/ss0\.bdstatic\.com/.+?_\d{3}_\d{4}\.jpg" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.txt"
+"^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.txt"
+
+[MITM]
+hostname = %APPEND% acs.m.taobao.com, *.bdstatic.com, bp-api.bestv.com.cn, appwk.baidu.com, pan.baidu.com, sdk.alibaba.com.ailbaba.me, res.xiaojukeji.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, ms.jr.jd.com, api.m.jd.com, yunbusiness.ccb.com, res.kfc.com.cn, mp.weixin.qq.com, api.m.mi.com, ss0.bdstatic.com, home.mi.com
