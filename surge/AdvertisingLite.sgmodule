@@ -63,4 +63,4 @@
 "^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/base\/(new)?na\/m\/adInfo" data="https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/blank/blank.txt"
 
 [MITM]
-hostname = %APPEND% acs.m.taobao.com, *.bdstatic.com, bp-api.bestv.com.cn, appwk.baidu.com, pan.baidu.com, sdk.alibaba.com.ailbaba.me, res.xiaojukeji.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, ms.jr.jd.com, api.m.jd.com, yunbusiness.ccb.com, res.kfc.com.cn, mp.weixin.qq.com, api.m.mi.com, ss0.bdstatic.com, home.mi.com
+hostname = %APPEND% acs.m.taobao.com, *.bdstatic.com, bp-api.bestv.com.cn, appwk.baidu.com, pan.baidu.com, sdk.alibaba.com.ailbaba.me, res.xiaojukeji.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, ms.jr.jd.com, api.m.jd.com, yunbusiness.ccb.com, res.kfc.com.cn, mp.weixin.qq.com, api.m.mi.com, ss0.bdstatic.com,  wap.js.10086.cn, home.mi.com
