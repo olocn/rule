@@ -1,482 +1,521 @@
-www.sehuatang.org
-www.picnew.org
-www.98tuch.net
-www.92hm.top
-wego.here.com
-tv.apple.com
-testflight.apple.com
-search.yahoo.co.jp
-s3-ap-southeast-2.amazonaws.com
-s3-ap-northeast-1.amazonaws.com
-ppq.apple.com
-payments-jp.amazon.com
-ocsp.int-x3.letsencrypt.org
-nytimes.map.fastly.net
-news-events.apple.com
-news-edge.apple.com
-news-client-search.apple.com
-news-client.apple.com
-news-assets.apple.com
-lookup-api.apple.com 
-lab.skk.moe
-graph.microsoft.com
-gitlab.io
-github.global.ssl.fastly.net
-gateway.icloud.com
-d3c33hcgiwev3.cloudfront.net
-clubhouse.pubnubapi.com
-cloud-cdn-digitalocean-com.global.ssl.fastly.net
-books.itunes.apple.com 
-books.apple.com
-beta.music.apple.com
-az668014.vo.msecnd.net
-az416426.vo.msecnd.net
-assets2.xboxlive.com
-assets1.xboxlive.com
-apple.comscoreresearch.com
-amp-api.podcasts.apple.com
-addons.mozilla.org
-.zyxel.com
-.zynamics.com
-.zophar.net
-.z-lib.org
-.zeronet.io
-.zello.com
-.zb.com
-.zaobao.com.sg
-.zaobao.com
-.ytimg.com
-.youtube.com
-.you-get.org
-.yandex.ru
-.yande.re
-.yahoo.com
-.yadi.sk
-.xn--ngstr-lra8j.com
-.x.co
-.wsj.net
-.wsj.com
-.worldcat.org
-.wordpress.com
-.wn.com
-.wireguard.com
-.wire.com
-.wiktionary.org
-.wikiwand.com
-.wikivoyage.org
-.wikiversity.org
-.wikisource.org
-.wikiquote.org
-.wikipedia.org
-.wikinews.org
-.wikimediafoundation.org
-.wikimedia.org
-.wikimapia.org
-.wikileaks.org
-.wikidata.org
-.wikibooks.org
-.widevine.com
-.whoer.net
-.whatsapp.net
-.whatsapp.com
-.welt.de
-.webrtc.org
-.webmproject.org
-.web.dev
-.waymo.com
-.wattpad.com
-.washingtonpost.com
-.vzw.com
-.voxer.com
-.vine.co
-.vimeo.com
-.videopress.com
-.viber.com
-.venturebeat.com
-.v2ex.com
-.v2ex.co
-.us-west-2.amazonaws.com
-.ustream.tv
-.us-east-2.amazonaws.com
-.urbandictionary.com
-.upercell.helpshift.com
-.uniswap.org
-.tx.me
-.twitter.jp
-.twitter.com
-.twitpic.com
-.twimg.com
-.twimg.co
-.tweetdeck.com
-.tutanota.com
-.turbobit.net
-.tumblr.com
-.tradingview.com
-.torproject.org
-.tmagazine.com
-.tiny.cc
-.tineye.com
-.time.com
-.tiltbrush.com
-.thetvdb.com
-.themoviedb.org
-.theinitium.com
-.theguardian.com
-.thediplomat.com
-.theconversation.com
-.theaustralian.com.au
-.theatlantic.com
-.theage.com.au
-.tfhub.dev
-.textnow.me
-.terabox.com
-.tensorflow.org
-.tenor.com
-.telesco.pe
-.telegram.org
-.telegram.me
-.telegra.ph
-.techspot.com
-.tdesktop.com
-.tapatalk.com
-.t.me
-.t.co
-.swissinfo.ch
-.svc.ms
-.sushi.com
-.substack.com
-.streaming.mediaservices.windows.net
-.streamable.com
-.straitstimes.com
-.steemit.com
-.steamcommunity.com
-.static-economist.com
-.startpage.com
-.spiegel.de
-.spideroak.com
-.speakerdeck.com
-.snapgram.co
-.smoot.apple.com 
-.smh.com.au
-.smartmailcloud.com
-.slideshare.net
-.skype.com
-.sketchappsources.com
-.signal.org
-.shutterstock.com
-.sexyno1.com
-.sentry.io
-.segment.com
-.search.com
-.seamless.icu
-.scribd.com
-.scmp.com
-.schema.org
-.rthk.hk
-.rsshub.app
-.rocksdb.org
-.reutersmedia.net
-.reuters.com
-.resilio.com
-.redditstatic.com
-.redditmedia.com
-.redditlist.com
-.reddit.com
-.redd.it
-.recaptcha.net
-.readyatdawn.com
-.reabble.com
-.radioline.co
-.qz.com
-.quoracdn.net
-.quora.com
-.pximg.net
-.pttime.org
-.pscp.tv
-.proxifier.com
-.privoxy.org
-.prism-break.org
-.poloniex.com
-.podbean.com
-.playno1.com
-.playio1.com
-.player.fm
-.pixiv.org
-.pixiv.net
-.pixiv.cat
-.pinimg.com
-.pimg.tw
-.periscope.tv
-.peing.net
-.pcloud.com
-.pastie.org
-.paste.ee
-.parsevideo.com
-.oxfordscholarship.com
-.owltail.com
-.openvpn.net
-.onedrive.com
-.on2.com
-.omny.fm
-.okx.com
-.okex.com
-.ok.ru
-.office365.com
-.oculuscdn.com
-.oculus.com
-.nytstyle.com
-.nytlog.com
-.nytimg.com
-.nytimes.com
-.nytco.com
-.nyt.com
-.now.com
-.notion-static.com
-.notion.so
-.nhentai.net
-.nexitally.com
-.newyorktimes.com
-.newyorker.com
-.newsweek.com
-.newstatesman.com
-.newsblur.com
-.neowin.net
-.nbcnews.com
-.naver.jp
-.mzstatic.com
-.myspacecdn.com
-.myspace.com
-.mypikpak.com
-.mubi.com
-.msn.com
-.moon.fm
-.mixlr.com
-.messenger.com
-.mega.nz
-.mega.io
-.mega.co.nz
-.medium.com
-.medibang.com
-.mediawiki.org
-.matrix.org
-.mailchimp.com
-.m.me
-.loggly.com
-.livestream.com
-.live.com
-.listennotes.com
-.liquid.com
-.linkedin.com
-.licdn.com
-.legra.ph
-.kucoin.com
-.kraken.com
-.korbit.co.kr
-.konachan.com
-.kobo.com
-.kakao.com
-.justpaste.it
-.joinclubhouse.com
-.jkforum.net
-.javlibrary.com
-.javcdn.cc
-.javbus22.com
-.javbus.com
-.jads.co
-.itunes-apple.com.akadns.net
-.itunes.apple.com
-.itasoftware.com
-.istockphoto.com
-.issuu.com
-.is.gd
-.intercomcdn.com
-.intercom.io
-.instagram.com
-.inoreader.com
-.independent.co.uk
-.imgur.com
-.ifixit.com
-.icloud-content.com
-.icloud.com.cn
-.icloud.com
-.i-cable.com
-.huobi.com
-.huffpost.com
-.hotmail.com
-.hket.com
-.heroku.com
-.hackmd.io
-.gvt3.com
-.gvt1.com
-.gvt0.com
-.gstatic.com
-.gravatar.com
-.graphql.org
-.graph.org
-.googlevideo.com
-.googleapis.com
-.google.com
-.golang.org
-.go.dev
-.gmodules.com
-.gmail.com
-.githubusercontent.com
-.githubassets.com
-.github.io
-.github.com
-.github.blog
-.githack.com
-.git.io
-.ggpht.com
-.gfw.report
-.getsync.com
-.getoutline.org
-.genius.com
-.gemini.com
-.gate.io
-.g.co
-.ftx.com
-.ftimg.net
-.ftchinese.com
-.ft.com
-.freetls.fastly.net
-.foreignpolicy.com
-.foreignaffairs.com
-.flitto.com
-.flipboard.com
-.flickr.com
-.firebaseio.com
-.feedly.com
-.feeder.co
-.feedburner.com
-.fbworkmail.com
-.fbsbx.com
-.fbcdn.net
-.fbaddins.com
-.fb.watch
-.fb.me
-.fb.com
-.facebookmail.com
-.f8.com
-.everdalegame.com
-.etherscan.io
-.enpass.io
-.engadget.com
-.encyclopedia.com
-.edx-cdn.org
-.economist.com
-.earthcam.com
-.duckduckgo.com
-.dropboxusercontent.com
-.dropboxapi.com
-.dropbox.com
-.dowjones.com
-.dmm.co.jp
-.dmhy.org
-.dlive.tv
-.disqus.com
-.discordapp.net
-.discordapp.com
-.discord.com
-.disconnect.me
-.dialogflow.com
-.deviantart.net
-.deviantart.com
-.depositphotos.com
-.debug.com
-.deadline.com
-.daum.net
-.dailymotion.com
-.c-span.org
-.coursehero.com
-.conoha.jp
-.coinone.co.kr
-.coinmarketcap.com
-.coingecko.com
-.coincheck.com
-.coinbase.com
-.cna.com.tw
-.clyp.it
-.clubhouseapi.com
-.cloudcone.com
-.chromium.org
-.chrome.com
-.change.org
-.cdninstagram.com
-.castbox.fm
-.byzhihuo.com
-.bybit.com
-.bullguard.com
-.btsow.rest
-.btdig.com
-.brave.com
-.branch.io
-.box.com
-.blubrry.com
-.bloombergview.com
-.bloomberg.de
-.bloomberg.com
-.bloomberg.cn
-.bloglovin.com
-.blogjav.net
-.blogger.com
-.blogblog.com
-.bittrex.com
-.bitstamp.net
-.bitmex.com
-.bithumb.com
-.bitfinex.com
-.bitcointalk.org
-.bit.ly
-.bing.com
-.binance.us
-.binance.me
-.binance.com
-.binance.cc
-.bibox.com
-.behance.net
-.bbc.com
-.bandwagonhost.com
-.bandcamp.com
-.axios.com
-.avg.com
-.ask.com
-.artstation.com
-.archiveofourown.org
-.archive.ph
-.archive.org
-.archive.fo
-.ap-southeast-1.amazonaws.com
-.appsto.re
-.appspot.com
-.apps.apple.com
-.apple-cloudkit.com
-.apple.news
-.appcenter.ms
-.apigee.com
-.api.ai
-.androidtv.com
-.androidify.com
-.android.com
-.anchor.fm
-.ampproject.org
-.amplitude.com
-.amazon.co.jp
-.akamai.net
-.aka.ms
-.aimoon.com
-.aicoin.com
-.aex.com
-.advertisercommunity.com
-.adsense.com
-.admob.com
-.addthisedge.com
-.addthis.com
-.accountkit.com
-.abc.xyz
-.abc.com
-.9gag.com
-.9cache.com
-.1drv.com
-.18comic.vip
-.18comic.org
+payload:
+  - '+..jsdelivr.net'
+  - '+..18comic.vip'
+  - '+..18comic.org'
+  - '+..addthis.com'
+  - '+..pixhost.to'
+  - '+..m-team.cc'
+  - '+..masiro.me'
+  - '+..javdb006.com'
+  - '+..dmm.co.jp'
+  - '+..ibb.co'
+  - '+..btsow.beauty'
+  - '+..blogjav.net'
+  - '+..javstore.net'
+  - '+.sub.nexconvert.com'
+  - '+.cacerts.digitalcertvalidation.com'
+  - '+.cacerts.digicert.com'
+  - '+..githubassets.com'
+  - '+..googleusercontent.com'
+  - '+..bbci.co.uk'
+  - '+..addthisedge.com'
+  - '+..jkforum.net'
+  - '+..playno1.com'
+  - '+..sexyno1.com'
+  - '+..playio1.com'
+  - '+..youtube.com'
+  - '+..googlevideo.com'
+  - '+..github.io'
+  - '+..greencloudvps.com'
+  - '+..tawk.to'
+  - '+..weserv.nl'
+  - '+..1drv.com'
+  - '+..9cache.com'
+  - '+..9gag.com'
+  - '+..abc.com'
+  - '+..abc.xyz'
+  - '+..accountkit.com'
+  - '+..admob.com'
+  - '+..adsense.com'
+  - '+..advertisercommunity.com'
+  - '+..aex.com'
+  - '+..aicoin.com'
+  - '+..aikonhey.com'
+  - '+..aimoon.com'
+  - '+..aka.ms'
+  - '+.a248.e.akamai.net'
+  - '+.a771.dscq.akamai.net'
+  - '+..amazon.co.jp'
+  - '+..amplitude.com'
+  - '+..ampproject.org'
+  - '+..anchor.fm'
+  - '+..android.com'
+  - '+..androidify.com'
+  - '+..androidtv.com'
+  - '+..api.ai'
+  - '+..apigee.com'
+  - '+..appcenter.ms'
+  - '+..apple.news'
+  - '+..apple-cloudkit.com'
+  - '+..apps.apple.com'
+  - '+..appspot.com'
+  - '+..appsto.re'
+  - '+..archive.fo'
+  - '+..archive.org'
+  - '+..archive.ph'
+  - '+..archiveofourown.org'
+  - '+..artstation.com'
+  - '+..ask.com'
+  - '+..avg.com'
+  - '+..axios.com'
+  - '+..bandcamp.com'
+  - '+..bandwagonhost.com'
+  - '+..bbc.com'
+  - '+..behance.net'
+  - '+..bibox.com'
+  - '+..binance.cc'
+  - '+..binance.com'
+  - '+..binance.me'
+  - '+..binance.us'
+  - '+..bing.com'
+  - '+..bit.ly'
+  - '+..bitcointalk.org'
+  - '+..bitfinex.com'
+  - '+..bithumb.com'
+  - '+..bitmex.com'
+  - '+..bitstamp.net'
+  - '+..bittrex.com'
+  - '+..blogblog.com'
+  - '+..blogger.com'
+  - '+..blogjav.net'
+  - '+..bloglovin.com'
+  - '+..bloomberg.cn'
+  - '+..bloomberg.com'
+  - '+..bloomberg.de'
+  - '+..bloombergview.com'
+  - '+..blubrry.com'
+  - '+..box.com'
+  - '+..branch.io'
+  - '+..brave.com'
+  - '+..btdig.com'
+  - '+..btsow.rest'
+  - '+..bullguard.com'
+  - '+..bybit.com'
+  - '+..byzhihuo.com'
+  - '+..castbox.fm'
+  - '+..cdninstagram.com'
+  - '+..change.org'
+  - '+..chrome.com'
+  - '+..chromium.org'
+  - '+..cloudcone.com'
+  - '+..clubhouseapi.com'
+  - '+..clyp.it'
+  - '+..cna.com.tw'
+  - '+..coinbase.com'
+  - '+..coincheck.com'
+  - '+..coingecko.com'
+  - '+..cloudflare.com'
+  - '+..coinmarketcap.com'
+  - '+..coinone.co.kr'
+  - '+..conoha.jp'
+  - '+..coursehero.com'
+  - '+..c-span.org'
+  - '+..dailymotion.com'
+  - '+..daum.net'
+  - '+..deadline.com'
+  - '+..debug.com'
+  - '+..depositphotos.com'
+  - '+..deviantart.com'
+  - '+..deviantart.net'
+  - '+..dialogflow.com'
+  - '+..disconnect.me'
+  - '+..discord.com'
+  - '+..discordapp.com'
+  - '+..discordapp.net'
+  - '+..disqus.com'
+  - '+..dlive.tv'
+  - '+..dmhy.org'
+  - '+..dmm.co.jp'
+  - '+..dowjones.com'
+  - '+..dropbox.com'
+  - '+..dropboxapi.com'
+  - '+..dropboxusercontent.com'
+  - '+..duckduckgo.com'
+  - '+..earthcam.com'
+  - '+..economist.com'
+  - '+..edx-cdn.org'
+  - '+..encyclopedia.com'
+  - '+..engadget.com'
+  - '+..enpass.io'
+  - '+..etherscan.io'
+  - '+..everdalegame.com'
+  - '+..f8.com'
+  - '+..facebookmail.com'
+  - '+..fb.com'
+  - '+..fb.me'
+  - '+..fb.watch'
+  - '+..fbaddins.com'
+  - '+..fbcdn.net'
+  - '+..fbsbx.com'
+  - '+..fbworkmail.com'
+  - '+..feedburner.com'
+  - '+..feeder.co'
+  - '+..feedly.com'
+  - '+..firebaseio.com'
+  - '+..flickr.com'
+  - '+..flipboard.com'
+  - '+..flitto.com'
+  - '+..foreignaffairs.com'
+  - '+..foreignpolicy.com'
+  - '+..ft.com'
+  - '+..ftchinese.com'
+  - '+..ftimg.net'
+  - '+..ftx.com'
+  - '+..g.co'
+  - '+..gate.io'
+  - '+..gemini.com'
+  - '+..genius.com'
+  - '+..getoutline.org'
+  - '+..getsync.com'
+  - '+..gfw.report'
+  - '+..ggpht.com'
+  - '+..git.io'
+  - '+..githack.com'
+  - '+..github.blog'
+  - '+..github.com'
+  - '+..github.io'
+  - '+..githubassets.com'
+  - '+..githubusercontent.com'
+  - '+..gmail.com'
+  - '+..gmodules.com'
+  - '+..go.dev'
+  - '+..golang.org'
+  - '+..google.com'
+  - '+..google.com.tw'
+  - '+..googleapis.com'
+  - '+..graph.org'
+  - '+..graphql.org'
+  - '+..gravatar.com'
+  - '+..gstatic.com'
+  - '+..gvt0.com'
+  - '+..gvt1.com'
+  - '+..gvt3.com'
+  - '+..hackmd.io'
+  - '+..heroku.com'
+  - '+..hket.com'
+  - '+..hostloc.com'
+  - '+..hotmail.com'
+  - '+..huffpost.com'
+  - '+..huobi.com'
+  - '+..i-cable.com'
+  - '+..ifixit.com'
+  - '+..imagetwist.com'
+  - '+..imgur.com'
+  - '+..independent.co.uk'
+  - '+..inoreader.com'
+  - '+..instagram.com'
+  - '+..intercom.io'
+  - '+..intercomcdn.com'
+  - '+..is.gd'
+  - '+..issuu.com'
+  - '+..istockphoto.com'
+  - '+..itasoftware.com'
+  - '+..itunes.apple.com'
+  - '+..itunes-apple.com.akadns.net'
+  - '+..jads.co'
+  - '+..javbus.com'
+  - '+..javbus22.com'
+  - '+..javcdn.cc'
+  - '+..javlibrary.com'
+  - '+..joinclubhouse.com'
+  - '+..jpfunny.org'
+  - '+..jpmediadl.com'
+  - '+..justpaste.it'
+  - '+..kakao.com'
+  - '+..kobo.com'
+  - '+..konachan.com'
+  - '+..korbit.co.kr'
+  - '+..kraken.com'
+  - '+..kucoin.com'
+  - '+..legra.ph'
+  - '+..licdn.com'
+  - '+..linkedin.com'
+  - '+..liquid.com'
+  - '+..listennotes.com'
+  - '+..live.com'
+  - '+..livestream.com'
+  - '+..loggly.com'
+  - '+..lowendtalk.com'
+  - '+..m.me'
+  - '+..me.com'
+  - '+..mailchimp.com'
+  - '+..manhuagui.com'
+  - '+..matrix.org'
+  - '+..mediawiki.org'
+  - '+..medibang.com'
+  - '+..medium.com'
+  - '+..mega.co.nz'
+  - '+..mega.io'
+  - '+..mega.nz'
+  - '+..messenger.com'
+  - '+..micmicidol.com'
+  - '+..mixlr.com'
+  - '+..moon.fm'
+  - '+..msn.com'
+  - '+..mubi.com'
+  - '+..mypikpak.com'
+  - '+..myspace.com'
+  - '+..myspacecdn.com'
+  - '+..mzstatic.com'
+  - '+..naixisubs.com'
+  - '+..naver.jp'
+  - '+..nbcnews.com'
+  - '+..neowin.net'
+  - '+..newsblur.com'
+  - '+..newstatesman.com'
+  - '+..newsweek.com'
+  - '+..newyorker.com'
+  - '+..newyorktimes.com'
+  - '+..nexitally.com'
+  - '+..nhentai.net'
+  - '+..splunkcloud.com'
+  - '+..notion.so'
+  - '+..notion-static.com'
+  - '+..now.com'
+  - '+..nyt.com'
+  - '+..nytco.com'
+  - '+..nytimes.com'
+  - '+..nytimg.com'
+  - '+..nytlog.com'
+  - '+..nytstyle.com'
+  - '+..oculus.com'
+  - '+..oculuscdn.com'
+  - '+..office365.com'
+  - '+..ok.ru'
+  - '+..okex.com'
+  - '+..okx.com'
+  - '+..omny.fm'
+  - '+..on2.com'
+  - '+..onedrive.com'
+  - '+..openvpn.net'
+  - '+..owltail.com'
+  - '+..oxfordscholarship.com'
+  - '+..parsevideo.com'
+  - '+..paste.ee'
+  - '+..pastie.org'
+  - '+..pcloud.com'
+  - '+..peing.net'
+  - '+..periscope.tv'
+  - '+..phncdn.com'
+  - '+..photos18.com'
+  - '+..pimg.tw'
+  - '+..pinimg.com'
+  - '+..pixhost.to'
+  - '+..pixiv.cat'
+  - '+..pixiv.net'
+  - '+..pixiv.org'
+  - '+..player.fm'
+  - '+..podbean.com'
+  - '+..poloniex.com'
+  - '+..prism-break.org'
+  - '+..privoxy.org'
+  - '+..proxifier.com'
+  - '+..pscp.tv'
+  - '+..pttime.org'
+  - '+..pximg.net'
+  - '+..quora.com'
+  - '+..quoracdn.net'
+  - '+..qz.com'
+  - '+..racknerd.com'
+  - '+..radioline.co'
+  - '+..reabble.com'
+  - '+..readyatdawn.com'
+  - '+..recaptcha.net'
+  - '+..redd.it'
+  - '+..reddit.com'
+  - '+..redditlist.com'
+  - '+..redditmedia.com'
+  - '+..redditstatic.com'
+  - '+..resilio.com'
+  - '+..reuters.com'
+  - '+..reutersmedia.net'
+  - '+..rocksdb.org'
+  - '+..rsshub.app'
+  - '+..rthk.hk'
+  - '+..schema.org'
+  - '+..scmp.com'
+  - '+..scribd.com'
+  - '+..seamless.icu'
+  - '+..search.com'
+  - '+..segment.com'
+  - '+..sehuatang.org'
+  - '+..sentry.io'
+  - '+..shutterstock.com'
+  - '+..signal.org'
+  - '+..sketchappsources.com'
+  - '+..skype.com'
+  - '+..slideshare.net'
+  - '+..smartmailcloud.com'
+  - '+..smh.com.au'
+  - '+..smoot.apple.com '
+  - '+..snapgram.co'
+  - '+..speakerdeck.com'
+  - '+..spideroak.com'
+  - '+..spiegel.de'
+  - '+..startpage.com'
+  - '+..static-economist.com'
+  - '+..steamcommunity.com'
+  - '+..steemit.com'
+  - '+..straitstimes.com'
+  - '+..streamable.com'
+  - '+..streaming.mediaservices.windows.net'
+  - '+..substack.com'
+  - '+..sushi.com'
+  - '+.south-plus.net'
+  - '+..nssurge.com'
+  - '+..svc.ms'
+  - '+..swissinfo.ch'
+  - '+..t.co'
+  - '+..t.me'
+  - '+..tapatalk.com'
+  - '+..tdesktop.com'
+  - '+..techspot.com'
+  - '+..telegra.ph'
+  - '+..telegram.me'
+  - '+..telegram.org'
+  - '+..telesco.pe'
+  - '+..tenor.com'
+  - '+..tensorflow.org'
+  - '+..terabox.com'
+  - '+..textnow.me'
+  - '+..tfhub.dev'
+  - '+..theage.com.au'
+  - '+..theatlantic.com'
+  - '+..theaustralian.com.au'
+  - '+..theconversation.com'
+  - '+..thediplomat.com'
+  - '+..theguardian.com'
+  - '+..theinitium.com'
+  - '+..themoviedb.org'
+  - '+..thetvdb.com'
+  - '+..tiltbrush.com'
+  - '+..time.com'
+  - '+..tineye.com'
+  - '+..tiny.cc'
+  - '+..tmagazine.com'
+  - '+..torproject.org'
+  - '+..tradingview.com'
+  - '+..tumblr.com'
+  - '+..turbobit.net'
+  - '+..tutanota.com'
+  - '+..tweetdeck.com'
+  - '+..twimg.co'
+  - '+..twimg.com'
+  - '+..twitpic.com'
+  - '+..twitter.com'
+  - '+..twitter.jp'
+  - '+..tx.me'
+  - '+..uniswap.org'
+  - '+..upercell.helpshift.com'
+  - '+..urbandictionary.com'
+  - '+..us-east-2.amazonaws.com'
+  - '+..ustream.tv'
+  - '+..us-west-2.amazonaws.com'
+  - '+..v2ex.co'
+  - '+..v2ex.com'
+  - '+..venturebeat.com'
+  - '+..viber.com'
+  - '+..videopress.com'
+  - '+..vimeo.com'
+  - '+..vine.co'
+  - '+..voxer.com'
+  - '+..vzw.com'
+  - '+..washingtonpost.com'
+  - '+..wattpad.com'
+  - '+..waymo.com'
+  - '+..web.dev'
+  - '+..webmproject.org'
+  - '+..webrtc.org'
+  - '+..welt.de'
+  - '+..whatsapp.com'
+  - '+..whatsapp.net'
+  - '+..whoer.net'
+  - '+..widevine.com'
+  - '+..wikibooks.org'
+  - '+..wikidata.org'
+  - '+..wikileaks.org'
+  - '+..wikimapia.org'
+  - '+..wikimedia.org'
+  - '+..wikimediafoundation.org'
+  - '+..wikinews.org'
+  - '+..wikipedia.org'
+  - '+..wikiquote.org'
+  - '+..wikisource.org'
+  - '+..wikiversity.org'
+  - '+..wikivoyage.org'
+  - '+..wikiwand.com'
+  - '+..wiktionary.org'
+  - '+..wire.com'
+  - '+..wireguard.com'
+  - '+..wn.com'
+  - '+..wordpress.com'
+  - '+..worldcat.org'
+  - '+..wsj.com'
+  - '+..wsj.net'
+  - '+..x.co'
+  - '+..x-idol.net'
+  - '+..xn--ngstr-lra8j.com'
+  - '+..yadi.sk'
+  - '+..yahoo.com'
+  - '+..yande.re'
+  - '+..yandex.ru'
+  - '+..you-get.org'
+  - '+..ytimg.com'
+  - '+..zaobao.com'
+  - '+..zaobao.com.sg'
+  - '+..zb.com'
+  - '+..zello.com'
+  - '+..zeronet.io'
+  - '+..z-lib.org'
+  - '+..zophar.net'
+  - '+..zynamics.com'
+  - '+..zyxel.com'
+  - '+..kuromisubs.shop'
+  - '+..kuromis.com'
+  - '.addons.mozilla.org'
+  - '.amp-api.podcasts.apple.com'
+  - '.apple.comscoreresearch.com'
+  - '.assets1.xboxlive.com'
+  - '.assets2.xboxlive.com'
+  - '.az416426.vo.msecnd.net'
+  - '.az668014.vo.msecnd.net'
+  - '.beta.music.apple.com'
+  - '.books.apple.com'
+  - '.clubhouse.pubnubapi.com'
+  - '.d3c33hcgiwev3.cloudfront.net'
+  - '.gateway.icloud.com'
+  - '..fastly.net'
+  - '..gitlab.io'
+  - '..github.io'
+  - '.graph.microsoft.com'
+  - '.lab.skk.moe'
+  - '.lookup-api.apple.com '
+  - '.news-assets.apple.com'
+  - '.news-client.apple.com'
+  - '.news-client-search.apple.com'
+  - '.news-edge.apple.com'
+  - '.news-events.apple.com'
+  - '.ocsp.int-x3.letsencrypt.org'
+  - '.payments-jp.amazon.com'
+  - '.ppq.apple.com'
+  - '.s3-ap-northeast-1.amazonaws.com'
+  - '.s3-ap-southeast-2.amazonaws.com'
+  - '.search.yahoo.co.jp'
+  - '.testflight.apple.com'
+  - '.tv.apple.com'
+  - '.wego.here.com'
+  - '.www.92hm.top'
+  - '.www.98tuch.net'
+  - '.www.picnew.org'
+  - '.www.u79pk.com'
+  - '.pixiv.rsshub.app'
