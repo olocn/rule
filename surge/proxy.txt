@@ -1,3 +1,4 @@
+.jsdelivr.net
 .18comic.vip
 .18comic.org
 .addthis.com
