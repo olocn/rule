@@ -1,5 +1,6 @@
 .51.la
 .ad.intl.xiaomi.com
+trackingprd.hwwt8.com
 .adcolony.com
 .ade.googlesyndication.com
 .adjust.com
