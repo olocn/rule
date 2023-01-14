@@ -1,4 +1,5 @@
 .51.la
+.jddebug.com
 token.safebrowsing.apple
 .ad.intl.xiaomi.com
 trackingprd.hwwt8.com
