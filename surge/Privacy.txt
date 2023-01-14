@@ -1,6 +1,7 @@
 .51.la
 .jddebug.com
-token.safebrowsing.apple
+analytics.plex.tv
+.token.safebrowsing.apple
 .ad.intl.xiaomi.com
 trackingprd.hwwt8.com
 .adcolony.com
