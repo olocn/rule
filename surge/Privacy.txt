@@ -1,3 +1,4 @@
+.blackhole.m.jd.com
 .51.la
 .jddebug.com
 analytics.plex.tv
