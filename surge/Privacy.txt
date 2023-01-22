@@ -1,3 +1,6 @@
+iotsdk.midea.com
+smartrac.midea.com
+mp-prod.smartmidea.net
 .blackhole.m.jd.com
 .51.la
 .jddebug.com
