@@ -1,3 +1,6 @@
+global.turn.twilio.com
+idp.devicelink.infra-host.com
+devicelink.intel.com
 .aliyuncs.com
 .jegotrip.cn
 .iqiyi.com
