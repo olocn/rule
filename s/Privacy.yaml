@@ -1,4 +1,7 @@
 payload:
+  - 'iotsdk.midea.com'
+  - 'smartrac.midea.com'
+  - 'mp-prod.smartmidea.net'
   - '+.eloqua-tracking.unity3d.com'
   - '+.eloqua-trackings.unity3d.com'
   - '+.perf-events.cloud.unity3d.com'
