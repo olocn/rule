@@ -1,4 +1,5 @@
 .bb8gk.com
+.gitbook.com
 .jsdelivr.net
 .blogspot.com
 .18comic.vip
