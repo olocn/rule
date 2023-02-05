@@ -1,5 +1,6 @@
 analytics-api.smzdm.com
 analytics-api-01.smzdm.com
+adashbc.ut.taobao.com
 iotsdk.midea.com
 smartrac.midea.com
 mp-prod.smartmidea.net
