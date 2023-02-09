@@ -3,9 +3,9 @@
 .origin-apple.com.akadns.net
 .apple.com.edgekey.net.globalredir.akadns.net
 .apple.com.edgekey.net
-gspe19-cn.ls-apple.com.akadns.net
+.ls-apple.com.akadns.net
 .icloud.com.akadns.net
-init-p01md-lb.push-apple.com.akadns.net
+.push-apple.com.akadns.net
 .itunes-apple.com.akadns.net
 .cdn-apple.com.akadns.net
 .apple-support.akadns.net
