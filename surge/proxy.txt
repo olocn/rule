@@ -1,6 +1,8 @@
 .18comic.org
 .18comic.vip
+.github.io
 .1drv.com
+.facebook.com
 .9cache.com
 .9gag.com
 .abc.com
