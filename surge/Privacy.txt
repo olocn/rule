@@ -4,6 +4,7 @@ adashbc.ut.taobao.com
 iotsdk.midea.com
 smartrac.midea.com
 mp-prod.smartmidea.net
+safebrowsing.googleapis.com
 .blackhole.m.jd.com
 .51.la
 .jddebug.com
