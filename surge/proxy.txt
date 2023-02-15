@@ -7,6 +7,7 @@
 .9gag.com
 .abc.com
 .abc.xyz
+.xuite.net
 .accountkit.com
 .addthis.com
 .addthisedge.com
