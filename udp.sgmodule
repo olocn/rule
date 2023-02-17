@@ -1,4 +1,4 @@
 #!name=udp
 #!desc=reject 443
 [Rule]
-AND,((DOMAIN-SUFFIX,youtube.com), (PROTOCOL,UDP), (DEST-PORT,443), (DOMAIN-SUFFIX,v2ex.com), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
+AND,((DOMAIN-SUFFIX,youtube.com), (DOMAIN-SUFFIX,instagram.com), (PROTOCOL,UDP), (DEST-PORT,443), (DOMAIN-SUFFIX,v2ex.com), (DOMAIN-SUFFIX,googlevideo.com)),REJECT-NO-DROP
