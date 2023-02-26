@@ -1,3 +1,4 @@
+.appsflyer.com
 analytics-api.smzdm.com
 analytics-api-01.smzdm.com
 adashbc.ut.taobao.com
