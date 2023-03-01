@@ -1,5 +1,6 @@
 .umsns.com
 .appsflyer.com
+.jiguang.cn
 analytics-api.smzdm.com
 analytics-api-01.smzdm.com
 adashbc.ut.taobao.com
