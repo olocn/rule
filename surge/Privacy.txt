@@ -1,3 +1,4 @@
+.umsns.com
 .appsflyer.com
 analytics-api.smzdm.com
 analytics-api-01.smzdm.com
