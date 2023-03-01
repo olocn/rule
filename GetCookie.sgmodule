@@ -12,4 +12,4 @@ DOMAIN,gslbtx.ximalaya.com,REJECT
 喜马拉雅Cookie = type=http-request,pattern=^https?:\/\/(mobile|mobilehera|mobwsa)\.ximalaya\.com\/app-skin-service\/skin\/,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/xmlySign.js,requires-body=0
 
 [mitm]
-hostname = %APPEND% passport.iqiyi.com, auth.aliyundrive.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, *115.com
+hostname = %INSERT% passport.iqiyi.com, auth.aliyundrive.com, mobile.ximalaya.com, mobwsa.ximalaya.com, mobilehera.ximalaya.com, *.115.com
