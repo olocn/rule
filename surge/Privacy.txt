@@ -116,7 +116,7 @@ ad.mi.com
 ad.tencentmusic.com
 ad.xiaomi.com
 ad1.xiaomi.com
-ad7.com
+.ad7.com
 adash.man.aliyuncs.com
 adashbc.ut.taobao.com
 adc.hpplay.cn
@@ -133,7 +133,6 @@ advsec.miui.com
 aegis.qq.com
 afd.baidu.com
 aiseet.aa.atianqi.com
-alog.umeng.co
 als.baidu.com
 amdc.m.taobao.com
 analysis.tratao.com
@@ -197,7 +196,6 @@ e.dtscout.com
 ef-dongfeng.tanx.com
 eloqua-tracking.unity3d.com
 eloqua-trackings.unity3d.com
-emar.com
 f74f7f7765f8a2f6.ngaa.net.cn
 firebaselogging-pa.googleapis.com
 fix.hpplay.cn
@@ -212,7 +210,7 @@ h5.hpplay.com.cn
 hm.baidu.com
 hmma.baidu.com
 hotupgrade.hpplay.cn
-hppmy.cn
+.hppmy.cn
 hppvkbfcuq.com
 httpdns.bilivideo.com
 iadsdk.apple.com
