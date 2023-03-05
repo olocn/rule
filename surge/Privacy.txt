@@ -332,7 +332,7 @@ DOMAIN,zgsdk.zhugeio.com
 DOMAIN,zhihuiyun.net.cn
 DOMAIN,zhihu-web-analytics.zhihu.com
 DOMAIN,zz.bdstatic.com
-DOMAIN-SUFFIX,,googlesyndication.com
+DOMAIN-SUFFIX,googlesyndication.com
 DOMAIN-SUFFIX,51.la
 DOMAIN-SUFFIX,71360.com
 DOMAIN-SUFFIX,ad7.com
