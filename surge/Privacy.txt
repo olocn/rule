@@ -194,7 +194,6 @@ report.qqweb.qq.com
 resolver.msg.xiaomi.net
 rpt.gdt.qq.com
 s10.histats.com
-safebrowsing.googleapis.com
 sdk.e.qq.com
 sdkconfig.ad.xiaomi.com
 ssl.google-analytics.com
@@ -225,3 +224,15 @@ xsweb.gdt.qq.com
 zgsdk.zhugeio.com
 zhihu-web-analytics.zhihu.com
 zz.bdstatic.com
+wspeed.qq.com
+jsqmt.qq.com
+tajs.qq.com
+nisgd2.10010.com
+httpdns.bilivideo.com
+babel-statistics-android.d.meituan.net
+maplocatesdksnapshot.d.meituan.net
+metrics-picture.d.meituan.net
+route-stats.d.meituan.net
+stun.services.mozilla.com
+.afdback.ppsimg.com
+ntp.nasa.gov
