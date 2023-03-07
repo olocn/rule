@@ -404,6 +404,7 @@ DOMAIN-SUFFIX,raper.popcap.com
 DOMAIN-SUFFIX,realsrv.com
 DOMAIN-SUFFIX,reyun.com
 DOMAIN-SUFFIX,rtbasia.com
+DOMAIN-SUFFIX,safebrowsing.googleapis.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,seewhy.com
