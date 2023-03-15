@@ -61,6 +61,7 @@
 .applog.uc.cn
 .astat.bugly.qq.com
 .astrategy.beacon.qq.com
+.audid-api.taobao.com
 .xdrig.com
 .babel-statistics-android.d.meituan.net
 .baiducdncmn.inter.iqiyi.com
