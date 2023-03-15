@@ -200,7 +200,6 @@
 .biligame.com
 .biligame.net
 .bilivideo.com
-.bing.com
 .bitbucket.org
 .blackyau.cc
 .blizzard.com
