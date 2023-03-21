@@ -16,6 +16,7 @@
 .cdn-apple.com
 .mzstatic.com
 .aaplimg.com
+.apple-dns.net
 .apple.co
 .apple.com
 .me.com
