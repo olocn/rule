@@ -1,5 +1,10 @@
 .18comic.org
 .18comic.vip
+.imgbox.com
+.fc2.com
+.imagebam.com
+.mgstage.com
+.p-cdn.top
 .github.io
 .1drv.com
 .facebook.com
