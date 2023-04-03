@@ -6,7 +6,6 @@ speedv6.m.jd.com
 .a.tanx.com
 .abtest.mistat.xiaomi.com
 .account.sogou.com
-.act.vip.iqiyi.com
 .activity.browser.intl.miui.com
 .ad.doubleclick.net
 .ad.hpplay.cn
