@@ -2,4 +2,4 @@
 .ai.com
 cdn.auth0.com
 openaiapi-site.azureedge.net
-.googlevideo.com
+.googleapis.com
