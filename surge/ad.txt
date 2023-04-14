@@ -416,7 +416,6 @@ speedv6.m.jd.com
 .serverbid.com
 .sessionm.com
 .smartlook.com
-.snssdk.com
 .socdm.com
 .socialannex.com
 .socialbakers.com
