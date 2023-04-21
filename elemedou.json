@@ -1,42 +1,106 @@
-{
-    "activity":{
 
-        "tip":"请在网络好的地方执行\n有些任务可能失败 需要手动\n有些任务需要饿了么账号绑定淘宝\n不做可以不用管\n\n",
-        "list":[
-                "❤️饿了么自动领豆 更新2021-10-12❤️"
-            ],
-        "mapping" :{
-            "❤️饿了么自动领豆 更新2021-10-12❤️":{
-                 "type":"task",
-                "key":["饿了么自动领豆"]
-            }
-        
-            
-        }
+
+    {
+        "activity":{
+    
+            "tip":"璇峰湪缃戠粶濂界殑鍦版柟鎵ц\n鏈変簺浠诲姟鍙兘澶辫触 闇€瑕佹墜鍔╘n",
+            "list":[
+                    
+                    "鉂わ笍娣樺疂-娣橀噾甯� 鏇存柊2021-10-13鉂わ笍"
+                   
                 
-    },
-    "taskData":{
-        "饿了么自动领豆":{
-                "type":"task1",
-              
-                "endpage": "eleme://web?url=https://m.tb.cn/h.fVl1DQi",
-                "main": "eleme://home",
-             
                 
-                "task":{
-                    "tag":"eleme",
-                    "scheme":"eleme://web?url=",
-                    "baseurl":"https://api.mjt520.shop/static/html/elm.html?type=PAGEVIEW&id=占位参数1",
-                    "wait":20,
-                    "param":{
-                        "随机参数1":[999,888,777]
-                    },
-                    "before":[
-                  {"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1390001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1138001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1966001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1728001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D234001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1150001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1056001","wait":5},{"url":"eleme://home","wait":1},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1130001","wait":5}  ,{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D1698001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D2768001","wait":5},{"url":"eleme://web?url=https%3A%2F%2Fapi.mjt520.shop%2Fstatic%2Fhtml%2Felm.html%3Ftype%3DSIMPLESIGNIN%26id%3D2442001","wait":5}
                   
-                  ],
-                    "item":["230003","350001","344001","228003","1036001","1306001","476001","250003","342001","478001","236002","912001","250003","230003","1036001","2578002","2484001","2774001"]
+                    
+                ],
+            "mapping" :{
+                "楗夸簡涔堢孩鍖�":{
+                    "url":"eleme://web?url=https://m.tb.cn/h.fHjEo2X"
+                },
+           
+                "娣樼壒-澶╁ぉ棰嗙孩鍖�":{
+                     "url":"taobao://m.tb.cn/h.fcElrTQ"
+                
+                },
+                "缇庨甯佹椿鍔ㄥ叆鍙�":{
+                    "url":"taobao://huodong.m.taobao.com/act/snipcodeupdate.html?_ariver_appid=1000473"
+                },
+                "浜ゆ祦缇�":{
+                    "list":{
+                        "qq":""
+                    }
+                },
+                
+    
+                
+                "鉂わ笍娣樺疂-娣橀噾甯� 鏇存柊2021-10-13鉂わ笍":{
+                    "type":"task",
+                    "key":["娣橀噾甯�"]
+                    
                 }
+                
+                
             }
-    }
-}
+                    
+        },
+    
+        "taskData":{
+               
+                 
+    
+                "娣橀噾甯�":{
+                    "type":"task1",
+                  
+                    "endpage": "taobao://m.tb.cn/h.fHSuQIL",
+                    "main":"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com",
+                    "endMessage":"濂ヨ繍浠诲姟缁撴潫",
+                    
+                    "task":{
+                        "tag":"jinbi",
+                        "scheme":"taobao://m.taobao.com/tbopen/index.html?h5Url=",
+                        "baseurl":"https://pages.tmall.com/wow/a/act/tmall/dailygroup/796/wupr?wh_pid=daily-251865&fromToken=PaP776GUBBr0WvMaT9XDS97rHjUrU6U8&implId=鍗犱綅鍙傛暟2&deliveryId=鍗犱綅鍙傛暟1&sceneId=1946&hd_from_id=100089&spm=a217e.xzrwy.tasklist-pentaprism.鍗犱綅鍙傛暟1",
+                        "wait":18,
+                        "wait2":"",
+                        "param":{
+                            "鍟嗗搧瀹氫綅":[168657383,62377409,104736810,229005812,116845644,60790435,68491548,110224300]
+                        },
+                        "before":[
+                             {
+                            "url":"taobao://m.tb.cn/h.ftjmVN6",
+                            "wait":2
+                            },
+                            {"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=157096010&wh_dataservice=false&sourceId=2891951486","wait":17},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=255135168&wh_dataservice=false&sourceId=3372144204","wait":17},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=591910968&wh_dataservice=false&sourceId=4290240542","wait":17},{"url":"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com","wait":2},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=127048312&wh_dataservice=false&sourceId=2593899404","wait":17},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=59569208&wh_dataservice=false&sourceId=321635346","wait":17},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=104490918&wh_dataservice=false&sourceId=771607960","wait":17},{"url":"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com","wait":2},
+                            {"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=169176678&wh_dataservice=false&sourceId=3837764657","wait":17},{"url":"taobao://pages.tmall.com/wow/z/tmtjb/tjbshop/coin_shops_task?wh_biz=tm&disableNav=YES&shopId=452775482&wh_dataservice=false&sourceId=2978398582","wait":17},{"url":"taobao://m.taobao.com/tbopen/index.html?h5Url=https://m.taobao.com","wait":2}
+                        
+                          ],
+                        "item":[
+    
+                            
+    
+                            "14628 other_0_1_14628_1",
+                            
+                            "19917 other_200_582004_19917_0",
+    
+                            "17712 other_0_454012_17712_0",
+                    
+                            
+                            "15974 other_5_308002_15974_0",
+    
+                            "17435 other_10_472001_17435_0",
+    
+                            "15971 other_0_369015_15971_0",
+    
+                            "20803 tpp_0_2258955096_20803_0"
+    
+    
+                         
+                           
+                           
+                            
+                        ]
+                    }
+                }
+    
+    
+    
+        }
