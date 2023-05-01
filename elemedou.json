@@ -1,5 +1,6 @@
 {
     "activity":{
+        "mapping" :{
 
             "淘金币":{
                 "type":"task",
@@ -8,6 +9,7 @@
             }
 
 
+        }
 
     },
     "taskData":{
