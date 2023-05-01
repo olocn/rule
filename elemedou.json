@@ -1,5 +1,15 @@
 {
+    "activity":{
 
+            "淘金币":{
+                "type":"task",
+                "key":["淘金币"]
+
+            }
+
+
+
+    },
     "taskData":{
            
              
