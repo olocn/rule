@@ -1,4 +1,5 @@
 metrics.icloud.com
+.eu-west-1.amazonaws.com
 .18comic.org
 .18comic.vip
 .xms45.com
