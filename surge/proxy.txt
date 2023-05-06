@@ -1,7 +1,9 @@
 metrics.icloud.com
 .eu-west-1.amazonaws.com
+.23img.com
 .18comic.org
 .18comic.vip
+.sehuatang.org
 .xms45.com
 .netcdn.space
 .imgbox.com
