@@ -1,5 +1,6 @@
 .googleadsserving.cn
 .doubleclick.net
+.analytics.126.net
 speedv6.m.jd.com
 p1.meituan.net
 .a.ckm.iqiyi.com
