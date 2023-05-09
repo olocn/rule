@@ -1,3 +1,5 @@
+.googleadsserving.cn
+.doubleclick.net
 speedv6.m.jd.com
 p1.meituan.net
 .a.ckm.iqiyi.com
