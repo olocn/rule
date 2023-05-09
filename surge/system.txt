@@ -5,8 +5,6 @@
 .app-measurement-cn.com
 .d.l.qq.com
 .dartsearch-cn.net
-.doubleclick.net
-.doubleclick-cn.net
 .fontfiles.googleadapis.com
 .fontfiles.googleapis.com
 .fonts.googleadapis.com
