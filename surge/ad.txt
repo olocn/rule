@@ -1,4 +1,5 @@
 .googleadsserving.cn
+.pre-h5.taobao.com
 .doubleclick.net
 .analytics.126.net
 speedv6.m.jd.com
