@@ -1,3 +1,13 @@
+config.cmpassport.com
+www.cmpassport.com
+wap.cmpassport.com
+onekey1.cmpassport.com
+log1.cmpassport.com
+smsks1.cmpassport.com
+verify.cmpassport.com
+enrichgw.10010.com
+.id6.me
+open.e.189.cn
 .googleadsserving.cn
 .pre-h5.taobao.com
 .doubleclick.net
