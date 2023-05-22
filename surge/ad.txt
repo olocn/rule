@@ -1,3 +1,6 @@
+.adx.sogaha.cn
+.xhey.top
+.sensorsdata.cn
 config.cmpassport.com
 www.cmpassport.com
 wap.cmpassport.com
