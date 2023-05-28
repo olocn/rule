@@ -1209,3 +1209,4 @@
 .qpic.cn
 .iot-tencent.com
 .edge.api.myqnapcloud.com
+.ngabbs.com
