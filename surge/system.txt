@@ -1,5 +1,6 @@
 .3.o.lencr.org
 gateway.icloud.com
+metrics.icloud.com
 .airplay.l.qq.com
 .amdc.m.taobao.com
 .app-measurement.com
