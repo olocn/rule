@@ -1,5 +1,7 @@
 .onenote.com
 .workers.dev
+.sda1.dev
+.gitbook.io
 .eu-west-1.amazonaws.com
 .t66y.com
 .23img.com
