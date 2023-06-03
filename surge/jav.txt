@@ -6,6 +6,6 @@
 .playno1.com
 .sexyno1.com
 .playio1.com
-.googleapis.com
-.youtube.com
-#.googlevideo.com
+#.googleapis.com
+#.youtube.com
+.googlevideo.com
