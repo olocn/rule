@@ -1,4 +1,5 @@
 .onenote.com
+metrics.icloud.com
 .workers.dev
 .sda1.dev
 .gitbook.io
