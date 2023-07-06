@@ -1,5 +1,6 @@
 .onenote.com
 .ess.apple.com
+.threads.net
 metrics.icloud.com
 .github.io
 .workers.dev
