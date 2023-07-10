@@ -3,6 +3,7 @@
 .sensorsdata.cn
 .amazon-adsystem.com
 config.cmpassport.com
+api-adservices.apple.com
 www.cmpassport.com
 wap.cmpassport.com
 onekey1.cmpassport.com
