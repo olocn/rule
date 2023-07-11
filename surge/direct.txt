@@ -19,6 +19,7 @@
 .apple-dns.net
 .apple.co
 .apple.com
+.apple.cn
 .me.com
 .icloud.com
 .icloud.com.cn
