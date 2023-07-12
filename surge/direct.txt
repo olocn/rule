@@ -28,6 +28,7 @@
 .ccb.com.cn
 .cyapi.cn
 .nga.cn
+.shanbay.com
 .00cdn.com
 .0daydown.com
 .0o0.ooo
