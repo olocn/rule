@@ -24,6 +24,7 @@
 .icloud.com
 .icloud.com.cn
 .icloud-content.com
+.sinopec.com
 .ccb.com.cn
 .cyapi.cn
 .00cdn.com
