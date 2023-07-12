@@ -27,6 +27,7 @@
 .sinopec.com
 .ccb.com.cn
 .cyapi.cn
+.nga.cn
 .00cdn.com
 .0daydown.com
 .0o0.ooo
