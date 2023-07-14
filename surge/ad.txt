@@ -1,4 +1,5 @@
 .adx.sogaha.cn
+.sogaha.cn
 .xhey.top
 .sensorsdata.cn
 .amazon-adsystem.com
