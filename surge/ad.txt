@@ -3,6 +3,12 @@
 .xhey.top
 .sensorsdata.cn
 .amazon-adsystem.com
+safebrowsing.googleapis.com
+safebrowsing.googleapis-cn.com
+lookup.api.bsb.baidu.com 
+.urlsec.qq.com
+safebrowsing.urlsec.qq.com
+www.urlsec.qq.com
 config.cmpassport.com
 api-adservices.apple.com
 www.cmpassport.com
