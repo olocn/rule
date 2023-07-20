@@ -1101,7 +1101,6 @@
 .yfscdn.net
 .yfsvdn.net
 .yhd.com
-.yi2.net
 .yiche.com
 .yihaodianimg.com
 .yinxiang.com
@@ -1144,7 +1143,6 @@
 .zhujike.com
 .zimuzu.tv
 .zku.net
-.znyj365.com
 .zto.com
 .aliyundrive.net
 .anxia.com
@@ -1153,7 +1151,6 @@
 .idp.devicelink.infra-host.com
 .devicelink.intel.com
 .jegotrip.cn
-.waqi.info
 .rdimg.com
 .plex.direct
 .cdntips.net
@@ -1166,7 +1163,6 @@
 .apple.com.cn
 .apple-livephotoskit.com
 .applemusic.com
-.apzones.com
 .edgekey.net
 .dapenti.com
 .abchina.com.cn
