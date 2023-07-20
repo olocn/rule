@@ -29,6 +29,8 @@
 .cyapi.cn
 .nga.cn
 .shanbay.com
+.wechatpay.cn
+.myqnapcloud.cn
 .12580.com
 .zdmimg.com
 .10010.com
