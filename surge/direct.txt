@@ -654,7 +654,6 @@
 .sinaapp.com
 .sinaimg.cn
 .sinopec.com
-.sinopec.com
 .siweiearth.com
 .sketchchina.com
 .smartgslb.com
@@ -728,8 +727,6 @@
 .uedna.com
 .uisdc.com
 .uisheji.com
-.umeng.com
-.umengcloud.com
 .umetrip.com
 .upai.com
 .upaiyun.com
