@@ -40,6 +40,7 @@
 .colorfulclouds.net
 .phicdn.net
 .bonree.com
+.in-addr.arpa
 .jspec.cn
 .cdn-go.cn
 .pddpic.com
