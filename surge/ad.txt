@@ -2,6 +2,7 @@
 .sogaha.cn
 .xhey.top
 .sensorsdata.cn
+.amplitude.com
 .amazon-adsystem.com
 safebrowsing.googleapis.com
 safebrowsing.googleapis-cn.com
