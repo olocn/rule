@@ -10,6 +10,7 @@ metrics.icloud.com
 .eu-west-1.amazonaws.com
 .t66y.com
 .66img.cc
+.thumbsnap.com
 .23img.com
 .18comic.org
 .18comic.vip
