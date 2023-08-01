@@ -4,3 +4,6 @@ IP-CIDR,34.142.128.0/17,no-resolve
 IP-CIDR,52.200.0.0/13,no-resolve
 IP-CIDR,15.181.192.0/19,no-resolve
 IP-CIDR,15.254.0.0/17,no-resolve
+IP-CIDR,70.224.192.0/19,no-resolve
+IP-CIDR,18.246.0.0/16,no-resolve
+IP-CIDR,43.131.0.0/18,no-resolve
