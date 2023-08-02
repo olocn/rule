@@ -1,4 +1,5 @@
 .onenote.com
+.brawlstarsgame.com
 .ess.apple.com
 .threads.net
 metrics.icloud.com
