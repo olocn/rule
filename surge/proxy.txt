@@ -1,4 +1,5 @@
 .onenote.com
+.github.io
 .brawlstarsgame.com
 .ess.apple.com
 gdmf.apple.com
