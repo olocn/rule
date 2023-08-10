@@ -1,62 +1,31 @@
-#olo
-
-DOMAIN-SUFFIX,aliyunwaf4.com,DIRECT
-DOMAIN-SUFFIX,awsglobalaccelerator.com,DIRECT
-DOMAIN,time.apple.com,DIRECT
+DOMAIN-SUFFIX,3.o.lencr.org,DIRECT
+DOMAIN,metrics.icloud.com,DIRECT
+DOMAIN-SUFFIX,airplay.l.qq.com,DIRECT
+DOMAIN-SUFFIX,amdc.m.taobao.com,DIRECT
+DOMAIN-SUFFIX,app-measurement.com,DIRECT
+DOMAIN-SUFFIX,app-measurement-cn.com,DIRECT
+DOMAIN-SUFFIX,d.l.qq.com,DIRECT
+DOMAIN-SUFFIX,dartsearch-cn.net,DIRECT
+DOMAIN-SUFFIX,fontfiles.googleadapis.com,DIRECT
+DOMAIN-SUFFIX,fontfiles.googleapis.com,DIRECT
+DOMAIN-SUFFIX,fonts.googleadapis.com,DIRECT
+DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
+DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
 DOMAIN-SUFFIX,olocn.fun,DIRECT
-DOMAIN,stun.services.mozilla.com,DIRECT
-DOMAIN-SUFFIX,ocsp.identrust.com,DIRECT
-DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-
-DOMAIN,r3.o.lencr.org,DIRECT
-DOMAIN,passportapi.115.com,DIRECT
-DOMAIN,dizhensubao.getui.com,DIRECT
-DOMAIN,origin-a.akamaihd.net,DIRECT
-DOMAIN,analytics.95516.com,DIRECT
-DOMAIN,tracking.miui.com,DIRECT
-
-ip-cidr, 18.163.0.0/16,DIRECT
-
-# Unbreak
-# > General
-USER-AGENT,archero*,DIRECT
-USER-AGENT,coffeecorp*,DIRECT
-USER-AGENT,Coffee%20Corp*,DIRECT
-USER-AGENT,restaurant-mobile*,DIRECT
-DOMAIN,app.adjust.com,DIRECT
-DOMAIN,bdtj.tagtic.cn,DIRECT
-# > Alibaba
-DOMAIN,log.mmstat.com,DIRECT
-DOMAIN,sycm.mmstat.com,DIRECT
-# > Google
-DOMAIN-SUFFIX,blog.google,DIRECT
-DOMAIN-SUFFIX,googletraveladservices.com,DIRECT
-DOMAIN,clientservices.googleapis.com,DIRECT
-DOMAIN,dl.google.com,DIRECT
-DOMAIN,dl.l.google.com,DIRECT
-DOMAIN,update.googleapis.com,DIRECT
-DOMAIN,translate.googleapis.com,DIRECT
-# >> Google Fonts API
-DOMAIN,fonts.googleapis.com,DIRECT
-DOMAIN,fonts.gstatic.com,DIRECT
-# >> Firebase Cloud Messaging
-DOMAIN,mtalk.google.com,DIRECT
-DOMAIN,alt1-mtalk.google.com,DIRECT
-DOMAIN,alt2-mtalk.google.com,DIRECT
-DOMAIN,alt3-mtalk.google.com,DIRECT
-DOMAIN,alt4-mtalk.google.com,DIRECT
-DOMAIN,alt5-mtalk.google.com,DIRECT
-DOMAIN,alt6-mtalk.google.com,DIRECT
-DOMAIN,alt7-mtalk.google.com,DIRECT
-DOMAIN,alt8-mtalk.google.com,DIRECT
-# >> Paramount+
-DOMAIN,pubads.g.doubleclick.net,DIRECT
-# > Tencent
-DOMAIN,fairplay.l.qq.com,DIRECT
-DOMAIN,livew.l.qq.com,DIRECT
-DOMAIN,vd.l.qq.com,DIRECT
-# > Strava
-DOMAIN,analytics.strava.com,DIRECT
-# > Umeng
-DOMAIN,msg.umeng.com,DIRECT
-DOMAIN,msg.umengcloud.com,DIRECT
+DOMAIN-SUFFIX,time.apple.com,DIRECT
+DOMAIN,9.cnzz.com,DIRECT
+DOMAIN,api.revenuecat.com,DIRECT
+DOMAIN,ingest.sentry.io,DIRECT
+DOMAIN,msg.qy.net,DIRECT
+DOMAIN,ocsp.sectigo.com,DIRECT
+DOMAIN,pv.sohu.com,DIRECT
+DOMAIN-SUFFIX,microsoft.com,DIRECT
+DOMAIN-SUFFIX,microsoftstore.com.cn,DIRECT
+DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
+DOMAIN-SUFFIX,msftncsi.com,DIRECT
+DOMAIN-SUFFIX,outlook.com,DIRECT
+DOMAIN-SUFFIX,s-microsoft.com,DIRECT
+DOMAIN-SUFFIX,sfx.ms,DIRECT
+DOMAIN-SUFFIX,sharepoint.com,DIRECT
+DOMAIN-SUFFIX,windows.com,DIRECT
+DOMAIN-SUFFIX,windowsupdate.com,DIRECT
