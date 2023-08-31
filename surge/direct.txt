@@ -1,3 +1,12 @@
+.edge.api.myqnapcloud.com
+.olocn.fun
+.right.com.cn
+.push.apple.com
+.web.app
+.smzdm.soboten.com
+.myqnapcloud.com
+.sharepoint.com
+.plex.tv
 .fonts.googleadapis.com
 .fonts.googleapis.com
 .fonts.gstatic.com
@@ -272,7 +281,6 @@
 .dxycdn.com
 .eastmoney.com
 .ecitic.com
-.edge.api.myqnapcloud.com
 .edgekey.net
 .edu.cn
 .eeboard.com
