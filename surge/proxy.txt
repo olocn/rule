@@ -3,6 +3,7 @@
 .netcdn.space
 .66img.cc
 .onenote.com
+.msedge.net
 .github.io
 .brawlstarsgame.com
 .ess.apple.com
