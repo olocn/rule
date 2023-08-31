@@ -1,3 +1,7 @@
+.microsoftonline.com
+.imgbox.com
+.netcdn.space
+.66img.cc
 .onenote.com
 .github.io
 .brawlstarsgame.com
@@ -5,14 +9,12 @@
 gdmf.apple.com
 .threads.net
 metrics.icloud.com
-.github.io
 .workers.dev
 .sda1.dev
 .gitbook.io
 .sxmjxs.xyz
 .eu-west-1.amazonaws.com
 .t66y.com
-.66img.cc
 .thumbsnap.com
 .23img.com
 .18comic.org
@@ -20,13 +22,10 @@ metrics.icloud.com
 .sehuatang.org
 .xms45.com
 .xksm54s.com
-.netcdn.space
-.imgbox.com
 .fc2.com
 .imagebam.com
 .mgstage.com
 .p-cdn.top
-.github.io
 .1drv.com
 .facebook.com
 .9cache.com
@@ -189,7 +188,6 @@ metrics.icloud.com
 .githack.com
 .github.blog
 .github.com
-.github.io
 .githubassets.com
 .githubusercontent.com
 .gitlab.io
@@ -547,5 +545,4 @@ www.92hm.top
 www.98tuch.net
 www.picnew.org
 www.u79pk.com
-.66img.cc
 .supercell.com
