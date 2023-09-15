@@ -1,4 +1,7 @@
 .adx.sogaha.cn
+in.appcenter.ms
+license.pdfexpert.com
+event.northghost.com
 .sogaha.cn
 .xhey.top
 .sensorsdata.cn
