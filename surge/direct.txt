@@ -894,3 +894,6 @@
 .bytedance.com
 .ecombdimg.com
 .dingxiang-inc.com
+.zhibo8.com
+.qiumibao.com
+.duoduocdn.com
