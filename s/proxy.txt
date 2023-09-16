@@ -1,4 +1,5 @@
 +.microsoftonline.com
++.i1.wp.com
 +.imgbox.com
 +.netcdn.space
 +.66img.cc
