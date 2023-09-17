@@ -1,4 +1,0 @@
-#!name=udp
-#!desc=reject 443
-[Rule]
-AND,((DOMAIN-SET,https://raw.githubusercontent.com/olocn/rule/master/surge/proxy.txt), (PROTOCOL,UDP), (DEST-PORT,443)),REJECT-NO-DROP
