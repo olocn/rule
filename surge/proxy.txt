@@ -1,4 +1,5 @@
 .microsoftonline.com
+api.nexconvert.com
 .azureedge.net
 .siftrss.com
 .i1.wp.com
