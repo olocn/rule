@@ -1,3 +1,4 @@
++.img.3mo.net
 +.microsoftonline.com
 .api.nexconvert.com
 +.azureedge.net
