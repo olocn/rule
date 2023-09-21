@@ -1,4 +1,6 @@
 img.3mo.net
+.wsrv.nl
+picture.jjhxmc.com
 .microsoftonline.com
 api.nexconvert.com
 .azureedge.net
