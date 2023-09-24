@@ -1,3 +1,6 @@
++.obsidian.md
++.office.com
++.sfx.ms
 +.img.3mo.net
 +.msftauth.net
 +.sharepoint.com
