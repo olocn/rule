@@ -1,4 +1,6 @@
 .south-plus.org
+.msftauth.net
+.sharepoint.com
 img.3mo.net
 .wsrv.nl
 picture.jjhxmc.com
