@@ -1,4 +1,6 @@
 +.img.3mo.net
++.msftauth.net
++.sharepoint.com
 +.wsrv.nl
 +.picture.jjhxmc.com
 +.yande.re
