@@ -1,4 +1,4 @@
-.adx.sogaha.cn
+ad.cyapi.cn
 in.appcenter.ms
 license.pdfexpert.com
 event.northghost.com
@@ -38,7 +38,6 @@ p1.meituan.net
 .abtest.mistat.xiaomi.com
 .account.sogou.com
 .activity.browser.intl.miui.com
-.ad.doubleclick.net
 .ad.hpplay.cn
 .ad.intl.xiaomi.com
 .ad.m.iqiyi.com
@@ -157,7 +156,7 @@ btrace.play.aiseet.atianqi.com
 .gallery.pandora.xiaomi.com
 .gamecenter.iqiyi.com
 .gd.xinhuanet.com
-.get.sogou.com
+.sogou.com
 .gslb.hpplay.cn
 .gvod.aiseejapp.atianqi.com
 .h5.hpplay.com.cn
@@ -184,7 +183,6 @@ hotchat-im.iqiyi.com
 .tvapp.hpplay.cn
 .pin.hpplay.cn
 .hppmy.cn
-.sogou.com
 .info.analysis.kp.sec.miui.com
 .info.sec.miui.com
 ios.bugly.qq.com
@@ -205,7 +203,6 @@ logtake.weidian.com
 logtakeweidian.com
 logupdate.avlyun.sec.miui.com
 lxcdn.dl.files.xiaomi.net
-macime.sogou.com
 maplocatesdksnapshot.d.meituan.net
 mbdlog.iqiyi.com
 me.xdrig.com
@@ -297,7 +294,6 @@ o2o.api.xiaomi.com
 .security.browser.miui.com
 .sg.a.stat.mi.com
 .shenghuo.xiaomi.com
-.shouji.sogou.com
 .smartrac.midea.com
 .ssl.google-analytics.com
 .ssp.xiaomi.com
