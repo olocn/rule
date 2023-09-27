@@ -1,4 +1,5 @@
 .obsidian.md
+.cool18.com
 .office.com
 .sfx.ms
 .south-plus.org
