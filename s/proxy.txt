@@ -1,5 +1,11 @@
 +.obsidian.md
++.feedx.net
++.yandex.net
++.gfx.ms
++.msauth.net
++.bing.net
 +.office.com
++.microsoft.com
 +.sfx.ms
 +.img.3mo.net
 +.msftauth.net
