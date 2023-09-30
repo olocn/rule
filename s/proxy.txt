@@ -1,5 +1,6 @@
 +.obsidian.md
 +.feedx.net
++.ntdm9.com
 +.yandex.net
 +.gfx.ms
 +.msauth.net
