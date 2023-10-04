@@ -1721,7 +1721,6 @@ nsclick.baidu.com
 .pi.miwifi.com
 .puds.ucweb.com
 .push.xdrig.com
-.px.effirst.com
 .r.browser.miui.com
 .raperpopcap.com
 .reader.browser.miui.com
