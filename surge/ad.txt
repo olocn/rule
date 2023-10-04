@@ -778,7 +778,6 @@ stat.m.jd.com
 img-x.jd.com
 
 # >> Alibaba
-.audid-api.taobao.com
 tui.taobao.com
 fourier.taobao.com
 amos.alicdn.com
