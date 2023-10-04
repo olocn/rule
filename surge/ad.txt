@@ -431,9 +431,6 @@ ssp.api.tappx.com
 .zynga.com
 .zyngaplayersupport.com
 .adx.io
-advertpay-vip-ssl.xunlei.com
-.advertising.speed.cdn.vip.xunlei.com
-.advertpay.vip.xunlei.com
 .youmi.net
 .logger.baofeng.com
 .houyi.baofeng.net
@@ -673,8 +670,6 @@ books-analytics-events.news.apple-dns.net
 books-analytics-events.apple.com
 stocks-analytics-events.apple.com
 stocks-analytics-events.news.apple-dns.net
-.iadsdk.apple.com
-.iad.apple.com
 acfeedbackws.icloud.com
 api-adservices.apple.com
 feedbackws.icloud.com
