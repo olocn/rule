@@ -11,7 +11,7 @@ metrics.icloud.com
 .fonts.googleadapis.com
 .fonts.googleapis.com
 .fonts.gstatic.com
-.olocn.fun
+.885511.xyz
 .time.apple.com
 9.cnzz.com
 api.revenuecat.com
