@@ -19,13 +19,3 @@ ingest.sentry.io
 msg.qy.net
 ocsp.sectigo.com
 pv.sohu.com
-.microsoft.com
-.microsoftstore.com.cn
-.msftconnecttest.com
-.msftncsi.com
-.outlook.com
-.s-microsoft.com
-.sfx.ms
-.sharepoint.com
-.windows.com
-.windowsupdate.com
