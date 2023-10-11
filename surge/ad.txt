@@ -1,5 +1,5 @@
-# $ custom_build_script
-
+#o
+iphonesubmissions.apple.com
 # --- Blacklist ---
 # >> General
 .kuaizip.com
@@ -1579,6 +1579,8 @@ adserve2.tom.com
 .luminati-china.biz
 
 # O
+.safebrowsing.apple
+.smartrac.midea.com
 ad.cyapi.cn
 license.pdfexpert.com
 event.northghost.com
@@ -1795,7 +1797,6 @@ trackingprd.hwwt8.com
 .realsrv.com
 .reyun.com
 .rtbasia.com
-.safebrowsing.apple
 .seewhy.com
 .segment.com
 .segmentify.com
@@ -1823,5 +1824,4 @@ trackingprd.hwwt8.com
 .wootric.com
 .wowanalytics.co.uk
 .zoomanalytics.co
-.smartrac.midea.com
 .ssl.google-analytics.com
