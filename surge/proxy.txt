@@ -1,4 +1,5 @@
 .obsidian.md
+.us-east-1.amazonaws.com
 .cool18.com
 .office.com
 .sfx.ms
