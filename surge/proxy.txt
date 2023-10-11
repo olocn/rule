@@ -1,4 +1,6 @@
 .obsidian.md
+.microsoftapp.net
+.microsoft-falcon.io
 .us-east-1.amazonaws.com
 .cool18.com
 .office.com
