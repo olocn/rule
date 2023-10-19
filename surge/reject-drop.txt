@@ -8,3 +8,4 @@ errlog.umeng.com
 ulogs.umeng.com
 googleads.g.doubleclick.net
 sugar.zhihu.com
+.getui.com
