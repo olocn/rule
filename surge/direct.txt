@@ -1,4 +1,5 @@
-.edge.api.myqnapcloud.com
+.edge.api.myqnapcloud.
+.jybank.com.cn
 .olocn.fun
 .right.com.cn
 .push.apple.com
