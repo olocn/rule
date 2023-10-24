@@ -208,6 +208,7 @@ metrics.icloud.com
 .github.com
 .githubassets.com
 .githubusercontent.com
+.github.io
 .gitlab.io
 .gmail.com
 .gmodules.com
