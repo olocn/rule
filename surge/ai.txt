@@ -6,3 +6,4 @@ challenges.cloudflare.com
 .identrust.com
 .featuregates.org
 .intercom.io
+.googlevideo.com
