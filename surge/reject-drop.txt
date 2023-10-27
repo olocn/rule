@@ -1,4 +1,5 @@
 blackhole.m.jd.com
+analytics-api-01.smzdm.com
 analytics-api.smzdm.com
 adashxgc.ut.taobao.com
 nbsdk-baichuan.alicdn.com
