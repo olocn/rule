@@ -1,4 +1,6 @@
 blackhole.m.jd.com
+analytics-api.smzdm.com
+adashxgc.ut.taobao.com
 nbsdk-baichuan.alicdn.com
 cm.bilibili.com
 ios.bugly.qq.com
