@@ -1,4 +1,5 @@
 +.obsidian.md
++.akamaized.net
 +.feedx.net
 +.ntdm9.com
 +.yandex.net
