@@ -1,4 +1,7 @@
 +.obsidian.md
++.image.tmdb.org
++.cloudsilk.io
++.azurefd.net
 +.akamaized.net
 +.feedx.net
 +.ntdm9.com
