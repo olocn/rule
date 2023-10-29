@@ -1,4 +1,7 @@
 .obsidian.md
+.azurefd.net
+.cloudsilk.io
+.tmdb.org
 .microsoftapp.net
 .microsoft-falcon.io
 .us-east-1.amazonaws.com
