@@ -14,3 +14,4 @@ googleads.g.doubleclick.net
 sugar.zhihu.com
 .getui.com
 p1.meituan.net
+waapdg.jd.com
