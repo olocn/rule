@@ -1,4 +1,5 @@
 #o
+.cloudvideocdn.taobao.com
 iphonesubmissions.apple.com
 # --- Blacklist ---
 # >> General
