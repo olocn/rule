@@ -729,7 +729,6 @@ spynetalt.microsoft.com
 .googleads.com
 .doubleclick.com
 .doubleclick.net
-.google-analytics.com
 .googleadapis.com
 .googleanalytics.com
 .googleoptimize.com
