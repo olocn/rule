@@ -189,7 +189,6 @@ optimus-ads.amap.com
 .ok365.com
 .114so.cn
 .dragonparking.com
-
 # --- AD Block ---
 .airpush.com
 .adbxb.cn
@@ -555,7 +554,6 @@ t.yesware.com
 .auwrtou.cn
 .eatcells.com
 comments.gazo.space
-
 # >> Tracking
 datum.jsdelivr.com
 tracking.yorg.app
@@ -654,12 +652,10 @@ js.partnerstack.com
 zymerget.party
 t.iwara.tv
 api-scout.vercel.app
-
 # >> Alexa
 data.alexa.com
 device-metrics-us.amazon.com
 device-metrics-us-2.amazon.com
-
 # >> Apple
 metrics.apple.com
 securemetrics.apple.com
@@ -681,22 +677,18 @@ weather-analytics-events.apple.com
 weather-analytics-events.news.apple-dns.net
 .qwapi.com
 .wwads.cn
-
 # >> Crashlytics
 e.crashlytics.com
 reports.crashlytics.com
 settings.crashlytics.com
-
 # >> AppFlyer
 events.appsflyer.com
 stats.appsflyer.com
 t.appsflyer.com
-
 # >> Spotify
 adeventtracker.spotify.com
 analytics.spotify.com
 .log.spotify.com
-
 # >> Microsoft
 mobile.events.data.microsoft.com
 .vortex-win.data.microsoft.com
@@ -725,7 +717,6 @@ cache.datamart.windows.com
 spynet2.microsoft.com
 spynetalt.microsoft.com
 .msads.net
-
 # >> Google
 .2mdn.net
 .admob.com
@@ -745,7 +736,6 @@ spynetalt.microsoft.com
 .googletagmanager.com
 .googletagservices.com
 .googletraveladservices.com
-
 # >> Huawei
 .data.hicloud.com
 logservice.hicloud.com
@@ -763,7 +753,6 @@ grs.platform.dbankcloud.ru
 logservice-dra.platform.hicloud.com
 logservice-dre.platform.dbankcloud.cn
 logservice-dre.platform.hicloud.com
-
 # >> JD
 jrad.jd.com
 .union.jd.com
@@ -772,7 +761,6 @@ cps.360buy.com
 jzt.jd.com
 stat.m.jd.com
 img-x.jd.com
-
 # >> Alibaba
 tui.taobao.com
 fourier.taobao.com
@@ -886,13 +874,11 @@ adsz.wagbridge.tmall.alimama.com
 pre2-ad.alimama.com
 tf.logview.alimama.com
 logview.uc.alimama.com
-
 # >> Umeng
 .umeng.cn
 .umeng.com
 .umengcloud.com
 .whalecloud.com
-
 # >> Baidu
 sp0.baidu.com
 sp1.baidu.com
@@ -965,7 +951,6 @@ videopush.baidu.com
 .tracker.baidu.com
 .tuijian.baidu.com
 .ubmcmm.baidustatic.com
-
 # >> 360
 .360tpcdn.com
 .360safe.com
@@ -983,7 +968,6 @@ videopush.baidu.com
 .taobc.com
 .360antivirus.org
 .360in.com
-
 # >> 优酷
 .atm.youku.com
 actives.youku.com
@@ -1031,7 +1015,6 @@ val.api.youku.com
 wan.youku.com
 ykatr.youku.com
 ykrec.youku.com
-
 # >> 网易
 ad.bn.netease.com
 ad.yixin.im
@@ -1053,7 +1036,6 @@ crashlytics.163.com
 g.163.com
 a.youdao.com
 adpublish.ydstatic.com
-
 # >> QQ
 .beacon.qq.com
 qring-tms.qq.com
@@ -1110,7 +1092,6 @@ adstats.tencentmusic.com
 adcdn.tencentmusic.com
 adexpo.tencentmusic.com
 adclick.tencentmusic.com
-
 # >> Sina
 ad4.sina.com.cn
 adm.leju.sina.com.cn
@@ -1208,7 +1189,6 @@ cast.innity.com
 cdn.innity.net
 cdn.media.innity.net
 ssl-cdn.media.innity.net
-
 # >> iQiyi
 .cupid.ptqy.gitv.tv
 a.ckm.iqiyi.com
@@ -1229,7 +1209,6 @@ ifacelog.iqiyi.com
 mbdlog.iqiyi.com
 msg.71.am
 msg.qy.net
-
 # >> 酷狗
 ads.bssdl.kugou.com
 adserviceretry.kugou.com
@@ -1242,14 +1221,12 @@ kgmobilestatbak.kugou.com
 mobilelog.kugou.com
 mobilead.kuwo.cn
 rich.kuwo.cn
-
 # >> LeTV
 .webp2p.letv.com
 ark.letv.com
 emma-414870e223.huodonghezi.com
 g3.letv.com
 n.mark.letv.com
-
 # >> DMM
 .abluekai.com
 .afout.jp
@@ -1261,7 +1238,6 @@ n.mark.letv.com
 .amicroad.co.jp
 .amicroad.jp
 .asocdm.com
-
 # >> Sohu
 adnet.sohu.com
 adv-sv-show.focus.cn
@@ -1288,7 +1264,6 @@ pro.hoye.letv.com
 pro.letv.com
 stat.letv.com
 static.app.m.letv.com
-
 # >> Xiaomi (MIUI).dvb.pandora.xiaomi.com
 .data.mistat.intl.xiaomi.com
 .de.pandora.xiaomi.com
@@ -1362,7 +1337,6 @@ sa.api.intl.miui.com
 wtradv.market.xiaomi.com
 video.market.xiaomi.com
 .pandora.xiaomi.com
-
 # 小米云扫描组件
 .avlyun.sec.intl.miui.com
 .avlyun.sec.miui.com
@@ -1401,10 +1375,8 @@ gas.data.pplive.com
 plt.data.pplive.com
 web.data.pplive.com
 .game.pps.tv
-
 # >> ele
 log.star.ele.me
-
 # >> 芒果TV
 .da.mgtv.com
 .log.mgtv.com
@@ -1413,7 +1385,6 @@ log.star.ele.me
 log.v2.hunantv.com
 click.hunantv.com
 res.hunantv.com
-
 # >> Xuneli
 adsp.xunlei.com
 api-shoulei-ssl.xunlei.com
@@ -1424,19 +1395,15 @@ scene.vip.xunlei.com
 advertpay.vip.xunlei.com
 static.m.sjzhushou.com
 etl.xlmc.sandai.net
-
 # >> CIBNTV
 .ott.cibntv.net
-
 # >> QQTV
 .aiseet.atianqi.com
-
 # >> Zhihu
 sugar.zhihu.com
 js.shshuoshu.com
 mqtt.zhihu.com
 .xdrig.com
-
 # >> TikTok
 .mcs.snssdk.com
 .ctobsnssdk.com
@@ -1449,62 +1416,50 @@ mqtt.zhihu.com
 .smr.snssdk.com
 .pangolin-sdk-toutiao.com
 .dm.toutiao.com
-
 # >> Tonghuahshun
 adm.10jqka.com.cn
 stat.10jqka.com.cn
-
 # >> UC
 adtrack.ucweb.com
 applogios.uc.cn
 track.uc.cn
-
 # >> Bilibili
 thirdparty.biliapi.com
 thirdparty.biliapi.net
 cm.bilibili.com
-
 # >> CNTV
 galaxy.bjcathay.com
 mdrecv.app.cntvwb.cn
 sdapprecv.app.cntvwb.cn
 vdapprecv.app.cntvwb.cn
 .ad.cctv.com
-
 # >> 金山
 ad-stat.ksosoft.com
 img.auction-ads.wpscdn.cn
 minfo.wps.cn
-
 # >> Hupu
 adx.hupu.com
 shence.hupu.com
 ccdace.hupu.com
 hd.hupu.com
-
 # >> 58
 track.58.com
 adshow.58.com
 tracklog.58.com
-
 # >> Acfun
 apilog-web.acfun.cn
-
 # >> Kuaishou
 log-sdk.gifshow.com
 wlog.kuaishou.com
-
 # >> Disqus
 links.services.disqus.com
 ads.servebom.com
 referrer.disqus.com
 disqusads.com
-
 # >> 2345
 .2345.com
 .2345.cn
 .50bang.org
-
 # >> 喜马拉雅
 ad.ximalaya.com
 adse.ximalaya.com
@@ -1518,22 +1473,18 @@ dns.ximalaya.com
 mobwsa.ximalaya.com
 location.ximalaya.com
 xdcs-collector.ximalaya.com
-
 # >> 西瓜视频
 v1-dc-ad.ixigua.com
 v3-ad.ixigua.com
 v3-dc-ad.ixigua.com
 v6-dc-ad.ixigua.com
 v9-dc-ad.ixigua.com
-
 # Roku
 logs.roku.com
-
 # >> 勾正数据
 .gz-data.com
 .gzads.com
 .gozendata.com
-
 # >> 人人字幕
 tracker1.zmzfile.com
 tracker2.zmzfile.com
@@ -1546,7 +1497,6 @@ htracker3.zmzfile.com
 htracker4.zmzfile.com
 htracker5.zmzfile.com
 file.apicvn.com
-
 # >> Lenovo
 adcore.lenovomm.com
 pushapi.lenovomm.com
@@ -1556,7 +1506,6 @@ lcs.dev.surepush.cn
 susapi.dev.surepush.cn
 test.surepush.cn
 .ad.gtbrowser.com
-
 # >> 华数
 ads.wasu.tv
 adsystem.wasu.tv
@@ -1565,12 +1514,10 @@ collector.wasu.cn
 delivery-pc.wasu.cn
 delivery.wasu.cn
 delivery.maihehd.com
-
 # tom.com
 adserve2.tom.com
 .pub.tom.com
 .discovery.tom.com
-
 # brightdata (luminati) SDK
 .lum-sdk.io
 .luminatinet.com
@@ -1578,7 +1525,6 @@ adserve2.tom.com
 .luminati.io
 .lum-cn.io
 .luminati-china.biz
-
 # O
 .safebrowsing.apple
 .smartrac.midea.com
@@ -1825,4 +1771,4 @@ trackingprd.hwwt8.com
 .wootric.com
 .wowanalytics.co.uk
 .zoomanalytics.co
-.ssl.google-analytics.com
+.google-analytics.com
