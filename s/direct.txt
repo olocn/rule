@@ -1,4 +1,14 @@
 +.edge.api.myqnapcloud.com
++.tencent-cloud.net
++.baidu.com
++.snssdk.com
++.taobao.com
++.bcebos.com
++.chinanetcenter.com
++.5211game.com
++.qinglizi.cn
++.toutiaoapi.com
++.xiaomi.com
 +.olocn.fun
 +.right.com.cn
 +.push.apple.com
@@ -72,7 +82,6 @@
 +.5173cdn.com
 +.51cto.com
 +.51job.com
-+.5211game.com
 +.56.com
 +.58.com
 +.58pic.com
@@ -134,7 +143,6 @@
 +.autonavi.com
 +.axureux.com
 +.babybus.com
-+.baidu.com
 +.baiducontent.com
 +.baidupan.com
 +.baidupcs.com
@@ -147,7 +155,6 @@
 +.baomitu.com
 +.baozoumanhua.com
 +.bbtree.com
-+.bcebos.com
 +.bcedns.com
 +.bcedns.net
 +.bcy.net
@@ -199,7 +206,6 @@
 +.cebbank.com
 +.chaoxing.com
 +.china.com
-+.chinanetcenter.com
 +.chinaso.com
 +.chinassl.net
 +.chinaums.com
@@ -696,7 +702,6 @@
 +.smartgslb.com
 +.smartisan.com
 +.smzdm.com
-+.snssdk.com
 +.so.com
 +.sobot.com
 +.sogo.com
@@ -724,7 +729,6 @@
 +.takungpao.com
 +.talkingdata.com
 +.tanx.com
-+.taobao.com
 +.taobao.org
 +.taobaocdn.com
 +.tapdb.net
@@ -733,7 +737,6 @@
 +.teambition.com
 +.tencent.com
 +.tencent-cloud.com
-+.tencent-cloud.net
 +.tencentmind.com
 +.tenpay.com
 +.tenxcloud.com
@@ -749,7 +752,6 @@
 +.toushibao.com
 +.toutiao.com
 +.toutiao.io
-+.toutiaoapi.com
 +.toutiaoimg.com
 +.toutiaovod.com
 +.tower.im
@@ -824,7 +826,6 @@
 +.xiami.net
 +.xiaohongshu.com
 +.xiaoka.tv
-+.xiaomi.com
 +.xiaomi.net
 +.xiaomiyoupin.com
 +.xiazaiziti.com
