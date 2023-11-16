@@ -542,7 +542,6 @@
 .clubhouse.pubnubapi.com
 .cloudfront.net
 .gateway.icloud.com
-.graph.microsoft.com
 .lab.skk.moe
 .lookup-api.apple.com 
 .news-assets.apple.com
@@ -568,7 +567,7 @@
 .www.u79pk.com
 .supercell.com
 .pianyuan.org
-.image.tmdb.org
+.tmdb.org
 .akamaized.net
 .feedx.net
 .ntdm9.com
