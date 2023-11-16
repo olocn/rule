@@ -523,7 +523,6 @@
 +.zb.com
 +.zello.com
 +.zeronet.io
-+.z-lib.org
 +.zophar.net
 +.zynamics.com
 +.zyxel.com
@@ -553,13 +552,12 @@
 +.news-events.apple.com
 +.ocsp.int-x3.letsencrypt.org
 +.payments-jp.amazon.com
-+.pixiv.rsshub.app
 +.ppq.apple.com
 +.s3-ap-northeast-1.amazonaws.com
 +.s3-ap-southeast-2.amazonaws.com
 +.search.yahoo.co.jp
 +.south-plus.net
-+.sub.nexconvert.com
++.nexconvert.com
 +.testflight.apple.com
 +.tv.apple.com
 +.wego.here.com
@@ -578,4 +576,3 @@
 +.msauth.net
 +.bing.net
 +.microsoft.com
-+.api.nexconvert.com
