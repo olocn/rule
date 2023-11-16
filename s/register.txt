@@ -1,4 +1,6 @@
 +.api.statsig.com
++.oaiusercontent.com
++.oaistatic.com
 +.openai.com
 +.0emm.com
 +.1e100.net
