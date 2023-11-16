@@ -1,4 +1,5 @@
 +.obsidian.md
++.pianyuan.org
 +.image.tmdb.org
 +.cloudsilk.io
 +.azurefd.net
