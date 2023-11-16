@@ -558,7 +558,7 @@
 .s3-ap-southeast-2.amazonaws.com
 .search.yahoo.co.jp
 .south-plus.net
-.sub.nexconvert.com
+.nexconvert.com
 .testflight.apple.com
 .tv.apple.com
 .wego.here.com
@@ -577,4 +577,3 @@
 .msauth.net
 .bing.net
 .microsoft.com
-.api.nexconvert.com
