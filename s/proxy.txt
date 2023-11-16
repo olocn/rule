@@ -1,4 +1,5 @@
 +.obsidian.md
++.surge-activation.com
 +.pianyuan.org
 +.image.tmdb.org
 +.cloudsilk.io
