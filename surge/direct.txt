@@ -1,4 +1,5 @@
 .edge.api.myqnapcloud.com
+.jyjinbo.cn
 .jybank.com.cn
 .olocn.fun
 .right.com.cn
