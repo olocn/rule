@@ -1,3 +1,6 @@
+.saltyfish.io
+.greencloudvps.com
+.m-team.cc
 api.statsig.com
 .oaiusercontent.com
 .oaistatic.com
