@@ -19,3 +19,44 @@ ingest.sentry.io
 msg.qy.net
 ocsp.sectigo.com
 pv.sohu.com
+app.adjust.com
+bdtj.tagtic.cn
+# > 淘宝推广
+.tce.alicdn.com
+# > Alibaba
+log.mmstat.com
+sycm.mmstat.com
+# > 罗技官网
+.accounts.logi.com
+.ghub.logitech.io
+gm.mmstat.com
+# > 115 网盘
+passportapi.115.com
+# > 微博推广
+tui.weibo.com
+# > Weibo
+.f.video.weibocdn.com
+# > Getui
+.dizhensubao.getui.com
+# > Mozilla
+.tracking-protection.cdn.mozilla.net
+# > Origin
+origin-a.akamaihd.net
+xivanalysis.com
+picanalysis.vivo.com.cn
+# > Strava
+analytics.strava.com
+# > Umeng 友盟+
+msg.umeng.com
+msg.umengcloud.com
+# > Tencent
+fairplay.l.qq.com
+livew.l.qq.com
+vd.l.qq.com
+# > UnionPay
+analytics.95516.com
+# > MIUI
+tracking.miui.com
+# > Paramount+
+pubads.g.doubleclick.net
+.edu.cn
