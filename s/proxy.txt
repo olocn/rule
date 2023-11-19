@@ -1,4 +1,5 @@
 +.obsidian.md
++.chouti.com
 +.surge-activation.com
 +.azurefd.net
 +.cloudsilk.io
