@@ -17,7 +17,6 @@ metrics.icloud.com
 9.cnzz.com
 api.revenuecat.com
 ingest.sentry.io
-msg.qy.net
 ocsp.sectigo.com
 pv.sohu.com
 app.adjust.com
