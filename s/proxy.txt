@@ -1,5 +1,6 @@
 +.obsidian.md
 +.chouti.com
++.footprintdns.com
 +.surge-activation.com
 +.azurefd.net
 +.cloudsilk.io
