@@ -1,4 +1,5 @@
 .3.o.lencr.org
+gs-loc-cn.apple.com
 metrics.icloud.com
 .airplay.l.qq.com
 .amdc.m.taobao.com
