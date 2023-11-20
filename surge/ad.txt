@@ -1,6 +1,7 @@
 .cloudvideocdn.taobao.com
 .iphonesubmissions.apple.com
 .jddebug.com
+.easytomessage.com
 .js96110.com.cn
 .monsnssdk.com
 .nuomi.com
