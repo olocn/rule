@@ -1,4 +1,5 @@
 blackhole.m.jd.com
+dataflow.biliapi.com
 .tagtic.cn
 analytics-api-01.smzdm.com
 analytics-api.smzdm.com
@@ -6,7 +7,7 @@ adashxgc.ut.taobao.com
 nbsdk-baichuan.alicdn.com
 adashbc.ut.taobao.com
 cm.bilibili.com
-ios.bugly.qq.com
+.bugly.qq.com
 zhihu-web-analytics.zhihu.com
 applog.uc.cn
 errlog.umeng.com
