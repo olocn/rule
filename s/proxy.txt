@@ -1,4 +1,6 @@
 +.obsidian.md
++.shields.io
++.azurewebsites.net
 +.chouti.com
 +.footprintdns.com
 +.surge-activation.com
