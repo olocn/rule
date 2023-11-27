@@ -1,49 +1,48 @@
-.lencr.org
-.fontfiles.googleadapis.com
-.fontfiles.googleapis.com
-.fonts.googleadapis.com
-.fonts.googleapis.com
-.fonts.gstatic.com
-.885511.xyz
-.time.apple.com
-api.revenuecat.com
-ocsp.sectigo.com
+DOMAIN-SUFFIX,lencr.org
+DOMAIN-SUFFIX,fontfiles.googleadapis.com
+DOMAIN-SUFFIX,fontfiles.googleapis.com
+DOMAIN-SUFFIX,fonts.googleadapis.com
+DOMAIN-SUFFIX,fonts.googleapis.com
+DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN-SUFFIX,885511.xyz
+DOMAIN,time.apple.com
+DOMAIN,api.revenuecat.com
+DOMAIN,ocsp.sectigo.com
 # > 淘宝推广
-.tce.alicdn.com
+DOMAIN-SUFFIX,tce.alicdn.com
 # > Alibaba
-log.mmstat.com
-sycm.mmstat.com
+DOMAIN,log.mmstat.com
+DOMAIN,sycm.mmstat.com
 # > 罗技官网
-.accounts.logi.com
-.ghub.logitech.io
-gm.mmstat.com
+DOMAIN-SUFFIX,accounts.logi.com
+DOMAIN-SUFFIX,ghub.logitech.io
+DOMAIN,gm.mmstat.com
 # > 115 网盘
-passportapi.115.com
+DOMAIN,passportapi.115.com
 # > 微博推广
-tui.weibo.com
+DOMAIN,tui.weibo.com
 # > Weibo
-.f.video.weibocdn.com
+DOMAIN-SUFFIX,f.video.weibocdn.com
 # > Getui
-.dizhensubao.getui.com
+DOMAIN-SUFFIX,dizhensubao.getui.com
 # > Mozilla
-.tracking-protection.cdn.mozilla.net
+DOMAIN-SUFFIX,tracking-protection.cdn.mozilla.net
 # > Origin
-origin-a.akamaihd.net
-xivanalysis.com
-picanalysis.vivo.com.cn
+DOMAIN,origin-a.akamaihd.net
+DOMAIN,xivanalysis.com
+DOMAIN,picanalysis.vivo.com.cn
 # > Strava
-analytics.strava.com
+DOMAIN,analytics.strava.com
 # > Umeng 友盟+
-msg.umeng.com
-msg.umengcloud.com
+DOMAIN,msg.umeng.com
+DOMAIN,msg.umengcloud.com
 # > Tencent
-fairplay.l.qq.com
-livew.l.qq.com
-vd.l.qq.com
+DOMAIN,fairplay.l.qq.com
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
 # > UnionPay
-analytics.95516.com
-# > MIUI
-tracking.miui.com
+DOMAIN,analytics.95516.com
 # > Paramount+
-pubads.g.doubleclick.net
-.edu.cn
+DOMAIN,pubads.g.doubleclick.net
+DOMAIN-SUFFIX,edu.cn
+DOMAIN-KEYWORD,short.weixin.qq.com,extended-matching
