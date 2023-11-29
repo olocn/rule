@@ -39,3 +39,4 @@ httpdns.volcengineapi.com
 dns.weibo.cn
 dns.weixin.qq.com
 dns.weixin.qq.com.cn
+aedns.weixin.qq.com
