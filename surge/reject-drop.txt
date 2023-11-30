@@ -1,5 +1,7 @@
 blackhole.m.jd.com
+fourier.taobao.com
 adashx.m.taobao.com
+nbsdk-baichuan.taobao.com
 dataflow.biliapi.com
 .tagtic.cn
 analytics-api-01.smzdm.com
