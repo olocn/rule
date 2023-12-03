@@ -3,6 +3,7 @@
 +.azurewebsites.net
 +.chouti.com
 +.footprintdns.com
++.ahhhhfs.com
 +.surge-activation.com
 +.azurefd.net
 +.cloudsilk.io
