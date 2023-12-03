@@ -164,6 +164,7 @@
 .bejson.com
 .bestpay.cn
 .bestpay.com.cn
+.biliimg.com
 .biliapi.com
 .biliapi.net
 .bilibili.com
