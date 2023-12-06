@@ -1,4 +1,5 @@
 +.saltyfish.io
++.btdig.com
 +.greencloudvps.com
 +.m-team.cc
 +.api.statsig.com
