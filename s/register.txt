@@ -717,7 +717,7 @@
 +.acheterfollowersinstagram.com
 +.advancediddetection.com
 +.askfacebook.net
-..askfacebook.org
++.askfacebook.org
 +.atdmt2.com
 +.atlasdmt.com
 +.atlasonepoint.com
