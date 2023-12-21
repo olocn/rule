@@ -2,6 +2,8 @@
 .iphonesubmissions.apple.com
 .msgacs.m.taobao.com
 .jddebug.com
+api-access.pangolin-sdk-toutiao1.com
+.toponadss.com
 .easytomessage.com
 .js96110.com.cn
 .monsnssdk.com
