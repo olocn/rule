@@ -1,3 +1,4 @@
+.sentry.io
 .cloudvideocdn.taobao.com
 .iphonesubmissions.apple.com
 .msgacs.m.taobao.com
