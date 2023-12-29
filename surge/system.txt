@@ -6,6 +6,7 @@ DOMAIN-SUFFIX,fonts.googleapis.com
 DOMAIN-SUFFIX,fonts.gstatic.com
 DOMAIN-SUFFIX,885511.xyz
 DOMAIN,time.apple.com
+DOMAIN,gateway.icloud.com
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
 # > 淘宝推广
