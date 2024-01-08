@@ -1,3 +1,5 @@
+#!name=register
+[Rule]
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
