@@ -1,3 +1,6 @@
+#!name=direct
+#!desc=Rules
+[Rule]
 DOMAIN-SUFFIX,edge.api.myqnapcloud.com
 DOMAIN-SUFFIX,jyjinbo.cn
 DOMAIN-SUFFIX,jybank.com.cn
