@@ -1,6 +1,4 @@
-#!name=proxy_list
-#!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:19363 Created:01-08 06:34 Publisher:GMOogway
+#!name=proxy
 [Rule]
 DOMAIN-SUFFIX,obsidian.md
 DOMAIN-SUFFIX,chouti.com
