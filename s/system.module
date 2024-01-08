@@ -1,4 +1,4 @@
-#!name=DIRECT
+#!name=system
 [Rule]
 DOMAIN-SUFFIX,lencr.org,DIRECT
 DOMAIN-SUFFIX,fontfiles.googleadapis.com,DIRECT
