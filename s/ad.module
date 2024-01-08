@@ -1,6 +1,4 @@
 #!name=ad
-#!homepage=https://github.com/GMOogway/shadowrocket-rules
-#!desc=Rules:19363 Created:01-08 06:34 Publisher:GMOogway
 [Rule]
 DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,cloudvideocdn.taobao.com
