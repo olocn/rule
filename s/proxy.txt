@@ -131,7 +131,6 @@
 +.btsow.rest
 +.bullguard.com
 +.bybit.com
-+.byzhihuo.com
 +.castbox.fm
 +.cdninstagram.com
 +.change.org
