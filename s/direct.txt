@@ -21,6 +21,7 @@
 +.fonts.googleapis.com
 +.fonts.gstatic.com
 +.apple-mapkit.com
++.push-apple.com.akadns.net
 +.apple.com.akadns.net
 +.origin-apple.com.akadns.net
 +.apple.com.edgekey.net.globalredir.akadns.net
