@@ -1232,7 +1232,6 @@
 +.toolbar.baidu.com
 +.tracker.baidu.com
 +.tuijian.baidu.com
-+.s.360.cn
 +.qhupdate.com
 +.appjiagu.com
 +.taobc.com
