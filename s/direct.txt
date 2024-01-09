@@ -1,5 +1,6 @@
 +.edge.api.myqnapcloud.com
 +.tencent-cloud.net
++.gitv.tv
 +.baidu.com
 +.snssdk.com
 +.taobao.com
