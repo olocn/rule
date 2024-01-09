@@ -1,5 +1,7 @@
 #!name=ad
 [Rule]
+DOMAIN-SUFFIX,zijieapi.com,REJECT-TINYGIF
+DOMAIN-SUFFIX,anythinktech.com,REJECT-TINYGIF
 DOMAIN-SUFFIX,sentry.io,REJECT-TINYGIF
 DOMAIN-SUFFIX,cloudvideocdn.taobao.com,REJECT-TINYGIF
 DOMAIN-SUFFIX,iphonesubmissions.apple.com,REJECT-TINYGIF
