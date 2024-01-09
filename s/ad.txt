@@ -1,5 +1,3 @@
-#!name=ad
-[Rule]
 +.zijieapi.com
 +.anythinktech.com
 +.sentry.io
