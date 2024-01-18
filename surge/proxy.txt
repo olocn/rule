@@ -1,5 +1,5 @@
 .obsidian.md
-api.accuweather.com
+.accuweather.com
 .chouti.com
 .ahhhhfs.com
 .surge-activation.com
