@@ -1,5 +1,5 @@
 +.obsidian.md
-+.api.accuweather.com
++.accuweather.com
 +.shields.io
 +.azurewebsites.net
 +.chouti.com
