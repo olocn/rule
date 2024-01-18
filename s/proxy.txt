@@ -262,6 +262,8 @@
 +.javbus.com
 +.javbus22.com
 +.javcdn.cc
++.javdb.com
++.javdb007.com
 +.javdb006.com
 +.javlibrary.com
 +.javstore.net
