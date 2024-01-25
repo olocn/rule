@@ -1,4 +1,5 @@
 +.saltyfish.io
++.iss.one
 +.rargb.to
 +.btdig.com
 +.greencloudvps.com
