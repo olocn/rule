@@ -1,4 +1,5 @@
 .sentry.io
+id6.me
 ads.pubmatic.com
 .cloudvideocdn.taobao.com
 .iphonesubmissions.apple.com
