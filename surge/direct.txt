@@ -1,4 +1,5 @@
 .edge.api.myqnapcloud.com
+.jsccbcc.com
 .digicert.com
 .jyjinbo.cn
 .flyert.com
