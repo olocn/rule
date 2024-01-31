@@ -1,5 +1,6 @@
 blackhole.m.jd.com
 .getui.net
+api-access.pangolin-sdk-toutiao-b.com
 ulogs.umengcloud.com
 ulogs.umeng.com
 sdk.e.qq.com
