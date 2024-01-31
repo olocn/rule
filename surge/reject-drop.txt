@@ -1,4 +1,8 @@
 blackhole.m.jd.com
+.getui.net
+ulogs.umengcloud.com
+ulogs.umeng.com
+sdk.e.qq.com
 .moji.com
 .anythinktech.com
 .xhey.top
