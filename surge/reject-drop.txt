@@ -1,4 +1,5 @@
 blackhole.m.jd.com
+.moji.com
 .anythinktech.com
 .xhey.top
 fourier.taobao.com
