@@ -9,6 +9,7 @@ DOMAIN,time.apple.com
 DOMAIN,gateway.icloud.com
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
+DOMAIN,weather.api.moji.com
 # > 淘宝推广
 DOMAIN-SUFFIX,tce.alicdn.com
 # > Alibaba
