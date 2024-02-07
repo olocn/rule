@@ -1,6 +1,8 @@
 .sentry.io
 id6.me
 ads.pubmatic.com
+h-adashx.ut.taobao.com
+ifs.tanx.com
 .cloudvideocdn.taobao.com
 .iphonesubmissions.apple.com
 .msgacs.m.taobao.com
