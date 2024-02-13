@@ -1,5 +1,6 @@
 blackhole.m.jd.com
 .getui.net
+ifs.tanx.com
 .cyapi.cn
 .caiyunapp.com
 gather.colorfulclouds.net
