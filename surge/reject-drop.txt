@@ -1,5 +1,9 @@
 blackhole.m.jd.com
 .getui.net
+gather.colorfulclouds.net
+.safebrowsing.apple
+.safebrowsing.googleapis.com
+.safebrowsing.googleapis-cn.com
 api-access.pangolin-sdk-toutiao-b.com
 ulogs.umengcloud.com
 ulogs.umeng.com
@@ -12,8 +16,6 @@ adashx.m.taobao.com
 nbsdk-baichuan.taobao.com
 dataflow.biliapi.com
 .tagtic.cn
-analytics-api-01.smzdm.com
-analytics-api.smzdm.com
 adashxgc.ut.taobao.com
 nbsdk-baichuan.alicdn.com
 adashbc.ut.taobao.com
@@ -24,7 +26,6 @@ applog.uc.cn
 errlog.umeng.com
 ulogs.umeng.com
 googleads.g.doubleclick.net
-sugar.zhihu.com
 .getui.com
 p1.meituan.net
 waapdg.jd.com
