@@ -1,5 +1,7 @@
 blackhole.m.jd.com
 .getui.net
+.cyapi.cn
+.caiyunapp.com
 gather.colorfulclouds.net
 .safebrowsing.apple
 .safebrowsing.googleapis.com
