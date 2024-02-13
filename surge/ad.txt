@@ -1,6 +1,12 @@
 .sentry.io
 id6.me
 .cyapi.cn
+.ai.m.taobao.com
+.ai.taobao.com
+.audid-api.taobao.com
+.c-adash.m.taobao.com
+.click.mz.simba.taobao.com
+.click.tz.simba.taobao.com
 .caiyunapp.com
 gather.colorfulclouds.net
 .ccluster.net
