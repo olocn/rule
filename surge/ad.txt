@@ -1,5 +1,9 @@
 .sentry.io
 id6.me
+.cyapi.cn
+.caiyunapp.com
+gather.colorfulclouds.net
+.ccluster.net
 ads.pubmatic.com
 h-adashx.ut.taobao.com
 .ifs.tanx.com
@@ -755,7 +759,6 @@ api-access.pangolin-sdk-toutiao1.com
 .atanx.alicdn.com
 .atanx2.alicdn.com
 .cdn0.mobmore.com
-.click.mz.simba.taobao.com
 .dsp.simba.taobao.com
 .ex.mobmore.com
 .ex.puata.info
