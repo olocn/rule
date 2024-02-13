@@ -1,5 +1,6 @@
 blackhole.m.jd.com
 .in-addr.arpa
+.httpdns.dmall.com
 .getui.net
 ifs.tanx.com
 .cyapi.cn
@@ -9,8 +10,8 @@ gather.colorfulclouds.net
 .safebrowsing.googleapis.com
 .safebrowsing.googleapis-cn.com
 api-access.pangolin-sdk-toutiao-b.com
-ulogs.umengcloud.com
-ulogs.umeng.com
+.umengcloud.com
+.umeng.com
 sdk.e.qq.com
 .moji.com
 .anythinktech.com
@@ -27,8 +28,6 @@ cm.bilibili.com
 .bugly.qq.com
 zhihu-web-analytics.zhihu.com
 applog.uc.cn
-errlog.umeng.com
-ulogs.umeng.com
 googleads.g.doubleclick.net
 .getui.com
 p1.meituan.net
