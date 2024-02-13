@@ -1,5 +1,6 @@
 .sentry.io
 id6.me
+xlog.jd.com
 .cyapi.cn
 .ai.m.taobao.com
 .ai.taobao.com
