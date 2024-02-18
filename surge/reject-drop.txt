@@ -54,3 +54,8 @@ dns.weibo.cn
 dns.weixin.qq.com
 dns.weixin.qq.com.cn
 aedns.weixin.qq.com
+.newclient.map.baidu.com
+.loc.map.baidu.com
+.sofire.baidu.com
+.ugc.map.baidu.com
+.client.map.baidu.com
