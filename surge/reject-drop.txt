@@ -1,4 +1,5 @@
 blackhole.m.jd.com
+api.bilibili.com
 upos-sz-mirrorali.bilivideo.com
 upos-sz-mirrorcoso1.bilivideo.com
 .mssdk.volces.com
