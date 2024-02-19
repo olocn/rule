@@ -1,4 +1,6 @@
 blackhole.m.jd.com
+upos-sz-mirrorali.bilivideo.com
+upos-sz-mirrorcoso1.bilivideo.com
 .mssdk.volces.com
 .toblog.ctobsnssdk.com
 .gromore.pangolin-sdk-toutiao.com
