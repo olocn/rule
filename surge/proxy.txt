@@ -1,4 +1,5 @@
 .obsidian.md
+.deepl.com
 .x.com
 .jmcomic.me
 .accuweather.com
