@@ -1,4 +1,7 @@
 +.edge.api.myqnapcloud.com
++.yhzybf.com
++.haixing.tv
++.yinghuazy.xyz
 +.tencent-cloud.net
 +.byzhihuo.com
 +.bymanhua.com
