@@ -1,7 +1,6 @@
 blackhole.m.jd.com
 .trace.qq.com
 .msg.qy.net
-api.bilibili.com
 upos-sz-mirrorali.bilivideo.com
 upos-sz-mirrorcoso1.bilivideo.com
 .mssdk.volces.com
