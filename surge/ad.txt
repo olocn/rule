@@ -466,7 +466,7 @@
 .vlive.qqvideo.tc.qq.com
 .vungle.com
 .w.l.qq.com
-.w1.askwai.com
+.w1.askwai.comi
 .w1.bskwai.com
 .w1.cskwai.com
 .w1.dskwai.com
@@ -513,8 +513,6 @@
 .zeus.ad.xiaomi.com
 .blackhole.m.jd.com
 .msg.qy.net
-.upos-sz-mirrorali.bilivideo.com
-.upos-sz-mirrorcoso1.bilivideo.com
 .in-addr.arpa
 .httpdns.dmall.com
 .getui.net
