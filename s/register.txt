@@ -1,8 +1,12 @@
 +.saltyfish.io
++.javstore.net
++.blogjav.net
++.javdb007.com
 +.javlibrary.com
 +.javbus.com
 +.javdb.com
 +.sehuatang.org
++.dmm.co.jp
 +.iss.one
 +.rargb.to
 +.btdig.com
