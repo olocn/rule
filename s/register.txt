@@ -1,4 +1,8 @@
 +.saltyfish.io
++.javlibrary.com
++.javbus.com
++.javdb.com
++.sehuatang.org
 +.iss.one
 +.rargb.to
 +.btdig.com
