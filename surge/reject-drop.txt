@@ -10,12 +10,6 @@ upos-sz-mirrorcoso1.bilivideo.com
 .httpdns.dmall.com
 .getui.net
 ifs.tanx.com
-.cyapi.cn
-.caiyunapp.com
-gather.colorfulclouds.net
-.safebrowsing.apple
-.safebrowsing.googleapis.com
-.safebrowsing.googleapis-cn.com
 api-access.pangolin-sdk-toutiao-b.com
 .umengcloud.com
 .umeng.com
