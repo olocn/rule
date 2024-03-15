@@ -1,5 +1,6 @@
 +.saltyfish.io
 +.qnap.com
++.myqnapcloud.io
 +.myqnapcloud.com
 +.javstore.net
 +.blogjav.net
