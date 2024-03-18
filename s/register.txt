@@ -10,6 +10,12 @@
 +.javlibrary.com
 +.javbus.com
 +.javdb.com
++.92hm.top
++.98tuch.net
++.picnew.org
++.u79pk.com
++.r3ltm.app
++.javdb006.com
 +.sehuatang.org
 +.dmm.co.jp
 +.iss.one
@@ -460,9 +466,7 @@
 +.googledrive.com
 +.googleusercontent.com
 +.appspot.com
-+.blogspot.com
 +.gmail.com
-+.google.com
 +.recaptcha.com
 +.youtube.com
 +.googlevideo.com
