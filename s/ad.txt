@@ -450,15 +450,11 @@
 +.2345.cn
 +.2345.cc
 +.keansoft.cn
-+.httpdns.alicdn.com
-+.httpdns-api.aliyuncs.com
-+.httpdns-sc.aliyuncs.com
 +.httpsdns.baidu.com
 +.httpdns.baidu.com
 +.httpdns.baidubce.com
 +.httpdns.bilivideo.com
 +.httpdns.c.cdnhwc2.com
-+.dns.jd.com
 +.kuaishou.httpdns.pro
 +.httpdns.meituan.com
 +.httpdns.n.netease.com
@@ -467,8 +463,6 @@
 +.lofter.httpdns.c.163.com
 +.httpdns.volcengineapi.com
 +.dns.weibo.cn
-+.dns.weixin.qq.com
-+.dns.weixin.qq.com.cn
 +.nbsdk-baichuan.taobao.com
 +.iphonesubmissions.apple.com
 +.jddebug.com
