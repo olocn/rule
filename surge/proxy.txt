@@ -1,4 +1,5 @@
 .obsidian.md
+mozilla.cloudflare-dns.com
 .deepl.com
 .x.com
 .jmcomic.me
