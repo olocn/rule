@@ -3,6 +3,7 @@ IP-CIDR,117.78.0.0/20,no-resolve
 IP-CIDR,120.46.128.0/17,no-resolve
 IP-CIDR,124.70.128.0/18,no-resolve
 IP-CIDR,203.107.1.0/24,no-resolve
+IP-CIDR,114.132.165.205/32,no-resolve
 # BaiduBCE
 IP-CIDR,186.76.76.200/32,no-resolve
 # JD
