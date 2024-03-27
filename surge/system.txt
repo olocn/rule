@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,fontfiles.googleapis.com
 DOMAIN-SUFFIX,fonts.googleadapis.com
 DOMAIN-SUFFIX,fonts.googleapis.com
 DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN,sandbox.itunes.apple.com
 DOMAIN-SUFFIX,885511.xyz
 DOMAIN,time.apple.com
 DOMAIN,gateway.icloud.com
