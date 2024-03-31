@@ -1,4 +1,7 @@
 .obsidian.md
+.jmpic.xyz
+.jmpic.org
+.jmpicn.xyz
 mozilla.cloudflare-dns.com
 .deepl.com
 .x.com
