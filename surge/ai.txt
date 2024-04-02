@@ -1,9 +1,0 @@
-.openai.com
-.ai.com
-cdn.auth0.com
-openaiapi-site.azureedge.net
-challenges.cloudflare.com
-.identrust.com
-.featuregates.org
-.intercom.io
-.googlevideo.com
