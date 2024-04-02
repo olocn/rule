@@ -1513,7 +1513,6 @@ DOMAIN-SUFFIX,lxcdn.dl.files.xiaomi.net
 DOMAIN-SUFFIX,nav.browser.miui.com
 DOMAIN-SUFFIX,notice.game.xiaomi.com
 DOMAIN-SUFFIX,ppurifier.game.xiaomi.com
-DOMAIN-SUFFIX,proxy.sec.miui.com
 DOMAIN-SUFFIX,sec-cdn.static.xiaomi.net
 DOMAIN-SUFFIX,security.browser.miui.com
 DOMAIN-SUFFIX,sg.a.stat.mi.com
