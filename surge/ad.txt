@@ -279,10 +279,6 @@ DOMAIN-SUFFIX,h-adashx.ut.taobao.com
 DOMAIN-SUFFIX,henzanapp.com
 DOMAIN-SUFFIX,hexagon-analytics.com
 DOMAIN-SUFFIX,hiboard-drcn.ai.dbankcloud.cn
-DOMAIN-SUFFIX,httpdns.bcelive.com
-DOMAIN-SUFFIX,httpdns.huaweicloud.com
-DOMAIN-SUFFIX,httpdns.ocloud.oppomobile.com
-DOMAIN-SUFFIX,httpdns.push.oppomobile.com
 DOMAIN-SUFFIX,hugelog.fcbox.com
 DOMAIN-SUFFIX,hw-ot-ad.a.yximgs.com
 DOMAIN-SUFFIX,hw.zuimeitianqi.com
@@ -543,8 +539,6 @@ DOMAIN-SUFFIX,youxi.kugou.com
 DOMAIN-SUFFIX,zeus.ad.xiaomi.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,msg.qy.net
-DOMAIN-SUFFIX,in-addr.arpa
-DOMAIN-SUFFIX,httpdns.dmall.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,cyapi.cn
 DOMAIN-SUFFIX,caiyunapp.com
@@ -564,19 +558,6 @@ DOMAIN-SUFFIX,googleads.g.doubleclick.net
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,p1.meituan.net
 DOMAIN-SUFFIX,waapdg.jd.com
-DOMAIN-SUFFIX,httpsdns.baidu.com
-DOMAIN-SUFFIX,httpdns.baidu.com
-DOMAIN-SUFFIX,httpdns.baidubce.com
-DOMAIN-SUFFIX,httpdns.bilivideo.com
-DOMAIN-SUFFIX,httpdns.c.cdnhwc2.com
-DOMAIN-SUFFIX,kuaishou.httpdns.pro
-DOMAIN-SUFFIX,httpdns.meituan.com
-DOMAIN-SUFFIX,httpdns.n.netease.com
-DOMAIN-SUFFIX,httpdns.music.163.com
-DOMAIN-SUFFIX,music.httpdns.c.163.com
-DOMAIN-SUFFIX,lofter.httpdns.c.163.com
-DOMAIN-SUFFIX,httpdns.volcengineapi.com
-DOMAIN-SUFFIX,dns.weibo.c
 DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN-SUFFIX,loc.map.baidu.com
 DOMAIN-SUFFIX,sofire.baidu.com
@@ -1588,7 +1569,6 @@ DOMAIN-SUFFIX,adsehera.ximalaya.com
 DOMAIN-SUFFIX,adbehavior.ximalaya.com
 DOMAIN-SUFFIX,adwbs.ximalaya.com
 DOMAIN-SUFFIX,adbs.ximalaya.com
-DOMAIN-SUFFIX,dns.ximalaya.com
 DOMAIN-SUFFIX,mobwsa.ximalaya.com
 DOMAIN-SUFFIX,location.ximalaya.com
 DOMAIN-SUFFIX,xdcs-collector.ximalaya.com
@@ -1715,6 +1695,27 @@ DOMAIN-SUFFIX,woopra.com
 DOMAIN-SUFFIX,wootric.com
 DOMAIN-SUFFIX,wowanalytics.co.uk
 DOMAIN-SUFFIX,zoomanalytics.co
+# httpdns
+DOMAIN-SUFFIX,in-addr.arpa
+DOMAIN-SUFFIX,httpdns.bcelive.com
+DOMAIN-SUFFIX,httpdns.huaweicloud.com
+DOMAIN-SUFFIX,httpdns.ocloud.oppomobile.com
+DOMAIN-SUFFIX,httpdns.push.oppomobile.com
+DOMAIN-SUFFIX,httpdns.dmall.com
+DOMAIN-SUFFIX,httpsdns.baidu.com
+DOMAIN-SUFFIX,httpdns.baidu.com
+DOMAIN-SUFFIX,httpdns.baidubce.com
+DOMAIN-SUFFIX,httpdns.bilivideo.com
+DOMAIN-SUFFIX,httpdns.c.cdnhwc2.com
+DOMAIN-SUFFIX,kuaishou.httpdns.pro
+DOMAIN-SUFFIX,httpdns.meituan.com
+DOMAIN-SUFFIX,httpdns.n.netease.com
+DOMAIN-SUFFIX,httpdns.music.163.com
+DOMAIN-SUFFIX,music.httpdns.c.163.com
+DOMAIN-SUFFIX,lofter.httpdns.c.163.com
+DOMAIN-SUFFIX,httpdns.volcengineapi.com
+DOMAIN-SUFFIX,dns.weibo.c
+DOMAIN-SUFFIX,dns.ximalaya.com
 DOMAIN-SUFFIX,httpdns.alicdn.com
 DOMAIN-SUFFIX,httpdns-api.aliyuncs.com
 DOMAIN-SUFFIX,httpdns-sc.aliyuncs.com
@@ -1723,6 +1724,8 @@ DOMAIN-SUFFIX,dns.weibo.cn
 DOMAIN-SUFFIX,dns.weixin.qq.com
 DOMAIN-SUFFIX,dns.weixin.qq.com.cn
 DOMAIN-SUFFIX,aedns.weixin.qq.com
+# apple
+DOMAIN,ca.iadsdk.apple.com
 IP-CIDR,61.147.214.67/32,no-resolve
 IP-CIDR,117.78.0.0/20,no-resolve
 IP-CIDR,120.46.128.0/17,no-resolve
