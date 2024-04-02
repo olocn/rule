@@ -610,7 +610,14 @@ DOMAIN-SUFFIX,googleanalytics.com
 DOMAIN-SUFFIX,googletraveladservices.com
 DOMAIN-SUFFIX,ads.union.jd.com
 DOMAIN-SUFFIX,ads-union.jd.com
+
 # ali
+DOMAIN,live-spare.alicdn.com,extended-matching
+DOMAIN,video-zb.cloudvideocdn.taobao.com,extended-matching
+DOMAIN,amdc.m.taobao.com,extended-matching
+DOMAIN,liveng.alicdn.com,extended-matching
+DOMAIN,liveng-rtclive.taobao.com,extended-matching
+DEST-PORT,1106
 DOMAIN-SUFFIX,collect.alipay.com
 DOMAIN-SUFFIX,puds.ucweb.com
 DOMAIN-SUFFIX,alipaylog.com
@@ -1240,22 +1247,12 @@ DOMAIN-SUFFIX,stat.m.jd.com
 DOMAIN-SUFFIX,img-x.jd.com
 DOMAIN-SUFFIX,cps.360buy.com
 DOMAIN-SUFFIX,adchina.com
-
-
 DOMAIN-SUFFIX,cdn0.mobmore.com
-
 DOMAIN-SUFFIX,ex.mobmore.com
 DOMAIN-SUFFIX,ex.puata.info
-
 DOMAIN-SUFFIX,init.phpwind.com
-
 DOMAIN-SUFFIX,mlt01.com
-
-DOMAIN-SUFFIX,push.wandoujia.com
-
-
 DOMAIN-SUFFIX,userimg.qunar.com
-
 DOMAIN-SUFFIX,yiliao.hupan.com
 DOMAIN-SUFFIX,whalecloud.com
 
