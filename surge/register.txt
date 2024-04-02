@@ -1,4 +1,6 @@
+# google
 DOMAIN-KEYWORD,google
+DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
 DOMAIN-SUFFIX,gvt2-cn.com
@@ -7,22 +9,37 @@ DOMAIN-SUFFIX,gvt5.com
 DOMAIN-SUFFIX,gvt6.com
 DOMAIN-SUFFIX,gvt7.com
 DOMAIN-SUFFIX,gvt9.com
-DOMAIN-KEYWORD,paypal
-DOMAIN-KEYWORD,facebook
-DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
-DOMAIN-SUFFIX,fbcdn.com
-DOMAIN-KEYWORD,instagram
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,youtu.be
 DOMAIN-KEYWORD,youtube
 DOMAIN-SUFFIX,blogspot.com
 DOMAIN-SUFFIX,gmail.com
-DOMAIN-SUFFIX,saltyfish.io
-DOMAIN-SUFFIX,greencloudvps.com
-DOMAIN-SUFFIX,m-team.cc
+# face
+DOMAIN-KEYWORD,facebook
+DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
+DOMAIN-SUFFIX,fbcdn.com
+DOMAIN-KEYWORD,instagram
+
+# chat
 DOMAIN,api.statsig.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,openai.com
-DOMAIN-SUFFIX,ytimg.com
+
+DOMAIN-SUFFIX,saltyfish.io
+DOMAIN-SUFFIX,greencloudvps.com
+DOMAIN-SUFFIX,m-team.cc
+DOMAIN-KEYWORD,paypal
+
+# tg
+IP-CIDR,91.108.56.0/22,no-resolve
+IP-CIDR,91.108.4.0/22,no-resolve
+IP-CIDR,91.108.8.0/22,no-resolve
+IP-CIDR,91.108.16.0/22,no-resolve
+IP-CIDR,91.108.12.0/22,no-resolve
+IP-CIDR,149.154.160.0/20,no-resolve
+IP-CIDR,91.105.192.0/23,no-resolve
+IP-CIDR,91.108.20.0/22,no-resolve
+IP-CIDR,185.76.151.0/24,no-resolve
+IP-CIDR,5.28.192.0/18,no-resolve
