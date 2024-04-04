@@ -1,8 +1,12 @@
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
 
-DOMAIN-SUFFIX,ad.track.66mobi.com
-DOMAIN-SUFFIX,ads.95516.com
+# 水印相机
+DEST-PORT,5224
+DOMAIN-SUFFIX,xhey.top
+
+DOMAIN,ad.track.66mobi.com
+DOMAIN,ads.95516.com
 DOMAIN-SUFFIX,analytics.95516.com
 DOMAIN-SUFFIX,logs.amap.com
 DOMAIN-SUFFIX,dualstack-logs.amap.com
@@ -58,7 +62,7 @@ DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,umeng.co
 DOMAIN-SUFFIX,umeng.cn
-DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,log.umsns.com
 DOMAIN-SUFFIX,biz.weibo.com
 DOMAIN-SUFFIX,uve.weibo.com
