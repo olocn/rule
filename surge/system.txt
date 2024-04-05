@@ -20,8 +20,8 @@ DOMAIN,sycm.mmstat.com
 DOMAIN,gm.mmstat.com
 
 # > Umeng 友盟+
-DOMAIN,msg.umeng.com
-DOMAIN,msg.umengcloud.com
+#DOMAIN,msg.umeng.com
+#DOMAIN,msg.umengcloud.com
 
 # > Tencent
 DOMAIN,fairplay.l.qq.com
