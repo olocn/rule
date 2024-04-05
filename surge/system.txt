@@ -17,6 +17,7 @@ DOMAIN-SUFFIX,tce.alicdn.com
 # > Alibaba
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
+DOMAIN,gm.mmstat.com
 
 # > Umeng 友盟+
 DOMAIN,msg.umeng.com
