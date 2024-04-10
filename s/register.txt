@@ -1,4 +1,9 @@
 +.saltyfish.io
++.sehuatang.org
++.sehuatang.net
++.qz1gy.app
++.yfvjv.app
++.r3ltm.app
 +.qnap.com
 +.myqnapcloud.io
 +.myqnapcloud.com
