@@ -1,5 +1,7 @@
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
+# 不背单词
+IP-CIDR,203.107.6.88/32,no-resolve
 
 # 水印相机
 DEST-PORT,5224
