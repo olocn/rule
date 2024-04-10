@@ -3,6 +3,7 @@
 .jmpic.org
 .jmpicn.xyz
 mozilla.cloudflare-dns.com
+.99img.cc
 .deepl.com
 .x.com
 .jmcomic.me
