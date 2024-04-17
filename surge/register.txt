@@ -1,3 +1,5 @@
+# jav
+DOMAIN-SUFFIX,66img.cc
 # google
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,ytimg.com
