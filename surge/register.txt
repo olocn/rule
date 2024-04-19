@@ -1,6 +1,9 @@
 # jav
 DOMAIN-SUFFIX,66img.cc
 DOMAIN-SUFFIX,javbus.com
+DOMAIN,qz1gy.app
+DOMAIN-SUFFIX,sehuatang.org
+DOMAIN-SUFFIX,sehuatang.net
 # google
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,ytimg.com
