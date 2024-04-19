@@ -2,6 +2,7 @@
 DOMAIN-SUFFIX,66img.cc
 DOMAIN-SUFFIX,javbus.com
 DOMAIN,qz1gy.app
+DOMAIN,yfvjv.app
 DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 # google
