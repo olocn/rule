@@ -5,6 +5,8 @@ DOMAIN,qz1gy.app
 DOMAIN,yfvjv.app
 DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
+DOMAIN-SUFFIX,javcdn.cc
+DOMAIN-SUFFIX,javbus22.com
 # google
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,ytimg.com
