@@ -2,6 +2,7 @@
 +.saltyfish.io
 +.1password.com
 +.1passwordservices.com
++.agilebits.com
 +.sehuatang.org
 +.sehuatang.net
 +.qz1gy.app
