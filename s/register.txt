@@ -1,5 +1,7 @@
 +.javlibrary.com
 +.saltyfish.io
++.1password.com
++.1passwordservices.com
 +.sehuatang.org
 +.sehuatang.net
 +.qz1gy.app
