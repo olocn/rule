@@ -7,6 +7,10 @@ DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,javcdn.cc
 DOMAIN-SUFFIX,javbus22.com
+# 1password
+DOMAIN-SUFFIX,1password.com
+DOMAIN-SUFFIX,1passwordservices.com
+DOMAIN-SUFFIX,agilebits.com
 # google
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,ytimg.com
