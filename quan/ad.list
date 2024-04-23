@@ -3,9 +3,8 @@ DOMAIN-SUFFIX,proxy.sec.miui.com,REJECT
 # 不背单词
 IP-CIDR,203.107.6.88/32,no-resolve,REJECT
 DOMAIN,img.beingfine.cn,REJECT
-,REJECT
 # 水印相机
-DEST-PORT,5224,REJECT
+# DEST-PORT,5224,REJECT
 DOMAIN-SUFFIX,xhey.top,REJECT
 DOMAIN,tnc3-aliec2.zijieapi.com,REJECT
 # cjx-ad
