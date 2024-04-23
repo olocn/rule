@@ -773,11 +773,11 @@ DOMAIN-SUFFIX,ads-union.jd.com,REJECT
 DOMAIN,tnc3-alisc1.zijieapi.com,REJECT
 # ali
 DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com,REJECT
-DOMAIN,live-spare.alicdn.com,extended-matching,REJECT
-DOMAIN,video-zb.cloudvideocdn.taobao.com,extended-matching,REJECT
-DOMAIN,amdc.m.taobao.com,extended-matching,REJECT
-DOMAIN,liveng.alicdn.com,extended-matching,REJECT
-DOMAIN,liveng-rtclive.taobao.com,extended-matching,REJECT
+DOMAIN,live-spare.alicdn.com,REJECT
+DOMAIN,video-zb.cloudvideocdn.taobao.com,REJECT
+DOMAIN,amdc.m.taobao.com,REJECT
+DOMAIN,liveng.alicdn.com,REJECT
+DOMAIN,liveng-rtclive.taobao.com,REJECT
 DEST-PORT,1106,REJECT
 DOMAIN-SUFFIX,collect.alipay.com,REJECT
 DOMAIN-SUFFIX,puds.ucweb.com,REJECT
@@ -820,7 +820,7 @@ DOMAIN-SUFFIX,agoodm.m.taobao.com,REJECT
 DOMAIN-SUFFIX,api.waptest.taobao.com,REJECT
 DOMAIN-SUFFIX,tce.alicdn.com,REJECT
 DOMAIN-SUFFIX,acs4baichuan.m.taobao.com,REJECT
-DOMAIN-SUFFIX,adash.m.taobao.com,extended-matching,REJECT
+DOMAIN-SUFFIX,adash.m.taobao.com,REJECT
 DOMAIN-SUFFIX,adash.man.aliyuncs.com,REJECT
 DOMAIN-SUFFIX,adash-c.ut.taobao.com,REJECT
 DOMAIN-SUFFIX,adashx4yt.m.taobao.com,REJECT
@@ -847,7 +847,7 @@ DOMAIN-SUFFIX,ai.taobao.com,REJECT
 DOMAIN-SUFFIX,c-adash.m.taobao.com,REJECT
 DOMAIN-SUFFIX,click.mz.simba.taobao.com,REJECT
 DOMAIN-SUFFIX,click.tz.simba.taobao.com,REJECT
-DOMAIN-SUFFIX,cloudvideocdn.taobao.com,extended-matching,REJECT
+DOMAIN-SUFFIX,cloudvideocdn.taobao.com,REJECT
 DOMAIN-SUFFIX,iphonesubmissions.apple.com,REJECT
 DOMAIN-SUFFIX,msgacs.m.taobao.com,REJECT
 DOMAIN-SUFFIX,toruk.tanx.com,REJECT
