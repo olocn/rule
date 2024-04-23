@@ -778,7 +778,7 @@ DOMAIN,video-zb.cloudvideocdn.taobao.com,REJECT
 DOMAIN,amdc.m.taobao.com,REJECT
 DOMAIN,liveng.alicdn.com,REJECT
 DOMAIN,liveng-rtclive.taobao.com,REJECT
-DEST-PORT,1106,REJECT
+# DEST-PORT,1106,REJECT
 DOMAIN-SUFFIX,collect.alipay.com,REJECT
 DOMAIN-SUFFIX,puds.ucweb.com,REJECT
 DOMAIN-SUFFIX,alipaylog.com,REJECT
