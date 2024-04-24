@@ -7,9 +7,9 @@ DOMAIN,img.beingfine.cn
 DOMAIN-SUFFIX,magsrv.com
 DOMAIN,t7cp4fldl.com
 DOMAIN-SUFFIX,clarity.ms
-DOMAIN,tsyndicate.com
+DOMAIN-SUFFIX,tsyndicate.com
 DOMAIN-SUFFIX,sacdnssedge.com
-DOMAIN,r.trackwilltrk.com
+DOMAIN-SUFFIX,trackwilltrk.com
 DOMAIN,jfjle4g5l.com
 DOMAIN,t7cp4fldl.com
 DOMAIN,6v41p4bsq.com
