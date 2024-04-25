@@ -41,6 +41,7 @@ DOMAIN-SUFFIX,topqualitylink.com
 DOMAIN-SUFFIX,yu0123456.com
 # annoyance
 DOMAIN-SUFFIX,lzp.plus
+DOMAIN,app-analytics-services.com
 DOMAIN-SUFFIX,wujiupic.com
 DOMAIN-SUFFIX,pv.cheshi.com
 DOMAIN-SUFFIX,tracking.kdnet.net
