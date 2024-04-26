@@ -13,6 +13,7 @@ DOMAIN-SUFFIX,trackwilltrk.com
 DOMAIN,jfjle4g5l.com
 DOMAIN,t7cp4fldl.com
 DOMAIN,6v41p4bsq.com
+DOMAIN-SUFFIX,ra7.xyz
 # 水印相机
 DEST-PORT,5224
 DOMAIN-SUFFIX,xhey.top
