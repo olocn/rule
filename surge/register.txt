@@ -1,12 +1,3 @@
-# jav
-DOMAIN-SUFFIX,66img.cc
-DOMAIN-SUFFIX,javbus.com
-DOMAIN,qz1gy.app
-DOMAIN,yfvjv.app
-DOMAIN-SUFFIX,sehuatang.org
-DOMAIN-SUFFIX,sehuatang.net
-DOMAIN-SUFFIX,javcdn.cc
-DOMAIN-SUFFIX,javbus22.com
 # 1password
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,1passwordservices.com
@@ -17,11 +8,7 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
 DOMAIN-SUFFIX,gvt2-cn.com
-DOMAIN-SUFFIX,gvt3.com
-DOMAIN-SUFFIX,gvt5.com
-DOMAIN-SUFFIX,gvt6.com
-DOMAIN-SUFFIX,gvt7.com
-DOMAIN-SUFFIX,gvt9.com
+DOMAIN-WILDCARD,gvt?.com
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,youtu.be
