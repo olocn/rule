@@ -1,6 +1,5 @@
 .origin-apple.com.akadns.net
 .ls-apple.com.akadns.net
-.icloud.com.akadns.net
 .push-apple.com.akadns.net
 .itunes-apple.com.akadns.net
 .cdn-apple.com.akadns.net
@@ -9,9 +8,6 @@ xp.apple.com
 .aaplimg.com
 .apple.co
 .me.com
-.icloud.com
-.icloud.com.cn
-.icloud-content.com
 .apple-mapkit.com
 .apple.com.edgekey.net.globalredir.akadns.net
 .apple.com
