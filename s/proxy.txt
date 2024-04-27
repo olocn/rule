@@ -1,3 +1,7 @@
++.icloud.com.akadns.net
++.icloud.com
++.icloud.com.cn
++.icloud-content.com
 +.obsidian.md
 +.accuweather.com
 +.r3ltm.app
