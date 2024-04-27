@@ -22,7 +22,6 @@
 .apple.com.edgekey.net.globalredir.akadns.net
 .apple.com.edgekey.net
 .ls-apple.com.akadns.net
-.icloud.com.akadns.net
 .push-apple.com.akadns.net
 .itunes-apple.com.akadns.net
 .cdn-apple.com.akadns.net
@@ -36,9 +35,6 @@
 .apple.com
 .apple.cn
 .me.com
-.icloud.com
-.icloud.com.cn
-.icloud-content.com
 .10010.com
 .10086.cn
 .114la.com
