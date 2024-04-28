@@ -20,7 +20,7 @@ DOMAIN-SUFFIX,gmail.com
 DOMAIN-KEYWORD,facebook
 DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
 DOMAIN-SUFFIX,fbcdn.com
-youtubeDOMAIN-WILDCARD,instagram.*
+DOMAIN-WILDCARD,instagram.*
 
 # chat
 DOMAIN,api.statsig.com
