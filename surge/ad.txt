@@ -1,15 +1,13 @@
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
-# 18comic
+
 DOMAIN-SUFFIX,magsrv.com
-DOMAIN,t7cp4fldl.com
 DOMAIN-SUFFIX,clarity.ms
 DOMAIN-SUFFIX,tsyndicate.com
 DOMAIN-SUFFIX,sacdnssedge.com
 DOMAIN-SUFFIX,trackwilltrk.com
-DOMAIN,jfjle4g5l.com
-DOMAIN,t7cp4fldl.com
-DOMAIN,6v41p4bsq.com
+
+# rouman
 DOMAIN-SUFFIX,ra7.xyz
 # 水印相机
 DEST-PORT,5224
