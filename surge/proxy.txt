@@ -22,7 +22,8 @@ DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,t66y.com
 DOMAIN-WILDCARD,18comic.*
 DOMAIN-WILDCARD,sehuatang.*
-DOMAIN-WILDCARD,rmcdn?.xyz
+DOMAIN-WILDCARD,rmcdn*.xyz
+DOMAIN-WILDCARD,roucdn*.link
 DOMAIN-WILDCARD,rouman*.com
 DOMAIN-WILDCARD,roucdn*.link
 DOMAIN-SUFFIX,south-plus.org
