@@ -1,8 +1,5 @@
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
-# 不背单词
-IP-CIDR,203.107.6.88/32,no-resolve
-DOMAIN,img.beingfine.cn
 # 18comic
 DOMAIN-SUFFIX,magsrv.com
 DOMAIN,t7cp4fldl.com
