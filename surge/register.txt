@@ -3,8 +3,8 @@ DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,1passwordservices.com
 DOMAIN-SUFFIX,agilebits.com
 # google
-DOMAIN-WILDCARD,google.*
-DOMAIN-SUFFIX,googlevideo.com
+DOMAIN-KEYWORD,google
+#DOMAIN-SUFFIX,google.
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
@@ -13,14 +13,14 @@ DOMAIN-WILDCARD,gvt?.com
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,youtu.be
-DOMAIN-WILDCARD,youtube.*
+DOMAIN-KEYWORD,youtube
 DOMAIN-SUFFIX,blogspot.com
 DOMAIN-SUFFIX,gmail.com
 # face
 DOMAIN-KEYWORD,facebook
 DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
 DOMAIN-SUFFIX,fbcdn.com
-DOMAIN-WILDCARD,instagram.*
+DOMAIN-KEYWORD,instagram
 
 # chat
 DOMAIN,api.statsig.com
