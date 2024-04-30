@@ -1,4 +1,4 @@
-DOMAIN,api.smoot.apple.cn
++.api.smoot.apple.cn
 +.aaplimg.com
 +.apple-dns.net
 +.apple.co
