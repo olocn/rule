@@ -47,11 +47,8 @@ IP-CIDR,106.39.192.0/19,no-resolve
 IP-CIDR,59.82.32.0/21,no-resolve
 
 # apple
-DOMAIN-SUFFIX,a1.mzstatic.com
-DOMAIN-SUFFIX,a2.mzstatic.com
-DOMAIN-SUFFIX,a3.mzstatic.com
-DOMAIN-SUFFIX,a4.mzstatic.com
-DOMAIN-SUFFIX,a5.mzstatic.com
+DOMAIN-SUFFIX,icloud.com.cn
+DOMAIN-WILDCARD,a*.mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
 DOMAIN-SUFFIX,adcdownload.apple.com
 DOMAIN-SUFFIX,amp-api.media.apple.com
@@ -64,15 +61,7 @@ DOMAIN-SUFFIX,appldnld.g.aaplimg.com
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
-DOMAIN-SUFFIX,cdn-cn1.apple-mapkit.com
-DOMAIN-SUFFIX,cdn-cn2.apple-mapkit.com
-DOMAIN-SUFFIX,cdn-cn3.apple-mapkit.com
-DOMAIN-SUFFIX,cdn-cn4.apple-mapkit.com
-DOMAIN-SUFFIX,cdn.apple-mapkit.com
-DOMAIN-SUFFIX,cdn1.apple-mapkit.com
-DOMAIN-SUFFIX,cdn2.apple-mapkit.com
-DOMAIN-SUFFIX,cdn3.apple-mapkit.com
-DOMAIN-SUFFIX,cdn4.apple-mapkit.com
+DOMAIN-WILDCARD,cdn*.apple-mapkit.com
 DOMAIN-SUFFIX,cds-cdn.v.aaplimg.com
 DOMAIN-SUFFIX,cds.apple.com.akadns.net
 DOMAIN-SUFFIX,cds.apple.com
