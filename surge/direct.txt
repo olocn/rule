@@ -902,3 +902,6 @@
 .duoduocdn.com
 .zhibo8.cc
 .hoopchina.com.cn
+.cmpassport.com
+.cmcc-cs.cn
+.dlife.cn
