@@ -1,12 +1,10 @@
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
-
 DOMAIN-SUFFIX,magsrv.com
 DOMAIN-SUFFIX,clarity.ms
 DOMAIN-SUFFIX,tsyndicate.com
 DOMAIN-SUFFIX,sacdnssedge.com
 DOMAIN-SUFFIX,trackwilltrk.com
-
 # rouman
 DOMAIN-SUFFIX,ra7.xyz
 # 水印相机
@@ -49,6 +47,8 @@ DOMAIN-SUFFIX,syzjxz2018.cn
 DOMAIN-SUFFIX,optimix.cn
 DOMAIN-SUFFIX,bdp.cn
 DOMAIN-SUFFIX,laosiji.com
+DOMAIN,w.kunlungr.com
+DOMAIN,dsa.dnsv1.com.cn
 IP-CIDR,113.105.248.169/32,no-resolve
 IP-CIDR,218.30.15.193/32,no-resolve
 DOMAIN-SUFFIX,51.la
@@ -222,16 +222,14 @@ DOMAIN-SUFFIX,pgdt.ugdtimg.com
 DOMAIN-SUFFIX,h.trace.qq.com
 DOMAIN-SUFFIX,pv.sohu.com
 DOMAIN-SUFFIX,taboola.com
-DOMAIN-SUFFIX,taboola.com.cn
 DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,log.trackingio.com
 DOMAIN-SUFFIX,slog.trackingio.com
 DOMAIN-SUFFIX,applog.uc.cn
-DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.com
-DOMAIN-SUFFIX,umeng.co
+DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umeng.cn
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN,log.umsns.com
@@ -255,7 +253,6 @@ DOMAIN-SUFFIX,1010pic.com
 DOMAIN-SUFFIX,8le8le.com
 DOMAIN-SUFFIX,a0.app.xiaomi.com
 DOMAIN-SUFFIX,ad-scope.com
-DOMAIN-SUFFIX,ad-scope.com.cn
 DOMAIN-SUFFIX,ad-sdk.huxiu.com
 DOMAIN-SUFFIX,ad.51wnl.com
 DOMAIN-SUFFIX,ad.bwton.com
@@ -321,7 +318,6 @@ DOMAIN-SUFFIX,adx-drcn.op.dbankcloud.cn
 DOMAIN-SUFFIX,adx.ads.heytapmobi.com
 DOMAIN-SUFFIX,adx.ads.oppomobile.com
 DOMAIN-SUFFIX,adxlog-adnet.vivo.com.cn
-DOMAIN-SUFFIX,adxlog-adnet.vivo.com.cn.dsa.dnsv1.com.cn
 DOMAIN-SUFFIX,afs.googlesyndication.com
 DOMAIN-SUFFIX,an.facebook.com
 DOMAIN-SUFFIX,analysis.yozocloud.cn
@@ -334,7 +330,6 @@ DOMAIN-SUFFIX,analytics.tiktok.com
 DOMAIN-SUFFIX,analytics.woozooo.com
 DOMAIN-SUFFIX,analyze.lemurbrowser.com
 DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com
-DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao.com3
 DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao2.com
 DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao3.com
@@ -432,7 +427,6 @@ DOMAIN-SUFFIX,image-ad.sm.cn
 DOMAIN-SUFFIX,images.pinduoduo.com
 DOMAIN-SUFFIX,img-c.heytapimage.com
 DOMAIN-SUFFIX,img.adnyg.com
-DOMAIN-SUFFIX,img.adnyg.com.w.kunlungr.com
 DOMAIN-SUFFIX,imtmp.net
 DOMAIN-SUFFIX,irc.qubiankeji.com
 DOMAIN-SUFFIX,is.snssdk.com
@@ -697,7 +691,6 @@ DOMAIN-SUFFIX,cjmkt.com
 DOMAIN-SUFFIX,formysql.com
 DOMAIN-SUFFIX,mairuan.cn
 DOMAIN-SUFFIX,mairuan.com
-DOMAIN-SUFFIX,mairuan.com.cn
 DOMAIN-SUFFIX,mairuan.net
 DOMAIN-SUFFIX,mindmapper.cc
 DOMAIN-SUFFIX,passwordrecovery.cn
@@ -1112,7 +1105,6 @@ DOMAIN-SUFFIX,yiqifa.com
 DOMAIN-SUFFIX,yitaopt.com
 DOMAIN-SUFFIX,zzd6.com
 DOMAIN-SUFFIX,dopa.com
-DOMAIN-SUFFIX,dopa.com.cn
 DOMAIN-SUFFIX,ok365.com
 DOMAIN-SUFFIX,114so.cn
 DOMAIN-SUFFIX,airpush.com
@@ -1731,7 +1723,6 @@ DOMAIN-SUFFIX,collector.wasu.cn
 DOMAIN-SUFFIX,delivery-pc.wasu.cn
 DOMAIN-SUFFIX,delivery.wasu.cn
 DOMAIN-SUFFIX,adserve2.tom.com
-DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,a.hl.mi.com
 DOMAIN-SUFFIX,a.market.xiaomi.com
 DOMAIN-SUFFIX,a.stat.xiaomi.com
@@ -1859,12 +1850,10 @@ DOMAIN-SUFFIX,httpdns.music.163.com
 DOMAIN-SUFFIX,music.httpdns.c.163.com
 DOMAIN-SUFFIX,lofter.httpdns.c.163.com
 DOMAIN-SUFFIX,httpdns.volcengineapi.com
-DOMAIN-SUFFIX,dns.weibo.c
+DOMAIN-SUFFIX,dns.weibo.cn
 DOMAIN-SUFFIX,dns.ximalaya.com
 DOMAIN-SUFFIX,dns.jd.com
-DOMAIN-SUFFIX,dns.weibo.cn
 DOMAIN-SUFFIX,dns.weixin.qq.com
-DOMAIN-SUFFIX,dns.weixin.qq.com.cn
 DOMAIN-SUFFIX,aedns.weixin.qq.com
 # apple
 DOMAIN-SUFFIX,securemetrics.apple.com
@@ -1879,7 +1868,6 @@ IP-CIDR,114.132.165.205/32,no-resolve
 IP-CIDR,186.76.76.200/32,no-resolve
 # JD
 IP-CIDR,101.124.19.122/32,no-resolve
-# JD Cloud
 IP-CIDR,103.224.222.208/32,no-resolve
 # NetEase
 IP-CIDR,59.111.239.61/32,no-resolve
