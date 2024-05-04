@@ -849,7 +849,6 @@ DOMAIN-SUFFIX,click.mz.simba.taobao.com
 DOMAIN-SUFFIX,click.tz.simba.taobao.com
 DOMAIN-SUFFIX,cloudvideocdn.taobao.com,extended-matching
 DOMAIN-SUFFIX,iphonesubmissions.apple.com
-DOMAIN-SUFFIX,msgacs.m.taobao.com
 DOMAIN-SUFFIX,toruk.tanx.com
 DOMAIN-SUFFIX,a.tanx.com
 DOMAIN-SUFFIX,cdn.tanx.com
