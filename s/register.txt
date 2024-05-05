@@ -54,6 +54,7 @@
 +.androidify.com
 +.androidtv.com
 +.angulardart.org
++.chatgpt.com
 +.api.ai
 +.apigee.com
 +.app-measurement-cn.com
