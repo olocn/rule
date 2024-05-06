@@ -1,3 +1,4 @@
+.beingfine.cn
 .edge.api.myqnapcloud.com
 .jsccbcc.com
 .digicert.com
