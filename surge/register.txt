@@ -18,6 +18,7 @@ DOMAIN-SUFFIX,t66y.com
 DOMAIN-WILDCARD,18comic.*
 DOMAIN-WILDCARD,sehuatang.*
 DOMAIN-WILDCARD,rmcdn*.xyz
+DOMAIN-SUFFIX,rmcdn1.xyz
 DOMAIN-WILDCARD,roucdn*.link
 DOMAIN-WILDCARD,rouman*.com
 DOMAIN-WILDCARD,roucdn*.link
