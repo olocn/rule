@@ -1,5 +1,5 @@
 +.javlibrary.com
-+.challenges.cloudflare.com
++.cloudflare.com
 +.brrub.us
 +.saltyfish.io
 +.1password.com
