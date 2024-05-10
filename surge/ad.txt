@@ -243,12 +243,7 @@ DOMAIN-SUFFIX,ad-sdk.huxiu.com
 DOMAIN-SUFFIX,ad.51wnl.com
 DOMAIN-SUFFIX,ad.bwton.com
 DOMAIN-SUFFIX,ad.cyapi.cn
-DOMAIN-SUFFIX,ad.flurry.com
 DOMAIN-SUFFIX,ad.partner.gifshow.com
-DOMAIN-SUFFIX,ad.qingting.fm
-DOMAIN-SUFFIX,ad.qq.com
-DOMAIN-SUFFIX,ad.tencentmusic.com
-DOMAIN-SUFFIX,ad.toutiao.com
 DOMAIN-SUFFIX,ad.winrar.com.cn
 DOMAIN-SUFFIX,ad.xelements.cn
 DOMAIN-SUFFIX,ad.ximalaya.com
@@ -285,7 +280,6 @@ DOMAIN-SUFFIX,adv.sec.miui.com
 DOMAIN-SUFFIX,advertiseonbing.azureedge.net
 DOMAIN-SUFFIX,advice-ads.s3.amazonaws.com
 DOMAIN-SUFFIX,adview.cn
-DOMAIN-SUFFIX,adxlog-adnet.vivo.com.cn
 DOMAIN-SUFFIX,afs.googlesyndication.com
 DOMAIN-SUFFIX,an.facebook.com
 DOMAIN-SUFFIX,analysis.yozocloud.cn
@@ -627,11 +621,12 @@ DOMAIN-SUFFIX,zeus.ad.xiaomi.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,msg.qy.net
 DOMAIN-SUFFIX,getui.net
+#彩云天气
 DOMAIN-SUFFIX,cyapi.cn
 DOMAIN-SUFFIX,caiyunapp.com
 DOMAIN-SUFFIX,gather.colorfulclouds.net
+
 DOMAIN-SUFFIX,api-access.pangolin-sdk-toutiao-b.com
-DOMAIN-SUFFIX,moji.com
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,googleads.g.doubleclick.net
 DOMAIN-SUFFIX,tagtic.cn
@@ -781,7 +776,6 @@ DOMAIN-SUFFIX,agoodm.m.taobao.com
 DOMAIN-SUFFIX,api.waptest.taobao.com
 DOMAIN-SUFFIX,tce.alicdn.com
 DOMAIN-SUFFIX,acs4baichuan.m.taobao.com
-DOMAIN-SUFFIX,adash.m.taobao.com,extended-matching
 DOMAIN-SUFFIX,adash.man.aliyuncs.com
 DOMAIN-SUFFIX,adash-c.ut.taobao.com
 DOMAIN-SUFFIX,adashx4yt.m.taobao.com
