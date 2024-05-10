@@ -1447,7 +1447,6 @@ DOMAIN-SUFFIX,yt-adp.nosdn.127.net
 DOMAIN-SUFFIX,crash.163.com
 DOMAIN-SUFFIX,crashlytics.163.com
 DOMAIN-SUFFIX,g.163.com
-DOMAIN-SUFFIX,a.youdao.com
 DOMAIN-SUFFIX,adpublish.ydstatic.com
 DOMAIN-SUFFIX,pingjs.qq.com
 DOMAIN-SUFFIX,ad.qun.qq.com
