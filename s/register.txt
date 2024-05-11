@@ -12,6 +12,7 @@
 +.r3ltm.app
 +.vyh9v.app
 +.qnap.com
++.hifini.com
 +.myqnapcloud.io
 +.myqnapcloud.com
 +.picnew.org
