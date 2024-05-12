@@ -1,8 +1,6 @@
 blackhole.m.jd.com
 .trace.qq.com
 .msg.qy.net
-upos-sz-mirrorali.bilivideo.com
-upos-sz-mirrorcoso1.bilivideo.com
 .mssdk.volces.com
 .toblog.ctobsnssdk.com
 .gromore.pangolin-sdk-toutiao.com
@@ -13,7 +11,7 @@ ifs.tanx.com
 api-access.pangolin-sdk-toutiao-b.com
 .umengcloud.com
 .umeng.com
-sdk.e.qq.com
+.e.qq.com
 .moji.com
 .anythinktech.com
 .xhey.top
