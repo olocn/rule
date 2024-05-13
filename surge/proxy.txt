@@ -1,4 +1,4 @@
-# appl
+# apple
 DOMAIN,api.smoot.apple.cn
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-dns.net
@@ -26,6 +26,7 @@ DOMAIN-SUFFIX,jmpicn.xyz
 # jav
 DOMAIN,qz1gy.app
 DOMAIN,yfvjv.app
+DOMAIN-SUFFIX,ra7.xyz
 DOMAIN,r3ltm.app
 DOMAIN-SUFFIX,photos18.com
 DOMAIN-SUFFIX,pimg.tw
