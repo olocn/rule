@@ -50,6 +50,7 @@ DOMAIN-SUFFIX,a.stat.xiaomi.com
 DOMAIN-SUFFIX,bss.pandora.xiaomi.com
 DOMAIN-SUFFIX,app.chat.xiaomi.net
 
+DOMAIN,analysis.tratao.com
 DOMAIN-SUFFIX,51.la
 DOMAIN-SUFFIX,51la.net
 DOMAIN-SUFFIX,8cnd.com
