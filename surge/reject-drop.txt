@@ -9,9 +9,13 @@ taojin-pic-gz.cdn.bcebos.com
 .cnloc.map.baidu.com
 iphone-ld.apple.com
 .bdimg.com
+www.qchannel01.cn
+itsdata.map.baidu.com
 aispace.baidu.com
 blackhole.m.jd.com
+
 .tanx.com
+mllog.jd.com
 .log.aliyuncs.com
 app-analytics-services.com
 .gdt.qq.com
