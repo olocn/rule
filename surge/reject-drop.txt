@@ -1,3 +1,15 @@
+.internal-amis-res.cdn.bcebos.com
+.map-mobile-opnimg.cdn.bcebos.com
+.qchannel03.cn
+poi-pic-gz.cdn.bcebos.com
+taojin-pic-gz.cdn.bcebos.com
+.feed-image.baidu.com
+.poi-pic.cdn.bcebos.com
+.bdimg.com
+.cnloc.map.baidu.com
+iphone-ld.apple.com
+.bdimg.com
+aispace.baidu.com
 blackhole.m.jd.com
 .tanx.com
 .log.aliyuncs.com
