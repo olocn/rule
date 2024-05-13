@@ -13,6 +13,8 @@ DOMAIN,ocsp.sectigo.com
 DOMAIN,wrapper.cyapi.cn
 
 #无忧行
+DOMAIN,codepush.appcenter.ms
+DEST-PORT,8008
 DEST-PORT,10900
 DEST-PORT,10800
 DEST-PORT,10801
