@@ -1,3 +1,4 @@
+yongche.baidu.com
 .internal-amis-res.cdn.bcebos.com
 .map-mobile-opnimg.cdn.bcebos.com
 .qchannel03.cn
