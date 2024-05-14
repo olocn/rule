@@ -16,6 +16,7 @@ blackhole.m.jd.com
 .ra7.xyz
 .tanx.com
 mllog.jd.com
+gather.colorfulclouds.net
 .log.aliyuncs.com
 app-analytics-services.com
 .gdt.qq.com
