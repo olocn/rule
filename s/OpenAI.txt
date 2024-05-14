@@ -3,8 +3,6 @@ static.cloudflareinsights.com
 +.ai.com
 +.openai.com
 +.chatgpt.com
-+.intercom.io
-cdn.oaistatic.com
 +.algolia.net
 +.api.statsig.com
 +.auth0.com
