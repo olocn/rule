@@ -13,7 +13,7 @@ www.qchannel01.cn
 itsdata.map.baidu.com
 aispace.baidu.com
 blackhole.m.jd.com
-
+.ra7.xyz
 .tanx.com
 mllog.jd.com
 .log.aliyuncs.com
