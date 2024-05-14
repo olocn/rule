@@ -1,6 +1,7 @@
 browser-intake-datadoghq.com
 static.cloudflareinsights.com
 +.ai.com
++.openai.com
 +.algolia.net
 +.api.statsig.com
 +.auth0.com
