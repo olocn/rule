@@ -14,6 +14,7 @@ DOMAIN,wrapper.cyapi.cn
 
 #无忧行
 DOMAIN,codepush.appcenter.ms
+DEST-PORT,10802
 DEST-PORT,8008
 DEST-PORT,10900
 DEST-PORT,10800
