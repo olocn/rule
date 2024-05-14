@@ -1,6 +1,7 @@
 .internal-amis-res.cdn.bcebos.com
 .map-mobile-opnimg.cdn.bcebos.com
 .qchannel03.cn
+img2.360buyimg.com
 poi-pic-gz.cdn.bcebos.com
 taojin-pic-gz.cdn.bcebos.com
 .feed-image.baidu.com
