@@ -1,6 +1,5 @@
 cdn.jegotrip.com.cn
 app-product.jegotrip.com.cn
-product.jegotrip.com.cn
 app3.jegotrip.com.cn
 .cyapi.cn
 analysis.tratao.com
