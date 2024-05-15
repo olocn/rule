@@ -1,3 +1,4 @@
+cdn.jegotrip.com.cn
 .cyapi.cn
 analysis.tratao.com
 yongche.baidu.com
