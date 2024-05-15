@@ -23,10 +23,6 @@
 +.btdig.com
 +.greencloudvps.com
 +.m-team.cc
-+.api.statsig.com
-+.oaiusercontent.com
-+.oaistatic.com
-+.openai.com
 +.0emm.com
 +.1e100.net
 +.1ucrs.com
@@ -56,8 +52,6 @@
 +.androidify.com
 +.androidtv.com
 +.angulardart.org
-+.chatgpt.com
-+.api.ai
 +.apigee.com
 +.app-measurement-cn.com
 +.app-measurement.com
