@@ -1,3 +1,7 @@
+.toponadss.com
+.sensorsdata.cn
+.sogaha.cn
+adash-emas.cn-hangzhou.aliyuncs.com
 cdn.jegotrip.com.cn
 app-product.jegotrip.com.cn
 .cyapi.cn
