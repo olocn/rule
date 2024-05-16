@@ -1,3 +1,5 @@
+mobads-logs.baidu.com
+mobads-pre-config.cdn.bcebos.com
 .toponadss.com
 .sensorsdata.cn
 .sogaha.cn
