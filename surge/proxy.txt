@@ -593,3 +593,4 @@ DOMAIN-SUFFIX,gfx.ms
 DOMAIN-SUFFIX,msauth.net
 DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,microsoft.com
+DOMAIN-SUFFIX,sov2ex.com
