@@ -51,6 +51,7 @@ adashx.m.taobao.com
 nbsdk-baichuan.taobao.com
 dataflow.biliapi.com
 .tagtic.cn
+amdc.m.taobao.com,extended-matching
 adashxgc.ut.taobao.com
 nbsdk-baichuan.alicdn.com
 adashbc.ut.taobao.com
