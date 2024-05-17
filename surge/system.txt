@@ -11,7 +11,7 @@ DOMAIN,gateway.icloud.com
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
 DOMAIN,wrapper.cyapi.cn
-
+DOMAIN-SUFFIX,cloudfront.net
 #无忧行
 DOMAIN,codepush.appcenter.ms
 DEST-PORT,10802
