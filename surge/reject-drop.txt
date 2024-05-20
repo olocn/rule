@@ -10,10 +10,7 @@ DOMAIN,app-product.jegotrip.com.cn
 DOMAIN-SUFFIX,cyapi.cn
 DOMAIN,analysis.tratao.com
 DOMAIN-SUFFIX,qchannel03.cn
-DOMAIN,img2.360buyimg.com
-DOMAIN,poi-pic-gz.cdn.bcebos.com
 DOMAIN,iphone-ld.apple.com
-DOMAIN-SUFFIX,bdimg.com
 DOMAIN,www.qchannel01.cn
 DOMAIN,blackhole.m.jd.com
 DOMAIN-SUFFIX,ra7.xyz
@@ -81,15 +78,6 @@ DOMAIN,httpdns.baidubce.com
 DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN-SUFFIX,sofire.baidu.com
 DOMAIN-SUFFIX,ugc.map.baidu.com
-DOMAIN-SUFFIX,client.map.baidu.com
 DOMAIN,itsdata.map.baidu.com
-DOMAIN,aispace.baidu.com
-DOMAIN-SUFFIX,feed-image.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,mobads-logs.baidu.com
-DOMAIN,mobads-pre-config.cdn.bcebos.com
-DOMAIN,taojin-pic-gz.cdn.bcebos.com
-DOMAIN-SUFFIX,poi-pic.cdn.bcebos.com
-DOMAIN-SUFFIX,bdimg.com
-DOMAIN-SUFFIX,internal-amis-res.cdn.bcebos.com
-DOMAIN-SUFFIX,map-mobile-opnimg.cdn.bcebos.com
