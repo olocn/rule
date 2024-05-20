@@ -1150,7 +1150,6 @@ DOMAIN-SUFFIX,cpro.baidu.com
 DOMAIN-SUFFIX,mpro.baidu.com
 DOMAIN-SUFFIX,sestat.baidu.com
 DOMAIN-SUFFIX,shadu.baidu.com
-DOMAIN-SUFFIX,ae.bdstatic.com
 DOMAIN-SUFFIX,river.zhidao.baidu.com
 DOMAIN-SUFFIX,rj.baidu.com
 DOMAIN-SUFFIX,e.baidu.com
