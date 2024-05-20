@@ -40,7 +40,6 @@ DOMAIN,adashx.m.taobao.com
 DOMAIN,nbsdk-baichuan.taobao.com
 DOMAIN,dataflow.biliapi.com
 DOMAIN-SUFFIX,tagtic.cn
-DOMAIN,amdc.m.taobao.com,extended-matching
 DOMAIN,adashxgc.ut.taobao.com
 DOMAIN,nbsdk-baichuan.alicdn.com
 DOMAIN,adashbc.ut.taobao.com
