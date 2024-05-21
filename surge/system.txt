@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,xhscdn.com #小红书
 DOMAIN-SUFFIX,lencr.org
 DOMAIN-SUFFIX,fontfiles.googleadapis.com
 DOMAIN-SUFFIX,fontfiles.googleapis.com
