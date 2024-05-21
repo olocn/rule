@@ -5,8 +5,6 @@ DOMAIN-SUFFIX,toponadss.com
 DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,sogaha.cn
 DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
-DOMAIN,cdn.jegotrip.com.cn
-DOMAIN,app-product.jegotrip.com.cn
 DOMAIN-SUFFIX,cyapi.cn
 DOMAIN,analysis.tratao.com
 DOMAIN-SUFFIX,qchannel03.cn
