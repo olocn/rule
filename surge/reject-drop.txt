@@ -1,3 +1,4 @@
+DOMAIN,mars.jd.com
 DOMAIN-SUFFIX,flurry.com
 DOMAIN-SUFFIX,wps.com
 DOMAIN-SUFFIX,wps.cn
