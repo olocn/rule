@@ -1,3 +1,5 @@
+DOMAIN,tracking.intl.miui.com
+DOMAIN,sdkconfig.ad.intl.xiaomi.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN,mars.jd.com
 DOMAIN-SUFFIX,flurry.com
