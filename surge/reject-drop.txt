@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,amplitude.com
 DOMAIN,mars.jd.com
 DOMAIN-SUFFIX,flurry.com
 DOMAIN-SUFFIX,wps.com
