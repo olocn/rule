@@ -200,7 +200,6 @@ DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umeng.cn
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,ad.us.sinaimg.cn
-DOMAIN-SUFFIX,stat.youpin.mi.com
 DOMAIN-SUFFIX,ali-ad.a.yximgs.com
 DOMAIN-SUFFIX,v2-ad.video.yximgs.com
 DOMAIN-SUFFIX,zhihu-web-analytics.zhihu.com
