@@ -53,7 +53,6 @@ DOMAIN,zhihu-web-analytics.zhihu.com
 DOMAIN,applog.uc.cn
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN-SUFFIX,getui.com
-DOMAIN,p1.meituan.net
 DOMAIN,waapdg.jd.com
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN,httpdns.alicdn.com
@@ -78,9 +77,10 @@ DOMAIN,aedns.weixin.qq.com
 DOMAIN,httpsdns.baidu.com
 DOMAIN,httpdns.baidu.com
 DOMAIN,httpdns.baidubce.com
-DOMAIN-SUFFIX,newclient.map.baidu.com
+DOMAIN-SUFFIX,newclient.map.baidu.com,extended-matching
 DOMAIN-SUFFIX,sofire.baidu.com
 DOMAIN-SUFFIX,ugc.map.baidu.com
 DOMAIN,itsdata.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,mobads-logs.baidu.com
+DOMAIN-WILDCARD,p*.meituan.net
