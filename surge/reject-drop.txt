@@ -84,3 +84,13 @@ DOMAIN,itsdata.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,mobads-logs.baidu.com
 DOMAIN-WILDCARD,p*.meituan.net
+DOMAIN,nsclick.baidu.com
+DOMAIN,ecmb.bdimg.com
+DOMAIN,mapyongche.bj.bcebos.com
+DOMAIN,client.map.baidu.com
+DOMAIN,photo-meituan.cdn.bcebos.com
+DOMAIN,map-mobile-opnimg.cdn.bcebos.com
+DOMAIN,h2tcbox.baidu.com
+DOMAIN,poi-pic-gz.cdn.bcebos.com
+DOMAIN,quanjing-gif.cdn.bcebos.com
+DOMAIN,poi-pic.cdn.bcebos.com
