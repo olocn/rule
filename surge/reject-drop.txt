@@ -94,3 +94,5 @@ DOMAIN,h2tcbox.baidu.com
 DOMAIN,poi-pic-gz.cdn.bcebos.com
 DOMAIN,quanjing-gif.cdn.bcebos.com
 DOMAIN,poi-pic.cdn.bcebos.com
+DOMAIN,jmy-pic.baidu.com
+DOMAIN,aiad-aisuda.cdn.bcebos.com
