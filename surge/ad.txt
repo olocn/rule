@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,lc-cn-n1-shared.com
 # mi
 DOMAIN-SUFFIX,proxy.sec.miui.com
 DOMAIN-SUFFIX,tracking.miui.com
