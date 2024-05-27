@@ -512,16 +512,6 @@ DOMAIN-SUFFIX,ltheanine.cn
 DOMAIN-SUFFIX,mkitgfs.com
 DOMAIN-SUFFIX,ry51w.cn
 DOMAIN-SUFFIX,sg536.cn
-DOMAIN-SUFFIX,sifubo.cn
-DOMAIN-SUFFIX,sifuce.cn
-DOMAIN-SUFFIX,sifuda.cn
-DOMAIN-SUFFIX,sifufu.cn
-DOMAIN-SUFFIX,sifuge.cn
-DOMAIN-SUFFIX,sifugu.cn
-DOMAIN-SUFFIX,sifuhe.cn
-DOMAIN-SUFFIX,sifuhu.cn
-DOMAIN-SUFFIX,sifuji.cn
-DOMAIN-SUFFIX,sifuka.cn
 DOMAIN-SUFFIX,tjqonline.cn
 DOMAIN-SUFFIX,xiaohuau.xyz
 DOMAIN-SUFFIX,zhaozecheng.cn
@@ -583,7 +573,6 @@ DOMAIN-SUFFIX,tunion-api.m.taobao.com
 DOMAIN-SUFFIX,nbsdk-baichuan.taobao.com
 DOMAIN-SUFFIX,amdc.m.taobao.com
 DOMAIN-SUFFIX,amdcopen.m.taobao.com
-DOMAIN-SUFFIX,adash.m.taobao.com
 DOMAIN-SUFFIX,tns.simba.taobao.com
 DOMAIN-SUFFIX,osupdateservice.yunos.com
 DOMAIN-SUFFIX,tvupgrade.yunos.com
