@@ -14,13 +14,6 @@ DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
 DOMAIN,wrapper.cyapi.cn
 DOMAIN-SUFFIX,cloudfront.net
-#无忧行
-DOMAIN,codepush.appcenter.ms
-DEST-PORT,10802
-DEST-PORT,8008
-DEST-PORT,10900
-DEST-PORT,10800
-DEST-PORT,10801
 # > 淘宝推广
 DOMAIN-SUFFIX,tce.alicdn.com
 # > Alibaba
