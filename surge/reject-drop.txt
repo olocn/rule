@@ -1,4 +1,5 @@
 DOMAIN,tracking.miui.com
+DOMAIN,analytics.plex.tv
 DOMAIN,app-measurement.com
 DOMAIN,tracking.intl.miui.com
 DOMAIN,sdkconfig.ad.intl.xiaomi.com
