@@ -1,3 +1,10 @@
+#翼支付
+DOMAIN,yiguan-service.bestpay.cn
+DOMAIN-SUFFIX,h5app.bestpay.cn
+#高德
+DOMAIN,logs.amap.com
+DOMAIN,dualstack-logs.amap.com
+#小米
 DOMAIN,tracking.miui.com
 DOMAIN,analytics.plex.tv
 DOMAIN,app-measurement.com
