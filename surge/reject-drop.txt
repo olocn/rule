@@ -40,7 +40,6 @@ DOMAIN-SUFFIX,e.qq.com
 DOMAIN-SUFFIX,moji.com
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,xhey.top
-DOMAIN,fourier.taobao.com
 DOMAIN,adashx.m.taobao.com
 DOMAIN,nbsdk-baichuan.taobao.com
 DOMAIN,dataflow.biliapi.com
