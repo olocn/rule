@@ -1,3 +1,5 @@
+.leancloud.cn
+.dcloud.net.cn
 .jsccbcc.com
 .10010.com
 .10086.cn
