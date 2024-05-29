@@ -1,3 +1,4 @@
+DOMAIN,ca.iadsdk.apple.com
 #翼支付
 DOMAIN,yiguan-service.bestpay.cn
 DOMAIN-SUFFIX,h5app.bestpay.cn
