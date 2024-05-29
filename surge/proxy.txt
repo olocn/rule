@@ -25,6 +25,7 @@ DOMAIN-SUFFIX,jmpic.xyz
 DOMAIN-SUFFIX,jmpic.org
 DOMAIN-SUFFIX,jmpicn.xyz
 # jav
+DOMAIN-SUFFIX,gifyu.com
 DOMAIN,qz1gy.app
 DOMAIN,yfvjv.app
 DOMAIN-SUFFIX,ra7.xyz
