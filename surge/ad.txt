@@ -120,14 +120,12 @@ DOMAIN,stat.house365.com
 DOMAIN,stat.ijinshan.com
 DOMAIN,stat.img-space.com
 DOMAIN,stat.mql5.com
-DOMAIN,stat.pchome.net
 DOMAIN,stat.timedg.com
 DOMAIN,stat.ts.cn
 DOMAIN,stat.v.17173.com
 DOMAIN,stat.xgo.com.cn
 DOMAIN,stat.yunfan.com
 DOMAIN,stats.766.com
-DOMAIN,stats.v.duowan.com
 DOMAIN-SUFFIX,ta.trs.cn
 DOMAIN-SUFFIX,tingyun.com
 DOMAIN-SUFFIX,tj.21ic.com
@@ -216,7 +214,6 @@ DOMAIN-SUFFIX,ad.51wnl.com
 DOMAIN-SUFFIX,ad.bwton.com
 DOMAIN-SUFFIX,ad.cyapi.cn
 DOMAIN-SUFFIX,ad.partner.gifshow.com
-DOMAIN-SUFFIX,ad.winrar.com.cn
 DOMAIN-SUFFIX,ad.xelements.cn
 DOMAIN-SUFFIX,ad.ximalaya.com
 DOMAIN-SUFFIX,ad.zijieapi.com
@@ -275,9 +272,6 @@ DOMAIN-SUFFIX,applog.lc.quark.cn
 DOMAIN-SUFFIX,applog.zijieapi.com
 DOMAIN-SUFFIX,ata-sdk-uuid-report.dreport.meituan.net
 DOMAIN-SUFFIX,azr.footprintdns.com
-DOMAIN-SUFFIX,bdapi-ads.realmemobile.com
-DOMAIN-SUFFIX,bdapi-in-ads.realmemobile.com
-DOMAIN-SUFFIX,bdapi.ads.oppomobile.com
 DOMAIN-SUFFIX,beacons.gvt2.com
 DOMAIN-SUFFIX,beizi.biz
 DOMAIN-SUFFIX,bingads.microsoft.com
@@ -1455,37 +1449,17 @@ DOMAIN-SUFFIX,dns.jd.com
 # apple
 DOMAIN-SUFFIX,securemetrics.apple.com
 DOMAIN,ca.iadsdk.apple.com
-IP-CIDR,61.147.214.67/32,no-resolve
-IP-CIDR,117.78.0.0/20,no-resolve
-IP-CIDR,120.46.128.0/17,no-resolve
-IP-CIDR,124.70.128.0/18,no-resolve
-IP-CIDR,203.107.1.0/24,no-resolve
-IP-CIDR,114.132.165.205/32,no-resolve
 # BaiduBCE
 IP-CIDR,186.76.76.200/32,no-resolve
 # JD
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR,103.224.222.208/32,no-resolve
-# NetEase
-IP-CIDR,59.111.239.61/32,no-resolve
-IP-CIDR,59.111.239.62/32,no-resolve
-IP-CIDR,115.236.121.51/32,no-resolve
-IP-CIDR,115.236.121.195/32,no-resolve
-# Tencent Cloud
-IP-CIDR,119.29.29.98/32,no-resolve
-IP-CIDR,119.29.29.99/32,no-resolve
-# Weibo
-IP-CIDR,39.97.128.148/32,no-resolve
-IP-CIDR,39.97.130.51/32,no-resolve
 # Weixin
 IP-CIDR,42.81.232.18/32,no-resolve
 IP-CIDR,42.187.182.106/32,no-resolve
 IP-CIDR,42.187.182.123/32,no-resolve
 IP-CIDR,42.187.184.154/32,no-resolve
 IP-CIDR,123.151.54.50/32,no-resolve
-# Wework
-IP-CIDR,182.254.116.117/32,no-resolve
-IP-CIDR,182.254.118.119/32,no-resolve
 # QQ
 DOMAIN-SUFFIX,isdspeed.qq.com
 DOMAIN-SUFFIX,tajs.qq.com
