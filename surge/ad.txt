@@ -1451,6 +1451,7 @@ DOMAIN-SUFFIX,securemetrics.apple.com
 DOMAIN,ca.iadsdk.apple.com
 # BaiduBCE
 IP-CIDR,186.76.76.200/32,no-resolve
+IP-CIDR,180.76.2.18/32,no-resolve
 # JD
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR,103.224.222.208/32,no-resolve
@@ -1460,6 +1461,9 @@ IP-CIDR,42.187.182.106/32,no-resolve
 IP-CIDR,42.187.182.123/32,no-resolve
 IP-CIDR,42.187.184.154/32,no-resolve
 IP-CIDR,123.151.54.50/32,no-resolve
+
+IP-CIDR,113.105.248.169/32,no-resolve
+
 # QQ
 DOMAIN-SUFFIX,isdspeed.qq.com
 DOMAIN-SUFFIX,tajs.qq.com
