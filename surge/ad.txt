@@ -457,7 +457,6 @@ DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,gia.jd.com
 DOMAIN-SUFFIX,jcm.jd.com
-DOMAIN-SUFFIX,wl.jd.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 #彩云天气
 DOMAIN-SUFFIX,cyapi.cn
