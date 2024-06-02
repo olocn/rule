@@ -49,18 +49,17 @@ DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
 DOMAIN-SUFFIX,fbcdn.com
 DOMAIN-KEYWORD,instagram
 
-# chat
-DOMAIN,api.statsig.com
+# ai
+DOMAIN-SUFFIX,chatgpt.com
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,openai.com
 DOMAIN-SUFFIX,ai.com
-DOMAIN,cdn.auth0.com
+DOMAIN,chat.openai.com.cdn.cloudflare.net
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN,openaicomproductionae4b.blob.core.windows.net
+DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN,openaiapi-site.azureedge.net
-DOMAIN,challenges.cloudflare.com
-DOMAIN-SUFFIX,identrust.com
-DOMAIN-SUFFIX,featuregates.org
-DOMAIN-SUFFIX,intercom.io
 
 #twitter
 DOMAIN-SUFFIX,ads-twitter.com
@@ -74,6 +73,9 @@ DOMAIN-SUFFIX,greencloudvps.com
 DOMAIN-SUFFIX,m-team.cc
 DOMAIN-KEYWORD,paypal
 
+DOMAIN-KEYWORD,github
+DOMAIN-SUFFIX,git.io
+DOMAIN,github-cloud.s3.amazonaws.com
 # tg
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
