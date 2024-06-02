@@ -62,6 +62,13 @@ DOMAIN-SUFFIX,identrust.com
 DOMAIN-SUFFIX,featuregates.org
 DOMAIN-SUFFIX,intercom.io
 
+#twitter
+DOMAIN-SUFFIX,ads-twitter.com
+DOMAIN-SUFFIX,t.co
+DOMAIN-SUFFIX,twimg.com
+DOMAIN-SUFFIX,twitter.com
+DOMAIN-SUFFIX,x.com
+
 DOMAIN-SUFFIX,saltyfish.io
 DOMAIN-SUFFIX,greencloudvps.com
 DOMAIN-SUFFIX,m-team.cc
