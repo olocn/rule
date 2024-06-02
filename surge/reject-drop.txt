@@ -1,3 +1,4 @@
+DOMAIN,graph.facebook.com
 DOMAIN-SUFFIX,2005net.net
 DOMAIN-SUFFIX,360.cn
 DOMAIN-SUFFIX,365dmp.com
