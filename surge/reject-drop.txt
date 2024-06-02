@@ -395,7 +395,6 @@ DOMAIN-SUFFIX,webstat.qiumibao.com
 DOMAIN-SUFFIX,web-trace.ksapisrv.com
 DOMAIN-SUFFIX,webtrack.pospal.cn
 DOMAIN-SUFFIX,wkctj.baidu.com
-DOMAIN-SUFFIX,wl.jd.com
 DOMAIN-SUFFIX,wlog.kuaishou.com
 DOMAIN-SUFFIX,wujiupic.com
 DOMAIN-SUFFIX,xls.go.sohu.com
