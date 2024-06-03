@@ -19,6 +19,7 @@
 +.push-apple.com.akadns.net
 +.subtitlecat.com
 +.obsidian.md
++.1lou.me
 +.accuweather.com
 +.r3ltm.app
 +.shields.io
