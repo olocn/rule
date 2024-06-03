@@ -17,6 +17,7 @@
 +.itunes.com
 +.apple.news
 +.push-apple.com.akadns.net
++.subtitlecat.com
 +.obsidian.md
 +.accuweather.com
 +.r3ltm.app
