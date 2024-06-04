@@ -1,3 +1,4 @@
+DOMAIN,gy.gepush.com
 DOMAIN,logs.chelaile.net.cn
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,graph.facebook.com
