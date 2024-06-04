@@ -142,7 +142,6 @@ DOMAIN-SUFFIX,fundingchoicesmessages.google.com
 DOMAIN-SUFFIX,g.yccdn.com
 DOMAIN-SUFFIX,gentian-frd.hjapi.com
 DOMAIN-SUFFIX,ggxt.net
-DOMAIN-SUFFIX,gia.jd.com
 DOMAIN-SUFFIX,giocdn.com
 DOMAIN-SUFFIX,gk.sina.cn
 DOMAIN-SUFFIX,gm99.com
