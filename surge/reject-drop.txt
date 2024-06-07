@@ -1,3 +1,5 @@
+DOMAIN,api-adservices.apple.com
+DOMAIN,poweredby.jads.co
 DOMAIN,gy.gepush.com
 DOMAIN,hotchat-im.iqiyi.com
 DOMAIN,logs.chelaile.net.cn
