@@ -1,4 +1,5 @@
 DOMAIN,gy.gepush.com
+DOMAIN,hotchat-im.iqiyi.com
 DOMAIN,logs.chelaile.net.cn
 DOMAIN,atrace.chelaile.net.cn
 DOMAIN,graph.facebook.com
