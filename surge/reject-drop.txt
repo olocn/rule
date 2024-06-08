@@ -1,3 +1,5 @@
+DOMAIN,alimelog.taobao.com
+DOMAIN,alimelog.taobao.com
 DOMAIN,api-adservices.apple.com
 DOMAIN,poweredby.jads.co
 DOMAIN,gy.gepush.com
