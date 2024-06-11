@@ -42,7 +42,7 @@ DOMAIN-SUFFIX,download.developer.apple.com
 DOMAIN-SUFFIX,experiments.apple.com
 DOMAIN-SUFFIX,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,gs-loc.apple.com
-DOMAIN-SUFFIX,gsp10-ssl-cn.ls.apple.com
+DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,gsp12-cn.ls.apple.com
 DOMAIN-SUFFIX,gsp13-cn.ls.apple.com
 DOMAIN-SUFFIX,gsp4-cn.ls.apple.com.edgekey.net.globalredir.akadns.net
