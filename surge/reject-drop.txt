@@ -33,7 +33,7 @@ DOMAIN-SUFFIX,amdcopen.m.taobao.com
 DOMAIN-SUFFIX,bcfeedback.taobao.com
 DOMAIN-SUFFIX,detail.taobao.com
 DOMAIN-SUFFIX,fourier.taobao.com
-DOMAIN-SUFFIX,h-adashx.ut.taobao.com
+DOMAIN-SUFFIX,h-adashx.ut.taobao.com,extended-matching
 DOMAIN-SUFFIX,tns.simba.taobao.com
 DOMAIN-SUFFIX,tunion-api.m.taobao.com
 DOMAIN-SUFFIX,umengacs.m.taobao.com
