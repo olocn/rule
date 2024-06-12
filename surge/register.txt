@@ -93,3 +93,4 @@ DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,microsoftonline.com
