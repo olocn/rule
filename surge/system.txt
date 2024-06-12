@@ -1,5 +1,5 @@
 #爱奇艺
-resource.cupid.iqiyi.com
+DOMAIN,resource.cupid.iqiyi.com
 #百度
 DOMAIN,loc.map.baidu.com
 DOMAIN-SUFFIX,xhscdn.com #小红书
