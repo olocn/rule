@@ -1,4 +1,5 @@
 # apple
+DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-WILDCARD,a*.mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
