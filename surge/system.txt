@@ -37,6 +37,7 @@ DOMAIN,vd.l.qq.com
 # > UnionPay
 DOMAIN,analytics.95516.com
 
+DOMAIN,ocsp.godaddy.com
 # > Paramount+
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN-SUFFIX,edu.cn
