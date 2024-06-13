@@ -3,6 +3,8 @@ DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,1passwordservices.com
 DOMAIN-SUFFIX,agilebits.com
 DOMAIN-SUFFIX,fbcdn.net
+
+DOMAIN-SUFFIX,inoreader.com
 # jav
 DOMAIN-WILDCARD,*.app
 DOMAIN-KEYWORD,rmcdn
