@@ -181,7 +181,6 @@ DOMAIN-SUFFIX,cig.com.cn
 DOMAIN-SUFFIX,cir-smart.baidu.com
 DOMAIN-SUFFIX,click.bokecc.com
 DOMAIN-SUFFIX,click.gamersky.com
-DOMAIN-SUFFIX,click.taobao.com
 DOMAIN-SUFFIX,click.tianyaui.com
 DOMAIN-SUFFIX,clickcount.cnool.net
 DOMAIN-SUFFIX,clicki.cn
