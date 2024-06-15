@@ -1,4 +1,5 @@
 #ali
+DOMAIN,audid-api.taobao.com
 DOMAIN-SUFFIX,ef-dongfeng.tanx.com
 DOMAIN-SUFFIX,ifs.tanx.com
 DOMAIN-SUFFIX,a.tanx.com
@@ -614,6 +615,8 @@ DOMAIN,quanjing-gif.cdn.bcebos.com
 DOMAIN,poi-pic.cdn.bcebos.com
 DOMAIN,jmy-pic.baidu.com
 DOMAIN,aiad-aisuda.cdn.bcebos.com
+#qq
+DOMAIN-SUFFIX,mazu.m.qq.com
 #爱奇艺
 DOMAIN-SUFFIX,mdt.qq.com
 DOMAIN,api-access.pangolin-sdk-toutiao1.com
