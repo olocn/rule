@@ -1,9 +1,6 @@
 #sese
-DOMAIN,m6b2.xyz
-DOMAIN-SUFFIX,pk15qi.xyz
-DOMAIN-SUFFIX,rmeaiw.xyz
-DOMAIN-SUFFIX,julzcgs.cn
-DOMAIN-SUFFIX,lkeots.xyz
+DOMAIN,img.stripcdn.com
+DOMAIN,edge-hls.doppiocdn.net
 #ali
 DOMAIN,audid-api.taobao.com
 DOMAIN-SUFFIX,ef-dongfeng.tanx.com
