@@ -1,3 +1,5 @@
+# sese
+DOMAIN-SUFFIX,sesemanhua.com
 # apple
 DOMAIN,api.smoot.apple.cn
 DOMAIN-SUFFIX,aaplimg.com
