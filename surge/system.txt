@@ -1,3 +1,6 @@
+#无忧行
+DEST-PORT,10800,DIRECT
+DEST-PORT,10900,DIRECT
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
 #百度
