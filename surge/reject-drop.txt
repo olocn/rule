@@ -1101,14 +1101,19 @@ DOMAIN-SUFFIX,youxi.kugou.com
 DOMAIN-SUFFIX,zeus.ad.xiaomi.com
 DOMAIN-SUFFIX,errortracking.deepl.com
 
-#彩云
+# 爱奇艺
+DOMAIN-SUFFIX,baiducdnct2.inter.iqiyi.com
+DOMAIN-SUFFIX,baiducdncmn-gd.inter.iqiyi.com
+DOMAIN-SUFFIX,baiducdncmn.inter.iqiyi.com
+DOMAIN-SUFFIX,baiducdncmn3.inter.iqiyi.com
+# 彩云
 DOMAIN-SUFFIX,cyapi.cn
 
-#wps
+# wps
 DOMAIN-SUFFIX,wps.com
 DOMAIN-SUFFIX,wps.cn
 
-#今日水印
+# 今日水印
 DOMAIN-SUFFIX,xhey.top
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
