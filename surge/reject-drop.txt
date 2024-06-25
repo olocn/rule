@@ -1119,3 +1119,6 @@ DOMAIN-SUFFIX,xhey.top
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN,gather.colorfulclouds.net
+
+# 微信
+DOMAIN,dns.weixin.qq.com
