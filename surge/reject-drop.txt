@@ -537,7 +537,6 @@ DOMAIN-SUFFIX,bugly.qq.com
 DOMAIN-SUFFIX,applog.uc.cn
 DOMAIN-SUFFIX,js96110.com.cn
 DOMAIN-SUFFIX,id6.me
-DOMAIN-SUFFIX,graph.facebook.com
 DOMAIN-SUFFIX,iot.smartmidea.net
 DOMAIN-SUFFIX,iot1.midea.com.cn
 DOMAIN-SUFFIX,iotsdk.midea.com
@@ -855,11 +854,7 @@ DOMAIN-SUFFIX,masdkv6.3g.qq.com
 DOMAIN-SUFFIX,mazu.m.qq.com
 DOMAIN-SUFFIX,mbdlog.iqiyi.com
 DOMAIN-SUFFIX,metok.sys.miui.com
-DOMAIN-SUFFIX,metrics.apple.com
-DOMAIN-SUFFIX,metrics.data.hicloud.com
-DOMAIN-SUFFIX,metrics.icloud.com
-DOMAIN-SUFFIX,metrics.mzstatic.com
-DOMAIN-SUFFIX,metrics2.data.hicloud.com
+DOMAIN-SUFFIX,data.hicloud.com
 DOMAIN-SUFFIX,metrika.yandex.ru
 DOMAIN-SUFFIX,mi.gdt.qq.com
 DOMAIN-SUFFIX,miav-cse.avlyun.com
