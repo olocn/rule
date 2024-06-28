@@ -82,16 +82,16 @@ DOMAIN-KEYWORD,github,register
 DOMAIN-SUFFIX,git.io,register
 DOMAIN,github-cloud.s3.amazonaws.com,register
 # tg
-IP-CIDR,91.108.56.0/22,no-resolve,register
-IP-CIDR,91.108.4.0/22,no-resolve,register
-IP-CIDR,91.108.8.0/22,no-resolve,register
-IP-CIDR,91.108.16.0/22,no-resolve,register
-IP-CIDR,91.108.12.0/22,no-resolve,register
-IP-CIDR,149.154.160.0/20,no-resolve,register
-IP-CIDR,91.105.192.0/23,no-resolve,register
-IP-CIDR,91.108.20.0/22,no-resolve,register
-IP-CIDR,185.76.151.0/24,no-resolve,register
-IP-CIDR,5.28.192.0/18,no-resolve,register
+IP-CIDR,91.108.56.0/22,register
+IP-CIDR,91.108.4.0/22,register
+IP-CIDR,91.108.8.0/22,register
+IP-CIDR,91.108.16.0/22,register
+IP-CIDR,91.108.12.0/22,register
+IP-CIDR,149.154.160.0/20,register
+IP-CIDR,91.105.192.0/23,register
+IP-CIDR,91.108.20.0/22,register
+IP-CIDR,185.76.151.0/24,register
+IP-CIDR,5.28.192.0/18,register
 
 #微软
 DOMAIN-SUFFIX,microsoft.com,register
