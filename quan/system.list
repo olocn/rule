@@ -1,31 +1,54 @@
-DOMAIN-SUFFIX,3.o.lencr.org,DIRECT
-DOMAIN,metrics.icloud.com,DIRECT
-DOMAIN-SUFFIX,airplay.l.qq.com,DIRECT
-DOMAIN-SUFFIX,amdc.m.taobao.com,DIRECT
-DOMAIN-SUFFIX,app-measurement.com,DIRECT
-DOMAIN-SUFFIX,app-measurement-cn.com,DIRECT
-DOMAIN-SUFFIX,d.l.qq.com,DIRECT
-DOMAIN-SUFFIX,dartsearch-cn.net,DIRECT
-DOMAIN-SUFFIX,fontfiles.googleadapis.com,DIRECT
-DOMAIN-SUFFIX,fontfiles.googleapis.com,DIRECT
-DOMAIN-SUFFIX,fonts.googleadapis.com,DIRECT
-DOMAIN-SUFFIX,fonts.googleapis.com,DIRECT
-DOMAIN-SUFFIX,fonts.gstatic.com,DIRECT
-DOMAIN-SUFFIX,olocn.fun,DIRECT
-DOMAIN-SUFFIX,time.apple.com,DIRECT
-DOMAIN,9.cnzz.com,DIRECT
-DOMAIN,api.revenuecat.com,DIRECT
-DOMAIN,ingest.sentry.io,DIRECT
-DOMAIN,msg.qy.net,DIRECT
-DOMAIN,ocsp.sectigo.com,DIRECT
-DOMAIN,pv.sohu.com,DIRECT
-DOMAIN-SUFFIX,microsoft.com,DIRECT
-DOMAIN-SUFFIX,microsoftstore.com.cn,DIRECT
-DOMAIN-SUFFIX,msftconnecttest.com,DIRECT
-DOMAIN-SUFFIX,msftncsi.com,DIRECT
-DOMAIN-SUFFIX,outlook.com,DIRECT
-DOMAIN-SUFFIX,s-microsoft.com,DIRECT
-DOMAIN-SUFFIX,sfx.ms,DIRECT
-DOMAIN-SUFFIX,sharepoint.com,DIRECT
-DOMAIN-SUFFIX,windows.com,DIRECT
-DOMAIN-SUFFIX,windowsupdate.com,DIRECT
+#爱奇艺
+DOMAIN,resource.cupid.iqiyi.com
+#百度
+DOMAIN,loc.map.baidu.com
+DOMAIN-SUFFIX,xhscdn.com #小红书
+DOMAIN-SUFFIX,lencr.org
+DOMAIN-SUFFIX,fontfiles.googleadapis.com
+DOMAIN-SUFFIX,fontfiles.googleapis.com
+DOMAIN-SUFFIX,fonts.googleadapis.com
+DOMAIN-SUFFIX,fonts.googleapis.com
+DOMAIN-SUFFIX,fonts.gstatic.com
+DOMAIN,sandbox.itunes.apple.com
+DOMAIN-SUFFIX,885511.xyz
+DOMAIN,time.apple.com
+DOMAIN,gateway.icloud.com
+DOMAIN,api.revenuecat.com
+DOMAIN,ocsp.sectigo.com
+DOMAIN,wrapper.cyapi.cn
+DOMAIN-SUFFIX,cloudfront.net
+# > 淘宝推广
+DOMAIN-SUFFIX,tce.alicdn.com
+# > Alibaba
+DOMAIN,s.click.taobao.com
+DOMAIN,log.mmstat.com
+DOMAIN,sycm.mmstat.com
+DOMAIN,gm.mmstat.com
+
+# > Umeng 友盟+
+#DOMAIN,msg.umeng.com
+#DOMAIN,msg.umengcloud.com
+
+# > Tencent
+DOMAIN,fairplay.l.qq.com
+DOMAIN,livew.l.qq.com
+DOMAIN,vd.l.qq.com
+
+# > UnionPay
+DOMAIN,analytics.95516.com
+
+DOMAIN,ocsp.godaddy.com
+# > Paramount+
+DOMAIN,pubads.g.doubleclick.net
+DOMAIN-SUFFIX,edu.cn
+DOMAIN-KEYWORD,short.weixin.qq.com,extended-matching
+DOMAIN-KEYWORD,short.wechat.com,extended-matching
+IP-CIDR,112.90.216.0/21,no-resolve
+IP-CIDR,129.226.0.0/21,no-resolve
+IP-CIDR,43.156.0.0/16,no-resolve
+IP-CIDR,17.0.0.0/8,no-resolve
+IP-CIDR,101.32.104.0/18,no-resolve
+IP-CIDR,203.205.232.0/21,no-resolve
+IP-CIDR,129.226.96.0/19,no-resolve
+IP-CIDR,106.39.192.0/19,no-resolve
+IP-CIDR,59.82.32.0/21,no-resolve
