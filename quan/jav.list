@@ -1,62 +1,101 @@
+DOMAIN-SUFFIX,agilebits.com,register
+DOMAIN-SUFFIX,fbcdn.net,register
+DOMAIN-SUFFIX,deepl.com,register
+DOMAIN-SUFFIX,inoreader.com,register
 # jav
-DOMAIN-SUFFIX,66img.cc, jav
-DOMAIN-SUFFIX,javbus.com, jav
-DOMAIN,qz1gy.app, jav
-DOMAIN,yfvjv.app, jav
-DOMAIN-SUFFIX,sehuatang.org, jav
-DOMAIN-SUFFIX,sehuatang.net, jav
-DOMAIN-SUFFIX,javcdn.cc, jav
-DOMAIN-SUFFIX,javbus22.com, jav
-# 1password
-DOMAIN-SUFFIX,1password.com, jav
-DOMAIN-SUFFIX,1passwordservices.com, jav
-DOMAIN-SUFFIX,agilebits.com, jav
+DOMAIN-WILDCARD,*.app,register
+DOMAIN-KEYWORD,rmcdn,register
+DOMAIN-KEYWORD,roucdn,register
+DOMAIN-KEYWORD,rouman,register
+DOMAIN-SUFFIX,photos18.com,register
+DOMAIN-SUFFIX,pimg.tw,register
+DOMAIN-SUFFIX,pinimg.com,register
+DOMAIN-SUFFIX,pixhost.to,register
+DOMAIN-KEYWORD,pixiv,register
+DOMAIN-SUFFIX,player.fm,register
+DOMAIN-SUFFIX,playio1.com,register
+DOMAIN-SUFFIX,playno1.com,register
+DOMAIN-SUFFIX,t66y.com,register
+DOMAIN-KEYWORD,18comic,register
+DOMAIN-KEYWORD,sehuatang,register
+DOMAIN-SUFFIX,south-plus.org,register
+DOMAIN-SUFFIX,javstore.net,register
+DOMAIN-WILDCARD,*img.cc,register
+DOMAIN-SUFFIX,blogjav.net,register
+DOMAIN-SUFFIX,javcdn.cc,register
+DOMAIN-KEYWORD,jav,register
+DOMAIN-SUFFIX,92hm.top,register
+DOMAIN-SUFFIX,98tuch.net,register
+DOMAIN-SUFFIX,picnew.org,register
+DOMAIN-SUFFIX,u79pk.com,register
+DOMAIN-SUFFIX,brrub.us,register
+
 # google
-DOMAIN-KEYWORD,google, jav
-DOMAIN-SUFFIX,ytimg.com, jav
-DOMAIN-SUFFIX,gvt0.com, jav
-DOMAIN-SUFFIX,gvt1-cn.com, jav
-DOMAIN-SUFFIX,gvt2-cn.com, jav
-DOMAIN-SUFFIX,gvt3.com, jav
-DOMAIN-SUFFIX,gvt5.com, jav
-DOMAIN-SUFFIX,gvt6.com, jav
-DOMAIN-SUFFIX,gvt7.com, jav
-DOMAIN-SUFFIX,gvt9.com, jav
-DOMAIN-SUFFIX,ggpht.cn, jav
-DOMAIN-SUFFIX,ggpht.com, jav
-DOMAIN-SUFFIX,youtu.be, jav
-DOMAIN-KEYWORD,youtube, jav
-DOMAIN-SUFFIX,blogspot.com, jav
-DOMAIN-SUFFIX,gmail.com, jav
+DOMAIN-SUFFIX,gvt3.com,register
+DOMAIN-SUFFIX,gvt5.com,register
+DOMAIN-SUFFIX,gvt6.com,register
+DOMAIN-SUFFIX,gvt7.com,register
+DOMAIN-SUFFIX,gvt9.com,register
+DOMAIN-KEYWORD,google,register
+DOMAIN-SUFFIX,ytimg.com,register
+DOMAIN-SUFFIX,gvt0.com,register
+DOMAIN-SUFFIX,gvt1-cn.com,register
+DOMAIN-SUFFIX,gvt2-cn.com,register
+DOMAIN-SUFFIX,ggpht.cn,register
+DOMAIN-SUFFIX,ggpht.com,register
+DOMAIN-SUFFIX,youtu.be,register
+DOMAIN-KEYWORD,youtube,register
+DOMAIN-SUFFIX,blogspot.com,register
+DOMAIN-SUFFIX,gmail.com,register
+
 # face
-DOMAIN-KEYWORD,facebook, jav
-DOMAIN-SUFFIX,fbcdn-a.akamaihd.net, jav
-DOMAIN-SUFFIX,fbcdn.com, jav
-DOMAIN-KEYWORD,instagram, jav
-# chat
-DOMAIN,api.statsig.com, jav
-DOMAIN-SUFFIX,oaiusercontent.com, jav
-DOMAIN-SUFFIX,oaistatic.com, jav
-DOMAIN-SUFFIX,openai.com, jav
-DOMAIN-SUFFIX,ai.com, jav
-DOMAIN,cdn.auth0.com, jav
-DOMAIN,openaiapi-site.azureedge.net, jav
-DOMAIN,challenges.cloudflare.com, jav
-DOMAIN-SUFFIX,identrust.com, jav
-DOMAIN-SUFFIX,featuregates.org, jav
-DOMAIN-SUFFIX,intercom.io, jav
-DOMAIN-SUFFIX,saltyfish.io, jav
-DOMAIN-SUFFIX,greencloudvps.com, jav
-DOMAIN-SUFFIX,m-team.cc, jav
-DOMAIN-KEYWORD,paypal, jav
-# tg,
-IP-CIDR,91.108.56.0/22,jav
-IP-CIDR,91.108.4.0/22,jav
-IP-CIDR,91.108.8.0/22,jav
-IP-CIDR,91.108.16.0/22,jav
-IP-CIDR,91.108.12.0/22,jav
-IP-CIDR,149.154.160.0/20,jav
-IP-CIDR,91.105.192.0/23,jav
-IP-CIDR,91.108.20.0/22,jav
-IP-CIDR,185.76.151.0/24,jav
-IP-CIDR,5.28.192.0/18,jav
+DOMAIN-KEYWORD,facebook,register
+DOMAIN-SUFFIX,fbcdn-a.akamaihd.net,register
+DOMAIN-SUFFIX,fbcdn.com,register
+DOMAIN-KEYWORD,instagram,register
+
+# ai
+DOMAIN-SUFFIX,chatgpt.com,register
+DOMAIN-SUFFIX,oaiusercontent.com,register
+DOMAIN-SUFFIX,oaistatic.com,register
+DOMAIN-SUFFIX,openai.com,register
+DOMAIN-SUFFIX,ai.com,register
+DOMAIN,chat.openai.com.cdn.cloudflare.net,register
+DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net,register
+DOMAIN,openaicomproductionae4b.blob.core.windows.net,register
+DOMAIN,production-openaicom-storage.azureedge.net,register
+DOMAIN,openaiapi-site.azureedge.net,register
+
+#twitter
+DOMAIN-SUFFIX,ads-twitter.com,register
+DOMAIN-SUFFIX,t.co,register
+DOMAIN-SUFFIX,twimg.com,register
+DOMAIN-SUFFIX,twitter.com,register
+DOMAIN-SUFFIX,x.com,register
+
+DOMAIN-SUFFIX,saltyfish.io,register
+DOMAIN-SUFFIX,greencloudvps.com,register
+DOMAIN-SUFFIX,m-team.cc,register
+DOMAIN-KEYWORD,paypal,register
+
+DOMAIN-KEYWORD,github,register
+DOMAIN-SUFFIX,git.io,register
+DOMAIN,github-cloud.s3.amazonaws.com,register
+# tg
+IP-CIDR,91.108.56.0/22,no-resolve,register
+IP-CIDR,91.108.4.0/22,no-resolve,register
+IP-CIDR,91.108.8.0/22,no-resolve,register
+IP-CIDR,91.108.16.0/22,no-resolve,register
+IP-CIDR,91.108.12.0/22,no-resolve,register
+IP-CIDR,149.154.160.0/20,no-resolve,register
+IP-CIDR,91.105.192.0/23,no-resolve,register
+IP-CIDR,91.108.20.0/22,no-resolve,register
+IP-CIDR,185.76.151.0/24,no-resolve,register
+IP-CIDR,5.28.192.0/18,no-resolve,register
+
+#微软
+DOMAIN-SUFFIX,microsoft.com,register
+DOMAIN-SUFFIX,bing.com,register
+DOMAIN-SUFFIX,msn.com,register
+DOMAIN-SUFFIX,office.com,register
+DOMAIN-SUFFIX,microsoftonline.com,register
