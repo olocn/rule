@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,appstore.com,PROXY
 DOMAIN-SUFFIX,cdn-apple.com,PROXY
 DOMAIN-SUFFIX,crashlytics.com,PROXY
 DOMAIN-SUFFIX,icloud.com,PROXY
+DOMAIN-SUFFIX,icloud.com.cn,PROXY
 DOMAIN-SUFFIX,icloud-content.com,PROXY
 DOMAIN-SUFFIX,me.com,PROXY
 DOMAIN-SUFFIX,organicfruitapps.com,PROXY
