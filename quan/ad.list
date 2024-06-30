@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,bugsnag.com,REJECT
 DOMAIN,analysis.tratao.com,REJECT
 DOMAIN-SUFFIX,fourier.taobao.com,REJECT
 DOMAIN-SUFFIX,tns.simba.taobao.com,REJECT
