@@ -1,4 +1,5 @@
 IP-CIDR,192.168.8.1/28,hOme
+DOMAIN,gs-loc-cn.apple.com,DIRECT
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com,DIRECT
 #百度
