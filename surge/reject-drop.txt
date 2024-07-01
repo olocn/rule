@@ -1,4 +1,5 @@
 DOMAIN,analysis.tratao.com
+DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,fourier.taobao.com
 DOMAIN-SUFFIX,tns.simba.taobao.com
 DOMAIN-SUFFIX,2005net.net
