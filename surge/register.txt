@@ -6,7 +6,6 @@ DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,inoreader.com
 # jav
-DOMAIN-WILDCARD,*.app
 DOMAIN-KEYWORD,rmcdn
 DOMAIN-KEYWORD,roucdn
 DOMAIN-KEYWORD,rouman
@@ -23,7 +22,6 @@ DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,sehuatang
 DOMAIN-SUFFIX,south-plus.org
 DOMAIN-SUFFIX,javstore.net
-DOMAIN-WILDCARD,*img.cc
 DOMAIN-SUFFIX,blogjav.net
 DOMAIN-SUFFIX,javcdn.cc
 DOMAIN-KEYWORD,jav
@@ -38,7 +36,11 @@ DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,gvt0.com
 DOMAIN-SUFFIX,gvt1-cn.com
 DOMAIN-SUFFIX,gvt2-cn.com
-DOMAIN-WILDCARD,gvt?.com
+DOMAIN-SUFFIX,gvt3.com,register
+DOMAIN-SUFFIX,gvt5.com,register
+DOMAIN-SUFFIX,gvt6.com,register
+DOMAIN-SUFFIX,gvt7.com,register
+DOMAIN-SUFFIX,gvt9.com,register
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,youtu.be
