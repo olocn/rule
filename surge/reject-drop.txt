@@ -1118,7 +1118,9 @@ DOMAIN-SUFFIX,getui.net
 DOMAIN,gather.colorfulclouds.net
 DOMAIN-SUFFIX,gepush.com
 DEST-PORT,5224
+DOMAIN-SUFFIX,sogaha.cn
 DOMAIN-SUFFIX,umengcloud.com
+DOMAIN-SUFFIX,anythinktech.com
 
 # 微信
 DOMAIN,dns.weixin.qq.com
