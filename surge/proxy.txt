@@ -1,6 +1,7 @@
 # sese
 DOMAIN-SUFFIX,sesemanhua.com
 # apple
+DOMAIN-SUFFIX,mail.icloud.com.cn
 DOMAIN,api.smoot.apple.cn
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-dns.net
