@@ -533,7 +533,7 @@ DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gather.colorfulclouds.net
 DOMAIN-SUFFIX,gepush.com
-DOMAIN-SUFFIX,DEST-PORT,5224
+DEST-PORT,5224
 DOMAIN-SUFFIX,sogaha.cn
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,anythinktech.com
