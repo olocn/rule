@@ -535,6 +535,7 @@ DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gather.colorfulclouds.net
 DOMAIN-SUFFIX,gepush.com
 DEST-PORT,5224
+IP-CIDR,203.107.1.97/32
 DOMAIN-SUFFIX,sogaha.cn
 DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,anythinktech.com
