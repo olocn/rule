@@ -1,4 +1,5 @@
-# sese
+# o
+DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,sesemanhua.com
 # apple
 DOMAIN-SUFFIX,mail.icloud.com.cn
