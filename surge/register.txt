@@ -18,7 +18,6 @@ DOMAIN-SUFFIX,player.fm
 DOMAIN-SUFFIX,playio1.com
 DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,t66y.com
-DOMAIN-KEYWORD,18comic
 DOMAIN-KEYWORD,sehuatang
 DOMAIN-SUFFIX,south-plus.org
 DOMAIN-SUFFIX,javstore.net
