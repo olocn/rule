@@ -1,5 +1,6 @@
 # o
 DOMAIN-SUFFIX,colamanhua.com
+DOMAIN-KEYWORD,18comic
 DOMAIN-SUFFIX,sesemanhua.com
 # apple
 DOMAIN-SUFFIX,mail.icloud.com.cn
