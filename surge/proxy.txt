@@ -2,6 +2,7 @@
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-KEYWORD,18comic
 DOMAIN-SUFFIX,sesemanhua.com
+DOMAIN-SUFFIX,dmit.io
 # apple
 DOMAIN-SUFFIX,mail.icloud.com.cn
 DOMAIN,api.smoot.apple.cn
