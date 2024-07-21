@@ -7,6 +7,7 @@ DEST-PORT,10802
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,plex.tv
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
 #百度
