@@ -1,4 +1,7 @@
 DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,gameanalytics.com
+DOMAIN-SUFFIX,applovin.com
+DOMAIN-SUFFIX,supersonicads.com
 DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,analysis.tratao.com
 DOMAIN-SUFFIX,bugsnag.com
