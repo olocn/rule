@@ -1,4 +1,7 @@
 DOMAIN-SUFFIX,iadsdk.apple.com
+DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,applvn.com
+DOMAIN-SUFFIX,inner-active.mobi
 DOMAIN-SUFFIX,gameanalytics.com
 DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,supersonicads.com
