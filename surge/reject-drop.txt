@@ -1,3 +1,7 @@
+DOMAIN-SUFFIX,analytics.kidoz.net
+DOMAIN-SUFFIX,bugsnag.com
+DOMAIN-SUFFIX,chartboost.com
+DOMAIN-SUFFIX,analytics.mobilegamestats.com
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-SUFFIX,applvn.com
