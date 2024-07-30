@@ -527,12 +527,6 @@ DOMAIN-SUFFIX,data.hicloud.com
 DOMAIN,errortracking.deepl.com
 # b站
 DOMAIN-SUFFIX,dataflow.biliapi.com
-# 爱奇艺
-DOMAIN-SUFFIX,baiducdnct2.inter.iqiyi.com
-DOMAIN-SUFFIX,baiducdncmn-gd.inter.iqiyi.com
-DOMAIN-SUFFIX,baiducdncmn.inter.iqiyi.com
-DOMAIN-SUFFIX,baiducdncmn3.inter.iqiyi.com
-DOMAIN-SUFFIX,gdctyuncdnct.inter.iqiyi.com
 #  彩云
 DOMAIN-SUFFIX,cyapi.cn
 #  wps
