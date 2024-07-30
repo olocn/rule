@@ -537,6 +537,7 @@ DOMAIN-SUFFIX,cyapi.cn
 DOMAIN-SUFFIX,wps.com
 DOMAIN-SUFFIX,wps.cn
 #  今日水印
+DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,bugly.qq.com
@@ -546,6 +547,7 @@ DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gather.colorfulclouds.net
 DOMAIN-SUFFIX,gepush.com
 DEST-PORT,5224
+IP-CIDR,120.79.240.136/32
 IP-CIDR,203.107.1.97/32
 IP-CIDR,203.107.1.67/32
 DOMAIN-SUFFIX,sogaha.cn
