@@ -1,4 +1,5 @@
 DOMAIN-SUFFIX,analytics.kidoz.net
+DOMAIN,activity-static.hoopchina.com.cn
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,chartboost.com
 DOMAIN-SUFFIX,analytics.mobilegamestats.com
