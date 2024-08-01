@@ -526,6 +526,8 @@ DOMAIN-SUFFIX,2345.net
 DOMAIN-SUFFIX,2345.cc
 DOMAIN-SUFFIX,data.hicloud.com
 DOMAIN,errortracking.deepl.com
+# 阿里
+DOMAIN-SUFFIX,amdc.m.taobao.com
 # b站
 DOMAIN-SUFFIX,dataflow.biliapi.com
 #  彩云
