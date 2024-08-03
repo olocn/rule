@@ -1,4 +1,7 @@
 DOMAIN-SUFFIX,analytics.kidoz.net
+DOMAIN-SUFFIX,safebrowsing.googleapis.com
+DOMAIN-SUFFIX,safebrowsing.googleapis-cn.com
+DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN,activity-static.hoopchina.com.cn
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,chartboost.com
