@@ -71,7 +71,6 @@ DOMAIN-SUFFIX,bdp.cn
 DOMAIN-SUFFIX,bdstatic.eastmoney.com
 DOMAIN-SUFFIX,beacon.sina.com.cn
 DOMAIN-SUFFIX,beaconcdn.qq.com
-DOMAIN-SUFFIX,bestpush.pconline.com.cn
 DOMAIN-SUFFIX,bjmantis.net
 DOMAIN-SUFFIX,blog104.com
 DOMAIN-SUFFIX,blogtw.net
@@ -92,7 +91,6 @@ DOMAIN-SUFFIX,click.gamersky.com
 DOMAIN-SUFFIX,click.tianyaui.com
 DOMAIN-SUFFIX,clickcount.cnool.net
 DOMAIN-SUFFIX,clicki.cn
-DOMAIN-SUFFIX,clientlog.music.163.com
 DOMAIN-SUFFIX,cms.grandcloud.cn
 DOMAIN-SUFFIX,cnpc.infzm.com
 DOMAIN-SUFFIX,collector2c.zhihuishu.com
@@ -100,11 +98,6 @@ DOMAIN-SUFFIX,count.candou.com
 DOMAIN-SUFFIX,count.enet.com.cn
 DOMAIN-SUFFIX,count.iyaxin.com
 DOMAIN-SUFFIX,count.nuanyuehanxing.com
-DOMAIN-SUFFIX,count.pcauto.com.cn
-DOMAIN-SUFFIX,count.pcgames.com.cn
-DOMAIN-SUFFIX,count5.pconline.com.cn
-DOMAIN-SUFFIX,counter.pcauto.com.cn
-DOMAIN-SUFFIX,counter.people.cn
 DOMAIN-SUFFIX,counter.pixplug.in
 DOMAIN-SUFFIX,counter.tianjimedia.com
 DOMAIN-SUFFIX,countpage.sznews.com
