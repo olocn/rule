@@ -6,7 +6,6 @@ DOMAIN,activity-static.hoopchina.com.cn
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,chartboost.com
 DOMAIN-SUFFIX,analytics.mobilegamestats.com
-DOMAIN-SUFFIX,analytics.plex.tv
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-SUFFIX,applvn.com
@@ -16,7 +15,6 @@ DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,supersonicads.com
 DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,analysis.tratao.com
-DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,fourier.taobao.com
 DOMAIN-SUFFIX,tns.simba.taobao.com
 DOMAIN-SUFFIX,2005net.net
