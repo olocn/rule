@@ -9,7 +9,6 @@ DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,api.trakt.tv
 DOMAIN-SUFFIX,plex.direct
-DOMAIN-SUFFIX,plex.tv
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
 #百度
