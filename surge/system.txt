@@ -1,3 +1,7 @@
+#other
+DOMAIN-SUFFIX,jsccbcc.com
+DOMAIN-SUFFIX,digicert.com
+DOMAIN-SUFFIX,jsjnsw.com
 #无忧行
 DEST-PORT,8008
 DEST-PORT,10800
