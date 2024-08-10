@@ -1,4 +1,5 @@
 #other
+DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,jsjnsw.com
