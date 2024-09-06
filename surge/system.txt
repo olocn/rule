@@ -32,6 +32,7 @@ DOMAIN,gateway.icloud.com
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
 DOMAIN,wrapper.cyapi.cn
+DOMAIN,biz.cyapi.cn
 DOMAIN-SUFFIX,cloudfront.net
 # > 淘宝推广
 DOMAIN-SUFFIX,tce.alicdn.com
