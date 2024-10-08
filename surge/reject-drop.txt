@@ -1,3 +1,4 @@
+DOMAIN,app.posthog.com
 DOMAIN,apoll.m.taobao.com
 DOMAIN,dev.g.alicdn.com
 DOMAIN-SUFFIX,analytics.kidoz.net
