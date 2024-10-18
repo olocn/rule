@@ -1,3 +1,5 @@
+DOMAIN,httpdns.browser.miui.com
+DOMAIN,resolver.msg.xiaomi.net
 DOMAIN,app.posthog.com
 DOMAIN,apoll.m.taobao.com
 DOMAIN,dev.g.alicdn.com
