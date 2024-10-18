@@ -1,5 +1,7 @@
 DOMAIN-SUFFIX,lc-cn-n1-shared.com
 DOMAIN,errortracking.deepl.com
+DOMAIN,httpdns.browser.miui.com
+DOMAIN,resolver.msg.xiaomi.net
 # mi
 DOMAIN,app.chat.xiaomi.net
 DOMAIN-SUFFIX,proxy.sec.miui.com
