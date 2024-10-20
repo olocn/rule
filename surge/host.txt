@@ -1,3 +1,6 @@
+#!name=host_list
+#!desc=Rules
+[Host]
 httpdns.browser.miui.com = 127.0.0.1
 resolver.msg.xiaomi.net = 127.0.0.1
 app.posthog.com = 127.0.0.1
