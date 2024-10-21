@@ -3,7 +3,7 @@ DOMAIN,resolver.msg.xiaomi.net
 DOMAIN,app.posthog.com
 DOMAIN,apoll.m.taobao.com
 DOMAIN,dev.g.alicdn.com
-DOMAIN,da.bridgeoos.com
+DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,analytics.kidoz.net
 DOMAIN-SUFFIX,safebrowsing.googleapis.com
 DOMAIN-SUFFIX,safebrowsing.googleapis-cn.com
