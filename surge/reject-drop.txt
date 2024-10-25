@@ -1,3 +1,8 @@
+# 米家
+IP-CIDR,111.13.141.1/24
+DOMAIN-SUFFIX,resolver.msg.xiaomi.net
+DOMAIN-SUFFIX,app.chat.xiaomi.net
+DOMAIN-SUFFIX,relay.mimc.chat.xiaomi.net
 DOMAIN,httpdns.browser.miui.com
 DOMAIN,resolver.msg.xiaomi.net
 DOMAIN,app.posthog.com
