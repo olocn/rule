@@ -542,6 +542,7 @@ DOMAIN-SUFFIX,cyapi.cn
 DOMAIN-SUFFIX,wps.com
 DOMAIN-SUFFIX,wps.cn
 #  今日水印
+DOMAIN,xcamera-filter.oss-cn-beijing.aliyuncs.com
 DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
