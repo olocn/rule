@@ -9,6 +9,7 @@ DOMAIN,newclient.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,ecom.map.baidu.com
 # 无忧行
+DOMAIN,jegotrip3.jegotrip.com.cn
 DOMAIN,oss.jegotrip.com.cn
 # 米家
 IP-CIDR,111.13.141.1/24
