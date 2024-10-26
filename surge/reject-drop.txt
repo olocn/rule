@@ -1,3 +1,8 @@
+# 云闪付
+DOMAIN,ads.95516.co
+DOMAIN,switch.cup.com.cn
+DOMAIN,tysdk.95516.com
+DOMAIN,ads.cup.com.cn
 # 百度
 DOMAIN,afd.baidu.com
 DOMAIN,newclient.map.baidu.com
