@@ -1,3 +1,6 @@
+# doc
+DOMAIN-SUFFIX,appsflyersdk.com
+DOMAIN-SUFFIX,appcenter.ms
 # 百度
 DOMAIN,afd.baidu.com
 DOMAIN,newclient.map.baidu.com
