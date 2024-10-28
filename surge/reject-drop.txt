@@ -1,4 +1,5 @@
 # doc
+DOMAIN,event.northghost.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,appcenter.ms
 # 百度
