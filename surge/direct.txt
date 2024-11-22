@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,jumpvg.com
 DOMAIN-SUFFIX,leancloud.cn
 DOMAIN-SUFFIX,dcloud.net.cn
 DOMAIN-SUFFIX,jsccbcc.com
