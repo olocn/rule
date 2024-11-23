@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,sdk.tianmu.mobi
 DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN,tracker.tianmu.mobi
 DOMAIN-SUFFIX,jpush.cn
