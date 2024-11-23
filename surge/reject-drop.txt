@@ -1,5 +1,10 @@
 DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN,tracker.tianmu.mobi
+DOMAIN-SUFFIX,jpush.cn
+DOMAIN-SUFFIX,jpush.io
+DOMAIN-SUFFIX,adashx.m.taobao.com
+DOMAIN-SUFFIX,advlion.com
+DOMAIN,appcfg.v.qq.com
 # doc
 DOMAIN,event.northghost.com
 DOMAIN-SUFFIX,appsflyersdk.com
