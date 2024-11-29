@@ -7,6 +7,7 @@ DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,adashx.m.taobao.com
 DOMAIN-SUFFIX,advlion.com
 DOMAIN,appcfg.v.qq.com
+DOMAIN-SUFFIX,jads.co
 # doc
 DOMAIN,event.northghost.com
 DOMAIN-SUFFIX,appsflyersdk.com
