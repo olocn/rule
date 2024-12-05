@@ -575,6 +575,7 @@ DOMAIN,errortracking.deepl.com
 # 阿里
 DOMAIN-SUFFIX,amdc.m.taobao.com
 # b站
+DOMAIN,grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
 #  彩云
 DOMAIN,abyss.cyapi.cn
@@ -607,7 +608,7 @@ DOMAIN-SUFFIX,toponadss.com
 #  微信
 DOMAIN-SUFFIX,dns.weixin.qq.com
 # 云闪付
-DOMAIN,ads.95516.co
+DOMAIN,ads.95516.com
 DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
 DOMAIN,ads.cup.com.cn
