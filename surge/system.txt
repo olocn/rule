@@ -3,6 +3,13 @@ DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,jsjnsw.com
+# plex
+DOMAIN,api.trakt.tv
+DOMAIN-SUFFIX,v4.plex.tv
+DOMAIN-SUFFIX,plex.direct
+DOMAIN-SUFFIX,pubsub.plex.tv
+DOMAIN-SUFFIX,myqnapcloud.com
+DOMAIN-SUFFIX,myqnapcloud.io
 #无忧行
 DEST-PORT,8008
 DEST-PORT,10800
