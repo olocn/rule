@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 IP-CIDR,124.71.153.172/32
 
+DOMAIN,dns.jd.com
 DOMAIN-SUFFIX,icostapp.com
 DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
