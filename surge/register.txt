@@ -1,7 +1,10 @@
 DOMAIN-SUFFIX,nintendo.com
 DOMAIN-SUFFIX,app-41283.com
 DOMAIN-SUFFIX,follow.is
+# ai
 DOMAIN-SUFFIX,grok.com
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,intercom.com
 # 1password
 DOMAIN-SUFFIX,1password.com
 DOMAIN-SUFFIX,1passwordservices.com
