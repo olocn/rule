@@ -3,7 +3,8 @@ DOMAIN-SUFFIX,logs.chelaile.net.cn
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 IP-CIDR,124.71.153.172/32
-
+URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
+DOMAIN-SUFFIX,deepermobile.com
 DOMAIN,dns.jd.com
 DOMAIN-SUFFIX,icostapp.com
 DOMAIN-SUFFIX,sdk.tianmu.mobi
