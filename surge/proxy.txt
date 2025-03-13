@@ -1,6 +1,7 @@
 # o
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-KEYWORD,18comic
+DOMAIN,tju.7pzzv.us
 DOMAIN-SUFFIX,sesemanhua.com
 DOMAIN-SUFFIX,dmit.io
 # apple
