@@ -11,6 +11,7 @@ DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 
+DOMAIN-SUFFIX,doubleclick.net
 DOMAIN,www.google-analytics.com
 IP-CIDR,39.97.128.148/32,no-resolve
 IP-CIDR,39.97.130.51/32,no-resolve
