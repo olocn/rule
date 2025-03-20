@@ -99,6 +99,8 @@ IP-CIDR,91.108.20.0/22,no-resolve
 IP-CIDR,185.76.151.0/24,no-resolve
 IP-CIDR,5.28.192.0/18,no-resolve
 
+IP-CIDR,141.101.90.0/24,no-resolve
+IP-CIDR,2a06:98c1:3200::/48,no-resolve
 #微软
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,bing.com
