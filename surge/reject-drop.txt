@@ -13,6 +13,9 @@ URL-REGEX,/\d+/sign_d
 
 DOMAIN,analytics-api-01.smzdm.com
 DOMAIN,analytics-api.smzdm.com
+DOMAIN,adx-api.zdmimg.com
+DOMAIN,aaid.uyunad.com
+DOMAIN,www.soboten.com
 
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN,www.google-analytics.com
