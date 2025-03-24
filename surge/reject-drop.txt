@@ -647,6 +647,8 @@ DOMAIN-SUFFIX,mentamob.com
 IP-ASN,55990,no-resolve
 DOMAIN-SUFFIX,1rtb.net
 DOMAIN-SUFFIX,adintl.cn
+DOMAIN-SUFFIX,xcultur.com
+DOMAIN,api.wxcjgg.cn
 
 #IP-CIDR,203.119.238.194/32
 #IP-CIDR,203.107.1.0/24
