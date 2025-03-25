@@ -4,7 +4,7 @@ DOMAIN-SUFFIX,jsccbcc.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,jsjnsw.com
 # plex
-DOMAIN,api.trakt.tv
+IP-CIDR6,fe80::/10
 DOMAIN-SUFFIX,v4.plex.tv
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,pubsub.plex.tv
@@ -20,7 +20,7 @@ DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,olocn.fun
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
-DOMAIN,api.trakt.tv
+
 DOMAIN-SUFFIX,plex.direct
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
