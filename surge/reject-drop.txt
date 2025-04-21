@@ -17,6 +17,7 @@ DOMAIN,adx-api.zdmimg.com
 DOMAIN,aaid.uyunad.com
 DOMAIN,www.soboten.com
 DOMAIN-SUFFIX,detailroi.com
+DOMAIN-SUFFIX,adukwai.com
 
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN,www.google-analytics.com
