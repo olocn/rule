@@ -1,3 +1,4 @@
+DOMAIN-SUFFIX,edge.apple
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
