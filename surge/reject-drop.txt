@@ -62,7 +62,7 @@ DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,appcenter.ms
 # 百度
 DOMAIN,afd.baidu.com
-DOMAIN,newclient.map.baidu.com
+DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,ecom.map.baidu.com
 DOMAIN,als.baidu.com
@@ -472,7 +472,6 @@ DOMAIN-SUFFIX,zoosnet.net
 DOMAIN-SUFFIX,zoossoft.cn
 DOMAIN-SUFFIX,ztcadx.com
 DOMAIN-SUFFIX,zz.bdstatic.com
-DOMAIN-SUFFIX,app.chat.xiaomi.net
 DOMAIN-SUFFIX,googletagmanager.com
 DOMAIN,logx.optimizely.com
 DOMAIN-SUFFIX,cnzz.net
@@ -602,7 +601,6 @@ DOMAIN,s.miwifi.com
 DOMAIN,api.miwifi.com
 DOMAIN,app.miwifi.com
 DOMAIN,log.miwifi.com
-DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,ra7.xyz
 DOMAIN,log.aliyuncs.com
@@ -651,8 +649,6 @@ DOMAIN-SUFFIX,adintl.cn
 DOMAIN-SUFFIX,xcultur.com
 DOMAIN,api.wxcjgg.cn
 
-#IP-CIDR,203.119.238.194/32
-#IP-CIDR,203.107.1.0/24
 #IP-CIDR,39.108.127.184/32
 #IP-CIDR,106.53.183.92/32
 #IP-CIDR,120.79.240.136/32
