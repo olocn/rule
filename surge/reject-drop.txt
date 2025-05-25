@@ -223,7 +223,6 @@ DOMAIN-SUFFIX,easyliao.com
 DOMAIN-SUFFIX,ejieban.com
 DOMAIN-SUFFIX,eland-tech.com
 DOMAIN-SUFFIX,emarbox.com
-DOMAIN-SUFFIX,ems.youku.com
 DOMAIN-SUFFIX,event.csdn.net
 DOMAIN-SUFFIX,experiments.sparanoid.net
 DOMAIN-SUFFIX,fclog.baidu.com
@@ -595,10 +594,11 @@ DOMAIN-SUFFIX,qihu.com
 DOMAIN-SUFFIX,dftoutiao.com
 DOMAIN-SUFFIX,huaweicloud.com
 DOMAIN-SUFFIX,huawei.com
+DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,umeng.cn
-DOMAIN-SUFFIX,s.miwifi.com
+DOMAIN,s.miwifi.com
 DOMAIN,api.miwifi.com
 DOMAIN,app.miwifi.com
 DOMAIN,log.miwifi.com
@@ -618,7 +618,6 @@ DOMAIN-SUFFIX,2345.com
 DOMAIN-SUFFIX,2345.cn
 DOMAIN-SUFFIX,2345.net
 DOMAIN-SUFFIX,2345.cc
-DOMAIN-SUFFIX,data.hicloud.com
 DOMAIN,errortracking.deepl.com
 # 阿里
 DOMAIN-SUFFIX,amdc.m.taobao.com
@@ -658,7 +657,6 @@ DOMAIN,api.wxcjgg.cn
 #IP-CIDR,106.53.183.92/32
 #IP-CIDR,120.79.240.136/32
 DOMAIN-SUFFIX,sogaha.cn
-DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,toponadss.com
 #  微信
