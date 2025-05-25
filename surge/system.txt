@@ -1,4 +1,6 @@
 DOMAIN-SUFFIX,edge.apple
+#海星
+DOMAIN-SUFFIX,hxty.live
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
