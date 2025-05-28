@@ -604,3 +604,4 @@ DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,sov2ex.com
 DOMAIN-SUFFIX,v2ex.com
+DOMAIN-SUFFIX,signal.org
