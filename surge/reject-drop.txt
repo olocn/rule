@@ -19,6 +19,8 @@ DOMAIN,www.soboten.com
 DOMAIN-SUFFIX,detailroi.com
 DOMAIN-SUFFIX,adukwai.com
 
+#肉
+DOMAIN,rou.one
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN,www.google-analytics.com
 IP-CIDR,39.97.128.148/32,no-resolve
@@ -82,6 +84,7 @@ DOMAIN-SUFFIX,union.baidu.com
 # 无忧行
 DOMAIN,jegotrip3.jegotrip.com.cn
 DOMAIN,oss.jegotrip.com.cn
+
 # 米家
 DEST-PORT,5222
 IP-CIDR,111.13.141.1/24
@@ -601,6 +604,7 @@ DOMAIN,s.miwifi.com
 DOMAIN,api.miwifi.com
 DOMAIN,app.miwifi.com
 DOMAIN,log.miwifi.com
+
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,ra7.xyz
 DOMAIN,log.aliyuncs.com
@@ -616,7 +620,9 @@ DOMAIN-SUFFIX,2345.com
 DOMAIN-SUFFIX,2345.cn
 DOMAIN-SUFFIX,2345.net
 DOMAIN-SUFFIX,2345.cc
+
 DOMAIN,errortracking.deepl.com
+
 # 阿里
 DOMAIN-SUFFIX,amdc.m.taobao.com
 # b站
@@ -641,6 +647,7 @@ DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gepush.com
 DEST-PORT,5224
+
 #jump
 DOMAIN-SUFFIX,mentamob.com
 IP-ASN,55990,no-resolve
