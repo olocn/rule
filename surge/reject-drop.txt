@@ -11,6 +11,17 @@ DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 
+#colamanga
+DOMAIN-SUFFIX,pubfuture-ad.com
+DOMAIN-SUFFIX,theetheks.com
+DOMAIN-SUFFIX,a-ads.com
+DOMAIN-SUFFIX,tenserrelents.com
+DOMAIN-SUFFIX,natterresail.com
+DOMAIN-SUFFIX,flerap.com
+DOMAIN-SUFFIX,fleraprt.com
+DOMAIN-SUFFIX,adform.net
+DOMAIN-SUFFIX,magsrv.com
+
 DOMAIN,analytics-api-01.smzdm.com
 DOMAIN,analytics-api.smzdm.com
 DOMAIN,adx-api.zdmimg.com
