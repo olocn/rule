@@ -21,6 +21,9 @@ DOMAIN-SUFFIX,flerap.com
 DOMAIN-SUFFIX,fleraprt.com
 DOMAIN-SUFFIX,adform.net
 DOMAIN-SUFFIX,magsrv.com
+DOMAIN-SUFFIX,pubadx.one
+DOMAIN-SUFFIX,bobapsoabauns.com
+DOMAIN-SUFFIX,spacemancreativedom.net
 
 DOMAIN,analytics-api-01.smzdm.com
 DOMAIN,analytics-api.smzdm.com
