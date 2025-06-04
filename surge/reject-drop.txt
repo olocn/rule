@@ -11,6 +11,8 @@ DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 
+DOMAIN-SUFFIX,amazon-adsystem.com
+DOMAIN-SUFFIX,adjust.com
 #colamanga
 DOMAIN-SUFFIX,pubfuture-ad.com
 DOMAIN-SUFFIX,theetheks.com
