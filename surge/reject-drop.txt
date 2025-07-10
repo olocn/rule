@@ -12,6 +12,9 @@ DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 
+DEST-PORT,4480
+DEST-PORT,4483
+DEST-PORT,9102
 
 DOMAIN,creative.myavlive.com
 DOMAIN-SUFFIX,trackwilltrk.com
