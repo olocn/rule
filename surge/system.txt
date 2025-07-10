@@ -1,6 +1,9 @@
 DOMAIN-SUFFIX,edge.apple
-#海星
-DOMAIN-SUFFIX,hxty.live
+#绿茵
+DOMAIN-SUFFIX,g63da8h6d.org
+DOMAIN-SUFFIX,x69saw6.net
+DOMAIN,geolocation-db.com
+DOMAIN-SUFFIX,k8v4dh4.app
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
