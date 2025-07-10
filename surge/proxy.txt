@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-KEYWORD,18comic
 DOMAIN,tju.7pzzv.us
 DOMAIN,ttou.j03og.app
+DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,sesemanhua.com
 DOMAIN-SUFFIX,dmit.io
 # apple
