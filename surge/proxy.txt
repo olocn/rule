@@ -4,6 +4,8 @@ DOMAIN-KEYWORD,18comic
 DOMAIN,tju.7pzzv.us
 DOMAIN,ttou.j03og.app
 DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,strpst.com
+DOMAIN-SUFFIX,fourhoi.com
 DOMAIN-SUFFIX,sesemanhua.com
 DOMAIN-SUFFIX,dmit.io
 # apple
