@@ -6,7 +6,6 @@ IP-CIDR,124.71.153.172/32
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
 DOMAIN-SUFFIX,deepermobile.com
 DOMAIN,dns.jd.com
-DOMAIN,c0.jdbstatic.com
 DOMAIN-SUFFIX,icostapp.com
 DOMAIN-SUFFIX,sdk.tianmu.mobi
 URL-REGEX,/\d+/resolve
