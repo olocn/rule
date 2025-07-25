@@ -15,6 +15,13 @@ DEST-PORT,4480
 DEST-PORT,4483
 DEST-PORT,9102
 
+#韩漫
+DOMAIN,tfosrv.com
+DOMAIN-SUFFIX,tfosrv.com
+DOMAIN-SUFFIX,gguvhn.cn
+DOMAIN-SUFFIX,aifqcp30718a.icu
+DOMAIN-SUFFIX,jixiangnh.com
+DOMAIN-SUFFIX,cru0xr.com
 DOMAIN,creative.myavlive.com
 DOMAIN-SUFFIX,trackwilltrk.com
 DOMAIN-SUFFIX,tsyndicate.com
