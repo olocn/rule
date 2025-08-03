@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 IP-CIDR,124.71.153.172/32
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
+URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
 DOMAIN-SUFFIX,deepermobile.com
 DOMAIN,dns.jd.com
 DOMAIN-SUFFIX,icostapp.com
