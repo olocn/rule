@@ -5,6 +5,13 @@ DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,1nmob.com
 DOMAIN-SUFFIX,adtianmai.com
 DOMAIN-SUFFIX,ndcjl.com
+DOMAIN-SUFFIX,slyxmobi.com
+DOMAIN,ad.hunyuan.tencent.com
+DOMAIN-SUFFIX,17admob.com
+DOMAIN-SUFFIX,appsad.cn
+DOMAIN-SUFFIX,xinyuhongyuan.com
+DOMAIN-SUFFIX,adxapi.readgps.com
+DOMAIN-SUFFIX,zeroonead.com
 
 
 IP-CIDR,124.71.153.172/32
