@@ -22,6 +22,20 @@ DEST-PORT,9102
 
 DOMAIN,apple-safebrowsing.googleapis.com
 
+#b站
+
+DOMAIN,mall.bilibili.com
+DOMAIN,api.vc.bilibili.com
+DOMAIN,broadcast.chat.bilibili.com
+DOMAIN,upos-sz-mirrorcos.bilivideo.com
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,biligame.com
+
+DOMAIN-SUFFIX,tagtic.cn
+DOMAIN,cdn.rdrads.com
+DOMAIN,img.ra12.xyz
+DOMAIN,chaseherbalpasty.com
+DOMAIN,muzzleexterminator.com
 #韩漫
 DOMAIN,tfosrv.com
 DOMAIN-SUFFIX,tfosrv.com
