@@ -2,6 +2,11 @@
 DOMAIN-SUFFIX,logs.chelaile.net.cn
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
+DOMAIN-SUFFIX,1nmob.com
+DOMAIN-SUFFIX,adtianmai.com
+DOMAIN-SUFFIX,ndcjl.com
+
+
 IP-CIDR,124.71.153.172/32
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
 #URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
