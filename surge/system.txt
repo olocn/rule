@@ -4,6 +4,8 @@ DOMAIN-SUFFIX,g63da8h6d.org
 DOMAIN-SUFFIX,x69saw6.net
 DOMAIN,geolocation-db.com
 DOMAIN-SUFFIX,k8v4dh4.app
+DOMAIN-SUFFIX,aiscore.com
+DOMAIN-SUFFIX,x0km6sd.live
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
