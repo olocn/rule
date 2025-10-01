@@ -15,31 +15,36 @@ DOMAIN-SUFFIX,zeroonead.com
 
 
 # 360
+DOMAIN-SUFFIX,360.cn
+DOMAIN-SUFFIX,360os.com
+DOMAIN-SUFFIX,360tpcdn.com
+DOMAIN-SUFFIX,360safe.com
+DOMAIN-SUFFIX,360totalsecurity.com
+DOMAIN-SUFFIX,360antivirus.org
+DOMAIN-SUFFIX,360in.com
+DOMAIN-SUFFIX,qhimg.com
+DOMAIN-SUFFIX,so.com
+DOMAIN-SUFFIX,qhstatic.com
+DOMAIN-SUFFIX,qihucdn.com
+DOMAIN-SUFFIX,yunpan.com
+DOMAIN-SUFFIX,qihu.com
 DOMAIN-SUFFIX,360.net
 DOMAIN-SUFFIX,360webcache.com
 DOMAIN-SUFFIX,qhupdate.com
-DOMAIN-SUFFIX,qhstatic.com
-DOMAIN-SUFFIX,360tpcdn.com
-DOMAIN-SUFFIX,qihucdn.com
 DOMAIN-SUFFIX,qhimgs?.com
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,360safe.com
 DOMAIN-SUFFIX,360kuai.com
-DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,qhres2.com
 DOMAIN-SUFFIX,qhimgs.com
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,haosou.com
 DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhmsg.com
-DOMAIN-SUFFIX,qhimg.com
-DOMAIN-SUFFIX,360os.com
 DOMAIN-SUFFIX,qiku.com
 DOMAIN-SUFFIX,360.com
-DOMAIN-SUFFIX,so.com
 DOMAIN-SUFFIX,yunpan.cn
 DOMAIN-SUFFIX,yunpan.com.cn
-DOMAIN-SUFFIX,360.cn
 
 IP-CIDR,124.71.153.172/32
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
@@ -62,7 +67,6 @@ DEST-PORT,9102
 DOMAIN,apple-safebrowsing.googleapis.com
 
 #b站
-
 DOMAIN,mall.bilibili.com
 DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
@@ -75,8 +79,8 @@ DOMAIN,cdn.rdrads.com
 DOMAIN,img.ra12.xyz
 DOMAIN,chaseherbalpasty.com
 DOMAIN,muzzleexterminator.com
+
 #韩漫
-DOMAIN,tfosrv.com
 DOMAIN-SUFFIX,tfosrv.com
 DOMAIN-SUFFIX,gguvhn.cn
 DOMAIN-SUFFIX,aifqcp30718a.icu
@@ -88,6 +92,7 @@ DOMAIN-SUFFIX,tsyndicate.com
 
 DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,adjust.com
+
 #colamanga
 DOMAIN-SUFFIX,pubfuture-ad.com
 DOMAIN-SUFFIX,theetheks.com
@@ -149,6 +154,7 @@ DOMAIN-SUFFIX,adashx.m.taobao.com
 DOMAIN-SUFFIX,advlion.com
 DOMAIN,appcfg.v.qq.com
 DOMAIN-SUFFIX,jads.co
+
 # doc
 DOMAIN,event.northghost.com
 DOMAIN-SUFFIX,appsflyersdk.com
@@ -172,6 +178,7 @@ DOMAIN,wn.pos.baidu.com
 DOMAIN,miniapp-ad.cdn.bcebos.com
 DOMAIN-SUFFIX,union.baidu.cn
 DOMAIN-SUFFIX,union.baidu.com
+
 # 无忧行
 DOMAIN,jegotrip3.jegotrip.com.cn
 DOMAIN,oss.jegotrip.com.cn
@@ -669,20 +676,7 @@ DOMAIN-SUFFIX,rs.sinajs.cn
 DOMAIN-SUFFIX,hicloud.com
 DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
-# 360
-DOMAIN-SUFFIX,360.cn
-DOMAIN-SUFFIX,360os.com
-DOMAIN-SUFFIX,360tpcdn.com
-DOMAIN-SUFFIX,360safe.com
-DOMAIN-SUFFIX,360totalsecurity.com
-DOMAIN-SUFFIX,360antivirus.org
-DOMAIN-SUFFIX,360in.com
-DOMAIN-SUFFIX,qhimg.com
-DOMAIN-SUFFIX,so.com
-DOMAIN-SUFFIX,qhstatic.com
-DOMAIN-SUFFIX,qihucdn.com
-DOMAIN-SUFFIX,yunpan.com
-DOMAIN-SUFFIX,qihu.com
+
 
 DOMAIN-SUFFIX,dftoutiao.com
 DOMAIN-SUFFIX,huaweicloud.com
@@ -771,3 +765,15 @@ DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,adash.man.aliyuncs.com
 DOMAIN,applog.uc.cn
 AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
+
+DOMAIN,httpdns.bilivideo.com
+DOMAIN,apppush-rts.xiaohongshu.com
+DOMAIN,mediacloud.xiaohongshu.com
+DOMAIN,youku-acs.m.taobao.com
+DOMAIN,openacs4uc.m.taobao.com
+DOMAIN,resolvers-cn.httpdns.aliyuncs.com
+DOMAIN,ams-httpdns.aliyuncs.com.gds.alibabadns.com
+DOMAIN,guide-acs.m.taobao.com.gds.alibabadns.com
+DOMAIN,unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
+DOMAIN,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com.cn
