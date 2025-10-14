@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-KEYWORD,18comic
 DOMAIN,tju.7pzzv.us
 DOMAIN,tu.2qq42.us
+DOMAIN,tu.ymawv.la
 DOMAIN,ttou.j03og.app
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,strpst.com
