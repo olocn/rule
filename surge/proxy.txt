@@ -12,6 +12,10 @@ DOMAIN-SUFFIX,fourhoi.com
 DOMAIN-SUFFIX,sesemanhua.com
 DOMAIN-SUFFIX,dmit.io
 
+# spotify
+DOMAIN-SUFFIX,spotifycdn.com
+DOMAIN-SUFFIX,spotify.com
+
 # tg
 IP-CIDR,91.108.56.0/22,no-resolve
 IP-CIDR,91.108.4.0/22,no-resolve
