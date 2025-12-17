@@ -108,7 +108,7 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,l.qq.com
 DOMAIN-SUFFIX,imtmp.net
 DOMAIN-SUFFIX,ugdtimg.com
-IP-CIDR,47.110.187.87/32,REJECT,no-resolve,pre-matching
+IP-CIDR,47.110.187.87/32
 DOMAIN-SUFFIX,opadlink.com
 DOMAIN-SUFFIX,staevent.work
 DOMAIN-SUFFIX,openinstall.online
@@ -174,8 +174,8 @@ DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,adash.man.aliyuncs.com
 DOMAIN,applog.uc.cn
 DOMAIN,atoken.m.taobao.com
-AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,extended-matching)),REJECT,pre-matching
-URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",REJECT,extended-matching
+AND,((DOMAIN-KEYWORD,adash,extended-matching),(DOMAIN-SUFFIX,ut.taobao.com,extended-matching))
+URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"
 DOMAIN,baichuan-sdk.alicdn.com
 DOMAIN,acs4baichuan.m.taobao.com
 DOMAIN,api.sm.cn
