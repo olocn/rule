@@ -13,6 +13,8 @@ DOMAIN-SUFFIX,xinyuhongyuan.com
 DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,zeroonead.com
 
+DOMAIN-SUFFIX,admobile.top
+
 DOMAIN-SUFFIX,t44r60.com
 DOMAIN-SUFFIX,xdmi4s.com
 DOMAIN,bossjs.rosfky.cn
