@@ -13,6 +13,10 @@ DOMAIN-SUFFIX,xinyuhongyuan.com
 DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,zeroonead.com
 
+#高德 
+DOMAIN,amap-aos-info-nogw.amap.com
+DOMAIN,free-aos-cdn-image.amap.com,REJECT
+DOMAIN-SUFFIX,v.smtcdns.com
 DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN-SUFFIX,admobile.top
 
