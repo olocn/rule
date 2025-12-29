@@ -1,0 +1,36 @@
+name: Merge Surge Remote Rules
+
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Download remote rules
+        run: |
+          curl -L https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt -o ruleA.txt
+          curl -L https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list -o ruleB.list
+
+      - name: Merge rules
+        run: |
+          echo "# Auto merged Surge rules" > merged.conf
+          cat ruleA.txt ruleB.list \
+            | sed '/^\s*$/d' \
+            | grep -v '^#' \
+            | sort -u \
+            >> merged.conf
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add merged.conf
+          git commit -m "Auto merge rules" || echo "No changes"
+          git push
