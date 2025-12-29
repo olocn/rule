@@ -1,4 +1,4 @@
-name: Merge Rule
+name: Merge Surge Rules (dated)
 
 on:
   schedule:
@@ -13,6 +13,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
       - name: Download sgmodule
         run: |
           curl -L \
@@ -26,26 +29,31 @@ jobs:
 
       - name: Extract + merge + deduplicate
         run: |
-          echo "# Auto merged Surge rules" > merged.conf
+          OUTPUT="merged-${DATE}.conf"
 
-          # 提取 sgmodule 中的 [Rule]
+          echo "# Auto merged Surge rules (${DATE})" > "$OUTPUT"
+
+          # 提取 sgmodule 的 [Rule]
           awk '
             /^\[Rule\]/ {flag=1; next}
             /^\[/ {flag=0}
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 合并所有规则并去重
+          # 合并 + 去重
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
-            | sort -u \
-            >> merged.conf
+            | awk '!seen[$0]++' \
+            >> "$OUTPUT"
+
+          # 生成 latest 指针
+          cp "$OUTPUT" merged-latest.conf
 
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add merged.txt
-          git commit -m "Merge sgmodule and conf rules" || echo "No changes"
+          git add merged-*.conf
+          git commit -m "Merge rules (${DATE})" || echo "No changes"
           git push
