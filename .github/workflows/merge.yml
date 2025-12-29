@@ -1,4 +1,4 @@
-name: Merge Surge Rules (dated)
+name: Merge Rules
 
 on:
   schedule:
@@ -22,38 +22,39 @@ jobs:
           https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.sgmodule \
           -o module.sgmodule
 
-      - name: Download conf rules
+      - name: Download txt rules
         run: |
           curl -L https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt -o ruleA.txt
           curl -L https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list -o ruleB.list
 
-      - name: Extract + merge + deduplicate
+      - name: Extract + merge + clean + deduplicate
         run: |
-          OUTPUT="merged-${DATE}.conf"
+          OUTPUT="merged-${DATE}.txt"
 
           echo "# Auto merged Surge rules (${DATE})" > "$OUTPUT"
 
-          # 提取 sgmodule 的 [Rule]
+          # 1. 提取 sgmodule 的 [Rule]
           awk '
             /^\[Rule\]/ {flag=1; next}
             /^\[/ {flag=0}
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 合并 + 去重
+          # 2. 合并 + 清洗 + 去重（保留顺序）
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
+            | sed 's/,REJECT//g; s/,extended-matching//g; s/,pre-matching//g' \
             | awk '!seen[$0]++' \
             >> "$OUTPUT"
 
-          # 生成 latest 指针
-          cp "$OUTPUT" merged-latest.conf
+          # 3. 生成 latest 指针文件
+          cp "$OUTPUT" merged-latest.txt
 
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add merged-*.conf
-          git commit -m "Merge rules (${DATE})" || echo "No changes"
+          git add merged-*.txt
+          git commit -m "Merge Surge rules (${DATE})" || echo "No changes"
           git push
