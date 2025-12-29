@@ -1,8 +1,8 @@
-name: Merge Surge Remote Rules
+name: Merge Rule
 
 on:
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 
 jobs:
@@ -10,18 +10,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Download remote rules
+      - name: Download sgmodule
+        run: |
+          curl -L \
+          https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.sgmodule \
+          -o module.sgmodule
+
+      - name: Download conf rules
         run: |
           curl -L https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt -o ruleA.txt
           curl -L https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list -o ruleB.list
 
-      - name: Merge rules
+      - name: Extract + merge + deduplicate
         run: |
           echo "# Auto merged Surge rules" > merged.conf
-          cat ruleA.txt ruleB.list \
+
+          # 提取 sgmodule 中的 [Rule]
+          awk '
+            /^\[Rule\]/ {flag=1; next}
+            /^\[/ {flag=0}
+            flag {print}
+          ' module.sgmodule > sg_rules.tmp
+
+          # 合并所有规则并去重
+          cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
             | sort -u \
@@ -31,6 +46,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add merged.conf
-          git commit -m "Auto merge rules" || echo "No changes"
+          git add merged.txt
+          git commit -m "Merge sgmodule and conf rules" || echo "No changes"
           git push
