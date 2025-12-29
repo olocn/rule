@@ -22,39 +22,80 @@ jobs:
           https://raw.githubusercontent.com/QingRex/LoonKissSurge/main/Surge/%E5%B9%BF%E5%91%8A%E5%B9%B3%E5%8F%B0%E6%8B%A6%E6%88%AA%E5%99%A8.sgmodule \
           -o module.sgmodule
 
-      - name: Download txt rules
+      - name: Download conf rules
         run: |
           curl -L https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt -o ruleA.txt
           curl -L https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list -o ruleB.list
 
-      - name: Extract + merge + clean + deduplicate
+      - name: Extract + merge + optimize rules
         run: |
-          OUTPUT="merged-${DATE}.txt"
+          OUTPUT="ads-${DATE}.txt"
 
           echo "# Auto merged Surge rules (${DATE})" > "$OUTPUT"
 
-          # 1. 提取 sgmodule 的 [Rule]
+          # 1️⃣ 提取 sgmodule 的 [Rule]
           awk '
             /^\[Rule\]/ {flag=1; next}
             /^\[/ {flag=0}
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2. 合并 + 清洗 + 去重（保留顺序）
+          # 2️⃣ 基础清洗 + 去重（保留顺序）
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
             | sed 's/,REJECT//g; s/,extended-matching//g; s/,pre-matching//g' \
             | awk '!seen[$0]++' \
-            >> "$OUTPUT"
+            > rules.cleaned
 
-          # 3. 生成 latest 指针文件
-          cp "$OUTPUT" merged-latest.txt
+          # 3️⃣ DOMAIN-SUFFIX 覆盖 DOMAIN（语义级去重）
+          awk -F',' '
+          {
+            rules[NR] = $0
+            type[NR]  = $1
+            value[NR] = $2
+
+            if ($1 == "DOMAIN-SUFFIX") {
+              suffix[$2] = 1
+            }
+          }
+          END {
+            for (i = 1; i <= NR; i++) {
+              if (type[i] == "DOMAIN") {
+                for (s in suffix) {
+                  if (value[i] ~ ("\\." s "$")) {
+                    skip[i] = 1
+                  }
+                }
+              }
+            }
+            for (i = 1; i <= NR; i++) {
+              if (!skip[i]) {
+                print rules[i]
+              }
+            }
+          }
+          ' rules.cleaned > rules.optimized
+
+          # 4️⃣ 按主域名分组排序（不改变规则内容）
+          awk -F',' '
+          {
+            split($2, d, ".");
+            root = d[length(d)-1] "." d[length(d)];
+            print root "\t" $0
+          }
+          ' rules.optimized \
+          | sort -k1,1 \
+          | cut -f2- \
+          >> "$OUTPUT"
+
+          # 5️⃣ 生成 latest 指针
+          cp "$OUTPUT" ads-latest.txt
 
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add merged-*.txt
-          git commit -m "Merge Surge rules (${DATE})" || echo "No changes"
+          git add ads-*.txt
+          git commit -m "Merge rules (${DATE})" || echo "No changes"
           git push
