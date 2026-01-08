@@ -29,7 +29,6 @@ jobs:
 
       - name: Extract + merge + optimize rules
         run: |
-          OUTPUT="ads-${DATE}.txt"
 
           echo "# Auto merged Surge rules (${DATE})" > "$OUTPUT"
 
