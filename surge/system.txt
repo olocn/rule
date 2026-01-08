@@ -32,7 +32,9 @@ DOMAIN-SUFFIX,plex.direct
 DOMAIN,resource.cupid.iqiyi.com
 #百度
 DOMAIN,loc.map.baidu.com
-DOMAIN-SUFFIX,xhscdn.com #小红书
+
+#小红书
+DOMAIN-SUFFIX,xhscdn.com 
 DOMAIN-SUFFIX,lencr.org
 DOMAIN-SUFFIX,fontfiles.googleadapis.com
 DOMAIN-SUFFIX,fontfiles.googleapis.com
