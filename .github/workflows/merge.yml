@@ -29,6 +29,9 @@ jobs:
 
       - name: Extract + merge + optimize rules
         run: |
+          set -e
+
+          OUTPUT="ads-${DATE}.txt"
 
           echo "# Auto merged Surge rules (${DATE})" > "$OUTPUT"
 
@@ -39,7 +42,7 @@ jobs:
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 基础清洗 + 去重（保留顺序）
+          # 2️⃣ 清洗 + 去重
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -47,51 +50,42 @@ jobs:
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ DOMAIN-SUFFIX 覆盖 DOMAIN（语义级去重）
+          # 3️⃣ DOMAIN-SUFFIX 覆盖 DOMAIN
           awk -F',' '
           {
             rules[NR] = $0
             type[NR]  = $1
             value[NR] = $2
-
-            if ($1 == "DOMAIN-SUFFIX") {
-              suffix[$2] = 1
-            }
+            if ($1 == "DOMAIN-SUFFIX") suffix[$2] = 1
           }
           END {
             for (i = 1; i <= NR; i++) {
               if (type[i] == "DOMAIN") {
                 for (s in suffix) {
-                  if (value[i] ~ ("\\." s "$")) {
-                    skip[i] = 1
-                  }
+                  if (value[i] ~ ("\\." s "$")) skip[i] = 1
                 }
               }
             }
             for (i = 1; i <= NR; i++) {
-              if (!skip[i]) {
-                print rules[i]
-              }
+              if (!skip[i]) print rules[i]
             }
-          }
-          ' rules.cleaned > rules.optimized
+          }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 按主域名分组排序（不改变规则内容）
+          # 4️⃣ 按主域名排序
           awk -F',' '
           {
             split($2, d, ".");
             root = d[length(d)-1] "." d[length(d)];
             print root "\t" $0
-          }
-          ' rules.optimized \
-          | sort -k1,1 \
-          | cut -f2- \
-          >> "$OUTPUT"
+          }' rules.optimized \
+            | sort -k1,1 \
+            | cut -f2- \
+            >> "$OUTPUT"
 
-          # 5️⃣ 生成 latest 指针
+          # 5️⃣ 只保留 latest
           cp "$OUTPUT" ads-latest.txt
           rm -f "$OUTPUT"
-          
+
       - name: Commit result
         run: |
           git config user.name "github-actions"
