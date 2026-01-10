@@ -18,6 +18,30 @@ DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN-SUFFIX,v.smtcdns.com
 
+
+#一键登录 
+#中国移动
+DOMAIN,config.cmpassport.com
+DOMAIN,www.cmpassport.com
+DOMAIN,wap.cmpassport.com
+DOMAIN,onekey1.cmpassport.com
+DOMAIN,log1.cmpassport.com
+DOMAIN,smsks1.cmpassport.com
+DOMAIN,verify.cmpassport.com
+
+# 中国联通
+DOMAIN,opencloud.wostore.cn
+DOMAIN,auth.wosms.cn
+DOMAIN,id.mail.wo.cn
+DOMAIN,mdn.open.wo.cn
+DOMAIN,hmrz.wo.cn
+DOMAIN,nishub1.10010.com
+DOMAIN,enrichgw.10010.com
+
+# 中国电信
+DOMAIN-SUFFIX,id6.me
+DOMAIN,open.e.189.cn
+
 DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN-SUFFIX,admobile.top
 
