@@ -8,6 +8,14 @@ DOMAIN-KEYWORD,youtube
 DOMAIN-SUFFIX,blogspot.com
 DOMAIN-SUFFIX,gmail.com
 
+# 任天堂
+DOMAIN-SUFFIX,capcom.com
+DOMAIN-SUFFIX,playfabapi.com
+DOMAIN-SUFFIX,cloudapp.azure.com
+DOMAIN-SUFFIX,streetfighter.com
+DOMAIN-SUFFIX,nintendo.com
+DOMAIN-SUFFIX,nintendo.net
+DOMAIN-SUFFIX,streetfighter.com
 # face
 DOMAIN-KEYWORD,facebook
 DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
