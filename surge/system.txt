@@ -1,6 +1,8 @@
 AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,extended-matching),(DOMAIN-SUFFIX,zijieapi.com,extended-matching),(DOMAIN-SUFFIX,isnssdk.com,extended-matching),(DOMAIN-SUFFIX,toutiaoapi.com,extended-matching),(DOMAIN-SUFFIX,bytedance.com,extended-matching),(DOMAIN-SUFFIX,snssdk.com,extended-matching),(DOMAIN-SUFFIX,sgsnssdk.com,extended-matching))))
 
-
+# 任天堂
+DOMAIN-SUFFIX,npln.srv.nintendo.net
+DOMAIN-SUFFIX,n.n.srv.nintendo.net
 DOMAIN-SUFFIX,edge.apple
 #海星
 DOMAIN-SUFFIX,livehwc4.com
