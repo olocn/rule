@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-01-15)
+# Auto merged Surge rules (2026-01-16)
 URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"
 AND, ((DOMAIN-KEYWORD, adash), (DOMAIN-SUFFIX, ut.taobao.com))
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
@@ -1089,7 +1089,6 @@ DOMAIN,appcfg.v.qq.com
 DOMAIN,beacon.qq.com
 DOMAIN,beaconcdn.qq.com
 DOMAIN,bsrv.qq.com
-DOMAIN,bugly.qq.com
 DOMAIN,c.gj.qq.com
 DOMAIN,cfg.imtt.qq.com
 DOMAIN,commdata.v.qq.com
