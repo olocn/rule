@@ -2,44 +2,52 @@ AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,ex
 
 # 馒头
 DOMAIN,tracker.m-team.cc
+
 # 任天堂
 DOMAIN-SUFFIX,npln.srv.nintendo.net
 DOMAIN-SUFFIX,n.n.srv.nintendo.net
-DOMAIN-SUFFIX,edge.apple
+
 #海星
 DOMAIN-SUFFIX,livehwc4.com
+
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
 DOMAIN-SUFFIX,digicert.com
 DOMAIN-SUFFIX,jsjnsw.com
+
 # plex
-IP-CIDR6,fe80::/10
 DOMAIN-SUFFIX,v4.plex.tv
 DOMAIN-SUFFIX,plex.direct
 DOMAIN-SUFFIX,pubsub.plex.tv
 DOMAIN-SUFFIX,myqnapcloud.com
 DOMAIN-SUFFIX,myqnapcloud.io
-#无忧行
-DEST-PORT,8008
-DEST-PORT,10800
-DEST-PORT,10900
-DEST-PORT,10802
-#apple
+
+# 无忧行
+#DEST-PORT,8008
+#DEST-PORT,10800
+#DEST-PORT,10900
+#DEST-PORT,10802
+
+# apple
 DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,olocn.fun
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,captive.apple.com
+DOMAIN,time.apple.com
 
-#爱奇艺
+# 爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
-#百度
+
+# 百度
 DOMAIN,loc.map.baidu.com
 
 #小红书
 DOMAIN-SUFFIX,xhscdn.com 
 DOMAIN-SUFFIX,lencr.org
+
+# google
 DOMAIN-SUFFIX,fontfiles.googleadapis.com
 DOMAIN-SUFFIX,fontfiles.googleapis.com
 DOMAIN-SUFFIX,fonts.googleadapis.com
@@ -47,36 +55,39 @@ DOMAIN-SUFFIX,fonts.googleapis.com
 DOMAIN-SUFFIX,fonts.gstatic.com
 DOMAIN,sandbox.itunes.apple.com
 DOMAIN-SUFFIX,885511.xyz
-DOMAIN,time.apple.com
-DOMAIN,gateway.icloud.com
+DOMAIN,pubads.g.doubleclick.net
+
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
+DOMAIN-SUFFIX,cloudfront.net
+
+# 彩云天气
 DOMAIN,wrapper.cyapi.cn
 DOMAIN,biz.cyapi.cn
-DOMAIN-SUFFIX,cloudfront.net
+
+
 # > 淘宝推广
 DOMAIN-SUFFIX,tce.alicdn.com
-# > Alibaba
 DOMAIN,s.click.taobao.com
 DOMAIN,log.mmstat.com
 DOMAIN,sycm.mmstat.com
 DOMAIN,gm.mmstat.com
 
-# > Umeng 友盟+
+# Umeng
 #DOMAIN,msg.umeng.com
 #DOMAIN,msg.umengcloud.com
 
-# > Tencent
+# Tencent
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
 DOMAIN,vd.l.qq.com
 
 DOMAIN,ocsp.godaddy.com
-# > Paramount+
-DOMAIN,pubads.g.doubleclick.net
+# Paramount+
 DOMAIN-SUFFIX,edu.cn
-DOMAIN-KEYWORD,short.weixin.qq.com,extended-matching
-DOMAIN-KEYWORD,short.wechat.com,extended-matching
+DOMAIN-KEYWORD,short.weixin.qq.com
+DOMAIN-KEYWORD,short.wechat.com
+
 IP-CIDR,43.160.144.0/20,no-resolve
 IP-CIDR,112.90.216.0/21,no-resolve
 IP-CIDR,129.226.0.0/21,no-resolve
