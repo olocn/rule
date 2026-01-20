@@ -48,8 +48,9 @@ DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
 DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,push-apple.com.akadns.net
 
+# ea
+DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,hevyapp.com
 DOMAIN-SUFFIX,obsidian.md
 DOMAIN-SUFFIX,jmpic.xyz
