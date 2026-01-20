@@ -36,6 +36,7 @@ DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
 DOMAIN,captive.apple.com
 DOMAIN,time.apple.com
+DOMAIN-SUFFIX,push.apple.com.akadns.net
 
 # 爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
