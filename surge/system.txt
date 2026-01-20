@@ -30,8 +30,8 @@ DOMAIN,gateway.icloud.com
 DOMAIN-SUFFIX,olocn.fun
 DOMAIN,gs-loc-cn.apple.com
 DOMAIN-SUFFIX,ls.apple.com
+DOMAIN,captive.apple.com
 
-DOMAIN-SUFFIX,plex.direct
 #爱奇艺
 DOMAIN,resource.cupid.iqiyi.com
 #百度
