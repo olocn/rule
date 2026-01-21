@@ -96,9 +96,9 @@ URL-REGEX,/\d+/sign_d
 
 DOMAIN,browser-intake-datadoghq.com
 
-DEST-PORT,4480
-DEST-PORT,4483
-DEST-PORT,9102
+#DEST-PORT,4480
+#DEST-PORT,4483
+#DEST-PORT,9102
 
 DOMAIN,apple-safebrowsing.googleapis.com
 
@@ -220,7 +220,7 @@ DOMAIN,jegotrip3.jegotrip.com.cn
 DOMAIN,oss.jegotrip.com.cn
 
 # 米家
-DEST-PORT,5222
+#DEST-PORT,5222
 IP-CIDR,111.13.141.1/24
 IP-CIDR,111.13.213.1/24
 IP-CIDR,106.120.178.1/24
