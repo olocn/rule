@@ -1231,6 +1231,7 @@ DOMAIN,log2.sina.cn
 DOMAIN-SUFFIX,gk.sina.cn
 DOMAIN-SUFFIX,rs.sinajs.cn
 DOMAIN-SUFFIX,sjv.io
+DOMAIN,www.skyjos.com
 DOMAIN-SUFFIX,analytics.slashdotmedia.com
 DOMAIN-SUFFIX,slyxmobi.com
 DOMAIN,api.sm.cn
