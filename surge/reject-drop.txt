@@ -13,6 +13,8 @@ DOMAIN-SUFFIX,xinyuhongyuan.com
 DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,zeroonead.com
 
+# 猫头鹰
+DOMAIN,www.skyjos.com
 #高德 
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
