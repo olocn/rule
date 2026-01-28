@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-01-27)
+# Auto merged Surge rules (2026-01-28)
 URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"
 AND, ((DOMAIN-KEYWORD, adash), (DOMAIN-SUFFIX, ut.taobao.com))
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
@@ -19,7 +19,6 @@ DOMAIN,nishub1.10010.com
 DOMAIN,smartad.10010.com
 DOMAIN,v.110route.cn
 DOMAIN,ytx-file.110route.cn
-DOMAIN,appversion.115.com
 IP-CIDR,182.254.116.117/32,no-resolve
 IP-CIDR,182.254.118.119/32,no-resolve
 IP-CIDR,115.236.121.195/32,no-resolve
@@ -893,6 +892,8 @@ DOMAIN-SUFFIX,mediav.com
 DOMAIN,medproad.com
 DOMAIN-SUFFIX,medproad.com
 DOMAIN-SUFFIX,meiqia.com
+DOMAIN,adui.tg.meitu.com
+DOMAIN,tuiguang.meitu.com
 DOMAIN-SUFFIX,report.meituan.com
 DOMAIN,al-log.d.meituan.net
 DOMAIN,babel-statistics-android.d.meituan.net
@@ -1292,6 +1293,7 @@ DOMAIN-SUFFIX,statchannel.store
 DOMAIN-SUFFIX,statchannel.top
 DOMAIN,statcounter.com
 DOMAIN-SUFFIX,stathat.com
+DOMAIN,adx-strategy-api-cn.statisticslinks.com
 DOMAIN-SUFFIX,statschannel.xyz
 DOMAIN,api.statsig.com
 DOMAIN,statsigapi.net
@@ -1309,6 +1311,7 @@ DOMAIN-SUFFIX,countpage.sznews.com
 DOMAIN-SUFFIX,t44r60.com
 DOMAIN-SUFFIX,tagcommander.com
 DOMAIN-SUFFIX,tagmanager.cn
+DOMAIN,tagtic.cn
 DOMAIN-SUFFIX,tagtic.cn
 DOMAIN-SUFFIX,tailtarget.com
 DOMAIN,df.tanx.com
@@ -1387,6 +1390,7 @@ DOMAIN-SUFFIX,tomonline-inc.com
 DOMAIN-SUFFIX,track.tomwx.net
 DOMAIN-SUFFIX,tongjiniao.com
 DOMAIN-SUFFIX,top-bloggers.com
+DOMAIN,mores.toponad.com
 DOMAIN-SUFFIX,toponadss.com
 DOMAIN-SUFFIX,topsem.com
 DOMAIN,api.touch-moblie.com
@@ -1471,9 +1475,13 @@ DOMAIN-SUFFIX,wayio.cn
 DOMAIN-SUFFIX,webdissector.com
 DOMAIN-SUFFIX,webfunny.cn
 DOMAIN-SUFFIX,webspectator.com
+DOMAIN,ad.weibo.com
+DOMAIN,adimg.uve.weibo.com
+DOMAIN,adstrategy.biz.weibo.com
 DOMAIN,biz.weibo.com
 DOMAIN,bootpreload.uve.weibo.com
 DOMAIN,datacollection.uve.weibo.com
+DOMAIN,sdkapp.uve.weibo.com
 DOMAIN,logtake.weidian.com
 DOMAIN,badjs.weixinbridge.com
 DOMAIN-SUFFIX,whalecloud.com
@@ -1553,6 +1561,7 @@ DOMAIN-SUFFIX,analytics-union.xunlei.com
 DOMAIN-SUFFIX,kkpgv2.xunlei.com
 DOMAIN-SUFFIX,record.kuai.xunlei.com
 DOMAIN,xycdn.com
+DOMAIN,ads.auctions.yahoo.com
 DOMAIN,advertising.yahoo.com
 DOMAIN,analytics.query.yahoo.com
 DOMAIN,gemini.yahoo.com
