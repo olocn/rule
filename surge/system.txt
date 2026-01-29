@@ -2,6 +2,7 @@ AND,((DOMAIN-KEYWORD,tnc,extended-matching),(OR,((DOMAIN-SUFFIX,capcutapi.com,ex
 
 # 馒头
 DOMAIN,tracker.m-team.cc
+DOMAIN,tra1.m-team.io
 
 # 任天堂
 DOMAIN-SUFFIX,npln.srv.nintendo.net
