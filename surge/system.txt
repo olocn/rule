@@ -63,7 +63,8 @@ DOMAIN,pubads.g.doubleclick.net
 
 DOMAIN,api.revenuecat.com
 DOMAIN,ocsp.sectigo.com
-DOMAIN-SUFFIX,cloudfront.net
+
+#DOMAIN-SUFFIX,cloudfront.net
 
 # 彩云天气
 DOMAIN,wrapper.cyapi.cn
