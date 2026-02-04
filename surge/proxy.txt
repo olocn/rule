@@ -360,7 +360,6 @@ DOMAIN-SUFFIX,micmicidol.com
 DOMAIN-SUFFIX,mixlr.com
 DOMAIN-SUFFIX,moon.fm
 DOMAIN-SUFFIX,msn.com
-DOMAIN-SUFFIX,m-team.cc
 DOMAIN-SUFFIX,mubi.com
 DOMAIN-SUFFIX,mypikpak.com
 DOMAIN-SUFFIX,myspace.com
@@ -511,7 +510,6 @@ DOMAIN-SUFFIX,upercell.helpshift.com
 DOMAIN-SUFFIX,urbandictionary.com
 DOMAIN-WILDCARD,us-*-2.amazonaws.com
 DOMAIN-SUFFIX,ustream.tv
-DOMAIN-WILDCARD,v2ex.*
 DOMAIN-SUFFIX,venturebeat.com
 DOMAIN-SUFFIX,viber.com
 DOMAIN-SUFFIX,videopress.com
@@ -623,3 +621,5 @@ DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,sov2ex.com
 DOMAIN-SUFFIX,v2ex.com
 DOMAIN-SUFFIX,signal.org
+DOMAIN,api.m-team.io
+DOMAIN-SUFFIX,m-team.cc
