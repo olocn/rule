@@ -14,7 +14,6 @@ URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 IP-CIDR,203.107.1.0/24,no-resolve
 DOMAIN,enrichgw.10010.com
-DOMAIN,m1.ad.10010.com
 DOMAIN,nishub1.10010.com
 DOMAIN,smartad.10010.com
 DOMAIN,v.110route.cn
