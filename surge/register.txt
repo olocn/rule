@@ -16,7 +16,8 @@ DOMAIN-SUFFIX,streetfighter.com
 DOMAIN-SUFFIX,nintendo.com
 DOMAIN-SUFFIX,nintendo.net
 DOMAIN-SUFFIX,streetfighter.com
-# face
+
+# facebook
 DOMAIN-KEYWORD,facebook
 DOMAIN-SUFFIX,fbcdn-a.akamaihd.net
 DOMAIN-SUFFIX,fbcdn.com
