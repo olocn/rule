@@ -164,6 +164,7 @@ DOMAIN-SUFFIX,proactivebackend-pa.googleapis.com
 
 
 #微软
+DOMAIN-SUFFIX,office.net
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,microsoftonline.com
