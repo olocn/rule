@@ -605,7 +605,6 @@ DOMAIN-SUFFIX,lab.skk.moe
 DOMAIN-SUFFIX,ocsp.int-x3.letsencrypt.org
 DOMAIN-SUFFIX,payments-jp.amazon.com
 DOMAIN-SUFFIX,amp-api.podcasts.apple.com
-DOMAIN-WILDCARD,s3-ap-*theast-1.amazonaws.com
 DOMAIN-SUFFIX,search.yahoo.co.jp
 DOMAIN-SUFFIX,wego.here.com
 DOMAIN-SUFFIX,supercell.com
