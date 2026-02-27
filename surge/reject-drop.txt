@@ -1,5 +1,5 @@
 # 微信ip段
-
+IP-ASN,132203,no-resolve
 IP-CIDR,43.159.192.0/18,no-resolve
 # 车来了
 DOMAIN-SUFFIX,logs.chelaile.net.cn
