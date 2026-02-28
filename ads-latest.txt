@@ -9,7 +9,6 @@ DEST-PORT,5224
 DOMAIN-KEYWORD,pangolin
 DOMAIN-KEYWORD,panplayable-toutiao
 DOMAIN-KEYWORD,pglstatp
-IP-ASN,132203,no-resolve
 IP-ASN,55990,no-resolve
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
@@ -48,7 +47,6 @@ IP-CIDR,42.187.184.154/32,no-resolve
 IP-CIDR,47.110.187.87/32,no-resolve
 DOMAIN,open.e.189.cn
 IP-CIDR,101.124.19.122/32,no-resolve
-IP-CIDR,43.159.192.0/18,no-resolve
 DOMAIN-SUFFIX,1nmob.com
 DOMAIN-SUFFIX,1rtb.com
 DOMAIN-SUFFIX,1rtb.net
