@@ -6,6 +6,7 @@ AND,((DOMAIN-KEYWORD,adash),(DOMAIN-SUFFIX,ut.taobao.com))
 AND,((DOMAIN-KEYWORD,ads),(DOMAIN-KEYWORD,-normal.zijieapi.com))
 AND,((DOMAIN-KEYWORD,tnc),(OR,((DOMAIN-SUFFIX,capcutapi.com),(DOMAIN-SUFFIX,zijieapi.com),(DOMAIN-SUFFIX,isnssdk.com),(DOMAIN-SUFFIX,toutiaoapi.com),(DOMAIN-SUFFIX,bytedance.com),(DOMAIN-SUFFIX,snssdk.com),(DOMAIN-SUFFIX,sgsnssdk.com)))),DIRECT
 DEST-PORT,5224
+DOMAIN-KEYWORD,adstrategy
 DOMAIN-KEYWORD,pangolin
 DOMAIN-KEYWORD,panplayable-toutiao
 DOMAIN-KEYWORD,pglstatp
@@ -625,7 +626,6 @@ DOMAIN,apple-safebrowsing.googleapis.com
 DOMAIN,crashlyticsreports-pa.googleapis.com
 DOMAIN,firebaseinappmessaging.googleapis.com
 DOMAIN,firebaselogging-pa.googleapis.com
-DOMAIN,firebaseremoteconfig.googleapis.com
 DOMAIN-SUFFIX,safebrowsing.googleapis.com
 DOMAIN-SUFFIX,googleoptimize.com
 DOMAIN-SUFFIX,googlesyndication-cn.com
@@ -1215,11 +1215,8 @@ DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,sentry.io
 DOMAIN,ads.servebom.com
 DOMAIN-SUFFIX,setway.cn
-DOMAIN,api.shanghailingye.cn
-DOMAIN,ad.shenshiads.com
-DOMAIN,adv-api.shenshiads.com
-DOMAIN,m.shenshiads.com
-DOMAIN,open-set-api.shenshiads.com
+DOMAIN-SUFFIX,shanghailingye.cn
+DOMAIN-SUFFIX,shenshiads.com
 DOMAIN,statichf.shihuocdn.cn
 DOMAIN,umini.shujupie.com
 DOMAIN,ad.shunchangzhixing.com
