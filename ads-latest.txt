@@ -120,6 +120,7 @@ IP-CIDR,114.110.97.97/32,no-resolve
 IP-CIDR,59.82.99.47/32,no-resolve
 URL-REGEX,\d+\.\d+\.\d+\.\d+/d\d*
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
+URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
 DOMAIN-SUFFIX,a-ads.com
 DOMAIN-SUFFIX,aaxdetect.com
 DOMAIN-SUFFIX,apilog-web.acfun.cn
@@ -926,6 +927,7 @@ DOMAIN,staging-notify.sec.miui.com
 DOMAIN,tracking.miui.com
 DOMAIN,tracking.rus.miui.com
 DOMAIN,update.avlyun.sec.miui.com
+DOMAIN-SUFFIX,tracking.intl.miui.com
 DOMAIN,api.miwifi.com
 DOMAIN,app.miwifi.com
 DOMAIN,log.miwifi.com
