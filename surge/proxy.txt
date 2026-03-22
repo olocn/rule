@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,whamon.com
 DOMAIN-SUFFIX,docker.com
 DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,ghcr.io
+DOMAIN-SUFFIX,mikanani.me
 
 DOMAIN,infuse-sync.s3-accelerate.amazonaws.com
 DOMAIN-SUFFIX,trakt.tv
