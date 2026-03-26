@@ -119,6 +119,7 @@ DOMAIN,tysdk.95516.com
 IP-CIDR,114.110.97.97/32,no-resolve
 IP-CIDR,59.82.99.47/32,no-resolve
 URL-REGEX,\d+\.\d+\.\d+\.\d+/d\d*
+URL-REGEX,\d+\.\d+\.\d+\.\d+/v\d+/d
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
 DOMAIN-SUFFIX,a-ads.com
