@@ -90,7 +90,7 @@ DOMAIN-SUFFIX,yunpan.com.cn
 IP-CIDR,124.71.153.172/32
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
-#URL-REGEX,\d+\.\d+\.\d+\.\d+\/d
+URL-REGEX,\d+\.\d+\.\d+\.\d+/v\d+/d
 URL-REGEX,\d+\.\d+\.\d+\.\d+/d\d*
 DOMAIN-SUFFIX,deepermobile.com
 DOMAIN,dns.jd.com
