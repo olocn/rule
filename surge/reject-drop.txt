@@ -773,7 +773,7 @@ DOMAIN-SUFFIX,xhey.top
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gepush.com
-DEST-PORT,5224
+#DEST-PORT,5224
 
 #jump
 DOMAIN-SUFFIX,mentamob.com
@@ -806,7 +806,7 @@ DOMAIN,et.tanx.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,adash.man.aliyuncs.com
 DOMAIN,applog.uc.cn
-AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
+#AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
 
 DOMAIN,httpdns.bilivideo.com
 DOMAIN,apppush-rts.xiaohongshu.com
