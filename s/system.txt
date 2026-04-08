@@ -1,7 +1,0 @@
-payload:
-- "pv.sohu.com"
-- "+.pki.goog"
-- "+.blog.google"
-- "+.googletraveladservices.com"
-- "clientservices.googleapis.com"
-- "update.googleapis.com"
