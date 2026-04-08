@@ -1,0 +1,80 @@
+name: Convert Olocn Rules to Custom Policy
+
+on:
+  schedule:
+    - cron: '0 */12 * * *'
+  workflow_dispatch:
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set date
+        run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Download and Convert Rules
+        run: |
+          set -e
+          
+          mkdir -p qx_rules
+          
+          echo "Fetching file list from olocn/rule..."
+          # 获取 surge 目录下所有文件
+          FILES=$(curl -s "https://api.github.com/repos/olocn/rule/contents/surge?ref=master" | jq -r '.[] | select(.type=="file") | .download_url')
+
+          for url in $FILES; do
+            filename=$(basename "$url")
+            # 1️⃣ 提取文件名（去除扩展名），如 game.txt -> game
+            policy_name="${filename%.*}"
+            
+            echo "Processing $filename using policy: $policy_name..."
+            
+            curl -L "$url" -o "temp_$filename"
+            
+            output_name="${policy_name}.snippet"
+            
+            echo "# Original: $filename" > "qx_rules/$output_name"
+            echo "# Converted: ${DATE}" >> "qx_rules/$output_name"
+            
+            # 2️⃣ 将 policy_name 变量传递给 awk
+            cat "temp_$filename" | sed '/^\s*$/d' | grep -v '^#' | grep -v -E 'PROCESS-NAME|URL-REGEX|AND|OR|NOT' | awk -F',' -v p_name="$policy_name" '
+            {
+              # 清洗多余参数
+              gsub(/no-resolve|extended-matching|pre-matching| /, "", $0);
+              
+              # 转换类型
+              type = ""
+              if ($1 == "DOMAIN") type = "host";
+              else if ($1 == "DOMAIN-SUFFIX") type = "host-suffix";
+              else if ($1 == "DOMAIN-KEYWORD") type = "host-keyword";
+              else if ($1 == "IP-CIDR") type = "ip-cidr";
+              else if ($1 == "IP-CIDR6") type = "ip6-cidr";
+              else if ($1 == "GEOIP") type = "geoip";
+              else if ($1 == "IP-ASN") type = "ip-asn";
+              else if ($1 == "USER-AGENT") type = "user-agent";
+
+              if (type != "") {
+                # 3️⃣ 这里的 p_name 就是文件名
+                # 如果原规则是 REJECT，你可能想保留 reject，否则使用文件名
+                # 下面逻辑：如果是 REJECT 则保持 reject，其他（如 DIRECT）一律改为文件名
+                current_policy = p_name;
+                if ($0 ~ /REJECT/) current_policy = "reject";
+                
+                print type ", " $2 ", " current_policy
+              }
+            }' >> "qx_rules/$output_name"
+            
+            rm "temp_$filename"
+          done
+
+      - name: Commit result
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add qx_rules/*.snippet
+          git commit -m "Update rules with filename as policy (${DATE})" || echo "No changes"
+          git push
