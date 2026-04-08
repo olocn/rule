@@ -1,4 +1,4 @@
-name: Convert
+name: Convert Olocn Rules (Fix Keyword Match)
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
         run: |
           set -e
           
-          # 1️⃣ 清理并重建 qx 文件夹，确保旧文件被物理覆盖/删除
+          # 1️⃣ 清理并重建 qx 文件夹
           rm -rf qx
           mkdir -p qx
           
@@ -36,54 +36,60 @@ jobs:
               continue
             fi
             
-            # 3️⃣ 提取策略名（文件名，不带后缀）
             policy_name="${filename%.*}"
-            
-            echo "Processing $filename -> qx/${policy_name}.snippet"
-            
             curl -L "$url" -o "temp_$filename"
             
             output_path="qx/${policy_name}.snippet"
-            
-            # 使用 > 符号初始化文件（覆盖写入）
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 4️⃣ 核心转换逻辑
-            cat "temp_$filename" | sed '/^\s*$/d' | grep -v '^#' | grep -v -E 'PROCESS-NAME|URL-REGEX|AND|OR|NOT' | awk -F',' -v p_name="$policy_name" '
+            # 3️⃣ 核心转换逻辑（修正后的版本）
+            # 我们直接在 awk 中处理所有逻辑，不再依靠前面的 grep/sed 进行复杂过滤
+            awk -F',' -v p_name="$policy_name" '
             {
-              # 清理多余参数和空格
-              gsub(/no-resolve|extended-matching|pre-matching| /, "", $0);
+              # 清理：移除回车符和所有空格/制表符
+              gsub(/\r/, "", $0);
+              gsub(/[[:space:]]/, "", $0);
               
-              # 类型匹配与转换
-              type = ""
-              if ($1 == "DOMAIN") type = "host";
-              else if ($1 == "DOMAIN-SUFFIX") type = "host-suffix";
-              else if ($1 == "DOMAIN-KEYWORD") type = "host-keyword";
-              else if ($1 == "IP-CIDR") type = "ip-cidr";
-              else if ($1 == "IP-CIDR6") type = "ip6-cidr";
-              else if ($1 == "GEOIP") type = "geoip";
-              else if ($1 == "IP-ASN") type = "ip-asn";
-              else if ($1 == "USER-AGENT") type = "user-agent";
+              # 跳过空行和注释
+              if ($0 == "" || $0 ~ /^#/) next;
+              
+              # 跳过 QX 不支持的高级类型
+              if ($0 ~ /PROCESS-NAME|URL-REGEX|AND|OR|NOT/) next;
 
-              if (type != "") {
-                # 策略逻辑确定
+              # 提取原始类型（转大写）和内容
+              orig_type = toupper($1);
+              val = $2;
+
+              # 类型转换映射
+              type = "";
+              if (orig_type == "DOMAIN") type = "host";
+              else if (orig_type == "DOMAIN-SUFFIX") type = "host-suffix";
+              else if (orig_type == "DOMAIN-KEYWORD") type = "host-keyword";
+              else if (orig_type == "IP-CIDR") type = "ip-cidr";
+              else if (orig_type == "IP-CIDR6") type = "ip6-cidr";
+              else if (orig_type == "GEOIP") type = "geoip";
+              else if (orig_type == "IP-ASN") type = "ip-asn";
+              else if (orig_type == "USER-AGENT") type = "user-agent";
+
+              if (type != "" && val != "") {
+                # 策略逻辑判定
                 current_policy = p_name;
                 
-                # 特殊处理：system 文件强制直连
+                # 如果是 system 文件，强制使用 direct
                 if (p_name == "system") {
                   current_policy = "direct";
                 }
                 
-                # 强制保护：原规则是 REJECT 的一律保持 reject
-                if ($0 ~ /REJECT/) {
+                # 如果原始行包含 REJECT 关键字，强制保持 reject
+                if (toupper($0) ~ /REJECT/) {
                   current_policy = "reject";
                 }
 
-                # 输出 QX 标准格式
-                print type ", " $2 ", " current_policy
+                # 打印最终格式
+                printf("%s, %s, %s\n", type, val, current_policy);
               }
-            }' >> "$output_path"
+            }' "temp_$filename" >> "$output_path"
             
             rm "temp_$filename"
           done
@@ -92,9 +98,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          
-          # 5️⃣ 使用 -A 参数同步所有变更（包括新增、修改和删除）
           git add -A qx/
-          
-          git commit -m "Full sync: system->direct, others->filename, keyword->host-keyword (${DATE})" || echo "No changes"
+          git commit -m "Fix: DOMAIN-KEYWORD conversion logic (${DATE})" || echo "No changes"
           git push
