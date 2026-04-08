@@ -53,20 +53,13 @@ DOMAIN-SUFFIX,perplexity.ai
 DOMAIN-KEYWORD,bing
 DOMAIN-KEYWORD,copilot
 DOMAIN-KEYWORD,edgeassetservice
-DOMAIN-SUFFIX,edgeservices.bing.com
-DOMAIN-SUFFIX,sydney.bing.com
-DOMAIN-SUFFIX,bing.com
-DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,edge.microsoft.com
 DOMAIN-SUFFIX,copilot.microsoft.com
-DOMAIN-SUFFIX,www.bing.com
 DOMAIN-SUFFIX,www.bingapis.com
 DOMAIN-SUFFIX,nav-edge.smartscreen.microsoft.com
-DOMAIN-SUFFIX,bat.bing.com
-DOMAIN-SUFFIX,designerapp.officeapps.live.com
 DOMAIN-SUFFIX,cdn.designerapp.osi.office.net
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,azureedge.net
@@ -100,15 +93,10 @@ DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,r.msftstatic.com
-DOMAIN-SUFFIX,rafd.bing.com
 DOMAIN-SUFFIX,rafd.staging-bing-int.com
-DOMAIN-SUFFIX,raka.bing.com
-DOMAIN-SUFFIX,r.bing.com
 DOMAIN-SUFFIX,r.staging-bing-int.com
 DOMAIN-SUFFIX,raka.staging-bing-int.com
 DOMAIN-SUFFIX,rcf.staging-bing-int.com
-DOMAIN-SUFFIX,rcf.bing.com
-DOMAIN-SUFFIX,s.cn.bing.net
 DOMAIN-SUFFIX,xpaycdn-int.azureedge.net
 DOMAIN-SUFFIX,xpaycdn.azureedge.net
 DOMAIN-SUFFIX,ssl.kaptcha.com
@@ -122,17 +110,13 @@ DOMAIN-SUFFIX,cetonc.binginternal.com
 DOMAIN-SUFFIX,cetosc.binginternal.com
 DOMAIN-SUFFIX,cetoeast.binginternal.com
 DOMAIN-SUFFIX,cetowest.binginternal.com
-DOMAIN-SUFFIX,akam.bing.com
 DOMAIN-SUFFIX,akam.staging-bing-int.com
 DOMAIN-SUFFIX,ewlmaakam.staging-bing-int.com
 DOMAIN-SUFFIX,akamproxyeast.staging-bing-int.com
 DOMAIN-SUFFIX,akamproxync.staging-bing-int.com
 DOMAIN-SUFFIX,akamproxysc.staging-bing-int.com
 DOMAIN-SUFFIX,akamproxywest.staging-bing-int.com
-DOMAIN-SUFFIX,cjfdbemmaeeohgibnhdhlakiahifjjcf
 DOMAIN-SUFFIX,ewlmaakam.staging-bing-int.com
-DOMAIN-SUFFIX,bngpiglbalmenaabohcooocpnljgfemj
-DOMAIN-SUFFIX,rwww.bing.com
 
 
 #Google Gemini 
