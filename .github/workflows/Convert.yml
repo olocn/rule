@@ -1,4 +1,4 @@
-name: Convert Olocn Rules (Fix Keyword Match)
+name: Convert 
 
 on:
   schedule:
