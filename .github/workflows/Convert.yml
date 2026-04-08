@@ -1,4 +1,4 @@
-name: Convert Olocn Rules to QX Folder
+name: Convert QX
 
 on:
   schedule:
