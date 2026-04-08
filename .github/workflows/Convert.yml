@@ -20,7 +20,8 @@ jobs:
         run: |
           set -e
           
-          # 1️⃣ 创建存放目录
+          # 1️⃣ 清理并重建 qx 文件夹，确保旧文件被物理覆盖/删除
+          rm -rf qx
           mkdir -p qx
           
           echo "Fetching file list from olocn/rule..."
@@ -43,10 +44,12 @@ jobs:
             curl -L "$url" -o "temp_$filename"
             
             output_path="qx/${policy_name}.snippet"
+            
+            # 使用 > 符号初始化文件（覆盖写入）
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 4️⃣ 核心转换逻辑 (含 host-keyword 转换)
+            # 4️⃣ 核心转换逻辑
             cat "temp_$filename" | sed '/^\s*$/d' | grep -v '^#' | grep -v -E 'PROCESS-NAME|URL-REGEX|AND|OR|NOT' | awk -F',' -v p_name="$policy_name" '
             {
               # 清理多余参数和空格
@@ -65,7 +68,6 @@ jobs:
 
               if (type != "") {
                 # 策略逻辑确定
-                # 默认策略采用文件名
                 current_policy = p_name;
                 
                 # 特殊处理：system 文件强制直连
@@ -90,6 +92,9 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add qx/*.snippet
-          git commit -m "Final rule update: system->direct, others->filename, keyword->host-keyword (${DATE})" || echo "No changes"
+          
+          # 5️⃣ 使用 -A 参数同步所有变更（包括新增、修改和删除）
+          git add -A qx/
+          
+          git commit -m "Full sync: system->direct, others->filename, keyword->host-keyword (${DATE})" || echo "No changes"
           git push
