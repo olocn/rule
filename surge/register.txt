@@ -34,9 +34,6 @@ DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
 DOMAIN,openaicomproductionae4b.blob.core.windows.net
 DOMAIN,production-openaicom-storage.azureedge.net
 DOMAIN,openaiapi-site.azureedge.net
-DOMAIN-SUFFIX,grok.com
-DOMAIN-SUFFIX,x.ai
-DOMAIN-SUFFIX,intercom.com
 
 #twitter
 DOMAIN-SUFFIX,ads-twitter.com
@@ -44,6 +41,12 @@ DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,twimg.com
 DOMAIN-SUFFIX,twitter.com
 DOMAIN-SUFFIX,x.com
+PROCESS-NAME,grok
+DOMAIN-KEYWORD,grok
+DOMAIN-SUFFIX,perplexity.ai
+DOMAIN-SUFFIX,x.ai
+DOMAIN-SUFFIX,intercom.com
+
 DOMAIN-KEYWORD,paypal
 DOMAIN-SUFFIX,cerebras.ai
 
@@ -80,17 +83,11 @@ DOMAIN-SUFFIX,poe.com
 PROCESS-NAME,LM Studio
 DOMAIN-SUFFIX,lmsudio.ai
 
-#grok
-PROCESS-NAME,grok
-DOMAIN-KEYWORD,grok
-#perplexity.ai
-DOMAIN-SUFFIX,perplexity.ai
 
 #bing chat
 DOMAIN-KEYWORD,bing
 DOMAIN-KEYWORD,copilot
 DOMAIN-KEYWORD,edgeassetservice
-DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,azurewebsites.net
