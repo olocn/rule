@@ -1,4 +1,4 @@
-name: Convert 
+name: Convert
 
 on:
   schedule:
@@ -37,57 +37,57 @@ jobs:
             fi
             
             policy_name="${filename%.*}"
+            echo "Processing $filename -> qx/${policy_name}.snippet"
+            
             curl -L "$url" -o "temp_$filename"
             
             output_path="qx/${policy_name}.snippet"
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 3️⃣ 核心转换逻辑（修正后的版本）
-            # 我们直接在 awk 中处理所有逻辑，不再依靠前面的 grep/sed 进行复杂过滤
+            # 3️⃣ 预处理：利用 sed 强行替换关键字（不区分大小写）
+            # 这样在 awk 运行前，文本里就已经全是 host-keyword 了
+            sed -i 's/DOMAIN-KEYWORD/host-keyword/Ig' "temp_$filename"
+            sed -i 's/DOMAIN-SUFFIX/host-suffix/Ig' "temp_$filename"
+            sed -i 's/DOMAIN,/host,/Ig' "temp_$filename"
+
+            # 4️⃣ 核心转换逻辑
             awk -F',' -v p_name="$policy_name" '
             {
-              # 清理：移除回车符和所有空格/制表符
+              # 清理行末回车符
               gsub(/\r/, "", $0);
-              gsub(/[[:space:]]/, "", $0);
               
-              # 跳过空行和注释
-              if ($0 == "" || $0 ~ /^#/) next;
-              
-              # 跳过 QX 不支持的高级类型
-              if ($0 ~ /PROCESS-NAME|URL-REGEX|AND|OR|NOT/) next;
+              # 对前三个关键字段分别去除首尾空格
+              for (i=1; i<=3; i++) {
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $i);
+              }
 
-              # 提取原始类型（转大写）和内容
-              orig_type = toupper($1);
+              # 跳过注释、空行以及 QX 不支持的高级类型
+              if ($1 ~ /^#/ || $1 == "" || $0 ~ /PROCESS-NAME|URL-REGEX|AND|OR|NOT/) next;
+
+              # 此时 $1 已经是 host / host-suffix / host-keyword（多亏了前面的 sed）
+              type = tolower($1);
               val = $2;
 
-              # 类型转换映射
-              type = "";
-              if (orig_type == "DOMAIN") type = "host";
-              else if (orig_type == "DOMAIN-SUFFIX") type = "host-suffix";
-              else if (orig_type == "DOMAIN-KEYWORD") type = "host-keyword";
-              else if (orig_type == "IP-CIDR") type = "ip-cidr";
-              else if (orig_type == "IP-CIDR6") type = "ip6-cidr";
-              else if (orig_type == "GEOIP") type = "geoip";
-              else if (orig_type == "IP-ASN") type = "ip-asn";
-              else if (orig_type == "USER-AGENT") type = "user-agent";
-
-              if (type != "" && val != "") {
-                # 策略逻辑判定
-                current_policy = p_name;
+              # 只处理 QX 支持的域名规则类型
+              if (type == "host" || type == "host-suffix" || type == "host-keyword" || type ~ /cidr|geoip|asn|user-agent/) {
                 
-                # 如果是 system 文件，强制使用 direct
+                # 策略逻辑确定
                 if (p_name == "system") {
                   current_policy = "direct";
+                } else {
+                  current_policy = p_name;
                 }
                 
-                # 如果原始行包含 REJECT 关键字，强制保持 reject
+                # 如果原始行（不管大小写）包含 REJECT，强制设为 reject
                 if (toupper($0) ~ /REJECT/) {
                   current_policy = "reject";
                 }
 
-                # 打印最终格式
-                printf("%s, %s, %s\n", type, val, current_policy);
+                # 打印最终 QX 格式
+                if (val != "") {
+                  printf("%s, %s, %s\n", type, val, current_policy);
+                }
               }
             }' "temp_$filename" >> "$output_path"
             
@@ -99,5 +99,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A qx/
-          git commit -m "Fix: DOMAIN-KEYWORD conversion logic (${DATE})" || echo "No changes"
+          git commit -m "Absolute Fix: Ensure host-keyword conversion (${DATE})" || echo "No changes"
           git push
