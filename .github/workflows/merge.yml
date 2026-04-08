@@ -39,7 +39,6 @@ jobs:
           ' module.sgmodule > sg_rules.tmp
 
           # 2️⃣ 清洗 + 去重
-          # 移除 Surge 特有标记，仅保留 "类型,域名" 格式
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -68,7 +67,7 @@ jobs:
             }
           }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 生成 Surge 格式文件 (按主域名排序)
+          # 4️⃣ 生成 Surge 格式文件
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
           awk -F',' '
@@ -79,13 +78,9 @@ jobs:
           }' rules.optimized \
             | sort -k1,1 \
             | cut -f2- \
-            >> "$SURGE_OUT"
+            | sed 's/$/,REJECT/' >> "$SURGE_OUT"
 
           # 5️⃣ 生成 MosDNS 格式文件
-          # 映射逻辑：
-          # DOMAIN -> full:domain
-          # DOMAIN-SUFFIX -> domain:domain
-          # 排除 IP-CIDR 等非域名规则
           MOSDNS_OUT="ads-mosdns.txt"
           echo "# Auto merged MosDNS rules (${DATE})" > "$MOSDNS_OUT"
           awk -F',' '
@@ -95,10 +90,26 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
+          # 6️⃣ 生成 Quantumult X 格式文件 (新增)
+          # 转换逻辑：DOMAIN -> host, DOMAIN-SUFFIX -> host-suffix 等
+          QX_OUT="ads-qx.snippet"
+          echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
+          awk -F',' '
+          {
+            if ($1 == "DOMAIN") print "host, " $2 ", reject"
+            else if ($1 == "DOMAIN-SUFFIX") print "host-suffix, " $2 ", reject"
+            else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
+            else if ($1 == "IP-CIDR") print "ip-cidr, " $2 ", reject"
+            else if ($1 == "IP-CIDR6") print "ip6-cidr, " $2 ", reject"
+            else if ($1 == "GEOIP") print "geoip, " $2 ", reject"
+            else if ($1 == "USER-AGENT") print "user-agent, " $2 ", reject"
+          }' rules.optimized >> "$QX_OUT"
+
       - name: Commit result
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          git add ads-latest.txt ads-mosdns.txt
+          # 确保添加了新生成的 ads-qx.snippet
+          git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
           git commit -m "Update rules (${DATE})" || echo "No changes"
           git push
