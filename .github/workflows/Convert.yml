@@ -5,13 +5,18 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
 
+# 设置全局环境变量以适配 Node.js 24
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   convert:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        # 升级到 v5 以支持更高版本的 Node.js
+        uses: actions/checkout@v5
 
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -20,7 +25,7 @@ jobs:
         run: |
           set -e
           
-          # 1️⃣ 清理并重建 qx 文件夹
+          # 清理并重建 qx 文件夹
           rm -rf qx
           mkdir -p qx
           
@@ -30,7 +35,7 @@ jobs:
           for url in $FILES; do
             filename=$(basename "$url")
             
-            # 2️⃣ 排除指定文件
+            # 排除指定文件
             if [ "$filename" = "RealIP.module" ] || [ "$filename" = "ad.txt" ] || [ "$filename" = "reject-drop.txt" ]; then
               echo "Skipping excluded file: $filename"
               continue
@@ -45,46 +50,27 @@ jobs:
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 3️⃣ 预处理：利用 sed 强行替换关键字（不区分大小写）
-            # 这样在 awk 运行前，文本里就已经全是 host-keyword 了
+            # 预处理与核心转换逻辑
             sed -i 's/DOMAIN-KEYWORD/host-keyword/Ig' "temp_$filename"
             sed -i 's/DOMAIN-SUFFIX/host-suffix/Ig' "temp_$filename"
             sed -i 's/DOMAIN,/host,/Ig' "temp_$filename"
 
-            # 4️⃣ 核心转换逻辑
             awk -F',' -v p_name="$policy_name" '
             {
-              # 清理行末回车符
               gsub(/\r/, "", $0);
-              
-              # 对前三个关键字段分别去除首尾空格
               for (i=1; i<=3; i++) {
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $i);
               }
 
-              # 跳过注释、空行以及 QX 不支持的高级类型
               if ($1 ~ /^#/ || $1 == "" || $0 ~ /PROCESS-NAME|URL-REGEX|AND|OR|NOT/) next;
 
-              # 此时 $1 已经是 host / host-suffix / host-keyword（多亏了前面的 sed）
               type = tolower($1);
               val = $2;
 
-              # 只处理 QX 支持的域名规则类型
               if (type == "host" || type == "host-suffix" || type == "host-keyword" || type ~ /cidr|geoip|asn|user-agent/) {
-                
-                # 策略逻辑确定
-                if (p_name == "system") {
-                  current_policy = "direct";
-                } else {
-                  current_policy = p_name;
-                }
-                
-                # 如果原始行（不管大小写）包含 REJECT，强制设为 reject
-                if (toupper($0) ~ /REJECT/) {
-                  current_policy = "reject";
-                }
+                current_policy = (p_name == "system") ? "direct" : p_name;
+                if (toupper($0) ~ /REJECT/) current_policy = "reject";
 
-                # 打印最终 QX 格式
                 if (val != "") {
                   printf("%s, %s, %s\n", type, val, current_policy);
                 }
@@ -99,5 +85,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A qx/
-          git commit -m "Absolute Fix: Ensure host-keyword conversion (${DATE})" || echo "No changes"
+          git commit -m "Upgrade to Node.js 24 & Sync rules (${DATE})" || echo "No changes"
           git push
