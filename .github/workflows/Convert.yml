@@ -1,4 +1,4 @@
-name: Convert QX
+name: Convert Olocn Rules with Exclusions
 
 on:
   schedule:
@@ -20,7 +20,7 @@ jobs:
         run: |
           set -e
           
-          # 1️⃣ 创建 qx 文件夹
+          # 1️⃣ 創建 qx 檔案夾
           mkdir -p qx
           
           echo "Fetching file list from olocn/rule..."
@@ -29,25 +29,30 @@ jobs:
           for url in $FILES; do
             filename=$(basename "$url")
             
-            # 2️⃣ 提取文件名（不带后缀），例如 game.list -> game
+            # 2️⃣ 排除特定文件
+            if [ "$filename" = "RealIP.module" ] || [ "$filename" = "ad.txt" ] || [ "$filename" = "reject-drop.txt" ]; then
+              echo "Skipping excluded file: $filename"
+              continue
+            fi
+            
+            # 3️⃣ 提取文件名（不帶後綴），例如 game.list -> game
             policy_name="${filename%.*}"
             
-            echo "Processing $filename -> qx/${policy_name}.snippet (Policy: $policy_name)"
+            echo "Processing $filename -> qx/${policy_name}.snippet"
             
             curl -L "$url" -o "temp_$filename"
             
-            # 写入文件头
             output_path="qx/${policy_name}.snippet"
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 3️⃣ 执行转换与策略重命名
+            # 4️⃣ 執行轉換邏輯
             cat "temp_$filename" | sed '/^\s*$/d' | grep -v '^#' | grep -v -E 'PROCESS-NAME|URL-REGEX|AND|OR|NOT' | awk -F',' -v p_name="$policy_name" '
             {
-              # 清除空格和多余参数
+              # 清除空格和多餘參數
               gsub(/no-resolve|extended-matching|pre-matching| /, "", $0);
               
-              # 类型匹配
+              # 類型匹配
               type = ""
               if ($1 == "DOMAIN") type = "host";
               else if ($1 == "DOMAIN-SUFFIX") type = "host-suffix";
@@ -59,11 +64,22 @@ jobs:
               else if ($1 == "USER-AGENT") type = "user-agent";
 
               if (type != "") {
-                # 策略逻辑：如果是 REJECT 则保留 reject，否则改为文件名 (p_name)
-                current_policy = p_name;
-                if ($0 ~ /REJECT/) current_policy = "reject";
+                # --- 策略邏輯判定 ---
                 
-                # 输出 QX 格式
+                if (p_name == "system") {
+                  # 如果文件名是 system，強制使用 direct
+                  current_policy = "direct";
+                } else {
+                  # 其他文件，默認使用文件名作為策略組名
+                  current_policy = p_name;
+                }
+                
+                # 始終保留 REJECT 邏輯
+                if ($0 ~ /REJECT/) {
+                  current_policy = "reject";
+                }
+
+                # 輸出 QX 格式
                 print type ", " $2 ", " current_policy
               }
             }' >> "$output_path"
@@ -75,7 +91,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          # 4️⃣ 添加 qx 文件夹下的所有 snippet
           git add qx/*.snippet
-          git commit -m "Update QX rules in /qx folder (${DATE})" || echo "No changes"
+          git commit -m "Update QX rules with exclusions and system->direct (${DATE})" || echo "No changes"
           git push
