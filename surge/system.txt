@@ -87,12 +87,12 @@ DOMAIN,gm.mmstat.com
 DOMAIN,fairplay.l.qq.com
 DOMAIN,livew.l.qq.com
 DOMAIN,vd.l.qq.com
+DOMAIN-SUFFIX,wechat.com
+DOMAIN,short.weixin.qq.com
 
 DOMAIN,ocsp.godaddy.com
-# Paramount+
 DOMAIN-SUFFIX,edu.cn
-DOMAIN-KEYWORD,short.weixin.qq.com
-DOMAIN-KEYWORD,short.wechat.com
+
 
 IP-CIDR,17.0.0.0/8,no-resolve
 IP-CIDR,10.0.0.0/8,no-resolve
