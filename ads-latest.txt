@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-04-09)
+# Auto merged Surge rules (2026-04-10)
 URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch",REJECT
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com)),REJECT
 AND,((DOMAIN-KEYWORD,adash),(DOMAIN-SUFFIX,ut.taobao.com)),REJECT
