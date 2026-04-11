@@ -31,22 +31,25 @@ jobs:
         run: |
           set -e
 
-          # 1️⃣ 提取 sgmodule 的 [Rule]
+          # 1️⃣ 提取 sgmodule 的 [Rule] 部分
           awk '
             /^\[Rule\]/ {flag=1; next}
             /^\[/ {flag=0}
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 清洗 + 去重
+          # 2️⃣ 清洗：移除所有类型的 REJECT 后缀、空格、干扰项并去重
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
-            | sed 's/,REJECT//g; s/,extended-matching//g; s/,pre-matching//g; s/,no-resolve//g' \
+            | sed -E 's/,(REJECT|reject|REJECT-DROP|reject-drop)//gI' \
+            | sed 's/,extended-matching//g; s/,pre-matching//g; s/,no-resolve//g' \
+            | sed 's/[[:space:]]//g' \
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ DOMAIN-SUFFIX 覆盖 DOMAIN (优化)
+          # 3️⃣ 优化逻辑：DOMAIN-SUFFIX 覆盖 DOMAIN
+          # 如果存在 DOMAIN-SUFFIX,a.com，则删除 DOMAIN,a.com 和 DOMAIN,sub.a.com
           awk -F',' '
           {
             rules[NR] = $0
@@ -57,9 +60,15 @@ jobs:
           END {
             for (i = 1; i <= NR; i++) {
               if (type[i] == "DOMAIN") {
+                # 检查是否完全相等，或者是以 .suffix 结尾（子域名）
+                matched = 0
                 for (s in suffix) {
-                  if (value[i] ~ ("\\." s "$")) skip[i] = 1
+                  if (value[i] == s || value[i] ~ ("\\." s "$")) {
+                    matched = 1
+                    break
+                  }
                 }
+                if (matched) skip[i] = 1
               }
             }
             for (i = 1; i <= NR; i++) {
@@ -67,7 +76,7 @@ jobs:
             }
           }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 生成 Surge 格式文件
+          # 4️⃣ 生成 Surge 格式文件 (末尾统一加回 ,REJECT)
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
           awk -F',' '
@@ -82,16 +91,15 @@ jobs:
 
           # 5️⃣ 生成 MosDNS 格式文件
           MOSDNS_OUT="ads-mosdns.txt"
-          echo "# Auto merged MosDNS rules (${DATE})" > "$MOSDNS_OUT"
-          awk -F',' '
+          echo "# Auto merged MosDNrules (${DATE})" > "$MOSDNS_OUT"
+           awk -F',' '
           {
             if ($1 == "DOMAIN") print "full:" $2
             else if ($1 == "DOMAIN-SUFFIX") print "domain:" $2
             else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
-          # 6️⃣ 生成 Quantumult X 格式文件 (新增)
-          # 转换逻辑：DOMAIN -> host, DOMAIN-SUFFIX -> host-suffix 等
+          # 6️⃣ 生成 Quantumult X 格式文件
           QX_OUT="ads-qx.snippet"
           echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
           awk -F',' '
@@ -109,7 +117,6 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
-          # 确保添加了新生成的 ads-qx.snippet
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
           git commit -m "Update rules (${DATE})" || echo "No changes"
           git push
