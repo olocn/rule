@@ -191,7 +191,6 @@ DOMAIN,tracker.tianmu.mobi
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
 DOMAIN-SUFFIX,jiguang.cn
-DOMAIN-SUFFIX,adashx.m.taobao.com
 DOMAIN-SUFFIX,advlion.com
 DOMAIN,appcfg.v.qq.com
 DOMAIN-SUFFIX,jads.co
@@ -751,7 +750,8 @@ DOMAIN-SUFFIX,2345.cc
 DOMAIN,errortracking.deepl.com
 
 # 阿里
-DOMAIN-SUFFIX,amdc.m.taobao.com
+DOMAIN-SUFFIX,adashx.m.taobao.com
+#DOMAIN-SUFFIX,amdc.m.taobao.com
 # b站
 DOMAIN,grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
