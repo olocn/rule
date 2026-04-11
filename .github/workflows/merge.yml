@@ -8,6 +8,7 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
+    # 强制开启 Node.js 24 以适配 2026 年 GitHub Actions 要求
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -40,7 +41,7 @@ jobs:
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 清洗：移除 REJECT、空格，并根据域名结构进行转换
+          # 2️⃣ 清洗与智能类型转换
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -50,20 +51,23 @@ jobs:
             | awk -F',' '
               BEGIN { OFS="," }
               {
+                # 仅针对 DOMAIN 类型进行判断
                 if ($1 == "DOMAIN") {
                   split($2, parts, ".");
-                  # 判断域名段数：如果是 2 段（如 alicdn.com），则转为 SUFFIX
-                  # 如果是 3 段及以上（如 atanx.alicdn.com），则保持 DOMAIN
+                  # 仅两段式域名（根域名）转为 SUFFIX
                   if (length(parts) == 2) {
                     $1 = "DOMAIN-SUFFIX"
                   }
+                  # 其他子域名（3段及以上）保持 DOMAIN
                 }
+                # 如果原本就是 DOMAIN-SUFFIX，则不论几段都保持原样
                 print $0
               }' \
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ 深度去重：如果有了 SUFFIX 规则，就删掉被它涵盖的冗余 DOMAIN 规则
+          # 3️⃣ 深度优化逻辑：移除冗余规则
+          # 如果有了 DOMAIN-SUFFIX,taobao.com，则自动删除 DOMAIN,adashx.m.taobao.com
           awk -F',' '
           {
             rules[NR] = $0
@@ -76,7 +80,7 @@ jobs:
               skip = 0
               if (type[i] == "DOMAIN") {
                 for (s in suffix_list) {
-                  # 如果该子域名被现有的某个后缀规则包含了，则跳过（去重）
+                  # 如果该子域名被现有的某个后缀规则包含了，则剔除
                   if (val[i] == s || val[i] ~ ("\\." s "$")) {
                     skip = 1
                     break
@@ -84,7 +88,7 @@ jobs:
                 }
               } else if (type[i] == "DOMAIN-SUFFIX") {
                 for (s in suffix_list) {
-                  # 后缀之间的包含关系去重
+                  # 较长的后缀规则如果被较短的覆盖，也剔除
                   if (val[i] != s && val[i] ~ ("\\." s "$")) {
                     skip = 1
                     break
@@ -95,7 +99,8 @@ jobs:
             }
           }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 生成 Surge 格式文件 (移除末尾 ,REJECT)
+          # 4️⃣ 生成各格式文件
+          # Surge 格式：彻底去掉末尾的 ,REJECT
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
           awk -F',' '
@@ -107,7 +112,7 @@ jobs:
             | sort -k1,1 \
             | cut -f2- >> "$SURGE_OUT"
 
-          # 5️⃣ 生成其他格式
+          # MosDNS 格式
           MOSDNS_OUT="ads-mosdns.txt"
           echo "# Auto merged MosDNS rules (${DATE})" > "$MOSDNS_OUT"
           awk -F',' '{
@@ -116,6 +121,7 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
+          # Quantumult X 格式 (保留其标准的 reject 后缀以便正常运行)
           QX_OUT="ads-qx.snippet"
           echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
           awk -F',' '{
@@ -129,5 +135,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
-          git commit -m "Update rules: Smart conversion for root domains (${DATE})" || echo "No changes"
+          git commit -m "Update rules: Keep subdomain types and fix Node version (${DATE})" || echo "No changes"
           git push
