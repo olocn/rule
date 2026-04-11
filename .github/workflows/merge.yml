@@ -8,13 +8,11 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
-    # 强制使用 Node.js 24 环境以消除弃用警告
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
-        # 升级至 v5 以支持 Node 24
         uses: actions/checkout@v5
 
       - name: Set date
@@ -42,43 +40,64 @@ jobs:
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 清洗：去除各种 REJECT 后缀、空格，并将 DOMAIN 统一替换为 DOMAIN-SUFFIX
+          # 2️⃣ 清洗：移除 REJECT、空格，并根据域名结构进行转换
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
             | sed -E 's/,(REJECT|reject|REJECT-DROP|reject-drop)//gI' \
             | sed 's/,extended-matching//g; s/,pre-matching//g; s/,no-resolve//g' \
             | sed 's/[[:space:]]//g' \
-            | sed 's/^DOMAIN,/DOMAIN-SUFFIX,/g' \
+            | awk -F',' '
+              BEGIN { OFS="," }
+              {
+                if ($1 == "DOMAIN") {
+                  split($2, parts, ".");
+                  # 判断域名段数：如果是 2 段（如 alicdn.com），则转为 SUFFIX
+                  # 如果是 3 段及以上（如 atanx.alicdn.com），则保持 DOMAIN
+                  if (length(parts) == 2) {
+                    $1 = "DOMAIN-SUFFIX"
+                  }
+                }
+                print $0
+              }' \
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ 优化：处理 DOMAIN-SUFFIX 的包含关系 (去重)
-          # 如果存在 DOMAIN-SUFFIX,a.com，则删除 DOMAIN-SUFFIX,sub.a.com
+          # 3️⃣ 深度去重：如果有了 SUFFIX 规则，就删掉被它涵盖的冗余 DOMAIN 规则
           awk -F',' '
           {
             rules[NR] = $0
-            val[NR] = $2
+            type[NR]  = $1
+            val[NR]   = $2
             if ($1 == "DOMAIN-SUFFIX") suffix_list[$2] = 1
           }
           END {
             for (i = 1; i <= NR; i++) {
               skip = 0
-              for (s in suffix_list) {
-                # 如果当前的域名是另一个域名的子域名，且两者不相等，则标记跳过
-                if (val[i] != s && val[i] ~ ("\\." s "$")) {
-                  skip = 1
-                  break
+              if (type[i] == "DOMAIN") {
+                for (s in suffix_list) {
+                  # 如果该子域名被现有的某个后缀规则包含了，则跳过（去重）
+                  if (val[i] == s || val[i] ~ ("\\." s "$")) {
+                    skip = 1
+                    break
+                  }
+                }
+              } else if (type[i] == "DOMAIN-SUFFIX") {
+                for (s in suffix_list) {
+                  # 后缀之间的包含关系去重
+                  if (val[i] != s && val[i] ~ ("\\." s "$")) {
+                    skip = 1
+                    break
+                  }
                 }
               }
               if (!skip) print rules[i]
             }
           }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 生成 Surge 格式文件 (根据要求：去除所有 ,REJECT)
+          # 4️⃣ 生成 Surge 格式文件 (移除末尾 ,REJECT)
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
-          echo "# Total Rules: $(wc -l < rules.optimized)" >> "$SURGE_OUT"
           awk -F',' '
           {
             split($2, d, ".");
@@ -88,25 +107,21 @@ jobs:
             | sort -k1,1 \
             | cut -f2- >> "$SURGE_OUT"
 
-          # 5️⃣ 生成 MosDNS 格式文件
+          # 5️⃣ 生成其他格式
           MOSDNS_OUT="ads-mosdns.txt"
           echo "# Auto merged MosDNS rules (${DATE})" > "$MOSDNS_OUT"
-          awk -F',' '
-          {
+          awk -F',' '{
             if ($1 == "DOMAIN-SUFFIX") print "domain:" $2
-            else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
             else if ($1 == "DOMAIN") print "full:" $2
+            else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
-          # 6️⃣ 生成 Quantumult X 格式文件
           QX_OUT="ads-qx.snippet"
           echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
-          awk -F',' '
-          {
+          awk -F',' '{
             if ($1 == "DOMAIN-SUFFIX") print "host-suffix, " $2 ", reject"
+            else if ($1 == "DOMAIN") print "host, " $2 ", reject"
             else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
-            else if ($1 == "IP-CIDR") print "ip-cidr, " $2 ", reject"
-            else if ($1 == "IP-CIDR6") print "ip6-cidr, " $2 ", reject"
           }' rules.optimized >> "$QX_OUT"
 
       - name: Commit result
@@ -114,5 +129,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
-          git commit -m "Update rules: convert DOMAIN to SUFFIX and fix Node env (${DATE})" || echo "No changes"
+          git commit -m "Update rules: Smart conversion for root domains (${DATE})" || echo "No changes"
           git push
