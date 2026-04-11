@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-04-10)
+# Auto merged MosDNrules (2026-04-11)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
@@ -174,7 +174,6 @@ full:retcode.alicdn.com
 full:arms-retcode.aliyuncs.com
 full:huichuan.sm.cn
 full:huichuan-mc.sm.cn
-full:nex.163.com
 full:iad.g.163.com
 full:gorgon.youdao.com
 domain:ad.xiaomi.com
@@ -222,7 +221,6 @@ domain:xdplt.com
 full:ads.cup.com.cn
 domain:adjust.com
 domain:adjust.net.in
-full:app-analytics-services.com
 full:odm.app-ads-services.com
 full:firebaselogging-pa.googleapis.com
 full:firebaseinappmessaging.googleapis.com
@@ -236,7 +234,6 @@ domain:sigmob.cn
 domain:richmob.cn
 full:ad.shunchangzhixing.com
 full:redirect.shunchangzhixing.com
-full:api.touch-moblie.com
 domain:api.touch-moblie.com
 full:mercury-gateway.ixiaochuan.cn
 full:adapi.izuiyou.com
@@ -384,7 +381,6 @@ domain:detailroi.com
 full:rou.one
 full:www.google-analytics.com
 domain:ad.gameley.com
-domain:adashx.m.taobao.com
 full:appcfg.v.qq.com
 domain:jads.co
 full:event.northghost.com
@@ -398,7 +394,6 @@ domain:resolver.msg.xiaomi.net
 domain:app.chat.xiaomi.net
 domain:relay.mimc.chat.xiaomi.net
 full:httpdns.browser.miui.com
-full:resolver.msg.xiaomi.net
 full:trade.m.xiaomiyoupin.com
 domain:tracking.intl.miui.com
 full:app.posthog.com
@@ -883,7 +878,6 @@ full:app.miwifi.com
 full:log.miwifi.com
 domain:blackhole.m.jd.com
 domain:ra7.xyz
-full:log.aliyuncs.com
 domain:app-analytics-services.com
 domain:js96110.com.cn
 domain:iot.smartmidea.net
@@ -895,7 +889,7 @@ domain:2345.cn
 domain:2345.net
 domain:2345.cc
 full:errortracking.deepl.com
-domain:amdc.m.taobao.com
+domain:adashx.m.taobao.com
 full:grpc.biliapi.net
 domain:dataflow.biliapi.com
 full:abyss.cyapi.cn
@@ -927,7 +921,6 @@ full:resolvers-cn.httpdns.aliyuncs.com
 full:ams-httpdns.aliyuncs.com.gds.alibabadns.com
 full:guide-acs.m.taobao.com.gds.alibabadns.com
 full:unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
-full:dns.weixin.qq.com
 full:dns.weixin.qq.com.cn
 full:1500020991.vodplayer.wxamedia.com
 full:1500022744.vodplayer.wxamedia.com
@@ -938,7 +931,6 @@ full:a0.app.xiaomi.com
 full:abtest-ch.snssdk.com
 full:ad-cdn.qingting.fm
 full:ad-scope.com
-full:ad-scope.com.cn
 full:ad-sdk-config.youdao.com
 full:ad-splash-tracking.hktvmall.com
 full:ad-splash.hktvmall.com
@@ -947,7 +939,6 @@ full:ad.51wnl.com
 full:ad.api.3g.youku.com
 full:ad.bwton.com
 full:ad.cctv.com
-full:ad.gameley.com
 full:ad.hpplay.cn
 full:ad.qingting.fm
 full:ad.qq.com
@@ -961,8 +952,6 @@ full:ad.xunkids.com
 full:ad.zijieapi.com
 full:adapi.yynetwk.com
 full:adashbc.ut.taobao.com
-full:adashx.m.taobao.com
-full:adashxgc.ut.taobao.com
 full:adc.hpplay.cn
 full:adcdn.hpplay.cn
 full:adcdn.tencentmusic.com
@@ -977,7 +966,6 @@ full:adfilter.imtt.qq.com
 full:adguanggao.eee114.com
 full:adimg.uve.weibo.com
 full:adjust.cn
-full:adjust.com
 full:adks.hpplay.cn
 full:adlink-api.huan.tv
 full:adm.funshion.com
@@ -1077,7 +1065,6 @@ full:analysis.chatglm.cn
 full:analysis.yozocloud.cn
 full:analytics-api.samsunghealthcn.com
 full:analytics.adjust.cn
-full:analytics.oceanengine.com
 full:analytics.pinterest.com
 full:analytics.pointdrive.linkedin.com
 full:analytics.query.yahoo.com
@@ -1116,7 +1103,6 @@ full:app-measurement.com
 full:applog-perf.uc.cn
 full:applog.lc.quark.cn
 full:applog.zijieapi.com
-full:applovin.com
 full:aqyad.com
 full:audid-api.taobao.com
 full:b1-data.ads.heytapmobi.com
@@ -1128,9 +1114,7 @@ full:bdapi-in-ads.realmemobile.com
 full:bdapi.ads.oppomobile.com
 full:bdcdncnc.inter.71edge.com
 full:beacon.qq.com
-full:beaconcdn.qq.com
 full:beacons.gvt2.com
-full:beizi.biz
 full:bes-mtj.baidu.com
 full:bianxian.com
 full:bingads.microsoft.com
@@ -1188,7 +1172,6 @@ full:de.tynt.com
 full:dlogs.bwton.com
 full:dm.toutiao.com
 full:domain.aishengji.com
-full:doubleclick-cn.net
 full:download.changhong.upgrade2.huan.tv
 full:downloadxml.changhong.upgrade2.huan.tv
 full:dsp.fcbox.com
@@ -1203,8 +1186,6 @@ full:entry.baidu.com
 full:events-drcn.op.dbankcloud.cn
 full:events.reddit.com
 full:events.redditmedia.com
-full:fancyapi.com
-full:fclog.baidu.com
 full:file.daihuo.qq.com
 full:flurry.com
 full:frontend-perf-service.e.kuaishou.com
@@ -1251,7 +1232,6 @@ full:hybrid.miniapp.taobao.com
 full:iad.apple.com
 full:iadctest.qwapi.com
 full:iadmusicmat.music.126.net
-full:iadsdk.apple.com
 full:iadworkbench.apple.com
 full:ifacelog.iqiyi.com
 full:ifs.tanx.com
@@ -1273,10 +1253,7 @@ full:ipv4.kkmh.com
 full:irc.qubiankeji.com
 full:ixav-cse.avlyun.com
 full:iyfbodn.com
-full:jiguang.cn
-full:jpush.cn
 full:jpush.html5.qq.com
-full:jpush.io
 full:jswebcollects.kugou.com
 full:kde.qq.com
 full:kepler.jd.com
@@ -1337,8 +1314,6 @@ full:mapi.m.jd.com
 full:masdkv6.3g.qq.com
 full:mazu.m.qq.com
 full:mbdlog.iqiyi.com
-full:mcs.zijieapi.com
-full:medproad.com
 full:metrics.icloud.com
 full:metrics.mzstatic.com
 full:metrika.yandex.ru
@@ -1393,12 +1368,10 @@ full:p2pupgrade.gamedl.qq.com
 full:p3-tt.byteimg.com
 full:pagead2.googleadservices.com
 full:pagead2.googlesyndication.com
-full:pangolin-sdk-toutiao-b.com
 full:pay.sboot.cn
 full:pcdn.xmcdn.com
 full:pcdn.yximgs.com
 full:pcm-img.zhls.qq.com
-full:pglstatp-toutiao.com
 full:pig.pupuapi.com
 full:pin.hpplay.cn
 full:pixon.ads-pixiv.net
@@ -1406,7 +1379,6 @@ full:pkoplink.com
 full:pl.cp31.ott.cibntv.net
 full:pms.mb.qq.com
 full:policy.video.ptqy.gitv.tv
-full:pos.baidu.com
 full:promotion-partner.kuaishou.com
 full:proxy.advp.apple.com
 full:public.gdtimg.com
@@ -1453,7 +1425,6 @@ full:search5-search-hl.ixigua.com
 full:search5-search.ixigua.com
 full:securemetrics.apple.com
 full:sensors-log.dongqiudi.com
-full:sentry.music.163.com
 full:service.changhong.upgrade2.huan.tv
 full:service.vmos.cn
 full:sf16-static.i18n-pglstatp.com
@@ -1487,7 +1458,6 @@ full:t.teads.tv
 full:t002.ottcn.com
 full:t1.teads.tv
 full:t7z.cupid.ptqy.gitv.tv
-full:tagtic.cn
 full:target.ads.jihuoniao.com
 full:tdc.qq.com
 full:tdsdk.cpatrk.net
@@ -1548,8 +1518,6 @@ full:umengacs.m.taobao.com
 full:umengjmacs.m.taobao.com
 full:umini.shujupie.com
 full:union-mlog.bigda.com
-full:union.baidu.cn
-full:union.baidu.com
 full:update.avlyun.sec.miui.com
 full:update.lejiao.tv
 full:update0.aiclk.com
