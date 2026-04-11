@@ -8,13 +8,13 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
-    # 提前开启 Node 24 运行环境以消除警告
+    # 强制使用 Node.js 24 环境以消除弃用警告
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
-        # 升级到 v5 以原生支持 Node 24
+        # 升级至 v5 以支持 Node 24
         uses: actions/checkout@v5
 
       - name: Set date
@@ -42,48 +42,43 @@ jobs:
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 清洗：去除所有后缀、空格并去重
-          # 核心改动：正则匹配各种 reject 变体并删除
+          # 2️⃣ 清洗：去除各种 REJECT 后缀、空格，并将 DOMAIN 统一替换为 DOMAIN-SUFFIX
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
             | sed -E 's/,(REJECT|reject|REJECT-DROP|reject-drop)//gI' \
             | sed 's/,extended-matching//g; s/,pre-matching//g; s/,no-resolve//g' \
             | sed 's/[[:space:]]//g' \
+            | sed 's/^DOMAIN,/DOMAIN-SUFFIX,/g' \
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ 优化：DOMAIN-SUFFIX 覆盖 DOMAIN
-          # 如果存在 DOMAIN-SUFFIX,jpush.io，则删除 DOMAIN,jpush.io
+          # 3️⃣ 优化：处理 DOMAIN-SUFFIX 的包含关系 (去重)
+          # 如果存在 DOMAIN-SUFFIX,a.com，则删除 DOMAIN-SUFFIX,sub.a.com
           awk -F',' '
           {
             rules[NR] = $0
-            type[NR]  = $1
-            value[NR] = $2
-            if ($1 == "DOMAIN-SUFFIX") suffix[$2] = 1
+            val[NR] = $2
+            if ($1 == "DOMAIN-SUFFIX") suffix_list[$2] = 1
           }
           END {
             for (i = 1; i <= NR; i++) {
-              if (type[i] == "DOMAIN") {
-                matched = 0
-                for (s in suffix) {
-                  # 匹配完全相等 (jpush.io) 或子域名 (.jpush.io)
-                  if (value[i] == s || value[i] ~ ("\\." s "$")) {
-                    matched = 1
-                    break
-                  }
+              skip = 0
+              for (s in suffix_list) {
+                # 如果当前的域名是另一个域名的子域名，且两者不相等，则标记跳过
+                if (val[i] != s && val[i] ~ ("\\." s "$")) {
+                  skip = 1
+                  break
                 }
-                if (matched) skip[i] = 1
               }
-            }
-            for (i = 1; i <= NR; i++) {
-              if (!skip[i]) print rules[i]
+              if (!skip) print rules[i]
             }
           }' rules.cleaned > rules.optimized
 
           # 4️⃣ 生成 Surge 格式文件 (根据要求：去除所有 ,REJECT)
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
+          echo "# Total Rules: $(wc -l < rules.optimized)" >> "$SURGE_OUT"
           awk -F',' '
           {
             split($2, d, ".");
@@ -95,12 +90,12 @@ jobs:
 
           # 5️⃣ 生成 MosDNS 格式文件
           MOSDNS_OUT="ads-mosdns.txt"
-          echo "# Auto merged MosDNrules (${DATE})" > "$MOSDNS_OUT"
-           awk -F',' '
+          echo "# Auto merged MosDNS rules (${DATE})" > "$MOSDNS_OUT"
+          awk -F',' '
           {
-            if ($1 == "DOMAIN") print "full:" $2
-            else if ($1 == "DOMAIN-SUFFIX") print "domain:" $2
+            if ($1 == "DOMAIN-SUFFIX") print "domain:" $2
             else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
+            else if ($1 == "DOMAIN") print "full:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
           # 6️⃣ 生成 Quantumult X 格式文件
@@ -108,8 +103,7 @@ jobs:
           echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
           awk -F',' '
           {
-            if ($1 == "DOMAIN") print "host, " $2 ", reject"
-            else if ($1 == "DOMAIN-SUFFIX") print "host-suffix, " $2 ", reject"
+            if ($1 == "DOMAIN-SUFFIX") print "host-suffix, " $2 ", reject"
             else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
             else if ($1 == "IP-CIDR") print "ip-cidr, " $2 ", reject"
             else if ($1 == "IP-CIDR6") print "ip6-cidr, " $2 ", reject"
@@ -120,5 +114,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
-          git commit -m "Update rules and fix Node deprecation (${DATE})" || echo "No changes"
+          git commit -m "Update rules: convert DOMAIN to SUFFIX and fix Node env (${DATE})" || echo "No changes"
           git push
