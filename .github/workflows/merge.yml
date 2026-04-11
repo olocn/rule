@@ -8,10 +8,14 @@ on:
 jobs:
   merge:
     runs-on: ubuntu-latest
+    # 提前开启 Node 24 运行环境以消除警告
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        # 升级到 v5 以原生支持 Node 24
+        uses: actions/checkout@v5
 
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -31,14 +35,15 @@ jobs:
         run: |
           set -e
 
-          # 1️⃣ 提取 sgmodule 的 [Rule] 部分
+          # 1️⃣ 提取 sgmodule 的 [Rule]
           awk '
             /^\[Rule\]/ {flag=1; next}
             /^\[/ {flag=0}
             flag {print}
           ' module.sgmodule > sg_rules.tmp
 
-          # 2️⃣ 清洗：移除所有类型的 REJECT 后缀、空格、干扰项并去重
+          # 2️⃣ 清洗：去除所有后缀、空格并去重
+          # 核心改动：正则匹配各种 reject 变体并删除
           cat sg_rules.tmp ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -48,8 +53,8 @@ jobs:
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 3️⃣ 优化逻辑：DOMAIN-SUFFIX 覆盖 DOMAIN
-          # 如果存在 DOMAIN-SUFFIX,a.com，则删除 DOMAIN,a.com 和 DOMAIN,sub.a.com
+          # 3️⃣ 优化：DOMAIN-SUFFIX 覆盖 DOMAIN
+          # 如果存在 DOMAIN-SUFFIX,jpush.io，则删除 DOMAIN,jpush.io
           awk -F',' '
           {
             rules[NR] = $0
@@ -60,9 +65,9 @@ jobs:
           END {
             for (i = 1; i <= NR; i++) {
               if (type[i] == "DOMAIN") {
-                # 检查是否完全相等，或者是以 .suffix 结尾（子域名）
                 matched = 0
                 for (s in suffix) {
+                  # 匹配完全相等 (jpush.io) 或子域名 (.jpush.io)
                   if (value[i] == s || value[i] ~ ("\\." s "$")) {
                     matched = 1
                     break
@@ -76,7 +81,7 @@ jobs:
             }
           }' rules.cleaned > rules.optimized
 
-          # 4️⃣ 生成 Surge 格式文件 (末尾统一加回 ,REJECT)
+          # 4️⃣ 生成 Surge 格式文件 (根据要求：去除所有 ,REJECT)
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
           awk -F',' '
@@ -86,8 +91,7 @@ jobs:
             print root "\t" $0
           }' rules.optimized \
             | sort -k1,1 \
-            | cut -f2- \
-            | sed 's/$/,REJECT/' >> "$SURGE_OUT"
+            | cut -f2- >> "$SURGE_OUT"
 
           # 5️⃣ 生成 MosDNS 格式文件
           MOSDNS_OUT="ads-mosdns.txt"
@@ -109,8 +113,6 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
             else if ($1 == "IP-CIDR") print "ip-cidr, " $2 ", reject"
             else if ($1 == "IP-CIDR6") print "ip6-cidr, " $2 ", reject"
-            else if ($1 == "GEOIP") print "geoip, " $2 ", reject"
-            else if ($1 == "USER-AGENT") print "user-agent, " $2 ", reject"
           }' rules.optimized >> "$QX_OUT"
 
       - name: Commit result
@@ -118,5 +120,5 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
-          git commit -m "Update rules (${DATE})" || echo "No changes"
+          git commit -m "Update rules and fix Node deprecation (${DATE})" || echo "No changes"
           git push
