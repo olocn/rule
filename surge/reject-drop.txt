@@ -111,7 +111,7 @@ DOMAIN,apple-safebrowsing.googleapis.com
 DOMAIN,mall.bilibili.com
 DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
-DOMAIN,upos-sz-mirrorcos.bilivideo.com
+#DOMAIN,upos-sz-mirrorcos.bilivideo.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,biligame.com
 
