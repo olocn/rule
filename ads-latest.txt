@@ -324,7 +324,6 @@ DOMAIN-SUFFIX,data.bilibili.com
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN,httpdns.bilivideo.com
-DOMAIN,upos-sz-mirrorcos.bilivideo.com
 DOMAIN-SUFFIX,birdgesdk.com
 DOMAIN,log.bitauto.com
 DOMAIN-SUFFIX,carstat.bitauto.com

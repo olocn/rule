@@ -343,7 +343,6 @@ full:apple-safebrowsing.googleapis.com
 full:mall.bilibili.com
 full:api.vc.bilibili.com
 full:broadcast.chat.bilibili.com
-full:upos-sz-mirrorcos.bilivideo.com
 domain:mcdn.bilivideo.cn
 domain:biligame.com
 domain:tagtic.cn
