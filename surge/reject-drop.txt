@@ -16,6 +16,8 @@ DOMAIN-SUFFIX,xinyuhongyuan.com
 DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,zeroonead.com
 
+#农行
+DOMAIN,msmp.abchina.com.cn
 # 猫头鹰
 DOMAIN,www.skyjos.com
 #高德 
