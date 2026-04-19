@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-04-18)
+# Auto merged MosDNS rules (2026-04-19)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
@@ -282,6 +282,7 @@ domain:ndcjl.com
 full:ad.hunyuan.tencent.com
 domain:xinyuhongyuan.com
 domain:zeroonead.com
+full:msmp.abchina.com.cn
 full:www.skyjos.com
 full:amap-aos-info-nogw.amap.com
 full:free-aos-cdn-image.amap.com
