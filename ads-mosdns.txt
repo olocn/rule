@@ -274,6 +274,9 @@ domain:moloco.com
 domain:rayjump.com
 domain:rixengine.com
 domain:amazon-adsystem.com
+full:xg.pinduoduo.com
+full:api.pinduoduo.com
+full:apm-a.pinduoduo.com
 domain:logs.chelaile.net.cn
 domain:easytomessage.com
 domain:atrace.chelaile.net.cn

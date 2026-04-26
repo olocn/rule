@@ -986,8 +986,11 @@ DOMAIN,video-dsp.pddpic.com
 DOMAIN-KEYWORD,-be-pack-sign.pglstatp-toutiao.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,phpstat.com
+DOMAIN,api.pinduoduo.com
+DOMAIN,apm-a.pinduoduo.com
 DOMAIN,images.pinduoduo.com
 DOMAIN,t-dsp.pinduoduo.com
+DOMAIN,xg.pinduoduo.com
 DOMAIN,ads.pinterest.com
 DOMAIN,analytics.pinterest.com
 DOMAIN,log.pinterest.com
