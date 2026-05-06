@@ -12,7 +12,9 @@ DOMAIN-SUFFIX,n.n.srv.nintendo.net
 
 #海星
 DOMAIN-SUFFIX,livehwc4.com
-
+DOMAIN-KEYWORD,haixing
+DOMAIN-SUFFIX,lanjing.vip
+DOMAIN-SUFFIX,zkreen.com
 #other
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsccbcc.com
