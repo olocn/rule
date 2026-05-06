@@ -95,10 +95,3 @@ DOMAIN-SUFFIX,wechat.com
 DOMAIN,short.weixin.qq.com
 
 DOMAIN,ocsp.godaddy.com
-DOMAIN-SUFFIX,edu.cn
-
-
-IP-CIDR,17.0.0.0/8,no-resolve
-IP-CIDR,10.0.0.0/8,no-resolve
-IP-CIDR,112.90.216.0/21,no-resolve
-IP-CIDR,106.39.192.0/19,no-resolve
