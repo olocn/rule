@@ -37,23 +37,6 @@ IP-CIDR,91.108.20.0/22,no-resolve
 IP-CIDR,185.76.151.0/24,no-resolve
 IP-CIDR,5.28.192.0/18,no-resolve
 
-# apple
-DOMAIN-SUFFIX,aaplimg.com
-DOMAIN-SUFFIX,apple-dns.net
-DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com
-DOMAIN-SUFFIX,appstore.com
-DOMAIN-SUFFIX,cdn-apple.com
-DOMAIN-SUFFIX,crashlytics.com
-DOMAIN-SUFFIX,icloud.com
-DOMAIN-SUFFIX,icloud-content.com
-DOMAIN-SUFFIX,me.com
-DOMAIN-SUFFIX,organicfruitapps.com
-DOMAIN-SUFFIX,apple-cloudkit.com
-DOMAIN-SUFFIX,appsto.re
-DOMAIN-SUFFIX,itunes.com
-DOMAIN-SUFFIX,apple.news
-
 # ea
 DOMAIN-SUFFIX,ea.com
 DOMAIN-SUFFIX,hevyapp.com
@@ -103,14 +86,12 @@ DOMAIN-SUFFIX,microsoftapp.net
 DOMAIN-SUFFIX,microsoft-falcon.io
 DOMAIN-SUFFIX,us-east-1.amazonaws.com
 DOMAIN-SUFFIX,cool18.com
-DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,sfx.ms
 DOMAIN-SUFFIX,msftauth.net
 DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,img.3mo.net
 DOMAIN-SUFFIX,wsrv.nl
 DOMAIN-SUFFIX,picture.jjhxmc.com
-DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN,api.nexconvert.com
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,siftrss.com
@@ -135,7 +116,6 @@ DOMAIN-SUFFIX,imagebam.com
 DOMAIN-SUFFIX,mgstage.com
 DOMAIN-SUFFIX,p-cdn.top
 DOMAIN-SUFFIX,1drv.com
-DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,9cache.com
 DOMAIN-SUFFIX,9gag.com
 DOMAIN-SUFFIX,abc.com
@@ -162,7 +142,6 @@ DOMAIN-SUFFIX,androidtv.com
 DOMAIN-SUFFIX,apigee.com
 DOMAIN-SUFFIX,appspot.com
 DOMAIN-SUFFIX,appsto.re
-DOMAIN-WILDCARD,archive.*
 DOMAIN-SUFFIX,archiveofourown.org
 DOMAIN-SUFFIX,artstation.com
 DOMAIN-SUFFIX,ask.com
@@ -179,7 +158,6 @@ DOMAIN-SUFFIX,binance.cc
 DOMAIN-SUFFIX,binance.com
 DOMAIN-SUFFIX,binance.me
 DOMAIN-SUFFIX,binance.us
-DOMAIN-SUFFIX,bing.com
 DOMAIN-SUFFIX,bit.ly
 DOMAIN-SUFFIX,bitcointalk.org
 DOMAIN-SUFFIX,bitfinex.com
@@ -259,7 +237,6 @@ DOMAIN-SUFFIX,fb.com
 DOMAIN-SUFFIX,fb.me
 DOMAIN-SUFFIX,fb.watch
 DOMAIN-SUFFIX,fbaddins.com
-DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,fbsbx.com
 DOMAIN-SUFFIX,fbworkmail.com
 DOMAIN-SUFFIX,feedburner.com
@@ -291,17 +268,13 @@ DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,githubassets.com
 DOMAIN-SUFFIX,githubusercontent.com
 DOMAIN-SUFFIX,gitlab.io
-DOMAIN-SUFFIX,gmail.com
 DOMAIN-SUFFIX,gmodules.com
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
-DOMAIN-SUFFIX,googleapis.com
-DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,graphql.org
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,gstatic.com
-DOMAIN-WILDCARD,gvt?.com
 DOMAIN-SUFFIX,hackmd.io
 DOMAIN-SUFFIX,heroku.com
 DOMAIN-SUFFIX,hket.com
@@ -393,7 +366,6 @@ DOMAIN-SUFFIX,nytlog.com
 DOMAIN-SUFFIX,nytstyle.com
 DOMAIN-SUFFIX,oculus.com
 DOMAIN-SUFFIX,oculuscdn.com
-DOMAIN-SUFFIX,office365.com
 DOMAIN-SUFFIX,ok.ru
 DOMAIN-SUFFIX,okex.com
 DOMAIN-SUFFIX,okx.com
@@ -443,12 +415,10 @@ DOMAIN-SUFFIX,scribd.com
 DOMAIN-SUFFIX,seamless.icu
 DOMAIN-SUFFIX,search.com
 DOMAIN-SUFFIX,segment.com
-DOMAIN-SUFFIX,sentry.io
 DOMAIN-SUFFIX,sexyno1.com
 DOMAIN-SUFFIX,shutterstock.com
 DOMAIN-SUFFIX,signal.org
 DOMAIN-SUFFIX,sketchappsources.com
-DOMAIN-SUFFIX,skype.com
 DOMAIN-SUFFIX,slideshare.net
 DOMAIN-SUFFIX,sm.ms
 DOMAIN-SUFFIX,smartmailcloud.com
@@ -469,7 +439,6 @@ DOMAIN-SUFFIX,substack.com
 DOMAIN-SUFFIX,sushi.com
 DOMAIN-SUFFIX,svc.ms
 DOMAIN-SUFFIX,swissinfo.ch
-DOMAIN-SUFFIX,t.co
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tapatalk.com
 DOMAIN-SUFFIX,tawk.to
@@ -504,16 +473,10 @@ DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,turbobit.net
 DOMAIN-SUFFIX,tutanota.com
 DOMAIN-SUFFIX,tweetdeck.com
-DOMAIN-SUFFIX,twimg.co
-DOMAIN-SUFFIX,twimg.com
-DOMAIN-SUFFIX,twitpic.com
-DOMAIN-SUFFIX,twitter.com
-DOMAIN-SUFFIX,twitter.jp
 DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,uniswap.org
 DOMAIN-SUFFIX,upercell.helpshift.com
 DOMAIN-SUFFIX,urbandictionary.com
-DOMAIN-WILDCARD,us-*-2.amazonaws.com
 DOMAIN-SUFFIX,ustream.tv
 DOMAIN-SUFFIX,venturebeat.com
 DOMAIN-SUFFIX,viber.com
@@ -564,8 +527,6 @@ DOMAIN-SUFFIX,yahoo.com
 DOMAIN-SUFFIX,yande.re
 DOMAIN-SUFFIX,yandex.ru
 DOMAIN-SUFFIX,you-get.org
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,zaobao.com
 DOMAIN-SUFFIX,zaobao.com.sg
 DOMAIN-SUFFIX,zb.com
@@ -585,26 +546,7 @@ DOMAIN-SUFFIX,cacerts.digicert.com
 DOMAIN-SUFFIX,cacerts.digitalcertvalidation.com
 DOMAIN-SUFFIX,clubhouse.pubnubapi.com
 DOMAIN-SUFFIX,cloudfront.net
-# apple
-DOMAIN-SUFFIX,itunes.apple.com
-DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,apps.apple.com
-DOMAIN-SUFFIX,itunes-apple.com.akadns.net
-DOMAIN-SUFFIX,apple.comscoreresearch.com
-DOMAIN-SUFFIX,beta.music.apple.com
-DOMAIN-SUFFIX,books.apple.com
-DOMAIN-SUFFIX,news-assets.apple.com
-DOMAIN-SUFFIX,news-client.apple.com
-DOMAIN-SUFFIX,news-client-search.apple.com
-DOMAIN-SUFFIX,news-edge.apple.com
-DOMAIN-SUFFIX,news-events.apple.com
-DOMAIN-SUFFIX,testflight.apple.com
-DOMAIN-SUFFIX,tv.apple.com
-DOMAIN,gg.apple.com
-DOMAIN,gdmf.apple.com
-DOMAIN,mesu.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,updates-http.cdn-apple.com
+
 DOMAIN-SUFFIX,lab.skk.moe
 DOMAIN-SUFFIX,ocsp.int-x3.letsencrypt.org
 DOMAIN-SUFFIX,payments-jp.amazon.com
