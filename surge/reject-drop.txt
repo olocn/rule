@@ -62,6 +62,7 @@ DOMAIN,bossjs.rosfky.cn
 DOMAIN,oia.zhihu.com
 
 # 360
+DOMAIN-SUFFIX,qianxin.com
 DOMAIN-SUFFIX,360.cn
 DOMAIN-SUFFIX,360os.com
 DOMAIN-SUFFIX,360tpcdn.com
