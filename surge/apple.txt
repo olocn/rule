@@ -1,7 +1,7 @@
 # apple
 DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
-DOMAIN-WILDCARD,a*.mzstatic.com
+DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
 DOMAIN-SUFFIX,adcdownload.apple.com
 DOMAIN-SUFFIX,amp-api.media.apple.com
@@ -14,7 +14,7 @@ DOMAIN-SUFFIX,appldnld.g.aaplimg.com
 DOMAIN-SUFFIX,appleid.cdn-apple.com
 DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,apps.mzstatic.com
-DOMAIN-WILDCARD,cdn*.apple-mapkit.com
+DOMAIN-SUFFIX,apple-mapkit.com
 DOMAIN-SUFFIX,cds-cdn.v.aaplimg.com
 DOMAIN-SUFFIX,cds.apple.com.akadns.net
 DOMAIN-SUFFIX,cds.apple.com
