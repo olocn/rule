@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-05-09)
+# Auto merged MosDNS rules (2026-05-10)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
@@ -310,6 +310,7 @@ domain:t44r60.com
 domain:xdmi4s.com
 full:bossjs.rosfky.cn
 full:oia.zhihu.com
+domain:qianxin.com
 domain:360.cn
 domain:360os.com
 domain:360tpcdn.com
