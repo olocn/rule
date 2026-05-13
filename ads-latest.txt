@@ -926,10 +926,10 @@ DOMAIN,metrics.mzstatic.com
 DOMAIN-SUFFIX,tr.n2.hk
 DOMAIN-SUFFIX,natterresail.com
 DOMAIN-SUFFIX,ndcjl.com
+DOMAIN,logs.chelaile.net.cn
 DOMAIN-SUFFIX,admobile.net.cn
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,audit.qiuwen.net.cn
-DOMAIN-SUFFIX,logs.chelaile.net.cn
 DOMAIN-SUFFIX,adjust.net.in
 DOMAIN-SUFFIX,da.netease.com
 DOMAIN-SUFFIX,pr.nss.netease.com
@@ -988,8 +988,19 @@ DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,phpstat.com
 DOMAIN,api.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
+DOMAIN,apm-b.pinduoduo.com
+DOMAIN,apm.pinduoduo.com
+DOMAIN,click.pinduoduo.com
+DOMAIN,crash.pinduoduo.com
 DOMAIN,images.pinduoduo.com
+DOMAIN,log.pinduoduo.com
+DOMAIN,m-apm.pinduoduo.com
+DOMAIN,m-log.pinduoduo.com
 DOMAIN,t-dsp.pinduoduo.com
+DOMAIN,t-log.pinduoduo.com
+DOMAIN,th.pinduoduo.com
+DOMAIN,track.pinduoduo.com
+DOMAIN,trk.pinduoduo.com
 DOMAIN,xg.pinduoduo.com
 DOMAIN,ads.pinterest.com
 DOMAIN,analytics.pinterest.com
@@ -1056,6 +1067,7 @@ DOMAIN,bsrv.qq.com
 DOMAIN,c.gj.qq.com
 DOMAIN,cfg.imtt.qq.com
 DOMAIN,commdata.v.qq.com
+DOMAIN,dns.weixin.qq.com
 DOMAIN,file.daihuo.qq.com
 DOMAIN,h.trace.qq.com
 DOMAIN,huatuocode.huatuo.qq.com
@@ -1117,7 +1129,6 @@ DOMAIN-KEYWORD,trace.qq.com
 DOMAIN-KEYWORD,trace.video.qq.com
 DOMAIN-SUFFIX,beaconcdn.qq.com
 DOMAIN-SUFFIX,bugly.qq.com
-DOMAIN-SUFFIX,dns.weixin.qq.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,isdspeed.qq.com
 DOMAIN-SUFFIX,l.qq.com
