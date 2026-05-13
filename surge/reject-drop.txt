@@ -1,12 +1,21 @@
-# 微信ip段
-#IP-ASN,132203,no-resolve
-#IP-CIDR,43.159.192.0/18,no-resolve
 #拼夕夕
 DOMAIN,xg.pinduoduo.com
 DOMAIN,api.pinduoduo.com
+DOMAIN,apm.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
+DOMAIN,apm-b.pinduoduo.com
+DOMAIN,m-apm.pinduoduo.com
+DOMAIN,log.pinduoduo.com
+DOMAIN,t-log.pinduoduo.com
+DOMAIN,m-log.pinduoduo.com
+DOMAIN,crash.pinduoduo.com
+DOMAIN,track.pinduoduo.com
+DOMAIN,trk.pinduoduo.com
+DOMAIN,th.pinduoduo.com
+DOMAIN,click.pinduoduo.com
+
 # 车来了
-DOMAIN-SUFFIX,logs.chelaile.net.cn
+DOMAIN,logs.chelaile.net.cn
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,1nmob.com
@@ -22,8 +31,10 @@ DOMAIN-SUFFIX,zeroonead.com
 
 #农行
 DOMAIN,msmp.abchina.com.cn
+
 # 猫头鹰
 DOMAIN,www.skyjos.com
+
 #高德 
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
@@ -206,6 +217,7 @@ DOMAIN-SUFFIX,jads.co
 DOMAIN,event.northghost.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,appcenter.ms
+
 # 百度
 DOMAIN,afd.baidu.com
 DOMAIN-SUFFIX,newclient.map.baidu.com
@@ -230,18 +242,6 @@ DOMAIN-SUFFIX,union.baidu.com
 DOMAIN,jegotrip3.jegotrip.com.cn
 DOMAIN,oss.jegotrip.com.cn
 
-# 米家
-#DEST-PORT,5222
-IP-CIDR,111.13.141.1/24
-IP-CIDR,111.13.213.1/24
-IP-CIDR,106.120.178.1/24
-DOMAIN-SUFFIX,resolver.msg.xiaomi.net
-DOMAIN-SUFFIX,app.chat.xiaomi.net
-DOMAIN-SUFFIX,relay.mimc.chat.xiaomi.net
-DOMAIN,httpdns.browser.miui.com
-DOMAIN,resolver.msg.xiaomi.net
-DOMAIN,trade.m.xiaomiyoupin.com
-DOMAIN-SUFFIX,tracking.intl.miui.com
 
 DOMAIN,app.posthog.com
 DOMAIN,apoll.m.taobao.com
@@ -733,22 +733,14 @@ DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,umeng.cn
-DOMAIN,s.miwifi.com
-DOMAIN,api.miwifi.com
-DOMAIN,app.miwifi.com
-DOMAIN,log.miwifi.com
 
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,ra7.xyz
-DOMAIN,log.aliyuncs.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN-SUFFIX,js96110.com.cn
-DOMAIN-SUFFIX,id6.me
-DOMAIN-SUFFIX,iot.smartmidea.net
-DOMAIN-SUFFIX,iot1.midea.com.cn
-DOMAIN-SUFFIX,iotsdk.midea.com
-DOMAIN-SUFFIX,mp-prod.smartmidea.net
+
+#2345
 DOMAIN-SUFFIX,2345.com
 DOMAIN-SUFFIX,2345.cn
 DOMAIN-SUFFIX,2345.net
@@ -756,19 +748,26 @@ DOMAIN-SUFFIX,2345.cc
 
 DOMAIN,errortracking.deepl.com
 
-# 阿里
-DOMAIN-SUFFIX,adashx.m.taobao.com
-#DOMAIN-SUFFIX,amdc.m.taobao.com
+#美的
+DOMAIN-SUFFIX,iot.smartmidea.net
+DOMAIN-SUFFIX,iot1.midea.com.cn
+DOMAIN-SUFFIX,iotsdk.midea.com
+DOMAIN-SUFFIX,mp-prod.smartmidea.net
+
 # b站
 DOMAIN,grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
+DOMAIN,httpdns.bilivideo.com
+
 #  彩云
 DOMAIN,abyss.cyapi.cn
 DOMAIN,ad.cyapi.cn
 DOMAIN,gather.colorfulclouds.net
+
 #  wps
 DOMAIN-SUFFIX,wps.com
 DOMAIN-SUFFIX,wps.cn
+
 #  今日水印
 DOMAIN,xcamera-filter.oss-cn-beijing.aliyuncs.com
 DOMAIN-SUFFIX,appsflyer.com
@@ -780,7 +779,6 @@ DOMAIN-SUFFIX,xhey.top
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gepush.com
-#DEST-PORT,5224
 
 #jump
 DOMAIN-SUFFIX,mentamob.com
@@ -796,8 +794,13 @@ DOMAIN,api.wxcjgg.cn
 DOMAIN-SUFFIX,sogaha.cn
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,toponadss.com
+
 #  微信
-DOMAIN-SUFFIX,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com.cn
+#IP-ASN,132203,no-resolve
+#IP-CIDR,43.159.192.0/18,no-resolve
+
 # 云闪付
 DOMAIN,ads.95516.com
 DOMAIN,switch.cup.com.cn
@@ -805,7 +808,9 @@ DOMAIN,tysdk.95516.com
 DOMAIN,ads.cup.com.cn
 
 DOMAIN,httpdns.dmall.com
+
 # 阿里巴巴
+DOMAIN,log.aliyuncs.com
 DOMAIN,ossgw.alicdn.com
 DOMAIN,ems.youku.com
 DOMAIN,hudong.alicdn.com
@@ -813,16 +818,35 @@ DOMAIN,et.tanx.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,adash.man.aliyuncs.com
 DOMAIN,applog.uc.cn
-#AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
-
-DOMAIN,httpdns.bilivideo.com
-DOMAIN,apppush-rts.xiaohongshu.com
-DOMAIN,mediacloud.xiaohongshu.com
+DOMAIN-SUFFIX,adashx.m.taobao.com
 DOMAIN,youku-acs.m.taobao.com
 DOMAIN,openacs4uc.m.taobao.com
 DOMAIN,resolvers-cn.httpdns.aliyuncs.com
 DOMAIN,ams-httpdns.aliyuncs.com.gds.alibabadns.com
 DOMAIN,guide-acs.m.taobao.com.gds.alibabadns.com
 DOMAIN,unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
-DOMAIN,dns.weixin.qq.com
-DOMAIN,dns.weixin.qq.com.cn
+#DOMAIN-SUFFIX,amdc.m.taobao.com
+#AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
+
+
+#小红书
+DOMAIN,apppush-rts.xiaohongshu.com
+DOMAIN,mediacloud.xiaohongshu.com
+
+
+# 小米
+#DEST-PORT,5222
+IP-CIDR,111.13.141.1/24
+IP-CIDR,111.13.213.1/24
+IP-CIDR,106.120.178.1/24
+DOMAIN-SUFFIX,resolver.msg.xiaomi.net
+DOMAIN-SUFFIX,app.chat.xiaomi.net
+DOMAIN-SUFFIX,relay.mimc.chat.xiaomi.net
+DOMAIN,httpdns.browser.miui.com
+DOMAIN,resolver.msg.xiaomi.net
+DOMAIN,trade.m.xiaomiyoupin.com
+DOMAIN-SUFFIX,tracking.intl.miui.com
+DOMAIN,s.miwifi.com
+DOMAIN,api.miwifi.com
+DOMAIN,app.miwifi.com
+DOMAIN,log.miwifi.com
