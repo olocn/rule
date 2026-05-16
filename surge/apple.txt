@@ -1,5 +1,6 @@
 # apple
-DOMAIN-SUFFIX,push.apple.com
+#DOMAIN-SUFFIX,push.apple.com
+DOMAIN-SUFFIX,itunes.apple.com
 DOMAIN-SUFFIX,icloud.com.cn
 DOMAIN-SUFFIX,mzstatic.com
 DOMAIN-SUFFIX,adcdownload.apple.com.akadns.net
