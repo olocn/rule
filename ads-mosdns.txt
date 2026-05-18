@@ -917,6 +917,7 @@ full:resolvers-cn.httpdns.aliyuncs.com
 full:ams-httpdns.aliyuncs.com.gds.alibabadns.com
 full:guide-acs.m.taobao.com.gds.alibabadns.com
 full:unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
+domain:adashx.ut.amap.com
 full:apppush-rts.xiaohongshu.com
 full:mediacloud.xiaohongshu.com
 domain:resolver.msg.xiaomi.net

@@ -199,6 +199,7 @@ DOMAIN,dualstack-logs.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN,logs.amap.com
 DOMAIN,optimus-ads.amap.com
+DOMAIN-SUFFIX,adashx.ut.amap.com
 DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN,advertising-api-eu.amazon.com
 DOMAIN,advertising-api-fe.amazon.com
