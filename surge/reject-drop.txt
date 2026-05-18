@@ -827,7 +827,7 @@ DOMAIN,guide-acs.m.taobao.com.gds.alibabadns.com
 DOMAIN,unitbrain-guide-unit-v6-pub.m.taobao.com.gds.alibabadns.com
 #DOMAIN-SUFFIX,amdc.m.taobao.com
 #AND, ((DOMAIN-KEYWORD, adash,extended-matching), (DOMAIN-SUFFIX, ut.taobao.com,extended-matching))
-
+DOMAIN-SUFFIX,adashx.ut.amap.com
 
 #小红书
 DOMAIN,apppush-rts.xiaohongshu.com
