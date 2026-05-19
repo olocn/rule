@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-05-18)
+# Auto merged Surge rules (2026-05-19)
 URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
 AND,((DOMAIN-KEYWORD,adash),(DOMAIN-SUFFIX,ut.taobao.com))
@@ -528,6 +528,7 @@ DOMAIN,heads-ak.spotify.com.edgesuite.net
 DOMAIN,adguanggao.eee114.com
 DOMAIN-SUFFIX,px.effirst.com
 DOMAIN-SUFFIX,ejieban.com
+DOMAIN,stun.ekiga.net
 DOMAIN-SUFFIX,eland-tech.com
 DOMAIN-SUFFIX,emarbox.com
 DOMAIN-SUFFIX,eshiqi.com

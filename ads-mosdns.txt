@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-05-18)
+# Auto merged MosDNS rules (2026-05-19)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
@@ -274,6 +274,7 @@ domain:moloco.com
 domain:rayjump.com
 domain:rixengine.com
 domain:amazon-adsystem.com
+full:stun.ekiga.net
 full:xg.pinduoduo.com
 full:api.pinduoduo.com
 full:apm.pinduoduo.com
