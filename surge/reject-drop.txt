@@ -1,6 +1,5 @@
 #拼夕夕
 DOMAIN,stun.ekiga.net
-DOMAIN,xg.pinduoduo.com
 DOMAIN,api.pinduoduo.com
 DOMAIN,apm.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
