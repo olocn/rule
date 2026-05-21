@@ -275,7 +275,6 @@ domain:rayjump.com
 domain:rixengine.com
 domain:amazon-adsystem.com
 full:stun.ekiga.net
-full:xg.pinduoduo.com
 full:api.pinduoduo.com
 full:apm.pinduoduo.com
 full:apm-a.pinduoduo.com

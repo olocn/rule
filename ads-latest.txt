@@ -1003,7 +1003,6 @@ DOMAIN,t-log.pinduoduo.com
 DOMAIN,th.pinduoduo.com
 DOMAIN,track.pinduoduo.com
 DOMAIN,trk.pinduoduo.com
-DOMAIN,xg.pinduoduo.com
 DOMAIN,ads.pinterest.com
 DOMAIN,analytics.pinterest.com
 DOMAIN,log.pinterest.com
