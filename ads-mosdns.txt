@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-05-24)
+# Auto merged MosDNS rules (2026-05-25)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
@@ -1024,6 +1024,7 @@ full:adsfile.qq.com
 full:adsfilebssdlbig.ali.kugou.com
 full:adsfileretry.service.kugou.com
 full:adsfs-sdkconfig.heytapimage.com
+full:adsfs.heytapimage.com
 full:adsfs.oppomobile.com
 full:adslvfile.qq.com
 full:adsmart.konka.com

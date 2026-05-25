@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-05-24)
+# Auto merged Surge rules (2026-05-25)
 URL-REGEX,"^http:\/\/.+\/amdc\/mobileDispatch"
 AND,((DOMAIN-KEYWORD,-ad-),(DOMAIN-SUFFIX,byteimg.com))
 AND,((DOMAIN-KEYWORD,adash),(DOMAIN-SUFFIX,ut.taobao.com))
@@ -627,6 +627,7 @@ DOMAIN,stat.hebnews.cn
 DOMAIN-SUFFIX,hexagon-analytics.com
 DOMAIN-SUFFIX,utrack.hexun.com
 DOMAIN,adsfs-sdkconfig.heytapimage.com
+DOMAIN,adsfs.heytapimage.com
 DOMAIN,img-c.heytapimage.com
 DOMAIN,adx.ads.heytapmobi.com
 DOMAIN,b1-data.ads.heytapmobi.com
