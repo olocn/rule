@@ -390,6 +390,7 @@ DOMAIN-SUFFIX,cloudflareinsights.com
 DOMAIN,config.cmpassport.com
 DOMAIN,log1.cmpassport.com
 DOMAIN,onekey1.cmpassport.com
+DOMAIN,onekey2.cmpassport.com
 DOMAIN,smsks1.cmpassport.com
 DOMAIN,verify.cmpassport.com
 DOMAIN,wap.cmpassport.com

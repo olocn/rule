@@ -362,6 +362,7 @@ full:onekey1.cmpassport.com
 full:log1.cmpassport.com
 full:smsks1.cmpassport.com
 full:verify.cmpassport.com
+full:onekey2.cmpassport.com
 full:opencloud.wostore.cn
 full:auth.wosms.cn
 full:id.mail.wo.cn
