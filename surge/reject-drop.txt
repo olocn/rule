@@ -162,6 +162,7 @@ DOMAIN,onekey1.cmpassport.com
 DOMAIN,log1.cmpassport.com
 DOMAIN,smsks1.cmpassport.com
 DOMAIN,verify.cmpassport.com
+DOMAIN,onekey2.cmpassport.com
 
 # 中国联通
 DOMAIN,opencloud.wostore.cn
