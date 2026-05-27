@@ -1,4 +1,4 @@
-name: Merge Rules
+name: 合并规则
 
 on:
   schedule:
