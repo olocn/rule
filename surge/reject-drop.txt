@@ -113,7 +113,6 @@ DOMAIN,log.miwifi.com
 #拼夕夕
 DOMAIN,stun.ekiga.net
 DOMAIN,api.pinduoduo.com
-DOMAIN,apm.pinduoduo.com
 DOMAIN,apm-a.pinduoduo.com
 DOMAIN,apm-b.pinduoduo.com
 DOMAIN,m-apm.pinduoduo.com
