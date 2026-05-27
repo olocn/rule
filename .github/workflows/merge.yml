@@ -5,6 +5,10 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
 
+# 显式授予写权限，防止 git push 报 403 错误
+permissions:
+  contents: write
+
 jobs:
   merge:
     runs-on: ubuntu-latest
@@ -67,7 +71,6 @@ jobs:
             > rules.cleaned
 
           # 3️⃣ 深度优化逻辑：移除冗余规则
-          # 如果有了 DOMAIN-SUFFIX,taobao.com，则自动删除 DOMAIN,adashx.m.taobao.com
           awk -F',' '
           {
             rules[NR] = $0
@@ -80,7 +83,6 @@ jobs:
               skip = 0
               if (type[i] == "DOMAIN") {
                 for (s in suffix_list) {
-                  # 如果该子域名被现有的某个后缀规则包含了，则剔除
                   if (val[i] == s || val[i] ~ ("\\." s "$")) {
                     skip = 1
                     break
@@ -88,7 +90,6 @@ jobs:
                 }
               } else if (type[i] == "DOMAIN-SUFFIX") {
                 for (s in suffix_list) {
-                  # 较长的后缀规则如果被较短的覆盖，也剔除
                   if (val[i] != s && val[i] ~ ("\\." s "$")) {
                     skip = 1
                     break
@@ -100,7 +101,7 @@ jobs:
           }' rules.cleaned > rules.optimized
 
           # 4️⃣ 生成各格式文件
-          # Surge 格式：彻底去掉末尾的 ,REJECT
+          # Surge 格式
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
           awk -F',' '
@@ -121,7 +122,7 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "keyword:" $2
           }' rules.optimized >> "$MOSDNS_OUT"
 
-          # Quantumult X 格式 (保留其标准的 reject 后缀以便正常运行)
+          # Quantumult X 格式
           QX_OUT="ads-qx.snippet"
           echo "# Auto merged Quantumult X rules (${DATE})" > "$QX_OUT"
           awk -F',' '{
@@ -130,10 +131,20 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
           }' rules.optimized >> "$QX_OUT"
 
-      - name: Commit result
+      - name: Commit and Push result
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@github.com"
+          # 使用官方标准的 GitHub Actions 机器人身份
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
-          git commit -m "Update rules: Keep subdomain types and fix Node version (${DATE})" || echo "No changes"
-          git push
+          
+          # 检查是否有实际的文件改动
+          if git diff --staged --quiet; then
+            echo "No changes detected. Skipping commit and push."
+          else
+            # [skip ci] 用于彻底杜绝因配置不当（例如未来引入 PAT）而导致的 CI 死循环
+            git commit -m "Update rules: Keep subdomain types and fix Node version (${DATE}) [skip ci]"
+            # 明确推送到当前所在分支，规避 Detached HEAD 无法推送的问题
+            git push origin HEAD:${{ github.ref_name }}
+          fi
