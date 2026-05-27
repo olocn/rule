@@ -330,7 +330,6 @@ full:app.miwifi.com
 full:log.miwifi.com
 full:stun.ekiga.net
 full:api.pinduoduo.com
-full:apm.pinduoduo.com
 full:apm-a.pinduoduo.com
 full:apm-b.pinduoduo.com
 full:m-apm.pinduoduo.com
