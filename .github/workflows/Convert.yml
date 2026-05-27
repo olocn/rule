@@ -5,7 +5,14 @@ on:
     - cron: '0 */12 * * *'
   workflow_dispatch:
 
-# 设置全局环境变量以适配 Node.js 24
+# 防止并发冲突
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
+
 env:
   FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -15,8 +22,9 @@ jobs:
 
     steps:
       - name: Checkout
-        # 升级到 v5 以支持更高版本的 Node.js
         uses: actions/checkout@v5
+        with:
+          fetch-depth: 0 # 获取完整历史，更安全地进行 pull/rebase
 
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -24,8 +32,6 @@ jobs:
       - name: Download and Convert Rules
         run: |
           set -e
-          
-          # 清理并重建 qx 文件夹
           rm -rf qx
           mkdir -p qx
           
@@ -34,8 +40,6 @@ jobs:
 
           for url in $FILES; do
             filename=$(basename "$url")
-            
-            # 排除指定文件
             if [ "$filename" = "RealIP.module" ] || [ "$filename" = "ad.txt" ] || [ "$filename" = "reject-drop.txt" ]; then
               echo "Skipping excluded file: $filename"
               continue
@@ -45,12 +49,10 @@ jobs:
             echo "Processing $filename -> qx/${policy_name}.snippet"
             
             curl -L "$url" -o "temp_$filename"
-            
             output_path="qx/${policy_name}.snippet"
             echo "# Original: $filename" > "$output_path"
             echo "# Converted: ${DATE}" >> "$output_path"
             
-            # 预处理与核心转换逻辑
             sed -i 's/DOMAIN-KEYWORD/host-keyword/Ig' "temp_$filename"
             sed -i 's/DOMAIN-SUFFIX/host-suffix/Ig' "temp_$filename"
             sed -i 's/DOMAIN,/host,/Ig' "temp_$filename"
@@ -61,16 +63,12 @@ jobs:
               for (i=1; i<=3; i++) {
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $i);
               }
-
               if ($1 ~ /^#/ || $1 == "" || $0 ~ /PROCESS-NAME|URL-REGEX|AND|OR|NOT/) next;
-
               type = tolower($1);
               val = $2;
-
               if (type == "host" || type == "host-suffix" || type == "host-keyword" || type ~ /cidr|geoip|asn|user-agent/) {
                 current_policy = (p_name == "system") ? "direct" : p_name;
                 if (toupper($0) ~ /REJECT/) current_policy = "reject";
-
                 if (val != "") {
                   printf("%s, %s, %s\n", type, val, current_policy);
                 }
@@ -85,5 +83,11 @@ jobs:
           git config user.name "github-actions"
           git config user.email "github-actions@github.com"
           git add -A qx/
-          git commit -m "Upgrade to Node.js 24 & Sync rules (${DATE})" || echo "No changes"
-          git push
+          
+          if ! git diff --cached --quiet; then
+            git commit -m "Upgrade to Node.js 24 & Sync rules (${DATE})"
+            git pull --rebase origin master
+            git push origin master
+          else
+            echo "No changes detected. Skipping push."
+          fi
