@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-05-29)
+# Auto merged MosDNS rules (2026-05-30)
 keyword:adstrategy
 full:lf-ad-ies.bytecdn.cn
 full:dig.bdurl.net
