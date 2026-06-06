@@ -278,6 +278,7 @@ domain:moloco.com
 domain:rayjump.com
 domain:rixengine.com
 domain:amazon-adsystem.com
+full:hkyzmssdk.kunlunjyk.com
 domain:2345.com
 domain:2345.cn
 domain:2345.net

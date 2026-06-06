@@ -529,6 +529,7 @@ DOMAIN,logtj.kugou.com
 DOMAIN,logwebs.kugou.com
 DOMAIN,mobilelog.kugou.com
 DOMAIN,img.adnyg.com.w.kunlungr.com
+DOMAIN,hkyzmssdk.kunlunjyk.com
 DOMAIN,log.kuwo.cn
 DOMAIN,mobilead.kuwo.cn
 DOMAIN,open.kwaizt.com
