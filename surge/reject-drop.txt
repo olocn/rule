@@ -1,4 +1,5 @@
 DOMAIN,hkyzmssdk.kunlunjyk.com
+DOMAIN-SUFFIX,safebrowsing.apple
 
 #2345
 DOMAIN-SUFFIX,2345.com
