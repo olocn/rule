@@ -279,6 +279,7 @@ domain:rayjump.com
 domain:rixengine.com
 domain:amazon-adsystem.com
 full:hkyzmssdk.kunlunjyk.com
+domain:safebrowsing.apple
 domain:2345.com
 domain:2345.cn
 domain:2345.net

@@ -798,6 +798,7 @@ DOMAIN-SUFFIX,richmob.cn
 DOMAIN-SUFFIX,rixengine.com
 DOMAIN,bossjs.rosfky.cn
 DOMAIN-SUFFIX,rou.one
+DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN,nmetrics.samsung.com
 DOMAIN,smetrics.samsung.com
 DOMAIN-SUFFIX,samsungads.com
