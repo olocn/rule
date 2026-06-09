@@ -200,7 +200,9 @@ URL-REGEX,/\d+/sign_d
 
 DOMAIN-SUFFIX,deepermobile.com
 
+DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN,dns.jd.com
+DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,icostapp.com
 DOMAIN,browser-intake-datadoghq.com
 
@@ -262,7 +264,6 @@ DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,umeng.cn
 
-DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,ra7.xyz
 DOMAIN-SUFFIX,app-analytics-services.com
 
