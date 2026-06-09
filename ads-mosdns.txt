@@ -280,6 +280,7 @@ domain:rixengine.com
 domain:amazon-adsystem.com
 full:hkyzmssdk.kunlunjyk.com
 domain:safebrowsing.apple
+domain:bugsnag.com
 domain:2345.com
 domain:2345.cn
 domain:2345.net
@@ -402,7 +403,9 @@ domain:360.com
 domain:yunpan.cn
 domain:yunpan.com.cn
 domain:deepermobile.com
+domain:blackhole.m.jd.com
 full:dns.jd.com
+domain:jddebug.com
 domain:icostapp.com
 domain:browser-intake-datadoghq.com
 domain:rou.one
@@ -432,7 +435,6 @@ domain:huaweicloud.com
 domain:huawei.com
 domain:umengcloud.cn
 domain:umeng.cn
-domain:blackhole.m.jd.com
 domain:ra7.xyz
 domain:js96110.com.cn
 full:mask.icloud.com

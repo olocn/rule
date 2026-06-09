@@ -216,6 +216,7 @@ DOMAIN,httpdns.bilivideo.com
 DOMAIN-SUFFIX,birdgesdk.com
 DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,bugsnag.com
 DOMAIN,ad.bwton.com
 DOMAIN,dlogs.bwton.com
 DOMAIN-SUFFIX,bxsnews.com
@@ -490,6 +491,7 @@ DOMAIN,uranus.jd.com
 DOMAIN,wn.x.jd.com
 DOMAIN,xlog.jd.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
+DOMAIN-SUFFIX,jddebug.com
 DOMAIN,api.jietuhb.com
 DOMAIN-SUFFIX,jiguang.cn
 DOMAIN,target.ads.jihuoniao.com
