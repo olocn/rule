@@ -314,8 +314,6 @@ full:dns.weixin.qq.com.cn
 full:aedns.weixin.qq.com
 full:appcfg.v.qq.com
 full:ads.95516.com
-full:switch.cup.com.cn
-full:tysdk.95516.com
 full:httpdns.dmall.com
 full:apppush-rts.xiaohongshu.com
 full:mediacloud.xiaohongshu.com
