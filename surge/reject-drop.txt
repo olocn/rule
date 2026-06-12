@@ -26,6 +26,8 @@ DOMAIN,broadcast.chat.bilibili.com
 #DOMAIN,upos-sz-mirrorcos.bilivideo.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,biligame.com
+DOMAIN,data.bilibili.com⁠
+DOMAIN,cm.bilibili.com
 
 #  彩云
 DOMAIN,abyss.cyapi.cn
@@ -272,3 +274,5 @@ DOMAIN-SUFFIX,app-analytics-services.com
 
 DOMAIN-SUFFIX,js96110.com.cn
 DOMAIN,mask.icloud.com
+
+DOMAIN,fourier.taobao.com⁠
