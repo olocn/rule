@@ -208,7 +208,9 @@ DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN,grpc.biliapi.net
 DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
+DOMAIN,cm.bilibili.com
 DOMAIN,mall.bilibili.com
+DOMAIN,data.bilibili.com⁠
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN,httpdns.bilivideo.com
@@ -890,6 +892,7 @@ DOMAIN,umengjmacs.m.taobao.com
 DOMAIN,wcp.taobao.com
 DOMAIN,youku-acs.m.taobao.com
 DOMAIN-SUFFIX,adashxgc.ut.taobao.com
+DOMAIN,fourier.taobao.com⁠
 DOMAIN-SUFFIX,tapad.com
 DOMAIN-SUFFIX,tapjoy.com
 DOMAIN,s8t.teads.tv

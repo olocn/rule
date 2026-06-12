@@ -297,6 +297,8 @@ full:api.vc.bilibili.com
 full:broadcast.chat.bilibili.com
 domain:mcdn.bilivideo.cn
 domain:biligame.com
+full:data.bilibili.com⁠
+full:cm.bilibili.com
 full:abyss.cyapi.cn
 full:ad.cyapi.cn
 full:gather.colorfulclouds.net
@@ -436,6 +438,7 @@ domain:umeng.cn
 domain:ra7.xyz
 domain:js96110.com.cn
 full:mask.icloud.com
+full:fourier.taobao.com⁠
 full:1500020991.vodplayer.wxamedia.com
 full:1500022744.vodplayer.wxamedia.com
 full:1500026601.vodplayer.wxamedia.com
