@@ -1113,12 +1113,6 @@ DOMAIN,applog.zijieapi.com
 DOMAIN,log.zijieapi.com
 DOMAIN,mcs.zijieapi.com
 DOMAIN,mssdk.zijieapi.com
-DOMAIN,tnc0-aliec2.zijieapi.com
-DOMAIN,tnc0-alisc1.zijieapi.com
 DOMAIN,tnc0-bjlgy.zijieapi.com
-DOMAIN,tnc3-aliec2.zijieapi.com
-DOMAIN,tnc3-alisc1.zijieapi.com
-DOMAIN,tnc3-alisc2.zijieapi.com
-DOMAIN,tnc3-bjlgy.zijieapi.com
 DOMAIN-KEYWORD,-normal.zijieapi.com
 DOMAIN,syh.zybang.com
