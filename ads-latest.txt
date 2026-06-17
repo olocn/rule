@@ -618,6 +618,7 @@ DOMAIN-SUFFIX,admobile.net.cn
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,adjust.net.in
 DOMAIN-SUFFIX,newitai.com
+DOMAIN-SUFFIX,nexusedgeio.com
 DOMAIN,event.northghost.com
 DOMAIN,analytics.oceanengine.com
 DOMAIN,click.oneplus.cn

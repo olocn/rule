@@ -281,6 +281,7 @@ domain:amazon-adsystem.com
 full:hkyzmssdk.kunlunjyk.com
 domain:safebrowsing.apple
 domain:bugsnag.com
+domain:nexusedgeio.com
 domain:2345.com
 domain:2345.cn
 domain:2345.net
