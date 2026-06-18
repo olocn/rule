@@ -2,8 +2,73 @@ DOMAIN,hkyzmssdk.kunlunjyk.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,bugsnag.com
 
+
 #p2p
+# 字节跳动系
+DOMAIN,tt.x.bsgslb.cn
+DOMAIN-SUFFIX,bytefcdnrd.com
+DOMAIN,pcdn.volcvideo.com
 DOMAIN-SUFFIX,nexusedgeio.com
+# 小米
+DOMAIN-SUFFIX,siomxity.net
+DOMAIN-SUFFIX,siomxity.com
+# 阿里
+DOMAIN-SUFFIX,tbcache.com
+DOMAIN,acs.youku.com
+DOMAIN,pcdn.livelive.cn
+# 哔哩哔哩
+DOMAIN,mcdn.bilivideo.cn
+DOMAIN,p2p.bilibili.com
+DOMAIN,pcdn.bilibili.com
+# QQ
+DOMAIN-SUFFIX,smtcdns.com
+DOMAIN-SUFFIX,smtcdns.net
+DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN,vlivep2p.tc.qq.com
+DOMAIN-SUFFIX,erer.homeborn.cn
+DOMAIN,p.tencentmusic.com
+DOMAIN,stun.douyucdn.cn
+DOMAIN,stun1.douyucdn.cn
+DOMAIN,dyp2p-ali.douyucdn.cn
+DOMAIN,dyp2p-hw.douyucdn.cn
+DOMAIN,p2p-ali.douyucdn.cn
+DOMAIN,p2pchunk-hw.douyucdn.cn
+DOMAIN,p2pchunk-table.douyucdn.cn
+DOMAIN,p2pchunk-ws.douyucdn.cn
+DOMAIN,p2perrorlog.douyucdn.cn
+DOMAIN,p2plive-ali.douyucdn.cn
+DOMAIN,p2plive-ws.douyucdn.cn
+DOMAIN,p2plog.douyucdn.cn
+DOMAIN,p2pvod-ws.douyucdn.cn
+DOMAIN,p2p.huya.com
+# 爱奇艺
+DOMAIN,data-qvs.iqiyi.com
+DOMAIN,tpa-hcdn.iqiyi.com
+# 其它
+DOMAIN-SUFFIX,ndcpp.com
+DOMAIN-SUFFIX,hypercachenode.com
+DOMAIN-SUFFIX,nexusedgeio.com
+DOMAIN,dlied1.cdntips.net
+DOMAIN-SUFFIX,bsccdn.net
+DOMAIN-SUFFIX,bsclink.cn
+DOMAIN-SUFFIX,bsgslb.cn
+DOMAIN-SUFFIX,gjfzpt.cn
+DOMAIN-SUFFIX,ietheivaicai.com
+DOMAIN-SUFFIX,jomodns.cn
+DOMAIN-SUFFIX,kuiniuca.com
+DOMAIN-SUFFIX,onethingpcs.com
+DOMAIN-SUFFIX,pkoplink.com
+DOMAIN-SUFFIX,pplive-p2p.com
+DOMAIN-SUFFIX,saxysec.com
+DOMAIN-SUFFIX,szbdyd.com
+DOMAIN-SUFFIX,uhabo.com
+DOMAIN-SUFFIX,xycdn.com
+DOMAIN-SUFFIX,yfcloud.com
+DOMAIN,pcdn.yximgs.com
+DOMAIN-SUFFIX,kspcdn.com
+DOMAIN-SUFFIX,ws-p2p.com
+DOMAIN,pcdn.xmcdn.com
+DOMAIN,stun.hitv.com
 
 #2345
 DOMAIN-SUFFIX,2345.com
