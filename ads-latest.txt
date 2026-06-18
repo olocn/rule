@@ -84,6 +84,7 @@ DOMAIN-SUFFIX,adwangmai.com
 DOMAIN,monitor.adxsenmeng.com
 DOMAIN,rtb.adxsenmeng.com
 DOMAIN,ad.aggrxinc.com
+DOMAIN-SUFFIX,ahdohpiechei.com
 DOMAIN,cdn.aiclk.com
 DOMAIN,cpc-service-square.aiclk.com
 DOMAIN,logrcv.aiclk.com
@@ -210,6 +211,8 @@ DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
 DOMAIN,cm.bilibili.com
 DOMAIN,mall.bilibili.com
+DOMAIN,p2p.bilibili.com
+DOMAIN,pcdn.bilibili.com
 DOMAIN,data.bilibili.com⁠
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
@@ -217,6 +220,9 @@ DOMAIN,httpdns.bilivideo.com
 DOMAIN-SUFFIX,birdgesdk.com
 DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
+DOMAIN-SUFFIX,bsccdn.net
+DOMAIN-SUFFIX,bsclink.cn
+DOMAIN-SUFFIX,bsgslb.cn
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN,ad.bwton.com
 DOMAIN,dlogs.bwton.com
@@ -226,12 +232,14 @@ DOMAIN,lf-ad-ies.bytecdn.cn
 DOMAIN,tnc3-aliec2.bytedance.com
 DOMAIN,tnc3-alisc1.bytedance.com
 DOMAIN,tnc3-bjlgy.bytedance.com
+DOMAIN-SUFFIX,bytefcdnrd.com
 DOMAIN,p3-tt.byteimg.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN,log.byteoversea.com
 DOMAIN-KEYWORD,-ad.byteoversea.com
 DOMAIN,ad.cctv.com
 DOMAIN,syh-imp.cdnjtzy.com
+DOMAIN,dlied1.cdntips.net
 DOMAIN,tvuser-ch.cedock.com
 DOMAIN,sdk.cferw.com
 DOMAIN-SUFFIX,chaseherbalpasty.com
@@ -316,8 +324,17 @@ DOMAIN-SUFFIX,doubleclick-cn.net
 DOMAIN-SUFFIX,doubleclick.net
 DOMAIN,dyp2p-ali.douyucdn.cn
 DOMAIN,dyp2p-hw.douyucdn.cn
+DOMAIN,p2p-ali.douyucdn.cn
+DOMAIN,p2pchunk-hw.douyucdn.cn
 DOMAIN,p2pchunk-table.douyucdn.cn
+DOMAIN,p2pchunk-ws.douyucdn.cn
+DOMAIN,p2perrorlog.douyucdn.cn
 DOMAIN,p2plive-ali.douyucdn.cn
+DOMAIN,p2plive-ws.douyucdn.cn
+DOMAIN,p2plog.douyucdn.cn
+DOMAIN,p2pvod-ws.douyucdn.cn
+DOMAIN,stun.douyucdn.cn
+DOMAIN,stun1.douyucdn.cn
 DOMAIN-SUFFIX,dratio.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,easytomessage.com
@@ -362,6 +379,7 @@ DOMAIN,liveats-vod.video.ptqy.gitv.tv
 DOMAIN,policy.video.ptqy.gitv.tv
 DOMAIN,sdk-cache.video.ptqy.gitv.tv
 DOMAIN,t7z.cupid.ptqy.gitv.tv
+DOMAIN-SUFFIX,gjfzpt.cn
 DOMAIN-SUFFIX,google-analytics.com
 DOMAIN,ads.google.cn
 DOMAIN,adsense.google.cn
@@ -408,6 +426,7 @@ DOMAIN,stun.hitv.com
 DOMAIN,ad-splash-tracking.hktvmall.com
 DOMAIN,ad-splash.hktvmall.com
 DOMAIN,live-api.hktvmall.com
+DOMAIN-SUFFIX,erer.homeborn.cn
 DOMAIN,log-upload-os.hoyoverse.com
 DOMAIN,ad.hpplay.cn
 DOMAIN,adc.hpplay.cn
@@ -442,6 +461,8 @@ DOMAIN-SUFFIX,huaweicloud.com
 DOMAIN,api-ad-product.huxiu.com
 DOMAIN,log-api-mn.huxiu.com
 DOMAIN,log-api.huxiu.com
+DOMAIN,p2p.huya.com
+DOMAIN-SUFFIX,hypercachenode.com
 DOMAIN,api.hzsanjiaomao.com
 DOMAIN,sdk.hzsanjiaomao.com
 DOMAIN,sf16-static.i18n-pglstatp.com
@@ -450,6 +471,7 @@ DOMAIN,ads.icloseli.cn
 DOMAIN,mask.icloud.com
 DOMAIN,metrics.icloud.com
 DOMAIN-SUFFIX,icostapp.com
+DOMAIN-SUFFIX,ietheivaicai.com
 DOMAIN,log.iflytek.com
 DOMAIN-SUFFIX,igexin.com
 DOMAIN-SUFFIX,imtmp.net
@@ -459,6 +481,7 @@ DOMAIN-SUFFIX,inmobicdn.net
 DOMAIN,wv.inner-active.mobi
 DOMAIN-SUFFIX,installtongji.online
 DOMAIN-SUFFIX,installtongji.top
+DOMAIN,data-qvs.iqiyi.com
 DOMAIN,ifacelog.iqiyi.com
 DOMAIN,mbdlog.iqiyi.com
 DOMAIN,static-s.iqiyi.com
@@ -496,6 +519,7 @@ DOMAIN,api.jietuhb.com
 DOMAIN-SUFFIX,jiguang.cn
 DOMAIN,target.ads.jihuoniao.com
 DOMAIN,adx-api.jinmo.tech
+DOMAIN-SUFFIX,jomodns.cn
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,jpush.io
 DOMAIN,lm10111.jtrincc.cn
@@ -508,6 +532,7 @@ DOMAIN,adsmart.konka.com
 DOMAIN,slb-p2p.vcloud.ks-live.com
 DOMAIN,log-sdk.ksapisrv.com
 DOMAIN,w1.kskwai.com
+DOMAIN-SUFFIX,kspcdn.com
 DOMAIN,api.kingdata.ksyun.com
 DOMAIN,c.kuaiduizuoye.com
 DOMAIN,open.e.kuaishou.cn
@@ -530,6 +555,7 @@ DOMAIN,log.web.kugou.com
 DOMAIN,logtj.kugou.com
 DOMAIN,logwebs.kugou.com
 DOMAIN,mobilelog.kugou.com
+DOMAIN-SUFFIX,kuiniuca.com
 DOMAIN,img.adnyg.com.w.kunlungr.com
 DOMAIN,hkyzmssdk.kunlunjyk.com
 DOMAIN,log.kuwo.cn
@@ -549,6 +575,7 @@ DOMAIN,analytics.pointdrive.linkedin.com
 DOMAIN-SUFFIX,litchiads.com
 DOMAIN,tx-p2p-pull.live-voip.com
 DOMAIN,outlookads.live.com
+DOMAIN,pcdn.livelive.cn
 DOMAIN-SUFFIX,lnk0.com
 DOMAIN-SUFFIX,log-report.com
 DOMAIN,game.loveota.com
@@ -613,6 +640,7 @@ DOMAIN,adstore-1252524079.file.myqcloud.com
 DOMAIN,adstore-index-1252524079.file.myqcloud.com
 DOMAIN,metrics.mzstatic.com
 DOMAIN-SUFFIX,ndcjl.com
+DOMAIN-SUFFIX,ndcpp.com
 DOMAIN,logs.chelaile.net.cn
 DOMAIN-SUFFIX,admobile.net.cn
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
@@ -622,6 +650,7 @@ DOMAIN-SUFFIX,nexusedgeio.com
 DOMAIN,event.northghost.com
 DOMAIN,analytics.oceanengine.com
 DOMAIN,click.oneplus.cn
+DOMAIN-SUFFIX,onethingpcs.com
 DOMAIN-SUFFIX,opadlink.com
 DOMAIN-SUFFIX,openinstall.com
 DOMAIN-SUFFIX,openinstall.io
@@ -677,6 +706,7 @@ DOMAIN-SUFFIX,pkoplink.com
 DOMAIN-SUFFIX,popadshop.com
 DOMAIN,log.popin.cc
 DOMAIN,rlog.popin.cc
+DOMAIN-SUFFIX,pplive-p2p.com
 DOMAIN-SUFFIX,puata.info
 DOMAIN,ads.pubmatic.com
 DOMAIN,pig.pupuapi.com
@@ -763,6 +793,7 @@ DOMAIN,tpns.qq.com
 DOMAIN,trace.qq.com
 DOMAIN,video.dispatch.tc.qq.com
 DOMAIN,vlive.qqvideo.tc.qq.com
+DOMAIN,vlivep2p.tc.qq.com
 DOMAIN,ws.sj.qq.com
 DOMAIN,wup.imtt.qq.com
 DOMAIN,wxa.wxs.qq.com
@@ -819,6 +850,8 @@ DOMAIN,ad.shunchangzhixing.com
 DOMAIN,redirect.shunchangzhixing.com
 DOMAIN-SUFFIX,sigmob.cn
 DOMAIN-SUFFIX,sigmob.com
+DOMAIN-SUFFIX,siomxity.com
+DOMAIN-SUFFIX,siomxity.net
 DOMAIN,www.skyjos.com
 DOMAIN-SUFFIX,slyxmobi.com
 DOMAIN,api.sm.cn
@@ -840,7 +873,8 @@ DOMAIN,mission-pub.smart-tv.cn
 DOMAIN,newvoice.chiq5.smart-tv.cn
 DOMAIN-SUFFIX,iot.smartmidea.net
 DOMAIN-SUFFIX,mp-prod.smartmidea.net
-DOMAIN-SUFFIX,v.smtcdns.com
+DOMAIN-SUFFIX,smtcdns.com
+DOMAIN-SUFFIX,smtcdns.net
 DOMAIN,analytics-api-01.smzdm.com
 DOMAIN,analytics-api.smzdm.com
 DOMAIN,abtest-ch.snssdk.com
@@ -896,6 +930,7 @@ DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN,fourier.taobao.com⁠
 DOMAIN-SUFFIX,tapad.com
 DOMAIN-SUFFIX,tapjoy.com
+DOMAIN-SUFFIX,tbcache.com
 DOMAIN,s8t.teads.tv
 DOMAIN,t.teads.tv
 DOMAIN,t1.teads.tv
@@ -911,6 +946,7 @@ DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adclick.tencentmusic.com
 DOMAIN,adexpo.tencentmusic.com
 DOMAIN,adstats.tencentmusic.com
+DOMAIN,p.tencentmusic.com
 DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN,ad-evods.tianya.tv
 DOMAIN,ads-api.tiktok.com
@@ -977,6 +1013,7 @@ DOMAIN,rtb.voiceads.cn
 DOMAIN-KEYWORD,bjimp.voiceads.cn
 DOMAIN,klink.volceapplog.com
 DOMAIN,mssdk.volces.com
+DOMAIN,pcdn.volcvideo.com
 DOMAIN-SUFFIX,vungle.com
 DOMAIN-SUFFIX,wayio.cn
 DOMAIN,ad.weibo.com
@@ -997,6 +1034,7 @@ DOMAIN,auth.wosms.cn
 DOMAIN,opencloud.wostore.cn
 DOMAIN,stats.wp.com
 DOMAIN-SUFFIX,wrating.com
+DOMAIN-SUFFIX,ws-p2p.com
 DOMAIN,cdn-ad.wtzw.com
 DOMAIN-KEYWORD,-ad.wtzw.com
 DOMAIN-SUFFIX,wwads.cn
@@ -1058,10 +1096,12 @@ DOMAIN,offerwall.yandex.net
 DOMAIN,advertising.yandex.ru
 DOMAIN,metrika.yandex.ru
 DOMAIN-SUFFIX,yfanads.com
+DOMAIN-SUFFIX,yfcloud.com
 DOMAIN-SUFFIX,adx.yixin.im
 DOMAIN-SUFFIX,yksdks.com
 DOMAIN,ad-sdk-config.youdao.com
 DOMAIN,gorgon.youdao.com
+DOMAIN,acs.youku.com
 DOMAIN,ad.api.3g.youku.com
 DOMAIN,adx-open-service.youku.com
 DOMAIN,ems.youku.com
