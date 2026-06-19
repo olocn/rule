@@ -2,6 +2,8 @@ DOMAIN,hkyzmssdk.kunlunjyk.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,bugsnag.com
 
+DOMAIN-SUFFIX,wuchucloud.net
+
 
 #p2p
 # 字节跳动系
