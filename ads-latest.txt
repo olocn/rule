@@ -1037,6 +1037,7 @@ DOMAIN-SUFFIX,wrating.com
 DOMAIN-SUFFIX,ws-p2p.com
 DOMAIN,cdn-ad.wtzw.com
 DOMAIN-KEYWORD,-ad.wtzw.com
+DOMAIN-SUFFIX,wuchucloud.net
 DOMAIN-SUFFIX,wwads.cn
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
