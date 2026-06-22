@@ -4,7 +4,7 @@ DOMAIN-SUFFIX,bugsnag.com
 
 DOMAIN-SUFFIX,wuchucloud.net
 
-
+DOMAIN-SUFFIX,rongnav.com
 #p2p
 # 字节跳动系
 DOMAIN,tt.x.bsgslb.cn
