@@ -282,6 +282,7 @@ full:hkyzmssdk.kunlunjyk.com
 domain:safebrowsing.apple
 domain:bugsnag.com
 domain:wuchucloud.net
+domain:rongnav.com
 domain:bytefcdnrd.com
 full:pcdn.volcvideo.com
 domain:nexusedgeio.com
