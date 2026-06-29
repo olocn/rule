@@ -22,6 +22,7 @@ DOMAIN,pcdn.livelive.cn
 DOMAIN,mcdn.bilivideo.cn
 DOMAIN,p2p.bilibili.com
 DOMAIN,pcdn.bilibili.com
+DOMAIN,data.bilibili.com
 # QQ
 DOMAIN-SUFFIX,smtcdns.com
 DOMAIN-SUFFIX,smtcdns.net
