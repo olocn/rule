@@ -1,4 +1,4 @@
-Name: 合并规则 (排除 sgmodule)
+Name: 合并规则
 
 on:
   schedule:
