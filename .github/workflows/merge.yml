@@ -1,18 +1,16 @@
- name: 合并规则
+name: "merge-rules"
 
 on:
   schedule:
     - cron: '0 */12 * * *'
   workflow_dispatch:
 
-# 显式授予写权限，防止 git push 报 403 错误
 permissions:
   contents: write
 
 jobs:
   merge:
     runs-on: ubuntu-latest
-    # 强制开启 Node.js 24 以适配 2026 年 GitHub Actions 要求
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
@@ -32,7 +30,7 @@ jobs:
         run: |
           set -e
 
-          # 1️⃣ 清洗与智能类型转换 (移除了 sg_rules.tmp)
+          # 1️⃣ 清洗与智能类型转换
           cat ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -42,16 +40,12 @@ jobs:
             | awk -F',' '
               BEGIN { OFS="," }
               {
-                # 仅针对 DOMAIN 类型进行判断
                 if ($1 == "DOMAIN") {
                   split($2, parts, ".");
-                  # 仅两段式域名（根域名）转为 SUFFIX
                   if (length(parts) == 2) {
                     $1 = "DOMAIN-SUFFIX"
                   }
-                  # 其他子域名（3段及以上）保持 DOMAIN
                 }
-                # 如果原本就是 DOMAIN-SUFFIX，则不论几段都保持原样
                 print $0
               }' \
             | awk '!seen[$0]++' \
@@ -120,18 +114,14 @@ jobs:
 
       - name: Commit and Push result
         run: |
-          # 使用官方标准的 GitHub Actions 机器人身份
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
           git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
           
-          # 检查是否有实际的文件改动
           if git diff --staged --quiet; then
             echo "No changes detected. Skipping commit and push."
           else
-            # [skip ci] 用于彻底杜绝因配置不当（例如未来引入 PAT）而导致的 CI 死循环
             git commit -m "Update rules: Keep subdomain types, remove sgmodule (${DATE}) [skip ci]"
-            # 明确推送到当前所在分支，规避 Detached HEAD 无法推送的问题
             git push origin HEAD:${{ github.ref_name }}
           fi
