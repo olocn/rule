@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-07-05)
+# Auto merged MosDNS rules (2026-07-06)
 full:hkyzmssdk.kunlunjyk.com
 domain:safebrowsing.apple
 domain:bugsnag.com
