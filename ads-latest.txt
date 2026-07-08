@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-07-07)
+# Auto merged Surge rules (2026-07-08)
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 DOMAIN,enrichgw.10010.com
