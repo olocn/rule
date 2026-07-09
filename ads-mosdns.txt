@@ -1,5 +1,6 @@
 # Auto merged MosDNS rules (2026-07-09)
 full:hkyzmssdk.kunlunjyk.com
+full:px.effirst.com
 domain:safebrowsing.apple
 domain:bugsnag.com
 domain:wuchucloud.net

@@ -303,6 +303,7 @@ DOMAIN-SUFFIX,easytomessage.com
 DOMAIN,wildcard.moatads.com.edgekey.net
 DOMAIN,heads-ak.spotify.com.edgesuite.net
 DOMAIN,adguanggao.eee114.com
+DOMAIN,px.effirst.com
 DOMAIN,stun.ekiga.net
 DOMAIN,c.etoolads.cn
 DOMAIN,c.evidon.com
