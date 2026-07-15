@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-07-14)
+# Auto merged MosDNS rules (2026-07-15)
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
