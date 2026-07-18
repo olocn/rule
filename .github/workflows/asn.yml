@@ -25,7 +25,7 @@ jobs:
           sort -V | uniq > rule/qx/asn.snippet
 
           echo "=== 转换成功，样例预览 ==="
-          head -n 5 asn.snippet
+          head -n 5 rule/qx/asn.snippet
           echo "========================"
           echo "总计规则条数: $(wc -l < rule/qx/asn.snippet)"
 
