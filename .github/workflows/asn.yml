@@ -1,0 +1,44 @@
+name: ASN Rules
+
+on:
+  schedule:
+    - cron: '0 22 * * *' # 每天北京时间早上 6 点自动运行
+  workflow_dispatch:      # 允许手动触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch and Convert Rules
+        run: |
+          mkdir -p ruleset
+          
+          # 1. 抓取原始数据
+          # 2. 清除所有注释和空行
+          # 3. 用 sed 提取出纯数字，并严格组装成 "ip-asn, <asn>, direct" 格式
+          # 4. 排序并去重
+          curl -sSL "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list" | \
+          grep -v -E '^[[:space:]]*([#;]|$)' | \
+          sed -E 's/[^0-9]*([0-9]+).*/ip-asn, \1, direct/' | \
+          sort -V | uniq > ruleset/asn_china_singbox.list
+
+          echo "=== 转换成功，样例预览 ==="
+          head -n 5 ruleset/asn_china_singbox.list
+          echo "========================"
+          echo "总计规则条数: $(wc -l < ruleset/asn_china_singbox.list)"
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          if [ -n "$(git status --porcelain ruleset/asn_china_singbox.list)" ]; then
+            git add rule/qx/asn.snippet
+            git commit -m "chore: auto-update China ASN rules $(date +'%Y-%m-%d')"
+            git push
+          else
+            echo "规则未发生变动，跳过提交。"
+          fi
