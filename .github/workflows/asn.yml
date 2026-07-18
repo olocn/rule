@@ -14,27 +14,28 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          
-          # 1. 抓取原始数据
-          # 2. 清除所有注释和空行
-          # 3. 用 sed 提取出纯数字，并严格组装成 "ip-asn, <asn>, direct" 格式
-          # 4. 排序并去重
+          # 1. 在当前根目录下安全抓取、清洗、转换并生成临时文件
           curl -sSL "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list" | \
           grep -v -E '^[[:space:]]*([#;]|$)' | \
           sed -E 's/[^0-9]*([0-9]+).*/ip-asn, \1, direct/' | \
-          sort -V | uniq > rule/qx/asn.snippet
-
+          sort -V | uniq > asn.snippet
+          
+          # 2. 预览与统计（全都在根目录下操作，安全无痛）
           echo "=== 转换成功，样例预览 ==="
           head -n 5 asn.snippet
           echo "========================"
-          echo "总计规则条数: $(wc -l < rule/qx/asn.snippet)"
+          echo "总计规则条数: $(wc -l < asn.snippet)"
+
+          # 3. 创建目标多级目录，并将清洗好的规则移入归档
           mkdir -p rule/qx
           mv asn.snippet rule/qx/asn.snippet
+
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
+          # 4. 检查归档目录下的文件并安全推送到仓库
           if [ -n "$(git status --porcelain rule/qx/asn.snippet)" ]; then
             git add rule/qx/asn.snippet
             git commit -m "chore: auto-update China ASN rules $(date +'%Y-%m-%d')"
