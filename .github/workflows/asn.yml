@@ -14,7 +14,7 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          mkdir -p rule/qx
+          mkdir -p rule
           
           # 1. 抓取原始数据
           # 2. 清除所有注释和空行
