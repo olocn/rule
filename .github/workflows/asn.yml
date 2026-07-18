@@ -23,10 +23,10 @@ jobs:
           curl -sSL "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list" | \
           grep -v -E '^[[:space:]]*([#;]|$)' | \
           sed -E 's/[^0-9]*([0-9]+).*/ip-asn, \1, direct/' | \
-          sort -V | uniq > ruleset/asn_china_singbox.list
+          sort -V | uniq > rule/qx/asn.snippet
 
           echo "=== 转换成功，样例预览 ==="
-          head -n 5 ruleset/asn_china_singbox.list
+          head -n 5 rule/qx/asn.snippet
           echo "========================"
           echo "总计规则条数: $(wc -l < ruleset/asn_china_singbox.list)"
 
@@ -35,7 +35,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          if [ -n "$(git status --porcelain ruleset/asn_china_singbox.list)" ]; then
+          if [ -n "$(git status --porcelain rule/qx/asn.snippet)" ]; then
             git add rule/qx/asn.snippet
             git commit -m "chore: auto-update China ASN rules $(date +'%Y-%m-%d')"
             git push
