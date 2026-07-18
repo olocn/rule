@@ -14,7 +14,7 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          mkdir -p ruleset
+          mkdir -p rule/qx
           
           # 1. 抓取原始数据
           # 2. 清除所有注释和空行
@@ -28,7 +28,7 @@ jobs:
           echo "=== 转换成功，样例预览 ==="
           head -n 5 rule/qx/asn.snippet
           echo "========================"
-          echo "总计规则条数: $(wc -l < ruleset/asn_china_singbox.list)"
+          echo "总计规则条数: $(wc -l < rule/qx/asn.snippet)"
 
       - name: Commit and Push changes
         run: |
