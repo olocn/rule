@@ -14,28 +14,36 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          # 1. 在当前根目录下安全抓取、清洗、转换并生成临时文件
+          # 1. 先彻底清理掉可能存在的 rule/rule 错误残留目录
+          rm -rf rule/rule
+          
+          # 2. 在当前根目录下安全抓取、清洗、转换并生成临时文件
           curl -sSL "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list" | \
           grep -v -E '^[[:space:]]*([#;]|$)' | \
           sed -E 's/[^0-9]*([0-9]+).*/ip-asn, \1, direct/' | \
           sort -V | uniq > asn.snippet
           
-          # 2. 预览与统计（全都在根目录下操作，安全无痛）
+          # 3. 预览与统计
           echo "=== 转换成功，样例预览 ==="
           head -n 5 asn.snippet
           echo "========================"
           echo "总计规则条数: $(wc -l < asn.snippet)"
 
-          # 3. 创建目标多级目录，并将清洗好的规则移入归档
+          # 4. 强制创建并精确移入规则（直接指定到文件名本身，绝不漂移）
           mkdir -p rule/qx
-          mv asn.snippet rule/qx/asn.snippet
+          mv -f asn.snippet ./rule/qx/asn.snippet
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           
-          # 4. 检查归档目录下的文件并安全推送到仓库
+          # 5. 如果有残留的 rule/rule 误推，顺便从 git 中清理掉
+          if [ -d "rule/rule" ]; then
+            git rm -rf rule/rule 2>/dev/null || true
+          fi
+
+          # 6. 检查正确的归档路径并安全推送到仓库
           if [ -n "$(git status --porcelain rule/qx/asn.snippet)" ]; then
             git add rule/qx/asn.snippet
             git commit -m "chore: auto-update China ASN rules $(date +'%Y-%m-%d')"
