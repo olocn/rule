@@ -31,7 +31,7 @@ jobs:
 
           # 4. 强制创建并精确移入规则（直接指定到文件名本身，绝不漂移）
           mkdir -p rule/qx
-          mv -f asn.snippet ./rule/qx/asn.snippet
+          mv -f asn.snippet ./qx/asn.snippet
 
       - name: Commit and Push changes
         run: |
