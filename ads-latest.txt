@@ -169,7 +169,6 @@ DOMAIN,cpro.baidustatic.com
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
 DOMAIN,httpdns.bcelive.com
-DOMAIN,dig.bdurl.net
 DOMAIN-SUFFIX,beizi.biz
 DOMAIN-SUFFIX,bianxian.com
 DOMAIN,c.bidtoolads.com
@@ -1034,7 +1033,6 @@ DOMAIN,ads5-normal-lq.zijieapi.com
 DOMAIN,ads5-normal.zijieapi.com
 DOMAIN,applog.zijieapi.com
 DOMAIN,log.zijieapi.com
-DOMAIN,mcs.zijieapi.com
 DOMAIN,mssdk.zijieapi.com
 DOMAIN,tnc0-bjlgy.zijieapi.com
 DOMAIN-KEYWORD,-normal.zijieapi.com
