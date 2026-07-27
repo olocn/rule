@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-07-26)
+# Auto merged MosDNS rules (2026-07-27)
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
@@ -313,6 +313,7 @@ full:ads-sdk-api.ranfenghd.com
 full:ads-sg.tiktok.com
 full:ads-video-al.xhscdn.com
 full:ads-video-qc.xhscdn.com
+full:ads.adfunlink.com
 full:ads.auctions.yahoo.com
 full:ads.google.cn
 full:ads.huan.tv
@@ -369,6 +370,7 @@ full:adstudio.spotify.com
 full:adtago.s3.amazonaws.com
 full:adtech.yahooinc.com
 full:adtrack.quark.cn
+full:adtracker.adfunlink.com
 full:adui.tg.meitu.com
 full:adv-api.shenshiads.com
 full:adv.sec.intl.miui.com
@@ -626,7 +628,6 @@ full:ii.gdt.qq.com
 full:image-ad.sm.cn
 full:image.hpplay.cn
 full:images.outbrainimg.com
-full:images.pinduoduo.com
 full:imdns.hpplay.cn
 full:img-c.heytapimage.com
 full:img-x.jd.com
@@ -1012,7 +1013,6 @@ full:yk-ssp.ad.youku.com
 full:ykad-data.cp31.ott.cibntv.net
 full:ykad-data.youku.com
 full:ykad-gateway.youku.com
-full:youku-acs.m.taobao.com
 full:ytx-file.110route.cn
 full:zeus.ad.xiaomi.com
 full:zhihu-web-analytics.zhihu.com

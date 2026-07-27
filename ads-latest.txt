@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-07-26)
+# Auto merged Surge rules (2026-07-27)
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 DOMAIN,enrichgw.10010.com
@@ -50,6 +50,8 @@ URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
 URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
 DOMAIN-SUFFIX,ad-scope.com
 DOMAIN-SUFFIX,adcolony.com
+DOMAIN,ads.adfunlink.com
+DOMAIN,adtracker.adfunlink.com
 DOMAIN-SUFFIX,adintl.cn
 DOMAIN-SUFFIX,adjust.cn
 DOMAIN-SUFFIX,adjust.com
@@ -609,7 +611,6 @@ DOMAIN,apm-a.pinduoduo.com
 DOMAIN,apm-b.pinduoduo.com
 DOMAIN,click.pinduoduo.com
 DOMAIN,crash.pinduoduo.com
-DOMAIN,images.pinduoduo.com
 DOMAIN,log.pinduoduo.com
 DOMAIN,m-apm.pinduoduo.com
 DOMAIN,m-log.pinduoduo.com
@@ -823,7 +824,6 @@ DOMAIN,hybrid.miniapp.taobao.com
 DOMAIN,umengacs.m.taobao.com
 DOMAIN,umengjmacs.m.taobao.com
 DOMAIN,wcp.taobao.com
-DOMAIN,youku-acs.m.taobao.com
 DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN,fourier.taobao.com⁠
 DOMAIN-SUFFIX,tbcache.com
