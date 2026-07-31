@@ -8,12 +8,11 @@ on:
     paths:
       - 'qx/**'
       - 'qxb/**'
-      - 'convert.py'
       - '.github/workflows/convert.yml'
   schedule:
-    # 每天北京时间 08:00 自动运行
+    # 每天 UTC 00:00 (北京时间 08:00) 自动定时运行
     - cron: '0 0 * * *'
-  workflow_dispatch: # 支持网页手动触发
+  workflow_dispatch: # 支持在 GitHub 页面手动点击触发
 
 jobs:
   build-and-convert:
@@ -30,9 +29,59 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Run Conversion Script
+      - name: Inline Convert Script
         run: |
-          python convert.py
+          python -c "
+          import os
+          import re
+
+          def clean_and_convert_line(line):
+              line = line.strip()
+              if not line or line.startswith('#') or line.startswith(';'):
+                  return line
+
+              # 替换 QX 语法修饰符为 Shadowrocket 语法
+              line = re.sub(r'(?i)\bHOST-SUFFIX\b', 'DOMAIN-SUFFIX', line)
+              line = re.sub(r'(?i)\bHOST-KEYWORD\b', 'DOMAIN-KEYWORD', line)
+              line = re.sub(r'(?i)\bHOST\b', 'DOMAIN', line)
+
+              parts = [p.strip() for p in line.split(',') if p.strip()]
+
+              # 提取 类型 和 目标，自动剔除尾部粘连的 DIRECT/PROXY 等
+              if len(parts) >= 2:
+                  return f'{parts[0].upper()},{parts[1]}'
+
+              return line
+
+          def process_file(input_path, output_path):
+              try:
+                  with open(input_path, 'r', encoding='utf-8') as f:
+                      lines = f.readlines()
+              except UnicodeDecodeError:
+                  with open(input_path, 'r', encoding='gbk', errors='ignore') as f:
+                      lines = f.readlines()
+
+              converted_lines = [clean_and_convert_line(line) for line in lines if clean_and_convert_line(line) is not None]
+
+              os.makedirs(os.path.dirname(output_path), exist_ok=True)
+              with open(output_path, 'w', encoding='utf-8') as f:
+                  f.write('\n'.join(converted_lines) + '\n')
+
+          source_dirs = ['qx', 'qxb']
+          output_dir = 'rocket'
+
+          for src_dir in source_dirs:
+              if not os.path.exists(src_dir):
+                  continue
+              for root, _, files in os.walk(src_dir):
+                  for file in files:
+                      if file.endswith(('.list', '.txt', '.snippet', '.conf')):
+                          src_file = os.path.join(root, file)
+                          rel_path = os.path.relpath(src_file, src_dir)
+                          dest_file = os.path.join(output_dir, src_dir, rel_path)
+                          process_file(src_file, dest_file)
+                          print(f'Converted: {src_file} -> {dest_file}')
+          "
 
       - name: Commit and Push Changes to Rocket Directory
         run: |
