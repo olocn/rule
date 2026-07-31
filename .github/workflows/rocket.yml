@@ -11,15 +11,15 @@ on:
       - 'convert.py'
       - '.github/workflows/convert.yml'
   schedule:
-    # 每天 UTC 00:00 (北京时间 08:00) 自动运行一次
+    # 每天北京时间 08:00 自动运行
     - cron: '0 0 * * *'
-  workflow_dispatch: # 支持在 GitHub 页面手动触发
+  workflow_dispatch: # 支持网页手动触发
 
 jobs:
   build-and-convert:
     runs-on: ubuntu-latest
     permissions:
-      contents: write # 赋予机器人写入和提交代码的权限
+      contents: write
 
     steps:
       - name: Checkout Repository
@@ -41,7 +41,6 @@ jobs:
           
           git add rocket/
           
-          # 检查是否有更新，无更新则跳过 commit
           if git diff --staged --quiet; then
             echo "No changes in rules, skipping commit."
           else
