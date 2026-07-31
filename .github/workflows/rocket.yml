@@ -77,8 +77,15 @@ jobs:
                   for file in files:
                       if file.endswith(('.list', '.txt', '.snippet', '.conf')):
                           src_file = os.path.join(root, file)
+                          
+                          # 去掉中间的 qx/qxb 层级，直接放在 rocket 目录下
                           rel_path = os.path.relpath(src_file, src_dir)
-                          dest_file = os.path.join(output_dir, src_dir, rel_path)
+                          
+                          # 修改文件后缀统一为 .list
+                          base_name = os.path.splitext(rel_path)[0]
+                          new_filename = f'{base_name}.list'
+                          
+                          dest_file = os.path.join(output_dir, new_filename)
                           process_file(src_file, dest_file)
                           print(f'Converted: {src_file} -> {dest_file}')
           "
