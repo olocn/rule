@@ -1,0 +1,50 @@
+name: Shadowrocket
+
+on:
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - 'qx/**'
+      - 'qxb/**'
+      - 'convert.py'
+      - '.github/workflows/convert.yml'
+  schedule:
+    # 每天 UTC 00:00 (北京时间 08:00) 自动定时运行一次
+    - cron: '0 0 * * *'
+  workflow_dispatch: # 支持在 GitHub 页面手动点击运行
+
+jobs:
+  build-and-convert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 给予机器人提交代码写权限
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Run Conversion Script
+        run: |
+          python convert.py
+
+      - name: Commit and Push Changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          
+          git add sr/
+          
+          # 检查是否有文件更新，无更新则跳过 commit
+          if git diff --staged --quiet; then
+            echo "No changes in rules, skipping commit."
+          else
+            git commit -m "auto: convert qx/qxb rules to shadowrocket format [skip ci]"
+            git push
+          fi
