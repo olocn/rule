@@ -324,6 +324,7 @@ DOMAIN-SUFFIX,appcenter.ms
 
 # 百度
 DOMAIN,afd.baidu.com
+DOMAIN-SUFFIX,qchannel01.cn
 # DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,ecom.map.baidu.com
