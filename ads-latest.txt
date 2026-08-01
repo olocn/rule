@@ -36,8 +36,7 @@ DOMAIN-SUFFIX,360tpcdn.com
 DOMAIN-SUFFIX,360webcache.com
 DOMAIN,ad.51wnl.com
 DOMAIN,t-adx.52qumao.com
-DOMAIN,bj.ad.track.66mobi.com
-DOMAIN,volc.bj.ad.track.66mobi.com
+DOMAIN-SUFFIX,66mobi.com
 DOMAIN,kl.67it.com
 DOMAIN,alicoccdncnc-xn.inter.71edge.com
 DOMAIN,alicoccdnct-xn.inter.71edge.com
@@ -166,7 +165,6 @@ DOMAIN,nsclick.baidu.com
 DOMAIN,pos.baidu.com
 DOMAIN,union.baidu.com
 DOMAIN,yongche.baidu.com
-DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN,cpro.baidustatic.com
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com

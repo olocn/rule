@@ -3,6 +3,7 @@ full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
 domain:bugsnag.com
+domain:66mobi.com
 domain:wuchucloud.net
 domain:rongnav.com
 domain:bytefcdnrd.com
@@ -230,7 +231,6 @@ full:event.northghost.com
 domain:appsflyersdk.com
 domain:appcenter.ms
 full:afd.baidu.com
-domain:newclient.map.baidu.com
 full:yongche.baidu.com
 full:ecom.map.baidu.com
 domain:hicloud.com
@@ -476,7 +476,6 @@ full:bgg.baidu.com
 domain:bianxian.com
 full:bingads.microsoft.com
 full:biz.weibo.com
-full:bj.ad.track.66mobi.com
 full:books-analytics-events.apple.com
 full:bootpreload.uve.weibo.com
 full:browser.events.data.msn.cn
@@ -973,7 +972,6 @@ full:vipauth.hpplay.cn
 full:vipgslb.hpplay.cn
 full:virusinfo-cloudscan-cn.heytapmobi.com
 full:vlive.qqvideo.tc.qq.com
-full:volc.bj.ad.track.66mobi.com
 domain:vungle.com
 full:w.l.qq.com
 full:w1.askwai.com
