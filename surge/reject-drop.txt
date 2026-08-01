@@ -3,6 +3,8 @@ DOMAIN,px.effirst.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,bugsnag.com
 
+#百度
+DOMAIN-SUFFIX,66mobi.com
 DOMAIN-SUFFIX,wuchucloud.net
 
 DOMAIN-SUFFIX,rongnav.com
@@ -322,7 +324,7 @@ DOMAIN-SUFFIX,appcenter.ms
 
 # 百度
 DOMAIN,afd.baidu.com
-DOMAIN-SUFFIX,newclient.map.baidu.com
+# DOMAIN-SUFFIX,newclient.map.baidu.com
 DOMAIN,yongche.baidu.com
 DOMAIN,ecom.map.baidu.com
 
