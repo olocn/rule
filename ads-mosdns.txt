@@ -231,6 +231,7 @@ full:event.northghost.com
 domain:appsflyersdk.com
 domain:appcenter.ms
 full:afd.baidu.com
+domain:qchannel01.cn
 full:yongche.baidu.com
 full:ecom.map.baidu.com
 domain:hicloud.com

@@ -627,6 +627,7 @@ DOMAIN,rlog.popin.cc
 DOMAIN-SUFFIX,pplive-p2p.com
 DOMAIN,ads.pubmatic.com
 DOMAIN,pig.pupuapi.com
+DOMAIN-SUFFIX,qchannel01.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,qhimg.com
 DOMAIN-SUFFIX,qhimgs.com
