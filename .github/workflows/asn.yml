@@ -15,40 +15,40 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          # 清理可能存在的错误目录
+          # 清理错误目录
           rm -rf rule/rule
 
-          # 下载、过滤、转换 CN IP-CIDR 规则
+          # 下载并转换中国 IP-CIDR
           curl -sSL "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/cn.txt" | \
           grep -v -E '^[[:space:]]*([#;]|$)' | \
           sed -E 's/^IP-CIDR,([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\/[0-9]+).*/ip-cidr,\1,direct/' | \
           sort -V | uniq > ip-cidr.snippet
 
-          # 预览和统计
-          echo "=== 转换成功，样例预览 ==="
+          # 预览
+          echo "=== 转换成功 ==="
           head -n 5 ip-cidr.snippet
-          echo "========================"
-          echo "总计规则条数: $(wc -l < ip-cidr.snippet)"
+          echo "================"
+          echo "规则数量: $(wc -l < ip-cidr.snippet)"
 
-          # 输出规则文件
-          mkdir -p rule/qx
-          mv -f ip-cidr.snippet rule/qx/ip-cidr.snippet
+          # 放入 qx 目录
+          mkdir -p qx
+          mv -f ip-cidr.snippet qx/ip-cidr.snippet
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          # 删除误生成的 rule/rule
+          # 清理错误生成目录
           if [ -d "rule/rule" ]; then
             git rm -rf rule/rule 2>/dev/null || true
           fi
 
-          # 检测规则变化并提交
-          if [ -n "$(git status --porcelain rule/qx/ip-cidr.snippet)" ]; then
-            git add rule/qx/ip-cidr.snippet
+          # 检查变化
+          if [ -n "$(git status --porcelain qx/ip-cidr.snippet)" ]; then
+            git add qx/ip-cidr.snippet
             git commit -m "chore: auto-update China IP-CIDR rules $(date +'%Y-%m-%d')"
             git push
           else
-            echo "规则未发生变动，跳过提交。"
+            echo "规则无变化，跳过提交。"
           fi
