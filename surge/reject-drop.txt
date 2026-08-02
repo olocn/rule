@@ -1,6 +1,7 @@
 DOMAIN,hkyzmssdk.kunlunjyk.com
 DOMAIN,px.effirst.com
 DOMAIN-SUFFIX,safebrowsing.apple
+DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,bugsnag.com
 
 #百度
