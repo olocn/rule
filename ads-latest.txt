@@ -110,12 +110,12 @@ DOMAIN,advertising.apple.com
 DOMAIN,api-adservices.apple.com
 DOMAIN,books-analytics-events.apple.com
 DOMAIN,iad.apple.com
-DOMAIN,iadsdk.apple.com
 DOMAIN,iadworkbench.apple.com
 DOMAIN,notes-analytics-events.apple.com
 DOMAIN,proxy.advp.apple.com
 DOMAIN,securemetrics.apple.com
 DOMAIN,weather-analytics-events.apple.com
+DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,applovin.com
 DOMAIN,d.applvn.com
 DOMAIN,ms.applvn.com

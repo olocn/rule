@@ -2,6 +2,7 @@
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
+domain:iadsdk.apple.com
 domain:bugsnag.com
 domain:66mobi.com
 domain:wuchucloud.net
@@ -620,7 +621,6 @@ full:iad.apple.com
 full:iad.g.163.com
 full:iadctest.qwapi.com
 full:iadmusicmat.music.126.net
-full:iadsdk.apple.com
 full:iadworkbench.apple.com
 full:ifacelog.iqiyi.com
 full:ifs.tanx.com
