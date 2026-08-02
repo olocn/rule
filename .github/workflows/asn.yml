@@ -2,7 +2,7 @@ name: IP-CIDR Rules
 
 on:
   schedule:
-    - cron: '0 22 * * *' # 每天北京时间早上 6 点自动运行
+    - cron: '0 22 * * *' # 每天北京时间 06:00 自动运行
   workflow_dispatch:
 
 jobs:
@@ -15,22 +15,22 @@ jobs:
 
       - name: Fetch and Convert Rules
         run: |
-          # 清理错误目录
+          # 清理可能存在的错误目录
           rm -rf rule/rule
 
-          # 下载并转换中国 IP-CIDR
+          # 下载中国 IPv4 CIDR 规则
           curl -sSL "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/cn.txt" | \
-          grep -v -E '^[[:space:]]*([#;]|$)' | \
+          grep '^IP-CIDR,' | \
           sed -E 's/^IP-CIDR,([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\/[0-9]+).*/ip-cidr,\1,direct/' | \
           sort -V | uniq > ip-cidr.snippet
 
-          # 预览
-          echo "=== 转换成功 ==="
+          # 预览和统计
+          echo "=== 转换成功，样例预览 ==="
           head -n 5 ip-cidr.snippet
-          echo "================"
-          echo "规则数量: $(wc -l < ip-cidr.snippet)"
+          echo "========================"
+          echo "总计规则条数: $(wc -l < ip-cidr.snippet)"
 
-          # 放入 qx 目录
+          # 输出到 qx 目录
           mkdir -p qx
           mv -f ip-cidr.snippet qx/ip-cidr.snippet
 
@@ -39,16 +39,16 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          # 清理错误生成目录
+          # 删除错误生成的 rule/rule
           if [ -d "rule/rule" ]; then
             git rm -rf rule/rule 2>/dev/null || true
           fi
 
-          # 检查变化
+          # 有变化才提交
           if [ -n "$(git status --porcelain qx/ip-cidr.snippet)" ]; then
             git add qx/ip-cidr.snippet
-            git commit -m "chore: auto-update China IP-CIDR rules $(date +'%Y-%m-%d')"
+            git commit -m "chore: auto-update China IPv4 IP-CIDR rules $(date +'%Y-%m-%d')"
             git push
           else
-            echo "规则无变化，跳过提交。"
+            echo "规则未发生变化，跳过提交。"
           fi
