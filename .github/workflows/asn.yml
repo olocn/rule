@@ -1,52 +1,53 @@
-name: ASN Rules
+name: IP-CIDR Rules
 
 on:
   schedule:
     - cron: '0 22 * * *' # 每天北京时间早上 6 点自动运行
-  workflow_dispatch:      # 允许手动触发
+  workflow_dispatch:
 
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
 
       - name: Fetch and Convert Rules
         run: |
-          # 1. 先彻底清理掉可能存在的 rule/rule 错误残留目录
+          # 清理可能存在的错误目录
           rm -rf rule/rule
-          
-          # 2. 在当前根目录下安全抓取、清洗、转换并生成临时文件
-          curl -sSL "https://raw.githubusercontent.com/VirgilClyne/GetSomeFries/main/ruleset/ASN.China.list" | \
-          grep -v -E '^[[:space:]]*([#;]|$)' | \
-          sed -E 's/[^0-9]*([0-9]+).*/ip-asn, \1, direct/' | \
-          sort -V | uniq > asn.snippet
-          
-          # 3. 预览与统计
-          echo "=== 转换成功，样例预览 ==="
-          head -n 5 asn.snippet
-          echo "========================"
-          echo "总计规则条数: $(wc -l < asn.snippet)"
 
-          # 4. 强制创建并精确移入规则（直接指定到文件名本身，绝不漂移）
+          # 下载、过滤、转换 CN IP-CIDR 规则
+          curl -sSL "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/cn.txt" | \
+          grep -v -E '^[[:space:]]*([#;]|$)' | \
+          sed -E 's/^IP-CIDR,([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\/[0-9]+).*/ip-cidr,\1,direct/' | \
+          sort -V | uniq > ip-cidr.snippet
+
+          # 预览和统计
+          echo "=== 转换成功，样例预览 ==="
+          head -n 5 ip-cidr.snippet
+          echo "========================"
+          echo "总计规则条数: $(wc -l < ip-cidr.snippet)"
+
+          # 输出规则文件
           mkdir -p rule/qx
-          mv -f asn.snippet ./qx/asn.snippet
+          mv -f ip-cidr.snippet rule/qx/ip-cidr.snippet
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          
-          # 5. 如果有残留的 rule/rule 误推，顺便从 git 中清理掉
+
+          # 删除误生成的 rule/rule
           if [ -d "rule/rule" ]; then
             git rm -rf rule/rule 2>/dev/null || true
           fi
 
-          # 6. 检查正确的归档路径并安全推送到仓库
-          if [ -n "$(git status --porcelain rule/qx/asn.snippet)" ]; then
-            git add rule/qx/asn.snippet
-            git commit -m "chore: auto-update China ASN rules $(date +'%Y-%m-%d')"
+          # 检测规则变化并提交
+          if [ -n "$(git status --porcelain rule/qx/ip-cidr.snippet)" ]; then
+            git add rule/qx/ip-cidr.snippet
+            git commit -m "chore: auto-update China IP-CIDR rules $(date +'%Y-%m-%d')"
             git push
           else
             echo "规则未发生变动，跳过提交。"
