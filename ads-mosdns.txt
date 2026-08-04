@@ -4,6 +4,7 @@ full:px.effirst.com
 domain:safebrowsing.apple
 domain:iadsdk.apple.com
 domain:bugsnag.com
+full:O4505782787964928.ingest.sentry.io
 domain:66mobi.com
 domain:wuchucloud.net
 domain:rongnav.com
