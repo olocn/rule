@@ -1,0 +1,53 @@
+name: Deduplicate QX Rules
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'qx/**'
+  schedule:
+    - cron: '0 0 * * *'
+
+permissions:
+  contents: write
+
+jobs:
+  dedupe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run deduplication shell script
+        run: |
+          if [ ! -d "qx" ]; then
+            echo "Directory 'qx' does not exist."
+            exit 0
+          fi
+
+          # 逐个独立处理文件
+          find qx -type f | while IFS= read -r filepath; do
+            echo "Processing: $filepath"
+            
+            # 单文件独立去重：
+            # 1. 遇到空行或注释行 (#, ;, // 开头) 直接原样保留
+            # 2. 遇到普通规则行，使用内部哈希表仅在当前文件范围内去重
+            awk '
+              BEGIN { delete seen }
+              /^[[:space:]]*$/ || /^[[:space:]]*([#;/]|\/\/)/ {
+                print $0;
+                next
+              }
+              !seen[$0]++ {
+                print $0
+              }
+            ' "$filepath" > "$filepath.tmp"
+
+            mv "$filepath.tmp" "$filepath"
+          done
+
+      - name: Commit and push changes
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: auto deduplicate qx rules independently [skip ci]"
+          branch: ${{ github.ref_name }}
