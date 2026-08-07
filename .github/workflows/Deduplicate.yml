@@ -16,7 +16,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
+        with:
+          # 抓取完整历史记录，防止分支分支分叉时合并失败
+          fetch-depth: 0
+
+      - name: Pull latest changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          # 防止并发提交导致的冲突，采用 rebase 变基合并
+          git pull origin ${{ github.ref_name }} --rebase || true
 
       - name: Run deduplication shell script
         run: |
