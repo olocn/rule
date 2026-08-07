@@ -29,16 +29,48 @@ jobs:
           find qx -type f | while IFS= read -r filepath; do
             echo "Processing: $filepath"
             
-            # 单文件独立去重：
-            # 1. 遇到空行或注释行 (#, ;, // 开头) 直接原样保留
-            # 2. 遇到普通规则行，使用内部哈希表仅在当前文件范围内去重
             awk '
-              BEGIN { delete seen }
+              BEGIN { 
+                delete seen
+                delete suffixes
+              }
+
+              # 1. 空行或注释行 (#, ;, // 开头) 直接原样保留
               /^[[:space:]]*$/ || /^[[:space:]]*([#;/]|\/\/)/ {
-                print $0;
+                print $0
                 next
               }
-              !seen[$0]++ {
+
+              {
+                # 2. 基础整行完全重复清理
+                if (seen[$0]++) next
+
+                # 3. host-suffix 子域名冗余判定
+                line_lower = tolower($0)
+                if (line_lower ~ /^[[:space:]]*host-suffix[[:space:]]*,/) {
+                  split($0, parts, ",")
+                  
+                  # 提取域名部分并清理首尾空格与大小写
+                  domain = parts[2]
+                  gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
+                  domain = tolower(domain)
+
+                  # 检查当前域名是否已被已有的父域名涵盖
+                  is_subdomain = 0
+                  for (s in suffixes) {
+                    if (domain ~ ("\\." s "$")) {
+                      is_subdomain = 1
+                      break
+                    }
+                  }
+
+                  # 如果是子域名，则丢弃该行
+                  if (is_subdomain) next
+
+                  # 记录当前 host-suffix 的根/父域名
+                  suffixes[domain] = 1
+                }
+
                 print $0
               }
             ' "$filepath" > "$filepath.tmp"
