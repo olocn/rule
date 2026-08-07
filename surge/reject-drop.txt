@@ -6,6 +6,17 @@ DOMAIN-SUFFIX,bugsnag.com
 DOMAIN,O4505782787964928.ingest.sentry.io
 DOMAIN-SUFFIX,miaozhen.com
 
+#18comic
+DOMAIN-SUFFIX,chnsrv.com
+DOMAIN-SUFFIX,magsrv.com
+DOMAIN-SUFFIX,clarity.ms
+DOMAIN,ai-girls.media
+DOMAIN,campfirecroutondecorator.com
+DOMAIN-SUFFIX,clarity.ms
+DOMAIN,analytics.google.com
+DOMAIN-SUFFIX,dreamserve.dev
+DOMAIN-SUFFIX,snaptrckr.fun
+
 #百度
 DOMAIN-SUFFIX,66mobi.com
 DOMAIN-SUFFIX,wuchucloud.net
