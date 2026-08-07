@@ -72,6 +72,7 @@ DOMAIN-SUFFIX,adx.adwangmai.com
 DOMAIN,monitor.adxsenmeng.com
 DOMAIN,rtb.adxsenmeng.com
 DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN-SUFFIX,ai-girls.media
 DOMAIN,cdn.aiclk.com
 DOMAIN,cpc-service-square.aiclk.com
 DOMAIN,logrcv.aiclk.com
@@ -201,6 +202,7 @@ DOMAIN,tnc3-bjlgy.bytedance.com
 DOMAIN-SUFFIX,bytefcdnrd.com
 DOMAIN,p3-tt.byteimg.com
 DOMAIN,log.byteoversea.com
+DOMAIN-SUFFIX,campfirecroutondecorator.com
 DOMAIN,ad.cctv.com
 DOMAIN,syh-imp.cdnjtzy.com
 DOMAIN,dlied1.cdntips.net
@@ -215,12 +217,14 @@ DOMAIN,click4.chinaliftoff.io
 DOMAIN,impression-asia.chinaliftoff.io
 DOMAIN,sdkoptedge.chinanetcenter.com
 DOMAIN-SUFFIX,chiq-cloud.com
+DOMAIN-SUFFIX,chnsrv.com
 DOMAIN,config.chsmarttv.com
 DOMAIN,data.chsmarttv.com
 DOMAIN,hpplay.cdn.cibn.cc
 DOMAIN,pl.cp31.ott.cibntv.net
 DOMAIN,yk-ssp-ad.cp31.ott.cibntv.net
 DOMAIN,ykad-data.cp31.ott.cibntv.net
+DOMAIN-SUFFIX,clarity.ms
 DOMAIN-SUFFIX,cloooud.com
 DOMAIN,config.cmpassport.com
 DOMAIN,log1.cmpassport.com
@@ -297,6 +301,7 @@ DOMAIN,p2plog.douyucdn.cn
 DOMAIN,p2pvod-ws.douyucdn.cn
 DOMAIN,stun.douyucdn.cn
 DOMAIN,stun1.douyucdn.cn
+DOMAIN-SUFFIX,dreamserve.dev
 DOMAIN,log-verify.dutils.com
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN,wildcard.moatads.com.edgekey.net
@@ -342,6 +347,7 @@ DOMAIN-SUFFIX,google-analytics.com
 DOMAIN,ads.google.cn
 DOMAIN,adsense.google.cn
 DOMAIN,adservice.google.com
+DOMAIN,analytics.google.com
 DOMAIN,ogads-pa.clients6.google.com
 DOMAIN-SUFFIX,googleadservices-cn.com
 DOMAIN-SUFFIX,googleadservices.com
@@ -527,6 +533,7 @@ DOMAIN,outlookads.live.com
 DOMAIN,pcdn.livelive.cn
 DOMAIN-SUFFIX,log-report.com
 DOMAIN,game.loveota.com
+DOMAIN-SUFFIX,magsrv.com
 DOMAIN-SUFFIX,medproad.com
 DOMAIN,adui.tg.meitu.com
 DOMAIN,tuiguang.meitu.com
@@ -788,6 +795,7 @@ DOMAIN-SUFFIX,smtcdns.com
 DOMAIN-SUFFIX,smtcdns.net
 DOMAIN,analytics-api-01.smzdm.com
 DOMAIN,analytics-api.smzdm.com
+DOMAIN-SUFFIX,snaptrckr.fun
 DOMAIN,abtest-ch.snssdk.com
 DOMAIN,open.snssdk.com
 DOMAIN,tnc3-aliec2.snssdk.com

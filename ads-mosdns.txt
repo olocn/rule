@@ -6,6 +6,14 @@ domain:iadsdk.apple.com
 domain:bugsnag.com
 full:O4505782787964928.ingest.sentry.io
 domain:miaozhen.com
+domain:chnsrv.com
+domain:magsrv.com
+domain:clarity.ms
+domain:ai-girls.media
+domain:campfirecroutondecorator.com
+full:analytics.google.com
+domain:dreamserve.dev
+domain:snaptrckr.fun
 domain:66mobi.com
 domain:wuchucloud.net
 domain:rongnav.com
