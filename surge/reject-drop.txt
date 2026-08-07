@@ -4,6 +4,7 @@ DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN,O4505782787964928.ingest.sentry.io
+DOMAIN-SUFFIX,miaozhen.com
 
 #百度
 DOMAIN-SUFFIX,66mobi.com
