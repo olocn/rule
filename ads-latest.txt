@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-08-06)
+# Auto merged Surge rules (2026-08-07)
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 DOMAIN,enrichgw.10010.com
@@ -534,10 +534,7 @@ DOMAIN,data-sdk-uuid-log.d.meituan.net
 DOMAIN-SUFFIX,mentamob.com
 DOMAIN,mobaliyun.res.mgtv.com
 DOMAIN,mobile.da.mgtv.com
-DOMAIN,g.dtv.cn.miaozhen.com
-DOMAIN,tencent-dtv.m.cn.miaozhen.com
-DOMAIN,tytx.m.cn.miaozhen.com
-DOMAIN,xiaomi-dtv.m.cn.miaozhen.com
+DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,micro-xdb.com
 DOMAIN,bingads.microsoft.com
 DOMAIN,mobile.events.data.microsoft.com

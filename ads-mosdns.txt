@@ -1,10 +1,11 @@
-# Auto merged MosDNS rules (2026-08-06)
+# Auto merged MosDNS rules (2026-08-07)
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
 domain:iadsdk.apple.com
 domain:bugsnag.com
 full:O4505782787964928.ingest.sentry.io
+domain:miaozhen.com
 domain:66mobi.com
 domain:wuchucloud.net
 domain:rongnav.com
@@ -571,7 +572,6 @@ full:frontend-perf-service.e.kuaishou.com
 full:fxgate.baidu.com
 full:g-adnet.hiaiabc.com
 full:g-staic.ganjingworld.com
-full:g.dtv.cn.miaozhen.com
 full:g2.ganjing.world
 full:game.loveota.com
 full:gdfp.gifshow.com
@@ -891,7 +891,6 @@ full:tdsdk.cpatrk.net
 full:tdsdk.xdrig.com
 domain:telecome.cn
 full:telemetry.sdk.inmobi.com
-full:tencent-dtv.m.cn.miaozhen.com
 full:test.ad.xiaomi.com
 full:test.e.ad.xiaomi.com
 full:tj.b.qq.com
@@ -934,7 +933,6 @@ full:tx-ad.a.yximgs.com
 full:tx-kmpaudio.pull.yximgs.com
 full:tx-p2p-pull.live-voip.com
 full:tx-p2p-v2.pull.yximgs.com
-full:tytx.m.cn.miaozhen.com
 full:tz.sec.xiaomi.com
 full:uapi.ads.heytapmobi.com
 full:udc.yahoo.com
@@ -1004,7 +1002,6 @@ full:wxsnsdy.wxs.qq.com
 full:wxsnsdythumb.wxs.qq.com
 full:xc.gdt.qq.com
 full:xcx.dcad01.com
-full:xiaomi-dtv.m.cn.miaozhen.com
 full:xlog.jd.com
 domain:xlviiirdr.com
 domain:xlviirdr.com
