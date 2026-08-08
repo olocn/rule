@@ -1,4 +1,4 @@
-name: IP-CIDR Rules
+name: IP-ASN Rules
 
 on:
   schedule:
@@ -11,43 +11,35 @@ jobs:
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
-      - name: Fetch and Convert Rules
+      - name: Fetch and Convert ASN Rules
         run: |
-          # 清理可能存在的错误目录
-          rm -rf rule/rule
-
-          # 下载中国 IPv4 CIDR 规则
-          curl -sSL "https://cdn.jsdelivr.net/gh/Loyalsoldier/geoip@release/surge/cn.txt" | \
-          grep '^IP-CIDR,' | \
-          sed -E 's/^IP-CIDR,([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\/[0-9]+).*/ip-cidr,\1,direct/' | \
-          sort -V | uniq > ip-cidr.snippet
+          # 抓取 bgp.he.net CN 页面，提取所有 AS 号并转成指定格式
+          curl -sSL -A "Mozilla/5.0 (Windows NT 10.0; Win64; x64)" "https://bgp.he.net/country/CN" | \
+          grep -oE 'AS[0-9]+' | \
+          sed -E 's/AS([0-9]+)/ip-asn, \1, direct/' | \
+          sort -V | uniq > ip-asn.snippet
 
           # 预览和统计
           echo "=== 转换成功，样例预览 ==="
-          head -n 5 ip-cidr.snippet
+          head -n 5 ip-asn.snippet
           echo "========================"
-          echo "总计规则条数: $(wc -l < ip-cidr.snippet)"
+          echo "总计规则条数: $(wc -l < ip-asn.snippet)"
 
           # 输出到 qx 目录
           mkdir -p qx
-          mv -f ip-cidr.snippet qx/ip-cidr.snippet
+          mv -f ip-asn.snippet qx/ip-asn.snippet
 
       - name: Commit and Push changes
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
 
-          # 删除错误生成的 rule/rule
-          if [ -d "rule/rule" ]; then
-            git rm -rf rule/rule 2>/dev/null || true
-          fi
-
-          # 有变化才提交
-          if [ -n "$(git status --porcelain qx/ip-cidr.snippet)" ]; then
-            git add qx/ip-cidr.snippet
-            git commit -m "chore: auto-update China IPv4 IP-CIDR rules $(date +'%Y-%m-%d')"
+          # 检查 qx/ip-asn.snippet 是否有更新，有变化才提交
+          if [ -n "$(git status --porcelain qx/ip-asn.snippet)" ]; then
+            git add qx/ip-asn.snippet
+            git commit -m "chore: auto-update China IP-ASN rules $(date +'%Y-%m-%d')"
             git push
           else
             echo "规则未发生变化，跳过提交。"
