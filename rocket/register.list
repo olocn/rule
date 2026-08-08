@@ -9,7 +9,6 @@ DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,youtube.com
 DOMAIN-SUFFIX,googlevideo
 DOMAIN-KEYWORD,google
-DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,youtu.be
@@ -72,7 +71,6 @@ DOMAIN-KEYWORD,claude
 DOMAIN-SUFFIX,anthropic.com
 DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,usefathom.com
-DOMAIN-SUFFIX,console.anthropic.com
 DOMAIN-SUFFIX,recraft.ai
 DOMAIN-SUFFIX,poe.com
 DOMAIN-SUFFIX,lmsudio.ai
@@ -83,7 +81,6 @@ DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,azureedge.net
-DOMAIN-SUFFIX,www.bingapis.com
 DOMAIN-SUFFIX,live.com
 DOMAIN-SUFFIX,virtualearth.net
 DOMAIN-SUFFIX,windows.net
@@ -103,8 +100,6 @@ DOMAIN-SUFFIX,bingstatic.com
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,r.msftstatic.com
 DOMAIN-SUFFIX,staging-bing-int.com
-DOMAIN-SUFFIX,xpaycdn-int.azureedge.net
-DOMAIN-SUFFIX,xpaycdn.azureedge.net
 DOMAIN-SUFFIX,ssl.kaptcha.com
 DOMAIN-SUFFIX,tst.kaptcha.com
 DOMAIN-SUFFIX,binginternal.com
