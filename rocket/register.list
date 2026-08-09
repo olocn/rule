@@ -1,9 +1,11 @@
+
+DOMAIN,challenges.cloudflare.com
+DOMAIN-SUFFIX,api.ipify.org
+
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,cloudflareinsights.com
-DOMAIN-SUFFIX,api.ipify.org
 DOMAIN-SUFFIX,south-plus.net
 
-DOMAIN-SUFFIX,s.ytimg.com
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleusercontent.com
 DOMAIN-SUFFIX,youtube.com
