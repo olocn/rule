@@ -5,6 +5,7 @@ DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN,O4505782787964928.ingest.sentry.io
 DOMAIN-SUFFIX,miaozhen.com
+DOMAIN,analytics.plex.tv
 
 #18comic
 DOMAIN-SUFFIX,chnsrv.com
