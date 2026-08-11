@@ -626,6 +626,7 @@ DOMAIN,analytics.pinterest.com
 DOMAIN,log.pinterest.com
 DOMAIN,widgets.pinterest.com
 DOMAIN-SUFFIX,pkoplink.com
+DOMAIN,analytics.plex.tv
 DOMAIN,log.popin.cc
 DOMAIN,rlog.popin.cc
 DOMAIN-SUFFIX,pplive-p2p.com

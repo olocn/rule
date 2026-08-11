@@ -6,6 +6,7 @@ domain:iadsdk.apple.com
 domain:bugsnag.com
 full:O4505782787964928.ingest.sentry.io
 domain:miaozhen.com
+full:analytics.plex.tv
 domain:chnsrv.com
 domain:magsrv.com
 domain:clarity.ms
