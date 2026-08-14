@@ -35,11 +35,7 @@ DOMAIN-SUFFIX,siomxity.com
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN,acs.youku.com
 DOMAIN,pcdn.livelive.cn
-# 哔哩哔哩
-DOMAIN,mcdn.bilivideo.cn
-DOMAIN,p2p.bilibili.com
-DOMAIN,pcdn.bilibili.com
-DOMAIN,data.bilibili.com
+
 # QQ
 DOMAIN-SUFFIX,smtcdns.com
 DOMAIN-SUFFIX,smtcdns.net
@@ -67,7 +63,6 @@ DOMAIN,tpa-hcdn.iqiyi.com
 # 其它
 DOMAIN-SUFFIX,ndcpp.com
 DOMAIN-SUFFIX,hypercachenode.com
-DOMAIN-SUFFIX,nexusedgeio.com
 DOMAIN,dlied1.cdntips.net
 DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,bsclink.cn
@@ -110,10 +105,13 @@ DOMAIN,mall.bilibili.com
 DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
 #DOMAIN,upos-sz-mirrorcos.bilivideo.com
-DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,biligame.com
 DOMAIN,data.bilibili.com⁠
 DOMAIN,cm.bilibili.com
+DOMAIN,mcdn.bilivideo.cn
+DOMAIN,p2p.bilibili.com
+DOMAIN,pcdn.bilibili.com
+DOMAIN,data.bilibili.com
 
 #  彩云
 DOMAIN,abyss.cyapi.cn
@@ -215,7 +213,6 @@ DOMAIN,www.skyjos.com
 #高德 
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
-DOMAIN-SUFFIX,v.smtcdns.com
 
 #一键登录 
 #中国移动
@@ -268,7 +265,6 @@ DOMAIN-SUFFIX,360.net
 DOMAIN-SUFFIX,360webcache.com
 DOMAIN-SUFFIX,qhupdate.com
 DOMAIN-SUFFIX,baomitu.com
-DOMAIN-SUFFIX,360safe.com
 DOMAIN-SUFFIX,360kuai.com
 DOMAIN-SUFFIX,qhres2.com
 DOMAIN-SUFFIX,qhimgs.com
@@ -307,7 +303,6 @@ DOMAIN,chaseherbalpasty.com
 DOMAIN,muzzleexterminator.com
 
 DOMAIN-SUFFIX,amazon-adsystem.com
-DOMAIN-SUFFIX,adjust.com
 
 #什么值得买
 DOMAIN,analytics-api-01.smzdm.com
