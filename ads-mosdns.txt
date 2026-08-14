@@ -26,9 +26,6 @@ domain:siomxity.com
 domain:tbcache.com
 full:acs.youku.com
 full:pcdn.livelive.cn
-full:p2p.bilibili.com
-full:pcdn.bilibili.com
-full:data.bilibili.com
 domain:smtcdns.com
 domain:smtcdns.net
 domain:ahdohpiechei.com
@@ -88,10 +85,13 @@ full:httpdns.bilivideo.com
 full:mall.bilibili.com
 full:api.vc.bilibili.com
 full:broadcast.chat.bilibili.com
-domain:mcdn.bilivideo.cn
 domain:biligame.com
 full:data.bilibili.com⁠
 full:cm.bilibili.com
+full:mcdn.bilivideo.cn
+full:p2p.bilibili.com
+full:pcdn.bilibili.com
+full:data.bilibili.com
 full:abyss.cyapi.cn
 full:ad.cyapi.cn
 full:gather.colorfulclouds.net
@@ -197,7 +197,6 @@ domain:qihu.com
 domain:360.net
 domain:360webcache.com
 domain:qhupdate.com
-domain:qhimgs?.com
 domain:baomitu.com
 domain:360kuai.com
 domain:qhres2.com
@@ -223,7 +222,6 @@ full:img.ra12.xyz
 domain:chaseherbalpasty.com
 domain:muzzleexterminator.com
 domain:amazon-adsystem.com
-domain:adjust.com
 full:analytics-api-01.smzdm.com
 full:analytics-api.smzdm.com
 full:adx-api.zdmimg.com
@@ -312,6 +310,7 @@ full:adfilter.imtt.qq.com
 full:adguanggao.eee114.com
 full:adimg.uve.weibo.com
 domain:adjust.cn
+domain:adjust.com
 full:adks.hpplay.cn
 full:adlink-api.huan.tv
 full:adm.funshion.com

@@ -187,7 +187,7 @@ DOMAIN,p2p.bilibili.com
 DOMAIN,pcdn.bilibili.com
 DOMAIN,data.bilibili.com⁠
 DOMAIN-SUFFIX,biligame.com
-DOMAIN-SUFFIX,mcdn.bilivideo.cn
+DOMAIN,mcdn.bilivideo.cn
 DOMAIN,httpdns.bilivideo.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,bsccdn.net
@@ -636,7 +636,6 @@ DOMAIN-SUFFIX,qchannel01.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,qhimg.com
 DOMAIN-SUFFIX,qhimgs.com
-DOMAIN-SUFFIX,qhimgs?.com
 DOMAIN-SUFFIX,qhmsg.com
 DOMAIN-SUFFIX,qhres.com
 DOMAIN-SUFFIX,qhres2.com
