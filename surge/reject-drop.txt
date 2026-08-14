@@ -13,7 +13,6 @@ DOMAIN-SUFFIX,magsrv.com
 DOMAIN-SUFFIX,clarity.ms
 DOMAIN,ai-girls.media
 DOMAIN,campfirecroutondecorator.com
-DOMAIN-SUFFIX,clarity.ms
 DOMAIN,analytics.google.com
 DOMAIN-SUFFIX,dreamserve.dev
 DOMAIN-SUFFIX,snaptrckr.fun
@@ -268,7 +267,6 @@ DOMAIN-SUFFIX,qihu.com
 DOMAIN-SUFFIX,360.net
 DOMAIN-SUFFIX,360webcache.com
 DOMAIN-SUFFIX,qhupdate.com
-DOMAIN-SUFFIX,qhimgs?.com
 DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,360safe.com
 DOMAIN-SUFFIX,360kuai.com
