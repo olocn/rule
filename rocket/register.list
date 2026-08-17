@@ -2,6 +2,7 @@
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,api.ipify.org
 
+IP-ASN,8075
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN-SUFFIX,cloudflareinsights.com
 DOMAIN-SUFFIX,south-plus.net
