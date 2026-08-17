@@ -1,4 +1,5 @@
 DOMAIN-SUFFIX,amdc.m.taobao.com
+IP-CIDR,43.159.0.0/16
 DOMAIN-SUFFIX,icloud.com.cn⁠
 DOMAIN,fonts.gstatic.com
 DOMAIN,fonts.googleapis.com
