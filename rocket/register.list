@@ -2,10 +2,13 @@
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,api.ipify.org
 
+DOMAIN-SUFFIX,scdn.co
+DOMAIN-SUFFIX,spicylyrics.org
+DOMAIN-SUFFIX,sidestore.io
+
 IP-ASN,8075
-DOMAIN-SUFFIX,v2ex.co
+
 DOMAIN-SUFFIX,cloudflareinsights.com
-DOMAIN-SUFFIX,south-plus.net
 
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-SUFFIX,googleusercontent.com
