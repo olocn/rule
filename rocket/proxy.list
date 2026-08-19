@@ -11,7 +11,6 @@ DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,telegram-cdn.org
 DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,legra.ph
-DOMAIN-SUFFIX,telesco.pe
 IP-CIDR,109.239.140.0/24
 IP-CIDR,5.28.192.0/18
 IP-ASN,44907
@@ -20,7 +19,10 @@ IP-ASN,62041
 IP-ASN,59930
 IP-ASN,211157
 
+DOMAIN-SUFFIX,south-plus.net
+DOMAIN-SUFFIX,v2ex.co
 DOMAIN,tu.ewrewej.la
+DOMAIN,tu.ymawv.la
 DOMAIN-KEYWORD,.app
 DOMAIN,www.egernlicense.com
 DOMAIN-SUFFIX,yandex.com
@@ -34,8 +36,7 @@ DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-KEYWORD,18comic
 DOMAIN,tju.7pzzv.us
 DOMAIN,tu.2qq42.us
-DOMAIN,tu.ymawv.la
-DOMAIN,ttou.j03og.app
+
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,strpst.com
 DOMAIN-SUFFIX,fourhoi.com
@@ -59,10 +60,7 @@ DOMAIN-SUFFIX,jmpic.xyz
 DOMAIN-SUFFIX,jmpic.org
 DOMAIN-SUFFIX,jmpicn.xyz
 DOMAIN-SUFFIX,gifyu.com
-DOMAIN,qz1gy.app
-DOMAIN,yfvjv.app
 DOMAIN-SUFFIX,ra7.xyz
-DOMAIN,r3ltm.app
 DOMAIN-SUFFIX,photos18.com
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,pinimg.com
@@ -283,7 +281,6 @@ DOMAIN-SUFFIX,gitlab.io
 DOMAIN-SUFFIX,gmodules.com
 DOMAIN-SUFFIX,go.dev
 DOMAIN-SUFFIX,golang.org
-DOMAIN-SUFFIX,graph.org
 DOMAIN-SUFFIX,graphql.org
 DOMAIN-SUFFIX,gravatar.com
 DOMAIN-SUFFIX,gstatic.com
@@ -323,7 +320,6 @@ DOMAIN-SUFFIX,kraken.com
 DOMAIN-SUFFIX,kucoin.com
 DOMAIN-SUFFIX,kuromis.com
 DOMAIN-SUFFIX,kuromisubs.shop
-DOMAIN-SUFFIX,legra.ph
 DOMAIN-SUFFIX,licdn.com
 DOMAIN-SUFFIX,linkedin.com
 DOMAIN-SUFFIX,liquid.com
@@ -453,7 +449,6 @@ DOMAIN-SUFFIX,svc.ms
 DOMAIN-SUFFIX,swissinfo.ch
 DOMAIN-SUFFIX,tapatalk.com
 DOMAIN-SUFFIX,tawk.to
-DOMAIN-SUFFIX,tdesktop.com
 DOMAIN-SUFFIX,techspot.com
 DOMAIN-SUFFIX,tenor.com
 DOMAIN-SUFFIX,tensorflow.org
@@ -480,7 +475,6 @@ DOMAIN-SUFFIX,tumblr.com
 DOMAIN-SUFFIX,turbobit.net
 DOMAIN-SUFFIX,tutanota.com
 DOMAIN-SUFFIX,tweetdeck.com
-DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,uniswap.org
 DOMAIN-SUFFIX,upercell.helpshift.com
 DOMAIN-SUFFIX,urbandictionary.com
