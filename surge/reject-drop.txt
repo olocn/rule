@@ -102,7 +102,7 @@ DOMAIN,grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN,httpdns.bilivideo.com
 DOMAIN,mall.bilibili.com
-DOMAIN,api.vc.bilibili.com
+# DOMAIN,api.vc.bilibili.com
 DOMAIN,broadcast.chat.bilibili.com
 #DOMAIN,upos-sz-mirrorcos.bilivideo.com
 DOMAIN-SUFFIX,biligame.com
