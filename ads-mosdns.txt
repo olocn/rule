@@ -1025,7 +1025,6 @@ full:zxid-m.mobileservice.cn
 domain:1rtb.com
 domain:a.market.xiaomi.com
 domain:adx.adwangmai.com
-domain:log.aliyuncs.com
 domain:ubixioe.com
 domain:vlion.cn
 domain:yfanads.com

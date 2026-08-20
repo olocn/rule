@@ -88,7 +88,6 @@ DOMAIN,baichuan-sdk.alicdn.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,cdn-ads.oss-cn-shanghai.aliyuncs.com
 DOMAIN,xcamera-filter.oss-cn-beijing.aliyuncs.com
-DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,dualstack-logs.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
