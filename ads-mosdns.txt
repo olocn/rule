@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-08-19)
+# Auto merged MosDNS rules (2026-08-20)
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
@@ -83,7 +83,6 @@ full:grpc.biliapi.net
 domain:dataflow.biliapi.com
 full:httpdns.bilivideo.com
 full:mall.bilibili.com
-full:api.vc.bilibili.com
 full:broadcast.chat.bilibili.com
 domain:biligame.com
 full:data.bilibili.com⁠
