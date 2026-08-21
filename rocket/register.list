@@ -1,7 +1,7 @@
 
 DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,api.ipify.org
-
+DOMAIN,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,scdn.co
 DOMAIN-SUFFIX,spicylyrics.org
 DOMAIN-SUFFIX,sidestore.io
