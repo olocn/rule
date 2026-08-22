@@ -8,8 +8,10 @@ domain:hiaiabc.com
 domain:ronghub.com
 domain:banguomq.com
 domain:rong-edge.com
+full:api.share.mob.com
 domain:deepinstall.com
 domain:channingkiki.top
+full:apihw.yazhijian.com
 domain:yeezyhair.com
 domain:dutils.com
 domain:openinstall.com
