@@ -8,7 +8,7 @@ DOMAIN-SUFFIX,hiaiabc.com
 DOMAIN-SUFFIX,ronghub.com
 DOMAIN-SUFFIX,banguomq.com
 DOMAIN-SUFFIX,rong-edge.com
-host,api.share.mob.com
+DOMAIN,api.share.mob.com
 DOMAIN-SUFFIX,deepinstall.com
 DOMAIN-SUFFIX,channingkiki.top
 host,apihw.yazhijian.com
