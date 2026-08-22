@@ -11,7 +11,7 @@ DOMAIN-SUFFIX,rong-edge.com
 DOMAIN,api.share.mob.com
 DOMAIN-SUFFIX,deepinstall.com
 DOMAIN-SUFFIX,channingkiki.top
-host,apihw.yazhijian.com
+DOMAIN,apihw.yazhijian.com
 DOMAIN-SUFFIX,yeezyhair.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
