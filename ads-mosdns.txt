@@ -1,4 +1,18 @@
 # Auto merged MosDNS rules (2026-08-22)
+domain:heima911.com
+domain:mobsurl.com
+domain:rongcfg.com
+domain:yksdks.com
+domain:hpplay.cn
+domain:hiaiabc.com
+domain:ronghub.com
+domain:banguomq.com
+domain:rong-edge.com
+domain:deepinstall.com
+domain:channingkiki.top
+domain:yeezyhair.com
+domain:dutils.com
+domain:openinstall.com
 full:hkyzmssdk.kunlunjyk.com
 full:px.effirst.com
 domain:safebrowsing.apple
@@ -276,7 +290,6 @@ full:ad.51wnl.com
 full:ad.api.3g.youku.com
 full:ad.bwton.com
 full:ad.cctv.com
-full:ad.hpplay.cn
 full:ad.partner.gifshow.com
 full:ad.qingting.fm
 full:ad.qq.com
@@ -295,13 +308,10 @@ full:adapi.izuiyou.com
 full:adapi.yynetwk.com
 full:adashbc.ut.taobao.com
 full:adashx.m.taobao.com
-full:adc.hpplay.cn
-full:adcdn.hpplay.cn
 full:adcdn.tencentmusic.com
 full:adclick.tencentmusic.com
 domain:adcolony.com
 full:addata.jd.com
-full:adeng.hpplay.cn
 full:adexp.chinaliftoff.io
 full:adexp.liftoff.io
 full:adexpo.tencentmusic.com
@@ -310,7 +320,6 @@ full:adguanggao.eee114.com
 full:adimg.uve.weibo.com
 domain:adjust.cn
 domain:adjust.com
-full:adks.hpplay.cn
 full:adlink-api.huan.tv
 full:adm.funshion.com
 full:ads-api-o.api.leiniao.com
@@ -446,7 +455,6 @@ full:api-ad-data.kajicam.com
 full:api-ad-product.huxiu.com
 full:api-ad.kajicam.com
 full:api-adservices.apple.com
-full:api-gd.hiaiabc.com
 full:api.ad.xiaomi.com
 full:api.e.kuaishou.com
 full:api.htp.hubcloud.com.cn
@@ -528,7 +536,6 @@ domain:cloooud.com
 domain:cnzz.com
 full:collect.kugou.com
 full:commdata.v.qq.com
-full:conf.hpplay.cn
 full:config.chsmarttv.com
 full:config.inmobi.com
 full:config.unityads.unity3d.com
@@ -577,7 +584,6 @@ full:firebaselogging-pa.googleapis.com
 domain:flurry.com
 full:frontend-perf-service.e.kuaishou.com
 full:fxgate.baidu.com
-full:g-adnet.hiaiabc.com
 full:g-staic.ganjingworld.com
 full:g2.ganjing.world
 full:game.loveota.com
@@ -596,7 +602,6 @@ domain:googletagservices-cn.com
 full:gorgon.youdao.com
 full:gromore.pangolin-sdk-toutiao.com
 full:grs.dbankcloud.com
-full:gslb.hpplay.cn
 full:gvideo.qpic.cn
 full:h-adashx.ut.taobao.com
 full:h.trace.qq.com
@@ -610,7 +615,6 @@ domain:hexagon-analytics.com
 full:hlog.bigda.com
 full:hm.baidu.com
 full:hmma.baidu.com
-full:hotupgrade.hpplay.cn
 full:houyi.kkmh.com
 full:hpplay.cdn.cibn.cc
 full:httpdns.bcelive.com
@@ -634,9 +638,7 @@ full:ifacelog.iqiyi.com
 full:ifs.tanx.com
 full:ii.gdt.qq.com
 full:image-ad.sm.cn
-full:image.hpplay.cn
 full:images.outbrainimg.com
-full:imdns.hpplay.cn
 full:img-c.heytapimage.com
 full:img-x.jd.com
 full:img.adnyg.com.w.kunlungr.com
@@ -683,8 +685,6 @@ full:log-sdk.gifshow.com
 full:log-sdk.ksapisrv.com
 full:log-upload-os.hoyoverse.com
 full:log-upload.mihoyo.com
-full:log-verify.dutils.com
-full:log-verify.hiaiabc.com
 full:log.ad.xiaomi.com
 full:log.aispeech.com
 full:log.amemv.com
@@ -709,7 +709,6 @@ full:logtj.kugou.com
 full:logupdate.avlyun.sec.miui.com
 full:logwebs.kugou.com
 full:luimg.baidu.com
-full:m-adnet.hiaiabc.com
 full:m.ad.zhangyue.com
 full:m.atm.youku.com
 full:m.shenshiads.com
@@ -792,7 +791,6 @@ full:pcm-img.zhls.qq.com
 full:pgdt.gtimg.cn
 full:pgdt.ugdtimg.com
 full:pig.pupuapi.com
-full:pin.hpplay.cn
 full:pixon.ads-pixiv.net
 full:pl.cp31.ott.cibntv.net
 full:pms.mb.qq.com
@@ -816,15 +814,12 @@ full:review.gdtimg.com
 full:rlog.popin.cc
 full:rms-drcn.platform.dbankcloud.cn
 full:roi.soulapp.cn
-full:rp.hpplay.cn
-full:rps.hpplay.cn
 full:rpt.gdt.qq.com
 full:rt.applvn.com
 full:rtb.adxsenmeng.com
 full:rtb.voiceads.cn
 full:s8t.teads.tv
 full:saad.ms.zhangyue.net
-full:saas.hpplay.cn
 full:safebrowsing.urlsec.gg.com
 full:samsung-com.112.2o7.net
 domain:samsungads.com
@@ -838,7 +833,6 @@ full:sdk.hzsanjiaomao.com
 full:sdk.markmedia.com.cn
 full:sdk.mobads.adwangmai.com
 full:sdkapp.uve.weibo.com
-full:sdkauth.hpplay.cn
 full:sdkconf.avlyun.com
 full:sdkconfig.ad.intl.xiaomi.com
 full:sdkconfig.ad.xiaomi.com
@@ -860,7 +854,6 @@ full:service.vmos.cn
 full:sf16-static.i18n-pglstatp.com
 domain:sigmob.com
 full:skdisplay.jd.com
-full:sl.hpplay.cn
 full:slb-p2p.vcloud.ks-live.com
 full:smad.ms.zhangyue.net
 full:smartad.10010.com
@@ -934,7 +927,6 @@ full:tracker.gitee.com
 full:tracking.miui.com
 full:tracking.rus.miui.com
 full:tuiguang.meitu.com
-full:tvapp.hpplay.cn
 full:tvuser-ch.cedock.com
 full:tx-ad.a.yximgs.com
 full:tx-kmpaudio.pull.yximgs.com
@@ -975,8 +967,6 @@ full:video-ad.sm.cn
 full:video-dsp.pddpic.com
 full:video.dispatch.tc.qq.com
 full:video.market.xiaomi.com
-full:vipauth.hpplay.cn
-full:vipgslb.hpplay.cn
 full:virusinfo-cloudscan-cn.heytapmobi.com
 full:vlive.qqvideo.tc.qq.com
 domain:vungle.com
