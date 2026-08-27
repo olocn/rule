@@ -25,7 +25,14 @@ DOMAIN,www.cdngwc.cc
 DOMAIN,www.cdnutc.me
 DOMAIN,www.cdngwc.club
 DOMAIN,www.cdnhjk.net
-DOMAIN,picacomic.com
+DOMAIN-SUFFIX,picacomic.com
+DOMAIN-SUFFIX,hnhr01.com
+DOMAIN-SUFFIX,split.io
+DOMAIN-SUFFIX,rc-backup.com
+DOMAIN-SUFFIX,metamask.io
+DOMAIN-SUFFIX,mixpanel.com
+DOMAIN-SUFFIX,documents.io
+DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN,tu.ewrewej.la
 DOMAIN,tu.ymawv.la
