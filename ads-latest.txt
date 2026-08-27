@@ -188,6 +188,7 @@ DOMAIN,data.bilibili.com⁠
 DOMAIN-SUFFIX,biligame.com
 DOMAIN,mcdn.bilivideo.cn
 DOMAIN,httpdns.bilivideo.com
+DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,bsclink.cn
