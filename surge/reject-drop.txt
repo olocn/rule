@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,yeezyhair.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
 
+DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,qchannel03.cn
 DOMAIN,hkyzmssdk.kunlunjyk.com
