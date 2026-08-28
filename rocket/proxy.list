@@ -1,5 +1,4 @@
-# 世界杯
-#tg
+# tg
 DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telegram.org
@@ -19,6 +18,8 @@ IP-ASN,62041
 IP-ASN,59930
 IP-ASN,211157
 IP-ASN,20940
+
+DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,south-plus.net
 DOMAIN-SUFFIX,jmdanjonproxy.xyz
 DOMAIN,www.cdngwc.cc
@@ -32,10 +33,11 @@ DOMAIN-SUFFIX,rc-backup.com
 DOMAIN-SUFFIX,metamask.io
 DOMAIN-SUFFIX,mixpanel.com
 DOMAIN-SUFFIX,documents.io
-DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,v2ex.co
 DOMAIN,tu.ewrewej.la
 DOMAIN,tu.ymawv.la
+DOMAIN,tju.7pzzv.us
+DOMAIN,tu.2qq42.us
 DOMAIN-KEYWORD,.app
 DOMAIN,www.egernlicense.com
 DOMAIN-SUFFIX,yandex.com
@@ -47,8 +49,6 @@ DOMAIN-SUFFIX,esm.sh
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-KEYWORD,18comic
-DOMAIN,tju.7pzzv.us
-DOMAIN,tu.2qq42.us
 
 DOMAIN-SUFFIX,jmapiproxy1.cc
 DOMAIN-SUFFIX,jjmhw.cc
