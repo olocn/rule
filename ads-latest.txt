@@ -202,6 +202,7 @@ DOMAIN,tnc3-bjlgy.bytedance.com
 DOMAIN-SUFFIX,bytefcdnrd.com
 DOMAIN,p3-tt.byteimg.com
 DOMAIN,log.byteoversea.com
+DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,campfirecroutondecorator.com
 DOMAIN,ad.cctv.com
 DOMAIN,syh-imp.cdnjtzy.com

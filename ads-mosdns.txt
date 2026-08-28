@@ -15,6 +15,7 @@ full:apihw.yazhijian.com
 domain:yeezyhair.com
 domain:dutils.com
 domain:openinstall.com
+domain:bytepluses.com
 domain:braze.eu
 domain:qchannel03.cn
 full:hkyzmssdk.kunlunjyk.com
