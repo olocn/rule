@@ -87,6 +87,7 @@ DOMAIN,8rn1y79f02-1.algolianet.com
 DOMAIN,cdn.ynuf.aliapp.org
 DOMAIN-SUFFIX,umid.daily.alibaba.net
 DOMAIN,baichuan-sdk.alicdn.com
+DOMAIN-SUFFIX,mdap.alipay.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,cdn-ads.oss-cn-shanghai.aliyuncs.com
 DOMAIN,xcamera-filter.oss-cn-beijing.aliyuncs.com
@@ -95,6 +96,7 @@ DOMAIN,dualstack-logs.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
 DOMAIN,logs.amap.com
 DOMAIN,optimus-ads.amap.com
+DOMAIN-SUFFIX,fp.amap.com
 DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN,advertising-api-eu.amazon.com
 DOMAIN,advertising-api-fe.amazon.com

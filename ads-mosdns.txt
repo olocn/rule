@@ -17,7 +17,6 @@ domain:dutils.com
 domain:openinstall.com
 domain:openinstall.io
 domain:shangkmo.com
-domain:umid.daily.alibaba.net
 domain:bvmlt.top
 full:track.sitetag.us
 full:acs.waptest.taobao.com
@@ -49,6 +48,9 @@ full:pcdn.volcvideo.com
 domain:nexusedgeio.com
 domain:siomxity.net
 domain:siomxity.com
+domain:umid.daily.alibaba.net
+domain:fp.amap.com
+domain:mdap.alipay.com
 domain:tbcache.com
 full:acs.youku.com
 full:pcdn.livelive.cn
