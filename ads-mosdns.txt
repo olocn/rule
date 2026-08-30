@@ -15,6 +15,13 @@ full:apihw.yazhijian.com
 domain:yeezyhair.com
 domain:dutils.com
 domain:openinstall.com
+domain:openinstall.io
+domain:shangkmo.com
+domain:umid.daily.alibaba.net
+domain:bvmlt.top
+full:track.sitetag.us
+full:acs.waptest.taobao.com
+full:starplucker.cyapi.cn
 domain:bytepluses.com
 domain:braze.eu
 domain:qchannel03.cn

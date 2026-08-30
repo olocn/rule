@@ -85,6 +85,7 @@ DOMAIN,domain.aishengji.com
 DOMAIN,log.aispeech.com
 DOMAIN,8rn1y79f02-1.algolianet.com
 DOMAIN,cdn.ynuf.aliapp.org
+DOMAIN-SUFFIX,umid.daily.alibaba.net
 DOMAIN,baichuan-sdk.alicdn.com
 DOMAIN,beacon-api.aliyuncs.com
 DOMAIN,cdn-ads.oss-cn-shanghai.aliyuncs.com
@@ -195,6 +196,7 @@ DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,bsclink.cn
 DOMAIN-SUFFIX,bsgslb.cn
 DOMAIN-SUFFIX,bugsnag.com
+DOMAIN-SUFFIX,bvmlt.top
 DOMAIN,ad.bwton.com
 DOMAIN,dlogs.bwton.com
 DOMAIN,tnc3-aliec2.bytedance.com
@@ -270,6 +272,7 @@ DOMAIN,success.ctobsnssdk.com
 DOMAIN,toblog.ctobsnssdk.com
 DOMAIN,abyss.cyapi.cn
 DOMAIN,ad.cyapi.cn
+DOMAIN,starplucker.cyapi.cn
 DOMAIN,adx-drcn.op.dbankcloud.cn
 DOMAIN,browsercfg-drcn.cloud.dbankcloud.cn
 DOMAIN,events-drcn.op.dbankcloud.cn
@@ -572,6 +575,7 @@ DOMAIN,analytics.oceanengine.com
 DOMAIN,click.oneplus.cn
 DOMAIN-SUFFIX,onethingpcs.com
 DOMAIN-SUFFIX,openinstall.com
+DOMAIN-SUFFIX,openinstall.io
 DOMAIN,scs.openspeech.cn
 DOMAIN,adsfs.oppomobile.com
 DOMAIN,adx.ads.oppomobile.com
@@ -753,6 +757,7 @@ DOMAIN,adstudio-assets.scdn.co
 DOMAIN,O4505782787964928.ingest.sentry.io
 DOMAIN,ads.servebom.com
 DOMAIN,api.shanghailingye.cn
+DOMAIN-SUFFIX,shangkmo.com
 DOMAIN,ad.shenshiads.com
 DOMAIN,adv-api.shenshiads.com
 DOMAIN,m.shenshiads.com
@@ -765,6 +770,7 @@ DOMAIN,dc.sigmob.cn
 DOMAIN-SUFFIX,sigmob.com
 DOMAIN-SUFFIX,siomxity.com
 DOMAIN-SUFFIX,siomxity.net
+DOMAIN,track.sitetag.us
 DOMAIN,www.skyjos.com
 DOMAIN-SUFFIX,slyxmobi.com
 DOMAIN,hc-ssp.sm.cn
@@ -809,6 +815,7 @@ DOMAIN-SUFFIX,t44r60.com
 DOMAIN-SUFFIX,tagtic.cn
 DOMAIN,ef-dongfeng.tanx.com
 DOMAIN,ifs.tanx.com
+DOMAIN,acs.waptest.taobao.com
 DOMAIN,adashbc.ut.taobao.com
 DOMAIN,adashx.m.taobao.com
 DOMAIN,amdcopen.m.taobao.com
