@@ -16,9 +16,10 @@ DOMAIN-SUFFIX,yeezyhair.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
 
+
 DOMAIN-SUFFIX,openinstall.io
 DOMAIN-SUFFIX,shangkmo.com
-DOMAIN-SUFFIX,umid.daily.alibaba.net
+
 DOMAIN-SUFFIX,bvmlt.top
 DOMAIN,track.sitetag.us
 DOMAIN,acs.waptest.taobao.com
@@ -60,7 +61,11 @@ DOMAIN-SUFFIX,nexusedgeio.com
 # 小米
 DOMAIN-SUFFIX,siomxity.net
 DOMAIN-SUFFIX,siomxity.com
+
 # 阿里
+DOMAIN-SUFFIX,umid.daily.alibaba.net
+DOMAIN-SUFFIX,fp.amap.com
+DOMAIN-SUFFIX,mdap.alipay.com
 DOMAIN-SUFFIX,tbcache.com
 DOMAIN,acs.youku.com
 DOMAIN,pcdn.livelive.cn
