@@ -16,6 +16,13 @@ DOMAIN-SUFFIX,yeezyhair.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
 
+DOMAIN-SUFFIX,openinstall.io
+DOMAIN-SUFFIX,shangkmo.com
+DOMAIN-SUFFIX,umid.daily.alibaba.net
+DOMAIN-SUFFIX,bvmlt.top
+DOMAIN,track.sitetag.us
+DOMAIN,acs.waptest.taobao.com
+DOMAIN,starplucker.cyapi.cn
 
 DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,braze.eu
