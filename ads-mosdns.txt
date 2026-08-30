@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-08-29)
+# Auto merged MosDNS rules (2026-08-30)
 domain:heima911.com
 domain:mobsurl.com
 domain:rongcfg.com
@@ -98,6 +98,7 @@ domain:iot.smartmidea.net
 domain:iot1.midea.com.cn
 domain:iotsdk.midea.com
 domain:mp-prod.smartmidea.net
+domain:mcdn.bilivideo.cn
 full:grpc.biliapi.net
 domain:dataflow.biliapi.com
 full:httpdns.bilivideo.com
@@ -106,7 +107,6 @@ full:broadcast.chat.bilibili.com
 domain:biligame.com
 full:data.bilibili.com⁠
 full:cm.bilibili.com
-full:mcdn.bilivideo.cn
 full:p2p.bilibili.com
 full:pcdn.bilibili.com
 full:data.bilibili.com
@@ -136,7 +136,7 @@ full:aedns.weixin.qq.com
 full:appcfg.v.qq.com
 full:ads.95516.com
 full:ads.cup.com.cn
-full:httpdns.dmall.com
+keyword:httpdns
 full:apppush-rts.xiaohongshu.com
 full:mediacloud.xiaohongshu.com
 domain:app.chat.xiaomi.net

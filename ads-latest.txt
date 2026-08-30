@@ -1,4 +1,5 @@
-# Auto merged Surge rules (2026-08-29)
+# Auto merged Surge rules (2026-08-30)
+DOMAIN-KEYWORD,httpdns
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
 DOMAIN,enrichgw.10010.com
@@ -186,7 +187,7 @@ DOMAIN,p2p.bilibili.com
 DOMAIN,pcdn.bilibili.com
 DOMAIN,data.bilibili.com⁠
 DOMAIN-SUFFIX,biligame.com
-DOMAIN,mcdn.bilivideo.cn
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN,httpdns.bilivideo.com
 DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
@@ -284,7 +285,6 @@ DOMAIN-SUFFIX,deepinstall.com
 DOMAIN,aem.dentsuchina.cn
 DOMAIN-SUFFIX,detailroi.com
 DOMAIN-SUFFIX,dftoutiao.com
-DOMAIN,httpdns.dmall.com
 DOMAIN,ap.dongdianqiu.com
 DOMAIN,ap.dongqiudi.com
 DOMAIN,sensors-log.dongqiudi.com
