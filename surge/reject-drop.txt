@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,yeezyhair.com
 DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
 
+
 DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,qchannel03.cn
@@ -119,6 +120,7 @@ DOMAIN-SUFFIX,iotsdk.midea.com
 DOMAIN-SUFFIX,mp-prod.smartmidea.net
 
 # b站
+DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN,grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN,httpdns.bilivideo.com
@@ -177,7 +179,7 @@ DOMAIN,ads.95516.com
 #DOMAIN,tysdk.95516.com
 DOMAIN,ads.cup.com.cn
 
-DOMAIN,httpdns.dmall.com
+DOMAIN-KEYWORD,httpdns
 
 #小红书
 DOMAIN,apppush-rts.xiaohongshu.com
