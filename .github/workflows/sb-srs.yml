@@ -1,0 +1,94 @@
+name: Convert sb-srs
+
+on:
+  schedule:
+    # 每天北京时间 08:00 (UTC 00:00) 自动执行
+    - cron: '0 0 * * *'
+  push:
+    paths:
+      - 'qx/**' # 当 qx 目录下有文件变动推送到仓库时自动触发
+  workflow_dispatch: # 支持手动点击运行
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install dependencies & Sing-box CLI
+        run: |
+          sudo apt-get update -y && sudo apt-get install -y jq curl wget
+          # 获取并安装最新版 Sing-box CLI
+          SING_BOX_TAG=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          VERSION=${SING_BOX_TAG#v}
+          wget -q https://github.com/SagerNet/sing-box/releases/download/${SING_BOX_TAG}/sing-box-${VERSION}-linux-amd64.tar.gz
+          tar -xzf sing-box-${VERSION}-linux-amd64.tar.gz
+          sudo mv sing-box-${VERSION}-linux-amd64/sing-box /usr/local/bin/
+          rm -rf sing-box-${VERSION}-linux-amd64*
+
+      - name: Batch Convert QX to Sing-box SRS
+        run: |
+          mkdir -p singbox
+
+          # 遍历 qx 目录下所有规则文件
+          for filepath in qx/*; do
+            [ -f "$filepath" ] || continue
+            
+            # 提取文件名主体（例如 qx/apple.snippet -> apple）
+            filename=$(basename "$filepath")
+            basename="${filename%.*}"
+
+            echo "=========================================="
+            echo "正在处理: $filepath -> singbox/${basename}.srs"
+            echo "=========================================="
+
+            # 1. 过滤注释与多余空格
+            sed 's/[;#].*//' "$filepath" | sed 's/^[ \t]*//;s/[ \t]*$//' | grep -v '^$' > raw_rules.txt
+
+            # 2. 提取各类规则字段并转为 JSON 数组
+            SUFFIX_JSON=$(grep -i '^HOST-SUFFIX,' raw_rules.txt | cut -d',' -f2 | tr -d ' ' | sort -u | jq -R . | jq -s .)
+            DOMAIN_JSON=$(grep -i '^HOST,' raw_rules.txt | cut -d',' -f2 | tr -d ' ' | sort -u | jq -R . | jq -s .)
+            KEYWORD_JSON=$(grep -i '^HOST-KEYWORD,' raw_rules.txt | cut -d',' -f2 | tr -d ' ' | sort -u | jq -R . | jq -s .)
+            IP_JSON=$(grep -Ei '^(IP-CIDR|IP-CIDR6|IP6-CIDR),' raw_rules.txt | cut -d',' -f2 | tr -d ' ' | sort -u | jq -R . | jq -s .)
+
+            # 3. 组装为 Sing-box Rule-Set JSON
+            jq -n \
+              --argjson suffix "$SUFFIX_JSON" \
+              --argjson domain "$DOMAIN_JSON" \
+              --argjson keyword "$KEYWORD_JSON" \
+              --argjson ip "$IP_JSON" \
+              '{
+                "version": 2,
+                "rules": [
+                  (
+                    {} 
+                    | if ($domain | length > 0) then .domain = $domain else . end
+                    | if ($suffix | length > 0) then .domain_suffix = $suffix else . end
+                    | if ($keyword | length > 0) then .domain_keyword = $keyword else . end
+                    | if ($ip | length > 0) then .ip_cidr = $ip else . end
+                  )
+                ]
+              }' > "singbox/${basename}.json"
+
+            # 4. 编译为 .srs 二进制规则集
+            sing-box rule-set compile "singbox/${basename}.json" -o "singbox/${basename}.srs"
+            
+            rm -f raw_rules.txt
+          done
+
+      - name: Commit and Push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add singbox/
+          if git diff --staged --quiet; then
+            echo "所有规则无变动，跳过推送。"
+          else
+            git commit -m "Auto update all singbox rules [$(date +'%Y-%m-%d %H:%M')]"
+            git push
+          fi
