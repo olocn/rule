@@ -1,0 +1,65 @@
+{
+  "version": 2,
+  "rules": [
+    {
+      "domain": [
+        "api.channingkiki.top",
+        "api.revenuecat.com",
+        "api.xilexiaoyuan.top",
+        "biz.cyapi.cn",
+        "fairplay.l.qq.com",
+        "fonts.googleapis.com",
+        "fonts.gstatic.com",
+        "gdmf.apple.com",
+        "gm.mmstat.com",
+        "lcdn-locator.apple.com",
+        "livew.l.qq.com",
+        "loc.map.baidu.com",
+        "log.mmstat.com",
+        "ocsp.godaddy.com",
+        "ocsp.sectigo.com",
+        "pubads.g.doubleclick.net",
+        "resource.cupid.iqiyi.com",
+        "s.click.taobao.com",
+        "sandbox.itunes.apple.com",
+        "serverstatus.apple.com",
+        "short.weixin.qq.com",
+        "sycm.mmstat.com",
+        "tra1.m-team.io",
+        "tracker.m-team.cc",
+        "vd.l.qq.com",
+        "wrapper.cyapi.cn"
+      ],
+      "domain_suffix": [
+        "885511.xyz",
+        "amdc.m.taobao.com",
+        "cloudfront.net",
+        "digicert.com",
+        "icloud.com.cn⁠",
+        "jsccbcc.com",
+        "jsitv.net",
+        "jsjnsw.com",
+        "jxxgz.top",
+        "lanjing.vip",
+        "lencr.org",
+        "livehwc4.com",
+        "mi-img.com",
+        "myqnapcloud.com",
+        "myqnapcloud.io",
+        "n.n.srv.nintendo.net",
+        "npln.srv.nintendo.net",
+        "plex.direct",
+        "pubsub.plex.tv",
+        "tce.alicdn.com",
+        "v4.plex.tv",
+        "walmartmobile.cn",
+        "wechat.com",
+        "xhscdn.com",
+        "zkreen.com"
+      ],
+      "domain_keyword": [
+        "haixing"
+      ]
+    }
+  ]
+}
