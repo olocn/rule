@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-08-30)
+# Auto merged Surge rules (2026-08-31)
 DOMAIN-KEYWORD,httpdns
 URL-REGEX,/\d+/resolve
 URL-REGEX,/\d+/sign_d
