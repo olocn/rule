@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-08-31)
+# Auto merged MosDNS rules (2026-09-01)
 domain:heima911.com
 domain:mobsurl.com
 domain:rongcfg.com
