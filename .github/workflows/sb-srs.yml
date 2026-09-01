@@ -90,5 +90,6 @@ jobs:
             echo "所有规则无变动，跳过推送。"
           else
             git commit -m "Auto update all singbox rules [$(date +'%Y-%m-%d %H:%M')]"
+            git pull --rebase origin master
             git push
           fi
