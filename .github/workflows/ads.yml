@@ -16,10 +16,22 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+
+      - name: Install sing-box
+        run: |
+          set -e
+          TAG=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          VERSION="${TAG#v}"
+          ARCH="linux-amd64"
+          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/${TAG}/sing-box-${VERSION}-${ARCH}.tar.gz"
+          tar -xzf sing-box.tar.gz
+          sudo mv "sing-box-${VERSION}-${ARCH}/sing-box" /usr/local/bin/
+          rm -rf sing-box*
+          sing-box version
 
       - name: Download conf rules
         run: |
@@ -112,16 +124,64 @@ jobs:
             else if ($1 == "DOMAIN-KEYWORD") print "host-keyword, " $2 ", reject"
           }' rules.optimized >> "$QX_OUT"
 
+          # sing-box JSON & SRS 格式
+          SINGBOX_JSON="ads-singbox.json"
+          SINGBOX_SRS="ads.srs"
+          awk -F',' '
+          {
+            if ($1 == "DOMAIN-SUFFIX") suffix[s++] = "\"" $2 "\""
+            else if ($1 == "DOMAIN") full[f++] = "\"" $2 "\""
+            else if ($1 == "DOMAIN-KEYWORD") keyword[k++] = "\"" $2 "\""
+          }
+          END {
+            print "{"
+            print "  \"version\": 1,"
+            print "  \"rules\": ["
+            print "    {"
+
+            first_block = 1
+
+            if (s > 0) {
+              printf "      \"domain_suffix\": ["
+              for (i = 0; i < s; i++) printf "%s%s", (i > 0 ? ", " : ""), suffix[i]
+              printf "]"
+              first_block = 0
+            }
+
+            if (full > 0 || f > 0) {
+              if (!first_block) print ","
+              printf "      \"domain\": ["
+              for (i = 0; i < f; i++) printf "%s%s", (i > 0 ? ", " : ""), full[i]
+              printf "]"
+              first_block = 0
+            }
+
+            if (k > 0) {
+              if (!first_block) print ","
+              printf "      \"domain_keyword\": ["
+              for (i = 0; i < k; i++) printf "%s%s", (i > 0 ? ", " : ""), keyword[i]
+              printf "]"
+            }
+
+            print ""
+            print "    }"
+            print "  ]"
+            print "}"
+          }' rules.optimized > "$SINGBOX_JSON"
+
+          # 编译成 SRS 二进制规则集
+          sing-box rule-set compile "$SINGBOX_JSON" -o "$SINGBOX_SRS"
+
       - name: Commit and Push result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          git add ads-latest.txt ads-mosdns.txt ads-qx.snippet
+          git add ads-latest.txt ads-mosdns.txt ads-qx.snippet ads-singbox.json ads.srs
           
           if git diff --staged --quiet; then
             echo "No changes detected. Skipping commit and push."
           else
-            git commit -m "Update rules: Keep subdomain types, remove sgmodule (${DATE}) [skip ci]"
+            git commit -m "Update rules: Keep subdomain types, add singbox srs (${DATE}) [skip ci]"
             git push origin HEAD:${{ github.ref_name }}
           fi
