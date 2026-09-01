@@ -16,7 +16,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
@@ -148,7 +148,7 @@ jobs:
               first_block = 0
             }
 
-            if (full > 0 || f > 0) {
+            if (f > 0) {
               if (!first_block) print ","
               printf "      \"domain\": ["
               for (i = 0; i < f; i++) printf "%s%s", (i > 0 ? ", " : ""), full[i]
