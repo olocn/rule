@@ -21,17 +21,52 @@ jobs:
       - name: Set date
         run: echo "DATE=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
 
-      - name: Install sing-box
+      # 1️⃣ 获取 sing-box 和 mihomo 最新 release 版本号
+      - name: Get latest tool versions
+        id: versions
+        run: |
+          TAG_SING=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          TAG_MIHOMO=$(curl -s https://api.github.com/repos/MetaCubeX/mihomo/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
+          echo "singbox=${TAG_SING}" >> $GITHUB_OUTPUT
+          echo "mihomo=${TAG_MIHOMO}" >> $GITHUB_OUTPUT
+
+      # 2️⃣ 配置二进制缓存
+      - name: Cache binaries
+        id: cache-tools
+        uses: actions/cache@v4
+        with:
+          path: /usr/local/bin/custom-tools
+          key: ${{ runner.os }}-tools-${{ steps.versions.outputs.singbox }}-${{ steps.versions.outputs.mihomo }}
+
+      # 3️⃣ 未命中缓存时下载并提取二进制文件
+      - name: Install sing-box & mihomo
+        if: steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           set -e
-          TAG=$(curl -s https://api.github.com/repos/SagerNet/sing-box/releases/latest | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/')
-          VERSION="${TAG#v}"
-          ARCH="linux-amd64"
-          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/${TAG}/sing-box-${VERSION}-${ARCH}.tar.gz"
+          mkdir -p /usr/local/bin/custom-tools
+
+          # 下载 sing-box
+          TAG_SING="${{ steps.versions.outputs.singbox }}"
+          VERSION_SING="${TAG_SING#v}"
+          curl -Lo sing-box.tar.gz "https://github.com/SagerNet/sing-box/releases/download/${TAG_SING}/sing-box-${VERSION_SING}-linux-amd64.tar.gz"
           tar -xzf sing-box.tar.gz
-          sudo mv "sing-box-${VERSION}-${ARCH}/sing-box" /usr/local/bin/
+          mv "sing-box-${VERSION_SING}-linux-amd64/sing-box" /usr/local/bin/custom-tools/
           rm -rf sing-box*
+
+          # 下载 mihomo
+          TAG_MIHOMO="${{ steps.versions.outputs.mihomo }}"
+          curl -Lo mihomo.gz "https://github.com/MetaCubeX/mihomo/releases/download/${TAG_MIHOMO}/mihomo-linux-amd64-${TAG_MIHOMO}.gz"
+          gunzip mihomo.gz
+          chmod +x mihomo
+          mv mihomo /usr/local/bin/custom-tools/
+
+      # 4️⃣ 将缓存/安装路径加入 PATH 并校验版本
+      - name: Add custom-tools to PATH
+        run: |
+          echo "/usr/local/bin/custom-tools" >> $GITHUB_PATH
+          export PATH="/usr/local/bin/custom-tools:$PATH"
           sing-box version
+          mihomo -v
 
       - name: Download conf rules
         run: |
@@ -42,7 +77,7 @@ jobs:
         run: |
           set -e
 
-          # 1️⃣ 清洗与智能类型转换
+          # 1. 清洗与智能类型转换
           cat ruleA.txt ruleB.list \
             | sed '/^\s*$/d' \
             | grep -v '^#' \
@@ -63,7 +98,7 @@ jobs:
             | awk '!seen[$0]++' \
             > rules.cleaned
 
-          # 2️⃣ 深度优化逻辑：移除冗余规则
+          # 2. 深度优化逻辑：移除冗余规则
           awk -F',' '
           {
             rules[NR] = $0
@@ -93,7 +128,7 @@ jobs:
             }
           }' rules.cleaned > rules.optimized
 
-          # 3️⃣ 生成各格式文件
+          # 3. 生成各格式文件
           # Surge 格式
           SURGE_OUT="ads-latest.txt"
           echo "# Auto merged Surge rules (${DATE})" > "$SURGE_OUT"
@@ -169,19 +204,32 @@ jobs:
             print "}"
           }' rules.optimized > "$SINGBOX_JSON"
 
-          # 编译成 SRS 二进制规则集
+          # 编译成 sing-box SRS 二进制规则集
           sing-box rule-set compile "$SINGBOX_JSON" -o "$SINGBOX_SRS"
+
+          # Clash Meta / Mihomo MRS 格式
+          CLASH_YAML="ads-clash.yaml"
+          CLASH_MRS="ads.mrs"
+          echo "payload:" > "$CLASH_YAML"
+          awk -F',' '{
+            if ($1 == "DOMAIN-SUFFIX") print "  - DOMAIN-SUFFIX," $2
+            else if ($1 == "DOMAIN") print "  - DOMAIN," $2
+            else if ($1 == "DOMAIN-KEYWORD") print "  - DOMAIN-KEYWORD," $2
+          }' rules.optimized >> "$CLASH_YAML"
+
+          # 编译成 Clash Meta MRS 二进制规则集
+          mihomo convert-ruleset domain yaml "$CLASH_YAML" "$CLASH_MRS"
 
       - name: Commit and Push result
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           
-          git add ads-latest.txt ads-mosdns.txt ads-qx.snippet ads-singbox.json ads.srs
+          git add ads-latest.txt ads-mosdns.txt ads-qx.snippet ads-singbox.json ads.srs ads-clash.yaml ads.mrs
           
           if git diff --staged --quiet; then
             echo "No changes detected. Skipping commit and push."
           else
-            git commit -m "Update rules: Keep subdomain types, add singbox srs (${DATE}) [skip ci]"
+            git commit -m "Update rules: Add clash mrs format and cache binary dependencies (${DATE}) [skip ci]"
             git push origin HEAD:${{ github.ref_name }}
           fi
