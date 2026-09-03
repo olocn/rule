@@ -1,37 +1,27 @@
 name: "ads-rules"
-
 on:
   schedule:
     - cron: '0 */12 * * *'
   workflow_dispatch:
-
 permissions:
   contents: write
-
 jobs:
   merge:
     runs-on: ubuntu-latest
-
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
     steps:
-
       # ==========================================================
       # 1. Checkout
       # ==========================================================
       - name: Checkout
         uses: actions/checkout@v5
-
-
       # ==========================================================
       # 2. 日期
       # ==========================================================
       - name: Set date
         run: |
           echo "DATE=$(date +'%Y-%m-%d')" >> "$GITHUB_ENV"
-
-
       # ==========================================================
       # 3. 获取最新版本
       # ==========================================================
@@ -39,24 +29,18 @@ jobs:
         id: versions
         run: |
           set -euo pipefail
-
           TAG_SING=$(curl -fsSL \
             https://api.github.com/repos/SagerNet/sing-box/releases/latest \
             | grep '"tag_name":' \
             | sed -E 's/.*"([^"]+)".*/\1/')
-
           TAG_MIHOMO=$(curl -fsSL \
             https://api.github.com/repos/MetaCubeX/mihomo/releases/latest \
             | grep '"tag_name":' \
             | sed -E 's/.*"([^"]+)".*/\1/')
-
           echo "singbox=${TAG_SING}" >> "$GITHUB_OUTPUT"
           echo "mihomo=${TAG_MIHOMO}" >> "$GITHUB_OUTPUT"
-
           echo "sing-box = ${TAG_SING}"
           echo "mihomo   = ${TAG_MIHOMO}"
-
-
       # ==========================================================
       # 4. Cache
       # ==========================================================
@@ -66,8 +50,6 @@ jobs:
         with:
           path: /usr/local/bin/custom-tools
           key: ${{ runner.os }}-tools-${{ steps.versions.outputs.singbox }}-${{ steps.versions.outputs.mihomo }}
-
-
       # ==========================================================
       # 5. 安装 sing-box / mihomo
       # ==========================================================
@@ -75,103 +57,74 @@ jobs:
         if: steps.cache-tools.outputs.cache-hit != 'true'
         run: |
           set -euo pipefail
-
           mkdir -p /usr/local/bin/custom-tools
-
-
           # ------------------------------------------------------
           # sing-box
           # ------------------------------------------------------
           TAG_SING="${{ steps.versions.outputs.singbox }}"
           VERSION_SING="${TAG_SING#v}"
-
           curl -fsSL \
             -o sing-box.tar.gz \
             "https://github.com/SagerNet/sing-box/releases/download/${TAG_SING}/sing-box-${VERSION_SING}-linux-amd64.tar.gz"
-
           tar -xzf sing-box.tar.gz
-
           mv \
             "sing-box-${VERSION_SING}-linux-amd64/sing-box" \
             /usr/local/bin/custom-tools/sing-box
-
           rm -rf \
             sing-box.tar.gz \
             "sing-box-${VERSION_SING}-linux-amd64"
-
-
           # ------------------------------------------------------
           # mihomo
           # ------------------------------------------------------
           TAG_MIHOMO="${{ steps.versions.outputs.mihomo }}"
-
           curl -fsSL \
             -o mihomo.gz \
             "https://github.com/MetaCubeX/mihomo/releases/download/${TAG_MIHOMO}/mihomo-linux-amd64-${TAG_MIHOMO}.gz"
-
           gunzip mihomo.gz
-
           chmod +x mihomo
-
           mv \
             mihomo \
             /usr/local/bin/custom-tools/mihomo
-
-
       # ==========================================================
       # 6. PATH + 版本
       # ==========================================================
       - name: Add custom-tools to PATH
         run: |
           echo "/usr/local/bin/custom-tools" >> "$GITHUB_PATH"
-
           export PATH="/usr/local/bin/custom-tools:$PATH"
-
           echo "========== sing-box =========="
           sing-box version
-
           echo
           echo "========== mihomo =========="
           mihomo -v
-
-
       # ==========================================================
       # 7. 下载规则
       # ==========================================================
       - name: Download rules
         run: |
           set -euo pipefail
-
           curl -fsSL \
             https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt \
             -o ruleA.txt
-
           curl -fsSL \
             https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list \
             -o ruleB.list
-
-
       # ==========================================================
       # 8. 通用规则清洗
       #
-      # 只保留三种域名规则
+      # 只保留：
       #
       # DOMAIN
       # DOMAIN-SUFFIX
       # DOMAIN-KEYWORD
-      #
-      # 不自动改变规则语义
       # ==========================================================
       - name: Normalize source rules
         run: |
           set -euo pipefail
-
           rm -f \
             rules.source \
             rules.normalized \
             rules.other
-
-
           cat ruleA.txt ruleB.list \
             | sed '/^[[:space:]]*$/d' \
             | grep -vE '^[[:space:]]*#' \
@@ -182,387 +135,257 @@ jobs:
             | sed 's/^[[:space:]]*//' \
             | sed 's/[[:space:]]*$//' \
             > rules.source
-
-
-          # ======================================================
-          # 类型统一 + 域名小写化
-          # ======================================================
           awk -F',' '
           BEGIN {
             OFS=","
           }
-
           {
             type=toupper($1)
             value=tolower($2)
-
-            # 删除空规则
             if (value == "")
               next
-
             if (type == "DOMAIN") {
               print "DOMAIN", value
             }
-
             else if (type == "DOMAIN-SUFFIX") {
               print "DOMAIN-SUFFIX", value
             }
-
             else if (type == "DOMAIN-KEYWORD") {
               print "DOMAIN-KEYWORD", value
             }
-
             else {
               print $0 >> "rules.other"
             }
           }
           ' rules.source > rules.normalized
-
-
           # ======================================================
           # 完全重复规则去除
           # ======================================================
           awk '!seen[$0]++' \
             rules.normalized \
             > rules.normalized.tmp
-
           mv \
             rules.normalized.tmp \
             rules.normalized
-
-
           if [ ! -f rules.other ]; then
             touch rules.other
           fi
-
-
           echo "======================================"
           echo "Normalized rules"
           echo "======================================"
-
           echo "DOMAIN:"
           grep -c '^DOMAIN,' rules.normalized || true
-
           echo "DOMAIN-SUFFIX:"
           grep -c '^DOMAIN-SUFFIX,' rules.normalized || true
-
           echo "DOMAIN-KEYWORD:"
           grep -c '^DOMAIN-KEYWORD,' rules.normalized || true
-
           echo "Other:"
           wc -l < rules.other
-
-
       # ==========================================================
       # 9. 生成 Mihomo YAML
       #
-      # 优化：
-      # - 排序
-      # - 去重
-      # - 只输出 Mihomo domain 支持类型
+      # 输出：
+      # ads-clash.yaml
+      #
+      # 不再编译 MRS
       # ==========================================================
       - name: Generate Mihomo YAML
         run: |
           set -euo pipefail
-
           {
             echo "payload:"
-
             awk -F',' '
             {
               if ($1 == "DOMAIN")
                 print "  - DOMAIN," $2
-
               else if ($1 == "DOMAIN-SUFFIX")
                 print "  - DOMAIN-SUFFIX," $2
-
               else if ($1 == "DOMAIN-KEYWORD")
                 print "  - DOMAIN-KEYWORD," $2
             }
             ' rules.normalized \
             | sort -u
-
           } > ads-clash.yaml
-
-
+          echo "======================================"
+          echo "Mihomo YAML"
+          echo "======================================"
+          ls -lh ads-clash.yaml
+          echo
+          echo "First 10 rules:"
+          head -n 11 ads-clash.yaml
       # ==========================================================
-      # 10. Mihomo MRS
-      # ==========================================================
-      - name: Compile Mihomo MRS
-        run: |
-          set -euo pipefail
-
-          rm -f ads.mrs
-
-          mihomo convert-ruleset \
-            domain \
-            yaml \
-            ads-clash.yaml \
-            ads.mrs
-
-          test -s ads.mrs
-
-          SIZE=$(stat -c%s ads.mrs)
-
-          echo "Mihomo MRS:"
-          echo "Size = ${SIZE} bytes"
-
-          if [ "$SIZE" -lt 100 ]; then
-            echo "ERROR: invalid MRS"
-            exit 1
-          fi
-
-
-      # ==========================================================
-      # 11. Surge
+      # 10. Surge
       #
       # 按类型分别输出
       # ==========================================================
       - name: Generate Surge rules
         run: |
           set -euo pipefail
-
           {
             echo "# Auto merged Surge rules (${DATE})"
-
             awk -F',' '
             {
               if ($1 == "DOMAIN")
                 print "DOMAIN," $2 ",REJECT"
-
               else if ($1 == "DOMAIN-SUFFIX")
                 print "DOMAIN-SUFFIX," $2 ",REJECT"
-
               else if ($1 == "DOMAIN-KEYWORD")
                 print "DOMAIN-KEYWORD," $2 ",REJECT"
             }
             ' rules.normalized \
             | sort -u
-
           } > ads-latest.txt
-
-
       # ==========================================================
-      # 12. MosDNS
+      # 11. MosDNS
       #
       # domain = suffix
       # full   = exact
       # keyword = keyword
-      #
-      # 排序 + 去重
       # ==========================================================
       - name: Generate MosDNS rules
         run: |
           set -euo pipefail
-
           {
             echo "# Auto merged MosDNS rules (${DATE})"
-
             awk -F',' '
             {
               if ($1 == "DOMAIN-SUFFIX")
                 print "domain:" $2
-
               else if ($1 == "DOMAIN")
                 print "full:" $2
-
               else if ($1 == "DOMAIN-KEYWORD")
                 print "keyword:" $2
             }
             ' rules.normalized \
             | sort -u
-
           } > ads-mosdns.txt
-
-
       # ==========================================================
-      # 13. Quantumult X
+      # 12. Quantumult X
       #
       # QX：
       #
-      # DOMAIN-SUFFIX -> host-suffix
-      # DOMAIN        -> host
+      # DOMAIN-SUFFIX  -> host-suffix
+      # DOMAIN         -> host
       # DOMAIN-KEYWORD -> host-keyword
       # ==========================================================
       - name: Generate Quantumult X rules
         run: |
           set -euo pipefail
-
           {
             echo "# Auto merged Quantumult X rules (${DATE})"
-
             awk -F',' '
             {
               if ($1 == "DOMAIN-SUFFIX")
                 print "host-suffix, " $2 ", reject"
-
               else if ($1 == "DOMAIN")
                 print "host, " $2 ", reject"
-
               else if ($1 == "DOMAIN-KEYWORD")
                 print "host-keyword, " $2 ", reject"
             }
             ' rules.normalized \
             | sort -u
-
           } > ads-qx.snippet
-
-
       # ==========================================================
-      # 14. sing-box JSON
+      # 13. sing-box JSON
       #
-      # 分别生成：
+      # 输出：
+      # ads-singbox.json
       #
-      # domain_suffix
-      # domain
-      # domain_keyword
-      #
-      # 排序 + 去重
+      # 不再编译 SRS
       # ==========================================================
       - name: Generate sing-box JSON
         run: |
           set -euo pipefail
-
           python3 <<'PY'
-
           import json
-
-
           suffix = set()
           domain = set()
           keyword = set()
-
-
           with open(
               "rules.normalized",
               "r",
               encoding="utf-8"
           ) as f:
-
               for line in f:
-
                   line = line.strip()
-
                   if not line:
                       continue
-
                   parts = line.split(",", 1)
-
                   if len(parts) != 2:
                       continue
-
                   rule_type, value = parts
-
                   if rule_type == "DOMAIN-SUFFIX":
                       suffix.add(value)
-
                   elif rule_type == "DOMAIN":
                       domain.add(value)
-
                   elif rule_type == "DOMAIN-KEYWORD":
                       keyword.add(value)
-
-
           rule = {}
-
-
           if suffix:
               rule["domain_suffix"] = sorted(suffix)
-
           if domain:
               rule["domain"] = sorted(domain)
-
           if keyword:
               rule["domain_keyword"] = sorted(keyword)
-
-
           output = {
               "version": 1,
               "rules": [
                   rule
               ]
           }
-
-
           with open(
               "ads-singbox.json",
               "w",
               encoding="utf-8"
           ) as f:
-
               json.dump(
                   output,
                   f,
                   ensure_ascii=False,
                   indent=2
               )
-
               f.write("\n")
-
           PY
-
-
-      # ==========================================================
-      # 15. sing-box SRS
-      # ==========================================================
-      - name: Compile sing-box SRS
-        run: |
-          set -euo pipefail
-
-          rm -f ads.srs
-
-          sing-box rule-set compile \
+          echo "======================================"
+          echo "sing-box JSON"
+          echo "======================================"
+          ls -lh ads-singbox.json
+          echo
+          echo "JSON validation:"
+          python3 -m json.tool \
             ads-singbox.json \
-            -o ads.srs
-
-          test -s ads.srs
-
-          echo "sing-box SRS:"
-          ls -lh ads.srs
-
-
+            > /dev/null
+          echo "OK"
       # ==========================================================
-      # 16. 输出检查
+      # 14. 输出检查
       # ==========================================================
       - name: Verify all outputs
         run: |
           set -euo pipefail
-
           echo "======================================"
           echo "Final outputs"
           echo "======================================"
-
           ls -lh \
             ads-latest.txt \
             ads-mosdns.txt \
             ads-qx.snippet \
             ads-singbox.json \
-            ads.srs \
-            ads-clash.yaml \
-            ads.mrs
-
-
+            ads-clash.yaml
           echo
           echo "======================================"
           echo "Rule counts"
           echo "======================================"
-
           echo "DOMAIN:"
           grep -c '^DOMAIN,' rules.normalized || true
-
           echo "DOMAIN-SUFFIX:"
           grep -c '^DOMAIN-SUFFIX,' rules.normalized || true
-
           echo "DOMAIN-KEYWORD:"
           grep -c '^DOMAIN-KEYWORD,' rules.normalized || true
-
           echo
           echo "Total:"
           wc -l < rules.normalized
-
-
       # ==========================================================
-      # 17. 清理
+      # 15. 清理
       # ==========================================================
       - name: Cleanup
         run: |
@@ -572,39 +395,25 @@ jobs:
             rules.source \
             rules.normalized \
             rules.other
-
-
       # ==========================================================
-      # 18. Commit
+      # 16. Commit
       # ==========================================================
       - name: Commit and Push result
         run: |
           set -euo pipefail
-
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-
           git add \
             ads-latest.txt \
             ads-mosdns.txt \
             ads-qx.snippet \
             ads-singbox.json \
-            ads.srs \
-            ads-clash.yaml \
-            ads.mrs
-
-
+            ads-clash.yaml
           if git diff --staged --quiet; then
-
             echo "No changes detected."
             echo "Skipping commit and push."
-
           else
-
             git commit \
               -m "Update ad rules (${DATE}) [skip ci]"
-
             git push origin HEAD:${{ github.ref_name }}
-
           fi
