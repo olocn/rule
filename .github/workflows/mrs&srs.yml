@@ -1,4 +1,4 @@
-name: Convert srs & mrs
+name: Convert srs & yaml
 
 on:
   push:
@@ -303,7 +303,7 @@ jobs:
 
 
       # ============================================================
-      # 6. Convert QX rules
+      # 6. Convert QX Rules
       # ============================================================
 
       - name: Convert QX Rules
@@ -313,7 +313,7 @@ jobs:
 
           echo
           echo "========================================"
-          echo "QX → Sing-box + Mihomo"
+          echo "QX → Sing-box + Mihomo YAML"
           echo "========================================"
 
           shopt -s nullglob
@@ -335,7 +335,11 @@ jobs:
           # ========================================================
 
           rm -f singbox/*.srs
+
           rm -f mihomo/*.mrs
+
+          rm -f mihomo/*.yaml
+
           rm -f mihomo/*-keyword.list
 
 
@@ -367,7 +371,6 @@ jobs:
             # ======================================================
 
             TMP="$(mktemp -d)"
-
 
             CLEAN_FILE="$TMP/clean.txt"
 
@@ -508,15 +511,9 @@ jobs:
             # IP-CIDR6
             # IP6-CIDR
             #
-            # 注意：
-            #
-            # Mihomo 输入：
+            # 内部统一保存纯 CIDR：
             #
             # 203.205.254.0/23
-            #
-            # 而不是：
-            #
-            # IP-CIDR,203.205.254.0/23
             # ======================================================
 
             awk -F',' '
@@ -607,17 +604,6 @@ jobs:
 
             # ======================================================
             # 7. 生成 Sing-box source JSON
-            #
-            # 重要：
-            #
-            # 必须：
-            #
-            # {
-            #   "version": 5,
-            #   "rules": [...]
-            # }
-            #
-            # 不能直接输出 [...]
             # ======================================================
 
             SINGBOX_JSON="$TMP/singbox.json"
@@ -757,173 +743,136 @@ jobs:
 
 
             # ======================================================
-            # 10. Mihomo MRS
+            # 10. 生成 Mihomo YAML
             #
-            # 自动判断：
+            # 格式：
             #
-            # DOMAIN only
-            # IP only
-            # DOMAIN + IP
+            # payload:
+            #   - DOMAIN,example.com
+            #   - DOMAIN-SUFFIX,example.org
+            #   - DOMAIN-KEYWORD,google
+            #   - IP-CIDR,1.2.3.0/24
             # ======================================================
 
+            MIHOMO_OUT="mihomo/${NAME}.yaml"
+
+
+            echo
+            echo "Mihomo output: YAML"
+
+            echo "Output:"
+            echo "  $MIHOMO_OUT"
+
+
+            {
+              echo "payload:"
+
+
+              # ----------------------------------------------------
+              # DOMAIN
+              # ----------------------------------------------------
+
+              if [ -s "$DOMAIN_FILE" ]; then
+
+                while IFS= read -r DOMAIN; do
+
+                  [ -z "$DOMAIN" ] && continue
+
+                  printf '  - DOMAIN,%s\n' "$DOMAIN"
+
+                done < "$DOMAIN_FILE"
+
+              fi
+
+
+              # ----------------------------------------------------
+              # DOMAIN-SUFFIX
+              # ----------------------------------------------------
+
+              if [ -s "$SUFFIX_FILE" ]; then
+
+                while IFS= read -r DOMAIN; do
+
+                  [ -z "$DOMAIN" ] && continue
+
+                  printf '  - DOMAIN-SUFFIX,%s\n' "$DOMAIN"
+
+                done < "$SUFFIX_FILE"
+
+              fi
+
+
+              # ----------------------------------------------------
+              # DOMAIN-KEYWORD
+              # ----------------------------------------------------
+
+              if [ -s "$KEYWORD_FILE" ]; then
+
+                while IFS= read -r RULE; do
+
+                  [ -z "$RULE" ] && continue
+
+                  KEYWORD="${RULE#DOMAIN-KEYWORD,}"
+
+                  [ -z "$KEYWORD" ] && continue
+
+                  printf '  - DOMAIN-KEYWORD,%s\n' "$KEYWORD"
+
+                done < "$KEYWORD_FILE"
+
+              fi
+
+
+              # ----------------------------------------------------
+              # IP-CIDR
+              # ----------------------------------------------------
+
+              if [ -s "$IP_FILE" ]; then
+
+                while IFS= read -r CIDR; do
+
+                  [ -z "$CIDR" ] && continue
+
+                  printf '  - IP-CIDR,%s\n' "$CIDR"
+
+                done < "$IP_FILE"
+
+              fi
+
+            } > "$MIHOMO_OUT"
+
 
             # ======================================================
-            # 只有 DOMAIN
+            # 11. 检查 Mihomo YAML
             # ======================================================
 
-            if [ "$TOTAL_DOMAIN" -gt 0 ] &&
-               [ "$IP_COUNT" -eq 0 ]; then
-
-
-              MIHOMO_OUT="mihomo/${NAME}.mrs"
-
+            if [ ! -s "$MIHOMO_OUT" ]; then
 
               echo
-              echo "Mihomo behavior: domain"
+              echo "ERROR: Empty Mihomo YAML:"
 
-              echo "Output:"
-              echo "  $MIHOMO_OUT"
+              echo "$MIHOMO_OUT"
 
-
-              # ----------------------------------------------
-              # Mihomo domain 输入
-              #
-              # HOST / DOMAIN / HOST-SUFFIX
-              # 全部转换成 domain behavior
-              # ----------------------------------------------
-
-              cat \
-                "$DOMAIN_FILE" \
-                "$SUFFIX_FILE" |
-              sort -u \
-                > "$TMP/mihomo-domain.txt"
-
-
-              mihomo convert-ruleset \
-                domain \
-                text \
-                "$TMP/mihomo-domain.txt" \
-                "$MIHOMO_OUT"
-
-
-            # ======================================================
-            # 只有 IP
-            # ======================================================
-
-            elif [ "$TOTAL_DOMAIN" -eq 0 ] &&
-                 [ "$IP_COUNT" -gt 0 ]; then
-
-
-              MIHOMO_OUT="mihomo/${NAME}.mrs"
-
-
-              echo
-              echo "Mihomo behavior: ipcidr"
-
-              echo "Output:"
-              echo "  $MIHOMO_OUT"
-
-
-              # ----------------------------------------------
-              # 关键：
-              #
-              # 这里必须直接传：
-              #
-              # 203.205.254.0/23
-              #
-              # 不能增加：
-              #
-              # IP-CIDR,
-              # ----------------------------------------------
-
-              mihomo convert-ruleset \
-                ipcidr \
-                text \
-                "$IP_FILE" \
-                "$MIHOMO_OUT"
-
-
-            # ======================================================
-            # DOMAIN + IP 混合
-            # ======================================================
-
-            elif [ "$TOTAL_DOMAIN" -gt 0 ] &&
-                 [ "$IP_COUNT" -gt 0 ]; then
-
-
-              MIHOMO_DOMAIN_OUT="mihomo/${NAME}.mrs"
-
-              MIHOMO_IP_OUT="mihomo/${NAME}-cidr.mrs"
-
-
-              echo
-              echo "Mihomo behavior: mixed"
-
-              echo "Domain:"
-              echo "  $MIHOMO_DOMAIN_OUT"
-
-              echo "IP-CIDR:"
-              echo "  $MIHOMO_IP_OUT"
-
-
-              # ----------------------------------------------
-              # Domain
-              # ----------------------------------------------
-
-              cat \
-                "$DOMAIN_FILE" \
-                "$SUFFIX_FILE" |
-              sort -u \
-                > "$TMP/mihomo-domain.txt"
-
-
-              mihomo convert-ruleset \
-                domain \
-                text \
-                "$TMP/mihomo-domain.txt" \
-                "$MIHOMO_DOMAIN_OUT"
-
-
-              # ----------------------------------------------
-              # IP
-              # ----------------------------------------------
-
-              mihomo convert-ruleset \
-                ipcidr \
-                text \
-                "$IP_FILE" \
-                "$MIHOMO_IP_OUT"
-
-
-            else
-
-              echo
-              echo "No DOMAIN or IP-CIDR rules detected."
+              exit 1
 
             fi
 
 
-            # ======================================================
-            # 11. HOST-KEYWORD
-            # ======================================================
-
-            if [ "$KEYWORD_COUNT" -gt 0 ]; then
-
-
-              KEYWORD_OUT="mihomo/${NAME}-keyword.list"
+            MIHOMO_RULE_COUNT="$(
+              grep -c '^[[:space:]]*-[[:space:]]' \
+              "$MIHOMO_OUT" || true
+            )"
 
 
-              cp \
-                "$KEYWORD_FILE" \
-                "$KEYWORD_OUT"
+            echo
+            echo "Mihomo rule count:"
+            echo "$MIHOMO_RULE_COUNT"
 
 
-              echo
-              echo "Mihomo keyword:"
-              echo "  $KEYWORD_OUT"
+            echo
+            echo "Mihomo YAML preview:"
 
-
-            fi
+            head -n 20 "$MIHOMO_OUT"
 
 
             # ======================================================
@@ -938,11 +887,9 @@ jobs:
               -maxdepth 1 \
               -type f \
               \( \
-                -name "${NAME}*.srs" \
+                -name "${NAME}.srs" \
                 -o \
-                -name "${NAME}*.mrs" \
-                -o \
-                -name "${NAME}*-keyword.list" \
+                -name "${NAME}.yaml" \
               \) \
               -printf "  %p  %s bytes\n"
 
@@ -951,41 +898,20 @@ jobs:
             # 13. 检查空文件
             # ======================================================
 
-            if find mihomo \
-                -maxdepth 1 \
-                -type f \
-                -name "${NAME}*.mrs" \
-                -size 0 |
-                grep -q .; then
-
+            if [ ! -s "singbox/${NAME}.srs" ]; then
 
               echo
-              echo "ERROR: Empty Mihomo MRS detected."
-
-
-              find mihomo \
-                -maxdepth 1 \
-                -type f \
-                -name "${NAME}*.mrs" \
-                -size 0
-
+              echo "ERROR: Empty Sing-box SRS detected."
 
               exit 1
 
             fi
 
 
-            if find singbox \
-                -maxdepth 1 \
-                -type f \
-                -name "${NAME}.srs" \
-                -size 0 |
-                grep -q .; then
-
+            if [ ! -s "mihomo/${NAME}.yaml" ]; then
 
               echo
-              echo "ERROR: Empty Sing-box SRS detected."
-
+              echo "ERROR: Empty Mihomo YAML detected."
 
               exit 1
 
@@ -1019,7 +945,7 @@ jobs:
 
           echo
           echo "Sing-box:"
-          
+
           find singbox \
             -maxdepth 1 \
             -type f \
@@ -1028,17 +954,57 @@ jobs:
 
 
           echo
-          echo "Mihomo:"
+          echo "Mihomo YAML:"
 
           find mihomo \
             -maxdepth 1 \
             -type f \
-            \( \
-              -name "*.mrs" \
-              -o \
-              -name "*-keyword.list" \
-            \) \
+            -name "*.yaml" \
             -exec ls -lh {} \;
+
+
+          echo
+          echo "Checking for unexpected MRS files:"
+
+          if find mihomo \
+              -maxdepth 1 \
+              -type f \
+              -name "*.mrs" |
+              grep -q .; then
+
+            echo
+            echo "ERROR: MRS files still exist:"
+
+            find mihomo \
+              -maxdepth 1 \
+              -type f \
+              -name "*.mrs"
+
+            exit 1
+
+          fi
+
+
+          echo
+          echo "Checking for unexpected keyword files:"
+
+          if find mihomo \
+              -maxdepth 1 \
+              -type f \
+              -name "*-keyword.list" |
+              grep -q .; then
+
+            echo
+            echo "ERROR: Keyword list files still exist:"
+
+            find mihomo \
+              -maxdepth 1 \
+              -type f \
+              -name "*-keyword.list"
+
+            exit 1
+
+          fi
 
 
           echo
@@ -1081,7 +1047,7 @@ jobs:
 
 
           git commit \
-            -m "auto: convert QX rules to sing-box and Mihomo"
+            -m "auto: convert QX rules to sing-box and Mihomo YAML"
 
 
       # ============================================================
