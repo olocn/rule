@@ -1,0 +1,54 @@
+payload:
+  - DOMAIN, api.revenuecat.com
+  - DOMAIN, biz.cyapi.cn
+  - DOMAIN, fairplay.l.qq.com
+  - DOMAIN, fonts.googleapis.com
+  - DOMAIN, fonts.gstatic.com
+  - DOMAIN, gdmf.apple.com
+  - DOMAIN, gm.mmstat.com
+  - DOMAIN, lcdn-locator.apple.com
+  - DOMAIN, livew.l.qq.com
+  - DOMAIN, loc.map.baidu.com
+  - DOMAIN, log.mmstat.com
+  - DOMAIN, ocsp.godaddy.com
+  - DOMAIN, ocsp.sectigo.com
+  - DOMAIN, pubads.g.doubleclick.net
+  - DOMAIN, resource.cupid.iqiyi.com
+  - DOMAIN, s.click.taobao.com
+  - DOMAIN, sandbox.itunes.apple.com
+  - DOMAIN, serverstatus.apple.com
+  - DOMAIN, short.weixin.qq.com
+  - DOMAIN, sycm.mmstat.com
+  - DOMAIN, tra1.m-team.io
+  - DOMAIN, tracker.m-team.cc
+  - DOMAIN, vd.l.qq.com
+  - DOMAIN, wrapper.cyapi.cn
+  - DOMAIN,api.channingkiki.top
+  - DOMAIN,api.xilexiaoyuan.top
+  - DOMAIN-SUFFIX, 885511.xyz
+  - DOMAIN-SUFFIX, amdc.m.taobao.com
+  - DOMAIN-SUFFIX, digicert.com
+  - DOMAIN-SUFFIX, icloud.com.cn⁠
+  - DOMAIN-SUFFIX, jsccbcc.com
+  - DOMAIN-SUFFIX, jsitv.net
+  - DOMAIN-SUFFIX, jsjnsw.com
+  - DOMAIN-SUFFIX, lanjing.vip
+  - DOMAIN-SUFFIX, lencr.org
+  - DOMAIN-SUFFIX, livehwc4.com
+  - DOMAIN-SUFFIX, myqnapcloud.com
+  - DOMAIN-SUFFIX, myqnapcloud.io
+  - DOMAIN-SUFFIX, n.n.srv.nintendo.net
+  - DOMAIN-SUFFIX, npln.srv.nintendo.net
+  - DOMAIN-SUFFIX, plex.direct
+  - DOMAIN-SUFFIX, pubsub.plex.tv
+  - DOMAIN-SUFFIX, tce.alicdn.com
+  - DOMAIN-SUFFIX, v4.plex.tv
+  - DOMAIN-SUFFIX, walmartmobile.cn
+  - DOMAIN-SUFFIX, wechat.com
+  - DOMAIN-SUFFIX, xhscdn.com
+  - DOMAIN-SUFFIX, zkreen.com
+  - DOMAIN-SUFFIX,aliyuncs.com
+  - DOMAIN-SUFFIX,cloudfront.net
+  - DOMAIN-SUFFIX,jxxgz.top
+  - DOMAIN-SUFFIX,mi-img.com
+  - DOMAIN-KEYWORD, haixing

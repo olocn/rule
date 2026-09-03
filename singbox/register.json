@@ -1,0 +1,458 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain": " apple-relay.fastly-edge.com"
+    },
+    {
+      "domain": " chat.openai.com.cdn.cloudflare.net"
+    },
+    {
+      "domain": " gdmf.apple.com"
+    },
+    {
+      "domain": " gg.apple.com"
+    },
+    {
+      "domain": " mesu.apple.com"
+    },
+    {
+      "domain": " openaiapi-site.azureedge.net"
+    },
+    {
+      "domain": " openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
+    },
+    {
+      "domain": " openaicomproductionae4b.blob.core.windows.net"
+    },
+    {
+      "domain": " production-openaicom-storage.azureedge.net"
+    },
+    {
+      "domain": " updates-http.cdn-apple.com"
+    },
+    {
+      "domain": " updates.cdn-apple.com"
+    },
+    {
+      "domain": "challenges.cloudflare.com"
+    },
+    {
+      "domain": "gateway.icloud.com"
+    },
+    {
+      "domain_suffix": " aaplimg.com"
+    },
+    {
+      "domain_suffix": " ads-twitter.com"
+    },
+    {
+      "domain_suffix": " ai.com"
+    },
+    {
+      "domain_suffix": " ai.google"
+    },
+    {
+      "domain_suffix": " ai.google.dev"
+    },
+    {
+      "domain_suffix": " aistudio.google.com"
+    },
+    {
+      "domain_suffix": " anthropic.com"
+    },
+    {
+      "domain_suffix": " api.ipify.org"
+    },
+    {
+      "domain_suffix": " apple-cloudkit.com"
+    },
+    {
+      "domain_suffix": " apple-dns.net"
+    },
+    {
+      "domain_suffix": " apple.co"
+    },
+    {
+      "domain_suffix": " apple.com"
+    },
+    {
+      "domain_suffix": " apple.comscoreresearch.com"
+    },
+    {
+      "domain_suffix": " apple.news"
+    },
+    {
+      "domain_suffix": " apps.apple.com"
+    },
+    {
+      "domain_suffix": " appsto.re"
+    },
+    {
+      "domain_suffix": " appstore.com"
+    },
+    {
+      "domain_suffix": " auth0.com"
+    },
+    {
+      "domain_suffix": " azureedge.net"
+    },
+    {
+      "domain_suffix": " azurewebsites.net"
+    },
+    {
+      "domain_suffix": " beta.music.apple.com"
+    },
+    {
+      "domain_suffix": " bing.net"
+    },
+    {
+      "domain_suffix": " bingapis.com"
+    },
+    {
+      "domain_suffix": " binginternal.com"
+    },
+    {
+      "domain_suffix": " bingstatic.com"
+    },
+    {
+      "domain_suffix": " blogspot.com"
+    },
+    {
+      "domain_suffix": " books.apple.com"
+    },
+    {
+      "domain_suffix": " capcom.com"
+    },
+    {
+      "domain_suffix": " cbsnews.com"
+    },
+    {
+      "domain_suffix": " cdn-apple.com"
+    },
+    {
+      "domain_suffix": " cerebras.ai"
+    },
+    {
+      "domain_suffix": " challenges.cloudflare.com"
+    },
+    {
+      "domain_suffix": " chinacloudapp.cn"
+    },
+    {
+      "domain_suffix": " claude.ai"
+    },
+    {
+      "domain_suffix": " client-api.arkoselabs.com"
+    },
+    {
+      "domain_suffix": " cloudapp.azure.com"
+    },
+    {
+      "domain_suffix": " cloudflareinsights.com"
+    },
+    {
+      "domain_suffix": " crashlytics.com"
+    },
+    {
+      "domain_suffix": " deepmind.com"
+    },
+    {
+      "domain_suffix": " deepmind.google"
+    },
+    {
+      "domain_suffix": " dict.bing.com.cn"
+    },
+    {
+      "domain_suffix": " events.statsigapi.net"
+    },
+    {
+      "domain_suffix": " fbcdn-a.akamaihd.net"
+    },
+    {
+      "domain_suffix": " fbcdn.com"
+    },
+    {
+      "domain_suffix": " fbcdn.net"
+    },
+    {
+      "domain_suffix": " featuregates.org"
+    },
+    {
+      "domain_suffix": " generativeai.google"
+    },
+    {
+      "domain_suffix": " ggpht.cn"
+    },
+    {
+      "domain_suffix": " ggpht.com"
+    },
+    {
+      "domain_suffix": " gmail.com"
+    },
+    {
+      "domain_suffix": " googleapis.comm"
+    },
+    {
+      "domain_suffix": " googleusercontent.com"
+    },
+    {
+      "domain_suffix": " googlevideo"
+    },
+    {
+      "domain_suffix": " gstatic.com"
+    },
+    {
+      "domain_suffix": " hexun.com"
+    },
+    {
+      "domain_suffix": " icloud-content.com"
+    },
+    {
+      "domain_suffix": " icloud.com"
+    },
+    {
+      "domain_suffix": " identrust.com"
+    },
+    {
+      "domain_suffix": " intercom.com"
+    },
+    {
+      "domain_suffix": " intercom.io"
+    },
+    {
+      "domain_suffix": " intercomcdn.com"
+    },
+    {
+      "domain_suffix": " itunes-apple.com.akadns.net"
+    },
+    {
+      "domain_suffix": " itunes.com"
+    },
+    {
+      "domain_suffix": " live.com"
+    },
+    {
+      "domain_suffix": " lmsudio.ai"
+    },
+    {
+      "domain_suffix": " me.com"
+    },
+    {
+      "domain_suffix": " microsoft.com"
+    },
+    {
+      "domain_suffix": " microsoftonline.com"
+    },
+    {
+      "domain_suffix": " microsofttranslator.com"
+    },
+    {
+      "domain_suffix": " msftoffers.com"
+    },
+    {
+      "domain_suffix": " msn.com"
+    },
+    {
+      "domain_suffix": " news-assets.apple.com"
+    },
+    {
+      "domain_suffix": " news-client-search.apple.com"
+    },
+    {
+      "domain_suffix": " news-client.apple.com"
+    },
+    {
+      "domain_suffix": " news-edge.apple.com"
+    },
+    {
+      "domain_suffix": " news-events.apple.com"
+    },
+    {
+      "domain_suffix": " nintendo.com"
+    },
+    {
+      "domain_suffix": " nintendo.net"
+    },
+    {
+      "domain_suffix": " oaistatic.com"
+    },
+    {
+      "domain_suffix": " oaiusercontent.com"
+    },
+    {
+      "domain_suffix": " office.com"
+    },
+    {
+      "domain_suffix": " office.net"
+    },
+    {
+      "domain_suffix": " office365.com"
+    },
+    {
+      "domain_suffix": " onenote"
+    },
+    {
+      "domain_suffix": " organicfruitapps.com"
+    },
+    {
+      "domain_suffix": " perplexity.ai"
+    },
+    {
+      "domain_suffix": " playfabapi.com"
+    },
+    {
+      "domain_suffix": " poe.com"
+    },
+    {
+      "domain_suffix": " push.apple.com"
+    },
+    {
+      "domain_suffix": " push.apple.com.akadns.net"
+    },
+    {
+      "domain_suffix": " r.msftstatic.com"
+    },
+    {
+      "domain_suffix": " recraft.ai"
+    },
+    {
+      "domain_suffix": " scdn.co"
+    },
+    {
+      "domain_suffix": " sentry.io"
+    },
+    {
+      "domain_suffix": " sidestore.io"
+    },
+    {
+      "domain_suffix": " skype.com"
+    },
+    {
+      "domain_suffix": " spicylyrics.org"
+    },
+    {
+      "domain_suffix": " spoprod-a.akamaihd.net"
+    },
+    {
+      "domain_suffix": " ssl.kaptcha.com"
+    },
+    {
+      "domain_suffix": " staging-bing-int.com"
+    },
+    {
+      "domain_suffix": " streetfighter.com"
+    },
+    {
+      "domain_suffix": " t.co"
+    },
+    {
+      "domain_suffix": " testflight.apple.com"
+    },
+    {
+      "domain_suffix": " tst.kaptcha.com"
+    },
+    {
+      "domain_suffix": " tv.apple.com"
+    },
+    {
+      "domain_suffix": " twimg.com"
+    },
+    {
+      "domain_suffix": " twitter.com"
+    },
+    {
+      "domain_suffix": " usefathom.com"
+    },
+    {
+      "domain_suffix": " uservoice.com"
+    },
+    {
+      "domain_suffix": " variflight.com"
+    },
+    {
+      "domain_suffix": " virtualearth.net"
+    },
+    {
+      "domain_suffix": " windows.net"
+    },
+    {
+      "domain_suffix": " x.ai"
+    },
+    {
+      "domain_suffix": " x.com"
+    },
+    {
+      "domain_suffix": " yahoo.co.jp"
+    },
+    {
+      "domain_suffix": " youtu.be"
+    },
+    {
+      "domain_suffix": " youtube.com"
+    },
+    {
+      "domain_suffix": " ytimg.com"
+    },
+    {
+      "domain_keyword": " bing"
+    },
+    {
+      "domain_keyword": " chatgpt"
+    },
+    {
+      "domain_keyword": " claude"
+    },
+    {
+      "domain_keyword": " colab"
+    },
+    {
+      "domain_keyword": " copilot"
+    },
+    {
+      "domain_keyword": " developerprofiles"
+    },
+    {
+      "domain_keyword": " edgeassetservice"
+    },
+    {
+      "domain_keyword": " facebook"
+    },
+    {
+      "domain_keyword": " generativelanguage"
+    },
+    {
+      "domain_keyword": " google"
+    },
+    {
+      "domain_keyword": " grok"
+    },
+    {
+      "domain_keyword": " instagram"
+    },
+    {
+      "domain_keyword": " openai"
+    },
+    {
+      "domain_keyword": " paypal"
+    },
+    {
+      "domain_keyword": " youtube"
+    },
+    {
+      "ip_cidr": " 17.188.128.0/18"
+    },
+    {
+      "ip_cidr": " 17.188.20.0/23"
+    },
+    {
+      "ip_cidr": " 17.249.0.0/16"
+    },
+    {
+      "ip_cidr": " 17.252.0.0/16"
+    },
+    {
+      "ip_cidr": " 17.57.144.0/22"
+    }
+  ]
+}

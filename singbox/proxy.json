@@ -1,0 +1,1763 @@
+{
+  "version": 5,
+  "rules": [
+    {
+      "domain": " api.m-team.io"
+    },
+    {
+      "domain": " api.nexconvert.com"
+    },
+    {
+      "domain": " infuse-sync.s3-accelerate.amazonaws.com"
+    },
+    {
+      "domain": " mozilla.cloudflare-dns.com"
+    },
+    {
+      "domain": " www.egernlicense.com"
+    },
+    {
+      "domain": "tju.7pzzv.us"
+    },
+    {
+      "domain": "tu.2qq42.us"
+    },
+    {
+      "domain": "tu.ewrewej.la"
+    },
+    {
+      "domain": "tu.ymawv.la"
+    },
+    {
+      "domain": "www.cdngwc.cc"
+    },
+    {
+      "domain": "www.cdngwc.club"
+    },
+    {
+      "domain": "www.cdnhjk.net"
+    },
+    {
+      "domain": "www.cdnutc.me"
+    },
+    {
+      "domain_suffix": " 1drv.com"
+    },
+    {
+      "domain_suffix": " 23img.com"
+    },
+    {
+      "domain_suffix": " 92hm.top"
+    },
+    {
+      "domain_suffix": " 98tuch.net"
+    },
+    {
+      "domain_suffix": " 9cache.com"
+    },
+    {
+      "domain_suffix": " 9gag.com"
+    },
+    {
+      "domain_suffix": " a248.e.akamai.net"
+    },
+    {
+      "domain_suffix": " a771.dscq.akamai.net"
+    },
+    {
+      "domain_suffix": " abc.com"
+    },
+    {
+      "domain_suffix": " abc.xyz"
+    },
+    {
+      "domain_suffix": " accountkit.com"
+    },
+    {
+      "domain_suffix": " accuweather.com"
+    },
+    {
+      "domain_suffix": " addons.mozilla.org"
+    },
+    {
+      "domain_suffix": " addthis.com"
+    },
+    {
+      "domain_suffix": " addthisedge.com"
+    },
+    {
+      "domain_suffix": " admob.com"
+    },
+    {
+      "domain_suffix": " adsense.com"
+    },
+    {
+      "domain_suffix": " advertisercommunity.com"
+    },
+    {
+      "domain_suffix": " aex.com"
+    },
+    {
+      "domain_suffix": " ahhhhfs.com"
+    },
+    {
+      "domain_suffix": " aicoin.com"
+    },
+    {
+      "domain_suffix": " aikonhey.com"
+    },
+    {
+      "domain_suffix": " aimoon.com"
+    },
+    {
+      "domain_suffix": " aka.ms"
+    },
+    {
+      "domain_suffix": " akamaized.net"
+    },
+    {
+      "domain_suffix": " amazon.co.jp"
+    },
+    {
+      "domain_suffix": " amp-api.podcasts.apple.com"
+    },
+    {
+      "domain_suffix": " amplitude.com"
+    },
+    {
+      "domain_suffix": " ampproject.org"
+    },
+    {
+      "domain_suffix": " anchor.fm"
+    },
+    {
+      "domain_suffix": " android.com"
+    },
+    {
+      "domain_suffix": " androidify.com"
+    },
+    {
+      "domain_suffix": " androidtv.com"
+    },
+    {
+      "domain_suffix": " apigee.com"
+    },
+    {
+      "domain_suffix": " appspot.com"
+    },
+    {
+      "domain_suffix": " appsto.re"
+    },
+    {
+      "domain_suffix": " archiveofourown.org"
+    },
+    {
+      "domain_suffix": " artstation.com"
+    },
+    {
+      "domain_suffix": " ask.com"
+    },
+    {
+      "domain_suffix": " assets1.xboxlive.com"
+    },
+    {
+      "domain_suffix": " assets2.xboxlive.com"
+    },
+    {
+      "domain_suffix": " avg.com"
+    },
+    {
+      "domain_suffix": " axios.com"
+    },
+    {
+      "domain_suffix": " az416426.vo.msecnd.net"
+    },
+    {
+      "domain_suffix": " az668014.vo.msecnd.net"
+    },
+    {
+      "domain_suffix": " azureedge.net"
+    },
+    {
+      "domain_suffix": " azurefd.net"
+    },
+    {
+      "domain_suffix": " bandcamp.com"
+    },
+    {
+      "domain_suffix": " bandwagonhost.com"
+    },
+    {
+      "domain_suffix": " bb8gk.com"
+    },
+    {
+      "domain_suffix": " bbc.com"
+    },
+    {
+      "domain_suffix": " bbci.co.uk"
+    },
+    {
+      "domain_suffix": " behance.net"
+    },
+    {
+      "domain_suffix": " bibox.com"
+    },
+    {
+      "domain_suffix": " binance.cc"
+    },
+    {
+      "domain_suffix": " binance.com"
+    },
+    {
+      "domain_suffix": " binance.me"
+    },
+    {
+      "domain_suffix": " binance.us"
+    },
+    {
+      "domain_suffix": " bing.net"
+    },
+    {
+      "domain_suffix": " bit.ly"
+    },
+    {
+      "domain_suffix": " bitcointalk.org"
+    },
+    {
+      "domain_suffix": " bitfinex.com"
+    },
+    {
+      "domain_suffix": " bithumb.com"
+    },
+    {
+      "domain_suffix": " bitmex.com"
+    },
+    {
+      "domain_suffix": " bitstamp.net"
+    },
+    {
+      "domain_suffix": " bittrex.com"
+    },
+    {
+      "domain_suffix": " blogblog.com"
+    },
+    {
+      "domain_suffix": " blogger.com"
+    },
+    {
+      "domain_suffix": " bloglovin.com"
+    },
+    {
+      "domain_suffix": " blogspot.com"
+    },
+    {
+      "domain_suffix": " bloomberg.cn"
+    },
+    {
+      "domain_suffix": " bloomberg.com"
+    },
+    {
+      "domain_suffix": " bloomberg.de"
+    },
+    {
+      "domain_suffix": " bloombergview.com"
+    },
+    {
+      "domain_suffix": " blubrry.com"
+    },
+    {
+      "domain_suffix": " box.com"
+    },
+    {
+      "domain_suffix": " branch.io"
+    },
+    {
+      "domain_suffix": " brave.com"
+    },
+    {
+      "domain_suffix": " brawlstarsgame.com"
+    },
+    {
+      "domain_suffix": " btdig.com"
+    },
+    {
+      "domain_suffix": " btsow.beauty"
+    },
+    {
+      "domain_suffix": " btsow.rest"
+    },
+    {
+      "domain_suffix": " bullguard.com"
+    },
+    {
+      "domain_suffix": " bybit.com"
+    },
+    {
+      "domain_suffix": " byzhihuo.com"
+    },
+    {
+      "domain_suffix": " c-span.org"
+    },
+    {
+      "domain_suffix": " cacerts.digicert.com"
+    },
+    {
+      "domain_suffix": " cacerts.digitalcertvalidation.com"
+    },
+    {
+      "domain_suffix": " castbox.fm"
+    },
+    {
+      "domain_suffix": " cdninstagram.com"
+    },
+    {
+      "domain_suffix": " change.org"
+    },
+    {
+      "domain_suffix": " chouti.com"
+    },
+    {
+      "domain_suffix": " chrome.com"
+    },
+    {
+      "domain_suffix": " chromium.org"
+    },
+    {
+      "domain_suffix": " cloudcone.com"
+    },
+    {
+      "domain_suffix": " cloudflare.com"
+    },
+    {
+      "domain_suffix": " cloudfront.net"
+    },
+    {
+      "domain_suffix": " cloudsilk.io"
+    },
+    {
+      "domain_suffix": " clubhouse.pubnubapi.com"
+    },
+    {
+      "domain_suffix": " clubhouseapi.com"
+    },
+    {
+      "domain_suffix": " clyp.it"
+    },
+    {
+      "domain_suffix": " cna.com.tw"
+    },
+    {
+      "domain_suffix": " coinbase.com"
+    },
+    {
+      "domain_suffix": " coincheck.com"
+    },
+    {
+      "domain_suffix": " coingecko.com"
+    },
+    {
+      "domain_suffix": " coinmarketcap.com"
+    },
+    {
+      "domain_suffix": " coinone.co.kr"
+    },
+    {
+      "domain_suffix": " colamanhua.com"
+    },
+    {
+      "domain_suffix": " comments.app"
+    },
+    {
+      "domain_suffix": " conoha.jp"
+    },
+    {
+      "domain_suffix": " cool18.com"
+    },
+    {
+      "domain_suffix": " coursehero.com"
+    },
+    {
+      "domain_suffix": " dailymotion.com"
+    },
+    {
+      "domain_suffix": " daum.net"
+    },
+    {
+      "domain_suffix": " deadline.com"
+    },
+    {
+      "domain_suffix": " debug.com"
+    },
+    {
+      "domain_suffix": " deepl.com"
+    },
+    {
+      "domain_suffix": " depositphotos.com"
+    },
+    {
+      "domain_suffix": " deviantart.com"
+    },
+    {
+      "domain_suffix": " deviantart.net"
+    },
+    {
+      "domain_suffix": " dialogflow.com"
+    },
+    {
+      "domain_suffix": " disconnect.me"
+    },
+    {
+      "domain_suffix": " discord.com"
+    },
+    {
+      "domain_suffix": " discordapp.com"
+    },
+    {
+      "domain_suffix": " discordapp.net"
+    },
+    {
+      "domain_suffix": " disqus.com"
+    },
+    {
+      "domain_suffix": " dlive.tv"
+    },
+    {
+      "domain_suffix": " dmhy.org"
+    },
+    {
+      "domain_suffix": " dmm.co.jp"
+    },
+    {
+      "domain_suffix": " docker.com"
+    },
+    {
+      "domain_suffix": " docker.io"
+    },
+    {
+      "domain_suffix": " dowjones.com"
+    },
+    {
+      "domain_suffix": " dropbox.com"
+    },
+    {
+      "domain_suffix": " dropboxapi.com"
+    },
+    {
+      "domain_suffix": " dropboxusercontent.com"
+    },
+    {
+      "domain_suffix": " duckduckgo.com"
+    },
+    {
+      "domain_suffix": " ea.com"
+    },
+    {
+      "domain_suffix": " earthcam.com"
+    },
+    {
+      "domain_suffix": " economist.com"
+    },
+    {
+      "domain_suffix": " edx-cdn.org"
+    },
+    {
+      "domain_suffix": " encyclopedia.com"
+    },
+    {
+      "domain_suffix": " engadget.com"
+    },
+    {
+      "domain_suffix": " enpass.io"
+    },
+    {
+      "domain_suffix": " esm.sh"
+    },
+    {
+      "domain_suffix": " etherscan.io"
+    },
+    {
+      "domain_suffix": " eu-west-1.amazonaws.com"
+    },
+    {
+      "domain_suffix": " everdalegame.com"
+    },
+    {
+      "domain_suffix": " f8.com"
+    },
+    {
+      "domain_suffix": " facebookmail.com"
+    },
+    {
+      "domain_suffix": " fastly.net"
+    },
+    {
+      "domain_suffix": " fb.com"
+    },
+    {
+      "domain_suffix": " fb.me"
+    },
+    {
+      "domain_suffix": " fb.watch"
+    },
+    {
+      "domain_suffix": " fbaddins.com"
+    },
+    {
+      "domain_suffix": " fbsbx.com"
+    },
+    {
+      "domain_suffix": " fbworkmail.com"
+    },
+    {
+      "domain_suffix": " fc2.com"
+    },
+    {
+      "domain_suffix": " feedburner.com"
+    },
+    {
+      "domain_suffix": " feeder.co"
+    },
+    {
+      "domain_suffix": " feedly.com"
+    },
+    {
+      "domain_suffix": " feedx.net"
+    },
+    {
+      "domain_suffix": " firebaseio.com"
+    },
+    {
+      "domain_suffix": " flickr.com"
+    },
+    {
+      "domain_suffix": " flipboard.com"
+    },
+    {
+      "domain_suffix": " flitto.com"
+    },
+    {
+      "domain_suffix": " foreignaffairs.com"
+    },
+    {
+      "domain_suffix": " foreignpolicy.com"
+    },
+    {
+      "domain_suffix": " fourhoi.com"
+    },
+    {
+      "domain_suffix": " ft.com"
+    },
+    {
+      "domain_suffix": " ftchinese.com"
+    },
+    {
+      "domain_suffix": " ftimg.net"
+    },
+    {
+      "domain_suffix": " ftx.com"
+    },
+    {
+      "domain_suffix": " g.co"
+    },
+    {
+      "domain_suffix": " gate.io"
+    },
+    {
+      "domain_suffix": " gemini.com"
+    },
+    {
+      "domain_suffix": " genius.com"
+    },
+    {
+      "domain_suffix": " getoutline.org"
+    },
+    {
+      "domain_suffix": " getsync.com"
+    },
+    {
+      "domain_suffix": " gfw.report"
+    },
+    {
+      "domain_suffix": " gfx.ms"
+    },
+    {
+      "domain_suffix": " ggpht.com"
+    },
+    {
+      "domain_suffix": " ghcr.io"
+    },
+    {
+      "domain_suffix": " gifyu.com"
+    },
+    {
+      "domain_suffix": " git.io"
+    },
+    {
+      "domain_suffix": " gitbook.com"
+    },
+    {
+      "domain_suffix": " gitbook.io"
+    },
+    {
+      "domain_suffix": " githack.com"
+    },
+    {
+      "domain_suffix": " github.blog"
+    },
+    {
+      "domain_suffix": " github.com"
+    },
+    {
+      "domain_suffix": " github.io"
+    },
+    {
+      "domain_suffix": " githubassets.com"
+    },
+    {
+      "domain_suffix": " githubusercontent.com"
+    },
+    {
+      "domain_suffix": " gitlab.io"
+    },
+    {
+      "domain_suffix": " gmodules.com"
+    },
+    {
+      "domain_suffix": " go.dev"
+    },
+    {
+      "domain_suffix": " golang.org"
+    },
+    {
+      "domain_suffix": " graph.org"
+    },
+    {
+      "domain_suffix": " graphql.org"
+    },
+    {
+      "domain_suffix": " gravatar.com"
+    },
+    {
+      "domain_suffix": " gstatic.com"
+    },
+    {
+      "domain_suffix": " hackmd.io"
+    },
+    {
+      "domain_suffix": " hdhive.com"
+    },
+    {
+      "domain_suffix": " heroku.com"
+    },
+    {
+      "domain_suffix": " hevyapp.com"
+    },
+    {
+      "domain_suffix": " hket.com"
+    },
+    {
+      "domain_suffix": " hmjd9.com"
+    },
+    {
+      "domain_suffix": " hostloc.com"
+    },
+    {
+      "domain_suffix": " hotmail.com"
+    },
+    {
+      "domain_suffix": " huffpost.com"
+    },
+    {
+      "domain_suffix": " huobi.com"
+    },
+    {
+      "domain_suffix": " i-cable.com"
+    },
+    {
+      "domain_suffix": " i1.wp.com"
+    },
+    {
+      "domain_suffix": " ibb.co"
+    },
+    {
+      "domain_suffix": " ifixit.com"
+    },
+    {
+      "domain_suffix": " imagebam.com"
+    },
+    {
+      "domain_suffix": " imagetwist.com"
+    },
+    {
+      "domain_suffix": " img.3mo.net"
+    },
+    {
+      "domain_suffix": " imgbox.com"
+    },
+    {
+      "domain_suffix": " imgur.com"
+    },
+    {
+      "domain_suffix": " independent.co.uk"
+    },
+    {
+      "domain_suffix": " inoreader.com"
+    },
+    {
+      "domain_suffix": " instagram.com"
+    },
+    {
+      "domain_suffix": " intercom.io"
+    },
+    {
+      "domain_suffix": " intercomcdn.com"
+    },
+    {
+      "domain_suffix": " is.gd"
+    },
+    {
+      "domain_suffix": " issuu.com"
+    },
+    {
+      "domain_suffix": " istockphoto.com"
+    },
+    {
+      "domain_suffix": " itasoftware.com"
+    },
+    {
+      "domain_suffix": " jads.co"
+    },
+    {
+      "domain_suffix": " jdbstatic.com"
+    },
+    {
+      "domain_suffix": " jkforum.net"
+    },
+    {
+      "domain_suffix": " jmcomic.me"
+    },
+    {
+      "domain_suffix": " jmdanjonproxy.vip"
+    },
+    {
+      "domain_suffix": " jmdanjonproxy.xyz"
+    },
+    {
+      "domain_suffix": " jmpic.org"
+    },
+    {
+      "domain_suffix": " jmpic.xyz"
+    },
+    {
+      "domain_suffix": " jmpicn.xyz"
+    },
+    {
+      "domain_suffix": " joinclubhouse.com"
+    },
+    {
+      "domain_suffix": " jpfunny.org"
+    },
+    {
+      "domain_suffix": " jpmediadl.com"
+    },
+    {
+      "domain_suffix": " jsdelivr.net"
+    },
+    {
+      "domain_suffix": " justpaste.it"
+    },
+    {
+      "domain_suffix": " kakao.com"
+    },
+    {
+      "domain_suffix": " kobo.com"
+    },
+    {
+      "domain_suffix": " konachan.com"
+    },
+    {
+      "domain_suffix": " korbit.co.kr"
+    },
+    {
+      "domain_suffix": " kraken.com"
+    },
+    {
+      "domain_suffix": " kucoin.com"
+    },
+    {
+      "domain_suffix": " kuromis.com"
+    },
+    {
+      "domain_suffix": " kuromisubs.shop"
+    },
+    {
+      "domain_suffix": " lab.skk.moe"
+    },
+    {
+      "domain_suffix": " legra.ph"
+    },
+    {
+      "domain_suffix": " licdn.com"
+    },
+    {
+      "domain_suffix": " linkedin.com"
+    },
+    {
+      "domain_suffix": " liquid.com"
+    },
+    {
+      "domain_suffix": " listennotes.com"
+    },
+    {
+      "domain_suffix": " live.com"
+    },
+    {
+      "domain_suffix": " livestream.com"
+    },
+    {
+      "domain_suffix": " loggly.com"
+    },
+    {
+      "domain_suffix": " loli.net"
+    },
+    {
+      "domain_suffix": " lowendtalk.com"
+    },
+    {
+      "domain_suffix": " m-team.cc"
+    },
+    {
+      "domain_suffix": " m.me"
+    },
+    {
+      "domain_suffix": " mailchimp.com"
+    },
+    {
+      "domain_suffix": " manhuagui.com"
+    },
+    {
+      "domain_suffix": " masiro.me"
+    },
+    {
+      "domain_suffix": " matrix.org"
+    },
+    {
+      "domain_suffix": " me.com"
+    },
+    {
+      "domain_suffix": " mediawiki.org"
+    },
+    {
+      "domain_suffix": " medibang.com"
+    },
+    {
+      "domain_suffix": " medium.com"
+    },
+    {
+      "domain_suffix": " mega.co.nz"
+    },
+    {
+      "domain_suffix": " mega.io"
+    },
+    {
+      "domain_suffix": " mega.nz"
+    },
+    {
+      "domain_suffix": " messenger.com"
+    },
+    {
+      "domain_suffix": " mgstage.com"
+    },
+    {
+      "domain_suffix": " micmicidol.com"
+    },
+    {
+      "domain_suffix": " microsoft-falcon.io"
+    },
+    {
+      "domain_suffix": " microsoft.com"
+    },
+    {
+      "domain_suffix": " microsoftapp.net"
+    },
+    {
+      "domain_suffix": " mikanani.me"
+    },
+    {
+      "domain_suffix": " missav.ws"
+    },
+    {
+      "domain_suffix": " mixlr.com"
+    },
+    {
+      "domain_suffix": " moon.fm"
+    },
+    {
+      "domain_suffix": " msauth.net"
+    },
+    {
+      "domain_suffix": " msedge.net"
+    },
+    {
+      "domain_suffix": " msftauth.net"
+    },
+    {
+      "domain_suffix": " msn.com"
+    },
+    {
+      "domain_suffix": " mubi.com"
+    },
+    {
+      "domain_suffix": " mypikpak.com"
+    },
+    {
+      "domain_suffix": " myspace.com"
+    },
+    {
+      "domain_suffix": " myspacecdn.com"
+    },
+    {
+      "domain_suffix": " mzstatic.com"
+    },
+    {
+      "domain_suffix": " naixisubs.com"
+    },
+    {
+      "domain_suffix": " naver.jp"
+    },
+    {
+      "domain_suffix": " nbcnews.com"
+    },
+    {
+      "domain_suffix": " neowin.net"
+    },
+    {
+      "domain_suffix": " netcdn.space"
+    },
+    {
+      "domain_suffix": " newsblur.com"
+    },
+    {
+      "domain_suffix": " newstatesman.com"
+    },
+    {
+      "domain_suffix": " newsweek.com"
+    },
+    {
+      "domain_suffix": " newyorker.com"
+    },
+    {
+      "domain_suffix": " newyorktimes.com"
+    },
+    {
+      "domain_suffix": " nexitally.com"
+    },
+    {
+      "domain_suffix": " nhentai.net"
+    },
+    {
+      "domain_suffix": " nnhanman.com"
+    },
+    {
+      "domain_suffix": " notion-static.com"
+    },
+    {
+      "domain_suffix": " notion.so"
+    },
+    {
+      "domain_suffix": " now.com"
+    },
+    {
+      "domain_suffix": " nssurge.com"
+    },
+    {
+      "domain_suffix": " ntdm9.com"
+    },
+    {
+      "domain_suffix": " nyt.com"
+    },
+    {
+      "domain_suffix": " nytco.com"
+    },
+    {
+      "domain_suffix": " nytimes.com"
+    },
+    {
+      "domain_suffix": " nytimg.com"
+    },
+    {
+      "domain_suffix": " nytlog.com"
+    },
+    {
+      "domain_suffix": " nytstyle.com"
+    },
+    {
+      "domain_suffix": " obsidian.md"
+    },
+    {
+      "domain_suffix": " ocsp.int-x3.letsencrypt.org"
+    },
+    {
+      "domain_suffix": " oculus.com"
+    },
+    {
+      "domain_suffix": " oculuscdn.com"
+    },
+    {
+      "domain_suffix": " ok.ru"
+    },
+    {
+      "domain_suffix": " okex.com"
+    },
+    {
+      "domain_suffix": " okx.com"
+    },
+    {
+      "domain_suffix": " omny.fm"
+    },
+    {
+      "domain_suffix": " on2.com"
+    },
+    {
+      "domain_suffix": " onedrive.com"
+    },
+    {
+      "domain_suffix": " onenote.com"
+    },
+    {
+      "domain_suffix": " openvpn.net"
+    },
+    {
+      "domain_suffix": " owltail.com"
+    },
+    {
+      "domain_suffix": " oxfordscholarship.com"
+    },
+    {
+      "domain_suffix": " p-cdn.top"
+    },
+    {
+      "domain_suffix": " parsevideo.com"
+    },
+    {
+      "domain_suffix": " paste.ee"
+    },
+    {
+      "domain_suffix": " pastie.org"
+    },
+    {
+      "domain_suffix": " payments-jp.amazon.com"
+    },
+    {
+      "domain_suffix": " pcloud.com"
+    },
+    {
+      "domain_suffix": " peing.net"
+    },
+    {
+      "domain_suffix": " periscope.tv"
+    },
+    {
+      "domain_suffix": " phncdn.com"
+    },
+    {
+      "domain_suffix": " photos18.com"
+    },
+    {
+      "domain_suffix": " pianyuan.org"
+    },
+    {
+      "domain_suffix": " picnew.org"
+    },
+    {
+      "domain_suffix": " picture.jjhxmc.com"
+    },
+    {
+      "domain_suffix": " pimg.tw"
+    },
+    {
+      "domain_suffix": " pinimg.com"
+    },
+    {
+      "domain_suffix": " pixhost.to"
+    },
+    {
+      "domain_suffix": " player.fm"
+    },
+    {
+      "domain_suffix": " playio1.com"
+    },
+    {
+      "domain_suffix": " playno1.com"
+    },
+    {
+      "domain_suffix": " plex.tv"
+    },
+    {
+      "domain_suffix": " podbean.com"
+    },
+    {
+      "domain_suffix": " poloniex.com"
+    },
+    {
+      "domain_suffix": " prism-break.org"
+    },
+    {
+      "domain_suffix": " privoxy.org"
+    },
+    {
+      "domain_suffix": " proxifier.com"
+    },
+    {
+      "domain_suffix": " pscp.tv"
+    },
+    {
+      "domain_suffix": " pttime.org"
+    },
+    {
+      "domain_suffix": " pximg.net"
+    },
+    {
+      "domain_suffix": " quantumult.app"
+    },
+    {
+      "domain_suffix": " quora.com"
+    },
+    {
+      "domain_suffix": " quoracdn.net"
+    },
+    {
+      "domain_suffix": " qz.com"
+    },
+    {
+      "domain_suffix": " ra7.xyz"
+    },
+    {
+      "domain_suffix": " racknerd.com"
+    },
+    {
+      "domain_suffix": " radioline.co"
+    },
+    {
+      "domain_suffix": " reabble.com"
+    },
+    {
+      "domain_suffix": " readyatdawn.com"
+    },
+    {
+      "domain_suffix": " recaptcha.net"
+    },
+    {
+      "domain_suffix": " redd.it"
+    },
+    {
+      "domain_suffix": " reddit.com"
+    },
+    {
+      "domain_suffix": " redditlist.com"
+    },
+    {
+      "domain_suffix": " redditmedia.com"
+    },
+    {
+      "domain_suffix": " redditstatic.com"
+    },
+    {
+      "domain_suffix": " resilio.com"
+    },
+    {
+      "domain_suffix": " reuters.com"
+    },
+    {
+      "domain_suffix": " reutersmedia.net"
+    },
+    {
+      "domain_suffix": " rocksdb.org"
+    },
+    {
+      "domain_suffix": " rsshub.app"
+    },
+    {
+      "domain_suffix": " rthk.hk"
+    },
+    {
+      "domain_suffix": " schema.org"
+    },
+    {
+      "domain_suffix": " scmp.com"
+    },
+    {
+      "domain_suffix": " scribd.com"
+    },
+    {
+      "domain_suffix": " sda1.dev"
+    },
+    {
+      "domain_suffix": " seamless.icu"
+    },
+    {
+      "domain_suffix": " search.com"
+    },
+    {
+      "domain_suffix": " search.yahoo.co.jp"
+    },
+    {
+      "domain_suffix": " segment.com"
+    },
+    {
+      "domain_suffix": " sesemanhua.com"
+    },
+    {
+      "domain_suffix": " sexyno1.com"
+    },
+    {
+      "domain_suffix": " sfx.ms"
+    },
+    {
+      "domain_suffix": " sharepoint.com"
+    },
+    {
+      "domain_suffix": " shutterstock.com"
+    },
+    {
+      "domain_suffix": " siftrss.com"
+    },
+    {
+      "domain_suffix": " signal.org"
+    },
+    {
+      "domain_suffix": " sketchappsources.com"
+    },
+    {
+      "domain_suffix": " slideshare.net"
+    },
+    {
+      "domain_suffix": " sm.ms"
+    },
+    {
+      "domain_suffix": " smartmailcloud.com"
+    },
+    {
+      "domain_suffix": " smh.com.au"
+    },
+    {
+      "domain_suffix": " snapgram.co"
+    },
+    {
+      "domain_suffix": " south-plus.org"
+    },
+    {
+      "domain_suffix": " sov2ex.com"
+    },
+    {
+      "domain_suffix": " speakerdeck.com"
+    },
+    {
+      "domain_suffix": " spideroak.com"
+    },
+    {
+      "domain_suffix": " spiegel.de"
+    },
+    {
+      "domain_suffix": " splunkcloud.com"
+    },
+    {
+      "domain_suffix": " spotify.com"
+    },
+    {
+      "domain_suffix": " spotifycdn.com"
+    },
+    {
+      "domain_suffix": " startpage.com"
+    },
+    {
+      "domain_suffix": " static-economist.com"
+    },
+    {
+      "domain_suffix": " steamcommunity.com"
+    },
+    {
+      "domain_suffix": " steemit.com"
+    },
+    {
+      "domain_suffix": " straitstimes.com"
+    },
+    {
+      "domain_suffix": " streamable.com"
+    },
+    {
+      "domain_suffix": " streaming.mediaservices.windows.net"
+    },
+    {
+      "domain_suffix": " strpst.com"
+    },
+    {
+      "domain_suffix": " substack.com"
+    },
+    {
+      "domain_suffix": " supercell.com"
+    },
+    {
+      "domain_suffix": " surge-activation.com"
+    },
+    {
+      "domain_suffix": " sushi.com"
+    },
+    {
+      "domain_suffix": " svc.ms"
+    },
+    {
+      "domain_suffix": " swissinfo.ch"
+    },
+    {
+      "domain_suffix": " sxmjxs.xyz"
+    },
+    {
+      "domain_suffix": " t.me"
+    },
+    {
+      "domain_suffix": " t66y.com"
+    },
+    {
+      "domain_suffix": " tapatalk.com"
+    },
+    {
+      "domain_suffix": " tawk.to"
+    },
+    {
+      "domain_suffix": " tdesktop.com"
+    },
+    {
+      "domain_suffix": " techspot.com"
+    },
+    {
+      "domain_suffix": " telegra.ph"
+    },
+    {
+      "domain_suffix": " telegram-cdn.org"
+    },
+    {
+      "domain_suffix": " telegram.me"
+    },
+    {
+      "domain_suffix": " telegram.org"
+    },
+    {
+      "domain_suffix": " telesco.pe"
+    },
+    {
+      "domain_suffix": " tenor.com"
+    },
+    {
+      "domain_suffix": " tensorflow.org"
+    },
+    {
+      "domain_suffix": " terabox.com"
+    },
+    {
+      "domain_suffix": " textnow.me"
+    },
+    {
+      "domain_suffix": " tfhub.dev"
+    },
+    {
+      "domain_suffix": " theage.com.au"
+    },
+    {
+      "domain_suffix": " theatlantic.com"
+    },
+    {
+      "domain_suffix": " theaustralian.com.au"
+    },
+    {
+      "domain_suffix": " theconversation.com"
+    },
+    {
+      "domain_suffix": " thediplomat.com"
+    },
+    {
+      "domain_suffix": " theguardian.com"
+    },
+    {
+      "domain_suffix": " theinitium.com"
+    },
+    {
+      "domain_suffix": " themoviedb.org"
+    },
+    {
+      "domain_suffix": " thetvdb.com"
+    },
+    {
+      "domain_suffix": " threads.net"
+    },
+    {
+      "domain_suffix": " thumbsnap.com"
+    },
+    {
+      "domain_suffix": " tiltbrush.com"
+    },
+    {
+      "domain_suffix": " time.com"
+    },
+    {
+      "domain_suffix": " tineye.com"
+    },
+    {
+      "domain_suffix": " tiny.cc"
+    },
+    {
+      "domain_suffix": " tmagazine.com"
+    },
+    {
+      "domain_suffix": " tmdb.org"
+    },
+    {
+      "domain_suffix": " torproject.org"
+    },
+    {
+      "domain_suffix": " tradingview.com"
+    },
+    {
+      "domain_suffix": " trakt.tv"
+    },
+    {
+      "domain_suffix": " tumblr.com"
+    },
+    {
+      "domain_suffix": " turbobit.net"
+    },
+    {
+      "domain_suffix": " tutanota.com"
+    },
+    {
+      "domain_suffix": " tweetdeck.com"
+    },
+    {
+      "domain_suffix": " tx.me"
+    },
+    {
+      "domain_suffix": " u79pk.com"
+    },
+    {
+      "domain_suffix": " uniswap.org"
+    },
+    {
+      "domain_suffix": " upercell.helpshift.com"
+    },
+    {
+      "domain_suffix": " urbandictionary.com"
+    },
+    {
+      "domain_suffix": " us-east-1.amazonaws.com"
+    },
+    {
+      "domain_suffix": " ustream.tv"
+    },
+    {
+      "domain_suffix": " v2ex.com"
+    },
+    {
+      "domain_suffix": " venturebeat.com"
+    },
+    {
+      "domain_suffix": " viber.com"
+    },
+    {
+      "domain_suffix": " videopress.com"
+    },
+    {
+      "domain_suffix": " vimeo.com"
+    },
+    {
+      "domain_suffix": " vine.co"
+    },
+    {
+      "domain_suffix": " voxer.com"
+    },
+    {
+      "domain_suffix": " vzw.com"
+    },
+    {
+      "domain_suffix": " washingtonpost.com"
+    },
+    {
+      "domain_suffix": " wattpad.com"
+    },
+    {
+      "domain_suffix": " waymo.com"
+    },
+    {
+      "domain_suffix": " web.dev"
+    },
+    {
+      "domain_suffix": " webmproject.org"
+    },
+    {
+      "domain_suffix": " webrtc.org"
+    },
+    {
+      "domain_suffix": " wego.here.com"
+    },
+    {
+      "domain_suffix": " welt.de"
+    },
+    {
+      "domain_suffix": " weserv.nl"
+    },
+    {
+      "domain_suffix": " whamon.com"
+    },
+    {
+      "domain_suffix": " whatsapp.com"
+    },
+    {
+      "domain_suffix": " whatsapp.net"
+    },
+    {
+      "domain_suffix": " whoer.net"
+    },
+    {
+      "domain_suffix": " widevine.com"
+    },
+    {
+      "domain_suffix": " wikibooks.org"
+    },
+    {
+      "domain_suffix": " wikidata.org"
+    },
+    {
+      "domain_suffix": " wikileaks.org"
+    },
+    {
+      "domain_suffix": " wikimapia.org"
+    },
+    {
+      "domain_suffix": " wikimedia.org"
+    },
+    {
+      "domain_suffix": " wikimediafoundation.org"
+    },
+    {
+      "domain_suffix": " wikinews.org"
+    },
+    {
+      "domain_suffix": " wikipedia.org"
+    },
+    {
+      "domain_suffix": " wikiquote.org"
+    },
+    {
+      "domain_suffix": " wikisource.org"
+    },
+    {
+      "domain_suffix": " wikiversity.org"
+    },
+    {
+      "domain_suffix": " wikivoyage.org"
+    },
+    {
+      "domain_suffix": " wikiwand.com"
+    },
+    {
+      "domain_suffix": " wiktionary.org"
+    },
+    {
+      "domain_suffix": " wire.com"
+    },
+    {
+      "domain_suffix": " wireguard.com"
+    },
+    {
+      "domain_suffix": " withgoogle.com"
+    },
+    {
+      "domain_suffix": " wn.com"
+    },
+    {
+      "domain_suffix": " wordpress.com"
+    },
+    {
+      "domain_suffix": " workers.dev"
+    },
+    {
+      "domain_suffix": " worldcat.org"
+    },
+    {
+      "domain_suffix": " wsj.com"
+    },
+    {
+      "domain_suffix": " wsj.net"
+    },
+    {
+      "domain_suffix": " wsrv.nl"
+    },
+    {
+      "domain_suffix": " x-idol.net"
+    },
+    {
+      "domain_suffix": " x.co"
+    },
+    {
+      "domain_suffix": " x.com"
+    },
+    {
+      "domain_suffix": " xksm54s.com"
+    },
+    {
+      "domain_suffix": " xms45.com"
+    },
+    {
+      "domain_suffix": " xn--ngstr-lra8j.com"
+    },
+    {
+      "domain_suffix": " xuite.net"
+    },
+    {
+      "domain_suffix": " yadi.sk"
+    },
+    {
+      "domain_suffix": " yahoo.com"
+    },
+    {
+      "domain_suffix": " yande.re"
+    },
+    {
+      "domain_suffix": " yandex.com"
+    },
+    {
+      "domain_suffix": " yandex.net"
+    },
+    {
+      "domain_suffix": " yandex.ru"
+    },
+    {
+      "domain_suffix": " you-get.org"
+    },
+    {
+      "domain_suffix": " zaobao.com"
+    },
+    {
+      "domain_suffix": " zaobao.com.sg"
+    },
+    {
+      "domain_suffix": " zb.com"
+    },
+    {
+      "domain_suffix": " zello.com"
+    },
+    {
+      "domain_suffix": " zeronet.io"
+    },
+    {
+      "domain_suffix": " zophar.net"
+    },
+    {
+      "domain_suffix": " zynamics.com"
+    },
+    {
+      "domain_suffix": " zyxel.com"
+    },
+    {
+      "domain_suffix": "baozimh.com"
+    },
+    {
+      "domain_suffix": "blip.net"
+    },
+    {
+      "domain_suffix": "dmit.io"
+    },
+    {
+      "domain_suffix": "documents.io"
+    },
+    {
+      "domain_suffix": "hnhr01.com"
+    },
+    {
+      "domain_suffix": "jjmhw.cc"
+    },
+    {
+      "domain_suffix": "jmapiproxy1.cc"
+    },
+    {
+      "domain_suffix": "manwa.wang"
+    },
+    {
+      "domain_suffix": "metamask.io"
+    },
+    {
+      "domain_suffix": "mixpanel.com"
+    },
+    {
+      "domain_suffix": "picacomic.com"
+    },
+    {
+      "domain_suffix": "pstatic.net"
+    },
+    {
+      "domain_suffix": "rc-backup.com"
+    },
+    {
+      "domain_suffix": "readdle.com"
+    },
+    {
+      "domain_suffix": "south-plus.net"
+    },
+    {
+      "domain_suffix": "split.io"
+    },
+    {
+      "domain_suffix": "v2ex.co"
+    },
+    {
+      "domain_keyword": " jav"
+    },
+    {
+      "domain_keyword": " pixiv"
+    },
+    {
+      "domain_keyword": " rmcdn"
+    },
+    {
+      "domain_keyword": " roucdn"
+    },
+    {
+      "domain_keyword": " rouman"
+    },
+    {
+      "domain_keyword": " sehuatang"
+    },
+    {
+      "domain_keyword": ".app"
+    },
+    {
+      "domain_keyword": "18comic"
+    },
+    {
+      "ip_cidr": " 109.239.140.0/24"
+    },
+    {
+      "ip_cidr": " 5.28.192.0/18"
+    },
+    {
+      "ip_cidr": "149.154.160.0/20"
+    },
+    {
+      "ip_cidr": "91.108.12.0/22"
+    },
+    {
+      "ip_cidr": "91.108.16.0/22"
+    },
+    {
+      "ip_cidr": "91.108.20.0/22"
+    },
+    {
+      "ip_cidr": "91.108.4.0/22"
+    },
+    {
+      "ip_cidr": "91.108.56.0/22"
+    },
+    {
+      "ip_cidr": "91.108.8.0/22"
+    }
+  ]
+}
