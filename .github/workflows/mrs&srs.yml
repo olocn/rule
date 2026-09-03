@@ -1,11 +1,10 @@
-name: Convert sing-box json & Mihomo yaml
+name: Convert QX rules to Sing-box JSON & Mihomo YAML
 
 on:
   push:
     paths:
-      - "qx/**"
-      - ".github/workflows/convert-rules.yml"
-
+      - 'qx/**'
+      - '.github/workflows/convert-rules.yml'
   workflow_dispatch:
 
 permissions:
@@ -16,962 +15,487 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-
   convert:
-
     runs-on: ubuntu-latest
+
+    env:
+      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
     steps:
 
-      # ============================================================
+      # ==========================================================
       # 1. Checkout
-      # ============================================================
-
-      - name: Checkout repository
+      # ==========================================================
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-
-      # ============================================================
+      # ==========================================================
       # 2. Install dependencies
-      # ============================================================
-
+      # ==========================================================
       - name: Install dependencies
+        shell: bash
         run: |
-          set -euo pipefail
+          set -e
 
           sudo apt-get update
+          sudo apt-get install -y jq
 
-          sudo apt-get install -y \
-            jq \
-            curl
+          echo "Dependencies installed."
 
-
-      # ============================================================
+      # ==========================================================
       # 3. Prepare directories
-      # ============================================================
-
+      # ==========================================================
       - name: Prepare directories
+        shell: bash
         run: |
-          set -euo pipefail
+          set -e
 
-          mkdir -p qx
           mkdir -p singbox
           mkdir -p mihomo
 
+          # 删除旧格式文件
+          rm -f singbox/*.srs
+          rm -f mihomo/*.mrs
 
-      # ============================================================
-      # 4. Convert QX Rules
-      # ============================================================
+          # 删除旧的 keyword/list 文件
+          rm -f mihomo/*-keyword.list
 
-      - name: Convert QX Rules
+          echo "Directories prepared."
+
+      # ==========================================================
+      # 4. Convert QX rules
+      # ==========================================================
+      - name: Convert QX rules
         shell: bash
         run: |
-          set -euo pipefail
-
-          echo
-          echo "========================================"
-          echo "QX → Sing-box JSON + Mihomo YAML"
-          echo "========================================"
+          set -e
 
           shopt -s nullglob
 
-          QX_FILES=(qx/*)
+          files=(qx/*.snippet)
 
-
-          if [ ${#QX_FILES[@]} -eq 0 ]; then
-
-            echo "No files found in qx/."
-
-            exit 0
-
+          if [ ${#files[@]} -eq 0 ]; then
+            echo "ERROR: No .snippet files found in qx/"
+            exit 1
           fi
 
+          for file in "${files[@]}"; do
 
-          # ========================================================
-          # 清理之前自动生成的文件
-          # ========================================================
+            base="$(basename "$file" .snippet)"
 
-          rm -f singbox/*.srs
-          rm -f singbox/*.json
+            echo ""
+            echo "========================================"
+            echo "Processing: $file"
+            echo "Output name: $base"
+            echo "========================================"
 
-          rm -f mihomo/*.mrs
-          rm -f mihomo/*.yaml
-          rm -f mihomo/*-keyword.list
-
-
-          # ========================================================
-          # 遍历 QX 文件
-          # ========================================================
-
-          for FILE in "${QX_FILES[@]}"; do
-
-            if [ ! -f "$FILE" ]; then
+            # ======================================================
+            # 排除 ASN 文件
+            # ======================================================
+            if [[ "$base" == asn-* ]]; then
+              echo "Skipping ASN file: $file"
               continue
             fi
 
+            tmp="$(mktemp -d)"
 
-            BASENAME="$(basename "$FILE")"
-
-            NAME="${BASENAME%.*}"
-
-
-            echo
-            echo "----------------------------------------"
-            echo "Processing: $FILE"
-            echo "Output name: $NAME"
-            echo "----------------------------------------"
-
+            domains="$tmp/domains.txt"
+            suffix="$tmp/suffix.txt"
+            keywords="$tmp/keywords.txt"
+            ipv4="$tmp/ipv4.txt"
+            ipv6="$tmp/ipv6.txt"
 
             # ======================================================
-            # 临时目录
-            # ======================================================
-
-            TMP="$(mktemp -d)"
-
-            CLEAN_FILE="$TMP/clean.txt"
-
-            DOMAIN_FILE="$TMP/domain.txt"
-
-            SUFFIX_FILE="$TMP/suffix.txt"
-
-            KEYWORD_FILE="$TMP/keyword.txt"
-
-            IP_FILE="$TMP/ip.txt"
-
-
-            touch \
-              "$DOMAIN_FILE" \
-              "$SUFFIX_FILE" \
-              "$KEYWORD_FILE" \
-              "$IP_FILE"
-
-
-            # ======================================================
-            # 清理 QX
+            # 清理 QX 文件
             #
             # 删除：
-            # - 空行
-            # - #
-            # - ;
+            #   # 注释
+            #   ; 注释
+            #   空白
+            #
+            # 同时过滤 ASN
             # ======================================================
-
-            sed \
-              -E \
-              's/[#;].*$//' \
-              "$FILE" |
-            sed \
-              -E \
-              '/^[[:space:]]*$/d' |
-            sed \
-              -E \
-              's/^[[:space:]]+//' |
-            sed \
-              -E \
-              's/[[:space:]]+$//' \
-              > "$CLEAN_FILE"
-
+            sed -E 's/[#;].*$//' "$file" \
+              | sed -E 's/^[[:space:]]+|[[:space:]]+$//g' \
+              | grep -v -i -E \
+                '^(IP-ASN|ASN|IP-ASN6)(,|[[:space:]])' \
+              | grep -v '^$' \
+              > "$tmp/clean.txt" || true
 
             # ======================================================
+            # 解析规则
+            # ======================================================
+
             # HOST
-            # ======================================================
+            grep -i -E '^HOST,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$domains" || true
 
-            awk -F',' '
-              BEGIN {
-                IGNORECASE=1
-              }
+            # DOMAIN
+            grep -i -E '^DOMAIN,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$domains" || true
 
-              /^HOST,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-            ' "$CLEAN_FILE" |
-            sort -u \
-              > "$DOMAIN_FILE"
-
-
-            # ======================================================
             # HOST-SUFFIX
-            # ======================================================
+            grep -i -E '^HOST-SUFFIX,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$suffix" || true
 
-            awk -F',' '
-              BEGIN {
-                IGNORECASE=1
-              }
-
-              /^HOST-SUFFIX,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-            ' "$CLEAN_FILE" |
-            sort -u \
-              > "$SUFFIX_FILE"
-
-
-            # ======================================================
-            # DOMAIN
-            # ======================================================
-
-            awk -F',' '
-              BEGIN {
-                IGNORECASE=1
-              }
-
-              /^DOMAIN,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-            ' "$CLEAN_FILE" |
-            sort -u \
-              >> "$DOMAIN_FILE"
-
-
-            # ======================================================
             # HOST-KEYWORD
-            # ======================================================
+            grep -i -E '^HOST-KEYWORD,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$keywords" || true
 
-            awk -F',' '
-              BEGIN {
-                IGNORECASE=1
-              }
-
-              /^HOST-KEYWORD,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-            ' "$CLEAN_FILE" |
-            sort -u |
-            sed 's/^/DOMAIN-KEYWORD,/' \
-              > "$KEYWORD_FILE"
-
-
-            # ======================================================
             # IP-CIDR
+            grep -i -E '^IP-CIDR,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$ipv4" || true
+
             # IP-CIDR6
+            grep -i -E '^IP-CIDR6,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$ipv6" || true
+
             # IP6-CIDR
-            #
-            # 内部统一保存纯 CIDR
-            # ======================================================
-
-            awk -F',' '
-              BEGIN {
-                IGNORECASE=1
-              }
-
-              /^IP-CIDR,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-
-              /^IP-CIDR6,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-
-              /^IP6-CIDR,/ {
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-
-                if ($2 != "")
-                  print $2
-
-              }
-
-            ' "$CLEAN_FILE" |
-            sort -u \
-              > "$IP_FILE"
-
+            grep -i -E '^IP6-CIDR,' "$tmp/clean.txt" \
+              | sed -E 's/^[^,]+,//' \
+              | sed -E 's/,.+$//' \
+              >> "$ipv6" || true
 
             # ======================================================
-            # 再次去重
+            # 去重
             # ======================================================
+            for f in "$domains" "$suffix" "$keywords" "$ipv4" "$ipv6"; do
+              if [ -f "$f" ]; then
+                sort -u "$f" -o "$f"
+              fi
+            done
 
-            sort -u \
-              "$DOMAIN_FILE" \
-              -o "$DOMAIN_FILE"
+            domain_count=$(wc -l < "$domains" 2>/dev/null || echo 0)
+            suffix_count=$(wc -l < "$suffix" 2>/dev/null || echo 0)
+            keyword_count=$(wc -l < "$keywords" 2>/dev/null || echo 0)
+            ipv4_count=$(wc -l < "$ipv4" 2>/dev/null || echo 0)
+            ipv6_count=$(wc -l < "$ipv6" 2>/dev/null || echo 0)
 
-            sort -u \
-              "$SUFFIX_FILE" \
-              -o "$SUFFIX_FILE"
+            total_count=$(
+              (
+                cat "$domains" 2>/dev/null || true
+                cat "$suffix" 2>/dev/null || true
+                cat "$keywords" 2>/dev/null || true
+                cat "$ipv4" 2>/dev/null || true
+                cat "$ipv6" 2>/dev/null || true
+              ) | wc -l
+            )
 
-            sort -u \
-              "$IP_FILE" \
-              -o "$IP_FILE"
-
-
-            # ======================================================
-            # 统计
-            # ======================================================
-
-            DOMAIN_COUNT="$(
-              grep -c . "$DOMAIN_FILE" || true
-            )"
-
-            SUFFIX_COUNT="$(
-              grep -c . "$SUFFIX_FILE" || true
-            )"
-
-            KEYWORD_COUNT="$(
-              grep -c . "$KEYWORD_FILE" || true
-            )"
-
-            IP_COUNT="$(
-              grep -c . "$IP_FILE" || true
-            )"
-
-
-            TOTAL_DOMAIN=$((DOMAIN_COUNT + SUFFIX_COUNT))
-
-
-            echo
+            echo ""
             echo "Detected:"
-            echo "  DOMAIN       : $DOMAIN_COUNT"
-            echo "  HOST-SUFFIX  : $SUFFIX_COUNT"
-            echo "  KEYWORD      : $KEYWORD_COUNT"
-            echo "  IP-CIDR      : $IP_COUNT"
-
+            echo "  DOMAIN       : $domain_count"
+            echo "  HOST-SUFFIX  : $suffix_count"
+            echo "  KEYWORD      : $keyword_count"
+            echo "  IP-CIDR      : $ipv4_count"
+            echo "  IP-CIDR6     : $ipv6_count"
+            echo "  TOTAL        : $total_count"
 
             # ======================================================
-            # 5. 生成 Sing-box Source JSON
-            #
-            # 当前最新 Source Format：
-            #
-            # {
-            #   "version": 5,
-            #   "rules": [...]
-            # }
-            #
-            # 不再编译 SRS
+            # 如果只有 ASN / 不存在可转换规则
             # ======================================================
+            if [ "$total_count" -eq 0 ]; then
+              echo ""
+              echo "No convertible rules found."
+              echo "Skipping: $file"
+              rm -rf "$tmp"
+              continue
+            fi
 
-            SINGBOX_OUT="singbox/${NAME}.json"
-
-
-            # ------------------------------------------------------
-            # DOMAIN
-            # ------------------------------------------------------
-
-            jq -R -s '
-              split("\n")
-              | map(select(length > 0))
-              | map({
-                  domain: .
-                })
-            ' "$DOMAIN_FILE" \
-              > "$TMP/domain.json"
-
-
-            # ------------------------------------------------------
-            # DOMAIN-SUFFIX
-            # ------------------------------------------------------
-
-            jq -R -s '
-              split("\n")
-              | map(select(length > 0))
-              | map({
-                  domain_suffix: .
-                })
-            ' "$SUFFIX_FILE" \
-              > "$TMP/suffix.json"
-
-
-            # ------------------------------------------------------
-            # DOMAIN-KEYWORD
-            # ------------------------------------------------------
-
-            awk -F',' '
-              /^DOMAIN-KEYWORD,/ {
-                print $2
-              }
-            ' "$KEYWORD_FILE" |
-            jq -R -s '
-              split("\n")
-              | map(select(length > 0))
-              | map({
-                  domain_keyword: .
-                })
-            ' \
-              > "$TMP/keyword.json"
-
-
-            # ------------------------------------------------------
-            # IP-CIDR
-            # ------------------------------------------------------
-
-            jq -R -s '
-              split("\n")
-              | map(select(length > 0))
-              | map({
-                  ip_cidr: .
-                })
-            ' "$IP_FILE" \
-              > "$TMP/ip.json"
-
-
-            # ------------------------------------------------------
-            # 组装 Sing-box Source Format
-            # ------------------------------------------------------
+            # ======================================================
+            # 5. Generate Sing-box JSON
+            #
+            # Source Format v5
+            # ======================================================
+            singbox_file="singbox/${base}.json"
 
             jq -n \
-              --slurpfile domain "$TMP/domain.json" \
-              --slurpfile suffix "$TMP/suffix.json" \
-              --slurpfile keyword "$TMP/keyword.json" \
-              --slurpfile ip "$TMP/ip.json" \
+              --argjson domains "$(
+                jq -R -s '
+                  split("\n")
+                  | map(select(length > 0))
+                ' "$domains"
+              )" \
+              --argjson suffix "$(
+                jq -R -s '
+                  split("\n")
+                  | map(select(length > 0))
+                ' "$suffix"
+              )" \
+              --argjson keywords "$(
+                jq -R -s '
+                  split("\n")
+                  | map(select(length > 0))
+                ' "$keywords"
+              )" \
+              --argjson ipv4 "$(
+                jq -R -s '
+                  split("\n")
+                  | map(select(length > 0))
+                ' "$ipv4"
+              )" \
+              --argjson ipv6 "$(
+                jq -R -s '
+                  split("\n")
+                  | map(select(length > 0))
+                ' "$ipv6"
+              )" \
               '
               {
                 version: 5,
                 rules:
                   (
-                    $domain[0]
-                    +
-                    $suffix[0]
-                    +
-                    $keyword[0]
-                    +
-                    $ip[0]
+                    ($domains | map({domain: .})) +
+                    ($suffix | map({domain_suffix: .})) +
+                    ($keywords | map({domain_keyword: .})) +
+                    ($ipv4 | map({ip_cidr: .})) +
+                    ($ipv6 | map({ip_cidr: .}))
                   )
               }
-              ' \
-              > "$SINGBOX_OUT"
-
+              ' > "$singbox_file"
 
             # ======================================================
-            # 6. 检查 Sing-box JSON
+            # Sing-box JSON validation
             # ======================================================
-
-            echo
+            echo ""
             echo "Sing-box JSON validation:"
 
-            jq empty "$SINGBOX_OUT"
+            jq empty "$singbox_file"
 
+            version=$(jq -r '.version' "$singbox_file")
+            rule_count=$(jq '.rules | length' "$singbox_file")
 
-            SINGBOX_RULE_COUNT="$(
-              jq '.rules | length' "$SINGBOX_OUT"
-            )"
+            echo "Sing-box version:"
+            echo "$version"
 
-
-            echo
+            echo ""
             echo "Sing-box rule count:"
-            echo "$SINGBOX_RULE_COUNT"
+            echo "$rule_count"
 
-
-            if [ "$SINGBOX_RULE_COUNT" -eq 0 ]; then
-
-              echo
-              echo "ERROR: Sing-box JSON contains no rules."
-
+            if [ "$version" != "5" ]; then
+              echo "ERROR: Invalid Sing-box source format version."
               exit 1
-
             fi
 
-
-            echo
-            echo "Sing-box output:"
-            echo "  $SINGBOX_OUT"
-
+            if [ "$rule_count" -eq 0 ]; then
+              echo "ERROR: Sing-box JSON contains no rules."
+              exit 1
+            fi
 
             # ======================================================
-            # 7. 生成 Mihomo YAML
+            # 6. Generate Mihomo YAML
             #
-            # 格式：
-            #
-            # payload:
-            #   - DOMAIN,example.com
-            #   - DOMAIN-SUFFIX,example.org
-            #   - DOMAIN-KEYWORD,google
-            #   - IP-CIDR,1.2.3.0/24
+            # Classical Rule Provider
             # ======================================================
-
-            MIHOMO_OUT="mihomo/${NAME}.yaml"
-
-
-            echo
-            echo "Mihomo output: YAML"
-
-            echo "Output:"
-            echo "  $MIHOMO_OUT"
-
+            mihomo_file="mihomo/${base}.yaml"
 
             {
               echo "payload:"
 
+              while IFS= read -r rule; do
+                [ -n "$rule" ] || continue
+                echo "  - DOMAIN,$rule"
+              done < "$domains"
 
-              # ----------------------------------------------------
-              # DOMAIN
-              # ----------------------------------------------------
+              while IFS= read -r rule; do
+                [ -n "$rule" ] || continue
+                echo "  - DOMAIN-SUFFIX,$rule"
+              done < "$suffix"
 
-              if [ -s "$DOMAIN_FILE" ]; then
+              while IFS= read -r rule; do
+                [ -n "$rule" ] || continue
+                echo "  - DOMAIN-KEYWORD,$rule"
+              done < "$keywords"
 
-                while IFS= read -r DOMAIN; do
+              while IFS= read -r rule; do
+                [ -n "$rule" ] || continue
+                echo "  - IP-CIDR,$rule"
+              done < "$ipv4"
 
-                  [ -z "$DOMAIN" ] && continue
+              while IFS= read -r rule; do
+                [ -n "$rule" ] || continue
+                echo "  - IP-CIDR6,$rule"
+              done < "$ipv6"
 
-                  printf '  - DOMAIN,%s\n' "$DOMAIN"
-
-                done < "$DOMAIN_FILE"
-
-              fi
-
-
-              # ----------------------------------------------------
-              # DOMAIN-SUFFIX
-              # ----------------------------------------------------
-
-              if [ -s "$SUFFIX_FILE" ]; then
-
-                while IFS= read -r DOMAIN; do
-
-                  [ -z "$DOMAIN" ] && continue
-
-                  printf '  - DOMAIN-SUFFIX,%s\n' "$DOMAIN"
-
-                done < "$SUFFIX_FILE"
-
-              fi
-
-
-              # ----------------------------------------------------
-              # DOMAIN-KEYWORD
-              # ----------------------------------------------------
-
-              if [ -s "$KEYWORD_FILE" ]; then
-
-                while IFS= read -r RULE; do
-
-                  [ -z "$RULE" ] && continue
-
-                  KEYWORD="${RULE#DOMAIN-KEYWORD,}"
-
-                  [ -z "$KEYWORD" ] && continue
-
-                  printf '  - DOMAIN-KEYWORD,%s\n' "$KEYWORD"
-
-                done < "$KEYWORD_FILE"
-
-              fi
-
-
-              # ----------------------------------------------------
-              # IP-CIDR
-              # ----------------------------------------------------
-
-              if [ -s "$IP_FILE" ]; then
-
-                while IFS= read -r CIDR; do
-
-                  [ -z "$CIDR" ] && continue
-
-                  printf '  - IP-CIDR,%s\n' "$CIDR"
-
-                done < "$IP_FILE"
-
-              fi
-
-            } > "$MIHOMO_OUT"
-
+            } > "$mihomo_file"
 
             # ======================================================
-            # 8. 检查 Mihomo YAML
+            # Mihomo YAML validation
             # ======================================================
+            echo ""
+            echo "Mihomo YAML validation:"
 
-            if [ ! -s "$MIHOMO_OUT" ]; then
-
-              echo
-              echo "ERROR: Empty Mihomo YAML."
-
+            if ! grep -q '^payload:$' "$mihomo_file"; then
+              echo "ERROR: Mihomo YAML missing payload."
               exit 1
-
             fi
 
+            mihomo_rule_count=$(
+              grep -cE '^  - ' "$mihomo_file" || true
+            )
 
-            MIHOMO_RULE_COUNT="$(
-              grep -c '^[[:space:]]*-[[:space:]]' \
-              "$MIHOMO_OUT" || true
-            )"
-
-
-            echo
             echo "Mihomo rule count:"
-            echo "$MIHOMO_RULE_COUNT"
+            echo "$mihomo_rule_count"
 
-
-            if [ "$MIHOMO_RULE_COUNT" -eq 0 ]; then
-
-              echo
+            if [ "$mihomo_rule_count" -eq 0 ]; then
               echo "ERROR: Mihomo YAML contains no rules."
-
               exit 1
-
             fi
 
-
-            echo
-            echo "Mihomo YAML preview:"
-
-            head -n 20 "$MIHOMO_OUT"
-
-
             # ======================================================
-            # 9. 检查输出
+            # Output information
             # ======================================================
-
-            echo
+            echo ""
             echo "Generated files:"
+            echo "  $singbox_file  $(wc -c < "$singbox_file") bytes"
+            echo "  $mihomo_file  $(wc -c < "$mihomo_file") bytes"
 
-            find singbox mihomo \
-              -maxdepth 1 \
-              -type f \
-              \( \
-                -name "${NAME}.json" \
-                -o \
-                -name "${NAME}.yaml" \
-              \) \
-              -printf "  %p  %s bytes\n"
-
-
-            # ======================================================
-            # 10. 检查旧格式是否残留
-            # ======================================================
-
-            if [ -f "singbox/${NAME}.srs" ]; then
-
-              echo
-              echo "ERROR: Unexpected SRS file exists:"
-              echo "singbox/${NAME}.srs"
-
-              exit 1
-
-            fi
-
-
-            if [ -f "mihomo/${NAME}.mrs" ]; then
-
-              echo
-              echo "ERROR: Unexpected MRS file exists:"
-              echo "mihomo/${NAME}.mrs"
-
-              exit 1
-
-            fi
-
-
-            if [ -f "mihomo/${NAME}-cidr.mrs" ]; then
-
-              echo
-              echo "ERROR: Unexpected MRS file exists:"
-              echo "mihomo/${NAME}-cidr.mrs"
-
-              exit 1
-
-            fi
-
-
-            if [ -f "mihomo/${NAME}-keyword.list" ]; then
-
-              echo
-              echo "ERROR: Unexpected keyword list exists:"
-              echo "mihomo/${NAME}-keyword.list"
-
-              exit 1
-
-            fi
-
-
-            # ======================================================
-            # 11. 删除临时目录
-            # ======================================================
-
-            rm -rf "$TMP"
-
+            rm -rf "$tmp"
 
           done
 
-
-      # ============================================================
-      # 12. 最终验证
-      # ============================================================
-
-      - name: Validate generated files
+      # ==========================================================
+      # 7. Final validation
+      # ==========================================================
+      - name: Final validation
         shell: bash
         run: |
-          set -euo pipefail
+          set -e
 
-          echo
+          echo ""
           echo "========================================"
           echo "Final validation"
           echo "========================================"
 
+          shopt -s nullglob
 
-          # ========================================================
-          # Sing-box JSON
-          # ========================================================
+          json_files=(singbox/*.json)
+          yaml_files=(mihomo/*.yaml)
 
-          echo
-          echo "Sing-box JSON:"
+          echo ""
+          echo "Sing-box JSON files: ${#json_files[@]}"
+          echo "Mihomo YAML files:   ${#yaml_files[@]}"
 
-          find singbox \
-            -maxdepth 1 \
-            -type f \
-            -name "*.json" \
-            -exec ls -lh {} \;
+          # ------------------------------------------------------
+          # Sing-box
+          # ------------------------------------------------------
+          for file in "${json_files[@]}"; do
 
+            echo ""
+            echo "Checking: $file"
 
-          for FILE in singbox/*.json; do
+            jq empty "$file"
 
-            [ -f "$FILE" ] || continue
+            version=$(jq -r '.version' "$file")
+            count=$(jq '.rules | length' "$file")
 
-            echo
-            echo "Validating:"
-            echo "$FILE"
-
-            jq empty "$FILE"
-
-            VERSION="$(
-              jq -r '.version' "$FILE"
-            )"
-
-            if [ "$VERSION" != "5" ]; then
-
-              echo
-              echo "ERROR: Invalid Sing-box rule-set version:"
-              echo "$VERSION"
-
+            if [ "$version" != "5" ]; then
+              echo "ERROR: $file has invalid version: $version"
               exit 1
-
             fi
 
-            RULE_COUNT="$(
-              jq '.rules | length' "$FILE"
-            )"
-
-            if [ "$RULE_COUNT" -eq 0 ]; then
-
-              echo
-              echo "ERROR: Empty Sing-box rule-set:"
-              echo "$FILE"
-
+            if [ "$count" -eq 0 ]; then
+              echo "ERROR: $file contains no rules."
               exit 1
-
             fi
 
-            echo "  version: $VERSION"
-            echo "  rules  : $RULE_COUNT"
+            echo "  version: $version"
+            echo "  rules:   $count"
 
           done
 
+          # ------------------------------------------------------
+          # Mihomo
+          # ------------------------------------------------------
+          for file in "${yaml_files[@]}"; do
 
-          # ========================================================
-          # Mihomo YAML
-          # ========================================================
+            echo ""
+            echo "Checking: $file"
 
-          echo
-          echo "Mihomo YAML:"
-
-          find mihomo \
-            -maxdepth 1 \
-            -type f \
-            -name "*.yaml" \
-            -exec ls -lh {} \;
-
-
-          for FILE in mihomo/*.yaml; do
-
-            [ -f "$FILE" ] || continue
-
-            echo
-            echo "Validating:"
-            echo "$FILE"
-
-            if ! grep -q '^payload:$' "$FILE"; then
-
-              echo
-              echo "ERROR: Mihomo YAML missing payload:"
-              echo "$FILE"
-
+            if ! grep -q '^payload:$' "$file"; then
+              echo "ERROR: $file missing payload."
               exit 1
-
             fi
 
-            RULE_COUNT="$(
-              grep -c '^[[:space:]]*-[[:space:]]' \
-              "$FILE" || true
-            )"
+            count=$(grep -cE '^  - ' "$file" || true)
 
-            if [ "$RULE_COUNT" -eq 0 ]; then
-
-              echo
-              echo "ERROR: Empty Mihomo YAML:"
-              echo "$FILE"
-
+            if [ "$count" -eq 0 ]; then
+              echo "ERROR: $file contains no rules."
               exit 1
-
             fi
 
-            echo "  rules: $RULE_COUNT"
+            echo "  rules: $count"
 
           done
 
-
-          # ========================================================
-          # 确保没有旧格式
-          # ========================================================
-
-          echo
-          echo "Checking for old SRS files:"
-
-          if find singbox \
-              -maxdepth 1 \
-              -type f \
-              -name "*.srs" |
-              grep -q .; then
-
-            echo
-            echo "ERROR: SRS files found."
-
-            find singbox \
-              -maxdepth 1 \
-              -type f \
-              -name "*.srs"
-
+          # ------------------------------------------------------
+          # 确认旧格式不存在
+          # ------------------------------------------------------
+          if find singbox -type f -name '*.srs' | grep -q .; then
+            echo "ERROR: Old .srs files still exist."
             exit 1
-
           fi
 
-
-          echo "  OK"
-
-
-          echo
-          echo "Checking for old MRS files:"
-
-          if find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*.mrs" |
-              grep -q .; then
-
-            echo
-            echo "ERROR: MRS files found."
-
-            find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*.mrs"
-
+          if find mihomo -type f -name '*.mrs' | grep -q .; then
+            echo "ERROR: Old .mrs files still exist."
             exit 1
-
           fi
 
-
-          echo "  OK"
-
-
-          echo
-          echo "Checking for old keyword list files:"
-
-          if find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*-keyword.list" |
-              grep -q .; then
-
-            echo
-            echo "ERROR: Keyword list files found."
-
-            find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*-keyword.list"
-
+          if find mihomo -type f -name '*-keyword.list' | grep -q .; then
+            echo "ERROR: Old keyword files still exist."
             exit 1
-
           fi
 
+          # ------------------------------------------------------
+          # 确认没有 ASN 输出
+          # ------------------------------------------------------
+          if find singbox mihomo -type f \
+            \( -iname '*asn*' -o -iname 'asn-*' \) \
+            | grep -q .; then
 
-          echo "  OK"
+            echo "ERROR: ASN output file detected."
+            exit 1
+          fi
 
-
-          echo
+          echo ""
           echo "========================================"
-          echo "Validation OK."
+          echo "All validation passed."
           echo "========================================"
 
-
-      # ============================================================
-      # 13. Git commit
-      # ============================================================
-
-      - name: Commit generated rules
+      # ==========================================================
+      # 8. Commit & Push
+      # ==========================================================
+      - name: Commit and push
         shell: bash
         run: |
-          set -euo pipefail
+          set -e
 
-          git config \
-            user.name \
-            "github-actions[bot]"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git config \
-            user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
-
-
-          git add \
-            qx \
-            singbox \
-            mihomo
-
+          git add qx singbox mihomo
 
           if git diff --cached --quiet; then
-
             echo "No changes to commit."
-
             exit 0
-
           fi
 
-
-          git commit \
-            -m "auto: convert QX rules to sing-box JSON and Mihomo YAML"
-
-
-      # ============================================================
-      # 14. Push
-      # ============================================================
-
-      - name: Push changes
-        shell: bash
-        run: |
-          set -euo pipefail
+          git commit -m "auto: convert QX rules to sing-box JSON and Mihomo YAML"
 
           git fetch origin master
-
           git rebase origin/master
 
-          git push \
-            origin \
-            HEAD:master
+          git push origin HEAD:master
