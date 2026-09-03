@@ -1,9 +1,11 @@
 name: Convert srs & mrs
+
 on:
   push:
     paths:
       - "qx/**"
       - ".github/workflows/convert-rules.yml"
+
   workflow_dispatch:
 
 permissions:
@@ -14,26 +16,33 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+
   convert:
+
     runs-on: ubuntu-latest
 
     steps:
+
       # ============================================================
       # 1. Checkout
       # ============================================================
+
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
+
       # ============================================================
-      # 2. 安装依赖
+      # 2. Install dependencies
       # ============================================================
+
       - name: Install dependencies
         run: |
           set -euo pipefail
 
           sudo apt-get update
+
           sudo apt-get install -y \
             jq \
             curl \
@@ -41,9 +50,11 @@ jobs:
             gzip \
             tar
 
+
       # ============================================================
-      # 3. 创建目录
+      # 3. Prepare directories
       # ============================================================
+
       - name: Prepare directories
         run: |
           set -euo pipefail
@@ -52,15 +63,18 @@ jobs:
           mkdir -p singbox
           mkdir -p mihomo
 
+
       # ============================================================
-      # 4. 安装最新版 Sing-box
+      # 4. Install latest Sing-box
       # ============================================================
-      - name: Install latest sing-box
+
+      - name: Install latest Sing-box
+        shell: bash
         run: |
           set -euo pipefail
 
           echo "========================================"
-          echo "Installing latest sing-box"
+          echo "Installing latest Sing-box"
           echo "========================================"
 
           API="https://api.github.com/repos/SagerNet/sing-box/releases/latest"
@@ -69,19 +83,27 @@ jobs:
             curl -fsSL "$API" |
             jq -r '
               .assets[]
-              | select(.name | test("linux-amd64.*\\.tar\\.gz$"))
+              | select(
+                  .name
+                  | test("linux-amd64.*\\.tar\\.gz$")
+                )
               | .browser_download_url
             ' |
             head -n 1
           )"
 
           if [ -z "${SINGBOX_URL:-}" ]; then
-            echo "ERROR: Cannot find sing-box linux-amd64 asset"
+
+            echo "ERROR: Cannot find Sing-box linux-amd64 asset."
+
+            echo
+            echo "Available assets:"
 
             curl -fsSL "$API" |
               jq -r '.assets[].name'
 
             exit 1
+
           fi
 
           echo "Download:"
@@ -91,9 +113,12 @@ jobs:
             "$SINGBOX_URL" \
             -O /tmp/sing-box.tar.gz
 
+          rm -rf /tmp/singbox
+
           mkdir -p /tmp/singbox
 
-          tar -xzf /tmp/sing-box.tar.gz \
+          tar -xzf \
+            /tmp/sing-box.tar.gz \
             -C /tmp/singbox
 
           SINGBOX_BIN="$(
@@ -104,27 +129,34 @@ jobs:
           )"
 
           if [ -z "${SINGBOX_BIN:-}" ]; then
-            echo "ERROR: sing-box binary not found"
-            find /tmp/singbox -maxdepth 3 -type f
+
+            echo "ERROR: sing-box binary not found."
+
+            find /tmp/singbox \
+              -maxdepth 3 \
+              -type f
+
             exit 1
+
           fi
 
-          sudo install -m 0755 \
+          sudo install \
+            -m 0755 \
             "$SINGBOX_BIN" \
             /usr/local/bin/sing-box
 
+          echo
           echo "Sing-box version:"
+
           sing-box version
 
+
       # ============================================================
-      # 5. 安装最新版 Mihomo
-      #
-      # 自动选择：
-      #   amd64-v1
-      #
-      # 不直接写死版本号。
+      # 5. Install latest Mihomo
       # ============================================================
+
       - name: Install latest Mihomo
+        shell: bash
         run: |
           set -euo pipefail
 
@@ -140,21 +172,20 @@ jobs:
           )"
 
           if [ -z "${VERSION:-}" ] || [ "$VERSION" = "null" ]; then
-            echo "ERROR: Cannot determine Mihomo version"
+
+            echo "ERROR: Cannot determine Mihomo version."
+
             exit 1
+
           fi
 
           echo "Mihomo version: $VERSION"
 
-          # --------------------------------------------------------
-          # 优先使用 amd64-v1
-          #
-          # 官方命名类似：
-          #
-          # mihomo-linux-amd64-v1-v1.19.30.gz
-          #
-          # 这样兼容性最好。
-          # --------------------------------------------------------
+
+          # ----------------------------------------------------------
+          # 优先 amd64-v1
+          # ----------------------------------------------------------
+
           MIHOMO_URL="$(
             curl -fsSL "$API" |
             jq -r '
@@ -168,11 +199,16 @@ jobs:
             head -n 1
           )"
 
-          # --------------------------------------------------------
-          # 如果没有 v1，再尝试 compatible
-          # --------------------------------------------------------
+
+          # ----------------------------------------------------------
+          # 第二选择 compatible
+          # ----------------------------------------------------------
+
           if [ -z "${MIHOMO_URL:-}" ]; then
-            echo "amd64-v1 asset not found, trying compatible..."
+
+            echo "amd64-v1 asset not found."
+
+            echo "Trying compatible..."
 
             MIHOMO_URL="$(
               curl -fsSL "$API" |
@@ -186,13 +222,19 @@ jobs:
               ' |
               head -n 1
             )"
+
           fi
 
-          # --------------------------------------------------------
-          # 最后尝试普通 amd64
-          # --------------------------------------------------------
+
+          # ----------------------------------------------------------
+          # 第三选择普通 amd64
+          # ----------------------------------------------------------
+
           if [ -z "${MIHOMO_URL:-}" ]; then
-            echo "compatible asset not found, trying generic amd64..."
+
+            echo "compatible asset not found."
+
+            echo "Trying generic amd64..."
 
             MIHOMO_URL="$(
               curl -fsSL "$API" |
@@ -200,53 +242,71 @@ jobs:
                 .assets[]
                 | select(
                     .name
-                    | test("^mihomo-linux-amd64-[^v].*\\.gz$")
+                    | test("^mihomo-linux-amd64-.*\\.gz$")
                   )
                 | .browser_download_url
               ' |
               head -n 1
             )"
+
           fi
 
-          # --------------------------------------------------------
-          # 仍然没有找到 → 打印官方所有资产
-          # --------------------------------------------------------
+
+          # ----------------------------------------------------------
+          # 最终仍找不到
+          # ----------------------------------------------------------
+
           if [ -z "${MIHOMO_URL:-}" ]; then
-            echo "ERROR: Cannot find suitable Mihomo linux-amd64 asset."
+
+            echo
+            echo "ERROR: Cannot find suitable Mihomo asset."
 
             echo
             echo "Available assets:"
+
             curl -fsSL "$API" |
               jq -r '.assets[].name'
 
             exit 1
+
           fi
 
+
+          echo
           echo "Download:"
           echo "$MIHOMO_URL"
+
 
           wget -q --show-progress \
             "$MIHOMO_URL" \
             -O /tmp/mihomo.gz
 
+
           gzip -dc \
             /tmp/mihomo.gz \
             > /tmp/mihomo
 
+
           chmod +x /tmp/mihomo
 
-          sudo install -m 0755 \
+
+          sudo install \
+            -m 0755 \
             /tmp/mihomo \
             /usr/local/bin/mihomo
 
+
           echo
           echo "Mihomo version:"
+
           mihomo -v
 
+
       # ============================================================
-      # 6. 转换 QX → Sing-box + Mihomo
+      # 6. Convert QX rules
       # ============================================================
-      - name: Convert rules
+
+      - name: Convert QX Rules
         shell: bash
         run: |
           set -euo pipefail
@@ -260,30 +320,40 @@ jobs:
 
           QX_FILES=(qx/*)
 
+
           if [ ${#QX_FILES[@]} -eq 0 ]; then
-            echo "No files found in qx/"
+
+            echo "No files found in qx/."
+
             exit 0
+
           fi
 
-          # --------------------------------------------------------
-          # 清理本次自动生成的文件
-          # --------------------------------------------------------
+
+          # ========================================================
+          # 清理之前自动生成的文件
+          # ========================================================
 
           rm -f singbox/*.srs
           rm -f mihomo/*.mrs
           rm -f mihomo/*-keyword.list
 
+
           # ========================================================
           # 遍历 QX 文件
           # ========================================================
+
           for FILE in "${QX_FILES[@]}"; do
 
             if [ ! -f "$FILE" ]; then
               continue
             fi
 
+
             BASENAME="$(basename "$FILE")"
+
             NAME="${BASENAME%.*}"
+
 
             echo
             echo "----------------------------------------"
@@ -291,31 +361,40 @@ jobs:
             echo "Output name: $NAME"
             echo "----------------------------------------"
 
-            # ------------------------------------------------------
+
+            # ======================================================
             # 临时目录
-            # ------------------------------------------------------
+            # ======================================================
 
             TMP="$(mktemp -d)"
 
+
+            CLEAN_FILE="$TMP/clean.txt"
+
             DOMAIN_FILE="$TMP/domain.txt"
+
+            SUFFIX_FILE="$TMP/suffix.txt"
+
             KEYWORD_FILE="$TMP/keyword.txt"
+
             IP_FILE="$TMP/ip.txt"
+
 
             touch \
               "$DOMAIN_FILE" \
+              "$SUFFIX_FILE" \
               "$KEYWORD_FILE" \
               "$IP_FILE"
 
-            # ======================================================
-            # 1. 清理 QX 规则
-            #
-            # 去掉：
-            # - 空行
-            # - # 注释
-            # - ; 注释
-            # ======================================================
 
-            CLEAN_FILE="$TMP/clean.txt"
+            # ======================================================
+            # 清理 QX
+            #
+            # 删除：
+            # - 空行
+            # - #
+            # - ;
+            # ======================================================
 
             sed \
               -E \
@@ -332,113 +411,153 @@ jobs:
               's/[[:space:]]+$//' \
               > "$CLEAN_FILE"
 
+
             # ======================================================
-            # 2. HOST
-            #
-            # HOST,example.com
-            #
-            # → sing-box domain
-            # → mihomo domain
+            # HOST
             # ======================================================
 
             awk -F',' '
-              BEGIN { IGNORECASE=1 }
+              BEGIN {
+                IGNORECASE=1
+              }
+
               /^HOST,/ {
+
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
+
                 if ($2 != "")
                   print $2
-              }
-            ' "$CLEAN_FILE" >> "$DOMAIN_FILE"
 
-            # ======================================================
-            # 3. HOST-SUFFIX
-            #
-            # HOST-SUFFIX,example.com
-            #
-            # → sing-box domain_suffix
-            # → mihomo domain
-            # ======================================================
-
-            awk -F',' '
-              BEGIN { IGNORECASE=1 }
-              /^HOST-SUFFIX,/ {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-                if ($2 != "")
-                  print $2
-              }
-            ' "$CLEAN_FILE" >> "$DOMAIN_FILE"
-
-            # ======================================================
-            # 4. HOST-KEYWORD
-            #
-            # Mihomo MRS 不支持 keyword behavior，
-            # 所以单独生成：
-            #
-            # mihomo/xxx-keyword.list
-            #
-            # 内容：
-            # DOMAIN-KEYWORD,xxx
-            # ======================================================
-
-            awk -F',' '
-              BEGIN { IGNORECASE=1 }
-              /^HOST-KEYWORD,/ {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-                if ($2 != "")
-                  print $2
               }
             ' "$CLEAN_FILE" |
-            awk 'NF' |
+            sort -u \
+              > "$DOMAIN_FILE"
+
+
+            # ======================================================
+            # HOST-SUFFIX
+            # ======================================================
+
+            awk -F',' '
+              BEGIN {
+                IGNORECASE=1
+              }
+
+              /^HOST-SUFFIX,/ {
+
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
+
+                if ($2 != "")
+                  print $2
+
+              }
+            ' "$CLEAN_FILE" |
+            sort -u \
+              > "$SUFFIX_FILE"
+
+
+            # ======================================================
+            # DOMAIN
+            #
+            # 如果 QX 里面本身存在 DOMAIN，也兼容。
+            # ======================================================
+
+            awk -F',' '
+              BEGIN {
+                IGNORECASE=1
+              }
+
+              /^DOMAIN,/ {
+
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
+
+                if ($2 != "")
+                  print $2
+
+              }
+            ' "$CLEAN_FILE" |
+            sort -u \
+              >> "$DOMAIN_FILE"
+
+
+            # ======================================================
+            # HOST-KEYWORD
+            # ======================================================
+
+            awk -F',' '
+              BEGIN {
+                IGNORECASE=1
+              }
+
+              /^HOST-KEYWORD,/ {
+
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
+
+                if ($2 != "")
+                  print $2
+
+              }
+            ' "$CLEAN_FILE" |
             sort -u |
             sed 's/^/DOMAIN-KEYWORD,/' \
               > "$KEYWORD_FILE"
 
+
             # ======================================================
-            # 5. IP-CIDR
-            # 6. IP-CIDR6
-            # 7. IP6-CIDR
+            # IP-CIDR
+            # IP-CIDR6
+            # IP6-CIDR
             #
             # 注意：
             #
-            # Mihomo ipcidr MRS 输入必须是：
+            # Mihomo 输入：
             #
             # 203.205.254.0/23
             #
-            # 不能是：
+            # 而不是：
             #
             # IP-CIDR,203.205.254.0/23
             # ======================================================
 
             awk -F',' '
-              BEGIN { IGNORECASE=1 }
+              BEGIN {
+                IGNORECASE=1
+              }
 
               /^IP-CIDR,/ {
+
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
 
                 if ($2 != "")
                   print $2
+
               }
 
               /^IP-CIDR6,/ {
+
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
 
                 if ($2 != "")
                   print $2
+
               }
 
               /^IP6-CIDR,/ {
+
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
 
                 if ($2 != "")
                   print $2
+
               }
+
             ' "$CLEAN_FILE" |
-            awk 'NF' |
             sort -u \
               > "$IP_FILE"
 
+
             # ======================================================
-            # 8. 去重
+            # 再次去重
             # ======================================================
 
             sort -u \
@@ -446,15 +565,24 @@ jobs:
               -o "$DOMAIN_FILE"
 
             sort -u \
+              "$SUFFIX_FILE" \
+              -o "$SUFFIX_FILE"
+
+            sort -u \
               "$IP_FILE" \
               -o "$IP_FILE"
 
+
             # ======================================================
-            # 9. 统计
+            # 统计
             # ======================================================
 
             DOMAIN_COUNT="$(
               grep -c . "$DOMAIN_FILE" || true
+            )"
+
+            SUFFIX_COUNT="$(
+              grep -c . "$SUFFIX_FILE" || true
             )"
 
             KEYWORD_COUNT="$(
@@ -465,113 +593,67 @@ jobs:
               grep -c . "$IP_FILE" || true
             )"
 
+
+            TOTAL_DOMAIN=$((DOMAIN_COUNT + SUFFIX_COUNT))
+
+
             echo
             echo "Detected:"
-            echo "  Domain : $DOMAIN_COUNT"
-            echo "  Keyword: $KEYWORD_COUNT"
-            echo "  IP-CIDR: $IP_COUNT"
+            echo "  DOMAIN       : $DOMAIN_COUNT"
+            echo "  HOST-SUFFIX  : $SUFFIX_COUNT"
+            echo "  KEYWORD      : $KEYWORD_COUNT"
+            echo "  IP-CIDR      : $IP_COUNT"
+
 
             # ======================================================
-            # 10. 生成 Sing-box JSON
+            # 7. 生成 Sing-box source JSON
+            #
+            # 重要：
+            #
+            # 必须：
+            #
+            # {
+            #   "version": 5,
+            #   "rules": [...]
+            # }
+            #
+            # 不能直接输出 [...]
             # ======================================================
 
             SINGBOX_JSON="$TMP/singbox.json"
 
-            jq -n \
-              --argjson domains "$(
-                jq -R -s '
-                  split("\n")
-                  | map(select(length > 0))
-                  | map({
-                      type: "domain",
-                      domain: .
-                    })
-                ' "$DOMAIN_FILE"
-              )" \
-              --argjson keywords "$(
-                jq -R -s '
-                  split("\n")
-                  | map(select(length > 0))
-                  | map({
-                      type: "domain_keyword",
-                      domain_keyword: .
-                    })
-                ' <(
-                  awk -F',' '
-                    /^DOMAIN-KEYWORD,/ {
-                      print $2
-                    }
-                  ' "$KEYWORD_FILE"
-                )
-              )" \
-              --argjson ips "$(
-                jq -R -s '
-                  split("\n")
-                  | map(select(length > 0))
-                  | map({
-                      type: "ip_cidr",
-                      ip_cidr: .
-                    })
-                ' "$IP_FILE"
-              )" \
-              '
-              (
-                $domains
-                +
-                $keywords
-                +
-                $ips
-              )
-              ' \
-              > "$SINGBOX_JSON"
 
             # ------------------------------------------------------
-            # 注意：
-            #
-            # 上面的 domain 默认会统一成为 domain。
-            #
-            # 为了正确保留 HOST-SUFFIX / HOST，
-            # 下面重新按 QX 类型构建 Sing-box。
+            # DOMAIN
             # ------------------------------------------------------
 
-            DOMAIN_JSON="$TMP/domain.json"
-            SUFFIX_JSON="$TMP/suffix.json"
-            KEYWORD_JSON="$TMP/keyword.json"
-            IP_JSON="$TMP/ip.json"
-
-            awk -F',' '
-              BEGIN { IGNORECASE=1 }
-              /^HOST,/ {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-                if ($2 != "")
-                  print $2
-              }
-            ' "$CLEAN_FILE" |
             jq -R -s '
               split("\n")
               | map(select(length > 0))
               | map({
-                  type: "domain",
                   domain: .
                 })
-            ' > "$DOMAIN_JSON"
+            ' "$DOMAIN_FILE" \
+              > "$TMP/domain.json"
 
-            awk -F',' '
-              BEGIN { IGNORECASE=1 }
-              /^HOST-SUFFIX,/ {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", $2)
-                if ($2 != "")
-                  print $2
-              }
-            ' "$CLEAN_FILE" |
+
+            # ------------------------------------------------------
+            # DOMAIN-SUFFIX
+            # ------------------------------------------------------
+
             jq -R -s '
               split("\n")
               | map(select(length > 0))
               | map({
-                  type: "domain_suffix",
                   domain_suffix: .
                 })
-            ' > "$SUFFIX_JSON"
+            ' "$SUFFIX_FILE" \
+              > "$TMP/suffix.json"
+
+
+            # ------------------------------------------------------
+            # DOMAIN-KEYWORD
+            # ------------------------------------------------------
 
             awk -F',' '
               /^DOMAIN-KEYWORD,/ {
@@ -582,106 +664,177 @@ jobs:
               split("\n")
               | map(select(length > 0))
               | map({
-                  type: "domain_keyword",
                   domain_keyword: .
                 })
-            ' > "$KEYWORD_JSON"
+            ' \
+              > "$TMP/keyword.json"
+
+
+            # ------------------------------------------------------
+            # IP-CIDR
+            # ------------------------------------------------------
 
             jq -R -s '
               split("\n")
               | map(select(length > 0))
               | map({
-                  type: "ip_cidr",
                   ip_cidr: .
                 })
             ' "$IP_FILE" \
-              > "$IP_JSON"
+              > "$TMP/ip.json"
+
+
+            # ------------------------------------------------------
+            # 组装最终 Sing-box source format
+            # ------------------------------------------------------
 
             jq -n \
-              --slurpfile domain "$DOMAIN_JSON" \
-              --slurpfile suffix "$SUFFIX_JSON" \
-              --slurpfile keyword "$KEYWORD_JSON" \
-              --slurpfile ip "$IP_JSON" \
+              --slurpfile domain "$TMP/domain.json" \
+              --slurpfile suffix "$TMP/suffix.json" \
+              --slurpfile keyword "$TMP/keyword.json" \
+              --slurpfile ip "$TMP/ip.json" \
               '
-              (
-                $domain[0]
-                +
-                $suffix[0]
-                +
-                $keyword[0]
-                +
-                $ip[0]
-              )
+              {
+                version: 5,
+                rules:
+                  (
+                    $domain[0]
+                    +
+                    $suffix[0]
+                    +
+                    $keyword[0]
+                    +
+                    $ip[0]
+                  )
+              }
               ' \
               > "$SINGBOX_JSON"
 
+
             # ======================================================
-            # 11. 编译 Sing-box MRS
+            # 8. 检查 Sing-box JSON
+            # ======================================================
+
+            echo
+            echo "Sing-box source JSON:"
+
+            jq empty "$SINGBOX_JSON"
+
+
+            echo
+            echo "Sing-box rule count:"
+
+            jq '.rules | length' "$SINGBOX_JSON"
+
+
+            # ======================================================
+            # 9. 编译 Sing-box SRS
             # ======================================================
 
             SINGBOX_OUT="singbox/${NAME}.srs"
+
 
             sing-box rule-set compile \
               "$SINGBOX_JSON" \
               -o "$SINGBOX_OUT"
 
+
             if [ ! -s "$SINGBOX_OUT" ]; then
+
+              echo
               echo "ERROR: Sing-box output is empty:"
+
               echo "$SINGBOX_OUT"
+
               exit 1
+
             fi
 
+
             echo
-            echo "Sing-box:"
+            echo "Sing-box output:"
             echo "  $SINGBOX_OUT"
 
+
             # ======================================================
-            # 12. 生成 Mihomo MRS
+            # 10. Mihomo MRS
             #
-            # MRS 只有两种 behavior：
+            # 自动判断：
             #
-            # domain
-            # ipcidr
-            #
-            # 所以自动判断。
+            # DOMAIN only
+            # IP only
+            # DOMAIN + IP
             # ======================================================
 
-            # ------------------------------------------------------
+
+            # ======================================================
             # 只有 DOMAIN
-            # ------------------------------------------------------
+            # ======================================================
 
-            if [ "$DOMAIN_COUNT" -gt 0 ] && [ "$IP_COUNT" -eq 0 ]; then
+            if [ "$TOTAL_DOMAIN" -gt 0 ] &&
+               [ "$IP_COUNT" -eq 0 ]; then
+
 
               MIHOMO_OUT="mihomo/${NAME}.mrs"
 
+
               echo
-              echo "Mihomo type: domain"
-              echo "Output: $MIHOMO_OUT"
+              echo "Mihomo behavior: domain"
+
+              echo "Output:"
+              echo "  $MIHOMO_OUT"
+
+
+              # ----------------------------------------------
+              # Mihomo domain 输入
+              #
+              # HOST / DOMAIN / HOST-SUFFIX
+              # 全部转换成 domain behavior
+              # ----------------------------------------------
+
+              cat \
+                "$DOMAIN_FILE" \
+                "$SUFFIX_FILE" |
+              sort -u \
+                > "$TMP/mihomo-domain.txt"
+
 
               mihomo convert-ruleset \
                 domain \
                 text \
-                "$DOMAIN_FILE" \
+                "$TMP/mihomo-domain.txt" \
                 "$MIHOMO_OUT"
 
-            # ------------------------------------------------------
-            # 只有 IP-CIDR
-            # ------------------------------------------------------
 
-            elif [ "$DOMAIN_COUNT" -eq 0 ] && [ "$IP_COUNT" -gt 0 ]; then
+            # ======================================================
+            # 只有 IP
+            # ======================================================
+
+            elif [ "$TOTAL_DOMAIN" -eq 0 ] &&
+                 [ "$IP_COUNT" -gt 0 ]; then
+
 
               MIHOMO_OUT="mihomo/${NAME}.mrs"
 
-              echo
-              echo "Mihomo type: ipcidr"
-              echo "Output: $MIHOMO_OUT"
 
+              echo
+              echo "Mihomo behavior: ipcidr"
+
+              echo "Output:"
+              echo "  $MIHOMO_OUT"
+
+
+              # ----------------------------------------------
               # 关键：
-              # 这里直接传原始 CIDR
               #
-              # 不能再 sed 成：
-              # IP-CIDR,xxx
+              # 这里必须直接传：
               #
+              # 203.205.254.0/23
+              #
+              # 不能增加：
+              #
+              # IP-CIDR,
+              # ----------------------------------------------
 
               mihomo convert-ruleset \
                 ipcidr \
@@ -689,32 +842,51 @@ jobs:
                 "$IP_FILE" \
                 "$MIHOMO_OUT"
 
-            # ------------------------------------------------------
-            # DOMAIN + IP 混合
-            #
-            # 一个 MRS 不能同时作为 domain/ipcidr。
-            #
-            # 自动拆成：
-            #
-            # xxx.mrs
-            # xxx-cidr.mrs
-            # ------------------------------------------------------
 
-            elif [ "$DOMAIN_COUNT" -gt 0 ] && [ "$IP_COUNT" -gt 0 ]; then
+            # ======================================================
+            # DOMAIN + IP 混合
+            # ======================================================
+
+            elif [ "$TOTAL_DOMAIN" -gt 0 ] &&
+                 [ "$IP_COUNT" -gt 0 ]; then
+
 
               MIHOMO_DOMAIN_OUT="mihomo/${NAME}.mrs"
+
               MIHOMO_IP_OUT="mihomo/${NAME}-cidr.mrs"
 
+
               echo
-              echo "Mihomo type: mixed"
-              echo "Domain output: $MIHOMO_DOMAIN_OUT"
-              echo "IP output    : $MIHOMO_IP_OUT"
+              echo "Mihomo behavior: mixed"
+
+              echo "Domain:"
+              echo "  $MIHOMO_DOMAIN_OUT"
+
+              echo "IP-CIDR:"
+              echo "  $MIHOMO_IP_OUT"
+
+
+              # ----------------------------------------------
+              # Domain
+              # ----------------------------------------------
+
+              cat \
+                "$DOMAIN_FILE" \
+                "$SUFFIX_FILE" |
+              sort -u \
+                > "$TMP/mihomo-domain.txt"
+
 
               mihomo convert-ruleset \
                 domain \
                 text \
-                "$DOMAIN_FILE" \
+                "$TMP/mihomo-domain.txt" \
                 "$MIHOMO_DOMAIN_OUT"
+
+
+              # ----------------------------------------------
+              # IP
+              # ----------------------------------------------
 
               mihomo convert-ruleset \
                 ipcidr \
@@ -722,37 +894,45 @@ jobs:
                 "$IP_FILE" \
                 "$MIHOMO_IP_OUT"
 
+
             else
 
               echo
-              echo "No DOMAIN/IP rules detected."
+              echo "No DOMAIN or IP-CIDR rules detected."
 
             fi
 
+
             # ======================================================
-            # 13. 输出 HOST-KEYWORD
+            # 11. HOST-KEYWORD
             # ======================================================
 
             if [ "$KEYWORD_COUNT" -gt 0 ]; then
 
+
               KEYWORD_OUT="mihomo/${NAME}-keyword.list"
+
 
               cp \
                 "$KEYWORD_FILE" \
                 "$KEYWORD_OUT"
 
+
               echo
               echo "Mihomo keyword:"
               echo "  $KEYWORD_OUT"
 
+
             fi
 
+
             # ======================================================
-            # 14. 检查生成文件
+            # 12. 检查输出
             # ======================================================
 
             echo
             echo "Generated files:"
+
 
             find singbox mihomo \
               -maxdepth 1 \
@@ -766,37 +946,90 @@ jobs:
               \) \
               -printf "  %p  %s bytes\n"
 
-            # ------------------------------------------------------
-            # 清理临时目录
-            # ------------------------------------------------------
+
+            # ======================================================
+            # 13. 检查空文件
+            # ======================================================
+
+            if find mihomo \
+                -maxdepth 1 \
+                -type f \
+                -name "${NAME}*.mrs" \
+                -size 0 |
+                grep -q .; then
+
+
+              echo
+              echo "ERROR: Empty Mihomo MRS detected."
+
+
+              find mihomo \
+                -maxdepth 1 \
+                -type f \
+                -name "${NAME}*.mrs" \
+                -size 0
+
+
+              exit 1
+
+            fi
+
+
+            if find singbox \
+                -maxdepth 1 \
+                -type f \
+                -name "${NAME}.srs" \
+                -size 0 |
+                grep -q .; then
+
+
+              echo
+              echo "ERROR: Empty Sing-box SRS detected."
+
+
+              exit 1
+
+            fi
+
+
+            # ======================================================
+            # 14. 删除临时目录
+            # ======================================================
 
             rm -rf "$TMP"
 
+
           done
 
+
       # ============================================================
-      # 7. 最终检查
+      # 15. 最终验证
       # ============================================================
+
       - name: Validate generated files
+        shell: bash
         run: |
           set -euo pipefail
 
           echo
           echo "========================================"
-          echo "Validation"
+          echo "Final validation"
           echo "========================================"
 
+
           echo
-          echo "Sing-box files:"
+          echo "Sing-box:"
+          
           find singbox \
             -maxdepth 1 \
             -type f \
             -name "*.srs" \
-            -print \
             -exec ls -lh {} \;
 
+
           echo
-          echo "Mihomo files:"
+          echo "Mihomo:"
+
           find mihomo \
             -maxdepth 1 \
             -type f \
@@ -805,85 +1038,68 @@ jobs:
               -o \
               -name "*-keyword.list" \
             \) \
-            -print \
             -exec ls -lh {} \;
 
-          # --------------------------------------------------------
-          # 检查是否存在空 MRS
-          # --------------------------------------------------------
-
-          if find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*.mrs" \
-              -size 0 \
-              | grep -q .; then
-
-            echo
-            echo "ERROR: Empty Mihomo MRS detected:"
-            find mihomo \
-              -maxdepth 1 \
-              -type f \
-              -name "*.mrs" \
-              -size 0
-
-            exit 1
-          fi
-
-          # --------------------------------------------------------
-          # 检查是否存在空 Sing-box SRS
-          # --------------------------------------------------------
-
-          if find singbox \
-              -maxdepth 1 \
-              -type f \
-              -name "*.srs" \
-              -size 0 \
-              | grep -q .; then
-
-            echo
-            echo "ERROR: Empty Sing-box SRS detected:"
-            find singbox \
-              -maxdepth 1 \
-              -type f \
-              -name "*.srs" \
-              -size 0
-
-            exit 1
-          fi
 
           echo
           echo "Validation OK."
 
+
       # ============================================================
-      # 8. Git 提交
+      # 16. Git commit
       # ============================================================
+
       - name: Commit generated rules
+        shell: bash
         run: |
           set -euo pipefail
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add qx singbox mihomo
+          git config \
+            user.name \
+            "github-actions[bot]"
+
+
+          git config \
+            user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+
+
+          git add \
+            qx \
+            singbox \
+            mihomo
+
 
           if git diff --cached --quiet; then
+
             echo "No changes to commit."
+
             exit 0
+
           fi
+
 
           git commit \
             -m "auto: convert QX rules to sing-box and Mihomo"
 
+
       # ============================================================
-      # 9. Push
+      # 17. Push
       # ============================================================
+
       - name: Push changes
+        shell: bash
         run: |
           set -euo pipefail
 
+
           git fetch origin master
+
 
           git rebase origin/master
 
-          git push origin HEAD:master
+
+          git push \
+            origin \
+            HEAD:master
