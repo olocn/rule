@@ -1,4 +1,4 @@
-name: Convert QX rules to Sing-box JSON & Mihomo YAML
+name: Convert JSON & YAML
 
 on:
   push:
