@@ -1,5 +1,10 @@
 name: ads-rules
 on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'ad.txt'
   schedule:
     - cron: '0 */12 * * *'
   workflow_dispatch:
