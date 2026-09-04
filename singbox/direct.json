@@ -11,16 +11,7 @@
       "domain_suffix": "alibaba.com"
     },
     {
-      "domain_suffix": "alicdn.com"
-    },
-    {
-      "domain_suffix": "alipay.com"
-    },
-    {
       "domain_suffix": "aliyun"
-    },
-    {
-      "domain_suffix": "baidu"
     },
     {
       "domain_suffix": "beplay"
@@ -33,9 +24,6 @@
     },
     {
       "domain_suffix": "idp.devicelink.infra-host.com"
-    },
-    {
-      "domain_suffix": "lanzou.com"
     },
     {
       "domain_suffix": "media.paperclipclub.net"
@@ -51,12 +39,6 @@
     },
     {
       "domain_suffix": "taobao"
-    },
-    {
-      "domain_suffix": "tencent"
-    },
-    {
-      "domain_suffix": "tmall.com"
     },
     {
       "domain_suffix": "uat1.bfsspadserver.8le8le.com"
