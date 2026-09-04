@@ -1,7 +1,7 @@
-name: "ads-rules"
+name: ads-rules
 on:
   schedule:
-    - cron: "0 */12 * * *"
+    - cron: '0 */12 * * *'
   workflow_dispatch:
 permissions:
   contents: write
@@ -9,7 +9,7 @@ concurrency:
   group: ads-rules
   cancel-in-progress: false
 jobs:
-  merge:
+  build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
     env:
@@ -23,218 +23,180 @@ jobs:
         with:
           fetch-depth: 1
       # ==========================================================
-      # 2. 日期
+      # 2. Basic environment
       # ==========================================================
-      - name: Set date
-        run: |
-          echo "DATE=$(date -u +'%Y-%m-%d')" >> "$GITHUB_ENV"
-      # ==========================================================
-      # 3. 获取最新版本
-      # ==========================================================
-      - name: Get latest tool versions
-        id: versions
+      - name: Prepare environment
         shell: bash
         run: |
           set -euo pipefail
-          TAG_SING="$(
+          echo "DATE=$(date -u +'%Y-%m-%d')" >> "$GITHUB_ENV"
+          mkdir -p /usr/local/bin/custom-tools
+          echo "/usr/local/bin/custom-tools" >> "$GITHUB_PATH"
+      # ==========================================================
+      # 3. Get latest sing-box / Mihomo versions
+      # ==========================================================
+      - name: Get latest versions
+        shell: bash
+        run: |
+          set -euo pipefail
+          VERSION_SING=$(
             curl -fsSL \
-              --retry 3 \
+              --retry 5 \
               --retry-delay 2 \
               https://api.github.com/repos/SagerNet/sing-box/releases/latest \
-            | grep '"tag_name":' \
-            | head -n 1 \
-            | sed -E 's/.*"([^"]+)".*/\1/'
-          )"
-          TAG_MIHOMO="$(
+            | jq -r '.tag_name'
+          )
+          TAG_MIHOMO=$(
             curl -fsSL \
-              --retry 3 \
+              --retry 5 \
               --retry-delay 2 \
               https://api.github.com/repos/MetaCubeX/mihomo/releases/latest \
-            | grep '"tag_name":' \
-            | head -n 1 \
-            | sed -E 's/.*"([^"]+)".*/\1/'
-          )"
-          test -n "$TAG_SING"
+            | jq -r '.tag_name'
+          )
+          test -n "$VERSION_SING"
           test -n "$TAG_MIHOMO"
-          echo "singbox=${TAG_SING}" >> "$GITHUB_OUTPUT"
-          echo "mihomo=${TAG_MIHOMO}" >> "$GITHUB_OUTPUT"
-          echo "======================================"
-          echo "Latest versions"
-          echo "======================================"
-          echo "sing-box : ${TAG_SING}"
-          echo "mihomo   : ${TAG_MIHOMO}"
+          echo "VERSION_SING=$VERSION_SING" >> "$GITHUB_ENV"
+          echo "TAG_MIHOMO=$TAG_MIHOMO" >> "$GITHUB_ENV"
+          echo "sing-box: $VERSION_SING"
+          echo "mihomo:   $TAG_MIHOMO"
       # ==========================================================
       # 4. Cache binaries
       # ==========================================================
-      - name: Cache binaries
-        id: cache-tools
+      - name: Cache tools
         uses: actions/cache@v4
         with:
           path: /usr/local/bin/custom-tools
-          key: ${{ runner.os }}-tools-${{ steps.versions.outputs.singbox }}-${{ steps.versions.outputs.mihomo }}
+          key: ads-tools-${{ runner.os }}-${{ env.VERSION_SING }}-${{ env.TAG_MIHOMO }}
       # ==========================================================
-      # 5. 安装 sing-box / mihomo
+      # 5. Install sing-box
       # ==========================================================
-      - name: Install sing-box & mihomo
-        if: steps.cache-tools.outputs.cache-hit != 'true'
+      - name: Install sing-box
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p /usr/local/bin/custom-tools
-          # ------------------------------------------------------
-          # sing-box
-          # ------------------------------------------------------
-          TAG_SING="${{ steps.versions.outputs.singbox }}"
-          VERSION_SING="${TAG_SING#v}"
+          if command -v sing-box >/dev/null 2>&1; then
+            echo "sing-box already available"
+            sing-box version
+            exit 0
+          fi
+          if [ -x /usr/local/bin/custom-tools/sing-box ]; then
+            echo "Using cached sing-box"
+            exit 0
+          fi
+          VERSION="${VERSION_SING#v}"
+          URL="https://github.com/SagerNet/sing-box/releases/download/${VERSION_SING}/sing-box-${VERSION}-linux-amd64.tar.gz"
+          echo "Downloading:"
+          echo "$URL"
           curl -fL \
-            --retry 3 \
+            --retry 5 \
             --retry-delay 2 \
-            -o sing-box.tar.gz \
-            "https://github.com/SagerNet/sing-box/releases/download/${TAG_SING}/sing-box-${VERSION_SING}-linux-amd64.tar.gz"
-          tar -xzf sing-box.tar.gz
-          install -m 0755 \
-            "sing-box-${VERSION_SING}-linux-amd64/sing-box" \
+            --connect-timeout 15 \
+            --max-time 180 \
+            "$URL" \
+            -o /tmp/sing-box.tar.gz
+          tar -xzf /tmp/sing-box.tar.gz -C /tmp
+          BIN=$(find /tmp -type f -name sing-box | head -n 1)
+          test -n "$BIN"
+          install -m 0755 "$BIN" \
             /usr/local/bin/custom-tools/sing-box
-          rm -rf \
-            sing-box.tar.gz \
-            "sing-box-${VERSION_SING}-linux-amd64"
-          # ------------------------------------------------------
-          # mihomo
-          # ------------------------------------------------------
-          TAG_MIHOMO="${{ steps.versions.outputs.mihomo }}"
-          curl -fL \
-            --retry 3 \
-            --retry-delay 2 \
-            -o mihomo.gz \
-            "https://github.com/MetaCubeX/mihomo/releases/download/${TAG_MIHOMO}/mihomo-linux-amd64-${TAG_MIHOMO}.gz"
-          gunzip mihomo.gz
-          install -m 0755 \
-            mihomo \
-            /usr/local/bin/custom-tools/mihomo
-          rm -f mihomo
+          /usr/local/bin/custom-tools/sing-box version
       # ==========================================================
-      # 6. PATH + 版本
+      # 6. Install Mihomo
       # ==========================================================
-      - name: Add custom-tools to PATH
+      - name: Install Mihomo
         shell: bash
         run: |
           set -euo pipefail
-          echo "/usr/local/bin/custom-tools" >> "$GITHUB_PATH"
-          export PATH="/usr/local/bin/custom-tools:$PATH"
-          echo "======================================"
-          echo "sing-box"
-          echo "======================================"
-          sing-box version
-          echo
-          echo "======================================"
-          echo "mihomo"
-          echo "======================================"
-          mihomo -v
-      # ==========================================================
-      # 7. 下载规则
-      # ==========================================================
-      - name: Download rules
-        shell: bash
-        run: |
-          set -euo pipefail
+          if [ -x /usr/local/bin/custom-tools/mihomo ]; then
+            echo "Using cached Mihomo"
+            /usr/local/bin/custom-tools/mihomo -v
+            exit 0
+          fi
+          URL="https://github.com/MetaCubeX/mihomo/releases/download/${TAG_MIHOMO}/mihomo-linux-amd64-${TAG_MIHOMO}.gz"
+          echo "Downloading:"
+          echo "$URL"
           curl -fL \
-            --retry 3 \
+            --retry 5 \
             --retry-delay 2 \
             --connect-timeout 15 \
-            --max-time 120 \
-            https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt \
-            -o ruleA.txt
-          curl -fL \
-            --retry 3 \
-            --retry-delay 2 \
-            --connect-timeout 15 \
-            --max-time 120 \
-            https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list \
-            -o ruleB.list
-          test -s ruleA.txt
-          test -s ruleB.list
-          echo "======================================"
-          echo "Downloaded sources"
-          echo "======================================"
-          wc -l \
-            ruleA.txt \
-            ruleB.list
+            --max-time 180 \
+            "$URL" \
+            -o /tmp/mihomo.gz
+          gzip -dc /tmp/mihomo.gz \
+            > /usr/local/bin/custom-tools/mihomo
+          chmod +x /usr/local/bin/custom-tools/mihomo
+          /usr/local/bin/custom-tools/mihomo -v
       # ==========================================================
-      # 8. 规则清洗
-      #
-      # 最终只保留：
-      #
-      # DOMAIN
-      # DOMAIN-SUFFIX
-      # DOMAIN-KEYWORD
+      # 7. Download source rules
       # ==========================================================
-      - name: Normalize source rules
+      - name: Download source rules
         shell: bash
         run: |
           set -euo pipefail
-          rm -f \
-            rules.source \
-            rules.normalized
-          cat \
-            ruleA.txt \
-            ruleB.list \
-          | sed \
-              '/^[[:space:]]*$/d' \
-          | grep -vE \
-              '^[[:space:]]*#' \
-          | sed -E \
-              's/,(REJECT|REJECT-DROP|reject|reject-drop)[[:space:]]*$//I' \
-          | sed -E \
-              's/,(extended-matching|pre-matching|no-resolve)//Ig' \
-          | sed \
-              's/^[[:space:]]*//' \
-          | sed \
-              's/[[:space:]]*$//' \
-          > rules.source
-          awk -F',' '
-          BEGIN {
-            OFS=","
-          }
-          {
-            type = toupper($1)
-            value = $2
-            gsub(/^[[:space:]]+/, "", value)
-            gsub(/[[:space:]]+$/, "", value)
-            value = tolower(value)
-            if (value == "")
-              next
-            # 去掉域名前后的点
-            sub(/^\.+/, "", value)
-            sub(/\.+$/, "", value)
-            if (value == "")
-              next
-            if (type == "DOMAIN") {
-              print "DOMAIN", value
-            }
-            else if (type == "DOMAIN-SUFFIX") {
-              print "DOMAIN-SUFFIX", value
-            }
-            else if (type == "DOMAIN-KEYWORD") {
-              print "DOMAIN-KEYWORD", value
-            }
-          }
-          ' rules.source \
-          | sort -u \
-          > rules.normalized
+          curl -fL \
+            --retry 5 \
+            --retry-delay 2 \
+            --connect-timeout 15 \
+            --max-time 180 \
+            "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt" \
+            -o source-olocn.txt
+          curl -fL \
+            --retry 5 \
+            --retry-delay 2 \
+            --connect-timeout 15 \
+            --max-time 180 \
+            "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list" \
+            -o source-awa.txt
+          test -s source-olocn.txt
+          test -s source-awa.txt
+          echo "Source files:"
+          wc -l source-olocn.txt source-awa.txt
+      # ==========================================================
+      # 8. Normalize rules
+      # ==========================================================
+      - name: Normalize rules
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat source-olocn.txt source-awa.txt \
+            | sed 's/\r$//' \
+            | sed 's/[[:space:]]*#.*$//' \
+            | sed 's/[[:space:]]*$//' \
+            | grep -vE '^[[:space:]]*$' \
+            | sed -E \
+                's/,(REJECT|REJECT-DICT|REJECT-TINYGIF|REJECT-NO-DROP|REJECT-IMG|REJECT-200|REJECT-DROP|REJECT-QUIC)$//I' \
+            | sed -E \
+                's/,(extended-matching|pre-matching|no-resolve)//Ig' \
+            | sed -E 's/^[[:space:]]+//;s/[[:space:]]+$//' \
+            | awk -F',' '
+                NF >= 2 &&
+                ($1 == "DOMAIN" ||
+                 $1 == "DOMAIN-SUFFIX" ||
+                 $1 == "DOMAIN-KEYWORD")
+                {
+                  value=$2
+                  gsub(/^[[:space:]]+/, "", value)
+                  gsub(/[[:space:]]+$/, "", value)
+                  if (value == "")
+                    next
+                  value=tolower(value)
+                  sub(/^\./, "", value)
+                  sub(/\.$/, "", value)
+                  print $1 "," value
+                }
+              ' \
+            | sort -u \
+            > rules.normalized
           test -s rules.normalized
-          echo "======================================"
-          echo "Normalized rules"
-          echo "======================================"
-          echo "DOMAIN:"
-          grep -c '^DOMAIN,' rules.normalized || true
-          echo "DOMAIN-SUFFIX:"
-          grep -c '^DOMAIN-SUFFIX,' rules.normalized || true
-          echo "DOMAIN-KEYWORD:"
-          grep -c '^DOMAIN-KEYWORD,' rules.normalized || true
-          echo "Total:"
-          wc -l < rules.normalized
+          echo "Normalized rules:"
+          wc -l rules.normalized
+          echo
+          echo "Rule types:"
+          cut -d',' -f1 rules.normalized \
+            | sort \
+            | uniq -c
       # ==========================================================
-      # 9. 生成 Mihomo YAML
+      # 9. Generate Mihomo YAML
       # ==========================================================
       - name: Generate Mihomo YAML
         shell: bash
@@ -249,22 +211,13 @@ jobs:
             ' rules.normalized
           } > ads-clash.yaml
           test -s ads-clash.yaml
-          echo "======================================"
-          echo "Mihomo YAML"
-          echo "======================================"
-          ls -lh ads-clash.yaml
-          echo
-          echo "First 10 rules:"
-          head -n 11 ads-clash.yaml
       # ==========================================================
-      # 10. Surge DOMAIN-SET
+      # 10. Generate Surge DOMAIN-SET
       #
-      # 输出：
+      # DOMAIN       -> example.com
+      # DOMAIN-SUFFIX -> .example.com
       #
-      # DOMAIN-SET,example.com
-      # DOMAIN-SET,ads.example.com
-      #
-      # DOMAIN-KEYWORD 无法转换为 DOMAIN-SET，因此忽略
+      # DOMAIN-KEYWORD 不生成
       # ==========================================================
       - name: Generate Surge DOMAIN-SET
         shell: bash
@@ -275,78 +228,59 @@ jobs:
             awk -F',' '
             {
               if ($1 == "DOMAIN")
-                print "DOMAIN-SET," $2
+                print $2
               else if ($1 == "DOMAIN-SUFFIX")
-                print "DOMAIN-SET," $2
+                print "." $2
             }
-            ' rules.normalized \
-            | sort -u
+            ' rules.normalized | sort -u
           } > ads-latest.txt
           test -s ads-latest.txt
-          echo "======================================"
-          echo "Surge DOMAIN-SET"
-          echo "======================================"
-          ls -lh ads-latest.txt
+          echo "Surge DOMAIN-SET:"
+          grep -vE '^#|^$' ads-latest.txt | wc -l
           echo
-          echo "First 10 rules:"
-          head -n 11 ads-latest.txt
-          echo
-          echo "Total:"
-          grep -c '^DOMAIN-SET,' ads-latest.txt || true
+          head -n 20 ads-latest.txt
       # ==========================================================
-      # 11. MosDNS
-      #
-      # domain = suffix
-      # full   = exact
-      # keyword = keyword
+      # 11. Generate MosDNS
       # ==========================================================
-      - name: Generate MosDNS rules
+      - name: Generate MosDNS
         shell: bash
         run: |
           set -euo pipefail
+          awk -F',' '
           {
-            echo "# Auto merged MosDNS rules (${DATE})"
-            awk -F',' '
-            {
-              if ($1 == "DOMAIN-SUFFIX")
-                print "domain:" $2
-              else if ($1 == "DOMAIN")
-                print "full:" $2
-              else if ($1 == "DOMAIN-KEYWORD")
-                print "keyword:" $2
-            }
-            ' rules.normalized
-          } > ads-mosdns.txt
+            if ($1 == "DOMAIN-SUFFIX")
+              print "domain:" $2
+            else if ($1 == "DOMAIN")
+              print "full:" $2
+            else if ($1 == "DOMAIN-KEYWORD")
+              print "keyword:" $2
+          }
+          ' rules.normalized \
+          | sort -u \
+          > ads-mosdns.txt
           test -s ads-mosdns.txt
       # ==========================================================
-      # 12. Quantumult X
-      #
-      # DOMAIN-SUFFIX -> host-suffix
-      # DOMAIN        -> host
-      # DOMAIN-KEYWORD -> host-keyword
+      # 12. Generate Quantumult X
       # ==========================================================
-      - name: Generate Quantumult X rules
+      - name: Generate Quantumult X
         shell: bash
         run: |
           set -euo pipefail
+          awk -F',' '
           {
-            echo "# Auto merged Quantumult X rules (${DATE})"
-            awk -F',' '
-            {
-              if ($1 == "DOMAIN-SUFFIX")
-                print "host-suffix, " $2 ", reject"
-              else if ($1 == "DOMAIN")
-                print "host, " $2 ", reject"
-              else if ($1 == "DOMAIN-KEYWORD")
-                print "host-keyword, " $2 ", reject"
-            }
-            ' rules.normalized
-          } > ads-qx.snippet
+            if ($1 == "DOMAIN-SUFFIX")
+              print "host-suffix," $2 ",reject"
+            else if ($1 == "DOMAIN")
+              print "host," $2 ",reject"
+            else if ($1 == "DOMAIN-KEYWORD")
+              print "host-keyword," $2 ",reject"
+          }
+          ' rules.normalized \
+          | sort -u \
+          > ads-qx.snippet
           test -s ads-qx.snippet
       # ==========================================================
-      # 13. sing-box JSON
-      #
-      # sing-box 1.14+ -> source format version 5
+      # 13. Generate sing-box JSON source rule-set
       # ==========================================================
       - name: Generate sing-box JSON
         shell: bash
@@ -354,42 +288,31 @@ jobs:
           set -euo pipefail
           python3 <<'PY'
           import json
-          suffix = set()
-          domain = set()
-          keyword = set()
-          with open(
-              "rules.normalized",
-              "r",
-              encoding="utf-8"
-          ) as f:
+          domain = []
+          domain_suffix = []
+          domain_keyword = []
+          with open("rules.normalized", encoding="utf-8") as f:
               for line in f:
                   line = line.strip()
                   if not line:
                       continue
-                  parts = line.split(",", 1)
-                  if len(parts) != 2:
-                      continue
-                  rule_type, value = parts
-                  if rule_type == "DOMAIN-SUFFIX":
-                      suffix.add(value)
-                  elif rule_type == "DOMAIN":
-                      domain.add(value)
-                  elif rule_type == "DOMAIN-KEYWORD":
-                      keyword.add(value)
+                  typ, value = line.split(",", 1)
+                  if typ == "DOMAIN":
+                      domain.append(value)
+                  elif typ == "DOMAIN-SUFFIX":
+                      domain_suffix.append(value)
+                  elif typ == "DOMAIN-KEYWORD":
+                      domain_keyword.append(value)
           rule = {}
           if domain:
-              rule["domain"] = sorted(domain)
-          if suffix:
-              rule["domain_suffix"] = sorted(suffix)
-          if keyword:
-              rule["domain_keyword"] = sorted(keyword)
-          if not rule:
-              raise SystemExit("ERROR: no valid rules")
-          output = {
+              rule["domain"] = sorted(set(domain))
+          if domain_suffix:
+              rule["domain_suffix"] = sorted(set(domain_suffix))
+          if domain_keyword:
+              rule["domain_keyword"] = sorted(set(domain_keyword))
+          data = {
               "version": 5,
-              "rules": [
-                  rule
-              ]
+              "rules": [rule]
           }
           with open(
               "ads-singbox.json",
@@ -397,43 +320,33 @@ jobs:
               encoding="utf-8"
           ) as f:
               json.dump(
-                  output,
+                  data,
                   f,
                   ensure_ascii=False,
                   indent=2
               )
               f.write("\n")
           PY
-          echo "======================================"
-          echo "sing-box JSON"
-          echo "======================================"
-          ls -lh ads-singbox.json
-          echo
-          echo "JSON validation:"
+          test -s ads-singbox.json
           python3 -m json.tool \
             ads-singbox.json \
             > /dev/null
-          echo "OK"
       # ==========================================================
-      # 14. sing-box 实际规则集验证
+      # 14. Compile sing-box SRS
       #
-      # 只验证，不输出 SRS
+      # 仅作为 CI 验证，不提交 SRS
       # ==========================================================
       - name: Validate sing-box rule-set
         shell: bash
         run: |
           set -euo pipefail
-          echo "======================================"
-          echo "sing-box rule-set compile test"
-          echo "======================================"
           sing-box rule-set compile \
             --output /tmp/ads-test.srs \
             ads-singbox.json
           test -s /tmp/ads-test.srs
-          ls -lh /tmp/ads-test.srs
-          echo "sing-box rule-set: OK"
+          echo "sing-box rule-set compiled successfully"
       # ==========================================================
-      # 15. Mihomo YAML 检查
+      # 15. Validate Mihomo YAML
       # ==========================================================
       - name: Validate Mihomo YAML
         shell: bash
@@ -443,113 +356,152 @@ jobs:
           import yaml
           with open(
               "ads-clash.yaml",
-              "r",
               encoding="utf-8"
           ) as f:
               data = yaml.safe_load(f)
           if not isinstance(data, dict):
-              raise SystemExit("Invalid YAML structure")
+              raise SystemExit("Invalid YAML root")
           payload = data.get("payload")
           if not isinstance(payload, list):
               raise SystemExit("Missing payload list")
           if not payload:
-              raise SystemExit("Empty payload")
-          print(f"Mihomo payload rules: {len(payload)}")
-          print("YAML: OK")
+              raise SystemExit("payload is empty")
+          print(f"Mihomo rules: {len(payload)}")
           PY
       # ==========================================================
-      # 16. 最终输出检查
+      # 16. Validate Surge DOMAIN-SET
+      #
+      # 合法：
+      # example.com
+      # .example.com
+      #
+      # 非法：
+      # DOMAIN-SET,example.com
+      # DOMAIN,example.com
+      # DOMAIN-SUFFIX,example.com
       # ==========================================================
-      - name: Verify all outputs
+      - name: Validate Surge DOMAIN-SET
         shell: bash
         run: |
           set -euo pipefail
-          echo "======================================"
-          echo "Final outputs"
-          echo "======================================"
-          ls -lh \
+          DOMAIN_SET_COUNT=$(
+            grep -vE '^#|^$' ads-latest.txt | wc -l
+          )
+          if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
+            echo "ERROR: ads-latest.txt contains no rules"
+            exit 1
+          fi
+          if grep -vE \
+            '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
             ads-latest.txt \
+            | grep -q .; then
+            echo "ERROR: ads-latest.txt contains invalid DOMAIN-SET entries"
+            echo
+            echo "Invalid entries:"
+            grep -vE \
+              '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
+              ads-latest.txt || true
+            exit 1
+          fi
+          echo "Valid Surge DOMAIN-SET rules: $DOMAIN_SET_COUNT"
+      # ==========================================================
+      # 17. Validate generated files
+      # ==========================================================
+      - name: Validate output files
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in \
+            ads-latest.txt \
+            ads-clash.yaml \
             ads-mosdns.txt \
             ads-qx.snippet \
-            ads-singbox.json \
-            ads-clash.yaml
-          echo
-          echo "======================================"
-          echo "Rule counts"
-          echo "======================================"
-          DOMAIN_COUNT=$(
-            grep -c '^DOMAIN,' rules.normalized || true
-          )
-          SUFFIX_COUNT=$(
-            grep -c '^DOMAIN-SUFFIX,' rules.normalized || true
-          )
-          KEYWORD_COUNT=$(
-            grep -c '^DOMAIN-KEYWORD,' rules.normalized || true
-          )
-          TOTAL_COUNT=$(
-            wc -l < rules.normalized
-          )
-          DOMAIN_SET_COUNT=$(
-            grep -c '^DOMAIN-SET,' ads-latest.txt || true
-          )
-          echo "DOMAIN         : ${DOMAIN_COUNT}"
-          echo "DOMAIN-SUFFIX  : ${SUFFIX_COUNT}"
-          echo "DOMAIN-KEYWORD : ${KEYWORD_COUNT}"
-          echo "TOTAL          : ${TOTAL_COUNT}"
-          echo "DOMAIN-SET     : ${DOMAIN_SET_COUNT}"
-          if [ "$TOTAL_COUNT" -eq 0 ]; then
-            echo "ERROR: generated zero rules"
-            exit 1
-          fi
-          if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
-            echo "ERROR: generated zero DOMAIN-SET rules"
-            exit 1
-          fi
-          # 确保 Surge 文件中不存在其他规则类型
-          if grep -vE '^#|^DOMAIN-SET,' ads-latest.txt | grep -q .; then
-            echo "ERROR: ads-latest.txt contains invalid rules"
-            exit 1
-          fi
+            ads-singbox.json
+          do
+            if [ ! -s "$file" ]; then
+              echo "ERROR: $file is empty or missing"
+              exit 1
+            fi
+            echo "OK: $file"
+            ls -lh "$file"
+          done
       # ==========================================================
-      # 17. 清理
+      # 18. Show statistics
+      # ==========================================================
+      - name: Show statistics
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "========================================"
+          echo "ADS RULES BUILD"
+          echo "========================================"
+          echo
+          echo "Normalized:"
+          wc -l rules.normalized
+          echo
+          echo "Surge DOMAIN-SET:"
+          grep -vE '^#|^$' ads-latest.txt | wc -l
+          echo
+          echo "Mihomo:"
+          grep -c '^  - ' ads-clash.yaml
+          echo
+          echo "MosDNS:"
+          wc -l ads-mosdns.txt
+          echo
+          echo "Quantumult X:"
+          wc -l ads-qx.snippet
+          echo
+          echo "sing-box:"
+          python3 - <<'PY'
+          import json
+          with open(
+              "ads-singbox.json",
+              encoding="utf-8"
+          ) as f:
+              data = json.load(f)
+          rules = data.get("rules", [])
+          print("version:", data.get("version"))
+          print("rule groups:", len(rules))
+          for rule in rules:
+              for key in (
+                  "domain",
+                  "domain_suffix",
+                  "domain_keyword"
+              ):
+                  print(
+                      f"{key}:",
+                      len(rule.get(key, []))
+                  )
+          PY
+      # ==========================================================
+      # 19. Remove temporary source files
       # ==========================================================
       - name: Cleanup
         shell: bash
         run: |
           rm -f \
-            ruleA.txt \
-            ruleB.list \
-            rules.source \
+            source-olocn.txt \
+            source-awa.txt \
             rules.normalized
       # ==========================================================
-      # 18. Commit & Push
+      # 20. Commit and push
       # ==========================================================
-      - name: Commit and Push result
+      - name: Commit changes
         shell: bash
         run: |
           set -euo pipefail
-          git config user.name \
-            "github-actions[bot]"
-          git config user.email \
-            "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             ads-latest.txt \
+            ads-clash.yaml \
             ads-mosdns.txt \
             ads-qx.snippet \
-            ads-singbox.json \
-            ads-clash.yaml
-          if git diff --staged --quiet; then
-            echo "======================================"
-            echo "No changes detected"
-            echo "======================================"
+            ads-singbox.json
+          if git diff --cached --quiet; then
+            echo "No changes detected."
             exit 0
           fi
-          echo "======================================"
-          echo "Changes detected"
-          echo "======================================"
-          git diff --stat --cached
           git commit \
-            -m "Update ad rules (${DATE}) [skip ci]"
-          git push \
-            origin \
-            "HEAD:${{ github.ref_name }}"
+            -m "chore: update ads rules ${DATE}"
+          git push
