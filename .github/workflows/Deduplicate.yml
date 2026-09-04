@@ -23,6 +23,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+
       # ========================================
       # Checkout
       # ========================================
@@ -30,6 +31,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
 
       # ========================================
       # Deduplicate QX Rules
@@ -60,18 +62,36 @@ jobs:
             exit 0
           fi
 
+
           # ============================================================
           # 1. 文件内部完全重复规则去重
+          #
+          # 只判断完整规则是否完全相同
+          #
+          # host-keyword 不参与任何覆盖
           # ============================================================
 
           for file in "${files[@]}"; do
+
             tmp="${file}.tmp"
             count_file="${file}.count"
 
             awk '
-              /^[[:space:]]*$/ ||
-              /^[[:space:]]*#/ ||
-              /^[[:space:]]*;/ ||
+              /^[[:space:]]*$/ {
+                print
+                next
+              }
+
+              /^[[:space:]]*#/ {
+                print
+                next
+              }
+
+              /^[[:space:]]*;/ {
+                print
+                next
+              }
+
               /^[[:space:]]*\/\// {
                 print
                 next
@@ -90,7 +110,7 @@ jobs:
               }
 
               END {
-                print duplicate+0 > count_file
+                print duplicate + 0 > count_file
               }
             ' count_file="$count_file" "$file" > "$tmp"
 
@@ -111,6 +131,7 @@ jobs:
             echo "  Changed: $changed"
 
             total_duplicate=$((total_duplicate + count))
+
           done
 
 
@@ -122,6 +143,9 @@ jobs:
           # host-suffix,example.com
           # host-suffix,a.example.com
           #
+          # 保留：
+          # host-suffix,example.com
+          #
           # 删除：
           # host-suffix,a.example.com
           #
@@ -129,6 +153,7 @@ jobs:
           # ============================================================
 
           for file in "${files[@]}"; do
+
             tmp="${file}.tmp"
             count_file="${file}.count"
 
@@ -136,23 +161,29 @@ jobs:
               {
                 line[NR]=$0
 
-                if (
-                  $0 ~ /^[[:space:]]*$/ ||
-                  $0 ~ /^[[:space:]]*#/ ||
-                  $0 ~ /^[[:space:]]*;/ ||
-                  $0 ~ /^[[:space:]]*\/\//
-                ) {
+                if ($0 ~ /^[[:space:]]*$/)
                   next
-                }
 
-                type=$1
-                domain=$2
+                if ($0 ~ /^[[:space:]]*#/)
+                  next
+
+                if ($0 ~ /^[[:space:]]*;/)
+                  next
+
+                if ($0 ~ /^[[:space:]]*\/\//)
+                  next
+
+                n=split($0, field, ",")
+
+                type=field[1]
+                domain=field[2]
 
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", type)
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
 
                 type=tolower(type)
                 domain=tolower(domain)
+
                 sub(/\.$/, "", domain)
 
                 if (type == "host-suffix")
@@ -163,43 +194,70 @@ jobs:
               }
 
               END {
-                # --------------------------------------------
-                # host-suffix：父域覆盖子域
-                # --------------------------------------------
+
+                # ------------------------------------------------------
+                # host-suffix：
+                # 父域覆盖子域
+                # ------------------------------------------------------
+
                 for (i in suffix) {
+
+                  child=suffix[i]
+
                   for (j in suffix) {
+
                     if (i == j)
                       continue
 
-                    if (
-                      suffix[i] != suffix[j] &&
-                      suffix[i] ~ ("\\." suffix[j] "$")
-                    ) {
+                    parent=suffix[j]
+
+                    if (child == parent)
+                      continue
+
+                    test="." child
+
+                    if (index(test, "." parent) == length(test) - length(parent) + 1) {
                       remove_suffix[i]=1
                       break
                     }
                   }
                 }
 
-                # --------------------------------------------
-                # host：被 host-suffix 覆盖
-                # --------------------------------------------
+
+                # ------------------------------------------------------
+                # host：
+                # 被 host-suffix 覆盖
+                # ------------------------------------------------------
+
                 for (i in host) {
+
+                  domain=host[i]
+
                   for (j in suffix) {
-                    if (
-                      host[i] == suffix[j] ||
-                      host[i] ~ ("\\." suffix[j] "$")
-                    ) {
+
+                    parent=suffix[j]
+
+                    if (domain == parent) {
+                      remove_host[i]=1
+                      break
+                    }
+
+                    test="." domain
+
+                    if (index(test, "." parent) == length(test) - length(parent) + 1) {
                       remove_host[i]=1
                       break
                     }
                   }
                 }
 
-                # --------------------------------------------
+
+                # ------------------------------------------------------
                 # 输出
-                # --------------------------------------------
+                # ------------------------------------------------------
+
                 for (i=1; i<=NR; i++) {
+
                   if (remove_suffix[i]) {
                     suffix_count++
                     continue
@@ -213,10 +271,10 @@ jobs:
                   print line[i]
                 }
 
-                print suffix_count+0 > count_file
-                print host_count+0 >> count_file
+                print suffix_count + 0 > count_file
+                print host_count + 0 >> count_file
               }
-            ' FS=',' OFS=',' count_file="$count_file" "$file" > "$tmp"
+            ' count_file="$count_file" "$file" > "$tmp"
 
             suffix_count=$(sed -n '1p' "$count_file")
             host_count=$(sed -n '2p' "$count_file")
@@ -239,6 +297,7 @@ jobs:
 
             total_suffix=$((total_suffix + suffix_count))
             total_host=$((total_host + host_count))
+
           done
 
 
@@ -248,16 +307,28 @@ jobs:
           # register > proxy
           # direct   > system
           #
-          # 只删除低优先级文件中完全相同的规则
+          # 完全相同的规则：
+          # 保留左边文件
+          # 删除右边文件
           # ============================================================
 
           deduplicate_pair() {
+
             keep="$ROOT/$1"
             remove="$ROOT/$2"
 
-            if [ ! -f "$keep" ] || [ ! -f "$remove" ]; then
-              echo
-              echo "Skip: $keep / $remove"
+            echo
+            echo "========================================"
+            echo "$1 > $2"
+            echo "========================================"
+
+            if [ ! -f "$keep" ]; then
+              echo "Skip: $keep not found"
+              return
+            fi
+
+            if [ ! -f "$remove" ]; then
+              echo "Skip: $remove not found"
               return
             fi
 
@@ -265,27 +336,45 @@ jobs:
             count_file="${remove}.count"
 
             awk '
-              FNR==NR {
-                if (
-                  $0 !~ /^[[:space:]]*$/ &&
-                  $0 !~ /^[[:space:]]*#/ &&
-                  $0 !~ /^[[:space:]]*;/ &&
-                  $0 !~ /^[[:space:]]*\/\//
-                ) {
-                  key=tolower($0)
-                  gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
-                  keep[key]=1
-                }
+              FNR == NR {
+
+                if ($0 ~ /^[[:space:]]*$/)
+                  next
+
+                if ($0 ~ /^[[:space:]]*#/)
+                  next
+
+                if ($0 ~ /^[[:space:]]*;/)
+                  next
+
+                if ($0 ~ /^[[:space:]]*\/\//)
+                  next
+
+                key=tolower($0)
+                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
+
+                keep[key]=1
+
                 next
               }
 
               {
-                if (
-                  $0 ~ /^[[:space:]]*$/ ||
-                  $0 ~ /^[[:space:]]*#/ ||
-                  $0 ~ /^[[:space:]]*;/ ||
-                  $0 ~ /^[[:space:]]*\/\//
-                ) {
+                if ($0 ~ /^[[:space:]]*$/) {
+                  print
+                  next
+                }
+
+                if ($0 ~ /^[[:space:]]*#/) {
+                  print
+                  next
+                }
+
+                if ($0 ~ /^[[:space:]]*;/) {
+                  print
+                  next
+                }
+
+                if ($0 ~ /^[[:space:]]*\/\//) {
                   print
                   next
                 }
@@ -302,7 +391,7 @@ jobs:
               }
 
               END {
-                print removed+0 > count_file
+                print removed + 0 > count_file
               }
             ' count_file="$count_file" "$keep" "$remove" > "$tmp"
 
@@ -317,17 +406,23 @@ jobs:
               changed="NO"
             fi
 
-            echo
-            echo "$1 > $2"
-            echo "  Cross-file removed: $count"
-            echo "  Changed: $changed"
+            echo "Cross-file removed: $count"
+            echo "Changed: $changed"
 
             total_cross_file=$((total_cross_file + count))
           }
 
 
-          deduplicate_pair "register.snippet" "proxy.snippet"
-          deduplicate_pair "direct.snippet" "system.snippet"
+          # register 优先于 proxy
+          deduplicate_pair \
+            "register.snippet" \
+            "proxy.snippet"
+
+
+          # direct 优先于 system
+          deduplicate_pair \
+            "direct.snippet" \
+            "system.snippet"
 
 
           # ============================================================
