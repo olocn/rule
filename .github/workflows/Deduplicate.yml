@@ -1,9 +1,13 @@
 name: Deduplicate QX Rules
 on:
   workflow_dispatch:
+  # 修改 QX 规则时自动执行
   push:
     paths:
-      - 'qx/**/*.snippet'
+      - 'qx/*.snippet'
+  # 修改本 Workflow 自身时自动执行
+      - '.github/workflows/deduplicate-qx-rules.yml'
+  # 每天自动检查一次
   schedule:
     - cron: '0 0 * * *'
 permissions:
@@ -15,11 +19,17 @@ jobs:
   deduplicate:
     runs-on: ubuntu-latest
     steps:
+      # ========================================
+      # Checkout
+      # ========================================
       - name: Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-      - name: Deduplicate QX rules
+      # ========================================
+      # Python 去重
+      # ========================================
+      - name: Deduplicate QX Rules
         shell: python
         run: |
           from pathlib import Path
@@ -34,7 +44,12 @@ jobs:
               text = line.strip()
               if not text:
                   return None
-              if text.startswith("#") or text.startswith(";") or text.startswith("//"):
+              # 注释
+              if (
+                  text.startswith("#")
+                  or text.startswith(";")
+                  or text.startswith("//")
+              ):
                   return None
               parts = [x.strip() for x in text.split(",")]
               if not parts:
@@ -42,7 +57,8 @@ jobs:
               rule_type = parts[0].lower()
               if len(parts) < 2:
                   return rule_type, None, parts
-              return rule_type, normalize_domain(parts[1]), parts
+              domain = normalize_domain(parts[1])
+              return rule_type, domain, parts
           def is_comment_or_blank(line):
               s = line.strip()
               return (
@@ -51,11 +67,20 @@ jobs:
                   or s.startswith(";")
                   or s.startswith("//")
               )
-          for path in sorted(ROOT.rglob("*.snippet")):
+          # 只处理 qx/ 第一层的 .snippet
+          files = sorted(ROOT.glob("*.snippet"))
+          print()
+          print("========================================")
+          print(f"Found {len(files)} QX snippet files")
+          print("========================================")
+          if not files:
+              print("No .snippet files found.")
+              raise SystemExit(0)
+          for path in files:
               print()
-              print("=" * 50)
+              print("========================================")
               print(f"Processing: {path}")
-              print("=" * 50)
+              print("========================================")
               original = path.read_text(encoding="utf-8")
               original_lines = original.splitlines(keepends=True)
               parsed = []
@@ -63,10 +88,10 @@ jobs:
               keywords = []
               suffixes = []
               duplicate_count = 0
-              # ----------------------------------------
-              # 第一阶段：
-              # 保留顺序 + 删除完全重复规则
-              # ----------------------------------------
+              # ========================================
+              # 第一阶段
+              # 完整规则去重
+              # ========================================
               for line in original_lines:
                   if is_comment_or_blank(line):
                       parsed.append({
@@ -86,7 +111,7 @@ jobs:
                       })
                       continue
                   rule_type, domain, parts = result
-                  # 完整规则字段作为重复判断依据
+                  # 完整规则字段作为重复判断
                   key = tuple(
                       x.strip().lower()
                       for x in parts
@@ -105,10 +130,10 @@ jobs:
                       keywords.append(domain)
                   elif rule_type == "host-suffix" and domain:
                       suffixes.append(domain)
-              # ----------------------------------------
-              # 第二阶段：
+              # ========================================
+              # 第二阶段
               # host-keyword 优先
-              # ----------------------------------------
+              # ========================================
               removed_keyword = set()
               for i, item in enumerate(parsed):
                   rule_type = item["type"]
@@ -118,15 +143,15 @@ jobs:
                   if not domain:
                       continue
                   for keyword in keywords:
+                      # host-keyword 为字符串包含匹配
                       if keyword in domain:
                           removed_keyword.add(i)
                           break
-              # ----------------------------------------
-              # 第三阶段：
-              # host-suffix 覆盖子域
-              # ----------------------------------------
+              # ========================================
+              # 第三阶段
+              # host-suffix 覆盖子域 suffix
+              # ========================================
               removed_suffix = set()
-              # 去掉重复 suffix，避免自己匹配自己
               unique_suffixes = sorted(
                   set(suffixes),
                   key=len
@@ -140,15 +165,17 @@ jobs:
                   if not domain:
                       continue
                   for suffix in unique_suffixes:
+                      # 自己不能删除自己
                       if domain == suffix:
                           continue
+                      # 父域 suffix 覆盖子域 suffix
                       if domain.endswith("." + suffix):
                           removed_suffix.add(i)
                           break
-              # ----------------------------------------
-              # 第四阶段：
+              # ========================================
+              # 第四阶段
               # host 被 host-suffix 覆盖
-              # ----------------------------------------
+              # ========================================
               removed_host = set()
               for i, item in enumerate(parsed):
                   if i in removed_keyword:
@@ -159,12 +186,16 @@ jobs:
                   if not domain:
                       continue
                   for suffix in unique_suffixes:
-                      if domain == suffix or domain.endswith("." + suffix):
+                      if (
+                          domain == suffix
+                          or domain.endswith("." + suffix)
+                      ):
                           removed_host.add(i)
                           break
-              # ----------------------------------------
-              # 最终输出
-              # ----------------------------------------
+              # ========================================
+              # 第五阶段
+              # 生成最终文件
+              # ========================================
               output = []
               for i, item in enumerate(parsed):
                   if i in removed_keyword:
@@ -175,57 +206,87 @@ jobs:
                       continue
                   output.append(item["line"])
               new_content = "".join(output)
-              # ----------------------------------------
-              # 强制检查并写回
-              # ----------------------------------------
               changed = new_content != original
-              print(f"Original lines : {len(original_lines)}")
-              print(f"New lines      : {len(output)}")
-              print(f"Removed duplicate: {duplicate_count}")
-              print(f"Removed by keyword: {len(removed_keyword)}")
-              print(f"Removed by suffix: {len(removed_suffix)}")
-              print(f"Removed host: {len(removed_host)}")
-              print(f"Changed: {changed}")
+              # ========================================
+              # 输出统计
+              # ========================================
+              print(f"Original lines      : {len(original_lines)}")
+              print(f"New lines           : {len(output)}")
+              print(f"Removed duplicate   : {duplicate_count}")
+              print(f"Removed by keyword  : {len(removed_keyword)}")
+              print(f"Removed by suffix   : {len(removed_suffix)}")
+              print(f"Removed host        : {len(removed_host)}")
+              print(f"Changed             : {changed}")
+              # ========================================
+              # 写回文件
+              # ========================================
               if changed:
                   path.write_text(
                       new_content,
-                      encoding="utf-8",
-                      newline=""
+                      encoding="utf-8"
                   )
-                  # 写回后立即验证
-                  verify = path.read_text(encoding="utf-8")
+                  # 写回验证
+                  verify = path.read_text(
+                      encoding="utf-8"
+                  )
                   if verify != new_content:
                       raise RuntimeError(
                           f"Write verification failed: {path}"
                       )
-                  print(f"UPDATED: {path}")
+                  print(f"UPDATED             : {path}")
               else:
-                  print(f"UNCHANGED: {path}")
+                  print(f"UNCHANGED           : {path}")
               total_duplicate += duplicate_count
               total_keyword += len(removed_keyword)
               total_suffix += len(removed_suffix)
               total_host += len(removed_host)
+          # ========================================
+          # 总统计
+          # ========================================
           print()
-          print("=" * 50)
+          print("========================================")
           print("TOTAL")
-          print("=" * 50)
-          print(f"Removed duplicate : {total_duplicate}")
-          print(f"Removed keyword  : {total_keyword}")
-          print(f"Removed suffix   : {total_suffix}")
-          print(f"Removed host     : {total_host}")
+          print("========================================")
           print(
-              f"Removed total    : "
-              f"{total_duplicate + total_keyword + total_suffix + total_host}"
+              f"Removed duplicate : {total_duplicate}"
           )
+          print(
+              f"Removed keyword  : {total_keyword}"
+          )
+          print(
+              f"Removed suffix   : {total_suffix}"
+          )
+          print(
+              f"Removed host     : {total_host}"
+          )
+          total_removed = (
+              total_duplicate
+              + total_keyword
+              + total_suffix
+              + total_host
+          )
+          print(
+              f"Removed total    : {total_removed}"
+          )
+      # ========================================
+      # 检查 Git 修改
+      # ========================================
       - name: Check changes
         run: |
-          echo "===== Git Status ====="
+          echo "========================================"
+          echo "Git Status"
+          echo "========================================"
           git status --short
           echo
-          echo "===== Git Diff ====="
-          git diff -- qx/
+          echo "========================================"
+          echo "Git Diff"
+          echo "========================================"
+          git diff -- qx/*.snippet
+      # ========================================
+      # 自动提交
+      # ========================================
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_message: "chore: deduplicate QX rules"
-          file_pattern: "qx/**/*.snippet"
+          file_pattern: "qx/*.snippet"
