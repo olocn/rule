@@ -3,7 +3,6 @@ DOMAIN-SUFFIX,telegra.ph
 DOMAIN-SUFFIX,telegram.me
 DOMAIN-SUFFIX,telegram.org
 DOMAIN-SUFFIX,telesco.pe
-DOMAIN-SUFFIX,comments.app
 DOMAIN-SUFFIX,t.me
 DOMAIN-SUFFIX,tx.me
 DOMAIN-SUFFIX,tdesktop.com
@@ -45,7 +44,6 @@ DOMAIN,www.egernlicense.com
 DOMAIN-SUFFIX,yandex.com
 DOMAIN-SUFFIX,hdhive.com
 DOMAIN-SUFFIX,hmjd9.com
-DOMAIN-SUFFIX,quantumult.app
 DOMAIN-SUFFIX,plex.tv
 DOMAIN-SUFFIX,esm.sh
 DOMAIN-SUFFIX,colamanhua.com
@@ -436,7 +434,6 @@ DOMAIN-SUFFIX,resilio.com
 DOMAIN-SUFFIX,reuters.com
 DOMAIN-SUFFIX,reutersmedia.net
 DOMAIN-SUFFIX,rocksdb.org
-DOMAIN-SUFFIX,rsshub.app
 DOMAIN-SUFFIX,rthk.hk
 DOMAIN-SUFFIX,schema.org
 DOMAIN-SUFFIX,scmp.com
@@ -571,7 +568,6 @@ DOMAIN-SUFFIX,cloudfront.net
 DOMAIN-SUFFIX,lab.skk.moe
 DOMAIN-SUFFIX,ocsp.int-x3.letsencrypt.org
 DOMAIN-SUFFIX,payments-jp.amazon.com
-DOMAIN-SUFFIX,amp-api.podcasts.apple.com
 DOMAIN-SUFFIX,search.yahoo.co.jp
 DOMAIN-SUFFIX,wego.here.com
 DOMAIN-SUFFIX,supercell.com

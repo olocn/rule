@@ -1,5 +1,4 @@
 
-DOMAIN,challenges.cloudflare.com
 DOMAIN-SUFFIX,api.ipify.org
 DOMAIN,apple-relay.fastly-edge.com
 DOMAIN-SUFFIX,scdn.co
@@ -11,9 +10,6 @@ IP-ASN,8075
 DOMAIN-SUFFIX,cloudflareinsights.com
 
 DOMAIN-SUFFIX,ytimg.com
-DOMAIN-SUFFIX,googleusercontent.com
-DOMAIN-SUFFIX,youtube.com
-DOMAIN-SUFFIX,googlevideo
 DOMAIN-KEYWORD,google
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
@@ -24,14 +20,8 @@ DOMAIN-SUFFIX,gmail.com
 DOMAIN-KEYWORD,colab
 DOMAIN-KEYWORD,developerprofiles
 DOMAIN-KEYWORD,generativelanguage
-DOMAIN-SUFFIX,ai.google.dev
-DOMAIN-SUFFIX,ai.google
 DOMAIN-SUFFIX,gstatic.com
-DOMAIN-SUFFIX,aistudio.google.com
-DOMAIN-SUFFIX,googleapis.comm
 DOMAIN-SUFFIX,deepmind.com
-DOMAIN-SUFFIX,deepmind.google
-DOMAIN-SUFFIX,generativeai.google
 DOMAIN-SUFFIX,capcom.com
 DOMAIN-SUFFIX,playfabapi.com
 DOMAIN-SUFFIX,cloudapp.azure.com
@@ -46,11 +36,6 @@ DOMAIN-SUFFIX,fbcdn.net
 DOMAIN-SUFFIX,oaiusercontent.com
 DOMAIN-SUFFIX,oaistatic.com
 DOMAIN-SUFFIX,ai.com
-DOMAIN,chat.openai.com.cdn.cloudflare.net
-DOMAIN,openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-DOMAIN,openaicomproductionae4b.blob.core.windows.net
-DOMAIN,production-openaicom-storage.azureedge.net
-DOMAIN,openaiapi-site.azureedge.net
 DOMAIN-KEYWORD,openai
 DOMAIN-KEYWORD,chatgpt
 DOMAIN-SUFFIX,auth0.com
@@ -75,7 +60,6 @@ DOMAIN-KEYWORD,paypal
 DOMAIN-SUFFIX,cerebras.ai
 DOMAIN-KEYWORD,claude
 DOMAIN-SUFFIX,anthropic.com
-DOMAIN-SUFFIX,claude.ai
 DOMAIN-SUFFIX,usefathom.com
 DOMAIN-SUFFIX,recraft.ai
 DOMAIN-SUFFIX,poe.com
@@ -83,8 +67,6 @@ DOMAIN-SUFFIX,lmsudio.ai
 DOMAIN-KEYWORD,bing
 DOMAIN-KEYWORD,copilot
 DOMAIN-KEYWORD,edgeassetservice
-DOMAIN-SUFFIX,bing.net
-DOMAIN-SUFFIX,bingapis.com
 DOMAIN-SUFFIX,azurewebsites.net
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,live.com
@@ -92,7 +74,6 @@ DOMAIN-SUFFIX,virtualearth.net
 DOMAIN-SUFFIX,windows.net
 DOMAIN-SUFFIX,onenote
 DOMAIN-SUFFIX,hexun.com
-DOMAIN-SUFFIX,dict.bing.com.cn
 DOMAIN-SUFFIX,msn.com
 DOMAIN-SUFFIX,variflight.com
 DOMAIN-SUFFIX,msftoffers.com
@@ -102,19 +83,15 @@ DOMAIN-SUFFIX,skype.com
 DOMAIN-SUFFIX,microsofttranslator.com
 DOMAIN-SUFFIX,uservoice.com
 DOMAIN-SUFFIX,spoprod-a.akamaihd.net
-DOMAIN-SUFFIX,bingstatic.com
 DOMAIN-SUFFIX,yahoo.co.jp
 DOMAIN-SUFFIX,r.msftstatic.com
-DOMAIN-SUFFIX,staging-bing-int.com
 DOMAIN-SUFFIX,ssl.kaptcha.com
 DOMAIN-SUFFIX,tst.kaptcha.com
-DOMAIN-SUFFIX,binginternal.com
 DOMAIN-SUFFIX,office.net
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,microsoftonline.com
 DOMAIN-SUFFIX,office365.com
-DOMAIN-SUFFIX,push.apple.com
 DOMAIN-SUFFIX,push.apple.com.akadns.net
 IP-CIDR,17.249.0.0/16
 IP-CIDR,17.252.0.0/16
@@ -122,23 +99,8 @@ IP-CIDR,17.57.144.0/22
 IP-CIDR,17.188.128.0/18
 IP-CIDR,17.188.20.0/23
 DOMAIN-SUFFIX,apple.news
-DOMAIN-SUFFIX,apps.apple.com
 DOMAIN-SUFFIX,itunes-apple.com.akadns.net
 DOMAIN-SUFFIX,apple.comscoreresearch.com
-DOMAIN-SUFFIX,beta.music.apple.com
-DOMAIN-SUFFIX,books.apple.com
-DOMAIN-SUFFIX,news-assets.apple.com
-DOMAIN-SUFFIX,news-client.apple.com
-DOMAIN-SUFFIX,news-client-search.apple.com
-DOMAIN-SUFFIX,news-edge.apple.com
-DOMAIN-SUFFIX,news-events.apple.com
-DOMAIN-SUFFIX,testflight.apple.com
-DOMAIN-SUFFIX,tv.apple.com
-DOMAIN,gg.apple.com
-DOMAIN,gdmf.apple.com
-DOMAIN,mesu.apple.com
-DOMAIN,updates.cdn-apple.com
-DOMAIN,updates-http.cdn-apple.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,apple-dns.net
 DOMAIN-SUFFIX,apple.co
@@ -154,4 +116,3 @@ DOMAIN-SUFFIX,organicfruitapps.com
 DOMAIN-SUFFIX,apple-cloudkit.com
 DOMAIN-SUFFIX,appsto.re
 DOMAIN-SUFFIX,itunes.com
-DOMAIN,gateway.icloud.com
