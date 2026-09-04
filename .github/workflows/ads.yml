@@ -70,7 +70,7 @@ jobs:
       # ==========================================================
       # 5. Install sing-box
       # ==========================================================
-         - name: Install sing-box
+      - name: Install sing-box
         shell: bash
         run: |
           set -euo pipefail
