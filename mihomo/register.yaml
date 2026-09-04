@@ -91,23 +91,21 @@ payload:
   - DOMAIN-SUFFIX, yahoo.co.jp
   - DOMAIN-SUFFIX, youtu.be
   - DOMAIN-SUFFIX, ytimg.com
-  - DOMAIN-KEYWORD, bing
-  - DOMAIN-KEYWORD, chatgpt
-  - DOMAIN-KEYWORD, claude
-  - DOMAIN-KEYWORD, colab
-  - DOMAIN-KEYWORD, copilot
-  - DOMAIN-KEYWORD, developerprofiles
-  - DOMAIN-KEYWORD, edgeassetservice
-  - DOMAIN-KEYWORD, facebook
-  - DOMAIN-KEYWORD, generativelanguage
-  - DOMAIN-KEYWORD, google
-  - DOMAIN-KEYWORD, grok
-  - DOMAIN-KEYWORD, instagram
-  - DOMAIN-KEYWORD, openai
-  - DOMAIN-KEYWORD, paypal
-  - DOMAIN-KEYWORD, youtube
-  - IP-CIDR, 17.188.128.0/18
-  - IP-CIDR, 17.188.20.0/23
-  - IP-CIDR, 17.249.0.0/16
-  - IP-CIDR, 17.252.0.0/16
-  - IP-CIDR, 17.57.144.0/22
+  - DOMAIN-SUFFIX,bing.com
+  - DOMAIN-SUFFIX,chatgpt.com
+  - DOMAIN-SUFFIX,claude.com
+  - DOMAIN-SUFFIX,copilot.com
+  - DOMAIN-SUFFIX,facebook.com
+  - DOMAIN-SUFFIX,googleapis.com
+  - DOMAIN-SUFFIX,googleusercontent.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,grok.com
+  - DOMAIN-SUFFIX,instagram.com
+  - DOMAIN-SUFFIX,openai.com
+  - DOMAIN-SUFFIX,paypal.com
+  - DOMAIN-SUFFIX,youtube.com
+  - IP-CIDR,17.188.128.0/18
+  - IP-CIDR,17.188.20.0/23
+  - IP-CIDR,17.249.0.0/16
+  - IP-CIDR,17.252.0.0/16
+  - IP-CIDR,17.57.144.0/22

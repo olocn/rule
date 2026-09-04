@@ -278,64 +278,58 @@
       "domain_suffix": " ytimg.com"
     },
     {
-      "domain_keyword": " bing"
+      "domain_suffix": "bing.com"
     },
     {
-      "domain_keyword": " chatgpt"
+      "domain_suffix": "chatgpt.com"
     },
     {
-      "domain_keyword": " claude"
+      "domain_suffix": "claude.com"
     },
     {
-      "domain_keyword": " colab"
+      "domain_suffix": "copilot.com"
     },
     {
-      "domain_keyword": " copilot"
+      "domain_suffix": "facebook.com"
     },
     {
-      "domain_keyword": " developerprofiles"
+      "domain_suffix": "googleapis.com"
     },
     {
-      "domain_keyword": " edgeassetservice"
+      "domain_suffix": "googleusercontent.com"
     },
     {
-      "domain_keyword": " facebook"
+      "domain_suffix": "googlevideo.com"
     },
     {
-      "domain_keyword": " generativelanguage"
+      "domain_suffix": "grok.com"
     },
     {
-      "domain_keyword": " google"
+      "domain_suffix": "instagram.com"
     },
     {
-      "domain_keyword": " grok"
+      "domain_suffix": "openai.com"
     },
     {
-      "domain_keyword": " instagram"
+      "domain_suffix": "paypal.com"
     },
     {
-      "domain_keyword": " openai"
+      "domain_suffix": "youtube.com"
     },
     {
-      "domain_keyword": " paypal"
+      "ip_cidr": "17.188.128.0/18"
     },
     {
-      "domain_keyword": " youtube"
+      "ip_cidr": "17.188.20.0/23"
     },
     {
-      "ip_cidr": " 17.188.128.0/18"
+      "ip_cidr": "17.249.0.0/16"
     },
     {
-      "ip_cidr": " 17.188.20.0/23"
+      "ip_cidr": "17.252.0.0/16"
     },
     {
-      "ip_cidr": " 17.249.0.0/16"
-    },
-    {
-      "ip_cidr": " 17.252.0.0/16"
-    },
-    {
-      "ip_cidr": " 17.57.144.0/22"
+      "ip_cidr": "17.57.144.0/22"
     }
   ]
 }
