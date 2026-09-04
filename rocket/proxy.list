@@ -19,6 +19,7 @@ IP-CIDR,91.108.20.0/22
 IP-CIDR,91.108.56.0/22
 IP-CIDR,149.154.160.0/20
 
+DOMAIN-SUFFIX,asimov.top
 DOMAIN-SUFFIX,readdle.com
 DOMAIN-SUFFIX,south-plus.net
 DOMAIN-SUFFIX,jmdanjonproxy.xyz
