@@ -1,5 +1,9 @@
 # o
 HOST-SUFFIX,colamanhua.com,proxy
+HOST-SUFFIX,picacomic.com,proxy
+HOST-SUFFIX,jmdanjonproxy.vip,proxy
+HOST-SUFFIX,cdnhjk.net,proxy
+HOST-SUFFIX,githubcopilot.com,proxy
 HOST-SUFFIX,nnhanman.com,proxy
 HOST-SUFFIX,18comic.vip,proxy
 HOST-SUFFIX,tju.7pzzv.us,proxy
@@ -44,7 +48,7 @@ HOST-SUFFIX,obsidian.md,proxy
 HOST-SUFFIX,jmpic.xyz,proxy
 HOST-SUFFIX,jmpic.org,proxy
 HOST-SUFFIX,jmpicn.xyz,proxy
-# jav
+#jav
 HOST-SUFFIX,gifyu.com,proxy
 HOST-SUFFIX,qz1gy.app,proxy
 HOST-SUFFIX,yfvjv.app,proxy
@@ -54,17 +58,16 @@ HOST-SUFFIX,photos18.com,proxy
 HOST-SUFFIX,pimg.tw,proxy
 HOST-SUFFIX,pinimg.com,proxy
 HOST-SUFFIX,pixhost.to,proxy
-DOMAIN-KEYWORD,pixiv,proxy
+HOST-SUFFIX,pixiv.com,proxy
 HOST-SUFFIX,player.fm,proxy
 HOST-SUFFIX,playio1.com,proxy
 HOST-SUFFIX,playno1.com,proxy
 HOST-SUFFIX,t66y.com,proxy
-DOMAIN-KEYWORD,sehuatang,proxy
-DOMAIN-KEYWORD,rmcdn,proxy
-DOMAIN-KEYWORD,roucdn,proxy
-DOMAIN-KEYWORD,rouman,proxy
+HOST-SUFFIX,sehuatang.org,proxy
 HOST-SUFFIX,south-plus.org,proxy
-DOMAIN-KEYWORD,jav,proxy
+HOST-SUFFIX,javbus.com,proxy
+HOST-SUFFIX,javdb.com,proxy
+HOST-SUFFIX,javlibrary.com,proxy
 HOST-SUFFIX,92hm.top,proxy
 HOST-SUFFIX,98tuch.net,proxy
 HOST-SUFFIX,picnew.org,proxy

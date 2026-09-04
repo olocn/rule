@@ -1,5 +1,9 @@
 # o
 DOMAIN-SUFFIX,colamanhua.com
+DOMAIN-SUFFIX,picacomic.com
+DOMAIN-SUFFIX,jmdanjonproxy.vip
+DOMAIN-SUFFIX,cdnhjk.net
+DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,tju.7pzzv.us
@@ -44,7 +48,7 @@ DOMAIN-SUFFIX,obsidian.md
 DOMAIN-SUFFIX,jmpic.xyz
 DOMAIN-SUFFIX,jmpic.org
 DOMAIN-SUFFIX,jmpicn.xyz
-# jav
+#jav
 DOMAIN-SUFFIX,gifyu.com
 DOMAIN-SUFFIX,qz1gy.app
 DOMAIN-SUFFIX,yfvjv.app
@@ -54,17 +58,16 @@ DOMAIN-SUFFIX,photos18.com
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,pinimg.com
 DOMAIN-SUFFIX,pixhost.to
-DOMAIN-KEYWORD,pixiv
+DOMAIN-SUFFIX,pixiv.com
 DOMAIN-SUFFIX,player.fm
 DOMAIN-SUFFIX,playio1.com
 DOMAIN-SUFFIX,playno1.com
 DOMAIN-SUFFIX,t66y.com
-DOMAIN-KEYWORD,sehuatang
-DOMAIN-KEYWORD,rmcdn
-DOMAIN-KEYWORD,roucdn
-DOMAIN-KEYWORD,rouman
+DOMAIN-SUFFIX,sehuatang.org
 DOMAIN-SUFFIX,south-plus.org
-DOMAIN-KEYWORD,jav
+DOMAIN-SUFFIX,javbus.com
+DOMAIN-SUFFIX,javdb.com
+DOMAIN-SUFFIX,javlibrary.com
 DOMAIN-SUFFIX,92hm.top
 DOMAIN-SUFFIX,98tuch.net
 DOMAIN-SUFFIX,picnew.org
