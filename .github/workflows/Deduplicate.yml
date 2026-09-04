@@ -45,6 +45,7 @@ jobs:
           changed=0
 
           while IFS= read -r -d '' filepath; do
+
             echo
             echo "========================================"
             echo "Processing: $filepath"
@@ -53,71 +54,65 @@ jobs:
             tmp="${filepath}.tmp"
 
             awk '
-              BEGIN {
-                IGNORECASE = 1
-              }
-
               # ==================================================
-              # 基础函数
+              # 去除首尾空格
               # ==================================================
-
               function trim(s) {
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
                 return s
               }
 
+              # ==================================================
+              # 小写
+              # ==================================================
               function lower(s) {
                 return tolower(trim(s))
               }
 
-              function normalize_domain(s) {
+              # ==================================================
+              # 规范化域名
+              # ==================================================
+              function domain_normalize(s) {
                 s = lower(s)
                 sub(/\.$/, "", s)
                 return s
               }
 
               # ==================================================
-              # 解析规则
+              # 获取规则类型
               # ==================================================
-
-              function get_type(line,    n,p) {
-                n = split(line, p, ",")
-                if (n < 2)
+              function rule_type(line, p) {
+                split(line, p, ",")
+                if (length(p[1]) == 0)
                   return ""
-
                 return lower(p[1])
               }
 
-              function get_value(line,    n,p) {
-                n = split(line, p, ",")
-                if (n < 2)
+              # ==================================================
+              # 获取规则值
+              # ==================================================
+              function rule_value(line, p) {
+                split(line, p, ",")
+                if (length(p[2]) == 0)
                   return ""
-
                 return trim(p[2])
               }
 
               # ==================================================
               # 生成规范化 Key
               # ==================================================
+              function rule_key(line, type, value) {
 
-              function normalize_key(line,    type,value) {
-
-                type = get_type(line)
-                value = get_value(line)
+                type = rule_type(line)
+                value = rule_value(line)
 
                 if (
                   type == "host" ||
                   type == "host-suffix" ||
-                  type == "host-keyword" ||
-                  type == "host-wildcard" ||
-                  type == "domain" ||
-                  type == "domain-suffix" ||
-                  type == "domain-keyword" ||
-                  type == "domain-regex"
+                  type == "host-keyword"
                 ) {
-                  value = normalize_domain(value)
-                }
-                else {
+                  value = domain_normalize(value)
+                } else {
                   value = lower(value)
                 }
 
@@ -125,49 +120,91 @@ jobs:
               }
 
               # ==================================================
-              # 保存原始行
+              # 判断 domain 是否被 suffix 覆盖
               # ==================================================
+              function suffix_match(domain, suffix) {
 
+                domain = domain_normalize(domain)
+                suffix = domain_normalize(suffix)
+
+                if (domain == suffix)
+                  return 1
+
+                if (domain ~ ("\\." suffix "$"))
+                  return 1
+
+                return 0
+              }
+
+              # ==================================================
+              # 判断 keyword 是否匹配 domain
+              # ==================================================
+              function keyword_match(domain, keyword) {
+
+                domain = lower(domain)
+                keyword = lower(keyword)
+
+                return index(domain, keyword) > 0
+              }
+
+              # ==================================================
+              # 空行
+              # ==================================================
               /^[[:space:]]*$/ {
-                output[++count] = $0
+                line[++total] = $0
+                type[total] = "blank"
+                position[total] = NR
                 next
               }
 
+              # ==================================================
+              # 注释
+              # ==================================================
               /^[[:space:]]*(#|;|\/\/)/ {
-                output[++count] = $0
+                line[++total] = $0
+                type[total] = "comment"
+                position[total] = NR
                 next
               }
 
+              # ==================================================
+              # 正常规则
+              # ==================================================
               {
-                line = $0
-                type = get_type(line)
-                value = get_value(line)
+                current = $0
 
-                key = normalize_key(line)
+                t = rule_type(current)
+                v = rule_value(current)
+                k = rule_key(current)
 
                 # ----------------------------------------------
-                # 完全重复规则
+                # 完全重复
                 # ----------------------------------------------
-                if (key in seen) {
-                  duplicate[key]++
+                if (k in seen) {
+                  duplicate_count++
                   next
                 }
 
-                seen[key] = 1
+                seen[k] = 1
+
+                # ----------------------------------------------
+                # 保存原始行
+                # ----------------------------------------------
+                total++
+
+                line[total] = current
+                type[total] = t
+                value[total] = v
+                position[total] = NR
 
                 # ----------------------------------------------
                 # host-keyword
                 # ----------------------------------------------
-                if (type == "host-keyword") {
+                if (t == "host-keyword") {
 
-                  keyword = lower(value)
+                  keyword_count++
 
-                  keyword_list[++keyword_count] = keyword
-
-                  rule_line[++rule_count] = line
-                  rule_type[rule_count] = type
-                  rule_value[rule_count] = value
-                  rule_position[rule_count] = NR
+                  keyword[keyword_count] = domain_normalize(v)
 
                   next
                 }
@@ -175,16 +212,11 @@ jobs:
                 # ----------------------------------------------
                 # host-suffix
                 # ----------------------------------------------
-                if (type == "host-suffix") {
+                if (t == "host-suffix") {
 
-                  domain = normalize_domain(value)
+                  suffix_count++
 
-                  suffix_list[++suffix_count] = domain
-
-                  rule_line[++rule_count] = line
-                  rule_type[rule_count] = type
-                  rule_value[rule_count] = value
-                  rule_position[rule_count] = NR
+                  suffix[suffix_count] = domain_normalize(v)
 
                   next
                 }
@@ -192,203 +224,122 @@ jobs:
                 # ----------------------------------------------
                 # host
                 # ----------------------------------------------
-                if (type == "host") {
+                if (t == "host") {
 
-                  domain = normalize_domain(value)
+                  host_count++
 
-                  host_list[++host_count] = domain
-
-                  rule_line[++rule_count] = line
-                  rule_type[rule_count] = type
-                  rule_value[rule_count] = value
-                  rule_position[rule_count] = NR
+                  host[host_count] = domain_normalize(v)
 
                   next
                 }
-
-                # ----------------------------------------------
-                # 其他规则
-                # ----------------------------------------------
-                output[++count] = line
               }
 
               END {
 
-                # =================================================
-                # 第一阶段：
-                # host-keyword 覆盖 host / host-suffix
-                # =================================================
+                # ==================================================
+                # 第二遍判断哪些规则需要删除
+                # ==================================================
 
-                for (i = 1; i <= rule_count; i++) {
+                for (i = 1; i <= total; i++) {
 
-                  type = rule_type[i]
+                  t = type[i]
 
-                  if (
-                    type != "host" &&
-                    type != "host-suffix"
-                  ) {
+                  # 空行、注释绝对不删除
+                  if (t == "blank" || t == "comment")
                     continue
-                  }
 
-                  domain = normalize_domain(rule_value[i])
+                  v = domain_normalize(value[i])
 
-                  covered = 0
+                  # =================================================
+                  # 1. host / host-suffix 被 host-keyword 覆盖
+                  # =================================================
 
-                  for (k = 1; k <= keyword_count; k++) {
+                  if (t == "host" || t == "host-suffix") {
 
-                    keyword = keyword_list[k]
+                    for (k = 1; k <= keyword_count; k++) {
 
-                    if (index(domain, keyword) > 0) {
-                      covered = 1
-                      break
+                      if (keyword_match(v, keyword[k])) {
+
+                        remove[i] = 1
+                        keyword_removed++
+
+                        break
+                      }
                     }
                   }
 
-                  if (covered) {
-                    remove[i] = 1
-                    keyword_removed++
+                  # =================================================
+                  # 2. host-suffix 被父级 host-suffix 覆盖
+                  # =================================================
+
+                  if (t == "host-suffix" && !remove[i]) {
+
+                    for (k = 1; k <= suffix_count; k++) {
+
+                      parent = suffix[k]
+
+                      if (parent == v)
+                        continue
+
+                      if (suffix_match(v, parent)) {
+
+                        remove[i] = 1
+                        suffix_removed++
+
+                        break
+                      }
+                    }
+                  }
+
+                  # =================================================
+                  # 3. host 被 host-suffix 覆盖
+                  # =================================================
+
+                  if (t == "host" && !remove[i]) {
+
+                    for (k = 1; k <= suffix_count; k++) {
+
+                      parent = suffix[k]
+
+                      if (suffix_match(v, parent)) {
+
+                        remove[i] = 1
+                        host_removed++
+
+                        break
+                      }
+                    }
                   }
                 }
 
-                # =================================================
-                # 第二阶段：
-                # host-suffix 父域名覆盖子域名
-                # =================================================
+                # ==================================================
+                # 最终按照原始顺序输出
+                # ==================================================
 
-                for (i = 1; i <= rule_count; i++) {
+                for (i = 1; i <= total; i++) {
 
                   if (remove[i])
                     continue
 
-                  if (rule_type[i] != "host-suffix")
-                    continue
-
-                  child = normalize_domain(rule_value[i])
-
-                  for (j = 1; j <= rule_count; j++) {
-
-                    if (i == j)
-                      continue
-
-                    if (remove[j])
-                      continue
-
-                    if (rule_type[j] != "host-suffix")
-                      continue
-
-                    parent = normalize_domain(rule_value[j])
-
-                    if (child == parent)
-                      continue
-
-                    if (child ~ ("\\." parent "$")) {
-                      remove[i] = 1
-                      suffix_removed++
-                      break
-                    }
-                  }
+                  print line[i]
                 }
 
-                # =================================================
-                # 第三阶段：
-                # host-suffix 覆盖 host
-                # =================================================
-
-                for (i = 1; i <= rule_count; i++) {
-
-                  if (remove[i])
-                    continue
-
-                  if (rule_type[i] != "host")
-                    continue
-
-                  host = normalize_domain(rule_value[i])
-
-                  for (j = 1; j <= rule_count; j++) {
-
-                    if (remove[j])
-                      continue
-
-                    if (rule_type[j] != "host-suffix")
-                      continue
-
-                    suffix = normalize_domain(rule_value[j])
-
-                    if (
-                      host == suffix ||
-                      host ~ ("\\." suffix "$")
-                    ) {
-                      remove[i] = 1
-                      host_removed++
-                      break
-                    }
-                  }
-                }
-
-                # =================================================
-                # 重新按原始行号输出
-                # =================================================
-
-                for (i = 1; i <= rule_count; i++) {
-
-                  if (remove[i])
-                    continue
-
-                  output[++count] = rule_line[i]
-                  output_position[count] = rule_position[i]
-                }
-
-                # =================================================
-                # 注意：
-                # 上面的 output 中普通规则和特殊规则混合后，
-                # 重新按照原始行号排序
-                # =================================================
-
-                for (i = 1; i <= count; i++) {
-
-                  if (!(i in output_position)) {
-                    output_position[i] = i
-                  }
-                }
-
-                for (i = 1; i <= count; i++) {
-                  for (j = i + 1; j <= count; j++) {
-
-                    if (output_position[j] < output_position[i]) {
-
-                      tmp_pos = output_position[i]
-                      output_position[i] = output_position[j]
-                      output_position[j] = tmp_pos
-
-                      tmp_line = output[i]
-                      output[i] = output[j]
-                      output[j] = tmp_line
-                    }
-                  }
-                }
-
-                # =================================================
-                # 最终输出
-                # =================================================
-
-                for (i = 1; i <= count; i++) {
-                  print output[i]
-                }
-
-                # =================================================
-                # 日志
-                # =================================================
+                # ==================================================
+                # 统计
+                # ==================================================
 
                 removed_total =
+                  duplicate_count +
                   keyword_removed +
                   suffix_removed +
                   host_removed
 
                 if (removed_total > 0) {
+
                   print \
-                    "Removed redundant rules: " \
-                    removed_total \
-                    " (keyword=" keyword_removed \
+                    "Removed: " removed_total \
+                    " (duplicate=" duplicate_count \
+                    ", keyword=" keyword_removed \
                     ", suffix=" suffix_removed \
                     ", host=" host_removed ")" \
                     > "/dev/stderr"
@@ -397,16 +348,23 @@ jobs:
             ' "$filepath" > "$tmp"
 
             # ====================================================
-            # 只有内容发生变化才替换
+            # 只有真正变化才替换
             # ====================================================
 
             if ! cmp -s "$filepath" "$tmp"; then
+
               mv "$tmp" "$filepath"
+
               changed=1
+
               echo "Changed: $filepath"
+
             else
+
               rm -f "$tmp"
+
               echo "Unchanged: $filepath"
+
             fi
 
           done < <(
@@ -418,11 +376,13 @@ jobs:
 
           echo
           echo "========================================"
+
           if [[ "$changed" == "1" ]]; then
             echo "Deduplication completed: files changed."
           else
             echo "Deduplication completed: no changes."
           fi
+
           echo "========================================"
 
       - name: Show changes
