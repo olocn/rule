@@ -38,7 +38,6 @@ payload:
   - DOMAIN-SUFFIX, aka.ms
   - DOMAIN-SUFFIX, akamaized.net
   - DOMAIN-SUFFIX, amazon.co.jp
-  - DOMAIN-SUFFIX, amp-api.podcasts.apple.com
   - DOMAIN-SUFFIX, amplitude.com
   - DOMAIN-SUFFIX, ampproject.org
   - DOMAIN-SUFFIX, anchor.fm
@@ -120,7 +119,6 @@ payload:
   - DOMAIN-SUFFIX, coinmarketcap.com
   - DOMAIN-SUFFIX, coinone.co.kr
   - DOMAIN-SUFFIX, colamanhua.com
-  - DOMAIN-SUFFIX, comments.app
   - DOMAIN-SUFFIX, conoha.jp
   - DOMAIN-SUFFIX, cool18.com
   - DOMAIN-SUFFIX, coursehero.com
@@ -371,7 +369,6 @@ payload:
   - DOMAIN-SUFFIX, pscp.tv
   - DOMAIN-SUFFIX, pttime.org
   - DOMAIN-SUFFIX, pximg.net
-  - DOMAIN-SUFFIX, quantumult.app
   - DOMAIN-SUFFIX, quora.com
   - DOMAIN-SUFFIX, quoracdn.net
   - DOMAIN-SUFFIX, qz.com
@@ -390,7 +387,6 @@ payload:
   - DOMAIN-SUFFIX, reuters.com
   - DOMAIN-SUFFIX, reutersmedia.net
   - DOMAIN-SUFFIX, rocksdb.org
-  - DOMAIN-SUFFIX, rsshub.app
   - DOMAIN-SUFFIX, rthk.hk
   - DOMAIN-SUFFIX, schema.org
   - DOMAIN-SUFFIX, scmp.com

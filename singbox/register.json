@@ -5,42 +5,6 @@
       "domain": " apple-relay.fastly-edge.com"
     },
     {
-      "domain": " chat.openai.com.cdn.cloudflare.net"
-    },
-    {
-      "domain": " gdmf.apple.com"
-    },
-    {
-      "domain": " gg.apple.com"
-    },
-    {
-      "domain": " mesu.apple.com"
-    },
-    {
-      "domain": " openaiapi-site.azureedge.net"
-    },
-    {
-      "domain": " openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net"
-    },
-    {
-      "domain": " openaicomproductionae4b.blob.core.windows.net"
-    },
-    {
-      "domain": " production-openaicom-storage.azureedge.net"
-    },
-    {
-      "domain": " updates-http.cdn-apple.com"
-    },
-    {
-      "domain": " updates.cdn-apple.com"
-    },
-    {
-      "domain": "challenges.cloudflare.com"
-    },
-    {
-      "domain": "gateway.icloud.com"
-    },
-    {
       "domain_suffix": " aaplimg.com"
     },
     {
@@ -48,15 +12,6 @@
     },
     {
       "domain_suffix": " ai.com"
-    },
-    {
-      "domain_suffix": " ai.google"
-    },
-    {
-      "domain_suffix": " ai.google.dev"
-    },
-    {
-      "domain_suffix": " aistudio.google.com"
     },
     {
       "domain_suffix": " anthropic.com"
@@ -83,9 +38,6 @@
       "domain_suffix": " apple.news"
     },
     {
-      "domain_suffix": " apps.apple.com"
-    },
-    {
       "domain_suffix": " appsto.re"
     },
     {
@@ -101,25 +53,7 @@
       "domain_suffix": " azurewebsites.net"
     },
     {
-      "domain_suffix": " beta.music.apple.com"
-    },
-    {
-      "domain_suffix": " bing.net"
-    },
-    {
-      "domain_suffix": " bingapis.com"
-    },
-    {
-      "domain_suffix": " binginternal.com"
-    },
-    {
-      "domain_suffix": " bingstatic.com"
-    },
-    {
       "domain_suffix": " blogspot.com"
-    },
-    {
-      "domain_suffix": " books.apple.com"
     },
     {
       "domain_suffix": " capcom.com"
@@ -140,9 +74,6 @@
       "domain_suffix": " chinacloudapp.cn"
     },
     {
-      "domain_suffix": " claude.ai"
-    },
-    {
       "domain_suffix": " client-api.arkoselabs.com"
     },
     {
@@ -156,12 +87,6 @@
     },
     {
       "domain_suffix": " deepmind.com"
-    },
-    {
-      "domain_suffix": " deepmind.google"
-    },
-    {
-      "domain_suffix": " dict.bing.com.cn"
     },
     {
       "domain_suffix": " events.statsigapi.net"
@@ -179,9 +104,6 @@
       "domain_suffix": " featuregates.org"
     },
     {
-      "domain_suffix": " generativeai.google"
-    },
-    {
       "domain_suffix": " ggpht.cn"
     },
     {
@@ -189,15 +111,6 @@
     },
     {
       "domain_suffix": " gmail.com"
-    },
-    {
-      "domain_suffix": " googleapis.comm"
-    },
-    {
-      "domain_suffix": " googleusercontent.com"
-    },
-    {
-      "domain_suffix": " googlevideo"
     },
     {
       "domain_suffix": " gstatic.com"
@@ -254,21 +167,6 @@
       "domain_suffix": " msn.com"
     },
     {
-      "domain_suffix": " news-assets.apple.com"
-    },
-    {
-      "domain_suffix": " news-client-search.apple.com"
-    },
-    {
-      "domain_suffix": " news-client.apple.com"
-    },
-    {
-      "domain_suffix": " news-edge.apple.com"
-    },
-    {
-      "domain_suffix": " news-events.apple.com"
-    },
-    {
       "domain_suffix": " nintendo.com"
     },
     {
@@ -305,9 +203,6 @@
       "domain_suffix": " poe.com"
     },
     {
-      "domain_suffix": " push.apple.com"
-    },
-    {
       "domain_suffix": " push.apple.com.akadns.net"
     },
     {
@@ -338,22 +233,13 @@
       "domain_suffix": " ssl.kaptcha.com"
     },
     {
-      "domain_suffix": " staging-bing-int.com"
-    },
-    {
       "domain_suffix": " streetfighter.com"
     },
     {
       "domain_suffix": " t.co"
     },
     {
-      "domain_suffix": " testflight.apple.com"
-    },
-    {
       "domain_suffix": " tst.kaptcha.com"
-    },
-    {
-      "domain_suffix": " tv.apple.com"
     },
     {
       "domain_suffix": " twimg.com"
@@ -387,9 +273,6 @@
     },
     {
       "domain_suffix": " youtu.be"
-    },
-    {
-      "domain_suffix": " youtube.com"
     },
     {
       "domain_suffix": " ytimg.com"
