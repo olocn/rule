@@ -2,94 +2,438 @@ name: Deduplicate QX Rules
 
 on:
   workflow_dispatch:
+
   push:
     paths:
-      - 'qx/**'
+      - 'qx/**/*.snippet'
+
   schedule:
     - cron: '0 0 * * *'
 
 permissions:
   contents: write
 
+concurrency:
+  group: deduplicate-qx-rules
+  cancel-in-progress: false
+
 jobs:
   dedupe:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
-          # 抓取完整历史记录，防止分支分支分叉时合并失败
           fetch-depth: 0
 
-      - name: Pull latest changes
+      - name: Configure Git
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          # 防止并发提交导致的冲突，采用 rebase 变基合并
-          git pull origin ${{ github.ref_name }} --rebase || true
 
-      - name: Run deduplication shell script
+      - name: Deduplicate QX rules
+        shell: bash
         run: |
-          if [ ! -d "qx" ]; then
+          set -euo pipefail
+
+          if [[ ! -d "qx" ]]; then
             echo "Directory 'qx' does not exist."
             exit 0
           fi
 
-          # 逐个独立处理文件
-          find qx -type f | while IFS= read -r filepath; do
+          changed=0
+
+          while IFS= read -r -d '' filepath; do
+            echo
+            echo "========================================"
             echo "Processing: $filepath"
-            
+            echo "========================================"
+
+            tmp="${filepath}.tmp"
+
             awk '
-              BEGIN { 
-                delete seen
-                delete suffixes
+              BEGIN {
+                IGNORECASE = 1
               }
 
-              # 1. 空行或注释行 (#, ;, // 开头) 直接原样保留
-              /^[[:space:]]*$/ || /^[[:space:]]*([#;/]|\/\/)/ {
-                print $0
+              # ==================================================
+              # 基础函数
+              # ==================================================
+
+              function trim(s) {
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
+                return s
+              }
+
+              function lower(s) {
+                return tolower(trim(s))
+              }
+
+              function normalize_domain(s) {
+                s = lower(s)
+                sub(/\.$/, "", s)
+                return s
+              }
+
+              # ==================================================
+              # 解析规则
+              # ==================================================
+
+              function get_type(line,    n,p) {
+                n = split(line, p, ",")
+                if (n < 2)
+                  return ""
+
+                return lower(p[1])
+              }
+
+              function get_value(line,    n,p) {
+                n = split(line, p, ",")
+                if (n < 2)
+                  return ""
+
+                return trim(p[2])
+              }
+
+              # ==================================================
+              # 生成规范化 Key
+              # ==================================================
+
+              function normalize_key(line,    type,value) {
+
+                type = get_type(line)
+                value = get_value(line)
+
+                if (
+                  type == "host" ||
+                  type == "host-suffix" ||
+                  type == "host-keyword" ||
+                  type == "host-wildcard" ||
+                  type == "domain" ||
+                  type == "domain-suffix" ||
+                  type == "domain-keyword" ||
+                  type == "domain-regex"
+                ) {
+                  value = normalize_domain(value)
+                }
+                else {
+                  value = lower(value)
+                }
+
+                return type "," value
+              }
+
+              # ==================================================
+              # 保存原始行
+              # ==================================================
+
+              /^[[:space:]]*$/ {
+                output[++count] = $0
+                next
+              }
+
+              /^[[:space:]]*(#|;|\/\/)/ {
+                output[++count] = $0
                 next
               }
 
               {
-                # 2. 基础整行完全重复清理
-                if (seen[$0]++) next
+                line = $0
+                type = get_type(line)
+                value = get_value(line)
 
-                # 3. host-suffix 子域名冗余判定
-                line_lower = tolower($0)
-                if (line_lower ~ /^[[:space:]]*host-suffix[[:space:]]*,/) {
-                  split($0, parts, ",")
-                  
-                  # 提取域名部分并清理首尾空格与大小写
-                  domain = parts[2]
-                  gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
-                  domain = tolower(domain)
+                key = normalize_key(line)
 
-                  # 检查当前域名是否已被已有的父域名涵盖
-                  is_subdomain = 0
-                  for (s in suffixes) {
-                    if (domain ~ ("\\." s "$")) {
-                      is_subdomain = 1
+                # ----------------------------------------------
+                # 完全重复规则
+                # ----------------------------------------------
+                if (key in seen) {
+                  duplicate[key]++
+                  next
+                }
+
+                seen[key] = 1
+
+                # ----------------------------------------------
+                # host-keyword
+                # ----------------------------------------------
+                if (type == "host-keyword") {
+
+                  keyword = lower(value)
+
+                  keyword_list[++keyword_count] = keyword
+
+                  rule_line[++rule_count] = line
+                  rule_type[rule_count] = type
+                  rule_value[rule_count] = value
+                  rule_position[rule_count] = NR
+
+                  next
+                }
+
+                # ----------------------------------------------
+                # host-suffix
+                # ----------------------------------------------
+                if (type == "host-suffix") {
+
+                  domain = normalize_domain(value)
+
+                  suffix_list[++suffix_count] = domain
+
+                  rule_line[++rule_count] = line
+                  rule_type[rule_count] = type
+                  rule_value[rule_count] = value
+                  rule_position[rule_count] = NR
+
+                  next
+                }
+
+                # ----------------------------------------------
+                # host
+                # ----------------------------------------------
+                if (type == "host") {
+
+                  domain = normalize_domain(value)
+
+                  host_list[++host_count] = domain
+
+                  rule_line[++rule_count] = line
+                  rule_type[rule_count] = type
+                  rule_value[rule_count] = value
+                  rule_position[rule_count] = NR
+
+                  next
+                }
+
+                # ----------------------------------------------
+                # 其他规则
+                # ----------------------------------------------
+                output[++count] = line
+              }
+
+              END {
+
+                # =================================================
+                # 第一阶段：
+                # host-keyword 覆盖 host / host-suffix
+                # =================================================
+
+                for (i = 1; i <= rule_count; i++) {
+
+                  type = rule_type[i]
+
+                  if (
+                    type != "host" &&
+                    type != "host-suffix"
+                  ) {
+                    continue
+                  }
+
+                  domain = normalize_domain(rule_value[i])
+
+                  covered = 0
+
+                  for (k = 1; k <= keyword_count; k++) {
+
+                    keyword = keyword_list[k]
+
+                    if (index(domain, keyword) > 0) {
+                      covered = 1
                       break
                     }
                   }
 
-                  # 如果是子域名，则丢弃该行
-                  if (is_subdomain) next
-
-                  # 记录当前 host-suffix 的根/父域名
-                  suffixes[domain] = 1
+                  if (covered) {
+                    remove[i] = 1
+                    keyword_removed++
+                  }
                 }
 
-                print $0
-              }
-            ' "$filepath" > "$filepath.tmp"
+                # =================================================
+                # 第二阶段：
+                # host-suffix 父域名覆盖子域名
+                # =================================================
 
-            mv "$filepath.tmp" "$filepath"
-          done
+                for (i = 1; i <= rule_count; i++) {
+
+                  if (remove[i])
+                    continue
+
+                  if (rule_type[i] != "host-suffix")
+                    continue
+
+                  child = normalize_domain(rule_value[i])
+
+                  for (j = 1; j <= rule_count; j++) {
+
+                    if (i == j)
+                      continue
+
+                    if (remove[j])
+                      continue
+
+                    if (rule_type[j] != "host-suffix")
+                      continue
+
+                    parent = normalize_domain(rule_value[j])
+
+                    if (child == parent)
+                      continue
+
+                    if (child ~ ("\\." parent "$")) {
+                      remove[i] = 1
+                      suffix_removed++
+                      break
+                    }
+                  }
+                }
+
+                # =================================================
+                # 第三阶段：
+                # host-suffix 覆盖 host
+                # =================================================
+
+                for (i = 1; i <= rule_count; i++) {
+
+                  if (remove[i])
+                    continue
+
+                  if (rule_type[i] != "host")
+                    continue
+
+                  host = normalize_domain(rule_value[i])
+
+                  for (j = 1; j <= rule_count; j++) {
+
+                    if (remove[j])
+                      continue
+
+                    if (rule_type[j] != "host-suffix")
+                      continue
+
+                    suffix = normalize_domain(rule_value[j])
+
+                    if (
+                      host == suffix ||
+                      host ~ ("\\." suffix "$")
+                    ) {
+                      remove[i] = 1
+                      host_removed++
+                      break
+                    }
+                  }
+                }
+
+                # =================================================
+                # 重新按原始行号输出
+                # =================================================
+
+                for (i = 1; i <= rule_count; i++) {
+
+                  if (remove[i])
+                    continue
+
+                  output[++count] = rule_line[i]
+                  output_position[count] = rule_position[i]
+                }
+
+                # =================================================
+                # 注意：
+                # 上面的 output 中普通规则和特殊规则混合后，
+                # 重新按照原始行号排序
+                # =================================================
+
+                for (i = 1; i <= count; i++) {
+
+                  if (!(i in output_position)) {
+                    output_position[i] = i
+                  }
+                }
+
+                for (i = 1; i <= count; i++) {
+                  for (j = i + 1; j <= count; j++) {
+
+                    if (output_position[j] < output_position[i]) {
+
+                      tmp_pos = output_position[i]
+                      output_position[i] = output_position[j]
+                      output_position[j] = tmp_pos
+
+                      tmp_line = output[i]
+                      output[i] = output[j]
+                      output[j] = tmp_line
+                    }
+                  }
+                }
+
+                # =================================================
+                # 最终输出
+                # =================================================
+
+                for (i = 1; i <= count; i++) {
+                  print output[i]
+                }
+
+                # =================================================
+                # 日志
+                # =================================================
+
+                removed_total =
+                  keyword_removed +
+                  suffix_removed +
+                  host_removed
+
+                if (removed_total > 0) {
+                  print \
+                    "Removed redundant rules: " \
+                    removed_total \
+                    " (keyword=" keyword_removed \
+                    ", suffix=" suffix_removed \
+                    ", host=" host_removed ")" \
+                    > "/dev/stderr"
+                }
+              }
+            ' "$filepath" > "$tmp"
+
+            # ====================================================
+            # 只有内容发生变化才替换
+            # ====================================================
+
+            if ! cmp -s "$filepath" "$tmp"; then
+              mv "$tmp" "$filepath"
+              changed=1
+              echo "Changed: $filepath"
+            else
+              rm -f "$tmp"
+              echo "Unchanged: $filepath"
+            fi
+
+          done < <(
+            find qx \
+              -type f \
+              -name '*.snippet' \
+              -print0
+          )
+
+          echo
+          echo "========================================"
+          if [[ "$changed" == "1" ]]; then
+            echo "Deduplication completed: files changed."
+          else
+            echo "Deduplication completed: no changes."
+          fi
+          echo "========================================"
+
+      - name: Show changes
+        run: |
+          git status --short
 
       - name: Commit and push changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "chore: auto deduplicate qx rules independently [skip ci]"
+          commit_message: "chore: deduplicate qx rules [skip ci]"
           branch: ${{ github.ref_name }}
+          file_pattern: "qx/**/*.snippet"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
