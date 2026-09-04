@@ -8,88 +8,187 @@ on:
       - 'direct.txt'
       - 'proxy.txt'
       - 'ad.txt'
-    paths-ignore:
-      - 'surge/**'
-      - 'qx/**'
-  # 保留手动触发按钮，方便调试或初次运行
+
   workflow_dispatch:
 
 jobs:
   convert:
     runs-on: ubuntu-latest
+
     permissions:
       contents: write
 
     steps:
       - name: Checkout repository
-        uses: actions/checkout@v5
-
-      - name: Create output directories
-        run: |
-          mkdir -p surge qx
+        uses: actions/checkout@v4
 
       - name: Convert rules
+        shell: bash
         run: |
+          set -euo pipefail
+
+          mkdir -p surge qx
+
           convert_list() {
             local src="$1"
             local surge_out="$2"
             local qx_out="$3"
+            local qx_policy="$4"
 
-            [ ! -f "$src" ] && return 0
+            echo "========================================"
+            echo "Processing: $src"
+            echo "QX policy: $qx_policy"
+            echo "========================================"
 
-            > "$surge_out"
-            > "$qx_out"
+            if [[ ! -f "$src" ]]; then
+              echo "Source file not found, skip: $src"
+              return 0
+            fi
 
-            while IFS= read -r line || [ -n "$line" ]; do
-              # 清洗回车与首尾空格
-              line="$(echo "$line" | tr -d '\r' | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
+            local surge_tmp="${surge_out}.tmp"
+            local qx_tmp="${qx_out}.tmp"
 
-              # 保留空行及注释 (#, //, ;)
-              if [[ -z "$line" || "$line" =~ ^(#|//|;) ]]; then
-                echo "$line" >> "$surge_out"
-                echo "$line" >> "$qx_out"
+            : > "$surge_tmp"
+            : > "$qx_tmp"
+
+            local line
+            local target_ip
+
+            while IFS= read -r line || [[ -n "$line" ]]; do
+
+              # 去除 CRLF
+              line="${line//$'\r'/}"
+
+              # 去除首尾空白
+              line="${line#"${line%%[![:space:]]*}"}"
+              line="${line%"${line##*[![:space:]]}"}"
+
+              # 空行
+              if [[ -z "$line" ]]; then
+                printf '\n' >> "$surge_tmp"
+                printf '\n' >> "$qx_tmp"
                 continue
               fi
 
-              # 去除行首的通配符前缀 (如 +.google.com 或 .google.com)
-              line="$(echo "$line" | sed -E 's/^(\+\.|\.)//')"
+              # 注释
+              if [[ "$line" == \#* ||
+                    "$line" == '//'*
+                    || "$line" == \;* ]]; then
+                printf '%s\n' "$line" >> "$surge_tmp"
+                printf '%s\n' "$line" >> "$qx_tmp"
+                continue
+              fi
 
-              # 1. IPv4 (支持 1.1.1.1 或 1.1.1.1/24)
-              if [[ "$line" =~ ^[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then
-                if [[ ! "$line" =~ / ]]; then
+              # 去除常见域名前缀
+              # *.example.com
+              # +.example.com
+              # .example.com
+              if [[ "$line" == \*.* ]]; then
+                line="${line:2}"
+              elif [[ "$line" == +.* ]]; then
+                line="${line:2}"
+              elif [[ "$line" == .* ]]; then
+                line="${line:1}"
+              fi
+
+              # 已经是规则格式则跳过转换
+              case "$line" in
+                DOMAIN,*|DOMAIN-SUFFIX,*|DOMAIN-KEYWORD,*|DOMAIN-WILDCARD,*|\
+                HOST,*|HOST-SUFFIX,*|HOST-KEYWORD,*|\
+                IP-CIDR,*|IP-CIDR6,*|IP6-CIDR,*)
+                  printf '%s\n' "$line" >> "$surge_tmp"
+                  printf '%s,%s\n' "$line" "$qx_policy" >> "$qx_tmp"
+                  continue
+                  ;;
+              esac
+
+              # IPv4
+              if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then
+
+                if [[ "$line" != */* ]]; then
                   target_ip="${line}/32"
                 else
                   target_ip="$line"
                 fi
-                echo "IP-CIDR,$target_ip,no-resolve" >> "$surge_out"
-                echo "IP-CIDR,$target_ip" >> "$qx_out"
 
-              # 2. IPv6
-              elif [[ "$line" =~ : ]]; then
-                echo "IP-CIDR6,$line,no-resolve" >> "$surge_out"
-                echo "IP6-CIDR,$line" >> "$qx_out"
+                printf 'IP-CIDR,%s,no-resolve\n' "$target_ip" >> "$surge_tmp"
+                printf 'IP-CIDR,%s,%s\n' "$target_ip" "$qx_policy" >> "$qx_tmp"
 
-              # 3. 裸域名：转为后缀匹配
-              else
-                echo "DOMAIN-SUFFIX,$line" >> "$surge_out"
-                echo "HOST-SUFFIX,$line" >> "$qx_out"
+                continue
               fi
+
+              # IPv6
+              if [[ "$line" == *:* ]]; then
+
+                if [[ "$line" == */* ]]; then
+                  target_ip="$line"
+                else
+                  target_ip="${line}/128"
+                fi
+
+                printf 'IP-CIDR6,%s,no-resolve\n' "$target_ip" >> "$surge_tmp"
+                printf 'IP6-CIDR,%s,%s\n' "$target_ip" "$qx_policy" >> "$qx_tmp"
+
+                continue
+              fi
+
+              # 域名
+              printf 'DOMAIN-SUFFIX,%s\n' "$line" >> "$surge_tmp"
+              printf 'HOST-SUFFIX,%s,%s\n' "$line" "$qx_policy" >> "$qx_tmp"
+
             done < "$src"
+
+            mv "$surge_tmp" "$surge_out"
+            mv "$qx_tmp" "$qx_out"
+
+            echo "Generated:"
+            echo "  $surge_out"
+            echo "  $qx_out"
           }
 
-          convert_list "direct.txt" "surge/direct.list" "qx/direct.list"
-          convert_list "proxy.txt"  "surge/proxy.list"  "qx/proxy.list"
-          convert_list "ad.txt"     "surge/ad.list"     "qx/ad.list"
+          # direct → direct
+          convert_list \
+            "direct.txt" \
+            "surge/direct.list" \
+            "qx/direct.list" \
+            "direct"
+
+          # proxy → proxy
+          convert_list \
+            "proxy.txt" \
+            "surge/proxy.list" \
+            "qx/proxy.list" \
+            "proxy"
+
+          # ad → reject
+          convert_list \
+            "ad.txt" \
+            "surge/ad.list" \
+            "qx/ad.list" \
+            "reject"
+
+      - name: Show changes
+        run: |
+          echo "========================================"
+          echo "Git diff"
+          echo "========================================"
+
+          git diff --stat
+          git diff -- surge/ qx/ || true
 
       - name: Commit and push changes
         run: |
+          set -euo pipefail
+
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
+
           git add surge/ qx/
-          # 检查是否有内容产生变化，仅在有变化时提交
-          if git diff --staged --quiet; then
+
+          if git diff --cached --quiet; then
             echo "No changes detected. Skipping commit."
-          else
-            git commit -m "Auto convert rules [skip ci]"
-            git push origin master
+            exit 0
           fi
+
+          git commit -m "Auto convert rules [skip ci]"
+          git push origin master
