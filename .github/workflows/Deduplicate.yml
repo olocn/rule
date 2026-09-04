@@ -1,332 +1,231 @@
 name: Deduplicate QX Rules
-
 on:
   workflow_dispatch:
-
   push:
     paths:
       - 'qx/**/*.snippet'
-
   schedule:
     - cron: '0 0 * * *'
-
 permissions:
   contents: write
-
 concurrency:
   group: deduplicate-qx-rules
   cancel-in-progress: false
-
 jobs:
-  dedupe:
+  deduplicate:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
-
-      - name: Configure Git
-        run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
       - name: Deduplicate QX rules
-        shell: bash
+        shell: python
         run: |
-          set -euo pipefail
-
-          if [[ ! -d "qx" ]]; then
-            echo "Directory 'qx' does not exist."
-            exit 0
-          fi
-
-          changed=0
-
-          while IFS= read -r -d '' filepath; do
-            echo
-            echo "========================================"
-            echo "Processing: $filepath"
-            echo "========================================"
-
-            tmp="${filepath}.tmp"
-
-            awk '
-              BEGIN {
-                IGNORECASE = 1
-              }
-
-              # ==================================================
-              # 删除字符串首尾空白
-              # ==================================================
-              function trim(s) {
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
-                return s
-              }
-
-              # ==================================================
-              # 规范化域名
-              # ==================================================
-              function normalize_domain(s) {
-                s = trim(s)
-                s = tolower(s)
-
-                # 去掉末尾 .
-                sub(/\.$/, "", s)
-
-                return s
-              }
-
-              # ==================================================
-              # 生成规则规范化 Key
-              #
-              # 用于识别：
-              #
-              # host-suffix,example.com
-              # HOST-SUFFIX, example.com
-              # host-suffix, example.com.
-              #
-              # 为同一条规则
-              # ==================================================
-              function normalize_rule(s,    n,prefix,value) {
-
-                s = trim(s)
-
-                n = split(s, parts, ",")
-
-                if (n < 2) {
-                  return tolower(s)
-                }
-
-                prefix = tolower(trim(parts[1]))
-                value  = trim(parts[2])
-
-                # ----------------------------------------------
-                # 域名类规则
-                # ----------------------------------------------
-                if (
-                  prefix == "host" ||
-                  prefix == "host-suffix" ||
-                  prefix == "host-keyword" ||
-                  prefix == "host-wildcard" ||
-                  prefix == "domain" ||
-                  prefix == "domain-suffix" ||
-                  prefix == "domain-keyword" ||
-                  prefix == "domain-regex"
-                ) {
-                  value = normalize_domain(value)
-                }
-
-                return prefix "," tolower(value)
-              }
-
-              # ==================================================
-              # 空行
-              # ==================================================
-              /^[[:space:]]*$/ {
-                print
-                next
-              }
-
-              # ==================================================
-              # 注释
-              # ==================================================
-              /^[[:space:]]*(#|;|\/\/)/ {
-                print
-                next
-              }
-
-              {
-                line = $0
-
-                # =================================================
-                # 1. 生成规范化 Key
-                # =================================================
-                key = normalize_rule(line)
-
-                # =================================================
-                # 2. 普通规则完全去重
-                # =================================================
-                if (key in seen) {
-                  duplicate_count++
-                  next
-                }
-
-                seen[key] = 1
-
-                # =================================================
-                # 3. host-suffix 单独记录
-                #
-                # 最后统一判断父子关系
-                # =================================================
-                n = split(line, parts, ",")
-
-                if (
-                  n >= 2 &&
-                  tolower(trim(parts[1])) == "host-suffix"
-                ) {
-
-                  domain = normalize_domain(parts[2])
-
-                  # 已经存在完全相同的 host-suffix
-                  if (domain in suffix_seen) {
-                    duplicate_count++
-                    next
-                  }
-
-                  suffix_seen[domain] = 1
-
-                  suffix_domain[++suffix_count] = domain
-                  suffix_line[suffix_count] = line
-                  suffix_key[suffix_count] = key
-
-                  # 记录原始位置
-                  suffix_position[suffix_count] = NR
-
-                  next
-                }
-
-                # =================================================
-                # 4. 普通规则记录
-                # =================================================
-                normal_line[++normal_count] = line
-                normal_position[normal_count] = NR
-              }
-
-              END {
-
-                # ==================================================
-                # 5. 判断 host-suffix 是否被父域名覆盖
-                # ==================================================
-                for (i = 1; i <= suffix_count; i++) {
-
-                  child = suffix_domain[i]
-                  covered = 0
-
-                  for (j = 1; j <= suffix_count; j++) {
-
-                    if (i == j) {
+          from pathlib import Path
+          ROOT = Path("qx")
+          total_duplicate = 0
+          total_keyword = 0
+          total_suffix = 0
+          total_host = 0
+          def normalize_domain(value):
+              return value.strip().lower().rstrip(".")
+          def parse_rule(line):
+              text = line.strip()
+              if not text:
+                  return None
+              if text.startswith("#") or text.startswith(";") or text.startswith("//"):
+                  return None
+              parts = [x.strip() for x in text.split(",")]
+              if not parts:
+                  return None
+              rule_type = parts[0].lower()
+              if len(parts) < 2:
+                  return rule_type, None, parts
+              return rule_type, normalize_domain(parts[1]), parts
+          def is_comment_or_blank(line):
+              s = line.strip()
+              return (
+                  not s
+                  or s.startswith("#")
+                  or s.startswith(";")
+                  or s.startswith("//")
+              )
+          for path in sorted(ROOT.rglob("*.snippet")):
+              print()
+              print("=" * 50)
+              print(f"Processing: {path}")
+              print("=" * 50)
+              original = path.read_text(encoding="utf-8")
+              original_lines = original.splitlines(keepends=True)
+              parsed = []
+              seen = set()
+              keywords = []
+              suffixes = []
+              duplicate_count = 0
+              # ----------------------------------------
+              # 第一阶段：
+              # 保留顺序 + 删除完全重复规则
+              # ----------------------------------------
+              for line in original_lines:
+                  if is_comment_or_blank(line):
+                      parsed.append({
+                          "line": line,
+                          "type": None,
+                          "domain": None,
+                          "key": None,
+                      })
                       continue
-                    }
-
-                    parent = suffix_domain[j]
-
-                    # --------------------------------------------
-                    # 完全相同已经在前面去重
-                    # --------------------------------------------
-
-                    # --------------------------------------------
-                    # child 是 parent 的子域名
-                    #
-                    # a.example.com
-                    #       ↓
-                    # example.com
-                    # --------------------------------------------
-                    if (child ~ ("\\." parent "$")) {
-                      covered = 1
-                      break
-                    }
-                  }
-
-                  if (!covered) {
-                    keep_suffix[i] = 1
-                  }
-                }
-
-                # ==================================================
-                # 6. 合并普通规则 + host-suffix
-                #    按原始文件行号恢复顺序
-                # ==================================================
-
-                for (i = 1; i <= normal_count; i++) {
-
-                  output_position[++total] = normal_position[i]
-                  output_line[total] = normal_line[i]
-                }
-
-                for (i = 1; i <= suffix_count; i++) {
-
-                  if (keep_suffix[i]) {
-
-                    output_position[++total] = suffix_position[i]
-                    output_line[total] = suffix_line[i]
-                  }
-                }
-
-                # ==================================================
-                # 7. 按原始位置排序
-                # ==================================================
-                for (i = 1; i <= total; i++) {
-
-                  for (j = i + 1; j <= total; j++) {
-
-                    if (output_position[j] < output_position[i]) {
-
-                      tmp_pos = output_position[i]
-                      output_position[i] = output_position[j]
-                      output_position[j] = tmp_pos
-
-                      tmp_line = output_line[i]
-                      output_line[i] = output_line[j]
-                      output_line[j] = tmp_line
-                    }
-                  }
-                }
-
-                # ==================================================
-                # 8. 输出
-                # ==================================================
-                for (i = 1; i <= total; i++) {
-                  print output_line[i]
-                }
-
-                if (duplicate_count > 0) {
-                  print \
-                    "Removed duplicate/redundant rules: " \
-                    duplicate_count \
-                    > "/dev/stderr"
-                }
-              }
-            ' "$filepath" > "$tmp"
-
-            # ====================================================
-            # 只有真正发生变化才替换
-            # ====================================================
-            if ! cmp -s "$filepath" "$tmp"; then
-              mv "$tmp" "$filepath"
-              changed=1
-              echo "Changed: $filepath"
-            else
-              rm -f "$tmp"
-              echo "Unchanged: $filepath"
-            fi
-
-          done < <(
-            find qx \
-              -type f \
-              -name '*.snippet' \
-              -print0
+                  result = parse_rule(line)
+                  if result is None:
+                      parsed.append({
+                          "line": line,
+                          "type": None,
+                          "domain": None,
+                          "key": None,
+                      })
+                      continue
+                  rule_type, domain, parts = result
+                  # 完整规则字段作为重复判断依据
+                  key = tuple(
+                      x.strip().lower()
+                      for x in parts
+                  )
+                  if key in seen:
+                      duplicate_count += 1
+                      continue
+                  seen.add(key)
+                  parsed.append({
+                      "line": line,
+                      "type": rule_type,
+                      "domain": domain,
+                      "key": key,
+                  })
+                  if rule_type == "host-keyword" and domain:
+                      keywords.append(domain)
+                  elif rule_type == "host-suffix" and domain:
+                      suffixes.append(domain)
+              # ----------------------------------------
+              # 第二阶段：
+              # host-keyword 优先
+              # ----------------------------------------
+              removed_keyword = set()
+              for i, item in enumerate(parsed):
+                  rule_type = item["type"]
+                  domain = item["domain"]
+                  if rule_type not in ("host", "host-suffix"):
+                      continue
+                  if not domain:
+                      continue
+                  for keyword in keywords:
+                      if keyword in domain:
+                          removed_keyword.add(i)
+                          break
+              # ----------------------------------------
+              # 第三阶段：
+              # host-suffix 覆盖子域
+              # ----------------------------------------
+              removed_suffix = set()
+              # 去掉重复 suffix，避免自己匹配自己
+              unique_suffixes = sorted(
+                  set(suffixes),
+                  key=len
+              )
+              for i, item in enumerate(parsed):
+                  if i in removed_keyword:
+                      continue
+                  if item["type"] != "host-suffix":
+                      continue
+                  domain = item["domain"]
+                  if not domain:
+                      continue
+                  for suffix in unique_suffixes:
+                      if domain == suffix:
+                          continue
+                      if domain.endswith("." + suffix):
+                          removed_suffix.add(i)
+                          break
+              # ----------------------------------------
+              # 第四阶段：
+              # host 被 host-suffix 覆盖
+              # ----------------------------------------
+              removed_host = set()
+              for i, item in enumerate(parsed):
+                  if i in removed_keyword:
+                      continue
+                  if item["type"] != "host":
+                      continue
+                  domain = item["domain"]
+                  if not domain:
+                      continue
+                  for suffix in unique_suffixes:
+                      if domain == suffix or domain.endswith("." + suffix):
+                          removed_host.add(i)
+                          break
+              # ----------------------------------------
+              # 最终输出
+              # ----------------------------------------
+              output = []
+              for i, item in enumerate(parsed):
+                  if i in removed_keyword:
+                      continue
+                  if i in removed_suffix:
+                      continue
+                  if i in removed_host:
+                      continue
+                  output.append(item["line"])
+              new_content = "".join(output)
+              # ----------------------------------------
+              # 强制检查并写回
+              # ----------------------------------------
+              changed = new_content != original
+              print(f"Original lines : {len(original_lines)}")
+              print(f"New lines      : {len(output)}")
+              print(f"Removed duplicate: {duplicate_count}")
+              print(f"Removed by keyword: {len(removed_keyword)}")
+              print(f"Removed by suffix: {len(removed_suffix)}")
+              print(f"Removed host: {len(removed_host)}")
+              print(f"Changed: {changed}")
+              if changed:
+                  path.write_text(
+                      new_content,
+                      encoding="utf-8",
+                      newline=""
+                  )
+                  # 写回后立即验证
+                  verify = path.read_text(encoding="utf-8")
+                  if verify != new_content:
+                      raise RuntimeError(
+                          f"Write verification failed: {path}"
+                      )
+                  print(f"UPDATED: {path}")
+              else:
+                  print(f"UNCHANGED: {path}")
+              total_duplicate += duplicate_count
+              total_keyword += len(removed_keyword)
+              total_suffix += len(removed_suffix)
+              total_host += len(removed_host)
+          print()
+          print("=" * 50)
+          print("TOTAL")
+          print("=" * 50)
+          print(f"Removed duplicate : {total_duplicate}")
+          print(f"Removed keyword  : {total_keyword}")
+          print(f"Removed suffix   : {total_suffix}")
+          print(f"Removed host     : {total_host}")
+          print(
+              f"Removed total    : "
+              f"{total_duplicate + total_keyword + total_suffix + total_host}"
           )
-
-          echo
-          echo "========================================"
-          if [[ "$changed" == "1" ]]; then
-            echo "Deduplication completed: files changed."
-          else
-            echo "Deduplication completed: no changes."
-          fi
-          echo "========================================"
-
-      - name: Show changes
+      - name: Check changes
         run: |
+          echo "===== Git Status ====="
           git status --short
-
-      - name: Commit and push changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+          echo
+          echo "===== Git Diff ====="
+          git diff -- qx/
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
-          commit_message: "chore: deduplicate qx rules [skip ci]"
-          branch: ${{ github.ref_name }}
+          commit_message: "chore: deduplicate QX rules"
           file_pattern: "qx/**/*.snippet"
-          commit_user_name: "github-actions[bot]"
-          commit_user_email: "41898282+github-actions[bot]@users.noreply.github.com"
