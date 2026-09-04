@@ -190,9 +190,6 @@ ads.95516.com
 ads.cup.com.cn
 
 #httpdns
-aedns.weixin.qq.com
-dns.weixin.qq.com
-dns.weixin.qq.com.cn
 42.81.232.18/32
 42.187.182.106/32
 42.187.182.123/32
@@ -210,7 +207,6 @@ httpdns.baidubce.com
 httpdns.bcelive.com
 180.76.76.200/32
 180.76.76.220/32
-httpdns.bilivideo.com
 httpdns.c.cdnhwc2.com
 doh.iqiyi.com
 dns.jd.com
@@ -373,7 +369,6 @@ URL-REGEX,/\d+/sign_d
 deepermobile.com
 
 blackhole.m.jd.com
-dns.jd.com
 jddebug.com
 icostapp.com
 browser-intake-datadoghq.com
