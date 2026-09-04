@@ -47,7 +47,10 @@ jobs:
 
           mkdir -p .tmp
 
+          echo "Python:"
           python3 --version
+
+          echo "Curl:"
           curl --version | head -n 1
 
       # ==========================================================
@@ -58,6 +61,10 @@ jobs:
         run: |
           set -euo pipefail
 
+          echo "========================================"
+          echo "Downloading source 1"
+          echo "========================================"
+
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
@@ -66,6 +73,10 @@ jobs:
             --max-time 180 \
             -o .tmp/source-1.txt \
             "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/ad.txt"
+
+          echo "========================================"
+          echo "Downloading source 2"
+          echo "========================================"
 
           curl -fL \
             --retry 5 \
@@ -79,11 +90,12 @@ jobs:
           test -s .tmp/source-1.txt
           test -s .tmp/source-2.txt
 
-          echo "Source 1: $(wc -l < .tmp/source-1.txt) lines"
-          echo "Source 2: $(wc -l < .tmp/source-2.txt) lines"
+          echo
+          echo "Source 1 lines: $(wc -l < .tmp/source-1.txt)"
+          echo "Source 2 lines: $(wc -l < .tmp/source-2.txt)"
 
       # ==========================================================
-      # 4. Python merge / semantic dedup / generate
+      # 4. Python processing
       # ==========================================================
       - name: Process rules
         shell: bash
@@ -92,7 +104,9 @@ jobs:
 
           python3 <<'PY'
           from pathlib import Path
+          from datetime import date
           import re
+
 
           # ======================================================
           # Configuration
@@ -114,17 +128,20 @@ jobs:
               "DOMAIN-SET",
           }
 
-          # Invisible / hidden Unicode characters that should not
-          # survive into the generated rule files.
+
+          # ======================================================
+          # Hidden Unicode characters
+          # ======================================================
+
           HIDDEN_CHARS = dict.fromkeys([
-              "\ufeff",
-              "\u200b",
-              "\u200c",
-              "\u200d",
-              "\u2060",
-              "\u00ad",
-              "\u200e",
-              "\u200f",
+              "\ufeff",  # BOM
+              "\u200b",  # zero width space
+              "\u200c",  # zero width non-joiner
+              "\u200d",  # zero width joiner
+              "\u2060",  # word joiner
+              "\u00ad",  # soft hyphen
+              "\u200e",  # left-to-right mark
+              "\u200f",  # right-to-left mark
               "\u202a",
               "\u202b",
               "\u202c",
@@ -136,15 +153,18 @@ jobs:
               "\u2069",
           ], None)
 
-          COMMENT_RE = re.compile(r"\s*#.*$")
 
-          # Domain-like value.
-          # Deliberately excludes IP/CIDR from semantic domain
-          # containment checks.
+          # ======================================================
+          # Domain validation
+          # ======================================================
+
           DOMAIN_RE = re.compile(
               r"^(?=.{1,253}$)"
-              r"(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*"
-              r"[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$",
+              r"(?:[a-z0-9]"
+              r"(?:[a-z0-9-]{0,61}[a-z0-9])?"
+              r"\.)*"
+              r"[a-z0-9]"
+              r"(?:[a-z0-9-]{0,61}[a-z0-9])?$",
               re.IGNORECASE,
           )
 
@@ -152,20 +172,39 @@ jobs:
               r"^(?:\d{1,3}\.){3}\d{1,3}$"
           )
 
-          IPV6_RE = re.compile(r":")
 
           # ======================================================
-          # Helpers
+          # Text cleanup
           # ======================================================
 
           def clean_text(text: str) -> str:
+              """
+              Remove hidden Unicode characters and comments.
+
+              Example:
+
+                  DOMAIN,example.com   # comment
+
+              becomes:
+
+                  DOMAIN,example.com
+              """
+
               text = text.translate(HIDDEN_CHARS)
-              text = COMMENT_RE.sub("", text)
+
+              # Same intended behavior as:
+              #
+              # sed 's/[[:space:]]*#.*$//'
+              #
+              text = re.sub(r"\s*#.*$", "", text)
+
               return text.strip()
 
 
           def normalize_value(value: str) -> str:
               value = clean_text(value)
+
+              # Domain rules are case-insensitive.
               value = value.strip().lower()
 
               # Remove only surrounding dots.
@@ -174,22 +213,33 @@ jobs:
               return value
 
 
+          # ======================================================
+          # IP / CIDR detection
+          # ======================================================
+
           def is_ip_or_cidr(value: str) -> bool:
               """
-              CIDR/IP is intentionally excluded from all semantic
-              domain containment logic.
+              IP and CIDR never participate in domain containment.
               """
+
+              # CIDR
               if "/" in value:
                   return True
 
+              # IPv4
               if IPV4_RE.fullmatch(value):
                   return True
 
-              if IPV6_RE.search(value):
+              # IPv6
+              if ":" in value:
                   return True
 
               return False
 
+
+          # ======================================================
+          # Domain detection
+          # ======================================================
 
           def is_domain(value: str) -> bool:
               if not value:
@@ -204,13 +254,16 @@ jobs:
               return bool(DOMAIN_RE.fullmatch(value))
 
 
+          # ======================================================
+          # Parse rule
+          # ======================================================
+
           def parse_rule(line: str):
               line = clean_text(line)
 
               if not line:
                   return None
 
-              # Ignore ordinary comments.
               if line.startswith("#"):
                   return None
 
@@ -228,26 +281,39 @@ jobs:
               if not value:
                   return None
 
-              # Do not allow embedded comma or whitespace.
+              # No embedded comma.
               if "," in value:
                   return None
 
+              # No whitespace.
               if any(ch.isspace() for ch in value):
                   return None
 
               return rule_type, value
 
 
+          # ======================================================
+          # DOMAIN-SUFFIX coverage
+          # ======================================================
+
           def suffix_covers(domain: str, suffix: str) -> bool:
               """
-              DOMAIN-SUFFIX semantics:
+              DOMAIN-SUFFIX,suffix
 
-                  example.com
-                  ├── example.com
-                  ├── www.example.com
-                  └── a.b.example.com
+              covers:
 
-              Therefore both exact match and subdomains are covered.
+                  suffix
+                  x.suffix
+                  a.b.suffix
+
+              Examples:
+
+                  suffix_covers(
+                      "ad.life.360.cn",
+                      "360.cn"
+                  )
+
+                  -> True
               """
 
               if not is_domain(domain):
@@ -262,10 +328,13 @@ jobs:
               )
 
 
+          # ======================================================
+          # Find whether a suffix has a broader surviving suffix
+          # ======================================================
+
           def has_parent_suffix(domain: str, suffix_set: set[str]) -> bool:
               """
-              Determine whether `domain` is covered by a MORE GENERAL
-              DOMAIN-SUFFIX rule.
+              Check only parent domains.
 
               Example:
 
@@ -277,9 +346,8 @@ jobs:
                   360.cn
                   cn
 
-              If 360.cn exists, the specific rule is redundant.
-
-              This is O(number of labels), not O(number of rules).
+              It does NOT compare every rule against every rule,
+              avoiding O(N²) behavior.
               """
 
               if not is_domain(domain):
@@ -287,11 +355,9 @@ jobs:
 
               parts = domain.split(".")
 
-              # Need at least one parent.
               if len(parts) < 2:
                   return False
 
-              # Start from immediate parent.
               for i in range(1, len(parts)):
                   parent = ".".join(parts[i:])
 
@@ -302,25 +368,40 @@ jobs:
 
 
           # ======================================================
-          # 1. Parse all sources
+          # 1. Read and parse all sources
           # ======================================================
-
-          parsed = []
 
           total_lines = 0
           valid_lines = 0
 
+          parsed_rules = []
+
           for source in SOURCES:
-              with source.open("r", encoding="utf-8", errors="replace") as f:
+
+              print()
+              print("=" * 40)
+              print(f"Processing source: {source}")
+              print("=" * 40)
+
+              with source.open(
+                  "r",
+                  encoding="utf-8",
+                  errors="replace",
+              ) as f:
+
                   for raw_line in f:
                       total_lines += 1
 
                       rule = parse_rule(raw_line)
 
-                      if rule is not None:
-                          parsed.append(rule)
-                          valid_lines += 1
+                      if rule is None:
+                          continue
 
+                      parsed_rules.append(rule)
+                      valid_lines += 1
+
+
+          print()
           print(f"Total source lines : {total_lines}")
           print(f"Valid rules        : {valid_lines}")
 
@@ -332,21 +413,25 @@ jobs:
           unique_rules = []
           seen = set()
 
-          for rule in parsed:
+          for rule in parsed_rules:
+
               if rule in seen:
                   continue
 
               seen.add(rule)
               unique_rules.append(rule)
 
-          print(f"After exact dedup   : {len(unique_rules)}")
+
+          print(
+              f"After exact dedup  : {len(unique_rules)}"
+          )
 
 
           # ======================================================
-          # 3. Collect DOMAIN-SUFFIX
+          # 3. Collect DOMAIN-SUFFIX rules
           # ======================================================
 
-          suffix_domains = {
+          all_suffixes = {
               value
               for rule_type, value in unique_rules
               if rule_type == "DOMAIN-SUFFIX"
@@ -363,28 +448,32 @@ jobs:
           # DOMAIN-SUFFIX,360.cn
           # DOMAIN-SUFFIX,life.360.cn
           #
-          # Keep only:
+          # becomes:
           #
           # DOMAIN-SUFFIX,360.cn
-          #
-          # Because 360.cn already covers life.360.cn.
           #
           # ======================================================
 
           surviving_suffixes = set()
 
+          # Shorter / broader domains first.
           for suffix in sorted(
-              suffix_domains,
-              key=lambda x: (x.count("."), x)
+              all_suffixes,
+              key=lambda x: (x.count("."), x),
           ):
-              if has_parent_suffix(suffix, surviving_suffixes):
+
+              if has_parent_suffix(
+                  suffix,
+                  surviving_suffixes,
+              ):
                   continue
 
               surviving_suffixes.add(suffix)
 
 
+          print()
           print(
-              f"DOMAIN-SUFFIX before : {len(suffix_domains)}"
+              f"DOMAIN-SUFFIX before : {len(all_suffixes)}"
           )
 
           print(
@@ -396,9 +485,7 @@ jobs:
           # 5. Semantic cross-type dedup
           # ======================================================
           #
-          # IMPORTANT:
-          #
-          # DOMAIN-SUFFIX can cover:
+          # DOMAIN-SUFFIX covers:
           #
           #   DOMAIN
           #   DOMAIN-SET
@@ -406,9 +493,9 @@ jobs:
           #
           # DOMAIN-KEYWORD NEVER participates.
           #
-          # DOMAIN itself NEVER covers another rule.
+          # DOMAIN NEVER covers anything.
           #
-          # DOMAIN-SET itself NEVER covers another rule.
+          # DOMAIN-SET NEVER covers anything.
           #
           # ======================================================
 
@@ -418,60 +505,106 @@ jobs:
           removed_domain_set = 0
           removed_suffix = 0
 
+
           for rule_type, value in unique_rules:
+
+              # --------------------------------------------------
+              # DOMAIN-SUFFIX
+              # --------------------------------------------------
 
               if rule_type == "DOMAIN-SUFFIX":
 
-                  # Keep only the non-redundant suffixes.
                   if value not in surviving_suffixes:
                       removed_suffix += 1
                       continue
 
-                  final_rules.append((rule_type, value))
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+
                   continue
 
+
+              # --------------------------------------------------
+              # DOMAIN
+              # --------------------------------------------------
 
               if rule_type == "DOMAIN":
 
                   if is_domain(value):
-                      if any(
-                          suffix_covers(value, suffix)
+
+                      covered = any(
+                          suffix_covers(
+                              value,
+                              suffix,
+                          )
                           for suffix in surviving_suffixes
-                      ):
+                      )
+
+                      if covered:
                           removed_domain += 1
                           continue
 
-                  final_rules.append((rule_type, value))
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+
                   continue
 
+
+              # --------------------------------------------------
+              # DOMAIN-SET
+              # --------------------------------------------------
 
               if rule_type == "DOMAIN-SET":
 
                   if is_domain(value):
-                      if any(
-                          suffix_covers(value, suffix)
+
+                      covered = any(
+                          suffix_covers(
+                              value,
+                              suffix,
+                          )
                           for suffix in surviving_suffixes
-                      ):
+                      )
+
+                      if covered:
                           removed_domain_set += 1
                           continue
 
-                  final_rules.append((rule_type, value))
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+
                   continue
 
 
-              # DOMAIN-KEYWORD:
+              # --------------------------------------------------
+              # DOMAIN-KEYWORD
+              # --------------------------------------------------
               #
               # ALWAYS KEEP.
               #
-              # It has completely different matching semantics.
+              # Example:
               #
+              # DOMAIN-SUFFIX,360.cn
+              # DOMAIN-KEYWORD,360
+              #
+              # Both remain.
+              #
+              # --------------------------------------------------
+
               if rule_type == "DOMAIN-KEYWORD":
-                  final_rules.append((rule_type, value))
+
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+
                   continue
 
 
           # ======================================================
-          # 6. Stable sort
+          # 6. Stable sorting
           # ======================================================
 
           TYPE_ORDER = {
@@ -481,55 +614,77 @@ jobs:
               "DOMAIN-SET": 3,
           }
 
+
           final_rules.sort(
-              key=lambda x: (
-                  TYPE_ORDER[x[0]],
-                  x[1],
+              key=lambda rule: (
+                  TYPE_ORDER[rule[0]],
+                  rule[1],
               )
           )
 
 
           # ======================================================
-          # 7. Final exact duplicate safety check
+          # 7. Final exact duplicate safety
           # ======================================================
 
-          checked = []
+          checked_rules = []
           final_seen = set()
 
           for rule in final_rules:
+
               if rule in final_seen:
                   continue
 
               final_seen.add(rule)
-              checked.append(rule)
-
-          final_rules = checked
+              checked_rules.append(rule)
 
 
-          print(f"Final rules        : {len(final_rules)}")
-          print(f"Removed DOMAIN     : {removed_domain}")
-          print(f"Removed DOMAIN-SET : {removed_domain_set}")
-          print(f"Removed SUFFIX     : {removed_suffix}")
+          final_rules = checked_rules
 
 
           # ======================================================
-          # 8. Generate Surge
+          # 8. Statistics
           # ======================================================
 
-          from datetime import date
+          print()
+          print("=" * 40)
+          print("Deduplication statistics")
+          print("=" * 40)
 
-          header = (
-              f"# Auto merged Surge rules ({date.today().isoformat()})"
+          print(
+              f"Final rules        : {len(final_rules)}"
           )
 
-          surge_lines = [header]
+          print(
+              f"Removed DOMAIN     : {removed_domain}"
+          )
 
-          for rule_type, value in final_rules:
-              surge_lines.append(f"{rule_type},{value}")
+          print(
+              f"Removed DOMAIN-SET : {removed_domain_set}"
+          )
+
+          print(
+              f"Removed SUFFIX     : {removed_suffix}"
+          )
 
 
           # ======================================================
-          # 9. Generate MosDNS
+          # 9. Generate Surge
+          # ======================================================
+
+          surge_lines = [
+              f"# Auto merged Surge rules ({date.today().isoformat()})"
+          ]
+
+          for rule_type, value in final_rules:
+
+              surge_lines.append(
+                  f"{rule_type},{value}"
+              )
+
+
+          # ======================================================
+          # 10. Generate MosDNS
           # ======================================================
 
           mosdns_lines = []
@@ -537,20 +692,28 @@ jobs:
           for rule_type, value in final_rules:
 
               if rule_type == "DOMAIN":
-                  mosdns_lines.append(f"full:{value}")
+                  mosdns_lines.append(
+                      f"full:{value}"
+                  )
 
               elif rule_type == "DOMAIN-SUFFIX":
-                  mosdns_lines.append(f"domain:{value}")
+                  mosdns_lines.append(
+                      f"domain:{value}"
+                  )
 
               elif rule_type == "DOMAIN-KEYWORD":
-                  mosdns_lines.append(f"keyword:{value}")
+                  mosdns_lines.append(
+                      f"keyword:{value}"
+                  )
 
               elif rule_type == "DOMAIN-SET":
-                  mosdns_lines.append(f"full:{value}")
+                  mosdns_lines.append(
+                      f"full:{value}"
+                  )
 
 
           # ======================================================
-          # 10. Generate Quantumult X
+          # 11. Generate Quantumult X
           # ======================================================
 
           qx_lines = []
@@ -558,32 +721,39 @@ jobs:
           for rule_type, value in final_rules:
 
               if rule_type == "DOMAIN":
+
                   qx_lines.append(
                       f"host,{value},reject"
                   )
 
               elif rule_type == "DOMAIN-SUFFIX":
+
                   qx_lines.append(
                       f"host-suffix,{value},reject"
                   )
 
               elif rule_type == "DOMAIN-KEYWORD":
+
                   qx_lines.append(
                       f"host-keyword,{value},reject"
                   )
 
               elif rule_type == "DOMAIN-SET":
+
                   qx_lines.append(
                       f"host,{value},reject"
                   )
 
 
           # ======================================================
-          # 11. Atomic output
+          # 12. Atomic file write
           # ======================================================
 
           def atomic_write(path: Path, lines):
-              tmp = path.with_suffix(path.suffix + ".tmp")
+
+              tmp = path.with_suffix(
+                  path.suffix + ".tmp"
+              )
 
               data = "\n".join(lines) + "\n"
 
@@ -613,36 +783,70 @@ jobs:
 
 
           # ======================================================
-          # 12. Show important example
+          # 13. Explicit coverage test
           # ======================================================
 
-          target = "ad.life.360.cn"
-
           print()
-          print("Coverage check:")
-          print(f"  DOMAIN,{target}")
+          print("=" * 40)
+          print("Coverage test")
+          print("=" * 40)
 
-          covering = [
+          test_domain = "ad.life.360.cn"
+
+          covering_suffixes = sorted(
               suffix
               for suffix in surviving_suffixes
-              if suffix_covers(target, suffix)
-          ]
+              if suffix_covers(
+                  test_domain,
+                  suffix,
+              )
+          )
 
-          if covering:
+          print(
+              f"DOMAIN,{test_domain}"
+          )
+
+          if covering_suffixes:
+
               print(
-                  "  Covered by DOMAIN-SUFFIX:"
+                  "Covered by:"
               )
 
-              for suffix in sorted(covering):
+              for suffix in covering_suffixes:
                   print(
-                      f"    DOMAIN-SUFFIX,{suffix}"
+                      f"  DOMAIN-SUFFIX,{suffix}"
                   )
 
+          else:
+
+              print(
+                  "No DOMAIN-SUFFIX coverage"
+              )
+
+
+          # ======================================================
+          # 14. Final output statistics
+          # ======================================================
+
           print()
-          print("Generated:")
-          print(f"  {OUTPUT_SURGE}")
-          print(f"  {OUTPUT_MOSDNS}")
-          print(f"  {OUTPUT_QX}")
+          print("=" * 40)
+          print("Generated files")
+          print("=" * 40)
+
+          print(
+              f"{OUTPUT_SURGE}: "
+              f"{len(surge_lines) - 1} rules"
+          )
+
+          print(
+              f"{OUTPUT_MOSDNS}: "
+              f"{len(mosdns_lines)} rules"
+          )
+
+          print(
+              f"{OUTPUT_QX}: "
+              f"{len(qx_lines)} rules"
+          )
 
           PY
 
@@ -661,47 +865,67 @@ jobs:
           path = Path("ads-latest.txt")
 
           if not path.exists():
-              raise SystemExit("ads-latest.txt not found")
+              raise SystemExit(
+                  "ads-latest.txt not found"
+              )
 
+          # Python regex:
+          # use \s instead of POSIX [:space:].
           rule_re = re.compile(
               r"^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),"
-              r"[^,[:space:]]+$"
+              r"[^,\s]+$"
           )
 
           seen = set()
           count = 0
 
           for line_no, raw in enumerate(
-              path.read_text(encoding="utf-8").splitlines(),
-              1
+              path.read_text(
+                  encoding="utf-8"
+              ).splitlines(),
+              1,
           ):
+
               line = raw.strip()
 
-              if not line or line.startswith("#"):
+              if not line:
+                  continue
+
+              if line.startswith("#"):
                   continue
 
               if not rule_re.fullmatch(line):
                   raise SystemExit(
-                      f"Invalid Surge rule at line {line_no}: {line}"
+                      f"Invalid Surge rule at line "
+                      f"{line_no}: {line}"
                   )
 
               if line in seen:
                   raise SystemExit(
-                      f"Duplicate Surge rule at line {line_no}: {line}"
+                      f"Duplicate Surge rule at line "
+                      f"{line_no}: {line}"
                   )
 
               seen.add(line)
               count += 1
 
-              if any(ord(ch) > 127 for ch in line):
+              if any(
+                  ord(ch) > 127
+                  for ch in line
+              ):
                   raise SystemExit(
-                      f"Non-ASCII character at line {line_no}: {line}"
+                      f"Non-ASCII character at line "
+                      f"{line_no}: {line}"
                   )
 
           if count == 0:
-              raise SystemExit("No Surge rules generated")
+              raise SystemExit(
+                  "No Surge rules generated"
+              )
 
-          print(f"Surge validation OK: {count} rules")
+          print(
+              f"Surge validation OK: {count} rules"
+          )
           PY
 
       # ==========================================================
@@ -718,17 +942,25 @@ jobs:
 
           path = Path("ads-mosdns.txt")
 
+          if not path.exists():
+              raise SystemExit(
+                  "ads-mosdns.txt not found"
+              )
+
           rule_re = re.compile(
-              r"^(domain|full|keyword):[^[:space:]]+$"
+              r"^(domain|full|keyword):\S+$"
           )
 
           seen = set()
           count = 0
 
           for line_no, raw in enumerate(
-              path.read_text(encoding="utf-8").splitlines(),
-              1
+              path.read_text(
+                  encoding="utf-8"
+              ).splitlines(),
+              1,
           ):
+
               line = raw.strip()
 
               if not line:
@@ -736,21 +968,27 @@ jobs:
 
               if not rule_re.fullmatch(line):
                   raise SystemExit(
-                      f"Invalid MosDNS rule at line {line_no}: {line}"
+                      f"Invalid MosDNS rule at line "
+                      f"{line_no}: {line}"
                   )
 
               if line in seen:
                   raise SystemExit(
-                      f"Duplicate MosDNS rule at line {line_no}: {line}"
+                      f"Duplicate MosDNS rule at line "
+                      f"{line_no}: {line}"
                   )
 
               seen.add(line)
               count += 1
 
           if count == 0:
-              raise SystemExit("No MosDNS rules generated")
+              raise SystemExit(
+                  "No MosDNS rules generated"
+              )
 
-          print(f"MosDNS validation OK: {count} rules")
+          print(
+              f"MosDNS validation OK: {count} rules"
+          )
           PY
 
       # ==========================================================
@@ -767,18 +1005,26 @@ jobs:
 
           path = Path("ads-qx.snippet")
 
+          if not path.exists():
+              raise SystemExit(
+                  "ads-qx.snippet not found"
+              )
+
           rule_re = re.compile(
               r"^host(-suffix|-keyword)?,"
-              r"[^,[:space:]]+,reject$"
+              r"[^,\s]+,reject$"
           )
 
           seen = set()
           count = 0
 
           for line_no, raw in enumerate(
-              path.read_text(encoding="utf-8").splitlines(),
-              1
+              path.read_text(
+                  encoding="utf-8"
+              ).splitlines(),
+              1,
           ):
+
               line = raw.strip()
 
               if not line:
@@ -786,21 +1032,27 @@ jobs:
 
               if not rule_re.fullmatch(line):
                   raise SystemExit(
-                      f"Invalid QX rule at line {line_no}: {line}"
+                      f"Invalid QX rule at line "
+                      f"{line_no}: {line}"
                   )
 
               if line in seen:
                   raise SystemExit(
-                      f"Duplicate QX rule at line {line_no}: {line}"
+                      f"Duplicate QX rule at line "
+                      f"{line_no}: {line}"
                   )
 
               seen.add(line)
               count += 1
 
           if count == 0:
-              raise SystemExit("No QX rules generated")
+              raise SystemExit(
+                  "No QX rules generated"
+              )
 
-          print(f"Quantumult X validation OK: {count} rules")
+          print(
+              f"Quantumult X validation OK: {count} rules"
+          )
           PY
 
       # ==========================================================
@@ -879,8 +1131,11 @@ jobs:
         run: |
           set -euo pipefail
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config user.name \
+            "github-actions[bot]"
+
+          git config user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
 
           git add \
             ads-latest.txt \
@@ -895,6 +1150,7 @@ jobs:
           echo "Changes detected:"
           git diff --cached --stat
 
-          git commit -m "chore: update ad rules"
+          git commit \
+            -m "chore: update ad rules"
 
           git push
