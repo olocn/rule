@@ -54,317 +54,270 @@ jobs:
             tmp="${filepath}.tmp"
 
             awk '
-              # ==================================================
-              # 去除首尾空格
-              # ==================================================
-              function trim(s) {
+            # =====================================================
+            # 基础函数
+            # =====================================================
+
+            function trim(s) {
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", s)
                 return s
-              }
+            }
 
-              # ==================================================
-              # 小写
-              # ==================================================
-              function lower(s) {
+            function lower(s) {
                 return tolower(trim(s))
-              }
+            }
 
-              # ==================================================
-              # 规范化域名
-              # ==================================================
-              function domain_normalize(s) {
+            function normalize_domain(s) {
                 s = lower(s)
                 sub(/\.$/, "", s)
                 return s
-              }
+            }
 
-              # ==================================================
-              # 获取规则类型
-              # ==================================================
-              function rule_type(line, p) {
-                split(line, p, ",")
-                if (length(p[1]) == 0)
-                  return ""
+            function get_type(s, p) {
+                split(s, p, ",")
                 return lower(p[1])
-              }
+            }
 
-              # ==================================================
-              # 获取规则值
-              # ==================================================
-              function rule_value(line, p) {
-                split(line, p, ",")
-                if (length(p[2]) == 0)
-                  return ""
+            function get_value(s, p) {
+                split(s, p, ",")
                 return trim(p[2])
-              }
+            }
 
-              # ==================================================
-              # 生成规范化 Key
-              # ==================================================
-              function rule_key(line, type, value) {
+            # =====================================================
+            # 判断 host-keyword 是否匹配域名
+            # =====================================================
 
-                type = rule_type(line)
-                value = rule_value(line)
+            function keyword_match(domain, keyword) {
+                return index(lower(domain), lower(keyword)) > 0
+            }
 
-                if (
-                  type == "host" ||
-                  type == "host-suffix" ||
-                  type == "host-keyword"
-                ) {
-                  value = domain_normalize(value)
-                } else {
-                  value = lower(value)
+            # =====================================================
+            # 判断 suffix 是否覆盖域名
+            # =====================================================
+
+            function suffix_match(domain, suffix) {
+
+                domain = normalize_domain(domain)
+                suffix = normalize_domain(suffix)
+
+                if (domain == suffix) {
+                    return 1
                 }
 
-                return type "," value
-              }
-
-              # ==================================================
-              # 判断 domain 是否被 suffix 覆盖
-              # ==================================================
-              function suffix_match(domain, suffix) {
-
-                domain = domain_normalize(domain)
-                suffix = domain_normalize(suffix)
-
-                if (domain == suffix)
-                  return 1
-
-                if (domain ~ ("\\." suffix "$"))
-                  return 1
+                if (domain ~ ("\\." suffix "$")) {
+                    return 1
+                }
 
                 return 0
-              }
+            }
 
-              # ==================================================
-              # 判断 keyword 是否匹配 domain
-              # ==================================================
-              function keyword_match(domain, keyword) {
+            # =====================================================
+            # 规范化规则
+            # =====================================================
 
-                domain = lower(domain)
-                keyword = lower(keyword)
+            function rule_key(line, t, v) {
 
-                return index(domain, keyword) > 0
-              }
+                t = get_type(line)
+                v = get_value(line)
 
-              # ==================================================
-              # 空行
-              # ==================================================
-              /^[[:space:]]*$/ {
+                if (t == "host" || t == "host-suffix" || t == "host-keyword") {
+                    v = normalize_domain(v)
+                } else {
+                    v = lower(v)
+                }
+
+                return t "," v
+            }
+
+            # =====================================================
+            # 空行
+            # =====================================================
+
+            /^[[:space:]]*$/ {
                 line[++total] = $0
                 type[total] = "blank"
-                position[total] = NR
                 next
-              }
+            }
 
-              # ==================================================
-              # 注释
-              # ==================================================
-              /^[[:space:]]*(#|;|\/\/)/ {
+            # =====================================================
+            # 注释
+            # =====================================================
+
+            /^[[:space:]]*#/ {
                 line[++total] = $0
                 type[total] = "comment"
-                position[total] = NR
                 next
-              }
+            }
 
-              # ==================================================
-              # 正常规则
-              # ==================================================
-              {
+            /^[[:space:]]*;/ {
+                line[++total] = $0
+                type[total] = "comment"
+                next
+            }
+
+            /^[[:space:]]*\/\// {
+                line[++total] = $0
+                type[total] = "comment"
+                next
+            }
+
+            # =====================================================
+            # 规则
+            # =====================================================
+
+            {
                 current = $0
 
-                t = rule_type(current)
-                v = rule_value(current)
-                k = rule_key(current)
+                t = get_type(current)
+                v = get_value(current)
+                key = rule_key(current)
 
-                # ----------------------------------------------
-                # 完全重复
-                # ----------------------------------------------
-                if (k in seen) {
-                  duplicate_count++
-                  next
+                # -----------------------------------------------
+                # 完全重复规则
+                # -----------------------------------------------
+
+                if (key in seen) {
+                    duplicate_count++
+                    next
                 }
 
-                seen[k] = 1
+                seen[key] = 1
 
-                # ----------------------------------------------
-                # 保存原始行
-                # ----------------------------------------------
-                total++
+                # -----------------------------------------------
+                # 保存原始内容
+                # -----------------------------------------------
 
-                line[total] = current
+                line[++total] = current
                 type[total] = t
                 value[total] = v
-                position[total] = NR
 
-                # ----------------------------------------------
+                # -----------------------------------------------
                 # host-keyword
-                # ----------------------------------------------
+                # -----------------------------------------------
+
                 if (t == "host-keyword") {
-
-                  keyword_count++
-
-                  keyword[keyword_count] = domain_normalize(v)
-
-                  next
+                    keyword[++keyword_count] = normalize_domain(v)
+                    next
                 }
 
-                # ----------------------------------------------
+                # -----------------------------------------------
                 # host-suffix
-                # ----------------------------------------------
+                # -----------------------------------------------
+
                 if (t == "host-suffix") {
-
-                  suffix_count++
-
-                  suffix[suffix_count] = domain_normalize(v)
-
-                  next
+                    suffix[++suffix_count] = normalize_domain(v)
+                    next
                 }
+            }
 
-                # ----------------------------------------------
-                # host
-                # ----------------------------------------------
-                if (t == "host") {
+            END {
 
-                  host_count++
-
-                  host[host_count] = domain_normalize(v)
-
-                  next
-                }
-              }
-
-              END {
-
-                # ==================================================
-                # 第二遍判断哪些规则需要删除
-                # ==================================================
+                # =================================================
+                # 第二遍：
+                # 判断哪些规则应该删除
+                # =================================================
 
                 for (i = 1; i <= total; i++) {
 
-                  t = type[i]
+                    t = type[i]
 
-                  # 空行、注释绝对不删除
-                  if (t == "blank" || t == "comment")
-                    continue
-
-                  v = domain_normalize(value[i])
-
-                  # =================================================
-                  # 1. host / host-suffix 被 host-keyword 覆盖
-                  # =================================================
-
-                  if (t == "host" || t == "host-suffix") {
-
-                    for (k = 1; k <= keyword_count; k++) {
-
-                      if (keyword_match(v, keyword[k])) {
-
-                        remove[i] = 1
-                        keyword_removed++
-
-                        break
-                      }
-                    }
-                  }
-
-                  # =================================================
-                  # 2. host-suffix 被父级 host-suffix 覆盖
-                  # =================================================
-
-                  if (t == "host-suffix" && !remove[i]) {
-
-                    for (k = 1; k <= suffix_count; k++) {
-
-                      parent = suffix[k]
-
-                      if (parent == v)
+                    if (t == "blank" || t == "comment") {
                         continue
-
-                      if (suffix_match(v, parent)) {
-
-                        remove[i] = 1
-                        suffix_removed++
-
-                        break
-                      }
                     }
-                  }
 
-                  # =================================================
-                  # 3. host 被 host-suffix 覆盖
-                  # =================================================
+                    v = normalize_domain(value[i])
 
-                  if (t == "host" && !remove[i]) {
+                    # =================================================
+                    # 1. host / host-suffix 被 host-keyword 覆盖
+                    # =================================================
 
-                    for (k = 1; k <= suffix_count; k++) {
+                    if (t == "host" || t == "host-suffix") {
 
-                      parent = suffix[k]
+                        for (k = 1; k <= keyword_count; k++) {
 
-                      if (suffix_match(v, parent)) {
-
-                        remove[i] = 1
-                        host_removed++
-
-                        break
-                      }
+                            if (keyword_match(v, keyword[k])) {
+                                remove[i] = 1
+                                keyword_removed++
+                                break
+                            }
+                        }
                     }
-                  }
+
+                    # =================================================
+                    # 2. host-suffix 被更高层级 suffix 覆盖
+                    # =================================================
+
+                    if (t == "host-suffix" && !remove[i]) {
+
+                        for (k = 1; k <= suffix_count; k++) {
+
+                            parent = suffix[k]
+
+                            if (parent == v) {
+                                continue
+                            }
+
+                            if (suffix_match(v, parent)) {
+                                remove[i] = 1
+                                suffix_removed++
+                                break
+                            }
+                        }
+                    }
+
+                    # =================================================
+                    # 3. host 被 host-suffix 覆盖
+                    # =================================================
+
+                    if (t == "host" && !remove[i]) {
+
+                        for (k = 1; k <= suffix_count; k++) {
+
+                            if (suffix_match(v, suffix[k])) {
+                                remove[i] = 1
+                                host_removed++
+                                break
+                            }
+                        }
+                    }
                 }
 
-                # ==================================================
-                # 最终按照原始顺序输出
-                # ==================================================
+                # =================================================
+                # 按原始顺序输出
+                # =================================================
 
                 for (i = 1; i <= total; i++) {
 
-                  if (remove[i])
-                    continue
-
-                  print line[i]
+                    if (!remove[i]) {
+                        print line[i]
+                    }
                 }
 
-                # ==================================================
+                # =================================================
                 # 统计
-                # ==================================================
+                # =================================================
 
-                removed_total =
-                  duplicate_count +
-                  keyword_removed +
-                  suffix_removed +
-                  host_removed
+                removed_total = duplicate_count + keyword_removed + suffix_removed + host_removed
 
-                if (removed_total > 0) {
-
-                  print \
-                    "Removed: " removed_total \
-                    " (duplicate=" duplicate_count \
-                    ", keyword=" keyword_removed \
-                    ", suffix=" suffix_removed \
-                    ", host=" host_removed ")" \
-                    > "/dev/stderr"
-                }
-              }
+                print "Removed duplicate: " duplicate_count > "/dev/stderr"
+                print "Removed by keyword: " keyword_removed > "/dev/stderr"
+                print "Removed by suffix: " suffix_removed > "/dev/stderr"
+                print "Removed host: " host_removed > "/dev/stderr"
+                print "Removed total: " removed_total > "/dev/stderr"
+            }
             ' "$filepath" > "$tmp"
 
-            # ====================================================
-            # 只有真正变化才替换
-            # ====================================================
+            # =====================================================
+            # 只有内容发生变化才替换
+            # =====================================================
 
             if ! cmp -s "$filepath" "$tmp"; then
-
               mv "$tmp" "$filepath"
-
               changed=1
-
               echo "Changed: $filepath"
-
             else
-
               rm -f "$tmp"
-
               echo "Unchanged: $filepath"
-
             fi
 
           done < <(
