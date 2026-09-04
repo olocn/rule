@@ -23,513 +23,362 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-
-      # ========================================
-      # Checkout
-      # ========================================
       - name: Checkout
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
 
-
-      # ========================================
-      # Deduplicate QX Rules
-      # ========================================
-      - name: Deduplicate QX Rules
+      # ------------------------------------------------------------
+      # 1. 每个 snippet 内部去重
+      # 2. host-suffix 父域覆盖子域
+      # 3. host-suffix 覆盖 host
+      # ------------------------------------------------------------
+      - name: Deduplicate rules inside each file
         shell: bash
         run: |
           set -euo pipefail
 
-          ROOT="qx"
+          shopt -s nullglob
 
-          total_duplicate=0
-          total_suffix=0
-          total_host=0
-          total_cross_file=0
-
-          mapfile -t files < <(
-            find "$ROOT" \
-              -maxdepth 1 \
-              -type f \
-              -name "*.snippet" \
-              | sort
-          )
-
-          echo "========================================"
-          echo "QX Rule Deduplication"
-          echo "========================================"
-          echo "Found ${#files[@]} snippet files"
-
-
-          if [ "${#files[@]}" -eq 0 ]; then
-            echo "No .snippet files found."
-            exit 0
-          fi
-
-
-          # ============================================================
-          # 1. 文件内部：完全相同规则去重
-          #
-          # host-keyword 不参与覆盖
-          # ============================================================
-
-          for file in "${files[@]}"; do
+          for file in qx/*.snippet; do
+            echo "Processing: $file"
 
             tmp="${file}.tmp"
-            count_file="${file}.count"
+            backup="${file}.bak"
+
+            cp "$file" "$backup"
 
             awk '
-              /^[[:space:]]*$/ {
-                print
+            function trim(s) {
+              gsub(/^[ \t]+|[ \t]+$/, "", s)
+              return s
+            }
+
+            function normalize_rule(s,    a,i) {
+              s = trim(s)
+
+              # 去掉逗号两侧空格
+              gsub(/[ \t]*,[ \t]*/, ",", s)
+
+              # 规则比较不区分大小写
+              return tolower(s)
+            }
+
+            function normalize_domain(s) {
+              s = trim(s)
+              s = tolower(s)
+
+              # 删除末尾的 .
+              sub(/\.$/, "", s)
+
+              return s
+            }
+
+            # child 是否为 parent 的真正子域
+            function is_subdomain(child, parent) {
+              return (
+                length(child) > length(parent) &&
+                substr(child, length(child) - length(parent)) == "." parent
+              )
+            }
+
+            {
+              raw = $0
+
+              # --------------------------------------------------
+              # 注释、空行原样保留
+              # --------------------------------------------------
+              if (raw ~ /^[ \t]*$/ ||
+                  raw ~ /^[ \t]*#/ ||
+                  raw ~ /^[ \t]*;/ ||
+                  raw ~ /^[ \t]*\/\//) {
+                print raw
                 next
               }
 
-              /^[[:space:]]*#/ {
-                print
+              rule = normalize_rule(raw)
+
+              # --------------------------------------------------
+              # 普通规则精确去重
+              # --------------------------------------------------
+              if (seen[rule]++) {
+                duplicate++
                 next
               }
 
-              /^[[:space:]]*;/ {
-                print
-                next
-              }
+              # --------------------------------------------------
+              # host / host-suffix 收集
+              # --------------------------------------------------
+              split(rule, p, ",")
 
-              /^[[:space:]]*\/\// {
-                print
-                next
-              }
+              type = p[1]
+              domain = ""
 
-              {
-                key=tolower($0)
-                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
-
-                if (seen[key]++) {
-                  duplicate++
-                  next
+              if (type == "host" || type == "host-suffix") {
+                if (length(p) >= 2) {
+                  domain = normalize_domain(p[2])
                 }
 
-                print
+                # 空域名绝对不能参与覆盖判断
+                if (domain != "") {
+                  if (type == "host-suffix") {
+                    suffix[++suffix_count] = domain
+                  } else if (type == "host") {
+                    host[++host_count] = domain
+                  }
+                }
               }
 
-              END {
-                print duplicate + 0 > count_file
-              }
-            ' count_file="$count_file" "$file" > "$tmp"
+              line[++line_count] = raw
+              line_rule[line_count] = rule
+            }
 
-            count=$(cat "$count_file")
-            rm -f "$count_file"
+            END {
+              # --------------------------------------------------
+              # 第二阶段：
+              # 根据 host-suffix 判断哪些 host / host-suffix
+              # 被前面的父域覆盖
+              # --------------------------------------------------
 
-            # 防止异常情况下生成空文件覆盖原文件
-            if [ ! -s "$tmp" ] && [ -s "$file" ]; then
-              echo "ERROR: generated empty file, keeping original: $file"
-              rm -f "$tmp"
-              exit 1
-            fi
+              for (i = 1; i <= line_count; i++) {
+                rule = line_rule[i]
 
-            if ! cmp -s "$file" "$tmp"; then
-              mv "$tmp" "$file"
-              changed="YES"
-            else
-              rm -f "$tmp"
-              changed="NO"
-            fi
+                split(rule, p, ",")
+                type = p[1]
 
-            echo
-            echo "$file"
-            echo "  Duplicate removed: $count"
-            echo "  Changed: $changed"
+                if (type != "host" && type != "host-suffix") {
+                  print line[i]
+                  continue
+                }
 
-            total_duplicate=$((total_duplicate + count))
+                if (length(p) < 2) {
+                  print line[i]
+                  continue
+                }
 
-          done
+                domain = normalize_domain(p[2])
 
+                if (domain == "") {
+                  print line[i]
+                  continue
+                }
 
-          # ============================================================
-          # 2. host-suffix / host 覆盖
-          #
-          # host-keyword 完全不参与
-          #
-          # host-suffix 父域：
-          #
-          # example.com
-          #
-          # 覆盖：
-          #
-          # a.example.com
-          # b.a.example.com
-          #
-          # 同时 host：
-          #
-          # example.com
-          # a.example.com
-          #
-          # 也会被 suffix 覆盖
-          # ============================================================
+                covered = 0
 
-          for file in "${files[@]}"; do
+                # ----------------------------------------------
+                # host-suffix：
+                # 如果存在更大的父域，则当前 suffix 被覆盖
+                # ----------------------------------------------
+                if (type == "host-suffix") {
+                  for (j = 1; j <= suffix_count; j++) {
+                    parent = suffix[j]
 
-            tmp="${file}.tmp"
-            count_file="${file}.count"
-
-            awk '
-              {
-                lines[NR]=$0
-
-                if ($0 ~ /^[[:space:]]*$/)
-                  next
-
-                if ($0 ~ /^[[:space:]]*#/)
-                  next
-
-                if ($0 ~ /^[[:space:]]*;/)
-                  next
-
-                if ($0 ~ /^[[:space:]]*\/\//)
-                  next
-
-                n=split($0, f, ",")
-
-                type=f[1]
-                domain=f[2]
-
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", type)
-                gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
-
-                type=tolower(type)
-                domain=tolower(domain)
-
-                sub(/\.$/, "", domain)
-
-                if (type == "host-suffix" && domain != "")
-                  suffix[NR]=domain
-
-                if (type == "host" && domain != "")
-                  hosts[NR]=domain
-              }
-
-              END {
-
-                # ------------------------------------------------------
-                # host-suffix 父域覆盖子域
-                # ------------------------------------------------------
-
-                for (i in suffix) {
-
-                  child=suffix[i]
-
-                  for (j in suffix) {
-
-                    if (i == j)
+                    if (parent == domain) {
                       continue
+                    }
 
-                    parent=suffix[j]
-
-                    if (child == parent)
-                      continue
-
-                    # child 必须是：
-                    # xxx.parent
-                    #
-                    # 直接使用 substr 判断结尾
-                    suffix_part=substr(
-                      child,
-                      length(child)-length(parent)+1
-                    )
-
-                    if (
-                      length(child) > length(parent) &&
-                      suffix_part == "." parent
-                    ) {
-                      remove_suffix[i]=1
+                    if (is_subdomain(domain, parent)) {
+                      covered = 1
                       break
                     }
                   }
                 }
 
+                # ----------------------------------------------
+                # host：
+                # host-suffix,example.com
+                # 覆盖：
+                # host,example.com
+                # host,a.example.com
+                # ----------------------------------------------
+                if (type == "host") {
+                  for (j = 1; j <= suffix_count; j++) {
+                    parent = suffix[j]
 
-                # ------------------------------------------------------
-                # host 被 host-suffix 覆盖
-                # ------------------------------------------------------
-
-                for (i in hosts) {
-
-                  domain=hosts[i]
-
-                  for (j in suffix) {
-
-                    parent=suffix[j]
-
-                    if (domain == parent) {
-                      remove_host[i]=1
+                    if (domain == parent ||
+                        is_subdomain(domain, parent)) {
+                      covered = 1
                       break
                     }
-
-                    if (length(domain) > length(parent)) {
-
-                      suffix_part=substr(
-                        domain,
-                        length(domain)-length(parent)+1
-                      )
-
-                      if (suffix_part == "." parent) {
-                        remove_host[i]=1
-                        break
-                      }
-                    }
                   }
                 }
 
-
-                # ------------------------------------------------------
-                # 输出
-                # ------------------------------------------------------
-
-                for (i=1; i<=NR; i++) {
-
-                  if (remove_suffix[i]) {
-                    suffix_count++
-                    continue
-                  }
-
-                  if (remove_host[i]) {
-                    host_count++
-                    continue
-                  }
-
-                  print lines[i]
+                if (covered) {
+                  covered_count++
+                  next
                 }
 
-                print suffix_count + 0 > count_file
-                print host_count + 0 >> count_file
+                print line[i]
               }
-            ' count_file="$count_file" "$file" > "$tmp"
 
-            suffix_count=$(sed -n '1p' "$count_file")
-            host_count=$(sed -n '2p' "$count_file")
+              print "__QX_STATS__" > "/dev/stderr"
+              print duplicate, covered_count, line_count > "/dev/stderr"
+            }
+            ' "$file" > "$tmp" 2> "${tmp}.stats"
 
-            rm -f "$count_file"
+            # ------------------------------------------------------
+            # 保护机制
+            # ------------------------------------------------------
 
-            # ========================================================
-            # 极其重要：
-            # 如果原文件有内容，但处理结果为空，直接终止 Workflow
-            # 防止规则文件被错误清空
-            # ========================================================
+            # 原文件大小
+            original_size=$(wc -c < "$file")
+            result_size=$(wc -c < "$tmp")
 
-            if [ ! -s "$tmp" ] && [ -s "$file" ]; then
-              echo
-              echo "ERROR: safety check failed!"
-              echo "Generated empty file: $file"
-              echo "Original file will NOT be modified."
-              rm -f "$tmp"
+            # 如果原文件非空，而结果完全为空：
+            # 绝对不覆盖原文件
+            if [ "$original_size" -gt 0 ] && [ "$result_size" -eq 0 ]; then
+              echo "ERROR: $file generated an empty result."
+              echo "Original file has been preserved."
+              rm -f "$tmp" "${tmp}.stats"
+              cp "$backup" "$file"
               exit 1
             fi
 
-            if ! cmp -s "$file" "$tmp"; then
-              mv "$tmp" "$file"
-              changed="YES"
-            else
+            # 删除统计信息中的临时输出
+            stats=$(cat "${tmp}.stats" || true)
+
+            duplicate=$(echo "$stats" | tail -n 1 | awk '{print $1}')
+            covered=$(echo "$stats" | tail -n 1 | awk '{print $2}')
+
+            duplicate=${duplicate:-0}
+            covered=${covered:-0}
+
+            # ------------------------------------------------------
+            # 比较是否发生变化
+            # ------------------------------------------------------
+            if cmp -s "$file" "$tmp"; then
+              echo "  Duplicate removed: $duplicate"
+              echo "  Covered rules removed: $covered"
+              echo "  Changed: NO"
+
               rm -f "$tmp"
-              changed="NO"
+            else
+              mv "$tmp" "$file"
+
+              echo "  Duplicate removed: $duplicate"
+              echo "  Covered rules removed: $covered"
+              echo "  Changed: YES"
             fi
 
-            echo
-            echo "$file"
-            echo "  Suffix removed: $suffix_count"
-            echo "  Host removed:   $host_count"
-            echo "  Changed:        $changed"
-
-            total_suffix=$((total_suffix + suffix_count))
-            total_host=$((total_host + host_count))
-
+            rm -f "${tmp}.stats" "$backup"
           done
 
-
-          # ============================================================
-          # 3. 跨文件完全重复规则
-          #
-          # 只有下面两组：
-          #
-          # register > proxy
-          # direct   > system
-          #
-          # 其他文件绝对不参与
-          # ============================================================
+      # ------------------------------------------------------------
+      # 跨文件精确去重
+      #
+      # register > proxy
+      # direct   > system
+      #
+      # apple 完全不参与
+      # ------------------------------------------------------------
+      - name: Deduplicate between selected files
+        shell: bash
+        run: |
+          set -euo pipefail
 
           deduplicate_pair() {
-
-            keep="$ROOT/$1"
-            remove="$ROOT/$2"
+            local keep="$1"
+            local remove="$2"
 
             echo
-            echo "========================================"
-            echo "Cross-file: $1 > $2"
-            echo "========================================"
+            echo "Cross-file deduplication:"
+            echo "  Keep : $keep"
+            echo "  Remove duplicates from: $remove"
 
-            if [ ! -f "$keep" ]; then
-              echo "Skip: $keep not found"
+            [ -f "$keep" ] || {
+              echo "  $keep does not exist, skip."
               return
-            fi
+            }
 
-            if [ ! -f "$remove" ]; then
-              echo "Skip: $remove not found"
+            [ -f "$remove" ] || {
+              echo "  $remove does not exist, skip."
               return
-            fi
+            }
 
-            tmp="${remove}.tmp"
-            count_file="${remove}.count"
+            local tmp="${remove}.tmp"
 
             awk '
-              FNR == NR {
+            function trim(s) {
+              gsub(/^[ \t]+|[ \t]+$/, "", s)
+              return s
+            }
 
-                if ($0 ~ /^[[:space:]]*$/)
-                  next
+            function normalize(s) {
+              s = trim(s)
+              gsub(/[ \t]*,[ \t]*/, ",", s)
+              return tolower(s)
+            }
 
-                if ($0 ~ /^[[:space:]]*#/)
-                  next
+            # 读取优先级文件
+            FILENAME == ARGV[1] {
+              if ($0 !~ /^[ \t]*$/ &&
+                  $0 !~ /^[ \t]*#/ &&
+                  $0 !~ /^[ \t]*;/ &&
+                  $0 !~ /^[ \t]*\/\//) {
+                keep_rule[normalize($0)] = 1
+              }
+              next
+            }
 
-                if ($0 ~ /^[[:space:]]*;/)
-                  next
+            # 处理低优先级文件
+            {
+              raw = $0
 
-                if ($0 ~ /^[[:space:]]*\/\//)
-                  next
-
-                key=tolower($0)
-                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
-
-                keep_rule[key]=1
-
+              # 注释、空行永远保留
+              if (raw ~ /^[ \t]*$/ ||
+                  raw ~ /^[ \t]*#/ ||
+                  raw ~ /^[ \t]*;/ ||
+                  raw ~ /^[ \t]*\/\//) {
+                print raw
                 next
               }
 
-              {
-                if ($0 ~ /^[[:space:]]*$/) {
-                  print
-                  next
-                }
+              rule = normalize(raw)
 
-                if ($0 ~ /^[[:space:]]*#/) {
-                  print
-                  next
-                }
-
-                if ($0 ~ /^[[:space:]]*;/) {
-                  print
-                  next
-                }
-
-                if ($0 ~ /^[[:space:]]*\/\//) {
-                  print
-                  next
-                }
-
-                key=tolower($0)
-                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
-
-                if (keep_rule[key]) {
-                  removed++
-                  next
-                }
-
-                print
+              if (rule in keep_rule) {
+                removed++
+                next
               }
 
-              END {
-                print removed + 0 > count_file
-              }
-            ' count_file="$count_file" "$keep" "$remove" > "$tmp"
+              print raw
+            }
 
-            count=$(cat "$count_file")
-            rm -f "$count_file"
+            END {
+              print "__QX_CROSS_STATS__ " removed > "/dev/stderr"
+            }
+            ' "$keep" "$remove" > "$tmp" 2> "${tmp}.stats"
 
-            # ========================================================
-            # 安全检查
-            # ========================================================
+            local removed
+            removed=$(awk '{print $2}' "${tmp}.stats" | tail -n 1)
+            removed=${removed:-0}
 
-            if [ ! -s "$tmp" ] && [ -s "$remove" ]; then
-              echo
-              echo "ERROR: cross-file processing generated empty file!"
-              echo "File: $remove"
-              echo "Original file will NOT be modified."
+            if cmp -s "$remove" "$tmp"; then
+              echo "  Removed: $removed"
+              echo "  Changed: NO"
               rm -f "$tmp"
-              exit 1
-            fi
-
-            if ! cmp -s "$remove" "$tmp"; then
-              mv "$tmp" "$remove"
-              changed="YES"
             else
-              rm -f "$tmp"
-              changed="NO"
+              mv "$tmp" "$remove"
+
+              echo "  Removed: $removed"
+              echo "  Changed: YES"
             fi
 
-            echo "Cross-file removed: $count"
-            echo "Changed: $changed"
-
-            total_cross_file=$((total_cross_file + count))
+            rm -f "${tmp}.stats"
           }
-
 
           # register 优先于 proxy
           deduplicate_pair \
-            "register.snippet" \
-            "proxy.snippet"
-
+            "qx/register.snippet" \
+            "qx/proxy.snippet"
 
           # direct 优先于 system
           deduplicate_pair \
-            "direct.snippet" \
-            "system.snippet"
+            "qx/direct.snippet" \
+            "qx/system.snippet"
 
-
-          # ============================================================
-          # 4. 总统计
-          # ============================================================
-
-          total=$(
-            awk \
-              -v a="$total_duplicate" \
-              -v b="$total_suffix" \
-              -v c="$total_host" \
-              -v d="$total_cross_file" \
-              'BEGIN { print a+b+c+d }'
-          )
-
-          echo
-          echo "========================================"
-          echo "TOTAL"
-          echo "========================================"
-          echo "Duplicate removed : $total_duplicate"
-          echo "Suffix removed    : $total_suffix"
-          echo "Host removed      : $total_host"
-          echo "Cross-file removed: $total_cross_file"
-          echo "----------------------------------------"
-          echo "Total removed     : $total"
-
-
-      # ========================================
-      # Check changes
-      # ========================================
-      - name: Check changes
-        shell: bash
-        run: |
-          echo "========================================"
-          echo "Git Status"
-          echo "========================================"
-
-          git status --short
-
-          echo
-          echo "========================================"
-          echo "Git Diff"
-          echo "========================================"
-
-          git diff -- qx/*.snippet
-
-
-      # ========================================
-      # Auto Commit
-      # ========================================
+      # ------------------------------------------------------------
+      # Git 自动提交
+      # ------------------------------------------------------------
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
