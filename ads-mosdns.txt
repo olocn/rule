@@ -1,4 +1,4 @@
-# Auto merged MosDNS rules (2026-09-03)
+# Auto merged MosDNS rules (2026-09-04)
 domain:17admob.com
 domain:1nmob.com
 domain:1rtb.com
