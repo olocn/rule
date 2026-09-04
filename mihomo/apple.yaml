@@ -51,8 +51,6 @@ payload:
   - DOMAIN-SUFFIX, images.apple.com.edgekey.net.globalredir.akadns.net
   - DOMAIN-SUFFIX, init-kt.apple.com
   - DOMAIN-SUFFIX, init-p01md.apple.com
-  - DOMAIN-SUFFIX, init-s01st.push.apple.com
-  - DOMAIN-SUFFIX, init.ess.apple.com
   - DOMAIN-SUFFIX, iosapps.itunes.g.aaplimg.com
   - DOMAIN-SUFFIX, ipcdn.apple.com
   - DOMAIN-SUFFIX, iphone-ld.apple.com
