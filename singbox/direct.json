@@ -8,7 +8,7 @@
       "domain": "steamcommunity-a.akamaihd.net"
     },
     {
-      "domain_suffix": "alibaba"
+      "domain_suffix": "alibaba.com"
     },
     {
       "domain_suffix": "alicdn.com"
@@ -26,7 +26,7 @@
       "domain_suffix": "beplay"
     },
     {
-      "domain_suffix": "bili"
+      "domain_suffix": "bilibili.com"
     },
     {
       "domain_suffix": "classix-unlimited.co.uk"
@@ -66,69 +66,6 @@
     },
     {
       "domain_suffix": "xn--kprv4ewxfr9cpxcc7joo6apn8a.xn--fiqs8s"
-    },
-    {
-      "domain_keyword": "4399"
-    },
-    {
-      "domain_keyword": "cdnhwc"
-    },
-    {
-      "domain_keyword": "cloud"
-    },
-    {
-      "domain_keyword": "icbc"
-    },
-    {
-      "ip_cidr": "1.255.62.0/24"
-    },
-    {
-      "ip_cidr": "101.32.104.0/21"
-    },
-    {
-      "ip_cidr": "101.32.118.0/23"
-    },
-    {
-      "ip_cidr": "101.32.96.0/20"
-    },
-    {
-      "ip_cidr": "119.28.28.28/32"
-    },
-    {
-      "ip_cidr": "120.195.181.180/32"
-    },
-    {
-      "ip_cidr": "129.226.0.0/16"
-    },
-    {
-      "ip_cidr": "182.254.116.0/24"
-    },
-    {
-      "ip_cidr": "183.128.0.0/11"
-    },
-    {
-      "ip_cidr": "183.131.48.0/20"
-    },
-    {
-      "ip_cidr": "185.188.32.0/22"
-    },
-    {
-      "ip_cidr": "185.188.32.0/24"
-    },
-    {
-      "ip_cidr": "185.188.33.0/24"
-    },
-    {
-      "ip_cidr": "185.188.34.0/24"
-    },
-    {
-      "ip_cidr": "185.188.35.0/24"
-    },
-    {
-      "ip_cidr": "203.205.238.0/23"
-    },
-    {
-      "ip_cidr": "203.205.254.0/23"
     }
   ]
 }

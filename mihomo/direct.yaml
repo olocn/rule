@@ -1,13 +1,13 @@
 payload:
   - DOMAIN,images-cn.ssl-images-amazon.com
   - DOMAIN,steamcommunity-a.akamaihd.net
-  - DOMAIN-SUFFIX,alibaba
+  - DOMAIN-SUFFIX,alibaba.com
   - DOMAIN-SUFFIX,alicdn.com
   - DOMAIN-SUFFIX,alipay.com
   - DOMAIN-SUFFIX,aliyun
   - DOMAIN-SUFFIX,baidu
   - DOMAIN-SUFFIX,beplay
-  - DOMAIN-SUFFIX,bili
+  - DOMAIN-SUFFIX,bilibili.com
   - DOMAIN-SUFFIX,classix-unlimited.co.uk
   - DOMAIN-SUFFIX,idp.devicelink.infra-host.com
   - DOMAIN-SUFFIX,lanzou.com
@@ -21,24 +21,3 @@ payload:
   - DOMAIN-SUFFIX,uat1.bfsspadserver.8le8le.com
   - DOMAIN-SUFFIX,xn--fiq53l6wcx3kp9bc7joo6apn8a.xn--fiqs8s
   - DOMAIN-SUFFIX,xn--kprv4ewxfr9cpxcc7joo6apn8a.xn--fiqs8s
-  - DOMAIN-KEYWORD,4399
-  - DOMAIN-KEYWORD,cdnhwc
-  - DOMAIN-KEYWORD,cloud
-  - DOMAIN-KEYWORD,icbc
-  - IP-CIDR,1.255.62.0/24
-  - IP-CIDR,101.32.104.0/21
-  - IP-CIDR,101.32.118.0/23
-  - IP-CIDR,101.32.96.0/20
-  - IP-CIDR,119.28.28.28/32
-  - IP-CIDR,120.195.181.180/32
-  - IP-CIDR,129.226.0.0/16
-  - IP-CIDR,182.254.116.0/24
-  - IP-CIDR,183.128.0.0/11
-  - IP-CIDR,183.131.48.0/20
-  - IP-CIDR,185.188.32.0/22
-  - IP-CIDR,185.188.32.0/24
-  - IP-CIDR,185.188.33.0/24
-  - IP-CIDR,185.188.34.0/24
-  - IP-CIDR,185.188.35.0/24
-  - IP-CIDR,203.205.238.0/23
-  - IP-CIDR,203.205.254.0/23
