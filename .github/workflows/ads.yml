@@ -283,33 +283,51 @@ jobs:
       # DOMAIN-KEYWORD:
       #   不进入 DOMAIN-SET
       # ==========================================================
-      - name: Generate Surge DOMAIN-SET
+      - name: Validate Surge DOMAIN-SET
         shell: bash
         run: |
           set -euo pipefail
-          {
-            echo "# Auto merged Surge DOMAIN-SET rules (${DATE})"
-            awk -F',' '
-            {
-              if ($1 == "DOMAIN")
-                print $2
-              else if ($1 == "DOMAIN-SUFFIX")
-                print "." $2
-            }
-            ' rules.normalized \
-            | sort -u
-          } > ads-latest.txt
+
           DOMAIN_SET_COUNT=$(
             grep -vE '^#|^$' ads-latest.txt | wc -l
           )
+
           if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
-            echo "ERROR: ads-latest.txt contains no DOMAIN-SET rules"
+            echo "ERROR: ads-latest.txt contains no rules"
             exit 1
           fi
-          echo "Surge DOMAIN-SET rules: $DOMAIN_SET_COUNT"
-          echo
-          echo "First 20 rules:"
-          head -n 21 ads-latest.txt
+
+          # 检查是否存在非 ASCII 字符
+          if LC_ALL=C grep -n '[^ -~]' ads-latest.txt; then
+            echo
+            echo "ERROR: ads-latest.txt contains non-ASCII/invisible characters"
+            exit 1
+          fi
+
+          # 检查 DOMAIN-SET 不允许出现规则类型前缀
+          if grep -qE \
+            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),' \
+            ads-latest.txt; then
+
+            echo "ERROR: ads-latest.txt contains rule-type prefixes"
+            exit 1
+          fi
+
+          # 检查域名格式
+          INVALID=$(
+            grep -vE \
+              '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
+              ads-latest.txt \
+              || true
+          )
+
+          if [ -n "$INVALID" ]; then
+            echo "ERROR: invalid DOMAIN-SET entries:"
+            echo "$INVALID"
+            exit 1
+          fi
+
+          echo "Valid Surge DOMAIN-SET rules: $DOMAIN_SET_COUNT"
       # ==========================================================
       # 11. Generate MosDNS
       # ==========================================================
