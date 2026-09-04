@@ -44,7 +44,7 @@ jobs:
             --retry-delay 2 \
             --connect-timeout 15 \
             --max-time 180 \
-            "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/reject-drop.txt" \
+            "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/ad.txt" \
             -o source-olocn.txt
           curl -fL \
             --retry 5 \
