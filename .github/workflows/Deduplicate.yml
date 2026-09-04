@@ -1,23 +1,27 @@
 name: Deduplicate QX Rules
+
 on:
   workflow_dispatch:
-  # 修改 QX 规则时自动执行
+
   push:
     paths:
       - 'qx/*.snippet'
-  # 修改本 Workflow 自身时自动执行
       - '.github/workflows/deduplicate-qx-rules.yml'
-  # 每天自动检查一次
+
   schedule:
     - cron: '0 0 * * *'
+
 permissions:
   contents: write
+
 concurrency:
   group: deduplicate-qx-rules
   cancel-in-progress: false
+
 jobs:
   deduplicate:
     runs-on: ubuntu-latest
+
     steps:
       # ========================================
       # Checkout
@@ -26,264 +30,353 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 0
+
       # ========================================
-      # Python 去重
+      # Deduplicate QX Rules
       # ========================================
       - name: Deduplicate QX Rules
-        shell: python
+        shell: bash
         run: |
-          from pathlib import Path
-          ROOT = Path("qx")
-          total_duplicate = 0
-          total_keyword = 0
-          total_suffix = 0
-          total_host = 0
-          def normalize_domain(value):
-              return value.strip().lower().rstrip(".")
-          def parse_rule(line):
-              text = line.strip()
-              if not text:
-                  return None
-              # 注释
-              if (
-                  text.startswith("#")
-                  or text.startswith(";")
-                  or text.startswith("//")
-              ):
-                  return None
-              parts = [x.strip() for x in text.split(",")]
-              if not parts:
-                  return None
-              rule_type = parts[0].lower()
-              if len(parts) < 2:
-                  return rule_type, None, parts
-              domain = normalize_domain(parts[1])
-              return rule_type, domain, parts
-          def is_comment_or_blank(line):
-              s = line.strip()
-              return (
-                  not s
-                  or s.startswith("#")
-                  or s.startswith(";")
-                  or s.startswith("//")
-              )
-          # 只处理 qx/ 第一层的 .snippet
-          files = sorted(ROOT.glob("*.snippet"))
-          print()
-          print("========================================")
-          print(f"Found {len(files)} QX snippet files")
-          print("========================================")
-          if not files:
-              print("No .snippet files found.")
-              raise SystemExit(0)
-          for path in files:
-              print()
-              print("========================================")
-              print(f"Processing: {path}")
-              print("========================================")
-              original = path.read_text(encoding="utf-8")
-              original_lines = original.splitlines(keepends=True)
-              parsed = []
-              seen = set()
-              keywords = []
-              suffixes = []
-              duplicate_count = 0
-              # ========================================
-              # 第一阶段
-              # 完整规则去重
-              # ========================================
-              for line in original_lines:
-                  if is_comment_or_blank(line):
-                      parsed.append({
-                          "line": line,
-                          "type": None,
-                          "domain": None,
-                          "key": None,
-                      })
-                      continue
-                  result = parse_rule(line)
-                  if result is None:
-                      parsed.append({
-                          "line": line,
-                          "type": None,
-                          "domain": None,
-                          "key": None,
-                      })
-                      continue
-                  rule_type, domain, parts = result
-                  # 完整规则字段作为重复判断
-                  key = tuple(
-                      x.strip().lower()
-                      for x in parts
-                  )
-                  if key in seen:
-                      duplicate_count += 1
-                      continue
-                  seen.add(key)
-                  parsed.append({
-                      "line": line,
-                      "type": rule_type,
-                      "domain": domain,
-                      "key": key,
-                  })
-                  if rule_type == "host-keyword" and domain:
-                      keywords.append(domain)
-                  elif rule_type == "host-suffix" and domain:
-                      suffixes.append(domain)
-              # ========================================
-              # 第二阶段
-              # host-keyword 优先
-              # ========================================
-              removed_keyword = set()
-              for i, item in enumerate(parsed):
-                  rule_type = item["type"]
-                  domain = item["domain"]
-                  if rule_type not in ("host", "host-suffix"):
-                      continue
-                  if not domain:
-                      continue
-                  for keyword in keywords:
-                      # host-keyword 为字符串包含匹配
-                      if keyword in domain:
-                          removed_keyword.add(i)
-                          break
-              # ========================================
-              # 第三阶段
-              # host-suffix 覆盖子域 suffix
-              # ========================================
-              removed_suffix = set()
-              unique_suffixes = sorted(
-                  set(suffixes),
-                  key=len
-              )
-              for i, item in enumerate(parsed):
-                  if i in removed_keyword:
-                      continue
-                  if item["type"] != "host-suffix":
-                      continue
-                  domain = item["domain"]
-                  if not domain:
-                      continue
-                  for suffix in unique_suffixes:
-                      # 自己不能删除自己
-                      if domain == suffix:
-                          continue
-                      # 父域 suffix 覆盖子域 suffix
-                      if domain.endswith("." + suffix):
-                          removed_suffix.add(i)
-                          break
-              # ========================================
-              # 第四阶段
-              # host 被 host-suffix 覆盖
-              # ========================================
-              removed_host = set()
-              for i, item in enumerate(parsed):
-                  if i in removed_keyword:
-                      continue
-                  if item["type"] != "host":
-                      continue
-                  domain = item["domain"]
-                  if not domain:
-                      continue
-                  for suffix in unique_suffixes:
-                      if (
-                          domain == suffix
-                          or domain.endswith("." + suffix)
-                      ):
-                          removed_host.add(i)
-                          break
-              # ========================================
-              # 第五阶段
-              # 生成最终文件
-              # ========================================
-              output = []
-              for i, item in enumerate(parsed):
-                  if i in removed_keyword:
-                      continue
-                  if i in removed_suffix:
-                      continue
-                  if i in removed_host:
-                      continue
-                  output.append(item["line"])
-              new_content = "".join(output)
-              changed = new_content != original
-              # ========================================
-              # 输出统计
-              # ========================================
-              print(f"Original lines      : {len(original_lines)}")
-              print(f"New lines           : {len(output)}")
-              print(f"Removed duplicate   : {duplicate_count}")
-              print(f"Removed by keyword  : {len(removed_keyword)}")
-              print(f"Removed by suffix   : {len(removed_suffix)}")
-              print(f"Removed host        : {len(removed_host)}")
-              print(f"Changed             : {changed}")
-              # ========================================
-              # 写回文件
-              # ========================================
-              if changed:
-                  path.write_text(
-                      new_content,
-                      encoding="utf-8"
-                  )
-                  # 写回验证
-                  verify = path.read_text(
-                      encoding="utf-8"
-                  )
-                  if verify != new_content:
-                      raise RuntimeError(
-                          f"Write verification failed: {path}"
-                      )
-                  print(f"UPDATED             : {path}")
-              else:
-                  print(f"UNCHANGED           : {path}")
-              total_duplicate += duplicate_count
-              total_keyword += len(removed_keyword)
-              total_suffix += len(removed_suffix)
-              total_host += len(removed_host)
-          # ========================================
-          # 总统计
-          # ========================================
-          print()
-          print("========================================")
-          print("TOTAL")
-          print("========================================")
-          print(
-              f"Removed duplicate : {total_duplicate}"
+          set -euo pipefail
+
+          ROOT="qx"
+
+          total_duplicate=0
+          total_suffix=0
+          total_host=0
+          total_cross_file=0
+
+          mapfile -t files < <(
+            find "$ROOT" -maxdepth 1 -type f -name "*.snippet" | sort
           )
-          print(
-              f"Removed keyword  : {total_keyword}"
+
+          echo "========================================"
+          echo "QX Rule Deduplication"
+          echo "========================================"
+          echo "Found ${#files[@]} snippet files"
+
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No .snippet files found."
+            exit 0
+          fi
+
+          # ============================================================
+          # 1. 文件内部完全重复规则去重
+          # ============================================================
+
+          for file in "${files[@]}"; do
+            tmp="${file}.tmp"
+            count_file="${file}.count"
+
+            awk '
+              /^[[:space:]]*$/ ||
+              /^[[:space:]]*#/ ||
+              /^[[:space:]]*;/ ||
+              /^[[:space:]]*\/\// {
+                print
+                next
+              }
+
+              {
+                key=tolower($0)
+                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
+
+                if (seen[key]++) {
+                  duplicate++
+                  next
+                }
+
+                print
+              }
+
+              END {
+                print duplicate+0 > count_file
+              }
+            ' count_file="$count_file" "$file" > "$tmp"
+
+            count=$(cat "$count_file")
+            rm -f "$count_file"
+
+            if ! cmp -s "$file" "$tmp"; then
+              mv "$tmp" "$file"
+              changed="YES"
+            else
+              rm -f "$tmp"
+              changed="NO"
+            fi
+
+            echo
+            echo "$file"
+            echo "  Duplicate removed: $count"
+            echo "  Changed: $changed"
+
+            total_duplicate=$((total_duplicate + count))
+          done
+
+
+          # ============================================================
+          # 2. host-suffix 父域覆盖子域
+          #
+          # 例如：
+          #
+          # host-suffix,example.com
+          # host-suffix,a.example.com
+          #
+          # 删除：
+          # host-suffix,a.example.com
+          #
+          # host-keyword 完全不参与
+          # ============================================================
+
+          for file in "${files[@]}"; do
+            tmp="${file}.tmp"
+            count_file="${file}.count"
+
+            awk '
+              {
+                line[NR]=$0
+
+                if (
+                  $0 ~ /^[[:space:]]*$/ ||
+                  $0 ~ /^[[:space:]]*#/ ||
+                  $0 ~ /^[[:space:]]*;/ ||
+                  $0 ~ /^[[:space:]]*\/\//
+                ) {
+                  next
+                }
+
+                type=$1
+                domain=$2
+
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", type)
+                gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
+
+                type=tolower(type)
+                domain=tolower(domain)
+                sub(/\.$/, "", domain)
+
+                if (type == "host-suffix")
+                  suffix[NR]=domain
+
+                if (type == "host")
+                  host[NR]=domain
+              }
+
+              END {
+                # --------------------------------------------
+                # host-suffix：父域覆盖子域
+                # --------------------------------------------
+                for (i in suffix) {
+                  for (j in suffix) {
+                    if (i == j)
+                      continue
+
+                    if (
+                      suffix[i] != suffix[j] &&
+                      suffix[i] ~ ("\\." suffix[j] "$")
+                    ) {
+                      remove_suffix[i]=1
+                      break
+                    }
+                  }
+                }
+
+                # --------------------------------------------
+                # host：被 host-suffix 覆盖
+                # --------------------------------------------
+                for (i in host) {
+                  for (j in suffix) {
+                    if (
+                      host[i] == suffix[j] ||
+                      host[i] ~ ("\\." suffix[j] "$")
+                    ) {
+                      remove_host[i]=1
+                      break
+                    }
+                  }
+                }
+
+                # --------------------------------------------
+                # 输出
+                # --------------------------------------------
+                for (i=1; i<=NR; i++) {
+                  if (remove_suffix[i]) {
+                    suffix_count++
+                    continue
+                  }
+
+                  if (remove_host[i]) {
+                    host_count++
+                    continue
+                  }
+
+                  print line[i]
+                }
+
+                print suffix_count+0 > count_file
+                print host_count+0 >> count_file
+              }
+            ' FS=',' OFS=',' count_file="$count_file" "$file" > "$tmp"
+
+            suffix_count=$(sed -n '1p' "$count_file")
+            host_count=$(sed -n '2p' "$count_file")
+
+            rm -f "$count_file"
+
+            if ! cmp -s "$file" "$tmp"; then
+              mv "$tmp" "$file"
+              changed="YES"
+            else
+              rm -f "$tmp"
+              changed="NO"
+            fi
+
+            echo
+            echo "$file"
+            echo "  Suffix removed: $suffix_count"
+            echo "  Host removed:   $host_count"
+            echo "  Changed:        $changed"
+
+            total_suffix=$((total_suffix + suffix_count))
+            total_host=$((total_host + host_count))
+          done
+
+
+          # ============================================================
+          # 3. 跨文件去重
+          #
+          # register > proxy
+          # direct   > system
+          #
+          # 只删除低优先级文件中完全相同的规则
+          # ============================================================
+
+          deduplicate_pair() {
+            keep="$ROOT/$1"
+            remove="$ROOT/$2"
+
+            if [ ! -f "$keep" ] || [ ! -f "$remove" ]; then
+              echo
+              echo "Skip: $keep / $remove"
+              return
+            fi
+
+            tmp="${remove}.tmp"
+            count_file="${remove}.count"
+
+            awk '
+              FNR==NR {
+                if (
+                  $0 !~ /^[[:space:]]*$/ &&
+                  $0 !~ /^[[:space:]]*#/ &&
+                  $0 !~ /^[[:space:]]*;/ &&
+                  $0 !~ /^[[:space:]]*\/\//
+                ) {
+                  key=tolower($0)
+                  gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
+                  keep[key]=1
+                }
+                next
+              }
+
+              {
+                if (
+                  $0 ~ /^[[:space:]]*$/ ||
+                  $0 ~ /^[[:space:]]*#/ ||
+                  $0 ~ /^[[:space:]]*;/ ||
+                  $0 ~ /^[[:space:]]*\/\//
+                ) {
+                  print
+                  next
+                }
+
+                key=tolower($0)
+                gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
+
+                if (keep[key]) {
+                  removed++
+                  next
+                }
+
+                print
+              }
+
+              END {
+                print removed+0 > count_file
+              }
+            ' count_file="$count_file" "$keep" "$remove" > "$tmp"
+
+            count=$(cat "$count_file")
+            rm -f "$count_file"
+
+            if ! cmp -s "$remove" "$tmp"; then
+              mv "$tmp" "$remove"
+              changed="YES"
+            else
+              rm -f "$tmp"
+              changed="NO"
+            fi
+
+            echo
+            echo "$1 > $2"
+            echo "  Cross-file removed: $count"
+            echo "  Changed: $changed"
+
+            total_cross_file=$((total_cross_file + count))
+          }
+
+
+          deduplicate_pair "register.snippet" "proxy.snippet"
+          deduplicate_pair "direct.snippet" "system.snippet"
+
+
+          # ============================================================
+          # 4. 总统计
+          # ============================================================
+
+          total=$(
+            awk \
+              -v a="$total_duplicate" \
+              -v b="$total_suffix" \
+              -v c="$total_host" \
+              -v d="$total_cross_file" \
+              'BEGIN { print a+b+c+d }'
           )
-          print(
-              f"Removed suffix   : {total_suffix}"
-          )
-          print(
-              f"Removed host     : {total_host}"
-          )
-          total_removed = (
-              total_duplicate
-              + total_keyword
-              + total_suffix
-              + total_host
-          )
-          print(
-              f"Removed total    : {total_removed}"
-          )
+
+          echo
+          echo "========================================"
+          echo "TOTAL"
+          echo "========================================"
+          echo "Duplicate removed : $total_duplicate"
+          echo "Suffix removed    : $total_suffix"
+          echo "Host removed      : $total_host"
+          echo "Cross-file removed: $total_cross_file"
+          echo "----------------------------------------"
+          echo "Total removed     : $total"
+
+
       # ========================================
-      # 检查 Git 修改
+      # Check changes
       # ========================================
       - name: Check changes
+        shell: bash
         run: |
           echo "========================================"
           echo "Git Status"
           echo "========================================"
+
           git status --short
+
           echo
           echo "========================================"
           echo "Git Diff"
           echo "========================================"
+
           git diff -- qx/*.snippet
+
+
       # ========================================
-      # 自动提交
+      # Auto Commit
       # ========================================
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v7
