@@ -2,10 +2,10 @@
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-KEYWORD,18comic
-DOMAIN,tju.7pzzv.us
-DOMAIN,tu.2qq42.us
-DOMAIN,tu.ymawv.la
-DOMAIN,ttou.j03og.app
+DOMAIN-SUFFIX,tju.7pzzv.us
+DOMAIN-SUFFIX,tu.2qq42.us
+DOMAIN-SUFFIX,tu.ymawv.la
+DOMAIN-SUFFIX,ttou.j03og.app
 DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,strpst.com
 DOMAIN-SUFFIX,fourhoi.com
@@ -18,7 +18,7 @@ DOMAIN-SUFFIX,docker.io
 DOMAIN-SUFFIX,ghcr.io
 DOMAIN-SUFFIX,mikanani.me
 DOMAIN-SUFFIX,jdbstatic.com
-DOMAIN,infuse-sync.s3-accelerate.amazonaws.com
+DOMAIN-SUFFIX,infuse-sync.s3-accelerate.amazonaws.com
 DOMAIN-SUFFIX,trakt.tv
 
 # spotify
@@ -46,10 +46,10 @@ DOMAIN-SUFFIX,jmpic.org
 DOMAIN-SUFFIX,jmpicn.xyz
 # jav
 DOMAIN-SUFFIX,gifyu.com
-DOMAIN,qz1gy.app
-DOMAIN,yfvjv.app
+DOMAIN-SUFFIX,qz1gy.app
+DOMAIN-SUFFIX,yfvjv.app
 DOMAIN-SUFFIX,ra7.xyz
-DOMAIN,r3ltm.app
+DOMAIN-SUFFIX,r3ltm.app
 DOMAIN-SUFFIX,photos18.com
 DOMAIN-SUFFIX,pimg.tw
 DOMAIN-SUFFIX,pinimg.com
@@ -63,14 +63,13 @@ DOMAIN-KEYWORD,sehuatang
 DOMAIN-KEYWORD,rmcdn
 DOMAIN-KEYWORD,roucdn
 DOMAIN-KEYWORD,rouman
-DOMAIN-KEYWORD,roucdn
 DOMAIN-SUFFIX,south-plus.org
 DOMAIN-KEYWORD,jav
 DOMAIN-SUFFIX,92hm.top
 DOMAIN-SUFFIX,98tuch.net
 DOMAIN-SUFFIX,picnew.org
 DOMAIN-SUFFIX,u79pk.com
-DOMAIN,mozilla.cloudflare-dns.com
+DOMAIN-SUFFIX,mozilla.cloudflare-dns.com
 DOMAIN-SUFFIX,deepl.com
 DOMAIN-SUFFIX,x.com
 DOMAIN-SUFFIX,jmcomic.me
@@ -92,7 +91,7 @@ DOMAIN-SUFFIX,sharepoint.com
 DOMAIN-SUFFIX,img.3mo.net
 DOMAIN-SUFFIX,wsrv.nl
 DOMAIN-SUFFIX,picture.jjhxmc.com
-DOMAIN,api.nexconvert.com
+DOMAIN-SUFFIX,api.nexconvert.com
 DOMAIN-SUFFIX,azureedge.net
 DOMAIN-SUFFIX,siftrss.com
 DOMAIN-SUFFIX,i1.wp.com
@@ -555,7 +554,6 @@ DOMAIN-SUFFIX,search.yahoo.co.jp
 DOMAIN-SUFFIX,wego.here.com
 DOMAIN-SUFFIX,supercell.com
 DOMAIN-SUFFIX,pianyuan.org
-DOMAIN-SUFFIX,tmdb.org
 DOMAIN-SUFFIX,akamaized.net
 DOMAIN-SUFFIX,feedx.net
 DOMAIN-SUFFIX,ntdm9.com
@@ -566,6 +564,5 @@ DOMAIN-SUFFIX,bing.net
 DOMAIN-SUFFIX,microsoft.com
 DOMAIN-SUFFIX,sov2ex.com
 DOMAIN-SUFFIX,v2ex.com
-DOMAIN-SUFFIX,signal.org
-DOMAIN,api.m-team.io
+DOMAIN-SUFFIX,api.m-team.io
 DOMAIN-SUFFIX,m-team.cc

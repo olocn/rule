@@ -32,7 +32,7 @@ HOST-SUFFIX,px.effirst.com,reject
 HOST-SUFFIX,safebrowsing.apple,reject
 HOST-SUFFIX,iadsdk.apple.com,reject
 HOST-SUFFIX,bugsnag.com,reject
-HOST-SUFFIX,O4505782787964928.ingest.sentry.io,reject
+HOST-SUFFIX,o4505782787964928.ingest.sentry.io,reject
 HOST-SUFFIX,miaozhen.com,reject
 HOST-SUFFIX,analytics.plex.tv,reject
 
@@ -53,7 +53,6 @@ HOST-SUFFIX,wuchucloud.net,reject
 HOST-SUFFIX,rongnav.com,reject
 #p2p
 # 字节跳动系
-HOST-SUFFIX,tt.x.bsgslb.cn,reject
 HOST-SUFFIX,bytefcdnrd.com,reject
 HOST-SUFFIX,pcdn.volcvideo.com,reject
 HOST-SUFFIX,nexusedgeio.com,reject
@@ -142,7 +141,6 @@ HOST-SUFFIX,broadcast.chat.bilibili.com,reject
 HOST-SUFFIX,biligame.com,reject
 HOST-SUFFIX,data.bilibili.com⁠,reject
 HOST-SUFFIX,cm.bilibili.com,reject
-HOST-SUFFIX,mcdn.bilivideo.cn,reject
 HOST-SUFFIX,p2p.bilibili.com,reject
 HOST-SUFFIX,pcdn.bilibili.com,reject
 HOST-SUFFIX,data.bilibili.com,reject

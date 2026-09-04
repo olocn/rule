@@ -63,7 +63,6 @@ DOMAIN-KEYWORD,sehuatang,proxy
 DOMAIN-KEYWORD,rmcdn,proxy
 DOMAIN-KEYWORD,roucdn,proxy
 DOMAIN-KEYWORD,rouman,proxy
-DOMAIN-KEYWORD,roucdn,proxy
 HOST-SUFFIX,south-plus.org,proxy
 DOMAIN-KEYWORD,jav,proxy
 HOST-SUFFIX,92hm.top,proxy
@@ -555,7 +554,6 @@ HOST-SUFFIX,search.yahoo.co.jp,proxy
 HOST-SUFFIX,wego.here.com,proxy
 HOST-SUFFIX,supercell.com,proxy
 HOST-SUFFIX,pianyuan.org,proxy
-HOST-SUFFIX,tmdb.org,proxy
 HOST-SUFFIX,akamaized.net,proxy
 HOST-SUFFIX,feedx.net,proxy
 HOST-SUFFIX,ntdm9.com,proxy
@@ -566,6 +564,5 @@ HOST-SUFFIX,bing.net,proxy
 HOST-SUFFIX,microsoft.com,proxy
 HOST-SUFFIX,sov2ex.com,proxy
 HOST-SUFFIX,v2ex.com,proxy
-HOST-SUFFIX,signal.org,proxy
 HOST-SUFFIX,api.m-team.io,proxy
 HOST-SUFFIX,m-team.cc,proxy

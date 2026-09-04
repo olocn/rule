@@ -32,7 +32,7 @@ px.effirst.com
 safebrowsing.apple
 iadsdk.apple.com
 bugsnag.com
-O4505782787964928.ingest.sentry.io
+o4505782787964928.ingest.sentry.io
 miaozhen.com
 analytics.plex.tv
 
@@ -53,7 +53,6 @@ wuchucloud.net
 rongnav.com
 #p2p
 # 字节跳动系
-tt.x.bsgslb.cn
 bytefcdnrd.com
 pcdn.volcvideo.com
 nexusedgeio.com
@@ -142,7 +141,6 @@ broadcast.chat.bilibili.com
 biligame.com
 data.bilibili.com⁠
 cm.bilibili.com
-mcdn.bilivideo.cn
 p2p.bilibili.com
 pcdn.bilibili.com
 data.bilibili.com
@@ -244,11 +242,11 @@ msmp.abchina.com.cn
 # 猫头鹰
 www.skyjos.com
 
-#高德 
+#高德
 amap-aos-info-nogw.amap.com
 free-aos-cdn-image.amap.com
 
-#一键登录 
+#一键登录
 #中国移动
 config.cmpassport.com
 www.cmpassport.com

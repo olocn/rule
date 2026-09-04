@@ -6,7 +6,6 @@ dcloud.net.cn
 jsccbcc.com
 10010.com
 10086.cn
-10jqka.com.cn
 114la.com
 114yygh.com
 115.com
@@ -59,7 +58,6 @@ jsccbcc.com
 99.com
 aaplimg.com
 abchina.com
-abchina.com.cn
 agora.io
 aicdn.com
 aicoinstorge.com
@@ -82,8 +80,6 @@ alikunlun.net
 alimama.com
 alipan.com
 alipay.com
-alipay.com.cn
-alipayobjects.com
 alisports.com
 aliued.com
 aliyun.com
@@ -106,7 +102,6 @@ appgame.com
 appinn.com
 cn
 apple.co
-apple.com.cn
 apzones.com
 autonavi.com
 axureux.com
@@ -134,7 +129,6 @@ beisen.com
 beitaichufang.com
 bejson.com
 bestpay.cn
-bestpay.com.cn
 biliapi.com
 biliapi.net
 bilibili.cn
@@ -144,7 +138,6 @@ bilicomics.com
 biligame.com
 biligame.net
 biliimg.com
-bilivideo.cn
 bilivideo.com
 blackyau.cc
 blogchina.com
@@ -164,7 +157,6 @@ caiyunapp.com
 caiyuncdn.com
 camera360.com
 ccb.com
-ccb.com.cn
 ccbft.com
 ccgslb.com
 ccgslb.net
@@ -215,8 +207,6 @@ coolpad.com
 cootekservice.com
 courier-push-apple.com.akadns.net
 cowtransfer.com
-cpic.com.cn
-cpta.com.cn
 csair.com
 csdn.net
 csdnimg.cn
@@ -224,7 +214,6 @@ csp.sectigo.com
 css-js.com
 ct10000.com
 ctrip.com
-cup.com.cn
 cyapi.cn
 d7vg.com
 dangdang.com
@@ -352,7 +341,6 @@ hitv.com
 hnhczh.cn
 hommk.com
 hongxiu.com
-hoopchina.com.cn
 hostbuf.com
 huaban.com
 huabanimg.com
@@ -416,7 +404,6 @@ jd.com
 jd.hk
 jdpay.com
 jegotrip.cn
-jegotrip.com.cn
 jianguoyun.com
 jianshe99.com
 jianshu.com
@@ -436,7 +423,6 @@ jsjnsw.com
 jspec.cn
 juejin.im
 juji.tv
-jybank.com.cn
 kaiyanapp.com
 kan300.com
 kanzhun.com
@@ -446,10 +432,8 @@ keepcdn.com
 kekenet.com
 kerlala.com
 kf5.com
-kfc.com.cn
 kingsoft.com
 kkmh.com
-kltb.com.cn
 kmf.com
 knewone.com
 knownsec.com
@@ -634,9 +618,7 @@ qlogo.cn
 qnqcdn.net
 qnssl.com
 qpic.cn
-qpic.cn 
 qq.com
-qq.com.cn
 qqmail.com
 qqurl.com
 qqzzz.net
@@ -651,7 +633,6 @@ rapoo.com
 rdimg.com
 renren.com
 renrenche.com
-right.com.cn
 ronghub.com
 rr.tv
 rrfmn.com
@@ -671,8 +652,6 @@ segmentfault.com
 sekorm.com
 servicewechat.com
 sf-express.com
-sg.qy.net
-sgcc.com.cn
 shanbay.com
 shejijia.com
 shifen.com
@@ -708,7 +687,6 @@ soso.com
 soufun.com
 s-reader.com
 sspai.com
-starbucks.com.cn
 stargame.com
 staticdn.net
 staticfile.net

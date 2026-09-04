@@ -6,7 +6,6 @@ HOST-SUFFIX,dcloud.net.cn,direct
 HOST-SUFFIX,jsccbcc.com,direct
 HOST-SUFFIX,10010.com,direct
 HOST-SUFFIX,10086.cn,direct
-HOST-SUFFIX,10jqka.com.cn,direct
 HOST-SUFFIX,114la.com,direct
 HOST-SUFFIX,114yygh.com,direct
 HOST-SUFFIX,115.com,direct
@@ -59,7 +58,6 @@ HOST-SUFFIX,95516.com,direct
 HOST-SUFFIX,99.com,direct
 HOST-SUFFIX,aaplimg.com,direct
 HOST-SUFFIX,abchina.com,direct
-HOST-SUFFIX,abchina.com.cn,direct
 HOST-SUFFIX,agora.io,direct
 HOST-SUFFIX,aicdn.com,direct
 HOST-SUFFIX,aicoinstorge.com,direct
@@ -82,8 +80,6 @@ HOST-SUFFIX,alikunlun.net,direct
 HOST-SUFFIX,alimama.com,direct
 HOST-SUFFIX,alipan.com,direct
 HOST-SUFFIX,alipay.com,direct
-HOST-SUFFIX,alipay.com.cn,direct
-HOST-SUFFIX,alipayobjects.com,direct
 HOST-SUFFIX,alisports.com,direct
 HOST-SUFFIX,aliued.com,direct
 HOST-SUFFIX,aliyun.com,direct
@@ -106,7 +102,6 @@ HOST-SUFFIX,appgame.com,direct
 HOST-SUFFIX,appinn.com,direct
 HOST-SUFFIX,cn,direct
 HOST-SUFFIX,apple.co,direct
-HOST-SUFFIX,apple.com.cn,direct
 HOST-SUFFIX,apzones.com,direct
 HOST-SUFFIX,autonavi.com,direct
 HOST-SUFFIX,axureux.com,direct
@@ -134,7 +129,6 @@ HOST-SUFFIX,beisen.com,direct
 HOST-SUFFIX,beitaichufang.com,direct
 HOST-SUFFIX,bejson.com,direct
 HOST-SUFFIX,bestpay.cn,direct
-HOST-SUFFIX,bestpay.com.cn,direct
 HOST-SUFFIX,biliapi.com,direct
 HOST-SUFFIX,biliapi.net,direct
 HOST-SUFFIX,bilibili.cn,direct
@@ -144,7 +138,6 @@ HOST-SUFFIX,bilicomics.com,direct
 HOST-SUFFIX,biligame.com,direct
 HOST-SUFFIX,biligame.net,direct
 HOST-SUFFIX,biliimg.com,direct
-HOST-SUFFIX,bilivideo.cn,direct
 HOST-SUFFIX,bilivideo.com,direct
 HOST-SUFFIX,blackyau.cc,direct
 HOST-SUFFIX,blogchina.com,direct
@@ -164,7 +157,6 @@ HOST-SUFFIX,caiyunapp.com,direct
 HOST-SUFFIX,caiyuncdn.com,direct
 HOST-SUFFIX,camera360.com,direct
 HOST-SUFFIX,ccb.com,direct
-HOST-SUFFIX,ccb.com.cn,direct
 HOST-SUFFIX,ccbft.com,direct
 HOST-SUFFIX,ccgslb.com,direct
 HOST-SUFFIX,ccgslb.net,direct
@@ -215,8 +207,6 @@ HOST-SUFFIX,coolpad.com,direct
 HOST-SUFFIX,cootekservice.com,direct
 HOST-SUFFIX,courier-push-apple.com.akadns.net,direct
 HOST-SUFFIX,cowtransfer.com,direct
-HOST-SUFFIX,cpic.com.cn,direct
-HOST-SUFFIX,cpta.com.cn,direct
 HOST-SUFFIX,csair.com,direct
 HOST-SUFFIX,csdn.net,direct
 HOST-SUFFIX,csdnimg.cn,direct
@@ -224,7 +214,6 @@ HOST-SUFFIX,csp.sectigo.com,direct
 HOST-SUFFIX,css-js.com,direct
 HOST-SUFFIX,ct10000.com,direct
 HOST-SUFFIX,ctrip.com,direct
-HOST-SUFFIX,cup.com.cn,direct
 HOST-SUFFIX,cyapi.cn,direct
 HOST-SUFFIX,d7vg.com,direct
 HOST-SUFFIX,dangdang.com,direct
@@ -352,7 +341,6 @@ HOST-SUFFIX,hitv.com,direct
 HOST-SUFFIX,hnhczh.cn,direct
 HOST-SUFFIX,hommk.com,direct
 HOST-SUFFIX,hongxiu.com,direct
-HOST-SUFFIX,hoopchina.com.cn,direct
 HOST-SUFFIX,hostbuf.com,direct
 HOST-SUFFIX,huaban.com,direct
 HOST-SUFFIX,huabanimg.com,direct
@@ -416,7 +404,6 @@ HOST-SUFFIX,jd.com,direct
 HOST-SUFFIX,jd.hk,direct
 HOST-SUFFIX,jdpay.com,direct
 HOST-SUFFIX,jegotrip.cn,direct
-HOST-SUFFIX,jegotrip.com.cn,direct
 HOST-SUFFIX,jianguoyun.com,direct
 HOST-SUFFIX,jianshe99.com,direct
 HOST-SUFFIX,jianshu.com,direct
@@ -436,7 +423,6 @@ HOST-SUFFIX,jsjnsw.com,direct
 HOST-SUFFIX,jspec.cn,direct
 HOST-SUFFIX,juejin.im,direct
 HOST-SUFFIX,juji.tv,direct
-HOST-SUFFIX,jybank.com.cn,direct
 HOST-SUFFIX,kaiyanapp.com,direct
 HOST-SUFFIX,kan300.com,direct
 HOST-SUFFIX,kanzhun.com,direct
@@ -446,10 +432,8 @@ HOST-SUFFIX,keepcdn.com,direct
 HOST-SUFFIX,kekenet.com,direct
 HOST-SUFFIX,kerlala.com,direct
 HOST-SUFFIX,kf5.com,direct
-HOST-SUFFIX,kfc.com.cn,direct
 HOST-SUFFIX,kingsoft.com,direct
 HOST-SUFFIX,kkmh.com,direct
-HOST-SUFFIX,kltb.com.cn,direct
 HOST-SUFFIX,kmf.com,direct
 HOST-SUFFIX,knewone.com,direct
 HOST-SUFFIX,knownsec.com,direct
@@ -634,9 +618,7 @@ HOST-SUFFIX,qlogo.cn,direct
 HOST-SUFFIX,qnqcdn.net,direct
 HOST-SUFFIX,qnssl.com,direct
 HOST-SUFFIX,qpic.cn,direct
-HOST-SUFFIX,qpic.cn,direct
 HOST-SUFFIX,qq.com,direct
-HOST-SUFFIX,qq.com.cn,direct
 HOST-SUFFIX,qqmail.com,direct
 HOST-SUFFIX,qqurl.com,direct
 HOST-SUFFIX,qqzzz.net,direct
@@ -651,7 +633,6 @@ HOST-SUFFIX,rapoo.com,direct
 HOST-SUFFIX,rdimg.com,direct
 HOST-SUFFIX,renren.com,direct
 HOST-SUFFIX,renrenche.com,direct
-HOST-SUFFIX,right.com.cn,direct
 HOST-SUFFIX,ronghub.com,direct
 HOST-SUFFIX,rr.tv,direct
 HOST-SUFFIX,rrfmn.com,direct
@@ -671,8 +652,6 @@ HOST-SUFFIX,segmentfault.com,direct
 HOST-SUFFIX,sekorm.com,direct
 HOST-SUFFIX,servicewechat.com,direct
 HOST-SUFFIX,sf-express.com,direct
-HOST-SUFFIX,sg.qy.net,direct
-HOST-SUFFIX,sgcc.com.cn,direct
 HOST-SUFFIX,shanbay.com,direct
 HOST-SUFFIX,shejijia.com,direct
 HOST-SUFFIX,shifen.com,direct
@@ -708,7 +687,6 @@ HOST-SUFFIX,soso.com,direct
 HOST-SUFFIX,soufun.com,direct
 HOST-SUFFIX,s-reader.com,direct
 HOST-SUFFIX,sspai.com,direct
-HOST-SUFFIX,starbucks.com.cn,direct
 HOST-SUFFIX,stargame.com,direct
 HOST-SUFFIX,staticdn.net,direct
 HOST-SUFFIX,staticfile.net,direct

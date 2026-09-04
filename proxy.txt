@@ -63,7 +63,6 @@ DOMAIN-KEYWORD,sehuatang
 DOMAIN-KEYWORD,rmcdn
 DOMAIN-KEYWORD,roucdn
 DOMAIN-KEYWORD,rouman
-DOMAIN-KEYWORD,roucdn
 south-plus.org
 DOMAIN-KEYWORD,jav
 92hm.top
@@ -555,7 +554,6 @@ search.yahoo.co.jp
 wego.here.com
 supercell.com
 pianyuan.org
-tmdb.org
 akamaized.net
 feedx.net
 ntdm9.com
@@ -566,6 +564,5 @@ bing.net
 microsoft.com
 sov2ex.com
 v2ex.com
-signal.org
 api.m-team.io
 m-team.cc

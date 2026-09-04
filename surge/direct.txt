@@ -6,7 +6,6 @@ DOMAIN-SUFFIX,dcloud.net.cn
 DOMAIN-SUFFIX,jsccbcc.com
 DOMAIN-SUFFIX,10010.com
 DOMAIN-SUFFIX,10086.cn
-DOMAIN-SUFFIX,10jqka.com.cn
 DOMAIN-SUFFIX,114la.com
 DOMAIN-SUFFIX,114yygh.com
 DOMAIN-SUFFIX,115.com
@@ -59,7 +58,6 @@ DOMAIN-SUFFIX,95516.com
 DOMAIN-SUFFIX,99.com
 DOMAIN-SUFFIX,aaplimg.com
 DOMAIN-SUFFIX,abchina.com
-DOMAIN-SUFFIX,abchina.com.cn
 DOMAIN-SUFFIX,agora.io
 DOMAIN-SUFFIX,aicdn.com
 DOMAIN-SUFFIX,aicoinstorge.com
@@ -82,8 +80,6 @@ DOMAIN-SUFFIX,alikunlun.net
 DOMAIN-SUFFIX,alimama.com
 DOMAIN-SUFFIX,alipan.com
 DOMAIN-SUFFIX,alipay.com
-DOMAIN-SUFFIX,alipay.com.cn
-DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,alisports.com
 DOMAIN-SUFFIX,aliued.com
 DOMAIN-SUFFIX,aliyun.com
@@ -106,7 +102,6 @@ DOMAIN-SUFFIX,appgame.com
 DOMAIN-SUFFIX,appinn.com
 DOMAIN-SUFFIX,cn
 DOMAIN-SUFFIX,apple.co
-DOMAIN-SUFFIX,apple.com.cn
 DOMAIN-SUFFIX,apzones.com
 DOMAIN-SUFFIX,autonavi.com
 DOMAIN-SUFFIX,axureux.com
@@ -134,7 +129,6 @@ DOMAIN-SUFFIX,beisen.com
 DOMAIN-SUFFIX,beitaichufang.com
 DOMAIN-SUFFIX,bejson.com
 DOMAIN-SUFFIX,bestpay.cn
-DOMAIN-SUFFIX,bestpay.com.cn
 DOMAIN-SUFFIX,biliapi.com
 DOMAIN-SUFFIX,biliapi.net
 DOMAIN-SUFFIX,bilibili.cn
@@ -144,7 +138,6 @@ DOMAIN-SUFFIX,bilicomics.com
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,biligame.net
 DOMAIN-SUFFIX,biliimg.com
-DOMAIN-SUFFIX,bilivideo.cn
 DOMAIN-SUFFIX,bilivideo.com
 DOMAIN-SUFFIX,blackyau.cc
 DOMAIN-SUFFIX,blogchina.com
@@ -164,7 +157,6 @@ DOMAIN-SUFFIX,caiyunapp.com
 DOMAIN-SUFFIX,caiyuncdn.com
 DOMAIN-SUFFIX,camera360.com
 DOMAIN-SUFFIX,ccb.com
-DOMAIN-SUFFIX,ccb.com.cn
 DOMAIN-SUFFIX,ccbft.com
 DOMAIN-SUFFIX,ccgslb.com
 DOMAIN-SUFFIX,ccgslb.net
@@ -215,8 +207,6 @@ DOMAIN-SUFFIX,coolpad.com
 DOMAIN-SUFFIX,cootekservice.com
 DOMAIN-SUFFIX,courier-push-apple.com.akadns.net
 DOMAIN-SUFFIX,cowtransfer.com
-DOMAIN-SUFFIX,cpic.com.cn
-DOMAIN-SUFFIX,cpta.com.cn
 DOMAIN-SUFFIX,csair.com
 DOMAIN-SUFFIX,csdn.net
 DOMAIN-SUFFIX,csdnimg.cn
@@ -224,7 +214,6 @@ DOMAIN-SUFFIX,csp.sectigo.com
 DOMAIN-SUFFIX,css-js.com
 DOMAIN-SUFFIX,ct10000.com
 DOMAIN-SUFFIX,ctrip.com
-DOMAIN-SUFFIX,cup.com.cn
 DOMAIN-SUFFIX,cyapi.cn
 DOMAIN-SUFFIX,d7vg.com
 DOMAIN-SUFFIX,dangdang.com
@@ -352,7 +341,6 @@ DOMAIN-SUFFIX,hitv.com
 DOMAIN-SUFFIX,hnhczh.cn
 DOMAIN-SUFFIX,hommk.com
 DOMAIN-SUFFIX,hongxiu.com
-DOMAIN-SUFFIX,hoopchina.com.cn
 DOMAIN-SUFFIX,hostbuf.com
 DOMAIN-SUFFIX,huaban.com
 DOMAIN-SUFFIX,huabanimg.com
@@ -416,7 +404,6 @@ DOMAIN-SUFFIX,jd.com
 DOMAIN-SUFFIX,jd.hk
 DOMAIN-SUFFIX,jdpay.com
 DOMAIN-SUFFIX,jegotrip.cn
-DOMAIN-SUFFIX,jegotrip.com.cn
 DOMAIN-SUFFIX,jianguoyun.com
 DOMAIN-SUFFIX,jianshe99.com
 DOMAIN-SUFFIX,jianshu.com
@@ -436,7 +423,6 @@ DOMAIN-SUFFIX,jsjnsw.com
 DOMAIN-SUFFIX,jspec.cn
 DOMAIN-SUFFIX,juejin.im
 DOMAIN-SUFFIX,juji.tv
-DOMAIN-SUFFIX,jybank.com.cn
 DOMAIN-SUFFIX,kaiyanapp.com
 DOMAIN-SUFFIX,kan300.com
 DOMAIN-SUFFIX,kanzhun.com
@@ -446,10 +432,8 @@ DOMAIN-SUFFIX,keepcdn.com
 DOMAIN-SUFFIX,kekenet.com
 DOMAIN-SUFFIX,kerlala.com
 DOMAIN-SUFFIX,kf5.com
-DOMAIN-SUFFIX,kfc.com.cn
 DOMAIN-SUFFIX,kingsoft.com
 DOMAIN-SUFFIX,kkmh.com
-DOMAIN-SUFFIX,kltb.com.cn
 DOMAIN-SUFFIX,kmf.com
 DOMAIN-SUFFIX,knewone.com
 DOMAIN-SUFFIX,knownsec.com
@@ -634,9 +618,7 @@ DOMAIN-SUFFIX,qlogo.cn
 DOMAIN-SUFFIX,qnqcdn.net
 DOMAIN-SUFFIX,qnssl.com
 DOMAIN-SUFFIX,qpic.cn
-DOMAIN-SUFFIX,qpic.cn 
 DOMAIN-SUFFIX,qq.com
-DOMAIN-SUFFIX,qq.com.cn
 DOMAIN-SUFFIX,qqmail.com
 DOMAIN-SUFFIX,qqurl.com
 DOMAIN-SUFFIX,qqzzz.net
@@ -651,7 +633,6 @@ DOMAIN-SUFFIX,rapoo.com
 DOMAIN-SUFFIX,rdimg.com
 DOMAIN-SUFFIX,renren.com
 DOMAIN-SUFFIX,renrenche.com
-DOMAIN-SUFFIX,right.com.cn
 DOMAIN-SUFFIX,ronghub.com
 DOMAIN-SUFFIX,rr.tv
 DOMAIN-SUFFIX,rrfmn.com
@@ -671,8 +652,6 @@ DOMAIN-SUFFIX,segmentfault.com
 DOMAIN-SUFFIX,sekorm.com
 DOMAIN-SUFFIX,servicewechat.com
 DOMAIN-SUFFIX,sf-express.com
-DOMAIN-SUFFIX,sg.qy.net
-DOMAIN-SUFFIX,sgcc.com.cn
 DOMAIN-SUFFIX,shanbay.com
 DOMAIN-SUFFIX,shejijia.com
 DOMAIN-SUFFIX,shifen.com
@@ -708,7 +687,6 @@ DOMAIN-SUFFIX,soso.com
 DOMAIN-SUFFIX,soufun.com
 DOMAIN-SUFFIX,s-reader.com
 DOMAIN-SUFFIX,sspai.com
-DOMAIN-SUFFIX,starbucks.com.cn
 DOMAIN-SUFFIX,stargame.com
 DOMAIN-SUFFIX,staticdn.net
 DOMAIN-SUFFIX,staticfile.net
