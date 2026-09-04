@@ -29,27 +29,7 @@ jobs:
           fetch-depth: 0
 
       # ============================================================
-      # 文件内部去重
-      #
-      # 规则：
-      # 1. 普通规则完全重复 → 删除后面的
-      # 2. 比较时忽略大小写
-      # 3. 忽略逗号两侧空格
-      # 4. 注释和空行原样保留
-      #
-      # host-suffix：
-      #   父域覆盖子域
-      #
-      # host-suffix,example.com
-      #   ↓
-      # host-suffix,a.example.com
-      #
-      # host-suffix,example.com
-      #   ↓
-      # host,example.com
-      # host,a.example.com
-      #
-      # host-keyword 不参与任何覆盖判断
+      # 每个文件内部处理
       # ============================================================
 
       - name: Deduplicate rules inside each file
@@ -66,15 +46,14 @@ jobs:
             echo "Processing: $file"
             echo "========================================"
 
-            tmp=$(mktemp)
+            tmp="${file}.dedup.tmp"
 
             # --------------------------------------------------------
-            # 保存原文件
+            # 第一阶段：
+            # 只做完全重复规则删除
             # --------------------------------------------------------
 
-            cp "$file" "$file.backup"
-
-            awk '
+            if ! awk '
             function trim(s) {
               gsub(/^[ \t]+/, "", s)
               gsub(/[ \t]+$/, "", s)
@@ -87,14 +66,85 @@ jobs:
               return tolower(s)
             }
 
-            function domain_normalize(s) {
+            {
+              raw = $0
+
+              # 空行
+              if (raw ~ /^[ \t]*$/) {
+                print raw
+                next
+              }
+
+              # #
+              if (raw ~ /^[ \t]*#/) {
+                print raw
+                next
+              }
+
+              # ;
+              if (raw ~ /^[ \t]*;/) {
+                print raw
+                next
+              }
+
+              # //
+              if (raw ~ /^[ \t]*\/\//) {
+                print raw
+                next
+              }
+
+              key = normalize(raw)
+
+              if (key in seen) {
+                duplicate++
+                next
+              }
+
+              seen[key] = 1
+
+              print raw
+            }
+
+            END {
+              print duplicate + 0 > "/tmp/qx_internal_duplicate"
+            }
+
+            ' "$file" > "$tmp"; then
+
+              echo "ERROR: awk failed while processing $file"
+              echo "Original file was NOT modified."
+
+              rm -f "$tmp"
+              exit 1
+            fi
+
+            duplicate=$(cat /tmp/qx_internal_duplicate 2>/dev/null || echo 0)
+
+            echo "  Duplicate removed: $duplicate"
+
+            # --------------------------------------------------------
+            # 第二阶段：
+            # host-suffix 覆盖 host / host-suffix
+            #
+            # 单独运行，避免复杂的 END 逻辑
+            # --------------------------------------------------------
+
+            tmp2="${file}.suffix.tmp"
+
+            if ! awk '
+            function trim(s) {
+              gsub(/^[ \t]+/, "", s)
+              gsub(/[ \t]+$/, "", s)
+              return s
+            }
+
+            function domain(s) {
               s = trim(s)
               s = tolower(s)
               sub(/\.$/, "", s)
               return s
             }
 
-            # child 是否是 parent 的子域
             function is_subdomain(child, parent, n) {
 
               if (child == "" || parent == "") {
@@ -114,71 +164,33 @@ jobs:
               return 0
             }
 
+            # --------------------------------------------------------
+            # 第一遍：
+            # 只收集 host-suffix
+            # --------------------------------------------------------
+
             {
               raw = $0
 
-              # ------------------------------------------------------
-              # 空行
-              # ------------------------------------------------------
-
-              if (raw ~ /^[ \t]*$/) {
-                line[++count] = raw
-                line_type[count] = "comment"
-                next
-              }
-
-              # ------------------------------------------------------
-              # 注释
-              # ------------------------------------------------------
-
-              if (raw ~ /^[ \t]*#/ ||
+              if (raw ~ /^[ \t]*$/ ||
+                  raw ~ /^[ \t]*#/ ||
                   raw ~ /^[ \t]*;/ ||
                   raw ~ /^[ \t]*\/\//) {
-
-                line[++count] = raw
-                line_type[count] = "comment"
                 next
               }
-
-              # ------------------------------------------------------
-              # 标准化规则
-              # ------------------------------------------------------
-
-              key = normalize(raw)
-
-              # ------------------------------------------------------
-              # 文件内部完全重复
-              # ------------------------------------------------------
-
-              if (key in seen) {
-                duplicate++
-                next
-              }
-
-              seen[key] = 1
-
-              # ------------------------------------------------------
-              # 保存
-              # ------------------------------------------------------
 
               line[++count] = raw
-              line_key[count] = key
-              line_type[count] = "rule"
 
-              # ------------------------------------------------------
-              # 只收集 host-suffix
-              #
-              # host-keyword 完全不处理
-              # ------------------------------------------------------
+              split(raw, p, ",")
 
-              split(key, part, ",")
+              type = tolower(trim(p[1]))
 
-              if (part[1] == "host-suffix" && length(part) >= 2) {
+              if (type == "host-suffix" && length(p) >= 2) {
 
-                domain = domain_normalize(part[2])
+                d = domain(p[2])
 
-                if (domain != "") {
-                  suffix[++suffix_count] = domain
+                if (d != "") {
+                  suffix[++suffix_count] = d
                 }
               }
             }
@@ -186,106 +198,85 @@ jobs:
             END {
 
               # ------------------------------------------------------
-              # 第二阶段
+              # 第二遍输出
               # ------------------------------------------------------
 
               for (i = 1; i <= count; i++) {
 
                 raw = line[i]
 
-                # ----------------------------------------------------
-                # 注释、空行
-                # ----------------------------------------------------
+                split(raw, p, ",")
 
-                if (line_type[i] == "comment") {
+                type = tolower(trim(p[1]))
+
+                # ----------------------------------------------
+                # 只处理 host 和 host-suffix
+                # ----------------------------------------------
+
+                if (type != "host" && type != "host-suffix") {
                   print raw
                   continue
                 }
 
-                key = line_key[i]
-
-                split(key, part, ",")
-
-                rule_type = part[1]
-
-                # ----------------------------------------------------
-                # 非 host / host-suffix 规则
-                #
-                # 包括：
-                # host-keyword
-                # host-wildcard
-                # geoip
-                # user-agent
-                # process-name
-                # 等等
-                #
-                # 全部原样保留
-                # ----------------------------------------------------
-
-                if (rule_type != "host" && rule_type != "host-suffix") {
+                if (length(p) < 2) {
                   print raw
                   continue
                 }
 
-                if (length(part) < 2) {
-                  print raw
-                  continue
-                }
+                d = domain(p[2])
 
-                domain = domain_normalize(part[2])
-
-                if (domain == "") {
+                if (d == "") {
                   print raw
                   continue
                 }
 
                 covered = 0
 
-                # ----------------------------------------------------
+                # ----------------------------------------------
                 # host-suffix
                 #
-                # 父 suffix 覆盖子 suffix
-                # ----------------------------------------------------
+                # 父域覆盖子域
+                # ----------------------------------------------
 
-                if (rule_type == "host-suffix") {
+                if (type == "host-suffix") {
 
                   for (j = 1; j <= suffix_count; j++) {
 
                     parent = suffix[j]
 
-                    if (parent == domain) {
+                    if (parent == d) {
                       continue
                     }
 
-                    if (is_subdomain(domain, parent)) {
+                    if (is_subdomain(d, parent)) {
                       covered = 1
                       break
                     }
                   }
                 }
 
-                # ----------------------------------------------------
+                # ----------------------------------------------
                 # host
                 #
                 # host-suffix,example.com
-                # 覆盖：
                 #
+                # 覆盖：
                 # host,example.com
                 # host,a.example.com
-                # ----------------------------------------------------
+                # ----------------------------------------------
 
-                if (rule_type == "host") {
+                if (type == "host") {
 
                   for (j = 1; j <= suffix_count; j++) {
 
                     parent = suffix[j]
 
-                    if (domain == parent) {
+                    if (d == parent) {
                       covered = 1
                       break
                     }
 
-                    if (is_subdomain(domain, parent)) {
+                    if (is_subdomain(d, parent)) {
                       covered = 1
                       break
                     }
@@ -293,89 +284,74 @@ jobs:
                 }
 
                 if (covered) {
-                  covered_count++
-                  next
+                  removed++
+                  continue
                 }
 
                 print raw
               }
 
-              print duplicate > "/tmp/qx_duplicate_count"
-              print covered_count > "/tmp/qx_covered_count"
+              print removed + 0 > "/tmp/qx_suffix_removed"
             }
 
-            ' "$file" > "$tmp"
+            ' "$tmp" > "$tmp2"; then
 
-            # --------------------------------------------------------
-            # 读取统计
-            # --------------------------------------------------------
+              echo "ERROR: awk suffix processing failed for $file"
+              echo "Original file was NOT modified."
 
-            duplicate=$(cat /tmp/qx_duplicate_count 2>/dev/null || echo 0)
-            covered=$(cat /tmp/qx_covered_count 2>/dev/null || echo 0)
+              rm -f "$tmp" "$tmp2"
+              exit 1
+            fi
 
-            duplicate=${duplicate:-0}
-            covered=${covered:-0}
+            removed=$(cat /tmp/qx_suffix_removed 2>/dev/null || echo 0)
+
+            echo "  Covered rules removed: $removed"
 
             # --------------------------------------------------------
             # 安全检查
-            #
-            # 原文件有内容，结果却变成空文件：
-            # 不修改原文件。
             # --------------------------------------------------------
 
             original_size=$(wc -c < "$file")
-            result_size=$(wc -c < "$tmp")
+            result_size=$(wc -c < "$tmp2")
 
             if [ "$original_size" -gt 0 ] && [ "$result_size" -eq 0 ]; then
 
-              echo "WARNING: generated file is empty."
-              echo "WARNING: original file preserved."
-              echo "  Duplicate removed: $duplicate"
-              echo "  Covered rules removed: $covered"
+              echo "  WARNING: generated file is empty."
+              echo "  Original file preserved."
               echo "  Changed: NO"
 
-              rm -f "$tmp"
-              rm -f "$file.backup"
-
+              rm -f "$tmp" "$tmp2"
               continue
             fi
 
             # --------------------------------------------------------
-            # 判断是否修改
+            # 最终替换
             # --------------------------------------------------------
 
-            if cmp -s "$file" "$tmp"; then
+            if cmp -s "$file" "$tmp2"; then
 
-              echo "  Duplicate removed: $duplicate"
-              echo "  Covered rules removed: $covered"
               echo "  Changed: NO"
-
-              rm -f "$tmp"
 
             else
 
-              mv "$tmp" "$file"
+              mv "$tmp2" "$file"
 
-              echo "  Duplicate removed: $duplicate"
-              echo "  Covered rules removed: $covered"
               echo "  Changed: YES"
 
             fi
 
-            rm -f "$file.backup"
+            rm -f "$tmp"
+            rm -f "$tmp2"
 
           done
 
       # ============================================================
-      # 跨文件去重
+      # 跨文件精确去重
       #
       # register > proxy
       # direct   > system
       #
       # apple 不参与
-      #
-      # 这里只进行“完全相同规则”的删除。
-      # 不进行 host-suffix 覆盖。
       # ============================================================
 
       - name: Cross-file deduplication
@@ -385,30 +361,29 @@ jobs:
 
           deduplicate_pair() {
 
-            local keep="$1"
-            local remove="$2"
+            keep="$1"
+            remove="$2"
 
             echo
             echo "========================================"
             echo "Cross-file deduplication"
-            echo "Keep   : $keep"
-            echo "Clean  : $remove"
+            echo "Keep : $keep"
+            echo "Clean: $remove"
             echo "========================================"
 
             if [ ! -f "$keep" ]; then
-              echo "  $keep does not exist, skip."
+              echo "  Keep file does not exist. Skip."
               return
             fi
 
             if [ ! -f "$remove" ]; then
-              echo "  $remove does not exist, skip."
+              echo "  Remove file does not exist. Skip."
               return
             fi
 
-            local tmp
-            tmp=$(mktemp)
+            tmp="${remove}.cross.tmp"
 
-            awk '
+            if ! awk '
             function trim(s) {
               gsub(/^[ \t]+/, "", s)
               gsub(/[ \t]+$/, "", s)
@@ -422,7 +397,7 @@ jobs:
             }
 
             # --------------------------------------------------------
-            # 第一个文件：优先文件
+            # 第一个文件：优先保留
             # --------------------------------------------------------
 
             FNR == NR {
@@ -448,7 +423,7 @@ jobs:
 
               raw = $0
 
-              # 注释、空行永远保留
+              # 注释、空行保留
               if (raw ~ /^[ \t]*$/ ||
                   raw ~ /^[ \t]*#/ ||
                   raw ~ /^[ \t]*;/ ||
@@ -472,17 +447,20 @@ jobs:
               print removed + 0 > "/tmp/qx_cross_removed"
             }
 
-            ' "$keep" "$remove" > "$tmp"
+            ' "$keep" "$remove" > "$tmp"; then
 
-            local removed
+              echo "ERROR: cross-file awk failed."
+              echo "Original file was NOT modified."
+
+              rm -f "$tmp"
+              exit 1
+            fi
+
             removed=$(cat /tmp/qx_cross_removed 2>/dev/null || echo 0)
 
             # --------------------------------------------------------
             # 安全检查
             # --------------------------------------------------------
-
-            local original_size
-            local result_size
 
             original_size=$(wc -c < "$remove")
             result_size=$(wc -c < "$tmp")
@@ -515,18 +493,12 @@ jobs:
             fi
           }
 
-          # ----------------------------------------------------------
           # register 优先于 proxy
-          # ----------------------------------------------------------
-
           deduplicate_pair \
             "qx/register.snippet" \
             "qx/proxy.snippet"
 
-          # ----------------------------------------------------------
           # direct 优先于 system
-          # ----------------------------------------------------------
-
           deduplicate_pair \
             "qx/direct.snippet" \
             "qx/system.snippet"
