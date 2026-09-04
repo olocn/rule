@@ -242,8 +242,6 @@ payload:
   - DOMAIN-SUFFIX, jdbstatic.com
   - DOMAIN-SUFFIX, jkforum.net
   - DOMAIN-SUFFIX, jmcomic.me
-  - DOMAIN-SUFFIX, jmdanjonproxy.vip
-  - DOMAIN-SUFFIX, jmdanjonproxy.xyz
   - DOMAIN-SUFFIX, jmpic.org
   - DOMAIN-SUFFIX, jmpic.xyz
   - DOMAIN-SUFFIX, jmpicn.xyz
@@ -547,6 +545,7 @@ payload:
   - DOMAIN-SUFFIX, zophar.net
   - DOMAIN-SUFFIX, zynamics.com
   - DOMAIN-SUFFIX, zyxel.com
+  - DOMAIN-SUFFIX,asimov.top
   - DOMAIN-SUFFIX,baozimh.com
   - DOMAIN-SUFFIX,blip.net
   - DOMAIN-SUFFIX,dmit.io
@@ -554,6 +553,8 @@ payload:
   - DOMAIN-SUFFIX,hnhr01.com
   - DOMAIN-SUFFIX,jjmhw.cc
   - DOMAIN-SUFFIX,jmapiproxy1.cc
+  - DOMAIN-SUFFIX,jmdanjonproxy.vip
+  - DOMAIN-SUFFIX,jmdanjonproxy.xyz
   - DOMAIN-SUFFIX,manwa.wang
   - DOMAIN-SUFFIX,metamask.io
   - DOMAIN-SUFFIX,mixpanel.com
