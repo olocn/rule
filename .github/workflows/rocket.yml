@@ -33,25 +33,30 @@ jobs:
         run: |
           python -c "
           import os
-          import re
 
           def clean_and_convert_line(line):
               line = line.strip()
-              if not line or line.startswith('#') or line.startswith(';'):
+              # 保留注释行
+              if line.startswith('#') or line.startswith(';'):
                   return line
-
-              # 替换 QX 语法修饰符为 Shadowrocket 语法
-              line = re.sub(r'(?i)\bHOST-SUFFIX\b', 'DOMAIN-SUFFIX', line)
-              line = re.sub(r'(?i)\bHOST-KEYWORD\b', 'DOMAIN-KEYWORD', line)
-              line = re.sub(r'(?i)\bHOST\b', 'DOMAIN', line)
+              if not line:
+                  return None
 
               parts = [p.strip() for p in line.split(',') if p.strip()]
-
-              # 提取 类型 和 目标，自动剔除尾部粘连的 DIRECT/PROXY 等
               if len(parts) >= 2:
-                  return f'{parts[0].upper()},{parts[1]}'
+                  rule_type = parts[0].upper()
+                  domain = parts[1].strip()
 
-              return line
+                  # DOMAIN-SET 扩展匹配：以 '.' 开头表示包含自身及全部子域名
+                  if rule_type in ('HOST-SUFFIX', 'DOMAIN-SUFFIX'):
+                      return f'.{domain.lstrip(\".\")}'
+                  
+                  # DOMAIN-SET 精确匹配：无 '.' 前缀仅匹配该单条域名
+                  elif rule_type in ('HOST', 'DOMAIN'):
+                      return domain.lstrip('.')
+
+              # DOMAIN-SET 纯域名集合不支持 HOST-KEYWORD, IP-CIDR, USER-AGENT 等规则，自动忽略
+              return None
 
           def process_file(input_path, output_path):
               try:
@@ -61,7 +66,11 @@ jobs:
                   with open(input_path, 'r', encoding='gbk', errors='ignore') as f:
                       lines = f.readlines()
 
-              converted_lines = [clean_and_convert_line(line) for line in lines if clean_and_convert_line(line) is not None]
+              converted_lines = []
+              for line in lines:
+                  res = clean_and_convert_line(line)
+                  if res is not None:
+                      converted_lines.append(res)
 
               os.makedirs(os.path.dirname(output_path), exist_ok=True)
               with open(output_path, 'w', encoding='utf-8') as f:
@@ -81,13 +90,12 @@ jobs:
                           # 去掉中间的 qx/qxb 层级，直接放在 rocket 目录下
                           rel_path = os.path.relpath(src_file, src_dir)
                           
-                          # 修改文件后缀统一为 .list
+                          # 统一输出为 .list 后缀文件
                           base_name = os.path.splitext(rel_path)[0]
-                          new_filename = f'{base_name}.list'
+                          dest_file = os.path.join(output_dir, f'{base_name}.list')
                           
-                          dest_file = os.path.join(output_dir, new_filename)
                           process_file(src_file, dest_file)
-                          print(f'Converted: {src_file} -> {dest_file}')
+                          print(f'Converted to DOMAIN-SET: {src_file} -> {dest_file}')
           "
 
       - name: Commit and Push Changes to Rocket Directory
@@ -100,6 +108,6 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes in rules, skipping commit."
           else
-            git commit -m "auto: update shadowrocket rules in /rocket [skip ci]"
+            git commit -m "auto: update shadowrocket domain-set rules in /rocket [skip ci]"
             git push
           fi
