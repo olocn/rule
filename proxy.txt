@@ -1,5 +1,9 @@
 # o
 colamanhua.com
+picacomic.com
+jmdanjonproxy.vip
+cdnhjk.net
+githubcopilot.com
 nnhanman.com
 18comic.vip
 tju.7pzzv.us
@@ -44,7 +48,7 @@ obsidian.md
 jmpic.xyz
 jmpic.org
 jmpicn.xyz
-# jav
+#jav
 gifyu.com
 qz1gy.app
 yfvjv.app
@@ -54,17 +58,16 @@ photos18.com
 pimg.tw
 pinimg.com
 pixhost.to
-DOMAIN-KEYWORD,pixiv
+pixiv.com
 player.fm
 playio1.com
 playno1.com
 t66y.com
-DOMAIN-KEYWORD,sehuatang
-DOMAIN-KEYWORD,rmcdn
-DOMAIN-KEYWORD,roucdn
-DOMAIN-KEYWORD,rouman
+sehuatang.org
 south-plus.org
-DOMAIN-KEYWORD,jav
+javbus.com
+javdb.com
+javlibrary.com
 92hm.top
 98tuch.net
 picnew.org
