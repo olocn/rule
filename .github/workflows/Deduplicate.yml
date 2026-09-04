@@ -49,13 +49,18 @@ jobs:
           total_cross_file=0
 
           mapfile -t files < <(
-            find "$ROOT" -maxdepth 1 -type f -name "*.snippet" | sort
+            find "$ROOT" \
+              -maxdepth 1 \
+              -type f \
+              -name "*.snippet" \
+              | sort
           )
 
           echo "========================================"
           echo "QX Rule Deduplication"
           echo "========================================"
           echo "Found ${#files[@]} snippet files"
+
 
           if [ "${#files[@]}" -eq 0 ]; then
             echo "No .snippet files found."
@@ -64,11 +69,9 @@ jobs:
 
 
           # ============================================================
-          # 1. 文件内部完全重复规则去重
+          # 1. 文件内部：完全相同规则去重
           #
-          # 只判断完整规则是否完全相同
-          #
-          # host-keyword 不参与任何覆盖
+          # host-keyword 不参与覆盖
           # ============================================================
 
           for file in "${files[@]}"; do
@@ -117,6 +120,13 @@ jobs:
             count=$(cat "$count_file")
             rm -f "$count_file"
 
+            # 防止异常情况下生成空文件覆盖原文件
+            if [ ! -s "$tmp" ] && [ -s "$file" ]; then
+              echo "ERROR: generated empty file, keeping original: $file"
+              rm -f "$tmp"
+              exit 1
+            fi
+
             if ! cmp -s "$file" "$tmp"; then
               mv "$tmp" "$file"
               changed="YES"
@@ -136,20 +146,25 @@ jobs:
 
 
           # ============================================================
-          # 2. host-suffix 父域覆盖子域
-          #
-          # 例如：
-          #
-          # host-suffix,example.com
-          # host-suffix,a.example.com
-          #
-          # 保留：
-          # host-suffix,example.com
-          #
-          # 删除：
-          # host-suffix,a.example.com
+          # 2. host-suffix / host 覆盖
           #
           # host-keyword 完全不参与
+          #
+          # host-suffix 父域：
+          #
+          # example.com
+          #
+          # 覆盖：
+          #
+          # a.example.com
+          # b.a.example.com
+          #
+          # 同时 host：
+          #
+          # example.com
+          # a.example.com
+          #
+          # 也会被 suffix 覆盖
           # ============================================================
 
           for file in "${files[@]}"; do
@@ -159,7 +174,7 @@ jobs:
 
             awk '
               {
-                line[NR]=$0
+                lines[NR]=$0
 
                 if ($0 ~ /^[[:space:]]*$/)
                   next
@@ -173,10 +188,10 @@ jobs:
                 if ($0 ~ /^[[:space:]]*\/\//)
                   next
 
-                n=split($0, field, ",")
+                n=split($0, f, ",")
 
-                type=field[1]
-                domain=field[2]
+                type=f[1]
+                domain=f[2]
 
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", type)
                 gsub(/^[[:space:]]+|[[:space:]]+$/, "", domain)
@@ -186,18 +201,17 @@ jobs:
 
                 sub(/\.$/, "", domain)
 
-                if (type == "host-suffix")
+                if (type == "host-suffix" && domain != "")
                   suffix[NR]=domain
 
-                if (type == "host")
-                  host[NR]=domain
+                if (type == "host" && domain != "")
+                  hosts[NR]=domain
               }
 
               END {
 
                 # ------------------------------------------------------
-                # host-suffix：
-                # 父域覆盖子域
+                # host-suffix 父域覆盖子域
                 # ------------------------------------------------------
 
                 for (i in suffix) {
@@ -214,9 +228,19 @@ jobs:
                     if (child == parent)
                       continue
 
-                    test="." child
+                    # child 必须是：
+                    # xxx.parent
+                    #
+                    # 直接使用 substr 判断结尾
+                    suffix_part=substr(
+                      child,
+                      length(child)-length(parent)+1
+                    )
 
-                    if (index(test, "." parent) == length(test) - length(parent) + 1) {
+                    if (
+                      length(child) > length(parent) &&
+                      suffix_part == "." parent
+                    ) {
                       remove_suffix[i]=1
                       break
                     }
@@ -225,13 +249,12 @@ jobs:
 
 
                 # ------------------------------------------------------
-                # host：
-                # 被 host-suffix 覆盖
+                # host 被 host-suffix 覆盖
                 # ------------------------------------------------------
 
-                for (i in host) {
+                for (i in hosts) {
 
-                  domain=host[i]
+                  domain=hosts[i]
 
                   for (j in suffix) {
 
@@ -242,11 +265,17 @@ jobs:
                       break
                     }
 
-                    test="." domain
+                    if (length(domain) > length(parent)) {
 
-                    if (index(test, "." parent) == length(test) - length(parent) + 1) {
-                      remove_host[i]=1
-                      break
+                      suffix_part=substr(
+                        domain,
+                        length(domain)-length(parent)+1
+                      )
+
+                      if (suffix_part == "." parent) {
+                        remove_host[i]=1
+                        break
+                      }
                     }
                   }
                 }
@@ -268,7 +297,7 @@ jobs:
                     continue
                   }
 
-                  print line[i]
+                  print lines[i]
                 }
 
                 print suffix_count + 0 > count_file
@@ -280,6 +309,21 @@ jobs:
             host_count=$(sed -n '2p' "$count_file")
 
             rm -f "$count_file"
+
+            # ========================================================
+            # 极其重要：
+            # 如果原文件有内容，但处理结果为空，直接终止 Workflow
+            # 防止规则文件被错误清空
+            # ========================================================
+
+            if [ ! -s "$tmp" ] && [ -s "$file" ]; then
+              echo
+              echo "ERROR: safety check failed!"
+              echo "Generated empty file: $file"
+              echo "Original file will NOT be modified."
+              rm -f "$tmp"
+              exit 1
+            fi
 
             if ! cmp -s "$file" "$tmp"; then
               mv "$tmp" "$file"
@@ -302,14 +346,14 @@ jobs:
 
 
           # ============================================================
-          # 3. 跨文件去重
+          # 3. 跨文件完全重复规则
+          #
+          # 只有下面两组：
           #
           # register > proxy
           # direct   > system
           #
-          # 完全相同的规则：
-          # 保留左边文件
-          # 删除右边文件
+          # 其他文件绝对不参与
           # ============================================================
 
           deduplicate_pair() {
@@ -319,7 +363,7 @@ jobs:
 
             echo
             echo "========================================"
-            echo "$1 > $2"
+            echo "Cross-file: $1 > $2"
             echo "========================================"
 
             if [ ! -f "$keep" ]; then
@@ -353,7 +397,7 @@ jobs:
                 key=tolower($0)
                 gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
 
-                keep[key]=1
+                keep_rule[key]=1
 
                 next
               }
@@ -382,7 +426,7 @@ jobs:
                 key=tolower($0)
                 gsub(/[[:space:]]*,[[:space:]]*/, ",", key)
 
-                if (keep[key]) {
+                if (keep_rule[key]) {
                   removed++
                   next
                 }
@@ -397,6 +441,19 @@ jobs:
 
             count=$(cat "$count_file")
             rm -f "$count_file"
+
+            # ========================================================
+            # 安全检查
+            # ========================================================
+
+            if [ ! -s "$tmp" ] && [ -s "$remove" ]; then
+              echo
+              echo "ERROR: cross-file processing generated empty file!"
+              echo "File: $remove"
+              echo "Original file will NOT be modified."
+              rm -f "$tmp"
+              exit 1
+            fi
 
             if ! cmp -s "$remove" "$tmp"; then
               mv "$tmp" "$remove"
