@@ -1,4 +1,4 @@
-Name: "ads-rules"
+name: name: "ads-rules"
 on:
   schedule:
     - cron: '0 */12 * * *'
