@@ -1640,6 +1640,9 @@
       "domain_suffix": " zyxel.com"
     },
     {
+      "domain_suffix": "18comic.com"
+    },
+    {
       "domain_suffix": "asimov.top"
     },
     {
@@ -1656,6 +1659,12 @@
     },
     {
       "domain_suffix": "hnhr01.com"
+    },
+    {
+      "domain_suffix": "javbus.com"
+    },
+    {
+      "domain_suffix": "javdb.com"
     },
     {
       "domain_suffix": "jjmhw.cc"
@@ -1682,6 +1691,9 @@
       "domain_suffix": "picacomic.com"
     },
     {
+      "domain_suffix": "pixiv.com"
+    },
+    {
       "domain_suffix": "pstatic.net"
     },
     {
@@ -1691,6 +1703,9 @@
       "domain_suffix": "readdle.com"
     },
     {
+      "domain_suffix": "sehuatang.org"
+    },
+    {
       "domain_suffix": "south-plus.net"
     },
     {
@@ -1698,30 +1713,6 @@
     },
     {
       "domain_suffix": "v2ex.co"
-    },
-    {
-      "domain_keyword": " jav"
-    },
-    {
-      "domain_keyword": " pixiv"
-    },
-    {
-      "domain_keyword": " rmcdn"
-    },
-    {
-      "domain_keyword": " roucdn"
-    },
-    {
-      "domain_keyword": " rouman"
-    },
-    {
-      "domain_keyword": " sehuatang"
-    },
-    {
-      "domain_keyword": ".app"
-    },
-    {
-      "domain_keyword": "18comic"
     },
     {
       "ip_cidr": " 109.239.140.0/24"

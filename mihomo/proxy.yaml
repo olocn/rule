@@ -545,12 +545,15 @@ payload:
   - DOMAIN-SUFFIX, zophar.net
   - DOMAIN-SUFFIX, zynamics.com
   - DOMAIN-SUFFIX, zyxel.com
+  - DOMAIN-SUFFIX,18comic.com
   - DOMAIN-SUFFIX,asimov.top
   - DOMAIN-SUFFIX,baozimh.com
   - DOMAIN-SUFFIX,blip.net
   - DOMAIN-SUFFIX,dmit.io
   - DOMAIN-SUFFIX,documents.io
   - DOMAIN-SUFFIX,hnhr01.com
+  - DOMAIN-SUFFIX,javbus.com
+  - DOMAIN-SUFFIX,javdb.com
   - DOMAIN-SUFFIX,jjmhw.cc
   - DOMAIN-SUFFIX,jmapiproxy1.cc
   - DOMAIN-SUFFIX,jmdanjonproxy.vip
@@ -559,20 +562,14 @@ payload:
   - DOMAIN-SUFFIX,metamask.io
   - DOMAIN-SUFFIX,mixpanel.com
   - DOMAIN-SUFFIX,picacomic.com
+  - DOMAIN-SUFFIX,pixiv.com
   - DOMAIN-SUFFIX,pstatic.net
   - DOMAIN-SUFFIX,rc-backup.com
   - DOMAIN-SUFFIX,readdle.com
+  - DOMAIN-SUFFIX,sehuatang.org
   - DOMAIN-SUFFIX,south-plus.net
   - DOMAIN-SUFFIX,split.io
   - DOMAIN-SUFFIX,v2ex.co
-  - DOMAIN-KEYWORD, jav
-  - DOMAIN-KEYWORD, pixiv
-  - DOMAIN-KEYWORD, rmcdn
-  - DOMAIN-KEYWORD, roucdn
-  - DOMAIN-KEYWORD, rouman
-  - DOMAIN-KEYWORD, sehuatang
-  - DOMAIN-KEYWORD,.app
-  - DOMAIN-KEYWORD,18comic
   - IP-CIDR, 109.239.140.0/24
   - IP-CIDR, 5.28.192.0/18
   - IP-CIDR,149.154.160.0/20
