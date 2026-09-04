@@ -33,7 +33,7 @@ jobs:
           mkdir -p /usr/local/bin/custom-tools
           echo "/usr/local/bin/custom-tools" >> "$GITHUB_PATH"
       # ==========================================================
-      # 3. Get latest versions
+      # 3. Get latest sing-box / Mihomo versions
       # ==========================================================
       - name: Get latest versions
         shell: bash
@@ -70,7 +70,7 @@ jobs:
           echo "sing-box: $VERSION_SING"
           echo "mihomo:   $TAG_MIHOMO"
       # ==========================================================
-      # 4. Cache binaries
+      # 4. Cache tools
       # ==========================================================
       - name: Cache tools
         uses: actions/cache@v4
@@ -80,8 +80,8 @@ jobs:
       # ==========================================================
       # 5. Install sing-box
       #
+      # 只在自己创建的目录中搜索
       # 不扫描整个 /tmp
-      # 只在自己创建的目录中寻找二进制
       # ==========================================================
       - name: Install sing-box
         shell: bash
@@ -200,6 +200,20 @@ jobs:
           wc -l source-olocn.txt source-awa.txt
       # ==========================================================
       # 8. Normalize rules
+      #
+      # 支持：
+      # DOMAIN
+      # DOMAIN-SUFFIX
+      # DOMAIN-KEYWORD
+      # DOMAIN-SET
+      #
+      # 清理：
+      # BOM
+      # Zero Width Space
+      # Zero Width Joiner
+      # Word Joiner U+2060
+      # Bidi 控制字符
+      # Soft Hyphen
       # ==========================================================
       - name: Normalize rules
         shell: bash
@@ -208,7 +222,37 @@ jobs:
           cat \
             source-olocn.txt \
             source-awa.txt \
-            | sed 's/\r$//' \
+            | perl -CS -pe '
+                # BOM
+                s/\x{FEFF}//g;
+                # Zero Width Space
+                s/\x{200B}//g;
+                # Zero Width Non-Joiner
+                s/\x{200C}//g;
+                # Zero Width Joiner
+                s/\x{200D}//g;
+                # Word Joiner
+                s/\x{2060}//g;
+                # Soft Hyphen
+                s/\x{00AD}//g;
+                # Left-to-Right Mark
+                s/\x{200E}//g;
+                # Right-to-Left Mark
+                s/\x{200F}//g;
+                # Directional formatting
+                s/\x{202A}//g;
+                s/\x{202B}//g;
+                s/\x{202C}//g;
+                s/\x{202D}//g;
+                s/\x{202E}//g;
+                # Bidi isolates
+                s/\x{2066}//g;
+                s/\x{2067}//g;
+                s/\x{2068}//g;
+                s/\x{2069}//g;
+                # CRLF
+                s/\r$//;
+              ' \
             | sed 's/[[:space:]]*#.*$//' \
             | sed 's/[[:space:]]*$//' \
             | grep -vE '^[[:space:]]*$' \
@@ -222,7 +266,8 @@ jobs:
                 NF >= 2 &&
                 ($1 == "DOMAIN" ||
                  $1 == "DOMAIN-SUFFIX" ||
-                 $1 == "DOMAIN-KEYWORD")
+                 $1 == "DOMAIN-KEYWORD" ||
+                 $1 == "DOMAIN-SET")
                 {
                   value=$2
                   gsub(/^[[:space:]]+/, "", value)
@@ -230,6 +275,7 @@ jobs:
                   if (value == "")
                     next
                   value=tolower(value)
+                  # 去掉输入域名前后的点
                   sub(/^\./, "", value)
                   sub(/\.$/, "", value)
                   print $1 "," value
@@ -250,6 +296,8 @@ jobs:
             | uniq -c
       # ==========================================================
       # 9. Generate Mihomo YAML
+      #
+      # DOMAIN-SET 按 DOMAIN 处理
       # ==========================================================
       - name: Generate Mihomo YAML
         shell: bash
@@ -259,7 +307,10 @@ jobs:
             echo "payload:"
             awk -F',' '
             {
-              print "  - " $1 "," $2
+              if ($1 == "DOMAIN-SET")
+                print "  - DOMAIN," $2
+              else
+                print "  - " $1 "," $2
             }
             ' rules.normalized
           } > ads-clash.yaml
@@ -272,64 +323,57 @@ jobs:
       #
       # DOMAIN:
       #   DOMAIN,2345.com
-      #   ↓
+      #   ->
       #   2345.com
       #
       # DOMAIN-SUFFIX:
       #   DOMAIN-SUFFIX,2345.com
-      #   ↓
+      #   ->
       #   .2345.com
       #
+      # DOMAIN-SET:
+      #   DOMAIN-SET,2345.com
+      #   ->
+      #   2345.com
+      #
       # DOMAIN-KEYWORD:
-      #   不进入 DOMAIN-SET
+      #   不进入 ads-latest.txt
       # ==========================================================
-      - name: Validate Surge DOMAIN-SET
+      - name: Generate Surge DOMAIN-SET
         shell: bash
         run: |
           set -euo pipefail
-
+          {
+            echo "# Auto merged Surge DOMAIN-SET rules (${DATE})"
+            awk -F',' '
+            {
+              if ($1 == "DOMAIN")
+                print $2
+              else if ($1 == "DOMAIN-SUFFIX")
+                print "." $2
+              else if ($1 == "DOMAIN-SET")
+                print $2
+            }
+            ' rules.normalized \
+            | sort -u
+          } > ads-latest.txt
           DOMAIN_SET_COUNT=$(
             grep -vE '^#|^$' ads-latest.txt | wc -l
           )
-
           if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
             echo "ERROR: ads-latest.txt contains no rules"
             exit 1
           fi
-
-          # 检查是否存在非 ASCII 字符
-          if LC_ALL=C grep -n '[^ -~]' ads-latest.txt; then
-            echo
-            echo "ERROR: ads-latest.txt contains non-ASCII/invisible characters"
-            exit 1
-          fi
-
-          # 检查 DOMAIN-SET 不允许出现规则类型前缀
-          if grep -qE \
-            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),' \
-            ads-latest.txt; then
-
-            echo "ERROR: ads-latest.txt contains rule-type prefixes"
-            exit 1
-          fi
-
-          # 检查域名格式
-          INVALID=$(
-            grep -vE \
-              '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
-              ads-latest.txt \
-              || true
-          )
-
-          if [ -n "$INVALID" ]; then
-            echo "ERROR: invalid DOMAIN-SET entries:"
-            echo "$INVALID"
-            exit 1
-          fi
-
-          echo "Valid Surge DOMAIN-SET rules: $DOMAIN_SET_COUNT"
+          echo
+          echo "Surge DOMAIN-SET rules:"
+          echo "$DOMAIN_SET_COUNT"
+          echo
+          echo "First 20 rules:"
+          head -n 21 ads-latest.txt
       # ==========================================================
       # 11. Generate MosDNS
+      #
+      # DOMAIN-SET 按 full 处理
       # ==========================================================
       - name: Generate MosDNS
         shell: bash
@@ -343,6 +387,8 @@ jobs:
               print "full:" $2
             else if ($1 == "DOMAIN-KEYWORD")
               print "keyword:" $2
+            else if ($1 == "DOMAIN-SET")
+              print "full:" $2
           }
           ' rules.normalized \
           | sort -u \
@@ -353,6 +399,8 @@ jobs:
           fi
       # ==========================================================
       # 12. Generate Quantumult X
+      #
+      # DOMAIN-SET 按 host 处理
       # ==========================================================
       - name: Generate Quantumult X
         shell: bash
@@ -366,6 +414,8 @@ jobs:
               print "host," $2 ",reject"
             else if ($1 == "DOMAIN-KEYWORD")
               print "host-keyword," $2 ",reject"
+            else if ($1 == "DOMAIN-SET")
+              print "host," $2 ",reject"
           }
           ' rules.normalized \
           | sort -u \
@@ -377,8 +427,17 @@ jobs:
       # ==========================================================
       # 13. Generate sing-box JSON
       #
-      # sing-box 1.14.x
-      # source rule-set version = 5
+      # DOMAIN:
+      #   domain
+      #
+      # DOMAIN-SUFFIX:
+      #   domain_suffix
+      #
+      # DOMAIN-KEYWORD:
+      #   domain_keyword
+      #
+      # DOMAIN-SET:
+      #   按 domain 处理
       # ==========================================================
       - name: Generate sing-box JSON
         shell: bash
@@ -407,6 +466,8 @@ jobs:
                       domain_suffix.add(value)
                   elif typ == "DOMAIN-KEYWORD":
                       domain_keyword.add(value)
+                  elif typ == "DOMAIN-SET":
+                      domain.add(value)
           rule = {}
           if domain:
               rule["domain"] = sorted(domain)
@@ -446,16 +507,16 @@ jobs:
             > /dev/null
           echo "sing-box JSON generated successfully"
       # ==========================================================
-      # 14. Validate sing-box rule-set
+      # 14. Validate sing-box
       # ==========================================================
       - name: Validate sing-box rule-set
         shell: bash
         run: |
           set -euo pipefail
-          echo "sing-box:"
+          echo "sing-box version:"
           sing-box version
           echo
-          echo "JSON:"
+          echo "Validating JSON..."
           python3 -m json.tool \
             ads-singbox.json \
             > /dev/null
@@ -509,6 +570,8 @@ jobs:
       #   DOMAIN-SET,example.com
       #   DOMAIN,example.com
       #   DOMAIN-SUFFIX,example.com
+      #
+      # 同时禁止 Unicode 隐藏字符
       # ==========================================================
       - name: Validate Surge DOMAIN-SET
         shell: bash
@@ -521,6 +584,20 @@ jobs:
             echo "ERROR: ads-latest.txt contains no rules"
             exit 1
           fi
+          echo "Checking invisible / non-ASCII characters..."
+          if LC_ALL=C grep -n '[^ -~]' ads-latest.txt; then
+            echo
+            echo "ERROR: ads-latest.txt contains non-ASCII/invisible characters"
+            exit 1
+          fi
+          echo "Checking rule-type prefixes..."
+          if grep -qE \
+            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),' \
+            ads-latest.txt; then
+            echo "ERROR: ads-latest.txt contains rule-type prefixes"
+            exit 1
+          fi
+          echo "Checking domain format..."
           INVALID=$(
             grep -vE \
               '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
@@ -528,18 +605,37 @@ jobs:
               || true
           )
           if [ -n "$INVALID" ]; then
-            echo "ERROR: ads-latest.txt contains invalid DOMAIN-SET entries:"
             echo
+            echo "ERROR: invalid DOMAIN-SET entries:"
             echo "$INVALID"
             exit 1
           fi
-          if grep -qE '^DOMAIN-SET,' ads-latest.txt; then
-            echo "ERROR: DOMAIN-SET prefix must not exist"
+          echo
+          echo "Valid Surge DOMAIN-SET rules:"
+          echo "$DOMAIN_SET_COUNT"
+      # ==========================================================
+      # 17. Extra source sanity check
+      #
+      # 确保最终规则里不残留 U+2060 等字符
+      # ==========================================================
+      - name: Validate normalized rules
+        shell: bash
+        run: |
+          set -euo pipefail
+          if LC_ALL=C grep -n '[^ -~]' rules.normalized; then
+            echo
+            echo "ERROR: rules.normalized contains non-ASCII/invisible characters"
             exit 1
           fi
-          echo "Valid Surge DOMAIN-SET rules: $DOMAIN_SET_COUNT"
+          if grep -qE \
+            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),$' \
+            rules.normalized; then
+            echo "ERROR: empty domain value detected"
+            exit 1
+          fi
+          echo "Normalized rules are clean."
       # ==========================================================
-      # 17. Validate all output files
+      # 18. Validate output files
       # ==========================================================
       - name: Validate output files
         shell: bash
@@ -561,7 +657,7 @@ jobs:
             ls -lh "$file"
           done
       # ==========================================================
-      # 18. Statistics
+      # 19. Statistics
       # ==========================================================
       - name: Show statistics
         shell: bash
@@ -574,6 +670,11 @@ jobs:
           echo
           echo "Normalized:"
           wc -l rules.normalized
+          echo
+          echo "Rule types:"
+          cut -d',' -f1 rules.normalized \
+            | sort \
+            | uniq -c
           echo
           echo "Surge DOMAIN-SET:"
           grep -vE '^#|^$' ads-latest.txt | wc -l
@@ -613,7 +714,7 @@ jobs:
               )
           PY
       # ==========================================================
-      # 19. Cleanup
+      # 20. Cleanup
       # ==========================================================
       - name: Cleanup
         shell: bash
@@ -628,7 +729,7 @@ jobs:
           rm -rf \
             /tmp/sing-box-package
       # ==========================================================
-      # 20. Commit and push
+      # 21. Commit and push
       # ==========================================================
       - name: Commit changes
         shell: bash
