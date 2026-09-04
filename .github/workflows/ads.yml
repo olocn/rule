@@ -1,26 +1,35 @@
 name: ads-rules
+
 on:
   push:
     branches:
       - master
     paths:
       - 'ad.txt'
+
   schedule:
     - cron: '0 */12 * * *'
+
   workflow_dispatch:
+
 permissions:
   contents: write
+
 concurrency:
   group: ads-rules
   cancel-in-progress: false
+
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
+
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       PYTHONUNBUFFERED: "1"
+
     steps:
+
       # ==========================================================
       # 1. Checkout
       # ==========================================================
@@ -28,6 +37,7 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 1
+
       # ==========================================================
       # 2. Prepare environment
       # ==========================================================
@@ -35,8 +45,16 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
           echo "DATE=$(date -u +'%Y-%m-%d')" >> "$GITHUB_ENV"
+
+          echo "========================================"
+          echo "Environment"
+          echo "========================================"
+
           python3 --version
+          curl --version | head -n 1
+
       # ==========================================================
       # 3. Download source rules
       # ==========================================================
@@ -44,86 +62,120 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
+
+          echo "========================================"
+          echo "Downloading source rules"
+          echo "========================================"
+
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
+            --retry-all-errors \
             --connect-timeout 15 \
             --max-time 180 \
             "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/ad.txt" \
             -o source-olocn.txt
+
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
+            --retry-all-errors \
             --connect-timeout 15 \
             --max-time 180 \
             "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list" \
             -o source-awa.txt
-          if [ ! -s source-olocn.txt ]; then
-            echo "ERROR: source-olocn.txt is empty"
-            exit 1
-          fi
-          if [ ! -s source-awa.txt ]; then
-            echo "ERROR: source-awa.txt is empty"
-            exit 1
-          fi
-          echo "Source rules:"
-          wc -l source-olocn.txt source-awa.txt
+
+          for file in \
+            source-olocn.txt \
+            source-awa.txt
+          do
+            if [ ! -s "$file" ]; then
+              echo "ERROR: $file is empty"
+              exit 1
+            fi
+
+            echo
+            echo "$file:"
+            wc -l "$file"
+            ls -lh "$file"
+          done
+
       # ==========================================================
-      # 4. Python process
+      # 4. Process + Generate all outputs
       #
-      # 安全规则：
+      # 输入：
       #
-      # 1. 精确重复去重
-      # 2. 仅 DOMAIN-SUFFIX 做父子域名去重
-      # 3. DOMAIN 不做父子去重
-      # 4. DOMAIN-KEYWORD 不做父子去重
-      # 5. DOMAIN-SET 不做父子去重
-      # 6. CIDR 完全不参与去重
-      # 7. 不做 CIDR 包含关系判断
-      # 8. 不改变原始规则语义
+      # DOMAIN,example.com
+      # DOMAIN-SUFFIX,example.com
+      # DOMAIN-KEYWORD,example
+      # DOMAIN-SET,example.com
+      #
+      # 输出：
+      #
+      # ads-latest.txt
+      # ads-mosdns.txt
+      # ads-qx.snippet
+      #
+      # 去重规则：
+      #
+      # 1. 精确重复：全部规则类型都去重
+      #
+      # 2. DOMAIN-SUFFIX：
+      #    仅此类型做父子域去重
+      #
+      # 3. DOMAIN：
+      #    不做父子域去重
+      #
+      # 4. DOMAIN-KEYWORD：
+      #    不做父子域去重
+      #
+      # 5. DOMAIN-SET：
+      #    不做父子域去重
+      #
+      # 6. CIDR：
+      #    不参与处理
+      #
+      # 7. 不进行 CIDR 包含关系判断
       # ==========================================================
-      - name: Process rules with Python
+      - name: Process and generate rules
         shell: bash
         run: |
           set -euo pipefail
+
           python3 <<'PY'
           from __future__ import annotations
+
+          import os
           import re
           from pathlib import Path
-          SOURCES = [
+
+
+          # ======================================================
+          # Configuration
+          # ======================================================
+
+          SOURCES = (
               Path("source-olocn.txt"),
               Path("source-awa.txt"),
-          ]
-          NORMALIZED = Path("rules.normalized")
-          # ------------------------------------------------------
-          # 支持的规则类型
-          # ------------------------------------------------------
+          )
+
+          OUTPUT_SURGE = Path("ads-latest.txt")
+          OUTPUT_MOSDNS = Path("ads-mosdns.txt")
+          OUTPUT_QX = Path("ads-qx.snippet")
+
+
           ALLOWED_TYPES = {
               "DOMAIN",
               "DOMAIN-SUFFIX",
               "DOMAIN-KEYWORD",
               "DOMAIN-SET",
           }
-          # ------------------------------------------------------
-          # 明确记录 CIDR 类型。
-          #
-          # 本程序绝不对 CIDR 做包含关系判断。
-          # 即使出现：
-          #
-          # 1.1.1.0/24
-          # 1.1.1.1/32
-          #
-          # 也不会因为包含关系删除任何规则。
-          # ------------------------------------------------------
-          CIDR_TYPES = {
-              "IP-CIDR",
-              "IP-CIDR6",
-              "IP-CIDR-NO-RESOLVE",
-              "IP-CIDR6-NO-RESOLVE",
-          }
-          # ------------------------------------------------------
-          # Unicode 隐藏字符清理
-          # ------------------------------------------------------
+
+
+          # ======================================================
+          # Hidden Unicode characters
+          # ======================================================
+
           HIDDEN_CHARS = {
               "\ufeff",  # BOM
               "\u200b",  # Zero Width Space
@@ -143,111 +195,119 @@ jobs:
               "\u2068",  # FSI
               "\u2069",  # PDI
           }
+
+
           def clean_unicode(text: str) -> str:
               for char in HIDDEN_CHARS:
                   text = text.replace(char, "")
               return text
-          # ------------------------------------------------------
-          # 删除行尾注释
+
+
+          # ======================================================
+          # Remove comments
           #
-          # 与原 Workflow：
+          # 保持与原 Workflow 的目的：
           #
-          # sed 's/[[:space:]]*#.*$//'
+          # abc.com # comment
           #
-          # 保持相同目的。
-          # ------------------------------------------------------
+          # ->
+          #
+          # abc.com
+          # ======================================================
+
           def remove_comment(line: str) -> str:
               return re.sub(r"\s*#.*$", "", line)
-          # ------------------------------------------------------
-          # 处理规则
-          # ------------------------------------------------------
+
+
+          # ======================================================
+          # Parse rule
+          # ======================================================
+
           def parse_rule(line: str):
               line = clean_unicode(line)
               line = line.replace("\r", "")
               line = remove_comment(line).strip()
+
               if not line:
                   return None
-              parts = [x.strip() for x in line.split(",")]
+
+              parts = [item.strip() for item in line.split(",")]
+
               if len(parts) < 2:
                   return None
+
               rule_type = parts[0].upper()
               value = parts[1].strip()
+
               if rule_type not in ALLOWED_TYPES:
                   return None
+
               if not value:
                   return None
+
               # --------------------------------------------------
-              # 删除原 Workflow 中的尾部参数
+              # Remove unsupported trailing parameters.
               #
-              # REJECT...
-              # extended-matching
-              # pre-matching
-              # no-resolve
-              # --------------------------------------------------
-              tail = parts[2:]
-              cleaned_tail = []
-              for item in tail:
-                  item = item.strip()
-                  if not item:
-                      continue
-                  lower = item.lower()
-                  if lower in {
-                      "extended-matching",
-                      "pre-matching",
-                      "no-resolve",
-                  }:
-                      continue
-                  if lower in {
-                      "reject",
-                      "reject-dict",
-                      "reject-tinygif",
-                      "reject-no-drop",
-                      "reject-img",
-                      "reject-200",
-                      "reject-drop",
-                      "reject-quic",
-                  }:
-                      continue
-                  cleaned_tail.append(item)
-              # --------------------------------------------------
-              # 你的原 Workflow 最终只输出：
+              # 最终统一输出：
               #
               # TYPE,value
-              #
-              # 因此这里不保留 tail。
               # --------------------------------------------------
+
               value = value.lower()
-              # 去掉输入域名前后的点
               value = value.strip(".")
+
               if not value:
                   return None
+
+              # --------------------------------------------------
+              # 防止隐藏字符 / 空白进入最终结果
+              # --------------------------------------------------
+
+              if any(char in value for char in HIDDEN_CHARS):
+                  return None
+
+              if any(char.isspace() for char in value):
+                  return None
+
               return rule_type, value
-          # ------------------------------------------------------
-          # 域名标准化
+
+
+          # ======================================================
+          # Strict domain normalization
           #
-          # 只用于判断父子关系。
-          # ------------------------------------------------------
+          # 这里只用于 DOMAIN-SUFFIX 父子关系判断。
+          #
+          # 不参与 DOMAIN / KEYWORD / DOMAIN-SET。
+          # ======================================================
+
           def normalize_domain(value: str):
               value = value.lower().strip().rstrip(".")
+
               if not value:
                   return None
-              # 不允许明显的非域名内容进入父子判断
+
+              # IP / CIDR 不进行域名父子判断
               if "/" in value:
                   return None
-              if " " in value:
+
+              if ":" in value:
                   return None
+
               # IPv4
               if re.fullmatch(
                   r"(?:\d{1,3}\.){3}\d{1,3}",
                   value,
               ):
                   return None
-              # IPv6
-              if ":" in value:
+
+              if " " in value:
                   return None
+
               return value
-          # ------------------------------------------------------
-          # 严格 DNS label 父子判断
+
+
+          # ======================================================
+          # Check whether child is covered by parent
           #
           # www.example.com
           # example.com
@@ -258,570 +318,761 @@ jobs:
           # example.com
           #
           # False
-          # ------------------------------------------------------
+          # ======================================================
+
           def is_subdomain(child: str, parent: str) -> bool:
               if child == parent:
                   return False
+
               return child.endswith("." + parent)
-          # ------------------------------------------------------
-          # 第一阶段：读取并规范化
-          # ------------------------------------------------------
+
+
+          # ======================================================
+          # Read sources
+          # ======================================================
+
           parsed_rules = []
-          source_count = 0
+
+          total_input_lines = 0
+          total_accepted = 0
+
+          source_statistics = {}
+
+
           for source in SOURCES:
+
               print()
               print("=" * 60)
               print(f"Reading: {source}")
               print("=" * 60)
+
               lines = source.read_text(
                   encoding="utf-8",
                   errors="replace",
               ).splitlines()
-              source_count += len(lines)
+
+              total_input_lines += len(lines)
+
               accepted = 0
+
               for line in lines:
+
                   result = parse_rule(line)
+
                   if result is None:
                       continue
-                  rule_type, value = result
-                  parsed_rules.append(
-                      (rule_type, value)
-                  )
+
+                  parsed_rules.append(result)
                   accepted += 1
+
+              total_accepted += accepted
+
+              source_statistics[source.name] = (
+                  len(lines),
+                  accepted,
+              )
+
               print(f"Input lines : {len(lines)}")
               print(f"Accepted    : {accepted}")
-          # ------------------------------------------------------
-          # 第二阶段：精确重复去重
+
+
+          # ======================================================
+          # Exact duplicate removal
           #
-          # 保持第一次出现的规则。
-          # ------------------------------------------------------
+          # 保留第一次出现。
+          #
+          # DOMAIN,example.com
+          # DOMAIN-SUFFIX,example.com
+          #
+          # 是两个不同规则，不会互相删除。
+          # ======================================================
+
           exact_seen = set()
-          exact_removed = 0
           unique_rules = []
+
+          exact_removed = 0
+
           for rule in parsed_rules:
+
               if rule in exact_seen:
                   exact_removed += 1
                   continue
+
               exact_seen.add(rule)
               unique_rules.append(rule)
-          # ------------------------------------------------------
-          # 第三阶段：
+
+
+          # ======================================================
+          # DOMAIN-SUFFIX parent/child deduplication
           #
-          # 仅 DOMAIN-SUFFIX 做父子域名去重。
+          # 只有 DOMAIN-SUFFIX 参与。
           #
-          # 非常重要：
+          # DOMAIN-SUFFIX,example.com
+          # DOMAIN-SUFFIX,www.example.com
           #
-          # DOMAIN：
-          #   example.com
-          #   www.example.com
+          # ->
           #
-          # 不删除。
+          # DOMAIN-SUFFIX,example.com
           #
-          # 因为 DOMAIN 是精确匹配语义。
+          # 但：
           #
-          # DOMAIN-SUFFIX：
-          #   example.com
-          #   www.example.com
+          # DOMAIN,example.com
+          # DOMAIN,www.example.com
           #
-          # 可以删除 www.example.com。
-          # ------------------------------------------------------
+          # 两者全部保留。
+          # ======================================================
+
           suffix_domains = {
               value
               for rule_type, value in unique_rules
               if rule_type == "DOMAIN-SUFFIX"
           }
+
+
           suffix_removed = 0
           final_rules = []
+
+
           for rule_type, value in unique_rules:
+
               if rule_type != "DOMAIN-SUFFIX":
+
                   final_rules.append(
                       (rule_type, value)
                   )
+
                   continue
+
               domain = normalize_domain(value)
+
               if domain is None:
+
                   final_rules.append(
                       (rule_type, value)
                   )
+
                   continue
+
               labels = domain.split(".")
+
               covered = False
-              # 从最直接的父域开始检查
+
+              # --------------------------------------------------
+              # 从最近的父域开始：
               #
               # a.b.example.com
-              #   -> b.example.com
-              #   -> example.com
               #
+              # b.example.com
+              # example.com
+              # --------------------------------------------------
+
               for index in range(1, len(labels) - 1):
+
                   parent = ".".join(
                       labels[index:]
                   )
+
                   if parent in suffix_domains:
+
                       covered = True
                       break
+
               if covered:
+
                   suffix_removed += 1
                   continue
+
               final_rules.append(
                   (rule_type, value)
               )
-          # ------------------------------------------------------
-          # 最终排序
+
+
+          # ======================================================
+          # Stable sorting
           #
           # 按：
-          #   TYPE
-          #   VALUE
+          #
+          # TYPE
+          # VALUE
           #
           # 排序。
           #
-          # 不进行任何语义上的合并。
-          # ------------------------------------------------------
-          final_rules = sorted(
-              final_rules,
+          # 这样每天运行不会因为输入顺序变化产生无意义 diff。
+          # ======================================================
+
+          final_rules.sort(
               key=lambda item: (
                   item[0],
                   item[1],
-              ),
+              )
           )
-          # ------------------------------------------------------
-          # 输出 normalized
-          # ------------------------------------------------------
-          with NORMALIZED.open(
-              "w",
+
+
+          if not final_rules:
+              raise SystemExit(
+                  "ERROR: final rules are empty"
+              )
+
+
+          # ======================================================
+          # Generate Surge
+          #
+          # 保留完整规则类型。
+          #
+          # DOMAIN,example.com
+          # DOMAIN-SUFFIX,example.com
+          # DOMAIN-KEYWORD,example
+          # DOMAIN-SET,example.com
+          # ======================================================
+
+          surge_lines = [
+              f"# Auto merged Surge rules ({os.environ['DATE']})"
+          ]
+
+          for rule_type, value in final_rules:
+
+              surge_lines.append(
+                  f"{rule_type},{value}"
+              )
+
+
+          OUTPUT_SURGE.write_text(
+              "\n".join(surge_lines) + "\n",
               encoding="utf-8",
-              newline="\n",
-          ) as f:
-              for rule_type, value in final_rules:
-                  f.write(
-                      f"{rule_type},{value}\n"
+          )
+
+
+          # ======================================================
+          # Generate MosDNS
+          #
+          # DOMAIN-SUFFIX
+          #     domain:
+          #
+          # DOMAIN
+          #     full:
+          #
+          # DOMAIN-KEYWORD
+          #     keyword:
+          #
+          # DOMAIN-SET
+          #     full:
+          # ======================================================
+
+          mosdns_lines = []
+
+          for rule_type, value in final_rules:
+
+              if rule_type == "DOMAIN-SUFFIX":
+
+                  mosdns_lines.append(
+                      "domain:" + value
                   )
-          # ------------------------------------------------------
-          # 统计
-          # ------------------------------------------------------
+
+              elif rule_type == "DOMAIN":
+
+                  mosdns_lines.append(
+                      "full:" + value
+                  )
+
+              elif rule_type == "DOMAIN-KEYWORD":
+
+                  mosdns_lines.append(
+                      "keyword:" + value
+                  )
+
+              elif rule_type == "DOMAIN-SET":
+
+                  mosdns_lines.append(
+                      "full:" + value
+                  )
+
+
+          # 保持稳定排序 + 去重
+          mosdns_lines = sorted(set(mosdns_lines))
+
+
+          if not mosdns_lines:
+              raise SystemExit(
+                  "ERROR: ads-mosdns.txt is empty"
+              )
+
+
+          OUTPUT_MOSDNS.write_text(
+              "\n".join(mosdns_lines) + "\n",
+              encoding="utf-8",
+          )
+
+
+          # ======================================================
+          # Generate Quantumult X
+          # ======================================================
+
+          qx_lines = []
+
+          for rule_type, value in final_rules:
+
+              if rule_type == "DOMAIN-SUFFIX":
+
+                  qx_lines.append(
+                      f"host-suffix,{value},reject"
+                  )
+
+              elif rule_type == "DOMAIN":
+
+                  qx_lines.append(
+                      f"host,{value},reject"
+                  )
+
+              elif rule_type == "DOMAIN-KEYWORD":
+
+                  qx_lines.append(
+                      f"host-keyword,{value},reject"
+                  )
+
+              elif rule_type == "DOMAIN-SET":
+
+                  qx_lines.append(
+                      f"host,{value},reject"
+                  )
+
+
+          # 稳定排序 + 去重
+          qx_lines = sorted(set(qx_lines))
+
+
+          if not qx_lines:
+              raise SystemExit(
+                  "ERROR: ads-qx.snippet is empty"
+              )
+
+
+          OUTPUT_QX.write_text(
+              "\n".join(qx_lines) + "\n",
+              encoding="utf-8",
+          )
+
+
+          # ======================================================
+          # Statistics
+          # ======================================================
+
+          type_count = {}
+
+          for rule_type, _ in final_rules:
+
+              type_count[rule_type] = (
+                  type_count.get(rule_type, 0) + 1
+              )
+
+
           print()
           print("=" * 60)
           print("RULE PROCESSING")
           print("=" * 60)
+
           print(
-              f"Source lines             : {source_count}"
+              f"Source lines             : {total_input_lines}"
           )
+
           print(
-              f"Accepted rules           : {len(parsed_rules)}"
+              f"Accepted rules           : {total_accepted}"
           )
+
           print(
               f"Exact duplicates removed : {exact_removed}"
           )
+
           print(
               f"Parent domains removed   : {suffix_removed}"
           )
+
           print(
               "CIDR containment removed : 0"
           )
+
           print(
               f"Final rules              : {len(final_rules)}"
           )
-          # ------------------------------------------------------
-          # 安全检查
-          # ------------------------------------------------------
-          # 明确保证没有 CIDR 规则参与
-          # 但即使以后加入 CIDR，也绝不进行包含去重。
-          #
-          # 当前输入只允许四种域名规则。
-          # ------------------------------------------------------
-          if not final_rules:
-              raise SystemExit(
-                  "ERROR: normalized rules are empty"
-              )
-          # 检查隐藏字符
-          content = NORMALIZED.read_text(
-              encoding="utf-8"
-          )
-          for char in HIDDEN_CHARS:
-              if char in content:
-                  raise SystemExit(
-                      "ERROR: hidden Unicode character "
-                      "remains in normalized rules"
-                  )
-          # 检查空值
-          for line in content.splitlines():
-              parts = line.split(",", 1)
-              if (
-                  len(parts) != 2
-                  or not parts[1].strip()
-              ):
-                  raise SystemExit(
-                      f"ERROR: invalid normalized rule: {line}"
-                  )
-          print()
-          print("Normalized rules:")
-          print(len(final_rules))
+
           print()
           print("Rule types:")
-          type_count = {}
-          for rule_type, _ in final_rules:
-              type_count[rule_type] = (
-                  type_count.get(rule_type, 0) + 1
-              )
+
           for rule_type in sorted(type_count):
+
               print(
                   f"{type_count[rule_type]:8d} {rule_type}"
               )
+
           print()
-          print("Python rule processing completed.")
-          PY
-      # ==========================================================
-      # 5. Generate Surge DOMAIN-SET
-      #
-      # DOMAIN:
-      #   DOMAIN,example.com
-      #   ->
-      #   example.com
-      #
-      # DOMAIN-SUFFIX:
-      #   DOMAIN-SUFFIX,example.com
-      #   ->
-      #   .example.com
-      #
-      # DOMAIN-SET:
-      #   DOMAIN-SET,example.com
-      #   ->
-      #   example.com
-      #
-      # DOMAIN-KEYWORD:
-      #   不进入 ads-latest.txt
-      # ==========================================================
-      - name: Generate Surge DOMAIN-SET
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          from pathlib import Path
-          rules = []
-          with open(
-              "rules.normalized",
-              encoding="utf-8"
-          ) as f:
-              for line in f:
-                  line = line.strip()
-                  if not line:
-                      continue
-                  rule_type, value = line.split(",", 1)
-                  if rule_type == "DOMAIN":
-                      rules.append(value)
-                  elif rule_type == "DOMAIN-SUFFIX":
-                      rules.append("." + value)
-                  elif rule_type == "DOMAIN-SET":
-                      rules.append(value)
-          rules = sorted(set(rules))
-          if not rules:
-              raise SystemExit(
-                  "ERROR: ads-latest.txt contains no rules"
-              )
-          with open(
-              "ads-latest.txt",
-              "w",
-              encoding="utf-8",
-              newline="\n",
-          ) as f:
-              f.write(
-                  "# Auto merged Surge DOMAIN-SET rules "
-                  f"({__import__('os').environ['DATE']})\n"
-              )
-              for rule in rules:
-                  f.write(rule + "\n")
+          print("Generated:")
+
           print(
-              "Surge DOMAIN-SET rules:",
-              len(rules)
+              f"  {OUTPUT_SURGE}: "
+              f"{len(surge_lines) - 1}"
           )
+
+          print(
+              f"  {OUTPUT_MOSDNS}: "
+              f"{len(mosdns_lines)}"
+          )
+
+          print(
+              f"  {OUTPUT_QX}: "
+              f"{len(qx_lines)}"
+          )
+
+
+          # ======================================================
+          # Internal validation
+          # ======================================================
+
+          for output in (
+              OUTPUT_SURGE,
+              OUTPUT_MOSDNS,
+              OUTPUT_QX,
+          ):
+
+              if not output.exists():
+                  raise SystemExit(
+                      f"ERROR: missing output: {output}"
+                  )
+
+              if output.stat().st_size == 0:
+                  raise SystemExit(
+                      f"ERROR: empty output: {output}"
+                  )
+
+
           print()
-          print("First 20 rules:")
-          for rule in rules[:20]:
-              print(rule)
+          print("Python processing completed successfully.")
           PY
+
       # ==========================================================
-      # 6. Generate MosDNS
+      # 5. Validate normalized/generated Surge rules
       #
-      # DOMAIN-SUFFIX -> domain:
-      # DOMAIN        -> full:
-      # DOMAIN-KEYWORD -> keyword:
-      # DOMAIN-SET    -> full:
-      # ==========================================================
-      - name: Generate MosDNS
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          rules = []
-          with open(
-              "rules.normalized",
-              encoding="utf-8"
-          ) as f:
-              for line in f:
-                  line = line.strip()
-                  if not line:
-                      continue
-                  rule_type, value = line.split(",", 1)
-                  if rule_type == "DOMAIN-SUFFIX":
-                      rules.append(
-                          "domain:" + value
-                      )
-                  elif rule_type == "DOMAIN":
-                      rules.append(
-                          "full:" + value
-                      )
-                  elif rule_type == "DOMAIN-KEYWORD":
-                      rules.append(
-                          "keyword:" + value
-                      )
-                  elif rule_type == "DOMAIN-SET":
-                      rules.append(
-                          "full:" + value
-                      )
-          rules = sorted(set(rules))
-          if not rules:
-              raise SystemExit(
-                  "ERROR: ads-mosdns.txt is empty"
-              )
-          with open(
-              "ads-mosdns.txt",
-              "w",
-              encoding="utf-8",
-              newline="\n",
-          ) as f:
-              for rule in rules:
-                  f.write(rule + "\n")
-          print(
-              "MosDNS rules:",
-              len(rules)
-          )
-          PY
-      # ==========================================================
-      # 7. Generate Quantumult X
+      # ads-latest.txt：
       #
-      # DOMAIN-SUFFIX -> host-suffix
-      # DOMAIN        -> host
-      # DOMAIN-KEYWORD -> host-keyword
-      # DOMAIN-SET    -> host
+      # DOMAIN,example.com
+      # DOMAIN-SUFFIX,example.com
+      # DOMAIN-KEYWORD,example
+      # DOMAIN-SET,example.com
       # ==========================================================
-      - name: Generate Quantumult X
+      - name: Validate Surge rules
         shell: bash
         run: |
           set -euo pipefail
-          python3 <<'PY'
-          rules = []
-          with open(
-              "rules.normalized",
-              encoding="utf-8"
-          ) as f:
-              for line in f:
-                  line = line.strip()
-                  if not line:
-                      continue
-                  rule_type, value = line.split(",", 1)
-                  if rule_type == "DOMAIN-SUFFIX":
-                      rules.append(
-                          f"host-suffix,{value},reject"
-                      )
-                  elif rule_type == "DOMAIN":
-                      rules.append(
-                          f"host,{value},reject"
-                      )
-                  elif rule_type == "DOMAIN-KEYWORD":
-                      rules.append(
-                          f"host-keyword,{value},reject"
-                      )
-                  elif rule_type == "DOMAIN-SET":
-                      rules.append(
-                          f"host,{value},reject"
-                      )
-          rules = sorted(set(rules))
-          if not rules:
-              raise SystemExit(
-                  "ERROR: ads-qx.snippet is empty"
-              )
-          with open(
-              "ads-qx.snippet",
-              "w",
-              encoding="utf-8",
-              newline="\n",
-          ) as f:
-              for rule in rules:
-                  f.write(rule + "\n")
-          print(
-              "Quantumult X rules:",
-              len(rules)
-          )
-          PY
-      # ==========================================================
-      # 8. Validate normalized rules
-      # ==========================================================
-      - name: Validate normalized rules
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ ! -s rules.normalized ]; then
-            echo "ERROR: rules.normalized is empty"
+
+          echo "========================================"
+          echo "Validate Surge rules"
+          echo "========================================"
+
+          if [ ! -s ads-latest.txt ]; then
+            echo "ERROR: ads-latest.txt is empty or missing"
             exit 1
           fi
-          echo "Checking hidden / non-ASCII characters..."
-          if LC_ALL=C grep -n '[^ -~]' rules.normalized; then
-            echo
-            echo "ERROR: rules.normalized contains non-ASCII/invisible characters"
-            exit 1
-          fi
-          echo "Checking empty values..."
-          if grep -qE \
-            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),$' \
-            rules.normalized; then
-            echo "ERROR: empty domain value detected"
-            exit 1
-          fi
-          echo "Checking rule types..."
-          INVALID_TYPES=$(
-            cut -d',' -f1 rules.normalized \
-              | grep -vE \
-                '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET)$' \
-              || true
-          )
-          if [ -n "$INVALID_TYPES" ]; then
-            echo
-            echo "ERROR: invalid rule types:"
-            echo "$INVALID_TYPES"
-            exit 1
-          fi
+
           echo
-          echo "Normalized rules are clean."
-      # ==========================================================
-      # 9. Validate Surge DOMAIN-SET
-      # ==========================================================
-      - name: Validate Surge DOMAIN-SET
-        shell: bash
-        run: |
-          set -euo pipefail
-          DOMAIN_SET_COUNT=$(
-            grep -vE '^#|^$' ads-latest.txt | wc -l
-          )
-          if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
-            echo "ERROR: ads-latest.txt contains no rules"
-            exit 1
-          fi
-          echo "Checking invisible / non-ASCII characters..."
+          echo "Checking hidden / non-ASCII characters..."
+
           if LC_ALL=C grep -n '[^ -~]' ads-latest.txt; then
             echo
             echo "ERROR: ads-latest.txt contains non-ASCII/invisible characters"
             exit 1
           fi
-          echo "Checking rule-type prefixes..."
-          if grep -qE \
-            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),' \
-            ads-latest.txt; then
-            echo "ERROR: ads-latest.txt contains rule-type prefixes"
-            exit 1
-          fi
-          echo "Checking domain format..."
+
+          echo "OK"
+
+          echo
+          echo "Checking rule format..."
+
           INVALID=$(
             grep -vE \
-              '^#|^$|^\.[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$|^[A-Za-z0-9_-]+([.][A-Za-z0-9_-]+)*$' \
+              '^#|^$|^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),[^,[:space:]]+$' \
               ads-latest.txt \
               || true
           )
+
           if [ -n "$INVALID" ]; then
             echo
-            echo "ERROR: invalid DOMAIN-SET entries:"
+            echo "ERROR: invalid Surge rules:"
             echo "$INVALID"
             exit 1
           fi
+
+          echo "OK"
+
           echo
-          echo "Valid Surge DOMAIN-SET rules:"
-          echo "$DOMAIN_SET_COUNT"
+          echo "Checking empty values..."
+
+          if grep -qE \
+            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),$' \
+            ads-latest.txt; then
+
+            echo "ERROR: empty domain value detected"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Checking duplicate rules..."
+
+          RULE_LINES=$(grep -vE '^#|^$' ads-latest.txt | wc -l)
+          UNIQUE_LINES=$(grep -vE '^#|^$' ads-latest.txt | sort -u | wc -l)
+
+          if [ "$RULE_LINES" -ne "$UNIQUE_LINES" ]; then
+            echo "ERROR: duplicate rules detected"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Valid Surge rules:"
+          echo "$RULE_LINES"
+
       # ==========================================================
-      # 10. Validate output files
+      # 6. Validate MosDNS
       # ==========================================================
-      - name: Validate output files
+      - name: Validate MosDNS rules
         shell: bash
         run: |
           set -euo pipefail
-          FILES="
-          ads-latest.txt
-          ads-mosdns.txt
-          ads-qx.snippet
-          "
-          for file in $FILES; do
-            if [ ! -s "$file" ]; then
-              echo "ERROR: $file is empty or missing"
-              exit 1
-            fi
-            echo "OK: $file"
-            ls -lh "$file"
-          done
+
+          echo "========================================"
+          echo "Validate MosDNS rules"
+          echo "========================================"
+
+          if [ ! -s ads-mosdns.txt ]; then
+            echo "ERROR: ads-mosdns.txt is empty or missing"
+            exit 1
+          fi
+
+          echo "Checking hidden / non-ASCII characters..."
+
+          if LC_ALL=C grep -n '[^ -~]' ads-mosdns.txt; then
+            echo
+            echo "ERROR: ads-mosdns.txt contains non-ASCII/invisible characters"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Checking rule format..."
+
+          INVALID=$(
+            grep -vE \
+              '^(domain|full|keyword):[^[:space:]]+$' \
+              ads-mosdns.txt \
+              || true
+          )
+
+          if [ -n "$INVALID" ]; then
+            echo
+            echo "ERROR: invalid MosDNS rules:"
+            echo "$INVALID"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Checking duplicates..."
+
+          TOTAL=$(wc -l < ads-mosdns.txt)
+          UNIQUE=$(sort -u ads-mosdns.txt | wc -l)
+
+          if [ "$TOTAL" -ne "$UNIQUE" ]; then
+            echo "ERROR: duplicate MosDNS rules detected"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Valid MosDNS rules:"
+          echo "$TOTAL"
+
       # ==========================================================
-      # 11. Statistics
+      # 7. Validate Quantumult X
+      # ==========================================================
+      - name: Validate Quantumult X rules
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo "========================================"
+          echo "Validate Quantumult X rules"
+          echo "========================================"
+
+          if [ ! -s ads-qx.snippet ]; then
+            echo "ERROR: ads-qx.snippet is empty or missing"
+            exit 1
+          fi
+
+          echo "Checking hidden / non-ASCII characters..."
+
+          if LC_ALL=C grep -n '[^ -~]' ads-qx.snippet; then
+            echo
+            echo "ERROR: ads-qx.snippet contains non-ASCII/invisible characters"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Checking rule format..."
+
+          INVALID=$(
+            grep -vE \
+              '^host(-suffix|-keyword)?,[^,[:space:]]+,reject$' \
+              ads-qx.snippet \
+              || true
+          )
+
+          if [ -n "$INVALID" ]; then
+            echo
+            echo "ERROR: invalid Quantumult X rules:"
+            echo "$INVALID"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Checking duplicates..."
+
+          TOTAL=$(wc -l < ads-qx.snippet)
+          UNIQUE=$(sort -u ads-qx.snippet | wc -l)
+
+          if [ "$TOTAL" -ne "$UNIQUE" ]; then
+            echo "ERROR: duplicate Quantumult X rules detected"
+            exit 1
+          fi
+
+          echo "OK"
+
+          echo
+          echo "Valid Quantumult X rules:"
+          echo "$TOTAL"
+
+      # ==========================================================
+      # 8. Show statistics
       # ==========================================================
       - name: Show statistics
         shell: bash
         run: |
           set -euo pipefail
+
           echo
           echo "========================================"
           echo "ADS RULES BUILD"
           echo "========================================"
+
           echo
-          echo "Normalized:"
-          wc -l rules.normalized
+          echo "Surge:"
+          grep -vE '^#|^$' ads-latest.txt | wc -l
+
           echo
-          echo "Rule types:"
-          cut -d',' -f1 rules.normalized \
+          echo "Surge rule types:"
+          grep -vE '^#|^$' ads-latest.txt \
+            | cut -d',' -f1 \
             | sort \
             | uniq -c
-          echo
-          echo "Surge DOMAIN-SET:"
-          grep -vE '^#|^$' ads-latest.txt | wc -l
+
           echo
           echo "MosDNS:"
           wc -l ads-mosdns.txt
+
           echo
           echo "Quantumult X:"
           wc -l ads-qx.snippet
+
           echo
           echo "Generated files:"
-          echo "  ads-latest.txt"
-          echo "  ads-mosdns.txt"
-          echo "  ads-qx.snippet"
+          ls -lh \
+            ads-latest.txt \
+            ads-mosdns.txt \
+            ads-qx.snippet
+
           echo
           echo "NOT generated:"
           echo "  ads-clash.yaml"
           echo "  ads-singbox.json"
           echo "  *.mrs"
           echo "  *.srs"
+
       # ==========================================================
-      # 12. Cleanup
+      # 9. Preview
+      # ==========================================================
+      - name: Preview generated rules
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          echo
+          echo "========================================"
+          echo "Surge first 20 rules"
+          echo "========================================"
+
+          head -n 21 ads-latest.txt
+
+          echo
+          echo "========================================"
+          echo "MosDNS first 20 rules"
+          echo "========================================"
+
+          head -n 20 ads-mosdns.txt
+
+          echo
+          echo "========================================"
+          echo "Quantumult X first 20 rules"
+          echo "========================================"
+
+          head -n 20 ads-qx.snippet
+
+      # ==========================================================
+      # 10. Cleanup
       # ==========================================================
       - name: Cleanup
         shell: bash
         run: |
+          set -euo pipefail
+
           rm -f \
             source-olocn.txt \
-            source-awa.txt \
-            rules.normalized
+            source-awa.txt
+
       # ==========================================================
-      # 13. Commit and push
+      # 11. Commit and push
       # ==========================================================
       - name: Commit changes
         shell: bash
         run: |
           set -euo pipefail
+
           git config user.name \
             "github-actions[bot]"
+
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"
+
           git add \
             ads-latest.txt \
             ads-mosdns.txt \
             ads-qx.snippet
+
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
           fi
+
+          echo
+          echo "Changes detected:"
+          git diff --cached --stat
+
           git commit \
             -m "chore: update ads rules ${DATE}"
+
           git push
