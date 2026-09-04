@@ -1,7 +1,7 @@
 # o
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,nnhanman.com
-DOMAIN-KEYWORD,18comic
+DOMAIN-SUFFIX,18comic.vip
 DOMAIN-SUFFIX,tju.7pzzv.us
 DOMAIN-SUFFIX,tu.2qq42.us
 DOMAIN-SUFFIX,tu.ymawv.la
