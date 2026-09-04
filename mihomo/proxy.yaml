@@ -554,6 +554,7 @@ payload:
   - DOMAIN-SUFFIX,blip.net
   - DOMAIN-SUFFIX,dmit.io
   - DOMAIN-SUFFIX,documents.io
+  - DOMAIN-SUFFIX,githubcopilot.com
   - DOMAIN-SUFFIX,hnhr01.com
   - DOMAIN-SUFFIX,jjmhw.cc
   - DOMAIN-SUFFIX,jmapiproxy1.cc
