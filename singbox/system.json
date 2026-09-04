@@ -2,12 +2,6 @@
   "version": 5,
   "rules": [
     {
-      "domain": " api.revenuecat.com"
-    },
-    {
-      "domain": " biz.cyapi.cn"
-    },
-    {
       "domain": " fairplay.l.qq.com"
     },
     {
@@ -17,22 +11,10 @@
       "domain": " fonts.gstatic.com"
     },
     {
-      "domain": " gdmf.apple.com"
-    },
-    {
-      "domain": " gm.mmstat.com"
-    },
-    {
       "domain": " lcdn-locator.apple.com"
     },
     {
-      "domain": " livew.l.qq.com"
-    },
-    {
       "domain": " loc.map.baidu.com"
-    },
-    {
-      "domain": " log.mmstat.com"
     },
     {
       "domain": " ocsp.godaddy.com"
@@ -47,22 +29,10 @@
       "domain": " resource.cupid.iqiyi.com"
     },
     {
-      "domain": " s.click.taobao.com"
-    },
-    {
       "domain": " sandbox.itunes.apple.com"
     },
     {
       "domain": " serverstatus.apple.com"
-    },
-    {
-      "domain": " short.weixin.qq.com"
-    },
-    {
-      "domain": " sycm.mmstat.com"
-    },
-    {
-      "domain": " tra1.m-team.io"
     },
     {
       "domain": " tracker.m-team.cc"
@@ -80,40 +50,13 @@
       "domain": "api.xilexiaoyuan.top"
     },
     {
-      "domain_suffix": " 885511.xyz"
-    },
-    {
       "domain_suffix": " amdc.m.taobao.com"
-    },
-    {
-      "domain_suffix": " digicert.com"
-    },
-    {
-      "domain_suffix": " icloud.com.cn⁠"
     },
     {
       "domain_suffix": " jsccbcc.com"
     },
     {
-      "domain_suffix": " jsitv.net"
-    },
-    {
-      "domain_suffix": " jsjnsw.com"
-    },
-    {
       "domain_suffix": " lanjing.vip"
-    },
-    {
-      "domain_suffix": " lencr.org"
-    },
-    {
-      "domain_suffix": " livehwc4.com"
-    },
-    {
-      "domain_suffix": " myqnapcloud.com"
-    },
-    {
-      "domain_suffix": " myqnapcloud.io"
     },
     {
       "domain_suffix": " n.n.srv.nintendo.net"
@@ -125,37 +68,7 @@
       "domain_suffix": " plex.direct"
     },
     {
-      "domain_suffix": " pubsub.plex.tv"
-    },
-    {
-      "domain_suffix": " tce.alicdn.com"
-    },
-    {
-      "domain_suffix": " v4.plex.tv"
-    },
-    {
       "domain_suffix": " walmartmobile.cn"
-    },
-    {
-      "domain_suffix": " wechat.com"
-    },
-    {
-      "domain_suffix": " xhscdn.com"
-    },
-    {
-      "domain_suffix": " zkreen.com"
-    },
-    {
-      "domain_suffix": "aliyuncs.com"
-    },
-    {
-      "domain_suffix": "cloudfront.net"
-    },
-    {
-      "domain_suffix": "jxxgz.top"
-    },
-    {
-      "domain_suffix": "mi-img.com"
     },
     {
       "domain_keyword": " haixing"

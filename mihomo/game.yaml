@@ -1,10 +1,6 @@
 payload:
-  - DOMAIN, eaaccounts.akamaized.net
-  - DOMAIN-SUFFIX, capcom.com
   - DOMAIN-SUFFIX, cloudapp.azure.com
   - DOMAIN-SUFFIX, just-dance.com
-  - DOMAIN-SUFFIX, nintendo.com
-  - DOMAIN-SUFFIX, nintendo.net
   - DOMAIN-SUFFIX, playfabapi.com
   - DOMAIN-SUFFIX, s3.us-west-2.amazonaws.com
   - DOMAIN-SUFFIX, streetfighter.com

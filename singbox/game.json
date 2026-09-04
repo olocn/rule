@@ -2,22 +2,10 @@
   "version": 5,
   "rules": [
     {
-      "domain": " eaaccounts.akamaized.net"
-    },
-    {
-      "domain_suffix": " capcom.com"
-    },
-    {
       "domain_suffix": " cloudapp.azure.com"
     },
     {
       "domain_suffix": " just-dance.com"
-    },
-    {
-      "domain_suffix": " nintendo.com"
-    },
-    {
-      "domain_suffix": " nintendo.net"
     },
     {
       "domain_suffix": " playfabapi.com"
