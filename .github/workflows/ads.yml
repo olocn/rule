@@ -14,6 +14,7 @@ jobs:
     timeout-minutes: 15
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+      PYTHONUNBUFFERED: "1"
     steps:
       # ==========================================================
       # 1. Checkout
@@ -30,145 +31,9 @@ jobs:
         run: |
           set -euo pipefail
           echo "DATE=$(date -u +'%Y-%m-%d')" >> "$GITHUB_ENV"
-          mkdir -p /usr/local/bin/custom-tools
-          echo "/usr/local/bin/custom-tools" >> "$GITHUB_PATH"
+          python3 --version
       # ==========================================================
-      # 3. Get latest sing-box / Mihomo versions
-      # ==========================================================
-      - name: Get latest versions
-        shell: bash
-        run: |
-          set -euo pipefail
-          VERSION_SING=$(
-            curl -fsSL \
-              --retry 5 \
-              --retry-delay 2 \
-              --connect-timeout 15 \
-              --max-time 60 \
-              https://api.github.com/repos/SagerNet/sing-box/releases/latest \
-              | jq -r '.tag_name'
-          )
-          TAG_MIHOMO=$(
-            curl -fsSL \
-              --retry 5 \
-              --retry-delay 2 \
-              --connect-timeout 15 \
-              --max-time 60 \
-              https://api.github.com/repos/MetaCubeX/mihomo/releases/latest \
-              | jq -r '.tag_name'
-          )
-          if [ -z "$VERSION_SING" ] || [ "$VERSION_SING" = "null" ]; then
-            echo "ERROR: failed to get sing-box version"
-            exit 1
-          fi
-          if [ -z "$TAG_MIHOMO" ] || [ "$TAG_MIHOMO" = "null" ]; then
-            echo "ERROR: failed to get Mihomo version"
-            exit 1
-          fi
-          echo "VERSION_SING=$VERSION_SING" >> "$GITHUB_ENV"
-          echo "TAG_MIHOMO=$TAG_MIHOMO" >> "$GITHUB_ENV"
-          echo "sing-box: $VERSION_SING"
-          echo "mihomo:   $TAG_MIHOMO"
-      # ==========================================================
-      # 4. Cache tools
-      # ==========================================================
-      - name: Cache tools
-        uses: actions/cache@v4
-        with:
-          path: /usr/local/bin/custom-tools
-          key: ads-tools-${{ runner.os }}-${{ env.VERSION_SING }}-${{ env.TAG_MIHOMO }}
-      # ==========================================================
-      # 5. Install sing-box
-      #
-      # 只在自己创建的目录中搜索
-      # 不扫描整个 /tmp
-      # ==========================================================
-      - name: Install sing-box
-        shell: bash
-        run: |
-          set -euo pipefail
-          TOOL_DIR="/usr/local/bin/custom-tools"
-          PACKAGE_DIR="/tmp/sing-box-package"
-          if [ -x "$TOOL_DIR/sing-box" ]; then
-            echo "Using cached sing-box"
-            "$TOOL_DIR/sing-box" version
-            exit 0
-          fi
-          VERSION="${VERSION_SING#v}"
-          URL="https://github.com/SagerNet/sing-box/releases/download/${VERSION_SING}/sing-box-${VERSION}-linux-amd64.tar.gz"
-          echo "Downloading sing-box:"
-          echo "$URL"
-          rm -rf "$PACKAGE_DIR"
-          mkdir -p "$PACKAGE_DIR"
-          curl -fL \
-            --retry 5 \
-            --retry-delay 2 \
-            --connect-timeout 15 \
-            --max-time 180 \
-            "$URL" \
-            -o /tmp/sing-box.tar.gz
-          tar -xzf \
-            /tmp/sing-box.tar.gz \
-            -C "$PACKAGE_DIR"
-          echo
-          echo "Extracted files:"
-          find "$PACKAGE_DIR" \
-            -maxdepth 3 \
-            -type f \
-            -print
-          BIN=$(
-            find "$PACKAGE_DIR" \
-              -maxdepth 3 \
-              -type f \
-              -name "sing-box" \
-              -print \
-              | head -n 1
-          )
-          if [ -z "$BIN" ]; then
-            echo "ERROR: sing-box binary not found"
-            exit 1
-          fi
-          echo
-          echo "Found sing-box:"
-          echo "$BIN"
-          install -m 0755 \
-            "$BIN" \
-            "$TOOL_DIR/sing-box"
-          echo
-          echo "Installed sing-box:"
-          "$TOOL_DIR/sing-box" version
-      # ==========================================================
-      # 6. Install Mihomo
-      # ==========================================================
-      - name: Install Mihomo
-        shell: bash
-        run: |
-          set -euo pipefail
-          TOOL_DIR="/usr/local/bin/custom-tools"
-          if [ -x "$TOOL_DIR/mihomo" ]; then
-            echo "Using cached Mihomo"
-            "$TOOL_DIR/mihomo" -v
-            exit 0
-          fi
-          URL="https://github.com/MetaCubeX/mihomo/releases/download/${TAG_MIHOMO}/mihomo-linux-amd64-${TAG_MIHOMO}.gz"
-          echo "Downloading Mihomo:"
-          echo "$URL"
-          curl -fL \
-            --retry 5 \
-            --retry-delay 2 \
-            --connect-timeout 15 \
-            --max-time 180 \
-            "$URL" \
-            -o /tmp/mihomo.gz
-          gzip -dc \
-            /tmp/mihomo.gz \
-            > "$TOOL_DIR/mihomo"
-          chmod 0755 "$TOOL_DIR/mihomo"
-          echo
-          echo "Installed Mihomo:"
-          "$TOOL_DIR/mihomo" -v
-      # ==========================================================
-      # 7. Download source rules
+      # 3. Download source rules
       # ==========================================================
       - name: Download source rules
         shell: bash
@@ -199,142 +64,423 @@ jobs:
           echo "Source rules:"
           wc -l source-olocn.txt source-awa.txt
       # ==========================================================
-      # 8. Normalize rules
+      # 4. Python process
       #
-      # 支持：
-      # DOMAIN
-      # DOMAIN-SUFFIX
-      # DOMAIN-KEYWORD
-      # DOMAIN-SET
+      # 安全规则：
       #
-      # 清理：
-      # BOM
-      # Zero Width Space
-      # Zero Width Joiner
-      # Word Joiner U+2060
-      # Bidi 控制字符
-      # Soft Hyphen
+      # 1. 精确重复去重
+      # 2. 仅 DOMAIN-SUFFIX 做父子域名去重
+      # 3. DOMAIN 不做父子去重
+      # 4. DOMAIN-KEYWORD 不做父子去重
+      # 5. DOMAIN-SET 不做父子去重
+      # 6. CIDR 完全不参与去重
+      # 7. 不做 CIDR 包含关系判断
+      # 8. 不改变原始规则语义
       # ==========================================================
-      - name: Normalize rules
+      - name: Process rules with Python
         shell: bash
         run: |
           set -euo pipefail
-          cat \
-            source-olocn.txt \
-            source-awa.txt \
-            | perl -CS -pe '
-                # BOM
-                s/\x{FEFF}//g;
-                # Zero Width Space
-                s/\x{200B}//g;
-                # Zero Width Non-Joiner
-                s/\x{200C}//g;
-                # Zero Width Joiner
-                s/\x{200D}//g;
-                # Word Joiner
-                s/\x{2060}//g;
-                # Soft Hyphen
-                s/\x{00AD}//g;
-                # Left-to-Right Mark
-                s/\x{200E}//g;
-                # Right-to-Left Mark
-                s/\x{200F}//g;
-                # Directional formatting
-                s/\x{202A}//g;
-                s/\x{202B}//g;
-                s/\x{202C}//g;
-                s/\x{202D}//g;
-                s/\x{202E}//g;
-                # Bidi isolates
-                s/\x{2066}//g;
-                s/\x{2067}//g;
-                s/\x{2068}//g;
-                s/\x{2069}//g;
-                # CRLF
-                s/\r$//;
-              ' \
-            | sed 's/[[:space:]]*#.*$//' \
-            | sed 's/[[:space:]]*$//' \
-            | grep -vE '^[[:space:]]*$' \
-            | sed -E \
-                's/,(REJECT|REJECT-DICT|REJECT-TINYGIF|REJECT-NO-DROP|REJECT-IMG|REJECT-200|REJECT-DROP|REJECT-QUIC)$//I' \
-            | sed -E \
-                's/,(extended-matching|pre-matching|no-resolve)//Ig' \
-            | sed -E \
-                's/^[[:space:]]+//;s/[[:space:]]+$//' \
-            | awk -F',' '
-                NF >= 2 &&
-                ($1 == "DOMAIN" ||
-                 $1 == "DOMAIN-SUFFIX" ||
-                 $1 == "DOMAIN-KEYWORD" ||
-                 $1 == "DOMAIN-SET")
-                {
-                  value=$2
-                  gsub(/^[[:space:]]+/, "", value)
-                  gsub(/[[:space:]]+$/, "", value)
-                  if (value == "")
-                    next
-                  value=tolower(value)
-                  # 去掉输入域名前后的点
-                  sub(/^\./, "", value)
-                  sub(/\.$/, "", value)
-                  print $1 "," value
-                }
-              ' \
-            | sort -u \
-            > rules.normalized
-          if [ ! -s rules.normalized ]; then
-            echo "ERROR: normalized rules are empty"
-            exit 1
-          fi
-          echo "Normalized rules:"
-          wc -l rules.normalized
-          echo
-          echo "Rule types:"
-          cut -d',' -f1 rules.normalized \
-            | sort \
-            | uniq -c
+          python3 <<'PY'
+          from __future__ import annotations
+          import re
+          from pathlib import Path
+          SOURCES = [
+              Path("source-olocn.txt"),
+              Path("source-awa.txt"),
+          ]
+          NORMALIZED = Path("rules.normalized")
+          # ------------------------------------------------------
+          # 支持的规则类型
+          # ------------------------------------------------------
+          ALLOWED_TYPES = {
+              "DOMAIN",
+              "DOMAIN-SUFFIX",
+              "DOMAIN-KEYWORD",
+              "DOMAIN-SET",
+          }
+          # ------------------------------------------------------
+          # 明确记录 CIDR 类型。
+          #
+          # 本程序绝不对 CIDR 做包含关系判断。
+          # 即使出现：
+          #
+          # 1.1.1.0/24
+          # 1.1.1.1/32
+          #
+          # 也不会因为包含关系删除任何规则。
+          # ------------------------------------------------------
+          CIDR_TYPES = {
+              "IP-CIDR",
+              "IP-CIDR6",
+              "IP-CIDR-NO-RESOLVE",
+              "IP-CIDR6-NO-RESOLVE",
+          }
+          # ------------------------------------------------------
+          # Unicode 隐藏字符清理
+          # ------------------------------------------------------
+          HIDDEN_CHARS = {
+              "\ufeff",  # BOM
+              "\u200b",  # Zero Width Space
+              "\u200c",  # Zero Width Non-Joiner
+              "\u200d",  # Zero Width Joiner
+              "\u2060",  # Word Joiner
+              "\u00ad",  # Soft Hyphen
+              "\u200e",  # LRM
+              "\u200f",  # RLM
+              "\u202a",  # LRE
+              "\u202b",  # RLE
+              "\u202c",  # PDF
+              "\u202d",  # LRO
+              "\u202e",  # RLO
+              "\u2066",  # LRI
+              "\u2067",  # RLI
+              "\u2068",  # FSI
+              "\u2069",  # PDI
+          }
+          def clean_unicode(text: str) -> str:
+              for char in HIDDEN_CHARS:
+                  text = text.replace(char, "")
+              return text
+          # ------------------------------------------------------
+          # 删除行尾注释
+          #
+          # 与原 Workflow：
+          #
+          # sed 's/[[:space:]]*#.*$//'
+          #
+          # 保持相同目的。
+          # ------------------------------------------------------
+          def remove_comment(line: str) -> str:
+              return re.sub(r"\s*#.*$", "", line)
+          # ------------------------------------------------------
+          # 处理规则
+          # ------------------------------------------------------
+          def parse_rule(line: str):
+              line = clean_unicode(line)
+              line = line.replace("\r", "")
+              line = remove_comment(line).strip()
+              if not line:
+                  return None
+              parts = [x.strip() for x in line.split(",")]
+              if len(parts) < 2:
+                  return None
+              rule_type = parts[0].upper()
+              value = parts[1].strip()
+              if rule_type not in ALLOWED_TYPES:
+                  return None
+              if not value:
+                  return None
+              # --------------------------------------------------
+              # 删除原 Workflow 中的尾部参数
+              #
+              # REJECT...
+              # extended-matching
+              # pre-matching
+              # no-resolve
+              # --------------------------------------------------
+              tail = parts[2:]
+              cleaned_tail = []
+              for item in tail:
+                  item = item.strip()
+                  if not item:
+                      continue
+                  lower = item.lower()
+                  if lower in {
+                      "extended-matching",
+                      "pre-matching",
+                      "no-resolve",
+                  }:
+                      continue
+                  if lower in {
+                      "reject",
+                      "reject-dict",
+                      "reject-tinygif",
+                      "reject-no-drop",
+                      "reject-img",
+                      "reject-200",
+                      "reject-drop",
+                      "reject-quic",
+                  }:
+                      continue
+                  cleaned_tail.append(item)
+              # --------------------------------------------------
+              # 你的原 Workflow 最终只输出：
+              #
+              # TYPE,value
+              #
+              # 因此这里不保留 tail。
+              # --------------------------------------------------
+              value = value.lower()
+              # 去掉输入域名前后的点
+              value = value.strip(".")
+              if not value:
+                  return None
+              return rule_type, value
+          # ------------------------------------------------------
+          # 域名标准化
+          #
+          # 只用于判断父子关系。
+          # ------------------------------------------------------
+          def normalize_domain(value: str):
+              value = value.lower().strip().rstrip(".")
+              if not value:
+                  return None
+              # 不允许明显的非域名内容进入父子判断
+              if "/" in value:
+                  return None
+              if " " in value:
+                  return None
+              # IPv4
+              if re.fullmatch(
+                  r"(?:\d{1,3}\.){3}\d{1,3}",
+                  value,
+              ):
+                  return None
+              # IPv6
+              if ":" in value:
+                  return None
+              return value
+          # ------------------------------------------------------
+          # 严格 DNS label 父子判断
+          #
+          # www.example.com
+          # example.com
+          #
+          # True
+          #
+          # notexample.com
+          # example.com
+          #
+          # False
+          # ------------------------------------------------------
+          def is_subdomain(child: str, parent: str) -> bool:
+              if child == parent:
+                  return False
+              return child.endswith("." + parent)
+          # ------------------------------------------------------
+          # 第一阶段：读取并规范化
+          # ------------------------------------------------------
+          parsed_rules = []
+          source_count = 0
+          for source in SOURCES:
+              print()
+              print("=" * 60)
+              print(f"Reading: {source}")
+              print("=" * 60)
+              lines = source.read_text(
+                  encoding="utf-8",
+                  errors="replace",
+              ).splitlines()
+              source_count += len(lines)
+              accepted = 0
+              for line in lines:
+                  result = parse_rule(line)
+                  if result is None:
+                      continue
+                  rule_type, value = result
+                  parsed_rules.append(
+                      (rule_type, value)
+                  )
+                  accepted += 1
+              print(f"Input lines : {len(lines)}")
+              print(f"Accepted    : {accepted}")
+          # ------------------------------------------------------
+          # 第二阶段：精确重复去重
+          #
+          # 保持第一次出现的规则。
+          # ------------------------------------------------------
+          exact_seen = set()
+          exact_removed = 0
+          unique_rules = []
+          for rule in parsed_rules:
+              if rule in exact_seen:
+                  exact_removed += 1
+                  continue
+              exact_seen.add(rule)
+              unique_rules.append(rule)
+          # ------------------------------------------------------
+          # 第三阶段：
+          #
+          # 仅 DOMAIN-SUFFIX 做父子域名去重。
+          #
+          # 非常重要：
+          #
+          # DOMAIN：
+          #   example.com
+          #   www.example.com
+          #
+          # 不删除。
+          #
+          # 因为 DOMAIN 是精确匹配语义。
+          #
+          # DOMAIN-SUFFIX：
+          #   example.com
+          #   www.example.com
+          #
+          # 可以删除 www.example.com。
+          # ------------------------------------------------------
+          suffix_domains = {
+              value
+              for rule_type, value in unique_rules
+              if rule_type == "DOMAIN-SUFFIX"
+          }
+          suffix_removed = 0
+          final_rules = []
+          for rule_type, value in unique_rules:
+              if rule_type != "DOMAIN-SUFFIX":
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+                  continue
+              domain = normalize_domain(value)
+              if domain is None:
+                  final_rules.append(
+                      (rule_type, value)
+                  )
+                  continue
+              labels = domain.split(".")
+              covered = False
+              # 从最直接的父域开始检查
+              #
+              # a.b.example.com
+              #   -> b.example.com
+              #   -> example.com
+              #
+              for index in range(1, len(labels) - 1):
+                  parent = ".".join(
+                      labels[index:]
+                  )
+                  if parent in suffix_domains:
+                      covered = True
+                      break
+              if covered:
+                  suffix_removed += 1
+                  continue
+              final_rules.append(
+                  (rule_type, value)
+              )
+          # ------------------------------------------------------
+          # 最终排序
+          #
+          # 按：
+          #   TYPE
+          #   VALUE
+          #
+          # 排序。
+          #
+          # 不进行任何语义上的合并。
+          # ------------------------------------------------------
+          final_rules = sorted(
+              final_rules,
+              key=lambda item: (
+                  item[0],
+                  item[1],
+              ),
+          )
+          # ------------------------------------------------------
+          # 输出 normalized
+          # ------------------------------------------------------
+          with NORMALIZED.open(
+              "w",
+              encoding="utf-8",
+              newline="\n",
+          ) as f:
+              for rule_type, value in final_rules:
+                  f.write(
+                      f"{rule_type},{value}\n"
+                  )
+          # ------------------------------------------------------
+          # 统计
+          # ------------------------------------------------------
+          print()
+          print("=" * 60)
+          print("RULE PROCESSING")
+          print("=" * 60)
+          print(
+              f"Source lines             : {source_count}"
+          )
+          print(
+              f"Accepted rules           : {len(parsed_rules)}"
+          )
+          print(
+              f"Exact duplicates removed : {exact_removed}"
+          )
+          print(
+              f"Parent domains removed   : {suffix_removed}"
+          )
+          print(
+              "CIDR containment removed : 0"
+          )
+          print(
+              f"Final rules              : {len(final_rules)}"
+          )
+          # ------------------------------------------------------
+          # 安全检查
+          # ------------------------------------------------------
+          # 明确保证没有 CIDR 规则参与
+          # 但即使以后加入 CIDR，也绝不进行包含去重。
+          #
+          # 当前输入只允许四种域名规则。
+          # ------------------------------------------------------
+          if not final_rules:
+              raise SystemExit(
+                  "ERROR: normalized rules are empty"
+              )
+          # 检查隐藏字符
+          content = NORMALIZED.read_text(
+              encoding="utf-8"
+          )
+          for char in HIDDEN_CHARS:
+              if char in content:
+                  raise SystemExit(
+                      "ERROR: hidden Unicode character "
+                      "remains in normalized rules"
+                  )
+          # 检查空值
+          for line in content.splitlines():
+              parts = line.split(",", 1)
+              if (
+                  len(parts) != 2
+                  or not parts[1].strip()
+              ):
+                  raise SystemExit(
+                      f"ERROR: invalid normalized rule: {line}"
+                  )
+          print()
+          print("Normalized rules:")
+          print(len(final_rules))
+          print()
+          print("Rule types:")
+          type_count = {}
+          for rule_type, _ in final_rules:
+              type_count[rule_type] = (
+                  type_count.get(rule_type, 0) + 1
+              )
+          for rule_type in sorted(type_count):
+              print(
+                  f"{type_count[rule_type]:8d} {rule_type}"
+              )
+          print()
+          print("Python rule processing completed.")
+          PY
       # ==========================================================
-      # 9. Generate Mihomo YAML
-      #
-      # DOMAIN-SET 按 DOMAIN 处理
-      # ==========================================================
-      - name: Generate Mihomo YAML
-        shell: bash
-        run: |
-          set -euo pipefail
-          {
-            echo "payload:"
-            awk -F',' '
-            {
-              if ($1 == "DOMAIN-SET")
-                print "  - DOMAIN," $2
-              else
-                print "  - " $1 "," $2
-            }
-            ' rules.normalized
-          } > ads-clash.yaml
-          if [ ! -s ads-clash.yaml ]; then
-            echo "ERROR: ads-clash.yaml is empty"
-            exit 1
-          fi
-      # ==========================================================
-      # 10. Generate Surge DOMAIN-SET
+      # 5. Generate Surge DOMAIN-SET
       #
       # DOMAIN:
-      #   DOMAIN,2345.com
+      #   DOMAIN,example.com
       #   ->
-      #   2345.com
+      #   example.com
       #
       # DOMAIN-SUFFIX:
-      #   DOMAIN-SUFFIX,2345.com
+      #   DOMAIN-SUFFIX,example.com
       #   ->
-      #   .2345.com
+      #   .example.com
       #
       # DOMAIN-SET:
-      #   DOMAIN-SET,2345.com
+      #   DOMAIN-SET,example.com
       #   ->
-      #   2345.com
+      #   example.com
       #
       # DOMAIN-KEYWORD:
       #   不进入 ads-latest.txt
@@ -343,111 +489,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          {
-            echo "# Auto merged Surge DOMAIN-SET rules (${DATE})"
-            awk -F',' '
-            {
-              if ($1 == "DOMAIN")
-                print $2
-              else if ($1 == "DOMAIN-SUFFIX")
-                print "." $2
-              else if ($1 == "DOMAIN-SET")
-                print $2
-            }
-            ' rules.normalized \
-            | sort -u
-          } > ads-latest.txt
-          DOMAIN_SET_COUNT=$(
-            grep -vE '^#|^$' ads-latest.txt | wc -l
-          )
-          if [ "$DOMAIN_SET_COUNT" -eq 0 ]; then
-            echo "ERROR: ads-latest.txt contains no rules"
-            exit 1
-          fi
-          echo
-          echo "Surge DOMAIN-SET rules:"
-          echo "$DOMAIN_SET_COUNT"
-          echo
-          echo "First 20 rules:"
-          head -n 21 ads-latest.txt
-      # ==========================================================
-      # 11. Generate MosDNS
-      #
-      # DOMAIN-SET 按 full 处理
-      # ==========================================================
-      - name: Generate MosDNS
-        shell: bash
-        run: |
-          set -euo pipefail
-          awk -F',' '
-          {
-            if ($1 == "DOMAIN-SUFFIX")
-              print "domain:" $2
-            else if ($1 == "DOMAIN")
-              print "full:" $2
-            else if ($1 == "DOMAIN-KEYWORD")
-              print "keyword:" $2
-            else if ($1 == "DOMAIN-SET")
-              print "full:" $2
-          }
-          ' rules.normalized \
-          | sort -u \
-          > ads-mosdns.txt
-          if [ ! -s ads-mosdns.txt ]; then
-            echo "ERROR: ads-mosdns.txt is empty"
-            exit 1
-          fi
-      # ==========================================================
-      # 12. Generate Quantumult X
-      #
-      # DOMAIN-SET 按 host 处理
-      # ==========================================================
-      - name: Generate Quantumult X
-        shell: bash
-        run: |
-          set -euo pipefail
-          awk -F',' '
-          {
-            if ($1 == "DOMAIN-SUFFIX")
-              print "host-suffix," $2 ",reject"
-            else if ($1 == "DOMAIN")
-              print "host," $2 ",reject"
-            else if ($1 == "DOMAIN-KEYWORD")
-              print "host-keyword," $2 ",reject"
-            else if ($1 == "DOMAIN-SET")
-              print "host," $2 ",reject"
-          }
-          ' rules.normalized \
-          | sort -u \
-          > ads-qx.snippet
-          if [ ! -s ads-qx.snippet ]; then
-            echo "ERROR: ads-qx.snippet is empty"
-            exit 1
-          fi
-      # ==========================================================
-      # 13. Generate sing-box JSON
-      #
-      # DOMAIN:
-      #   domain
-      #
-      # DOMAIN-SUFFIX:
-      #   domain_suffix
-      #
-      # DOMAIN-KEYWORD:
-      #   domain_keyword
-      #
-      # DOMAIN-SET:
-      #   按 domain 处理
-      # ==========================================================
-      - name: Generate sing-box JSON
-        shell: bash
-        run: |
-          set -euo pipefail
           python3 <<'PY'
-          import json
-          domain = set()
-          domain_suffix = set()
-          domain_keyword = set()
+          from pathlib import Path
+          rules = []
           with open(
               "rules.normalized",
               encoding="utf-8"
@@ -456,122 +500,194 @@ jobs:
                   line = line.strip()
                   if not line:
                       continue
-                  parts = line.split(",", 1)
-                  if len(parts) != 2:
-                      continue
-                  typ, value = parts
-                  if typ == "DOMAIN":
-                      domain.add(value)
-                  elif typ == "DOMAIN-SUFFIX":
-                      domain_suffix.add(value)
-                  elif typ == "DOMAIN-KEYWORD":
-                      domain_keyword.add(value)
-                  elif typ == "DOMAIN-SET":
-                      domain.add(value)
-          rule = {}
-          if domain:
-              rule["domain"] = sorted(domain)
-          if domain_suffix:
-              rule["domain_suffix"] = sorted(domain_suffix)
-          if domain_keyword:
-              rule["domain_keyword"] = sorted(domain_keyword)
-          if not rule:
+                  rule_type, value = line.split(",", 1)
+                  if rule_type == "DOMAIN":
+                      rules.append(value)
+                  elif rule_type == "DOMAIN-SUFFIX":
+                      rules.append("." + value)
+                  elif rule_type == "DOMAIN-SET":
+                      rules.append(value)
+          rules = sorted(set(rules))
+          if not rules:
               raise SystemExit(
-                  "ERROR: sing-box rule is empty"
+                  "ERROR: ads-latest.txt contains no rules"
               )
-          data = {
-              "version": 5,
-              "rules": [
-                  rule
-              ]
-          }
           with open(
-              "ads-singbox.json",
+              "ads-latest.txt",
               "w",
+              encoding="utf-8",
+              newline="\n",
+          ) as f:
+              f.write(
+                  "# Auto merged Surge DOMAIN-SET rules "
+                  f"({__import__('os').environ['DATE']})\n"
+              )
+              for rule in rules:
+                  f.write(rule + "\n")
+          print(
+              "Surge DOMAIN-SET rules:",
+              len(rules)
+          )
+          print()
+          print("First 20 rules:")
+          for rule in rules[:20]:
+              print(rule)
+          PY
+      # ==========================================================
+      # 6. Generate MosDNS
+      #
+      # DOMAIN-SUFFIX -> domain:
+      # DOMAIN        -> full:
+      # DOMAIN-KEYWORD -> keyword:
+      # DOMAIN-SET    -> full:
+      # ==========================================================
+      - name: Generate MosDNS
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          rules = []
+          with open(
+              "rules.normalized",
               encoding="utf-8"
           ) as f:
-              json.dump(
-                  data,
-                  f,
-                  ensure_ascii=False,
-                  indent=2
+              for line in f:
+                  line = line.strip()
+                  if not line:
+                      continue
+                  rule_type, value = line.split(",", 1)
+                  if rule_type == "DOMAIN-SUFFIX":
+                      rules.append(
+                          "domain:" + value
+                      )
+                  elif rule_type == "DOMAIN":
+                      rules.append(
+                          "full:" + value
+                      )
+                  elif rule_type == "DOMAIN-KEYWORD":
+                      rules.append(
+                          "keyword:" + value
+                      )
+                  elif rule_type == "DOMAIN-SET":
+                      rules.append(
+                          "full:" + value
+                      )
+          rules = sorted(set(rules))
+          if not rules:
+              raise SystemExit(
+                  "ERROR: ads-mosdns.txt is empty"
               )
-              f.write("\n")
-          PY
-          if [ ! -s ads-singbox.json ]; then
-            echo "ERROR: ads-singbox.json is empty"
-            exit 1
-          fi
-          python3 -m json.tool \
-            ads-singbox.json \
-            > /dev/null
-          echo "sing-box JSON generated successfully"
-      # ==========================================================
-      # 14. Validate sing-box
-      # ==========================================================
-      - name: Validate sing-box rule-set
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "sing-box version:"
-          sing-box version
-          echo
-          echo "Validating JSON..."
-          python3 -m json.tool \
-            ads-singbox.json \
-            > /dev/null
-          echo "JSON validation OK"
-          echo
-          echo "Compiling rule-set..."
-          rm -f /tmp/ads-test.srs
-          sing-box rule-set compile \
-            --output /tmp/ads-test.srs \
-            ads-singbox.json
-          if [ ! -s /tmp/ads-test.srs ]; then
-            echo "ERROR: SRS output is empty"
-            exit 1
-          fi
-          echo
-          echo "sing-box rule-set compiled successfully"
-          ls -lh /tmp/ads-test.srs
-      # ==========================================================
-      # 15. Validate Mihomo YAML
-      #
-      # 不依赖 PyYAML
-      # ==========================================================
-      - name: Validate Mihomo YAML
-        shell: bash
-        run: |
-          set -euo pipefail
-          if [ ! -s ads-clash.yaml ]; then
-            echo "ERROR: ads-clash.yaml is empty"
-            exit 1
-          fi
-          if ! grep -q '^payload:$' ads-clash.yaml; then
-            echo "ERROR: missing payload:"
-            exit 1
-          fi
-          RULE_COUNT=$(
-            grep -c '^  - ' ads-clash.yaml || true
+          with open(
+              "ads-mosdns.txt",
+              "w",
+              encoding="utf-8",
+              newline="\n",
+          ) as f:
+              for rule in rules:
+                  f.write(rule + "\n")
+          print(
+              "MosDNS rules:",
+              len(rules)
           )
-          if [ "$RULE_COUNT" -eq 0 ]; then
-            echo "ERROR: Mihomo payload is empty"
+          PY
+      # ==========================================================
+      # 7. Generate Quantumult X
+      #
+      # DOMAIN-SUFFIX -> host-suffix
+      # DOMAIN        -> host
+      # DOMAIN-KEYWORD -> host-keyword
+      # DOMAIN-SET    -> host
+      # ==========================================================
+      - name: Generate Quantumult X
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 <<'PY'
+          rules = []
+          with open(
+              "rules.normalized",
+              encoding="utf-8"
+          ) as f:
+              for line in f:
+                  line = line.strip()
+                  if not line:
+                      continue
+                  rule_type, value = line.split(",", 1)
+                  if rule_type == "DOMAIN-SUFFIX":
+                      rules.append(
+                          f"host-suffix,{value},reject"
+                      )
+                  elif rule_type == "DOMAIN":
+                      rules.append(
+                          f"host,{value},reject"
+                      )
+                  elif rule_type == "DOMAIN-KEYWORD":
+                      rules.append(
+                          f"host-keyword,{value},reject"
+                      )
+                  elif rule_type == "DOMAIN-SET":
+                      rules.append(
+                          f"host,{value},reject"
+                      )
+          rules = sorted(set(rules))
+          if not rules:
+              raise SystemExit(
+                  "ERROR: ads-qx.snippet is empty"
+              )
+          with open(
+              "ads-qx.snippet",
+              "w",
+              encoding="utf-8",
+              newline="\n",
+          ) as f:
+              for rule in rules:
+                  f.write(rule + "\n")
+          print(
+              "Quantumult X rules:",
+              len(rules)
+          )
+          PY
+      # ==========================================================
+      # 8. Validate normalized rules
+      # ==========================================================
+      - name: Validate normalized rules
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [ ! -s rules.normalized ]; then
+            echo "ERROR: rules.normalized is empty"
             exit 1
           fi
-          echo "Mihomo rules: $RULE_COUNT"
+          echo "Checking hidden / non-ASCII characters..."
+          if LC_ALL=C grep -n '[^ -~]' rules.normalized; then
+            echo
+            echo "ERROR: rules.normalized contains non-ASCII/invisible characters"
+            exit 1
+          fi
+          echo "Checking empty values..."
+          if grep -qE \
+            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),$' \
+            rules.normalized; then
+            echo "ERROR: empty domain value detected"
+            exit 1
+          fi
+          echo "Checking rule types..."
+          INVALID_TYPES=$(
+            cut -d',' -f1 rules.normalized \
+              | grep -vE \
+                '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET)$' \
+              || true
+          )
+          if [ -n "$INVALID_TYPES" ]; then
+            echo
+            echo "ERROR: invalid rule types:"
+            echo "$INVALID_TYPES"
+            exit 1
+          fi
+          echo
+          echo "Normalized rules are clean."
       # ==========================================================
-      # 16. Validate Surge DOMAIN-SET
-      #
-      # 合法：
-      #   example.com
-      #   .example.com
-      #
-      # 非法：
-      #   DOMAIN-SET,example.com
-      #   DOMAIN,example.com
-      #   DOMAIN-SUFFIX,example.com
-      #
-      # 同时禁止 Unicode 隐藏字符
+      # 9. Validate Surge DOMAIN-SET
       # ==========================================================
       - name: Validate Surge DOMAIN-SET
         shell: bash
@@ -614,28 +730,7 @@ jobs:
           echo "Valid Surge DOMAIN-SET rules:"
           echo "$DOMAIN_SET_COUNT"
       # ==========================================================
-      # 17. Extra source sanity check
-      #
-      # 确保最终规则里不残留 U+2060 等字符
-      # ==========================================================
-      - name: Validate normalized rules
-        shell: bash
-        run: |
-          set -euo pipefail
-          if LC_ALL=C grep -n '[^ -~]' rules.normalized; then
-            echo
-            echo "ERROR: rules.normalized contains non-ASCII/invisible characters"
-            exit 1
-          fi
-          if grep -qE \
-            '^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),$' \
-            rules.normalized; then
-            echo "ERROR: empty domain value detected"
-            exit 1
-          fi
-          echo "Normalized rules are clean."
-      # ==========================================================
-      # 18. Validate output files
+      # 10. Validate output files
       # ==========================================================
       - name: Validate output files
         shell: bash
@@ -643,10 +738,8 @@ jobs:
           set -euo pipefail
           FILES="
           ads-latest.txt
-          ads-clash.yaml
           ads-mosdns.txt
           ads-qx.snippet
-          ads-singbox.json
           "
           for file in $FILES; do
             if [ ! -s "$file" ]; then
@@ -657,7 +750,7 @@ jobs:
             ls -lh "$file"
           done
       # ==========================================================
-      # 19. Statistics
+      # 11. Statistics
       # ==========================================================
       - name: Show statistics
         shell: bash
@@ -679,42 +772,24 @@ jobs:
           echo "Surge DOMAIN-SET:"
           grep -vE '^#|^$' ads-latest.txt | wc -l
           echo
-          echo "Mihomo:"
-          grep -c '^  - ' ads-clash.yaml
-          echo
           echo "MosDNS:"
           wc -l ads-mosdns.txt
           echo
           echo "Quantumult X:"
           wc -l ads-qx.snippet
           echo
-          echo "sing-box:"
-          python3 <<'PY'
-          import json
-          with open(
-              "ads-singbox.json",
-              encoding="utf-8"
-          ) as f:
-              data = json.load(f)
-          print("version:", data.get("version"))
-          rules = data.get("rules", [])
-          print("rule groups:", len(rules))
-          for rule in rules:
-              print(
-                  "domain:",
-                  len(rule.get("domain", []))
-              )
-              print(
-                  "domain_suffix:",
-                  len(rule.get("domain_suffix", []))
-              )
-              print(
-                  "domain_keyword:",
-                  len(rule.get("domain_keyword", []))
-              )
-          PY
+          echo "Generated files:"
+          echo "  ads-latest.txt"
+          echo "  ads-mosdns.txt"
+          echo "  ads-qx.snippet"
+          echo
+          echo "NOT generated:"
+          echo "  ads-clash.yaml"
+          echo "  ads-singbox.json"
+          echo "  *.mrs"
+          echo "  *.srs"
       # ==========================================================
-      # 20. Cleanup
+      # 12. Cleanup
       # ==========================================================
       - name: Cleanup
         shell: bash
@@ -722,14 +797,9 @@ jobs:
           rm -f \
             source-olocn.txt \
             source-awa.txt \
-            rules.normalized \
-            /tmp/sing-box.tar.gz \
-            /tmp/mihomo.gz \
-            /tmp/ads-test.srs
-          rm -rf \
-            /tmp/sing-box-package
+            rules.normalized
       # ==========================================================
-      # 21. Commit and push
+      # 13. Commit and push
       # ==========================================================
       - name: Commit changes
         shell: bash
@@ -741,10 +811,8 @@ jobs:
             "41898282+github-actions[bot]@users.noreply.github.com"
           git add \
             ads-latest.txt \
-            ads-clash.yaml \
             ads-mosdns.txt \
-            ads-qx.snippet \
-            ads-singbox.json
+            ads-qx.snippet
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
