@@ -70,23 +70,29 @@ jobs:
       # ==========================================================
       # 5. Install sing-box
       # ==========================================================
-      - name: Install sing-box
+         - name: Install sing-box
         shell: bash
         run: |
           set -euo pipefail
-          if command -v sing-box >/dev/null 2>&1; then
-            echo "sing-box already available"
-            sing-box version
-            exit 0
-          fi
-          if [ -x /usr/local/bin/custom-tools/sing-box ]; then
+
+          TOOL_DIR="/usr/local/bin/custom-tools"
+
+          if [ -x "$TOOL_DIR/sing-box" ]; then
             echo "Using cached sing-box"
+            "$TOOL_DIR/sing-box" version
             exit 0
           fi
+
           VERSION="${VERSION_SING#v}"
+
           URL="https://github.com/SagerNet/sing-box/releases/download/${VERSION_SING}/sing-box-${VERSION}-linux-amd64.tar.gz"
-          echo "Downloading:"
+
+          echo "Downloading sing-box:"
           echo "$URL"
+
+          rm -rf /tmp/sing-box-package
+          mkdir -p /tmp/sing-box-package
+
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
@@ -94,12 +100,28 @@ jobs:
             --max-time 180 \
             "$URL" \
             -o /tmp/sing-box.tar.gz
-          tar -xzf /tmp/sing-box.tar.gz -C /tmp
-          BIN=$(find /tmp -type f -name sing-box | head -n 1)
-          test -n "$BIN"
-          install -m 0755 "$BIN" \
-            /usr/local/bin/custom-tools/sing-box
-          /usr/local/bin/custom-tools/sing-box version
+
+          tar -xzf \
+            /tmp/sing-box.tar.gz \
+            -C /tmp/sing-box-package
+
+          BIN="/tmp/sing-box-package/sing-box-${VERSION}/sing-box"
+
+          if [ ! -f "$BIN" ]; then
+            echo "ERROR: sing-box binary not found:"
+            echo "$BIN"
+            echo
+            echo "Extracted files:"
+            find /tmp/sing-box-package -maxdepth 3 -type f -print
+            exit 1
+          fi
+
+          install -m 0755 \
+            "$BIN" \
+            "$TOOL_DIR/sing-box"
+
+          echo "Installed sing-box:"
+          "$TOOL_DIR/sing-box" version
       # ==========================================================
       # 6. Install Mihomo
       # ==========================================================
