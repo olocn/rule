@@ -1,4 +1,4 @@
-name: "ads-rules"
+Name: "ads-rules"
 on:
   schedule:
     - cron: '0 */12 * * *'
@@ -113,7 +113,6 @@ jobs:
       # 8. 通用规则清洗
       #
       # 只保留：
-      #
       # DOMAIN
       # DOMAIN-SUFFIX
       # DOMAIN-KEYWORD
@@ -183,11 +182,6 @@ jobs:
           wc -l < rules.other
       # ==========================================================
       # 9. 生成 Mihomo YAML
-      #
-      # 输出：
-      # ads-clash.yaml
-      #
-      # 不再编译 MRS
       # ==========================================================
       - name: Generate Mihomo YAML
         run: |
@@ -210,37 +204,38 @@ jobs:
           echo "Mihomo YAML"
           echo "======================================"
           ls -lh ads-clash.yaml
-          echo
-          echo "First 10 rules:"
-          head -n 11 ads-clash.yaml
       # ==========================================================
-      # 10. Surge
+      # 10. Surge / Shadowrocket DOMAIN-SET
       #
-      # 按类型分别输出
+      # DOMAIN-SUFFIX -> .example.com (扩展匹配子域名)
+      # DOMAIN        -> example.com  (单域名精确匹配)
+      # DOMAIN-KEYWORD 不支持，自动忽略
       # ==========================================================
-      - name: Generate Surge rules
+      - name: Generate DOMAIN-SET rules
         run: |
           set -euo pipefail
           {
-            echo "# Auto merged Surge rules (${DATE})"
+            echo "# Auto merged DOMAIN-SET rules (${DATE})"
             awk -F',' '
             {
-              if ($1 == "DOMAIN")
-                print "DOMAIN," $2 ",REJECT"
-              else if ($1 == "DOMAIN-SUFFIX")
-                print "DOMAIN-SUFFIX," $2 ",REJECT"
-              else if ($1 == "DOMAIN-KEYWORD")
-                print "DOMAIN-KEYWORD," $2 ",REJECT"
+              if ($1 == "DOMAIN-SUFFIX") {
+                gsub(/^[.]+/, "", $2)
+                if ($2 != "") print "." $2
+              }
+              else if ($1 == "DOMAIN") {
+                gsub(/^[.]+/, "", $2)
+                if ($2 != "") print $2
+              }
             }
             ' rules.normalized \
             | sort -u
           } > ads-latest.txt
+          echo "======================================"
+          echo "DOMAIN-SET rules generated"
+          echo "======================================"
+          ls -lh ads-latest.txt
       # ==========================================================
       # 11. MosDNS
-      #
-      # domain = suffix
-      # full   = exact
-      # keyword = keyword
       # ==========================================================
       - name: Generate MosDNS rules
         run: |
@@ -261,12 +256,6 @@ jobs:
           } > ads-mosdns.txt
       # ==========================================================
       # 12. Quantumult X
-      #
-      # QX：
-      #
-      # DOMAIN-SUFFIX  -> host-suffix
-      # DOMAIN         -> host
-      # DOMAIN-KEYWORD -> host-keyword
       # ==========================================================
       - name: Generate Quantumult X rules
         run: |
@@ -287,11 +276,6 @@ jobs:
           } > ads-qx.snippet
       # ==========================================================
       # 13. sing-box JSON
-      #
-      # 输出：
-      # ads-singbox.json
-      #
-      # 不再编译 SRS
       # ==========================================================
       - name: Generate sing-box JSON
         run: |
@@ -301,11 +285,7 @@ jobs:
           suffix = set()
           domain = set()
           keyword = set()
-          with open(
-              "rules.normalized",
-              "r",
-              encoding="utf-8"
-          ) as f:
+          with open("rules.normalized", "r", encoding="utf-8") as f:
               for line in f:
                   line = line.strip()
                   if not line:
@@ -329,33 +309,12 @@ jobs:
               rule["domain_keyword"] = sorted(keyword)
           output = {
               "version": 1,
-              "rules": [
-                  rule
-              ]
+              "rules": [rule]
           }
-          with open(
-              "ads-singbox.json",
-              "w",
-              encoding="utf-8"
-          ) as f:
-              json.dump(
-                  output,
-                  f,
-                  ensure_ascii=False,
-                  indent=2
-              )
+          with open("ads-singbox.json", "w", encoding="utf-8") as f:
+              json.dump(output, f, ensure_ascii=False, indent=2)
               f.write("\n")
           PY
-          echo "======================================"
-          echo "sing-box JSON"
-          echo "======================================"
-          ls -lh ads-singbox.json
-          echo
-          echo "JSON validation:"
-          python3 -m json.tool \
-            ads-singbox.json \
-            > /dev/null
-          echo "OK"
       # ==========================================================
       # 14. 输出检查
       # ==========================================================
@@ -372,18 +331,8 @@ jobs:
             ads-singbox.json \
             ads-clash.yaml
           echo
-          echo "======================================"
-          echo "Rule counts"
-          echo "======================================"
-          echo "DOMAIN:"
-          grep -c '^DOMAIN,' rules.normalized || true
-          echo "DOMAIN-SUFFIX:"
-          grep -c '^DOMAIN-SUFFIX,' rules.normalized || true
-          echo "DOMAIN-KEYWORD:"
-          grep -c '^DOMAIN-KEYWORD,' rules.normalized || true
-          echo
-          echo "Total:"
-          wc -l < rules.normalized
+          echo "DOMAIN-SET line count (ads-latest.txt):"
+          wc -l < ads-latest.txt
       # ==========================================================
       # 15. 清理
       # ==========================================================
