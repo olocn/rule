@@ -1,3 +1,8 @@
+HOST-SUFFIX,volces.com,direct
+HOST-SUFFIX,mijia.tech,direct
+HOST-SUFFIX,mi.com,direct
+HOST-SUFFIX,xiaomi.com,direct
+
 HOST-SUFFIX,jumpvg.com,direct
 HOST-SUFFIX,alipayobjects.com,direct
 HOST-SUFFIX,bilivideo.cn,direct
@@ -505,7 +510,6 @@ HOST-SUFFIX,meitudata.com,direct
 HOST-SUFFIX,meitustat.com,direct
 HOST-SUFFIX,meizu.com,direct
 HOST-SUFFIX,mgtv.com,direct
-HOST-SUFFIX,mi.com,direct
 HOST-SUFFIX,miaopai.com,direct
 HOST-SUFFIX,midifan.com,direct
 HOST-SUFFIX,migu.cn,direct
@@ -805,7 +809,6 @@ HOST-SUFFIX,xiami.com,direct
 HOST-SUFFIX,xiami.net,direct
 HOST-SUFFIX,xiaohongshu.com,direct
 HOST-SUFFIX,xiaoka.tv,direct
-HOST-SUFFIX,xiaomi.com,direct
 HOST-SUFFIX,xiaomi.net,direct
 HOST-SUFFIX,xiaomixiaoai.com,direct
 HOST-SUFFIX,xiaomiyoupin.com,direct

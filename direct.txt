@@ -510,7 +510,6 @@ meitudata.com
 meitustat.com
 meizu.com
 mgtv.com
-mi.com
 miaopai.com
 midifan.com
 migu.cn
@@ -810,7 +809,6 @@ xiami.com
 xiami.net
 xiaohongshu.com
 xiaoka.tv
-xiaomi.com
 xiaomi.net
 xiaomixiaoai.com
 xiaomiyoupin.com
