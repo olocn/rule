@@ -1,0 +1,77 @@
+name: Sanitize Rules on Change
+
+on:
+  push:
+    branches:
+      - master
+    paths:
+      - 'surge/**'
+      - 'qx/**'
+  workflow_dispatch: # 保留手动一键触发按钮，方便随时调试
+
+jobs:
+  clean-and-commit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write # 必须赋予写入权限以回推 commit
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Clean invisible unicode characters in surge and qx
+        run: |
+          python3 - << 'EOF'
+          import os
+          import re
+
+          # 过滤导致报错的特殊字符：\u2060(Word Joiner), \u200b-\u200f(零宽空格), \ufeff(BOM), \u202a-\u202e 等
+          INVISIBLE_CHARS_REGEX = re.compile(r'[\u200b-\u200f\u202a-\u202e\u2060-\u206f\ufeff]')
+          TARGET_DIRS = ['surge', 'qx']
+
+          processed_files = 0
+          for target_dir in TARGET_DIRS:
+              if not os.path.exists(target_dir):
+                  continue
+
+              for root, _, files in os.walk(target_dir):
+                  for file in files:
+                      if file.startswith('.'):
+                          continue
+
+                      file_path = os.path.join(root, file)
+                      try:
+                          with open(file_path, 'r', encoding='utf-8', errors='ignore') as f:
+                              content = f.read()
+
+                          # 清除不可见字符与统一换行
+                          cleaned = INVISIBLE_CHARS_REGEX.sub('', content)
+                          cleaned = cleaned.replace('\r\n', '\n').replace('\r', '\n')
+                          
+                          # 每行去除首尾多余空格
+                          cleaned_lines = [line.strip() for line in cleaned.split('\n')]
+                          result_text = '\n'.join(cleaned_lines).rstrip() + '\n'
+
+                          with open(file_path, 'w', encoding='utf-8') as f:
+                              f.write(result_text)
+
+                          processed_files += 1
+                      except Exception as e:
+                          print(f"Error processing {file_path}: {e}")
+
+          print(f"Processed {processed_files} files.")
+          EOF
+
+      - name: Commit and push changes
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add surge/ qx/
+          
+          # 判断是否有实际清洗出脏字符，有改动才提交，防止空 commit 报错
+          if git diff --staged --quiet; then
+            echo "No invisible characters found. Working tree clean."
+          else
+            git commit -m "fix(rules): clean invisible unicode characters [skip ci]"
+            git push
+          fi
