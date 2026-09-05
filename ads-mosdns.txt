@@ -483,7 +483,6 @@ full:ms.applvn.com
 full:ms4.applovin.com
 full:ms4.applvn.com
 full:msdk.voiceads.cn
-full:mssdk.volces.com
 full:mssdk.zijieapi.com
 full:mtj.baidu.com
 full:nadvideo2.baidu.com
@@ -1058,6 +1057,7 @@ domain:umid.daily.alibaba.net
 domain:verify.cmpassport.com
 domain:vlion.cn
 domain:vlivep2p.tc.qq.com
+domain:volces.com
 domain:wap.cmpassport.com
 domain:windy-78.site
 domain:ws-p2p.com

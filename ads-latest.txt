@@ -484,7 +484,6 @@ DOMAIN,ms.applvn.com
 DOMAIN,ms4.applovin.com
 DOMAIN,ms4.applvn.com
 DOMAIN,msdk.voiceads.cn
-DOMAIN,mssdk.volces.com
 DOMAIN,mssdk.zijieapi.com
 DOMAIN,mtj.baidu.com
 DOMAIN,nadvideo2.baidu.com
@@ -1059,6 +1058,7 @@ DOMAIN-SUFFIX,umid.daily.alibaba.net
 DOMAIN-SUFFIX,verify.cmpassport.com
 DOMAIN-SUFFIX,vlion.cn
 DOMAIN-SUFFIX,vlivep2p.tc.qq.com
+DOMAIN-SUFFIX,volces.com
 DOMAIN-SUFFIX,wap.cmpassport.com
 DOMAIN-SUFFIX,windy-78.site
 DOMAIN-SUFFIX,ws-p2p.com
