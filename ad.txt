@@ -132,7 +132,7 @@ mp-prod.smartmidea.net
 
 # b站
 mcdn.bilivideo.cn
-grpc.biliapi.net
+#grpc.biliapi.net
 dataflow.biliapi.com
 httpdns.bilivideo.com
 mall.bilibili.com
