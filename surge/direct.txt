@@ -3,6 +3,7 @@ DOMAIN-SUFFIX,mijia.tech
 DOMAIN-SUFFIX,mi.com
 DOMAIN-SUFFIX,xiaomi.com
 
+DOMAIN-SUFFIX,miinsurtech.com
 DOMAIN-SUFFIX,jumpvg.com
 DOMAIN-SUFFIX,alipayobjects.com
 DOMAIN-SUFFIX,bilivideo.cn
