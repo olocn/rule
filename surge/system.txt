@@ -41,7 +41,7 @@ DOMAIN,resource.cupid.iqiyi.com
 DOMAIN,loc.map.baidu.com
 
 #小红书
-DOMAIN-SUFFIX,xhscdn.com 
+DOMAIN-SUFFIX,xhscdn.com
 DOMAIN-SUFFIX,lencr.org
 
 # google
