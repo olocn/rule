@@ -1,5 +1,4 @@
 name: Convert Rules to Surge and QX
-
 on:
   push:
     branches:
@@ -7,39 +6,45 @@ on:
     paths:
       - 'direct.txt'
       - 'proxy.txt'
-      - 'ad.txt'
-
   workflow_dispatch:
-
 jobs:
   convert:
     runs-on: ubuntu-latest
-
     permissions:
       contents: write
-
     steps:
+      # ==========================================================
+      # 1. Checkout repository
+      # ==========================================================
       - name: Checkout repository
         uses: actions/checkout@v4
-
+      # ==========================================================
+      # 2. Convert rules
+      # ==========================================================
       - name: Convert rules
         shell: bash
         run: |
           set -euo pipefail
-
           mkdir -p surge qx
-
+          # ==========================================================
+          # 删除旧的广告输出文件
+          # ==========================================================
+          rm -f surge/ad.txt
+          rm -f qx/ad.list
           # ==========================================================
           # 清洗 + 安全父域去重
           #
           # 例如：
+          #
           #   xxxx.com
           #   x.xxxx.com
           #
           # 最终只保留：
+          #
           #   xxxx.com
           #
           # 注意：
+          #
           #   example.com
           #   example.com.cn
           #
@@ -47,39 +52,29 @@ jobs:
           #
           # IP / CIDR 不参与父子域名判断。
           # ==========================================================
-
           deduplicate_source() {
             local src="$1"
             local tmp="${src}.dedup.tmp"
-
             echo "========================================"
             echo "Deduplicating: $src"
             echo "========================================"
-
             [[ ! -f "$src" ]] && return 0
-
             : > "$tmp"
-
             # ----------------------------------------------------------
             # 第一阶段：
             # 清洗域名格式，同时保留原始行、注释和空行
             # ----------------------------------------------------------
-
             while IFS= read -r line || [[ -n "$line" ]]; do
-
               # CRLF -> LF
               line="${line//$'\r'/}"
-
               # 去除首尾空白
               line="${line#"${line%%[![:space:]]*}"}"
               line="${line%"${line##*[![:space:]]}"}"
-
               # 空行直接保留
               if [[ -z "$line" ]]; then
                 printf '\n' >> "$tmp"
                 continue
               fi
-
               # 注释直接保留
               if [[ "$line" == \#* ||
                     "$line" == '//'*
@@ -87,7 +82,6 @@ jobs:
                 printf '%s\n' "$line" >> "$tmp"
                 continue
               fi
-
               # --------------------------------------------------------
               # 去除常见域名前缀
               #
@@ -95,7 +89,6 @@ jobs:
               # +.example.com
               # .example.com
               # --------------------------------------------------------
-
               if [[ "$line" == \*.* ]]; then
                 line="${line:2}"
               elif [[ "$line" == +.* ]]; then
@@ -103,54 +96,52 @@ jobs:
               elif [[ "$line" == .* ]]; then
                 line="${line:1}"
               fi
-
               # 去除域名最后的 .
               line="${line%.}"
-
               printf '%s\n' "$line" >> "$tmp"
-
             done < "$src"
-
             # ----------------------------------------------------------
             # 第二阶段：
-            # 使用临时文件进行安全父域判断
+            # 使用 Python 进行安全父域判断
             # ----------------------------------------------------------
-
             python3 - "$tmp" "$src" <<'PY'
           import sys
           import ipaddress
           import re
-
           input_file = sys.argv[1]
           output_file = sys.argv[2]
-
-          with open(input_file, "r", encoding="utf-8", errors="replace") as f:
+          with open(
+              input_file,
+              "r",
+              encoding="utf-8",
+              errors="replace",
+          ) as f:
               lines = f.read().splitlines()
-
-          # ------------------------------------------------------------
+          # ============================================================
           # 判断是否为 IP / CIDR
-          # ------------------------------------------------------------
-
+          # ============================================================
           def is_ip_or_cidr(s):
               try:
                   if "/" in s:
-                      ipaddress.ip_network(s, strict=False)
+                      ipaddress.ip_network(
+                          s,
+                          strict=False,
+                      )
                   else:
                       ipaddress.ip_address(s)
                   return True
               except ValueError:
                   return False
-
-          # ------------------------------------------------------------
+          # ============================================================
           # 判断是否像域名
           #
           # 不处理：
+          #
           #   注释
           #   IP
           #   CIDR
           #   已有规则格式
-          # ------------------------------------------------------------
-
+          # ============================================================
           domain_re = re.compile(
               r"^(?=.{1,253}$)"
               r"(?:[A-Za-z0-9]"
@@ -158,40 +149,31 @@ jobs:
               r"\.)+"
               r"[A-Za-z]{2,63}$"
           )
-
           def is_domain(s):
               if not s:
                   return False
-
               if is_ip_or_cidr(s):
                   return False
-
-              # 已经是规则格式，不参与父域判断
+              # 已经是规则格式
               if "," in s:
                   return False
-
-              return bool(domain_re.match(s))
-
-          # ------------------------------------------------------------
+              return bool(domain_re.fullmatch(s))
+          # ============================================================
           # 域名规范化
-          # ------------------------------------------------------------
-
+          # ============================================================
           def normalize_domain(s):
               return s.rstrip(".").lower()
-
-          # ------------------------------------------------------------
+          # ============================================================
           # 收集所有域名
-          # ------------------------------------------------------------
-
+          # ============================================================
           domains = set()
-
           for line in lines:
               s = line.strip()
-
               if is_domain(s):
-                  domains.add(normalize_domain(s))
-
-          # ------------------------------------------------------------
+                  domains.add(
+                      normalize_domain(s)
+                  )
+          # ============================================================
           # 判断 domain 是否已经被某个父域覆盖
           #
           # 例如：
@@ -199,169 +181,153 @@ jobs:
           # example.com
           # www.example.com
           #
-          # www.example.com 会被 example.com 覆盖。
+          # www.example.com 会被删除。
           #
           # 但是：
           #
           # example.com
           # example.com.cn
           #
-          # 不会互相覆盖。
-          # ------------------------------------------------------------
-
+          # 两者不会互相删除。
+          # ============================================================
           def has_parent(domain):
               parts = domain.split(".")
-
               # 至少保留两级域名
               if len(parts) <= 2:
                   return False
-
-              # 从最直接的父域开始检查
-              for i in range(1, len(parts) - 1):
-                  parent = ".".join(parts[i:])
-
+              # 从直接父域开始检查
+              #
+              # a.b.example.com
+              #
+              # 检查：
+              #
+              # b.example.com
+              # example.com
+              #
+              for i in range(
+                  1,
+                  len(parts) - 1,
+              ):
+                  parent = ".".join(
+                      parts[i:]
+                  )
                   if parent in domains:
                       return True
-
               return False
-
-          # ------------------------------------------------------------
-          # 已经处理过的完全相同域名
-          # ------------------------------------------------------------
-
+          # ============================================================
+          # 输出
+          # ============================================================
           seen_domains = set()
-
+          seen_other = set()
           output = []
-
           for line in lines:
-
               s = line.strip()
-
               # --------------------------------------------------------
               # 空行 / 注释
               # --------------------------------------------------------
-
-              if not s or s.startswith("#") or s.startswith("//") or s.startswith(";"):
+              if (
+                  not s
+                  or s.startswith("#")
+                  or s.startswith("//")
+                  or s.startswith(";")
+              ):
                   output.append(line)
                   continue
-
               # --------------------------------------------------------
               # 域名
               # --------------------------------------------------------
-
               if is_domain(s):
                   domain = normalize_domain(s)
-
-                  # 父域存在，删除当前子域
+                  # 父域存在
                   if has_parent(domain):
                       continue
-
-                  # 完全重复，只保留第一次
+                  # 完全重复
                   if domain in seen_domains:
                       continue
-
                   seen_domains.add(domain)
-
-                  # 保持清洗后的域名
                   output.append(domain)
                   continue
-
               # --------------------------------------------------------
               # IP / CIDR / 其他内容
               #
-              # 只做完全相同去重，不做父子关系判断
+              # 只做完全相同去重。
+              #
+              # 不做父子关系判断。
               # --------------------------------------------------------
-
-              if s in output:
+              if s in seen_other:
                   continue
-
+              seen_other.add(s)
               output.append(s)
-
-          # ------------------------------------------------------------
+          # ============================================================
           # 写回原文件
-          # ------------------------------------------------------------
-
-          with open(output_file, "w", encoding="utf-8", newline="\n") as f:
+          # ============================================================
+          with open(
+              output_file,
+              "w",
+              encoding="utf-8",
+              newline="\n",
+          ) as f:
               for line in output:
                   f.write(line + "\n")
-
           PY
-
             rm -f "$tmp"
-
             echo "Done: $src"
           }
-
-
           # ==========================================================
           # 转换规则
           # ==========================================================
-
           convert_list() {
             local src="$1"
             local surge_out="$2"
             local qx_out="$3"
             local qx_policy="$4"
-
             echo "========================================"
             echo "Processing: $src"
             echo "QX policy: $qx_policy"
             echo "========================================"
-
             if [[ ! -f "$src" ]]; then
               echo "Source file not found, skip: $src"
               return 0
             fi
-
             local surge_tmp="${surge_out}.tmp"
             local qx_tmp="${qx_out}.tmp"
-
             : > "$surge_tmp"
             : > "$qx_tmp"
-
             local line
             local target_ip
-
             while IFS= read -r line || [[ -n "$line" ]]; do
-
               # CRLF
               line="${line//$'\r'/}"
-
               # 首尾空白
               line="${line#"${line%%[![:space:]]*}"}"
               line="${line%"${line##*[![:space:]]}"}"
-
               # --------------------------------------------------------
               # 空行
               # --------------------------------------------------------
-
               if [[ -z "$line" ]]; then
                 printf '\n' >> "$surge_tmp"
                 printf '\n' >> "$qx_tmp"
                 continue
               fi
-
               # --------------------------------------------------------
               # 注释
               # --------------------------------------------------------
-
               if [[ "$line" == \#* ||
                     "$line" == '//'*
                     || "$line" == \;* ]]; then
-
                 printf '%s\n' "$line" >> "$surge_tmp"
                 printf '%s\n' "$line" >> "$qx_tmp"
-
                 continue
               fi
-
               # --------------------------------------------------------
-              # 如果原文件存在已有规则格式
-              # 则不重复转换
+              # 已有规则格式
+              #
+              # 如果原文件本身已经存在 Surge / QX 风格规则，
+              # Surge 原样保留。
+              #
+              # QX 则在末尾追加策略。
               # --------------------------------------------------------
-
               case "$line" in
-
                 DOMAIN,*|\
                 DOMAIN-SUFFIX,*|\
                 DOMAIN-KEYWORD,*|\
@@ -372,176 +338,159 @@ jobs:
                 IP-CIDR,*|\
                 IP-CIDR6,*|\
                 IP6-CIDR,*)
-
-                  # Surge 原样保留
-                  printf '%s\n' "$line" >> "$surge_tmp"
-
-                  # QX 在最后追加策略
-                  printf '%s,%s\n' "$line" "$qx_policy" >> "$qx_tmp"
-
+                  printf '%s\n' "$line" \
+                    >> "$surge_tmp"
+                  printf '%s,%s\n' \
+                    "$line" \
+                    "$qx_policy" \
+                    >> "$qx_tmp"
                   continue
                   ;;
               esac
-
               # --------------------------------------------------------
               # IPv4
               #
               # 1.1.1.1
               # 1.1.1.1/24
               # --------------------------------------------------------
-
               if [[ "$line" =~ ^([0-9]{1,3}\.){3}[0-9]{1,3}(/[0-9]{1,2})?$ ]]; then
-
                 if [[ "$line" != */* ]]; then
                   target_ip="${line}/32"
                 else
                   target_ip="$line"
                 fi
-
                 printf \
                   'IP-CIDR,%s,no-resolve\n' \
                   "$target_ip" \
                   >> "$surge_tmp"
-
                 printf \
                   'IP-CIDR,%s,%s\n' \
                   "$target_ip" \
                   "$qx_policy" \
                   >> "$qx_tmp"
-
                 continue
               fi
-
               # --------------------------------------------------------
               # IPv6
               #
               # 2001:db8::1
               # 2001:db8::/32
               # --------------------------------------------------------
-
               if [[ "$line" == *:* ]]; then
-
                 if [[ "$line" == */* ]]; then
                   target_ip="$line"
                 else
                   target_ip="${line}/128"
                 fi
-
                 printf \
                   'IP-CIDR6,%s,no-resolve\n' \
                   "$target_ip" \
                   >> "$surge_tmp"
-
                 printf \
                   'IP6-CIDR,%s,%s\n' \
                   "$target_ip" \
                   "$qx_policy" \
                   >> "$qx_tmp"
-
                 continue
               fi
-
               # --------------------------------------------------------
-              # 域名
+              # 普通域名
               # --------------------------------------------------------
-
               printf \
                 'DOMAIN-SUFFIX,%s\n' \
                 "$line" \
                 >> "$surge_tmp"
-
               printf \
                 'HOST-SUFFIX,%s,%s\n' \
                 "$line" \
                 "$qx_policy" \
                 >> "$qx_tmp"
-
             done < "$src"
-
             # ----------------------------------------------------------
             # 转换成功后才替换正式文件
             # ----------------------------------------------------------
-
             mv "$surge_tmp" "$surge_out"
             mv "$qx_tmp" "$qx_out"
-
             echo "Generated:"
             echo "  $surge_out"
             echo "  $qx_out"
           }
-
-
           # ==========================================================
-          # 1. 先处理原始文件
+          # 3. 处理源文件
           # ==========================================================
-
           deduplicate_source "direct.txt"
           deduplicate_source "proxy.txt"
-          deduplicate_source "ad.txt"
-
-
           # ==========================================================
-          # 2. 生成 Surge / QX
+          # 4. 生成 Surge / QX
           # ==========================================================
-
+          # ----------------------------------------------------------
           # direct → direct
+          # ----------------------------------------------------------
           convert_list \
             "direct.txt" \
             "surge/direct.txt" \
             "qx/direct.list" \
             "direct"
-
+          # ----------------------------------------------------------
           # proxy → proxy
+          # ----------------------------------------------------------
           convert_list \
             "proxy.txt" \
             "surge/proxy.txt" \
             "qx/proxy.list" \
             "proxy"
-
-          # ad → reject
-          convert_list \
-            "ad.txt" \
-            "surge/ad.txt" \
-            "qx/ad.list" \
-            "reject"
-
-
+      # ==========================================================
+      # 3. Show changes
+      # ==========================================================
       - name: Show changes
+        shell: bash
         run: |
           echo "========================================"
           echo "Changed files"
           echo "========================================"
-
           git status --short
-
           echo
           echo "========================================"
           echo "Diff stat"
           echo "========================================"
-
           git diff --stat
-
-
+      # ==========================================================
+      # 4. Commit and push
+      # ==========================================================
       - name: Commit and push changes
+        shell: bash
         run: |
           set -euo pipefail
-
-          git config --local user.name "github-actions[bot]"
-          git config --local user.email "github-actions[bot]@users.noreply.github.com"
-
-          # 原文件 + 输出文件都加入提交
+          git config --local user.name \
+            "github-actions[bot]"
+          git config --local user.email \
+            "41898282+github-actions[bot]@users.noreply.github.com"
+          # ========================================================
+          # 加入源文件及生成文件
+          # ========================================================
           git add \
             direct.txt \
             proxy.txt \
-            ad.txt \
             surge/ \
             qx/
-
+          # ========================================================
+          # 没有变化
+          # ========================================================
           if git diff --cached --quiet; then
             echo "No changes detected. Skipping commit."
             exit 0
           fi
-
-          git commit -m "Auto convert rules [skip ci]"
-
+          # ========================================================
+          # 显示变更
+          # ========================================================
+          echo "Changes detected:"
+          git diff --cached --stat
+          # ========================================================
+          # Commit
+          # ========================================================
+          git commit \
+            -m "chore: convert direct and proxy rules"
+          # ========================================================
+          # Push
+          # ========================================================
           git push origin master
