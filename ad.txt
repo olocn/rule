@@ -163,7 +163,6 @@ appsflyer.com
 adashxgc.ut.taobao.com
 pangolin-sdk-toutiao-b.com
 pglstatp-toutiao.com
-xhey.top
 getui.com
 getui.net
 gepush.com

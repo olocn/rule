@@ -17,7 +17,8 @@ DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,openinstall.com
 DOMAIN-SUFFIX,bugly.qq.com
 DOMAIN-SUFFIX,sensorsdata.cn
-
+DOMAIN-SUFFIX,xhey.top
+DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,openinstall.io
 DOMAIN-SUFFIX,shangkmo.com
 
@@ -34,7 +35,7 @@ DOMAIN-SUFFIX,px.effirst.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,bugsnag.com
-DOMAIN-SUFFIX,o4505782787964928.ingest.sentry.io
+DOMAIN-SUFFIX,ingest.sentry.io
 DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,analytics.plex.tv
 
@@ -162,7 +163,6 @@ DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao-b.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
-DOMAIN-SUFFIX,xhey.top
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gepush.com
