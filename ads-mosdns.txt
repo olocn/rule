@@ -879,6 +879,7 @@ domain:ecom.map.baidu.com
 domain:enrichgw.10010.com
 domain:erer.homeborn.cn
 domain:event.northghost.com
+domain:fourier.taobao.com
 domain:fp.amap.com
 domain:free-aos-cdn-image.amap.com
 domain:gather.colorfulclouds.net
