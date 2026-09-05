@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-09-04)
+# Auto merged Surge rules (2026-09-05)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -379,7 +379,6 @@ DOMAIN,img2.360buyimg.com
 DOMAIN,impression-asia.chinaliftoff.io
 DOMAIN,impression-asia.liftoff.io
 DOMAIN,in.treasuredata.com
-DOMAIN,ios.bugly.qq.com
 DOMAIN,iot-eu-logser.realme.com
 DOMAIN,iot-logser.realme.com
 DOMAIN,ipv4.kkmh.com
@@ -835,11 +834,13 @@ DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,bossjs.rosfky.cn
 DOMAIN-SUFFIX,braze.eu
+DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,broadcast.chat.bilibili.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,bsclink.cn
 DOMAIN-SUFFIX,bsgslb.cn
+DOMAIN-SUFFIX,bugly.qq.com
 DOMAIN-SUFFIX,bugsnag.com
 DOMAIN-SUFFIX,bvmlt.top
 DOMAIN-SUFFIX,bytefcdnrd.com
@@ -886,7 +887,6 @@ DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gjfzpt.cn
-DOMAIN-SUFFIX,grpc.biliapi.net
 DOMAIN-SUFFIX,haosou.com
 DOMAIN-SUFFIX,heima911.com
 DOMAIN-SUFFIX,hiaiabc.com
@@ -924,6 +924,7 @@ DOMAIN-SUFFIX,icostapp.com
 DOMAIN-SUFFIX,id.mail.wo.cn
 DOMAIN-SUFFIX,ietheivaicai.com
 DOMAIN-SUFFIX,img.ra12.xyz
+DOMAIN-SUFFIX,ingest.sentry.io
 DOMAIN-SUFFIX,iot.smartmidea.net
 DOMAIN-SUFFIX,iot1.midea.com.cn
 DOMAIN-SUFFIX,iotsdk.midea.com
@@ -961,7 +962,6 @@ DOMAIN-SUFFIX,ndcjl.com
 DOMAIN-SUFFIX,ndcpp.com
 DOMAIN-SUFFIX,nexusedgeio.com
 DOMAIN-SUFFIX,nishub1.10010.com
-DOMAIN-SUFFIX,o4505782787964928.ingest.sentry.io
 DOMAIN-SUFFIX,oia.zhihu.com
 DOMAIN-SUFFIX,onekey1.cmpassport.com
 DOMAIN-SUFFIX,onekey2.cmpassport.com
@@ -1016,6 +1016,7 @@ DOMAIN-SUFFIX,rou.one
 DOMAIN-SUFFIX,s.miwifi.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,saxysec.com
+DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,shangkmo.com
 DOMAIN-SUFFIX,siomxity.com
 DOMAIN-SUFFIX,siomxity.net

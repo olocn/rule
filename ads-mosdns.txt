@@ -378,7 +378,6 @@ full:img2.360buyimg.com
 full:impression-asia.chinaliftoff.io
 full:impression-asia.liftoff.io
 full:in.treasuredata.com
-full:ios.bugly.qq.com
 full:iot-eu-logser.realme.com
 full:iot-logser.realme.com
 full:ipv4.kkmh.com
@@ -834,11 +833,13 @@ domain:biligame.com
 domain:blackhole.m.jd.com
 domain:bossjs.rosfky.cn
 domain:braze.eu
+domain:bridgeoos.com
 domain:broadcast.chat.bilibili.com
 domain:browser-intake-datadoghq.com
 domain:bsccdn.net
 domain:bsclink.cn
 domain:bsgslb.cn
+domain:bugly.qq.com
 domain:bugsnag.com
 domain:bvmlt.top
 domain:bytefcdnrd.com
@@ -885,7 +886,6 @@ domain:gepush.com
 domain:getui.com
 domain:getui.net
 domain:gjfzpt.cn
-domain:grpc.biliapi.net
 domain:haosou.com
 domain:heima911.com
 domain:hiaiabc.com
@@ -923,6 +923,7 @@ domain:icostapp.com
 domain:id.mail.wo.cn
 domain:ietheivaicai.com
 domain:img.ra12.xyz
+domain:ingest.sentry.io
 domain:iot.smartmidea.net
 domain:iot1.midea.com.cn
 domain:iotsdk.midea.com
@@ -960,7 +961,6 @@ domain:ndcjl.com
 domain:ndcpp.com
 domain:nexusedgeio.com
 domain:nishub1.10010.com
-domain:o4505782787964928.ingest.sentry.io
 domain:oia.zhihu.com
 domain:onekey1.cmpassport.com
 domain:onekey2.cmpassport.com
@@ -1015,6 +1015,7 @@ domain:rou.one
 domain:s.miwifi.com
 domain:safebrowsing.apple
 domain:saxysec.com
+domain:sensorsdata.cn
 domain:shangkmo.com
 domain:siomxity.com
 domain:siomxity.net
