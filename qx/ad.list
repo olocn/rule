@@ -132,7 +132,7 @@ HOST-SUFFIX,mp-prod.smartmidea.net,reject
 
 # b站
 HOST-SUFFIX,mcdn.bilivideo.cn,reject
-HOST-SUFFIX,grpc.biliapi.net,reject
+#grpc.biliapi.net
 HOST-SUFFIX,dataflow.biliapi.com,reject
 HOST-SUFFIX,httpdns.bilivideo.com,reject
 HOST-SUFFIX,mall.bilibili.com,reject

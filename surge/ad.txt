@@ -132,7 +132,7 @@ DOMAIN-SUFFIX,mp-prod.smartmidea.net
 
 # b站
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
-DOMAIN-SUFFIX,grpc.biliapi.net
+#grpc.biliapi.net
 DOMAIN-SUFFIX,dataflow.biliapi.com
 DOMAIN-SUFFIX,httpdns.bilivideo.com
 DOMAIN-SUFFIX,mall.bilibili.com
