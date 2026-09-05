@@ -18,6 +18,7 @@ DOMAIN-SUFFIX,jdbstatic.com
 DOMAIN-SUFFIX,missav.ws
 
 
+DOMAIN-SUFFIX,re0.me
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,strpst.com
 DOMAIN-SUFFIX,fourhoi.com
