@@ -1,33 +1,25 @@
 name: ads-rules
-
 on:
   push:
     branches:
       - master
     paths:
       - 'ad.txt'
-
   schedule:
     - cron: '0 */12 * * *'
-
   workflow_dispatch:
-
 permissions:
   contents: write
-
 concurrency:
   group: ads-rules
   cancel-in-progress: false
-
 jobs:
   build:
     runs-on: ubuntu-latest
     timeout-minutes: 15
-
     env:
       FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
       PYTHONUNBUFFERED: "1"
-
     steps:
       # ==========================================================
       # 1. Checkout
@@ -36,7 +28,6 @@ jobs:
         uses: actions/checkout@v5
         with:
           fetch-depth: 1
-
       # ==========================================================
       # 2. Prepare
       # ==========================================================
@@ -44,15 +35,11 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           mkdir -p .tmp
-
           echo "Python:"
           python3 --version
-
           echo "Curl:"
           curl --version | head -n 1
-
       # ==========================================================
       # 3. Download source rules
       # ==========================================================
@@ -60,11 +47,9 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           echo "========================================"
           echo "Downloading source 1"
           echo "========================================"
-
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
@@ -72,12 +57,10 @@ jobs:
             --connect-timeout 15 \
             --max-time 180 \
             -o .tmp/source-1.txt \
-            "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/surge/ad.txt"
-
+            "https://raw.githubusercontent.com/olocn/rule/refs/heads/master/ad.txt"
           echo "========================================"
           echo "Downloading source 2"
           echo "========================================"
-
           curl -fL \
             --retry 5 \
             --retry-delay 2 \
@@ -86,14 +69,11 @@ jobs:
             --max-time 180 \
             -o .tmp/source-2.txt \
             "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
-
           test -s .tmp/source-1.txt
           test -s .tmp/source-2.txt
-
           echo
           echo "Source 1 lines: $(wc -l < .tmp/source-1.txt)"
           echo "Source 2 lines: $(wc -l < .tmp/source-2.txt)"
-
       # ==========================================================
       # 4. Python processing
       # ==========================================================
@@ -101,47 +81,36 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           python3 <<'PY'
           from pathlib import Path
           from datetime import date
           import re
-
-
           # ======================================================
           # Configuration
           # ======================================================
-
-          SOURCES = [
-              Path(".tmp/source-1.txt"),
-              Path(".tmp/source-2.txt"),
-          ]
-
+          SOURCE_1 = Path(".tmp/source-1.txt")
+          SOURCE_2 = Path(".tmp/source-2.txt")
           OUTPUT_SURGE = Path("ads-latest.txt")
           OUTPUT_MOSDNS = Path("ads-mosdns.txt")
           OUTPUT_QX = Path("ads-qx.snippet")
-
           VALID_TYPES = {
               "DOMAIN",
               "DOMAIN-SUFFIX",
               "DOMAIN-KEYWORD",
               "DOMAIN-SET",
           }
-
-
           # ======================================================
           # Hidden Unicode characters
           # ======================================================
-
           HIDDEN_CHARS = dict.fromkeys([
-              "\ufeff",  # BOM
-              "\u200b",  # zero width space
-              "\u200c",  # zero width non-joiner
-              "\u200d",  # zero width joiner
-              "\u2060",  # word joiner
-              "\u00ad",  # soft hyphen
-              "\u200e",  # left-to-right mark
-              "\u200f",  # right-to-left mark
+              "\ufeff",
+              "\u200b",
+              "\u200c",
+              "\u200d",
+              "\u2060",
+              "\u00ad",
+              "\u200e",
+              "\u200f",
               "\u202a",
               "\u202b",
               "\u202c",
@@ -152,12 +121,9 @@ jobs:
               "\u2068",
               "\u2069",
           ], None)
-
-
           # ======================================================
           # Domain validation
           # ======================================================
-
           DOMAIN_RE = re.compile(
               r"^(?=.{1,253}$)"
               r"(?:[a-z0-9]"
@@ -167,372 +133,272 @@ jobs:
               r"(?:[a-z0-9-]{0,61}[a-z0-9])?$",
               re.IGNORECASE,
           )
-
           IPV4_RE = re.compile(
               r"^(?:\d{1,3}\.){3}\d{1,3}$"
           )
-
-
           # ======================================================
           # Text cleanup
           # ======================================================
-
           def clean_text(text: str) -> str:
-              """
-              Remove hidden Unicode characters and comments.
-
-              Example:
-
-                  DOMAIN,example.com   # comment
-
-              becomes:
-
-                  DOMAIN,example.com
-              """
-
               text = text.translate(HIDDEN_CHARS)
-
-              # Same intended behavior as:
-              #
-              # sed 's/[[:space:]]*#.*$//'
-              #
+              # Remove comments.
               text = re.sub(r"\s*#.*$", "", text)
-
               return text.strip()
-
-
           def normalize_value(value: str) -> str:
               value = clean_text(value)
-
-              # Domain rules are case-insensitive.
               value = value.strip().lower()
-
-              # Remove only surrounding dots.
               value = value.strip(".")
-
               return value
-
-
           # ======================================================
           # IP / CIDR detection
           # ======================================================
-
           def is_ip_or_cidr(value: str) -> bool:
-              """
-              IP and CIDR never participate in domain containment.
-              """
-
-              # CIDR
               if "/" in value:
                   return True
-
-              # IPv4
               if IPV4_RE.fullmatch(value):
                   return True
-
-              # IPv6
               if ":" in value:
                   return True
-
               return False
-
-
           # ======================================================
           # Domain detection
           # ======================================================
-
           def is_domain(value: str) -> bool:
               if not value:
                   return False
-
               if is_ip_or_cidr(value):
                   return False
-
               if any(ch.isspace() for ch in value):
                   return False
-
               return bool(DOMAIN_RE.fullmatch(value))
-
-
           # ======================================================
-          # Parse rule
+          # Parse Source 1
           # ======================================================
-
-          def parse_rule(line: str):
+          #
+          # Source 1 is a plain domain list.
+          #
+          # example:
+          #
+          # example.com
+          # ad.example.com
+          #
+          # becomes:
+          #
+          # DOMAIN-SUFFIX,example.com
+          # DOMAIN-SUFFIX,ad.example.com
+          #
+          # ======================================================
+          def parse_source_1(line: str):
               line = clean_text(line)
-
               if not line:
                   return None
-
+              # Source 1 should be plain domain only.
+              #
+              # Ignore anything that already looks like a rule.
+              if "," in line:
+                  return None
+              value = normalize_value(line)
+              if not is_domain(value):
+                  return None
+              return "DOMAIN-SUFFIX", value
+          # ======================================================
+          # Parse Source 2
+          # ======================================================
+          def parse_source_2(line: str):
+              line = clean_text(line)
+              if not line:
+                  return None
               if line.startswith("#"):
                   return None
-
               parts = line.split(",", 1)
-
               if len(parts) != 2:
                   return None
-
               rule_type = parts[0].strip().upper()
               value = normalize_value(parts[1])
-
               if rule_type not in VALID_TYPES:
                   return None
-
               if not value:
                   return None
-
-              # No embedded comma.
               if "," in value:
                   return None
-
-              # No whitespace.
               if any(ch.isspace() for ch in value):
                   return None
-
               return rule_type, value
-
-
           # ======================================================
           # DOMAIN-SUFFIX coverage
           # ======================================================
-
           def suffix_covers(domain: str, suffix: str) -> bool:
-              """
-              DOMAIN-SUFFIX,suffix
-
-              covers:
-
-                  suffix
-                  x.suffix
-                  a.b.suffix
-
-              Examples:
-
-                  suffix_covers(
-                      "ad.life.360.cn",
-                      "360.cn"
-                  )
-
-                  -> True
-              """
-
               if not is_domain(domain):
                   return False
-
               if not is_domain(suffix):
                   return False
-
               return (
                   domain == suffix
                   or domain.endswith("." + suffix)
               )
-
-
           # ======================================================
-          # Find whether a suffix has a broader surviving suffix
+          # Parent suffix detection
           # ======================================================
-
-          def has_parent_suffix(domain: str, suffix_set: set[str]) -> bool:
-              """
-              Check only parent domains.
-
-              Example:
-
-                  ad.life.360.cn
-
-              checks:
-
-                  life.360.cn
-                  360.cn
-                  cn
-
-              It does NOT compare every rule against every rule,
-              avoiding O(N²) behavior.
-              """
-
+          def has_parent_suffix(
+              domain: str,
+              suffix_set: set[str],
+          ) -> bool:
               if not is_domain(domain):
                   return False
-
               parts = domain.split(".")
-
               if len(parts) < 2:
                   return False
-
               for i in range(1, len(parts)):
                   parent = ".".join(parts[i:])
-
                   if parent in suffix_set:
                       return True
-
               return False
-
-
           # ======================================================
-          # 1. Read and parse all sources
+          # 1. Read Source 1
           # ======================================================
-
-          total_lines = 0
-          valid_lines = 0
-
-          parsed_rules = []
-
-          for source in SOURCES:
-
-              print()
-              print("=" * 40)
-              print(f"Processing source: {source}")
-              print("=" * 40)
-
-              with source.open(
-                  "r",
-                  encoding="utf-8",
-                  errors="replace",
-              ) as f:
-
-                  for raw_line in f:
-                      total_lines += 1
-
-                      rule = parse_rule(raw_line)
-
-                      if rule is None:
-                          continue
-
-                      parsed_rules.append(rule)
-                      valid_lines += 1
-
-
+          source1_rules = []
+          source1_total = 0
+          source1_valid = 0
           print()
-          print(f"Total source lines : {total_lines}")
-          print(f"Valid rules        : {valid_lines}")
-
-
+          print("=" * 40)
+          print(f"Processing source 1: {SOURCE_1}")
+          print("=" * 40)
+          with SOURCE_1.open(
+              "r",
+              encoding="utf-8",
+              errors="replace",
+          ) as f:
+              for raw_line in f:
+                  source1_total += 1
+                  rule = parse_source_1(raw_line)
+                  if rule is None:
+                      continue
+                  source1_rules.append(rule)
+                  source1_valid += 1
+          print(
+              f"Source 1 total lines : {source1_total}"
+          )
+          print(
+              f"Source 1 domains     : {source1_valid}"
+          )
           # ======================================================
-          # 2. Exact duplicate removal
+          # 2. Read Source 2
           # ======================================================
-
+          source2_rules = []
+          source2_total = 0
+          source2_valid = 0
+          print()
+          print("=" * 40)
+          print(f"Processing source 2: {SOURCE_2}")
+          print("=" * 40)
+          with SOURCE_2.open(
+              "r",
+              encoding="utf-8",
+              errors="replace",
+          ) as f:
+              for raw_line in f:
+                  source2_total += 1
+                  rule = parse_source_2(raw_line)
+                  if rule is None:
+                      continue
+                  source2_rules.append(rule)
+                  source2_valid += 1
+          print(
+              f"Source 2 total lines : {source2_total}"
+          )
+          print(
+              f"Source 2 valid rules : {source2_valid}"
+          )
+          # ======================================================
+          # 3. Merge
+          # ======================================================
+          parsed_rules = (
+              source1_rules +
+              source2_rules
+          )
+          print()
+          print(
+              f"Total parsed rules : {len(parsed_rules)}"
+          )
+          # ======================================================
+          # 4. Exact duplicate removal
+          # ======================================================
           unique_rules = []
           seen = set()
-
           for rule in parsed_rules:
-
               if rule in seen:
                   continue
-
               seen.add(rule)
               unique_rules.append(rule)
-
-
           print(
-              f"After exact dedup  : {len(unique_rules)}"
+              f"After exact dedup   : {len(unique_rules)}"
           )
-
-
           # ======================================================
-          # 3. Collect DOMAIN-SUFFIX rules
+          # 5. Collect DOMAIN-SUFFIX
           # ======================================================
-
           all_suffixes = {
               value
               for rule_type, value in unique_rules
               if rule_type == "DOMAIN-SUFFIX"
               and is_domain(value)
           }
-
-
           # ======================================================
-          # 4. Remove redundant DOMAIN-SUFFIX children
+          # 6. Remove redundant child suffixes
           # ======================================================
-          #
-          # Example:
-          #
-          # DOMAIN-SUFFIX,360.cn
-          # DOMAIN-SUFFIX,life.360.cn
-          #
-          # becomes:
-          #
-          # DOMAIN-SUFFIX,360.cn
-          #
-          # ======================================================
-
           surviving_suffixes = set()
-
-          # Shorter / broader domains first.
           for suffix in sorted(
               all_suffixes,
               key=lambda x: (x.count("."), x),
           ):
-
               if has_parent_suffix(
                   suffix,
                   surviving_suffixes,
               ):
                   continue
-
               surviving_suffixes.add(suffix)
-
-
           print()
           print(
-              f"DOMAIN-SUFFIX before : {len(all_suffixes)}"
+              f"DOMAIN-SUFFIX before : "
+              f"{len(all_suffixes)}"
           )
-
           print(
-              f"DOMAIN-SUFFIX after  : {len(surviving_suffixes)}"
+              f"DOMAIN-SUFFIX after  : "
+              f"{len(surviving_suffixes)}"
           )
-
-
           # ======================================================
-          # 5. Semantic cross-type dedup
+          # 7. Semantic cross-type dedup
           # ======================================================
           #
           # DOMAIN-SUFFIX covers:
           #
-          #   DOMAIN
-          #   DOMAIN-SET
-          #   more-specific DOMAIN-SUFFIX
+          # DOMAIN
+          # DOMAIN-SET
+          # child DOMAIN-SUFFIX
           #
-          # DOMAIN-KEYWORD NEVER participates.
-          #
-          # DOMAIN NEVER covers anything.
-          #
-          # DOMAIN-SET NEVER covers anything.
+          # DOMAIN-KEYWORD is always retained.
           #
           # ======================================================
-
           final_rules = []
-
           removed_domain = 0
           removed_domain_set = 0
           removed_suffix = 0
-
-
           for rule_type, value in unique_rules:
-
               # --------------------------------------------------
               # DOMAIN-SUFFIX
               # --------------------------------------------------
-
               if rule_type == "DOMAIN-SUFFIX":
-
                   if value not in surviving_suffixes:
                       removed_suffix += 1
                       continue
-
                   final_rules.append(
                       (rule_type, value)
                   )
-
                   continue
-
-
               # --------------------------------------------------
               # DOMAIN
               # --------------------------------------------------
-
               if rule_type == "DOMAIN":
-
                   if is_domain(value):
-
                       covered = any(
                           suffix_covers(
                               value,
@@ -540,26 +406,18 @@ jobs:
                           )
                           for suffix in surviving_suffixes
                       )
-
                       if covered:
                           removed_domain += 1
                           continue
-
                   final_rules.append(
                       (rule_type, value)
                   )
-
                   continue
-
-
               # --------------------------------------------------
               # DOMAIN-SET
               # --------------------------------------------------
-
               if rule_type == "DOMAIN-SET":
-
                   if is_domain(value):
-
                       covered = any(
                           suffix_covers(
                               value,
@@ -567,232 +425,153 @@ jobs:
                           )
                           for suffix in surviving_suffixes
                       )
-
                       if covered:
                           removed_domain_set += 1
                           continue
-
                   final_rules.append(
                       (rule_type, value)
                   )
-
                   continue
-
-
               # --------------------------------------------------
               # DOMAIN-KEYWORD
               # --------------------------------------------------
-              #
-              # ALWAYS KEEP.
-              #
-              # Example:
-              #
-              # DOMAIN-SUFFIX,360.cn
-              # DOMAIN-KEYWORD,360
-              #
-              # Both remain.
-              #
-              # --------------------------------------------------
-
               if rule_type == "DOMAIN-KEYWORD":
-
                   final_rules.append(
                       (rule_type, value)
                   )
-
                   continue
-
-
           # ======================================================
-          # 6. Stable sorting
+          # 8. Stable sorting
           # ======================================================
-
           TYPE_ORDER = {
               "DOMAIN": 0,
               "DOMAIN-SUFFIX": 1,
               "DOMAIN-KEYWORD": 2,
               "DOMAIN-SET": 3,
           }
-
-
           final_rules.sort(
               key=lambda rule: (
                   TYPE_ORDER[rule[0]],
                   rule[1],
               )
           )
-
-
           # ======================================================
-          # 7. Final exact duplicate safety
+          # 9. Final exact duplicate safety
           # ======================================================
-
           checked_rules = []
           final_seen = set()
-
           for rule in final_rules:
-
               if rule in final_seen:
                   continue
-
               final_seen.add(rule)
               checked_rules.append(rule)
-
-
           final_rules = checked_rules
-
-
           # ======================================================
-          # 8. Statistics
+          # 10. Statistics
           # ======================================================
-
           print()
           print("=" * 40)
           print("Deduplication statistics")
           print("=" * 40)
-
           print(
               f"Final rules        : {len(final_rules)}"
           )
-
           print(
               f"Removed DOMAIN     : {removed_domain}"
           )
-
           print(
               f"Removed DOMAIN-SET : {removed_domain_set}"
           )
-
           print(
               f"Removed SUFFIX     : {removed_suffix}"
           )
-
-
           # ======================================================
-          # 9. Generate Surge
+          # 11. Generate Surge
           # ======================================================
-
           surge_lines = [
-              f"# Auto merged Surge rules ({date.today().isoformat()})"
+              f"# Auto merged Surge rules "
+              f"({date.today().isoformat()})"
           ]
-
           for rule_type, value in final_rules:
-
               surge_lines.append(
                   f"{rule_type},{value}"
               )
-
-
           # ======================================================
-          # 10. Generate MosDNS
+          # 12. Generate MosDNS
           # ======================================================
-
           mosdns_lines = []
-
           for rule_type, value in final_rules:
-
               if rule_type == "DOMAIN":
                   mosdns_lines.append(
                       f"full:{value}"
                   )
-
               elif rule_type == "DOMAIN-SUFFIX":
                   mosdns_lines.append(
                       f"domain:{value}"
                   )
-
               elif rule_type == "DOMAIN-KEYWORD":
                   mosdns_lines.append(
                       f"keyword:{value}"
                   )
-
               elif rule_type == "DOMAIN-SET":
                   mosdns_lines.append(
                       f"full:{value}"
                   )
-
-
           # ======================================================
-          # 11. Generate Quantumult X
+          # 13. Generate Quantumult X
           # ======================================================
-
           qx_lines = []
-
           for rule_type, value in final_rules:
-
               if rule_type == "DOMAIN":
-
                   qx_lines.append(
                       f"host,{value},reject"
                   )
-
               elif rule_type == "DOMAIN-SUFFIX":
-
                   qx_lines.append(
                       f"host-suffix,{value},reject"
                   )
-
               elif rule_type == "DOMAIN-KEYWORD":
-
                   qx_lines.append(
                       f"host-keyword,{value},reject"
                   )
-
               elif rule_type == "DOMAIN-SET":
-
                   qx_lines.append(
                       f"host,{value},reject"
                   )
-
-
           # ======================================================
-          # 12. Atomic file write
+          # 14. Atomic write
           # ======================================================
-
           def atomic_write(path: Path, lines):
-
               tmp = path.with_suffix(
                   path.suffix + ".tmp"
               )
-
               data = "\n".join(lines) + "\n"
-
               tmp.write_text(
                   data,
                   encoding="utf-8",
                   newline="\n",
               )
-
               tmp.replace(path)
-
-
           atomic_write(
               OUTPUT_SURGE,
               surge_lines,
           )
-
           atomic_write(
               OUTPUT_MOSDNS,
               mosdns_lines,
           )
-
           atomic_write(
               OUTPUT_QX,
               qx_lines,
           )
-
-
           # ======================================================
-          # 13. Explicit coverage test
+          # 15. Explicit coverage test
           # ======================================================
-
           print()
           print("=" * 40)
           print("Coverage test")
           print("=" * 40)
-
           test_domain = "ad.life.360.cn"
-
           covering_suffixes = sorted(
               suffix
               for suffix in surviving_suffixes
@@ -801,55 +580,39 @@ jobs:
                   suffix,
               )
           )
-
           print(
               f"DOMAIN,{test_domain}"
           )
-
           if covering_suffixes:
-
-              print(
-                  "Covered by:"
-              )
-
+              print("Covered by:")
               for suffix in covering_suffixes:
                   print(
                       f"  DOMAIN-SUFFIX,{suffix}"
                   )
-
           else:
-
               print(
                   "No DOMAIN-SUFFIX coverage"
               )
-
-
           # ======================================================
-          # 14. Final output statistics
+          # 16. Final output statistics
           # ======================================================
-
           print()
           print("=" * 40)
           print("Generated files")
           print("=" * 40)
-
           print(
               f"{OUTPUT_SURGE}: "
               f"{len(surge_lines) - 1} rules"
           )
-
           print(
               f"{OUTPUT_MOSDNS}: "
               f"{len(mosdns_lines)} rules"
           )
-
           print(
               f"{OUTPUT_QX}: "
               f"{len(qx_lines)} rules"
           )
-
           PY
-
       # ==========================================================
       # 5. Validate Surge
       # ==========================================================
@@ -857,58 +620,43 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           python3 - <<'PY'
           from pathlib import Path
           import re
-
           path = Path("ads-latest.txt")
-
           if not path.exists():
               raise SystemExit(
                   "ads-latest.txt not found"
               )
-
-          # Python regex:
-          # use \s instead of POSIX [:space:].
           rule_re = re.compile(
               r"^(DOMAIN|DOMAIN-SUFFIX|DOMAIN-KEYWORD|DOMAIN-SET),"
               r"[^,\s]+$"
           )
-
           seen = set()
           count = 0
-
           for line_no, raw in enumerate(
               path.read_text(
                   encoding="utf-8"
               ).splitlines(),
               1,
           ):
-
               line = raw.strip()
-
               if not line:
                   continue
-
               if line.startswith("#"):
                   continue
-
               if not rule_re.fullmatch(line):
                   raise SystemExit(
                       f"Invalid Surge rule at line "
                       f"{line_no}: {line}"
                   )
-
               if line in seen:
                   raise SystemExit(
                       f"Duplicate Surge rule at line "
                       f"{line_no}: {line}"
                   )
-
               seen.add(line)
               count += 1
-
               if any(
                   ord(ch) > 127
                   for ch in line
@@ -917,17 +665,14 @@ jobs:
                       f"Non-ASCII character at line "
                       f"{line_no}: {line}"
                   )
-
           if count == 0:
               raise SystemExit(
                   "No Surge rules generated"
               )
-
           print(
               f"Surge validation OK: {count} rules"
           )
           PY
-
       # ==========================================================
       # 6. Validate MosDNS
       # ==========================================================
@@ -935,62 +680,48 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           python3 - <<'PY'
           from pathlib import Path
           import re
-
           path = Path("ads-mosdns.txt")
-
           if not path.exists():
               raise SystemExit(
                   "ads-mosdns.txt not found"
               )
-
           rule_re = re.compile(
               r"^(domain|full|keyword):\S+$"
           )
-
           seen = set()
           count = 0
-
           for line_no, raw in enumerate(
               path.read_text(
                   encoding="utf-8"
               ).splitlines(),
               1,
           ):
-
               line = raw.strip()
-
               if not line:
                   continue
-
               if not rule_re.fullmatch(line):
                   raise SystemExit(
                       f"Invalid MosDNS rule at line "
                       f"{line_no}: {line}"
                   )
-
               if line in seen:
                   raise SystemExit(
                       f"Duplicate MosDNS rule at line "
                       f"{line_no}: {line}"
                   )
-
               seen.add(line)
               count += 1
-
           if count == 0:
               raise SystemExit(
                   "No MosDNS rules generated"
               )
-
           print(
               f"MosDNS validation OK: {count} rules"
           )
           PY
-
       # ==========================================================
       # 7. Validate Quantumult X
       # ==========================================================
@@ -998,63 +729,49 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           python3 - <<'PY'
           from pathlib import Path
           import re
-
           path = Path("ads-qx.snippet")
-
           if not path.exists():
               raise SystemExit(
                   "ads-qx.snippet not found"
               )
-
           rule_re = re.compile(
               r"^host(-suffix|-keyword)?,"
               r"[^,\s]+,reject$"
           )
-
           seen = set()
           count = 0
-
           for line_no, raw in enumerate(
               path.read_text(
                   encoding="utf-8"
               ).splitlines(),
               1,
           ):
-
               line = raw.strip()
-
               if not line:
                   continue
-
               if not rule_re.fullmatch(line):
                   raise SystemExit(
                       f"Invalid QX rule at line "
                       f"{line_no}: {line}"
                   )
-
               if line in seen:
                   raise SystemExit(
                       f"Duplicate QX rule at line "
                       f"{line_no}: {line}"
                   )
-
               seen.add(line)
               count += 1
-
           if count == 0:
               raise SystemExit(
                   "No QX rules generated"
               )
-
           print(
               f"Quantumult X validation OK: {count} rules"
           )
           PY
-
       # ==========================================================
       # 8. Statistics
       # ==========================================================
@@ -1062,23 +779,18 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           echo "========================================"
           echo "Generated statistics"
           echo "========================================"
-
           echo
           echo "Surge:"
           grep -v '^#' ads-latest.txt | wc -l
-
           echo
           echo "MosDNS:"
           wc -l < ads-mosdns.txt
-
           echo
           echo "Quantumult X:"
           wc -l < ads-qx.snippet
-
           echo
           echo "Rule type statistics:"
           grep -v '^#' ads-latest.txt \
@@ -1086,7 +798,6 @@ jobs:
             | sort \
             | uniq -c \
             || true
-
       # ==========================================================
       # 9. Preview
       # ==========================================================
@@ -1094,27 +805,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           echo "========================================"
           echo "Surge preview"
           echo "========================================"
-
           head -n 20 ads-latest.txt
-
           echo
           echo "========================================"
           echo "MosDNS preview"
           echo "========================================"
-
           head -n 20 ads-mosdns.txt
-
           echo
           echo "========================================"
           echo "Quantumult X preview"
           echo "========================================"
-
           head -n 20 ads-qx.snippet
-
       # ==========================================================
       # 10. Cleanup
       # ==========================================================
@@ -1122,7 +826,6 @@ jobs:
         shell: bash
         run: |
           rm -rf .tmp
-
       # ==========================================================
       # 11. Commit and push only when changed
       # ==========================================================
@@ -1130,27 +833,20 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-
           git config user.name \
             "github-actions[bot]"
-
           git config user.email \
             "41898282+github-actions[bot]@users.noreply.github.com"
-
           git add \
             ads-latest.txt \
             ads-mosdns.txt \
             ads-qx.snippet
-
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
           fi
-
           echo "Changes detected:"
           git diff --cached --stat
-
           git commit \
             -m "chore: update ad rules"
-
           git push
