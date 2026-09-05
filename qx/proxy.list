@@ -1,16 +1,24 @@
-# o
+#18漫画
 HOST-SUFFIX,colamanhua.com,proxy
 HOST-SUFFIX,picacomic.com,proxy
 HOST-SUFFIX,jmdanjonproxy.vip,proxy
 HOST-SUFFIX,cdnhjk.net,proxy
-HOST-SUFFIX,githubcopilot.com,proxy
 HOST-SUFFIX,nnhanman.com,proxy
+
+#18
 HOST-SUFFIX,18comic.vip,proxy
 HOST-SUFFIX,tju.7pzzv.us,proxy
 HOST-SUFFIX,tu.2qq42.us,proxy
 HOST-SUFFIX,tu.ymawv.la,proxy
 HOST-SUFFIX,ttou.j03og.app,proxy
+HOST-SUFFIX,tu.j03og.cc,proxy
+HOST-SUFFIX,tu.djhdhs.us,proxy
+HOST-SUFFIX,tu.ewrewej.la,proxy
+HOST-SUFFIX,jdbstatic.com,proxy
 HOST-SUFFIX,missav.ws,proxy
+
+
+HOST-SUFFIX,githubcopilot.com,proxy
 HOST-SUFFIX,strpst.com,proxy
 HOST-SUFFIX,fourhoi.com,proxy
 HOST-SUFFIX,sesemanhua.com,proxy
@@ -21,7 +29,6 @@ HOST-SUFFIX,docker.com,proxy
 HOST-SUFFIX,docker.io,proxy
 HOST-SUFFIX,ghcr.io,proxy
 HOST-SUFFIX,mikanani.me,proxy
-HOST-SUFFIX,jdbstatic.com,proxy
 HOST-SUFFIX,infuse-sync.s3-accelerate.amazonaws.com,proxy
 HOST-SUFFIX,trakt.tv,proxy
 
