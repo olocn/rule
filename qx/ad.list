@@ -1,3 +1,8 @@
+#可疑
+HOST-SUFFIX,qwertyuioplkjhg.vip,reject
+HOST-SUFFIX,windy-78.site,reject
+
+
 HOST-SUFFIX,www.googleadservices.com,reject
 HOST-SUFFIX,heima911.com,reject
 HOST-SUFFIX,mobsurl.com,reject
@@ -142,7 +147,7 @@ HOST-SUFFIX,mall.bilibili.com,reject
 HOST-SUFFIX,broadcast.chat.bilibili.com,reject
 #upos-sz-mirrorcos.bilivideo.com
 HOST-SUFFIX,biligame.com,reject
-HOST-SUFFIX,data.bilibili.com,reject
+HOST-SUFFIX,data.bilibili.com⁠,reject
 HOST-SUFFIX,cm.bilibili.com,reject
 HOST-SUFFIX,p2p.bilibili.com,reject
 HOST-SUFFIX,pcdn.bilibili.com,reject
@@ -438,4 +443,4 @@ HOST-SUFFIX,app-analytics-services.com,reject
 HOST-SUFFIX,js96110.com.cn,reject
 HOST-SUFFIX,mask.icloud.com,reject
 
-HOST-SUFFIX,fourier.taobao.com,reject
+HOST-SUFFIX,fourier.taobao.com⁠,reject
