@@ -15,7 +15,8 @@ HOST-SUFFIX,apihw.yazhijian.com,reject
 HOST-SUFFIX,yeezyhair.com,reject
 HOST-SUFFIX,dutils.com,reject
 HOST-SUFFIX,openinstall.com,reject
-
+HOST-SUFFIX,bugly.qq.com,reject
+HOST-SUFFIX,sensorsdata.cn,reject
 
 HOST-SUFFIX,openinstall.io,reject
 HOST-SUFFIX,shangkmo.com,reject
