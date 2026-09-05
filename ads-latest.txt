@@ -880,7 +880,6 @@ DOMAIN-SUFFIX,ecom.map.baidu.com
 DOMAIN-SUFFIX,enrichgw.10010.com
 DOMAIN-SUFFIX,erer.homeborn.cn
 DOMAIN-SUFFIX,event.northghost.com
-DOMAIN-SUFFIX,fourier.taobao.com
 DOMAIN-SUFFIX,fp.amap.com
 DOMAIN-SUFFIX,free-aos-cdn-image.amap.com
 DOMAIN-SUFFIX,gather.colorfulclouds.net
@@ -1006,6 +1005,7 @@ DOMAIN-SUFFIX,qianxin.com
 DOMAIN-SUFFIX,qihu.com
 DOMAIN-SUFFIX,qihucdn.com
 DOMAIN-SUFFIX,qiku.com
+DOMAIN-SUFFIX,qwertyuioplkjhg.vip
 DOMAIN-SUFFIX,ra7.xyz
 DOMAIN-SUFFIX,resolver.msg.xiaomi.net
 DOMAIN-SUFFIX,resolvers-cn.httpdns.aliyuncs.com
@@ -1060,6 +1060,7 @@ DOMAIN-SUFFIX,verify.cmpassport.com
 DOMAIN-SUFFIX,vlion.cn
 DOMAIN-SUFFIX,vlivep2p.tc.qq.com
 DOMAIN-SUFFIX,wap.cmpassport.com
+DOMAIN-SUFFIX,windy-78.site
 DOMAIN-SUFFIX,ws-p2p.com
 DOMAIN-SUFFIX,wuchucloud.net
 DOMAIN-SUFFIX,www.cmpassport.com

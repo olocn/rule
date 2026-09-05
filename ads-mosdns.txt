@@ -879,7 +879,6 @@ domain:ecom.map.baidu.com
 domain:enrichgw.10010.com
 domain:erer.homeborn.cn
 domain:event.northghost.com
-domain:fourier.taobao.com
 domain:fp.amap.com
 domain:free-aos-cdn-image.amap.com
 domain:gather.colorfulclouds.net
@@ -1005,6 +1004,7 @@ domain:qianxin.com
 domain:qihu.com
 domain:qihucdn.com
 domain:qiku.com
+domain:qwertyuioplkjhg.vip
 domain:ra7.xyz
 domain:resolver.msg.xiaomi.net
 domain:resolvers-cn.httpdns.aliyuncs.com
@@ -1059,6 +1059,7 @@ domain:verify.cmpassport.com
 domain:vlion.cn
 domain:vlivep2p.tc.qq.com
 domain:wap.cmpassport.com
+domain:windy-78.site
 domain:ws-p2p.com
 domain:wuchucloud.net
 domain:www.cmpassport.com
