@@ -4,6 +4,11 @@ DOMAIN-SUFFIX,picacomic.com
 DOMAIN-SUFFIX,jmdanjonproxy.vip
 DOMAIN-SUFFIX,cdnhjk.net
 DOMAIN-SUFFIX,nnhanman.com
+DOMAIN-SUFFIX,jjmhw8.top
+DOMAIN-SUFFIX,gh-proxy.org
+DOMAIN-SUFFIX,mxs13.cc
+DOMAIN-SUFFIX,mangafunb.fun
+DOMAIN-SUFFIX,copy3000.com
 
 #18
 DOMAIN-SUFFIX,18comic.vip
