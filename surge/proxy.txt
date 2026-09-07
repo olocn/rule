@@ -25,7 +25,7 @@ DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,rc-backup.com
 DOMAIN-SUFFIX,quantumult.app
 DOMAIN-SUFFIX,readdle.com
-DOMAIN-SUFFIX,facebook.co
+DOMAIN-SUFFIX,facebook.com
 DOMAIN-SUFFIX,re0.me
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,strpst.com
