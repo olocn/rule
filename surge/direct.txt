@@ -20,6 +20,11 @@ DOMAIN-SUFFIX,vgjump.com
 DOMAIN-SUFFIX,wxgateway.com
 DOMAIN-SUFFIX,unicompayment.com
 
+DOMAIN-SUFFIX,jzxx.vip
+DOMAIN-SUFFIX,midea.com
+DOMAIN-SUFFIX,mideav.com
+DOMAIN-SUFFIX,zzlcjj.xyz
+
 DOMAIN-SUFFIX,dxy.net
 DOMAIN-SUFFIX,yinhai.com
 DOMAIN-SUFFIX,yiigle.com
