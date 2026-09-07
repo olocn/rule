@@ -134,7 +134,6 @@ full:adx-ad.smart-tv.cn
 full:adx-api.jinmo.tech
 full:adx-drcn.op.dbankcloud.cn
 full:adx-open-service.youku.com
-full:adx-strategy-api-cn.statisticslinks.com
 full:adx.ads.heytapmobi.com
 full:adx.ads.oppomobile.com
 full:adx.appsdk.com.cn
@@ -1030,6 +1029,7 @@ domain:sogaha.cn
 domain:sogou.com
 domain:sogoucdn.com
 domain:starplucker.cyapi.cn
+domain:statisticslinks.com
 domain:stun.douyucdn.cn
 domain:stun.ekiga.net
 domain:stun.hitv.com

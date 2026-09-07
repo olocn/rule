@@ -135,7 +135,6 @@ DOMAIN,adx-ad.smart-tv.cn
 DOMAIN,adx-api.jinmo.tech
 DOMAIN,adx-drcn.op.dbankcloud.cn
 DOMAIN,adx-open-service.youku.com
-DOMAIN,adx-strategy-api-cn.statisticslinks.com
 DOMAIN,adx.ads.heytapmobi.com
 DOMAIN,adx.ads.oppomobile.com
 DOMAIN,adx.appsdk.com.cn
@@ -1031,6 +1030,7 @@ DOMAIN-SUFFIX,sogaha.cn
 DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
 DOMAIN-SUFFIX,starplucker.cyapi.cn
+DOMAIN-SUFFIX,statisticslinks.com
 DOMAIN-SUFFIX,stun.douyucdn.cn
 DOMAIN-SUFFIX,stun.ekiga.net
 DOMAIN-SUFFIX,stun.hitv.com
