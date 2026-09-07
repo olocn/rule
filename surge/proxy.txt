@@ -21,6 +21,7 @@ DOMAIN-SUFFIX,tu.djhdhs.us
 DOMAIN-SUFFIX,tu.ewrewej.la
 DOMAIN-SUFFIX,jdbstatic.com
 DOMAIN-SUFFIX,missav.ws
+DOMAIN-SUFFIX,javbus22.com
 
 DOMAIN-SUFFIX,rc-backup.com
 DOMAIN-SUFFIX,quantumult.app
