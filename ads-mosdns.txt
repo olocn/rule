@@ -502,7 +502,6 @@ full:open.e.kuaishou.com
 full:open.kuaishouzt.com
 full:open.kwaizt.com
 full:open.snssdk.com
-full:openadapi.fancydsp.com
 full:optimus-ads.amap.com
 full:orbit.jd.com
 full:oss.cdn.aiclk.com
@@ -877,6 +876,7 @@ domain:ecom.map.baidu.com
 domain:enrichgw.10010.com
 domain:erer.homeborn.cn
 domain:event.northghost.com
+domain:fancydsp.com
 domain:fp.amap.com
 domain:free-aos-cdn-image.amap.com
 domain:gather.colorfulclouds.net
