@@ -22,7 +22,10 @@ DOMAIN-SUFFIX,tu.ewrewej.la
 DOMAIN-SUFFIX,jdbstatic.com
 DOMAIN-SUFFIX,missav.ws
 
-
+DOMAIN-SUFFIX,rc-backup.com
+DOMAIN-SUFFIX,quantumult.app
+DOMAIN-SUFFIX,readdle.com
+DOMAIN-SUFFIX,facebook.co
 DOMAIN-SUFFIX,re0.me
 DOMAIN-SUFFIX,githubcopilot.com
 DOMAIN-SUFFIX,strpst.com
