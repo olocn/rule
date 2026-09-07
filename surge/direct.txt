@@ -16,6 +16,7 @@ DOMAIN-SUFFIX,tencentcs.com
 DOMAIN-SUFFIX,myhuaweicloud.com
 DOMAIN-SUFFIX,kunlunjyk.com
 DOMAIN-SUFFIX,zztfly.com
+DOMAIN-SUFFIX,vgjump.com
 
 DOMAIN-SUFFIX,dxy.net
 DOMAIN-SUFFIX,yinhai.com
