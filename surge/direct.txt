@@ -12,6 +12,7 @@ DOMAIN-SUFFIX,youzanyun.com
 DOMAIN-SUFFIX,tmallyc.com
 DOMAIN-SUFFIX,xhslink.com
 DOMAIN-SUFFIX,yunxish.com
+DOMAIN-SUFFIX,tencentcs.com
 
 DOMAIN-SUFFIX,dxy.net
 DOMAIN-SUFFIX,yinhai.com
