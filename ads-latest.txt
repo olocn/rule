@@ -263,7 +263,6 @@ DOMAIN,click.oneplus.cn
 DOMAIN,click4.chinaliftoff.io
 DOMAIN,clog.miguvideo.com
 DOMAIN,cloooud.com
-DOMAIN,cnzz.com
 DOMAIN,collect.kugou.com
 DOMAIN,commdata.v.qq.com
 DOMAIN,config.chsmarttv.com
@@ -850,6 +849,7 @@ DOMAIN-SUFFIX,chnsrv.com
 DOMAIN-SUFFIX,clarity.ms
 DOMAIN-SUFFIX,click.pinduoduo.com
 DOMAIN-SUFFIX,cm.bilibili.com
+DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,config.cmpassport.com
 DOMAIN-SUFFIX,crash.pinduoduo.com
 DOMAIN-SUFFIX,data-qvs.iqiyi.com

@@ -262,7 +262,6 @@ full:click.oneplus.cn
 full:click4.chinaliftoff.io
 full:clog.miguvideo.com
 full:cloooud.com
-full:cnzz.com
 full:collect.kugou.com
 full:commdata.v.qq.com
 full:config.chsmarttv.com
@@ -849,6 +848,7 @@ domain:chnsrv.com
 domain:clarity.ms
 domain:click.pinduoduo.com
 domain:cm.bilibili.com
+domain:cnzz.com
 domain:config.cmpassport.com
 domain:crash.pinduoduo.com
 domain:data-qvs.iqiyi.com
