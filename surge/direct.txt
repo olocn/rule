@@ -2,6 +2,16 @@ DOMAIN-SUFFIX,volces.com
 DOMAIN-SUFFIX,mijia.tech
 DOMAIN-SUFFIX,mi.com
 DOMAIN-SUFFIX,xiaomi.com
+DOMAIN-SUFFIX,faw-vw.com
+DOMAIN-SUFFIX,iotbull.com
+DOMAIN-SUFFIX,ys7.com
+DOMAIN-SUFFIX,vmallres.com
+DOMAIN-SUFFIX,benlailife.com
+DOMAIN-SUFFIX,pinduoduo.net
+DOMAIN-SUFFIX,youzanyun.com
+DOMAIN-SUFFIX,tmallyc.com
+DOMAIN-SUFFIX,xhslink.com
+DOMAIN-SUFFIX,yunxish.com
 
 DOMAIN-SUFFIX,dxy.net
 DOMAIN-SUFFIX,yinhai.com
