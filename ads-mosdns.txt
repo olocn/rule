@@ -862,6 +862,7 @@ domain:baomitu.com
 domain:biligame.com
 domain:blackhole.m.jd.com
 domain:bossjs.rosfky.cn
+domain:branch.io
 domain:braze.eu
 domain:bridgeoos.com
 domain:broadcast.chat.bilibili.com

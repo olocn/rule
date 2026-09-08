@@ -863,6 +863,7 @@ DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,bossjs.rosfky.cn
+DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,bridgeoos.com
 DOMAIN-SUFFIX,broadcast.chat.bilibili.com
