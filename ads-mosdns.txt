@@ -1034,6 +1034,7 @@ domain:stun.douyucdn.cn
 domain:stun.ekiga.net
 domain:stun.hitv.com
 domain:stun1.douyucdn.cn
+domain:suishouzj.com
 domain:szbdyd.com
 domain:t-log.pinduoduo.com
 domain:t44r60.com

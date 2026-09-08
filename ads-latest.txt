@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-09-07)
+# Auto merged Surge rules (2026-09-08)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -1035,6 +1035,7 @@ DOMAIN-SUFFIX,stun.douyucdn.cn
 DOMAIN-SUFFIX,stun.ekiga.net
 DOMAIN-SUFFIX,stun.hitv.com
 DOMAIN-SUFFIX,stun1.douyucdn.cn
+DOMAIN-SUFFIX,suishouzj.com
 DOMAIN-SUFFIX,szbdyd.com
 DOMAIN-SUFFIX,t-log.pinduoduo.com
 DOMAIN-SUFFIX,t44r60.com
