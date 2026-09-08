@@ -1,4 +1,8 @@
 DOMAIN-SUFFIX,gravity-engine.com
+DOMAIN-SUFFIX,mi-fds.com
+DOMAIN-SUFFIX,shazam.com
+DOMAIN-SUFFIX,feizhu.com
+DOMAIN-SUFFIX,jdcloud-oss.com
 DOMAIN-SUFFIX,wqop2018.com
 DOMAIN-SUFFIX,aslk2018.com
 DOMAIN-SUFFIX,devourad.com
