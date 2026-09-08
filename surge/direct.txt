@@ -1,5 +1,7 @@
 DOMAIN-SUFFIX,gravity-engine.com
 DOMAIN-SUFFIX,fcbox.com
+DOMAIN-SUFFIX,founderyt.com
+DOMAIN-SUFFIX,myfenghua.com
 DOMAIN-SUFFIX,mi-fds.com
 DOMAIN-SUFFIX,shazam.com
 DOMAIN-SUFFIX,feizhu.com
