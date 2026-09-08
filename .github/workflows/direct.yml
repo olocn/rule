@@ -1,0 +1,49 @@
+name: Convert Surge Rule to Quantumult X
+
+on:
+  schedule:
+    - cron: '0 4 * * *' # 每天 UTC 04:00 自动更新
+  workflow_dispatch:      # 支持手动触发
+
+jobs:
+  convert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          ref: master # 针对 master 分支拉取与推送
+
+      - name: Fetch and Convert Rules
+        run: |
+          mkdir -p qx
+          # 下载原始 Surge 规则文件
+          curl -sSL "https://raw.githubusercontent.com/Loyalsoldier/surge-rules/release/ruleset/direct.txt" -o raw_direct.txt
+          
+          # 过滤注释、空行与 IP-CIDR6，并完成语法转换
+          sed -E \
+            -e 's/^[[:space:]]*//; s/[[:space:]]*$//' \
+            -e '/^(#|\/\/|!|$)/d' \
+            -e '/^IP-CIDR6/d' \
+            -e 's/^DOMAIN-SUFFIX,([^,]+).*/HOST-SUFFIX,\1,DIRECT/' \
+            -e 's/^DOMAIN-KEYWORD,([^,]+).*/HOST-KEYWORD,\1,DIRECT/' \
+            -e 's/^DOMAIN,([^,]+).*/HOST,\1,DIRECT/' \
+            -e 's/^IP-CIDR,([^,]+)(,no-resolve)?/IP-CIDR,\1,DIRECT/' \
+            raw_direct.txt > qx/direct.txt
+
+          rm -f raw_direct.txt
+
+      - name: Commit and Push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add qx/direct.txt
+          if git diff --staged --quiet; then
+            echo "No changes detected."
+          else
+            git commit -m "Auto-update qx/direct.txt"
+            git push origin master
+          fi
