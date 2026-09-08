@@ -2,12 +2,12 @@ name: "RealIP"
 description: "真实ip"
 author: "olo"
 real_ip_domains:
-  - '*.weixin.qq.com'
-  - '*.cn'
-  - '*.plex.direct'
-  - captive.apple.com
-  - "time.*.com"
-  - "time.*.apple.com"
-  - "*.pool.ntp.org"
-  - tu.duoduocdn.com
-  - "*.bilivideo.com"
+- '*.weixin.qq.com'
+- '*.cn'
+- '*.plex.direct'
+- captive.apple.com
+- "time.*.com"
+- "time.*.apple.com"
+- "*.pool.ntp.org"
+- tu.duoduocdn.com
+- "*.bilivideo.com"
