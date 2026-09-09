@@ -105024,6 +105024,7 @@ HOST-SUFFIX,yuano.cc,DIRECT
 HOST-SUFFIX,yuanpanguoji.com,DIRECT
 HOST-SUFFIX,yuanqiao.net,DIRECT
 HOST-SUFFIX,yuanqiao.pw,DIRECT
+HOST-SUFFIX,yuanqidesk.com,DIRECT
 HOST-SUFFIX,yuanqilt.com,DIRECT
 HOST-SUFFIX,yuanqingsh.com,DIRECT
 HOST-SUFFIX,yuanqisenlin.com,DIRECT
