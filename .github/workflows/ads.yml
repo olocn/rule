@@ -36,6 +36,7 @@ jobs:
         run: |
           set -euo pipefail
           mkdir -p .tmp
+          mkdir -p qx
           echo "Python:"
           python3 --version
           echo "Curl:"
@@ -93,6 +94,9 @@ jobs:
           OUTPUT_SURGE = Path("ads-latest.txt")
           OUTPUT_MOSDNS = Path("ads-mosdns.txt")
           OUTPUT_QX = Path("ads-qx.snippet")
+          # New Mihomo outputs
+          OUTPUT_MIHOMO = Path("qx/ads-mihomo.yaml")
+          OUTPUT_MIHOMO_DOMAIN = Path(".tmp/ads-mihomo-domain.txt")
           VALID_TYPES = {
               "DOMAIN",
               "DOMAIN-SUFFIX",
@@ -174,20 +178,6 @@ jobs:
           # ======================================================
           # Parse Source 1
           # ======================================================
-          #
-          # Source 1 is a plain domain list.
-          #
-          # example:
-          #
-          # example.com
-          # ad.example.com
-          #
-          # becomes:
-          #
-          # DOMAIN-SUFFIX,example.com
-          # DOMAIN-SUFFIX,ad.example.com
-          #
-          # ======================================================
           def parse_source_1(line: str):
               line = clean_text(line)
               if not line:
@@ -227,7 +217,10 @@ jobs:
           # ======================================================
           # DOMAIN-SUFFIX coverage
           # ======================================================
-          def suffix_covers(domain: str, suffix: str) -> bool:
+          def suffix_covers(
+              domain: str,
+              suffix: str,
+          ) -> bool:
               if not is_domain(domain):
                   return False
               if not is_domain(suffix):
@@ -367,16 +360,6 @@ jobs:
           )
           # ======================================================
           # 7. Semantic cross-type dedup
-          # ======================================================
-          #
-          # DOMAIN-SUFFIX covers:
-          #
-          # DOMAIN
-          # DOMAIN-SET
-          # child DOMAIN-SUFFIX
-          #
-          # DOMAIN-KEYWORD is always retained.
-          #
           # ======================================================
           final_rules = []
           removed_domain = 0
@@ -539,9 +522,78 @@ jobs:
                       f"host,{value},reject"
                   )
           # ======================================================
-          # 14. Atomic write
+          # 14. Generate Mihomo YAML
           # ======================================================
-          def atomic_write(path: Path, lines):
+          mihomo_lines = [
+              "# Auto merged Mihomo rules",
+              f"# Generated: {date.today().isoformat()}",
+              "# behavior: classical",
+              "payload:",
+          ]
+          for rule_type, value in final_rules:
+              mihomo_lines.append(
+                  f"  - '{rule_type},{value}'"
+              )
+          # ======================================================
+          # 15. Generate Mihomo MRS source
+          # ======================================================
+          #
+          # MRS domain behavior:
+          #
+          # DOMAIN:
+          #     example.com
+          #
+          # DOMAIN-SUFFIX:
+          #     +.example.com
+          #
+          # DOMAIN-SET:
+          #     exact domain
+          #
+          # DOMAIN-KEYWORD:
+          #     cannot be represented by domain MRS
+          #
+          mrs_lines = []
+          mrs_keyword_count = 0
+          for rule_type, value in final_rules:
+              if rule_type == "DOMAIN":
+                  mrs_lines.append(
+                      value
+                  )
+              elif rule_type == "DOMAIN-SUFFIX":
+                  mrs_lines.append(
+                      f"+.{value}"
+                  )
+              elif rule_type == "DOMAIN-SET":
+                  mrs_lines.append(
+                      value
+                  )
+              elif rule_type == "DOMAIN-KEYWORD":
+                  mrs_keyword_count += 1
+          # Exact duplicate removal
+          mrs_lines = sorted(
+              set(mrs_lines)
+          )
+          print()
+          print("=" * 40)
+          print("Mihomo MRS preparation")
+          print("=" * 40)
+          print(
+              f"MRS domain rules     : {len(mrs_lines)}"
+          )
+          print(
+              f"MRS skipped keywords : {mrs_keyword_count}"
+          )
+          # ======================================================
+          # 16. Atomic write
+          # ======================================================
+          def atomic_write(
+              path: Path,
+              lines,
+          ):
+              path.parent.mkdir(
+                  parents=True,
+                  exist_ok=True,
+              )
               tmp = path.with_suffix(
                   path.suffix + ".tmp"
               )
@@ -564,8 +616,16 @@ jobs:
               OUTPUT_QX,
               qx_lines,
           )
+          atomic_write(
+              OUTPUT_MIHOMO,
+              mihomo_lines,
+          )
+          atomic_write(
+              OUTPUT_MIHOMO_DOMAIN,
+              mrs_lines,
+          )
           # ======================================================
-          # 15. Explicit coverage test
+          # 17. Explicit coverage test
           # ======================================================
           print()
           print("=" * 40)
@@ -594,7 +654,7 @@ jobs:
                   "No DOMAIN-SUFFIX coverage"
               )
           # ======================================================
-          # 16. Final output statistics
+          # 18. Final output statistics
           # ======================================================
           print()
           print("=" * 40)
@@ -612,9 +672,86 @@ jobs:
               f"{OUTPUT_QX}: "
               f"{len(qx_lines)} rules"
           )
+          print(
+              f"{OUTPUT_MIHOMO}: "
+              f"{len(mihomo_lines) - 4} rules"
+          )
+          print(
+              f"MRS source: "
+              f"{len(mrs_lines)} domain rules"
+          )
           PY
       # ==========================================================
-      # 5. Validate Surge
+      # 5. Install Mihomo
+      # ==========================================================
+      - name: Install Mihomo
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "========================================"
+          echo "Installing Mihomo"
+          echo "========================================"
+          MIHOMO_URL="$(
+            curl -fsSL \
+              --retry 5 \
+              --retry-delay 2 \
+              --retry-all-errors \
+              "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest" \
+            | jq -r '
+                .assets[]
+                | select(
+                    .name
+                    | test("linux-amd64-compatible.*\\.gz$")
+                  )
+                | .browser_download_url
+              ' \
+            | head -n 1
+          )"
+          if [ -z "$MIHOMO_URL" ] || [ "$MIHOMO_URL" = "null" ]; then
+            echo "Unable to find Mihomo linux-amd64-compatible release."
+            exit 1
+          fi
+          echo "Mihomo URL:"
+          echo "$MIHOMO_URL"
+          curl -fL \
+            --retry 5 \
+            --retry-delay 2 \
+            --retry-all-errors \
+            --connect-timeout 15 \
+            --max-time 180 \
+            "$MIHOMO_URL" \
+            -o .tmp/mihomo.gz
+          gzip -dc \
+            .tmp/mihomo.gz \
+            > .tmp/mihomo
+          chmod +x .tmp/mihomo
+          echo
+          .tmp/mihomo -v
+      # ==========================================================
+      # 6. Compile Mihomo MRS
+      # ==========================================================
+      - name: Compile Mihomo MRS
+        shell: bash
+        run: |
+          set -euo pipefail
+          echo "========================================"
+          echo "Compile Mihomo MRS"
+          echo "========================================"
+          .tmp/mihomo \
+            convert-ruleset \
+            domain \
+            text \
+            .tmp/ads-mihomo-domain.txt \
+            qx/ads-mihomo.mrs
+          test -s qx/ads-mihomo.mrs
+          echo
+          echo "MRS generated:"
+          ls -lh qx/ads-mihomo.mrs
+          echo
+          echo "MRS SHA256:"
+          sha256sum qx/ads-mihomo.mrs
+      # ==========================================================
+      # 7. Validate Surge
       # ==========================================================
       - name: Validate Surge
         shell: bash
@@ -674,7 +811,7 @@ jobs:
           )
           PY
       # ==========================================================
-      # 6. Validate MosDNS
+      # 8. Validate MosDNS
       # ==========================================================
       - name: Validate MosDNS
         shell: bash
@@ -723,7 +860,7 @@ jobs:
           )
           PY
       # ==========================================================
-      # 7. Validate Quantumult X
+      # 9. Validate Quantumult X
       # ==========================================================
       - name: Validate Quantumult X
         shell: bash
@@ -773,7 +910,71 @@ jobs:
           )
           PY
       # ==========================================================
-      # 8. Statistics
+      # 10. Validate Mihomo YAML
+      # ==========================================================
+      - name: Validate Mihomo YAML
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          path = Path("qx/ads-mihomo.yaml")
+          if not path.exists():
+              raise SystemExit(
+                  "qx/ads-mihomo.yaml not found"
+              )
+          lines = path.read_text(
+              encoding="utf-8"
+          ).splitlines()
+          if "payload:" not in lines:
+              raise SystemExit(
+                  "Mihomo YAML missing payload"
+              )
+          rules = [
+              line
+              for line in lines
+              if line.startswith("  - '")
+          ]
+          if not rules:
+              raise SystemExit(
+                  "No Mihomo rules generated"
+              )
+          seen = set()
+          for line_no, line in enumerate(
+              lines,
+              1,
+          ):
+              if not line.startswith("  - '"):
+                  continue
+              if not line.endswith("'"):
+                  raise SystemExit(
+                      f"Invalid Mihomo YAML "
+                      f"at line {line_no}: {line}"
+                  )
+              rule = line[5:-1]
+              if rule in seen:
+                  raise SystemExit(
+                      f"Duplicate Mihomo rule "
+                      f"at line {line_no}: {rule}"
+                  )
+              seen.add(rule)
+          print(
+              f"Mihomo YAML validation OK: "
+              f"{len(rules)} rules"
+          )
+          PY
+      # ==========================================================
+      # 11. Validate MRS
+      # ==========================================================
+      - name: Validate MRS
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s qx/ads-mihomo.mrs
+          echo "Mihomo MRS validation OK:"
+          ls -lh qx/ads-mihomo.mrs
+      # ==========================================================
+      # 12. Statistics
       # ==========================================================
       - name: Show statistics
         shell: bash
@@ -792,6 +993,15 @@ jobs:
           echo "Quantumult X:"
           wc -l < ads-qx.snippet
           echo
+          echo "Mihomo YAML:"
+          grep '^  - ' qx/ads-mihomo.yaml | wc -l
+          echo
+          echo "Mihomo MRS:"
+          ls -lh qx/ads-mihomo.mrs
+          echo
+          echo "MRS SHA256:"
+          sha256sum qx/ads-mihomo.mrs
+          echo
           echo "Rule type statistics:"
           grep -v '^#' ads-latest.txt \
             | cut -d',' -f1 \
@@ -799,7 +1009,7 @@ jobs:
             | uniq -c \
             || true
       # ==========================================================
-      # 9. Preview
+      # 13. Preview
       # ==========================================================
       - name: Preview
         shell: bash
@@ -819,15 +1029,25 @@ jobs:
           echo "Quantumult X preview"
           echo "========================================"
           head -n 20 ads-qx.snippet
+          echo
+          echo "========================================"
+          echo "Mihomo YAML preview"
+          echo "========================================"
+          head -n 20 qx/ads-mihomo.yaml
+          echo
+          echo "========================================"
+          echo "Mihomo MRS"
+          echo "========================================"
+          ls -lh qx/ads-mihomo.mrs
       # ==========================================================
-      # 10. Cleanup
+      # 14. Cleanup
       # ==========================================================
       - name: Cleanup
         shell: bash
         run: |
           rm -rf .tmp
       # ==========================================================
-      # 11. Commit and push only when changed
+      # 15. Commit and push only when changed
       # ==========================================================
       - name: Commit and push
         shell: bash
@@ -840,7 +1060,9 @@ jobs:
           git add \
             ads-latest.txt \
             ads-mosdns.txt \
-            ads-qx.snippet
+            ads-qx.snippet \
+            qx/ads-mihomo.yaml \
+            qx/ads-mihomo.mrs
           if git diff --cached --quiet; then
             echo "No changes detected."
             exit 0
