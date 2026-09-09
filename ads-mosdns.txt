@@ -31,7 +31,6 @@ full:ad.shunchangzhixing.com
 full:ad.tencentmusic.com
 full:ad.toutiao.com
 full:ad.v3mh.com
-full:ad.weibo.com
 full:ad.winrar.com.cn
 full:ad.ximalaya.com
 full:ad.xunkids.com
@@ -57,8 +56,10 @@ full:adimg.uve.weibo.com
 full:adjust.cn
 full:adjust.com
 full:adlink-api.huan.tv
+full:adlog.vivo.com.cn
 full:adm.funshion.com
 full:admarketing.yahoo.net
+full:adreq.vivo.com.cn
 full:ads-api-o.api.leiniao.com
 full:ads-api.tiktok.com
 full:ads-api.twitter.com
@@ -155,7 +156,9 @@ full:adx.ads.oppomobile.com
 full:adx.appsdk.com.cn
 full:adx.tuia.cn
 full:adxlog-adnet.vivo.com.cn
+full:adxlog.vivo.com.cn
 full:adxserver.ad.cmvideo.cn
+full:adxstatic.vivo.com.cn
 full:aegis.qq.com
 full:aem.dentsuchina.cn
 full:afs.googlesyndication.com
@@ -242,6 +245,7 @@ full:bingads.microsoft.com
 full:biz.weibo.com
 full:books-analytics-events.apple.com
 full:bootpreload.uve.weibo.com
+full:brandadsstatic.vivo.com.cn
 full:browser.events.data.msn.cn
 full:browser.events.data.msn.com
 full:browsercfg-drcn.cloud.dbankcloud.cn
@@ -306,6 +310,7 @@ full:download.changhong.upgrade2.huan.tv
 full:downloadxml.changhong.upgrade2.huan.tv
 full:dsp-x.jd.com
 full:dsp.fcbox.com
+full:dsplog-adnet.vivo.com.cn
 full:dualstack-logs.amap.com
 full:dxp.baidu.com
 full:e.ad.xiaomi.com
@@ -383,7 +388,6 @@ full:iadcontent.apple.com
 full:iadctest.qwapi.com
 full:iadmoo.apple.com
 full:iadmusicmat.music.126.net
-full:iadworkbench.apple.com
 full:ifacelog.iqiyi.com
 full:ifs.tanx.com
 full:ii.gdt.qq.com
@@ -586,7 +590,7 @@ full:rtb.adxsenmeng.com
 full:rtb.voiceads.cn
 full:s8t.teads.tv
 full:saad.ms.zhangyue.net
-full:safebrowsing.urlsec.gg.com
+full:safebrowsing.urlsec.qq.com
 full:samsung-com.112.2o7.net
 full:samsungads.com
 full:scs.openspeech.cn
@@ -697,6 +701,7 @@ full:track.uc.cn
 full:tracker-prd.aldi.com.cn
 full:tracker.ai.xiaomi.com
 full:tracker.gitee.com
+full:tracking-adnet.vivo.com.cn
 full:tracking.miui.com
 full:tracking.rus.miui.com
 full:tuiguang.meitu.com
@@ -1125,4 +1130,3 @@ keyword:-ad.sm.cn
 keyword:-ad.video.yximgs.com
 keyword:-ad.wtzw.com
 keyword:-be-pack-sign.pglstatp-toutiao.com
-keyword:-normal.zijieapi.com
