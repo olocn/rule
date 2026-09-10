@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,gravity-engine.com
 DOMAIN-SUFFIX,ketu9529.top
+DOMAIN-SUFFIX,alipay.net
 DOMAIN-SUFFIX,tdnsv6.com
 DOMAIN-SUFFIX,cdngtm.com
 DOMAIN-SUFFIX,fcbox.com
