@@ -1081,6 +1081,7 @@ domain:t-log.pinduoduo.com
 domain:t44r60.com
 domain:tagtic.cn
 domain:tbcache.com
+domain:tfogc.com
 domain:th.pinduoduo.com
 domain:tianmu.mobi
 domain:toponadss.com
