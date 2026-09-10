@@ -839,6 +839,7 @@ domain:ahdohpiechei.com
 domain:ai-girls.media
 domain:amap-aos-info-nogw.amap.com
 domain:amazon-adsystem.com
+domain:amplitude.com
 domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
 domain:analytics.google.com

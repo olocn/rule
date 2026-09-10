@@ -843,6 +843,7 @@ payload:
   - 'DOMAIN-SUFFIX,ai-girls.media'
   - 'DOMAIN-SUFFIX,amap-aos-info-nogw.amap.com'
   - 'DOMAIN-SUFFIX,amazon-adsystem.com'
+  - 'DOMAIN-SUFFIX,amplitude.com'
   - 'DOMAIN-SUFFIX,analytics-api-01.smzdm.com'
   - 'DOMAIN-SUFFIX,analytics-api.smzdm.com'
   - 'DOMAIN-SUFFIX,analytics.google.com'
