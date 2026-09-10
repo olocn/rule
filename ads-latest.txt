@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-09-09)
+# Auto merged Surge rules (2026-09-10)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
