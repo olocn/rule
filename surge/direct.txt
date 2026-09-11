@@ -1,3 +1,5 @@
+DOMAIN-SUFFIX,jsitv.net
+DOMAIN-SUFFIX,jsjnsw.com
 DOMAIN-SUFFIX,gravity-engine.com
 DOMAIN-SUFFIX,ketu9529.top
 DOMAIN-SUFFIX,volkswagen-cea.com
@@ -476,7 +478,6 @@ DOMAIN-SUFFIX,jisuanke.com
 DOMAIN-SUFFIX,joyyang.com
 DOMAIN-SUFFIX,jqhtml.com
 DOMAIN-SUFFIX,js.design
-DOMAIN-SUFFIX,jsjnsw.com
 DOMAIN-SUFFIX,jspec.cn
 DOMAIN-SUFFIX,juejin.im
 DOMAIN-SUFFIX,juji.tv
