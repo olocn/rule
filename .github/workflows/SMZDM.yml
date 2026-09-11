@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: 检出仓库代码
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: 配置 Python 环境
         uses: actions/setup-python@v5
@@ -44,6 +44,7 @@ jobs:
           # 监控配置
           WATCH_LIST = [
               {"keyword": "AirPods Pro 2", "max_price": 1399.0},
+               {"keyword": "每日鲜语", "max_price": 1399.0},
           ]
           FETCH_PAGES = 2
           CACHE_FILE = "seen_deals.txt"
