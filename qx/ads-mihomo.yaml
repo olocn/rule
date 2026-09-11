@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-09-10
+# Generated: 2026-09-11
 # behavior: classical
 payload:
   - 'DOMAIN,1500020991.vodplayer.wxamedia.com'
@@ -58,7 +58,6 @@ payload:
   - 'DOMAIN,adguanggao.eee114.com'
   - 'DOMAIN,adimg.uve.weibo.com'
   - 'DOMAIN,adjust.cn'
-  - 'DOMAIN,adjust.com'
   - 'DOMAIN,adlink-api.huan.tv'
   - 'DOMAIN,adlog.vivo.com.cn'
   - 'DOMAIN,adm.funshion.com'
@@ -826,6 +825,7 @@ payload:
   - 'DOMAIN-SUFFIX,ad.hunyuan.tencent.com'
   - 'DOMAIN-SUFFIX,adashxgc.ut.taobao.com'
   - 'DOMAIN-SUFFIX,adintl.cn'
+  - 'DOMAIN-SUFFIX,adjust.com'
   - 'DOMAIN-SUFFIX,adjust.io'
   - 'DOMAIN-SUFFIX,admobile.top'
   - 'DOMAIN-SUFFIX,ads.95516.com'
@@ -855,6 +855,7 @@ payload:
   - 'DOMAIN-SUFFIX,apihw.yazhijian.com'
   - 'DOMAIN-SUFFIX,apm-a.pinduoduo.com'
   - 'DOMAIN-SUFFIX,apm-b.pinduoduo.com'
+  - 'DOMAIN-SUFFIX,app-ads-services.com'
   - 'DOMAIN-SUFFIX,app-analytics-services.com'
   - 'DOMAIN-SUFFIX,app.chat.xiaomi.net'
   - 'DOMAIN-SUFFIX,app.miwifi.com'

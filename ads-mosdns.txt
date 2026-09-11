@@ -54,7 +54,6 @@ full:adfilter.imtt.qq.com
 full:adguanggao.eee114.com
 full:adimg.uve.weibo.com
 full:adjust.cn
-full:adjust.com
 full:adlink-api.huan.tv
 full:adlog.vivo.com.cn
 full:adm.funshion.com
@@ -822,6 +821,7 @@ domain:ad.gameley.com
 domain:ad.hunyuan.tencent.com
 domain:adashxgc.ut.taobao.com
 domain:adintl.cn
+domain:adjust.com
 domain:adjust.io
 domain:admobile.top
 domain:ads.95516.com
@@ -851,6 +851,7 @@ domain:api.wxcjgg.cn
 domain:apihw.yazhijian.com
 domain:apm-a.pinduoduo.com
 domain:apm-b.pinduoduo.com
+domain:app-ads-services.com
 domain:app-analytics-services.com
 domain:app.chat.xiaomi.net
 domain:app.miwifi.com
