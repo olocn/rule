@@ -2,7 +2,7 @@ name: SMZDM Price Monitor
 
 on:
   schedule:
-    # 北京时间 06:30 - 22:30，每 2 小时触发一次
+    # 北京时间 06:30 - 22:30，每 2 小时触发一次（夜间静默）
     - cron: '30 0,2,4,6,8,10,12,14,22 * * *'
   workflow_dispatch:
 
@@ -15,7 +15,7 @@ jobs:
 
     steps:
       - name: 检出仓库代码
-        uses: actions/checkout@v5
+        uses: actions/checkout@v4
 
       - name: 配置 Python 环境
         uses: actions/setup-python@v5
@@ -29,7 +29,6 @@ jobs:
       - name: 运行内嵌监控脚本
         env:
           BARK_KEY: ${{ secrets.BARK_KEY }}
-          WECOM_WEBHOOK: ${{ secrets.WECOM_WEBHOOK }}
           SMZDM_COOKIE: ${{ secrets.SMZDM_COOKIE }}
         run: |
           python - << 'EOF'
@@ -41,17 +40,19 @@ jobs:
           import requests
           from bs4 import BeautifulSoup
 
-          # 监控配置
+          # ==================== 监控配置 ====================
           WATCH_LIST = [
               {"keyword": "AirPods Pro 2", "max_price": 1399.0},
-               {"keyword": "每日鲜语", "max_price": 1399.0},
+              {"keyword": "每日鲜语", "max_price": 1400.0},
+              {"keyword": "男士平角内裤", "max_price": 50},
           ]
           FETCH_PAGES = 2
           CACHE_FILE = "seen_deals.txt"
 
           BARK_KEY = os.getenv("BARK_KEY", "").strip()
-          WECOM_WEBHOOK = os.getenv("WECOM_WEBHOOK", "").strip()
           SMZDM_COOKIE = os.getenv("SMZDM_COOKIE", "").strip()
+          # ==================================================
+
 
           def load_seen():
               if os.path.exists(CACHE_FILE):
@@ -59,52 +60,37 @@ jobs:
                       return set(line.strip() for line in f if line.strip())
               return set()
 
+
           def save_seen(seen_set):
               recent = list(seen_set)[-500:]
               with open(CACHE_FILE, "w", encoding="utf-8") as f:
                   f.write("\n".join(recent))
+
 
           def extract_price(price_str: str):
               clean_str = price_str.replace(",", "")
               match = re.search(r"(\d+(?:\.\d+)?)", clean_str)
               return float(match.group(1)) if match else None
 
-          def push_notification(title: str, price: str, url: str, extras: str):
-              if BARK_KEY:
-                  try:
-                      requests.post(
-                          f"https://api.day.app/{BARK_KEY}",
-                          json={
-                              "title": f"好价: {price}",
-                              "body": f"{title}\n{extras}",
-                              "url": url,
-                              "group": "什么值得买",
-                              "icon": "https://res.smzdm.com/images/favicon.ico",
-                          },
-                          timeout=8,
-                      )
-                  except Exception as e:
-                      print(f"[Bark] 推送失败: {e}")
 
-              if WECOM_WEBHOOK:
-                  try:
-                      requests.post(
-                          WECOM_WEBHOOK,
-                          json={
-                              "msgtype": "markdown",
-                              "markdown": {
-                                  "content": (
-                                      f"### 🔔 什么值得买好价提醒\n"
-                                      f"> **商品**：[{title}]({url})\n"
-                                      f"> **价格**：<font color=\"warning\">{price}</font>\n"
-                                      f"> **标签/渠道**：{extras or '站内爆料'}"
-                                  )
-                              },
-                          },
-                          timeout=8,
-                      )
-                  except Exception as e:
-                      print(f"[企微] 推送失败: {e}")
+          def push_bark(title: str, price: str, url: str, extras: str):
+              if not BARK_KEY:
+                  return
+              try:
+                  requests.post(
+                      f"https://api.day.app/{BARK_KEY}",
+                      json={
+                          "title": f"好价: {price}",
+                          "body": f"{title}\n{extras}",
+                          "url": url,
+                          "group": "什么值得买",
+                          "icon": "https://res.smzdm.com/images/favicon.ico",
+                      },
+                      timeout=8,
+                  )
+              except Exception as e:
+                  print(f"[Bark] 推送失败: {e}")
+
 
           def fetch_deals_by_keyword(keyword: str, pages: int = 2):
               deals = []
@@ -163,38 +149,47 @@ jobs:
                   time.sleep(1)
               return deals
 
-          seen_ids = load_seen()
-          is_initial_run = (len(seen_ids) == 0)
-          new_found = False
 
-          for item in WATCH_LIST:
-              keyword = item["keyword"]
-              max_price = item.get("max_price")
-              deals = fetch_deals_by_keyword(keyword, pages=FETCH_PAGES)
-              print(f"关键词「{keyword}」共解析出 {len(deals)} 条内容")
+          def main():
+              seen_ids = load_seen()
+              is_initial_run = (len(seen_ids) == 0)
+              new_found = False
 
-              for deal in reversed(deals):
-                  deal_id = deal["link"]
-                  if not deal_id or deal_id in seen_ids:
-                      continue
+              print(f"[{time.strftime('%Y-%m-%d %H:%M:%S')}] 巡检开始...")
 
-                  seen_ids.add(deal_id)
-                  new_found = True
+              for item in WATCH_LIST:
+                  keyword = item["keyword"]
+                  max_price = item.get("max_price")
+                  deals = fetch_deals_by_keyword(keyword, pages=FETCH_PAGES)
+                  print(f"关键词「{keyword}」共解析出 {len(deals)} 条内容")
 
-                  if is_initial_run:
-                      continue
+                  for deal in reversed(deals):
+                      deal_id = deal["link"]
+                      if not deal_id or deal_id in seen_ids:
+                          continue
 
-                  price_num = extract_price(deal["price_str"])
-                  if max_price is not None and (price_num is None or price_num > max_price):
-                      continue
+                      seen_ids.add(deal_id)
+                      new_found = True
 
-                  push_notification(deal["title"], deal["price_str"], deal["link"], deal["extras"])
+                      if is_initial_run:
+                          continue
 
-          if is_initial_run:
-              print("初始化完成：已将当前商品收录到基线库，下次出现符合价格的新好价即会推送。")
+                      price_num = extract_price(deal["price_str"])
+                      if max_price is not None and (price_num is None or price_num > max_price):
+                          continue
 
-          if new_found:
-              save_seen(seen_ids)
+                      print(f"🎯 命中目标价: {deal['title']} | {deal['price_str']}")
+                      push_bark(deal["title"], deal["price_str"], deal["link"], deal["extras"])
+
+              if is_initial_run:
+                  print("初始化完成：已收录现有商品为底库，下次出现符合价格的新好价即会推送。")
+
+              if new_found:
+                  save_seen(seen_ids)
+
+
+          if __name__ == "__main__":
+              main()
           EOF
 
       - name: 自动保存排重缓存
