@@ -3,6 +3,8 @@ DOMAIN-SUFFIX,ketu9529.top
 DOMAIN-SUFFIX,volkswagen-cea.com
 DOMAIN-SUFFIX,alipay.net
 DOMAIN-SUFFIX,zkreen.com
+DOMAIN-SUFFIX,smogflycloud.com
+DOMAIN-SUFFIX,yushenmama.top
 DOMAIN-SUFFIX,livehwc4.com
 DOMAIN-SUFFIX,lanjing.vip
 DOMAIN-SUFFIX,rapidssl.com
