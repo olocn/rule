@@ -1,4 +1,6 @@
 HOST-SUFFIX,jsitv.net,direct
+HOST-SUFFIX,xhscdn.com,direct
+HOST-SUFFIX,sectigo.com,direct
 HOST-SUFFIX,jsjnsw.com,direct
 HOST-SUFFIX,godaddy.com,direct
 HOST-SUFFIX,gravity-engine.com,direct
@@ -270,7 +272,6 @@ HOST-SUFFIX,cowtransfer.com,direct
 HOST-SUFFIX,csair.com,direct
 HOST-SUFFIX,csdn.net,direct
 HOST-SUFFIX,csdnimg.cn,direct
-HOST-SUFFIX,csp.sectigo.com,direct
 HOST-SUFFIX,css-js.com,direct
 HOST-SUFFIX,ct10000.com,direct
 HOST-SUFFIX,ctrip.com,direct

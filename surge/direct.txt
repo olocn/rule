@@ -1,4 +1,6 @@
 DOMAIN-SUFFIX,jsitv.net
+DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,sectigo.com
 DOMAIN-SUFFIX,jsjnsw.com
 DOMAIN-SUFFIX,godaddy.com
 DOMAIN-SUFFIX,gravity-engine.com
@@ -270,7 +272,6 @@ DOMAIN-SUFFIX,cowtransfer.com
 DOMAIN-SUFFIX,csair.com
 DOMAIN-SUFFIX,csdn.net
 DOMAIN-SUFFIX,csdnimg.cn
-DOMAIN-SUFFIX,csp.sectigo.com
 DOMAIN-SUFFIX,css-js.com
 DOMAIN-SUFFIX,ct10000.com
 DOMAIN-SUFFIX,ctrip.com
