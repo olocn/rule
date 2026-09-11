@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,jsjnsw.com
+DOMAIN-SUFFIX,godaddy.com
 DOMAIN-SUFFIX,gravity-engine.com
 DOMAIN-SUFFIX,ketu9529.top
 DOMAIN-SUFFIX,volkswagen-cea.com
