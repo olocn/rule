@@ -1,6 +1,8 @@
 DOMAIN-SUFFIX,gravity-engine.com
 DOMAIN-SUFFIX,ketu9529.top
 DOMAIN-SUFFIX,alipay.net
+DOMAIN-SUFFIX,zkreen.com
+DOMAIN-SUFFIX,rapidssl.com
 DOMAIN-SUFFIX,wswebcdn.com
 DOMAIN-SUFFIX,wswebpic.com
 DOMAIN-SUFFIX,tdnsv6.com
