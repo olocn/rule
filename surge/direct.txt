@@ -1,5 +1,7 @@
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,xhscdn.com
+DOMAIN-SUFFIX,cretebl.com
+DOMAIN-SUFFIX,guangzhougy.com
 DOMAIN-SUFFIX,sectigo.com
 DOMAIN-SUFFIX,jsjnsw.com
 DOMAIN-SUFFIX,godaddy.com
