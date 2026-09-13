@@ -1059,6 +1059,7 @@ DOMAIN-SUFFIX,rou.one
 DOMAIN-SUFFIX,s.miwifi.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,saxysec.com
+DOMAIN-SUFFIX,scorecardresearch.com
 DOMAIN-SUFFIX,sensorsdata.cn
 DOMAIN-SUFFIX,shangkmo.com
 DOMAIN-SUFFIX,siomxity.com

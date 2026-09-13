@@ -1058,6 +1058,7 @@ domain:rou.one
 domain:s.miwifi.com
 domain:safebrowsing.apple
 domain:saxysec.com
+domain:scorecardresearch.com
 domain:sensorsdata.cn
 domain:shangkmo.com
 domain:siomxity.com
