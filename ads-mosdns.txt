@@ -864,6 +864,7 @@ domain:appsflyer.com
 domain:appsflyersdk.com
 domain:atrace.chelaile.net.cn
 domain:auth.wosms.cn
+domain:bangdao-tech.com
 domain:banguomq.com
 domain:baomitu.com
 domain:biligame.com
