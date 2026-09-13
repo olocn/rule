@@ -894,6 +894,7 @@ domain:cm.bilibili.com
 domain:cnzz.com
 domain:config.cmpassport.com
 domain:crash.pinduoduo.com
+domain:crashlytics.com
 domain:data-qvs.iqiyi.com
 domain:data.bilibili.com
 domain:dataflow.biliapi.com

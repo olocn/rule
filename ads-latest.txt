@@ -895,6 +895,7 @@ DOMAIN-SUFFIX,cm.bilibili.com
 DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,config.cmpassport.com
 DOMAIN-SUFFIX,crash.pinduoduo.com
+DOMAIN-SUFFIX,crashlytics.com
 DOMAIN-SUFFIX,data-qvs.iqiyi.com
 DOMAIN-SUFFIX,data.bilibili.com
 DOMAIN-SUFFIX,dataflow.biliapi.com
