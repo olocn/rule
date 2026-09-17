@@ -1,5 +1,8 @@
 DOMAIN-SUFFIX,jsitv.net
+DOMAIN-SUFFIX,95516.net
+DOMAIN-SUFFIX,cloudcsp.com
 DOMAIN-SUFFIX,95598pay.com
+DOMAIN-SUFFIX,wscdns.com
 DOMAIN-SUFFIX,joying.com
 DOMAIN-SUFFIX,bytescm.com
 DOMAIN-SUFFIX,xhscdn.com
