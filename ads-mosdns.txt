@@ -819,6 +819,7 @@ domain:acs.youku.com
 domain:ad.cyapi.cn
 domain:ad.gameley.com
 domain:ad.hunyuan.tencent.com
+domain:adashx.ut.amap.com
 domain:adashxgc.ut.taobao.com
 domain:adintl.cn
 domain:adjust.com

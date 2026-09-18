@@ -823,6 +823,7 @@ payload:
   - 'DOMAIN-SUFFIX,ad.cyapi.cn'
   - 'DOMAIN-SUFFIX,ad.gameley.com'
   - 'DOMAIN-SUFFIX,ad.hunyuan.tencent.com'
+  - 'DOMAIN-SUFFIX,adashx.ut.amap.com'
   - 'DOMAIN-SUFFIX,adashxgc.ut.taobao.com'
   - 'DOMAIN-SUFFIX,adintl.cn'
   - 'DOMAIN-SUFFIX,adjust.com'
