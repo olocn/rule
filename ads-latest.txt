@@ -118,6 +118,7 @@ DOMAIN,adsfs.heytapimage.com
 DOMAIN,adsfs.oppomobile.com
 DOMAIN,adslvfile.qq.com
 DOMAIN,adsmart.konka.com
+DOMAIN,adsmartget.datads.cn
 DOMAIN,adsmind.gdtimg.com
 DOMAIN,adsmind.ugdtimg.com
 DOMAIN,adsp.xunlei.com
@@ -596,11 +597,13 @@ DOMAIN,scs.openspeech.cn
 DOMAIN,sdk-ab-config.qquanquan.com
 DOMAIN,sdk-cache.video.ptqy.gitv.tv
 DOMAIN,sdk.ad.smaato.net
+DOMAIN,sdk.adhuanxiao.com
 DOMAIN,sdk.aqyad.com
 DOMAIN,sdk.beizi.biz
 DOMAIN,sdk.cferw.com
 DOMAIN,sdk.e.qq.com
 DOMAIN,sdk.hzsanjiaomao.com
+DOMAIN,sdk.hzzfcm.com
 DOMAIN,sdk.markmedia.com.cn
 DOMAIN,sdk.mobads.adwangmai.com
 DOMAIN,sdkapi.cloooud.com
@@ -775,6 +778,7 @@ DOMAIN,wxsnsad.tc.qq.com
 DOMAIN,wxsnsdy.tc.qq.com
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
+DOMAIN,xadsmartget.adgain.cn
 DOMAIN,xc.gdt.qq.com
 DOMAIN,xcx.dcad01.com
 DOMAIN,xlog.jd.com

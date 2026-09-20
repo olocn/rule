@@ -117,6 +117,7 @@ full:adsfs.heytapimage.com
 full:adsfs.oppomobile.com
 full:adslvfile.qq.com
 full:adsmart.konka.com
+full:adsmartget.datads.cn
 full:adsmind.gdtimg.com
 full:adsmind.ugdtimg.com
 full:adsp.xunlei.com
@@ -595,11 +596,13 @@ full:scs.openspeech.cn
 full:sdk-ab-config.qquanquan.com
 full:sdk-cache.video.ptqy.gitv.tv
 full:sdk.ad.smaato.net
+full:sdk.adhuanxiao.com
 full:sdk.aqyad.com
 full:sdk.beizi.biz
 full:sdk.cferw.com
 full:sdk.e.qq.com
 full:sdk.hzsanjiaomao.com
+full:sdk.hzzfcm.com
 full:sdk.markmedia.com.cn
 full:sdk.mobads.adwangmai.com
 full:sdkapi.cloooud.com
@@ -774,6 +777,7 @@ full:wxsnsad.tc.qq.com
 full:wxsnsdy.tc.qq.com
 full:wxsnsdy.wxs.qq.com
 full:wxsnsdythumb.wxs.qq.com
+full:xadsmartget.adgain.cn
 full:xc.gdt.qq.com
 full:xcx.dcad01.com
 full:xlog.jd.com
