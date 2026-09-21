@@ -556,6 +556,8 @@ payload:
   - 'DOMAIN,pcm-img.zhls.qq.com'
   - 'DOMAIN,pgdt.gtimg.cn'
   - 'DOMAIN,pgdt.ugdtimg.com'
+  - 'DOMAIN,pica-a-display.diwodiwo.xyz'
+  - 'DOMAIN,pica-ad-api.diwodiwo.xyz'
   - 'DOMAIN,pig.pupuapi.com'
   - 'DOMAIN,pixon.ads-pixiv.net'
   - 'DOMAIN,pl.cp31.ott.cibntv.net'

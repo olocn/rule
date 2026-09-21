@@ -552,6 +552,8 @@ full:pay.sboot.cn
 full:pcm-img.zhls.qq.com
 full:pgdt.gtimg.cn
 full:pgdt.ugdtimg.com
+full:pica-a-display.diwodiwo.xyz
+full:pica-ad-api.diwodiwo.xyz
 full:pig.pupuapi.com
 full:pixon.ads-pixiv.net
 full:pl.cp31.ott.cibntv.net
