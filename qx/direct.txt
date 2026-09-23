@@ -169,6 +169,7 @@ HOST,download.visualstudio.microsoft.com,DIRECT
 HOST,downloaddispatch.itunes.apple.com,DIRECT
 HOST,dreamspark.download.prss.microsoft.com,DIRECT
 HOST,dreamsparkuat.download.prss.microsoft.com,DIRECT
+HOST,drivers.amd.com,DIRECT
 HOST,edge.geo.kaspersky.com,DIRECT
 HOST,end-api.shallow.ink,DIRECT
 HOST,end.shallow.ink,DIRECT
@@ -82652,6 +82653,7 @@ HOST-SUFFIX,sjez.com,DIRECT
 HOST-SUFFIX,sjf029.com,DIRECT
 HOST-SUFFIX,sjfcdn.com,DIRECT
 HOST-SUFFIX,sjfh168.com,DIRECT
+HOST-SUFFIX,sjfls6.com,DIRECT
 HOST-SUFFIX,sjfpro.com,DIRECT
 HOST-SUFFIX,sjfzxm.com,DIRECT
 HOST-SUFFIX,sjg8.com,DIRECT
