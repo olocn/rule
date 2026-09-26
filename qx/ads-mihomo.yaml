@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-09-25
+# Generated: 2026-09-26
 # behavior: classical
 payload:
   - 'DOMAIN,1500020991.vodplayer.wxamedia.com'
