@@ -839,7 +839,6 @@ domain:advlion.com
 domain:adx-api.zdmimg.com
 domain:adx.adwangmai.com
 domain:adxapi.readgps.com
-domain:aedns.weixin.qq.com
 domain:afd.baidu.com
 domain:ahdohpiechei.com
 domain:ai-girls.media
@@ -911,8 +910,6 @@ domain:dftoutiao.com
 domain:dlied1.cdntips.net
 domain:dns.jd.com
 domain:dns.weibo.cn
-domain:dns.weixin.qq.com
-domain:dns.weixin.qq.com.cn
 domain:dnspod.meituan.httpdns.qcloud.com
 domain:dnspod.meituan.httpdns.start.qcloud.com
 domain:doh.iqiyi.com
@@ -949,7 +946,6 @@ domain:httpdns.alicdn.com
 domain:httpdns.baidu.com
 domain:httpdns.baidubce.com
 domain:httpdns.bcelive.com
-domain:httpdns.bilivideo.com
 domain:httpdns.browser.miui.com
 domain:httpdns.c.cdnhwc2.com
 domain:httpdns.calorietech.com
