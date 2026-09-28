@@ -1,5 +1,6 @@
 DOMAIN-SUFFIX,jsitv.net
 DOMAIN-SUFFIX,95516.net
+DOMAIN-SUFFIX,haixing2.com
 DOMAIN-SUFFIX,xiaojukeji.com
 DOMAIN-SUFFIX,didistatic.com
 DOMAIN-SUFFIX,cloudcsp.com
