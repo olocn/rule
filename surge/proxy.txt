@@ -9,6 +9,7 @@ DOMAIN-SUFFIX,gh-proxy.org
 DOMAIN-SUFFIX,mxs13.cc
 DOMAIN-SUFFIX,mangafunb.fun
 DOMAIN-SUFFIX,copy3000.com
+DOMAIN-SUFFIX,herokuapp.com
 
 #18
 DOMAIN-SUFFIX,18comic.vip
