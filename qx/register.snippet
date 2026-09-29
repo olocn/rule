@@ -1,5 +1,4 @@
 host-suffix,ipify.org, register
-host, apple-relay.fastly-edge.com, register
 host-suffix, scdn.co, register
 host-suffix, spicylyrics.org, register
 host-suffix, sidestore.io, register
@@ -92,15 +91,11 @@ ip-cidr, 17.252.0.0/16, register
 ip-cidr, 17.57.144.0/22, register
 ip-cidr, 17.188.128.0/18, register
 ip-cidr, 17.188.20.0/23, register
-host-suffix, apple.news, register
+
 host-suffix, itunes-apple.com.akadns.net, register
 host-suffix, apple.comscoreresearch.com, register
 host-suffix, aaplimg.com, register
 host-suffix, apple-dns.net, register
-host-suffix, apple.co, register
-host-suffix, apple.com, register
-host-suffix, appstore.com, register
-host-suffix, cdn-apple.com, register
 host-suffix, crashlytics.com, register
 host-suffix, icloud.com, register
 #host-suffix, icloud.com.cn, register
@@ -108,5 +103,36 @@ host-suffix, icloud-content.com, register
 host-suffix, me.com, register
 host-suffix, organicfruitapps.com, register
 host-suffix, apple-cloudkit.com, register
-host-suffix, appsto.re, register
-host-suffix, itunes.com, register
+# > Apple News
+HOST-SUFFIX,apple.news,register
+HOST,news-assets.apple.com,register
+HOST,news-client.apple.com,register
+HOST,news-client-search.apple.com,register
+HOST,news-edge.apple.com,register
+HOST,news-events.apple.com,register
+HOST,gateway.icloud.com,register
+
+# > Apple TV+ & Media API
+HOST-SUFFIX,tv.apple.com,register
+HOST,uts-api.itunes.apple.com,register
+HOST,play.itunes.apple.com,register
+HOST,hls.itunes.apple.com,register
+HOST,hls-amt.itunes.apple.com,register
+
+# > Apple Fitness+ & Books
+HOST,fitness.apple.com,register
+HOST,amp-api.fitness.apple.com,register
+HOST,books.apple.com,register
+
+# > TestFlight
+HOST,testflight.apple.com,register
+HOST,beta.itunes.apple.com,register
+
+# > Developer & Spotlight & AI
+HOST,developer.apple.com,register
+HOST,smoot.apple.com,register
+HOST,api.smoot.apple.com,register
+HOST,fbs.apple.com,register
+HOST,apple-relay.apple.com,register
+host,apple-relay.fastly-edge.com,register
+
