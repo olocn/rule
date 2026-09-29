@@ -1096,6 +1096,7 @@ domain:toponadss.com
 domain:tpa-hcdn.iqiyi.com
 domain:track.pinduoduo.com
 domain:track.sitetag.us
+domain:tracker.samplicio.us
 domain:tracking.intl.miui.com
 domain:trade.m.xiaomiyoupin.com
 domain:trk.pinduoduo.com

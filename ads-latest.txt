@@ -1097,6 +1097,7 @@ DOMAIN-SUFFIX,toponadss.com
 DOMAIN-SUFFIX,tpa-hcdn.iqiyi.com
 DOMAIN-SUFFIX,track.pinduoduo.com
 DOMAIN-SUFFIX,track.sitetag.us
+DOMAIN-SUFFIX,tracker.samplicio.us
 DOMAIN-SUFFIX,tracking.intl.miui.com
 DOMAIN-SUFFIX,trade.m.xiaomiyoupin.com
 DOMAIN-SUFFIX,trk.pinduoduo.com
