@@ -840,6 +840,7 @@ domain:adx-api.zdmimg.com
 domain:adx.adwangmai.com
 domain:adxapi.readgps.com
 domain:afd.baidu.com
+domain:afs.ampaeservices.com
 domain:ahdohpiechei.com
 domain:ai-girls.media
 domain:amap-aos-info-nogw.amap.com
