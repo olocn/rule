@@ -10,6 +10,9 @@ DOMAIN-SUFFIX,mxs13.cc
 DOMAIN-SUFFIX,mangafunb.fun
 DOMAIN-SUFFIX,copy3000.com
 DOMAIN-SUFFIX,herokuapp.com
+DOMAIN-SUFFIX,aidoku.app
+DOMAIN-SUFFIX,jjmhw9.top
+DOMAIN-SUFFIX,jmapiproxy1.cc
 
 #18
 DOMAIN-SUFFIX,18comic.vip
