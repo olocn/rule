@@ -28,6 +28,7 @@ missav.ws
 javbus22.com
 
 spoti.pw
+esm.sh
 tospotify.com
 rc-backup.com
 quantumult.app
