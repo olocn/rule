@@ -28,6 +28,7 @@ DOMAIN-SUFFIX,missav.ws
 DOMAIN-SUFFIX,javbus22.com
 
 DOMAIN-SUFFIX,spoti.pw
+DOMAIN-SUFFIX,esm.sh
 DOMAIN-SUFFIX,tospotify.com
 DOMAIN-SUFFIX,rc-backup.com
 DOMAIN-SUFFIX,quantumult.app
