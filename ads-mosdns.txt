@@ -1079,6 +1079,7 @@ domain:sogou.com
 domain:sogoucdn.com
 domain:starplucker.cyapi.cn
 domain:statisticslinks.com
+domain:stats.v2core.com
 domain:stun.douyucdn.cn
 domain:stun.ekiga.net
 domain:stun.hitv.com

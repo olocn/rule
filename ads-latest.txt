@@ -1080,6 +1080,7 @@ DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
 DOMAIN-SUFFIX,starplucker.cyapi.cn
 DOMAIN-SUFFIX,statisticslinks.com
+DOMAIN-SUFFIX,stats.v2core.com
 DOMAIN-SUFFIX,stun.douyucdn.cn
 DOMAIN-SUFFIX,stun.ekiga.net
 DOMAIN-SUFFIX,stun.hitv.com
