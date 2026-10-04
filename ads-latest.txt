@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-10-03)
+# Auto merged Surge rules (2026-10-04)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -934,6 +934,7 @@ DOMAIN-SUFFIX,gepush.com
 DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gjfzpt.cn
+DOMAIN-SUFFIX,global-iuni.checktrustworthiness.com
 DOMAIN-SUFFIX,haosou.com
 DOMAIN-SUFFIX,heima911.com
 DOMAIN-SUFFIX,hiaiabc.com

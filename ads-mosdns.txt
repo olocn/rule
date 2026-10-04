@@ -933,6 +933,7 @@ domain:gepush.com
 domain:getui.com
 domain:getui.net
 domain:gjfzpt.cn
+domain:global-iuni.checktrustworthiness.com
 domain:haosou.com
 domain:heima911.com
 domain:hiaiabc.com
