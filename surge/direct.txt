@@ -1,4 +1,6 @@
-DOMAIN-SUFFIX,jsitv.net
+DOMAIN-SUFFIX,manga2026.xyz
+DOMAIN-SUFFIX,xipu.com
+
 DOMAIN-SUFFIX,dsx.ac
 DOMAIN-SUFFIX,95516.net
 DOMAIN-SUFFIX,alililibaba.uk
