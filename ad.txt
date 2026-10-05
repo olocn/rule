@@ -160,11 +160,11 @@ mp-prod.smartmidea.net
 
 # b站
 mcdn.bilivideo.cn
-#grpc.biliapi.net
+grpc.biliapi.net
 dataflow.biliapi.com
-#httpdns.bilivideo.com
+httpdns.bilivideo.com
 mall.bilibili.com
-# api.vc.bilibili.com
+api.vc.bilibili.com
 broadcast.chat.bilibili.com
 #upos-sz-mirrorcos.bilivideo.com
 biligame.com
