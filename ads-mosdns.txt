@@ -831,6 +831,7 @@ domain:adjust.io
 domain:admobile.top
 domain:ads.95516.com
 domain:ads.cup.com.cn
+domain:ads.trafficjunky.net
 domain:adsmoloco.com
 domain:adtianmai.com
 domain:adukwai.com
@@ -1038,6 +1039,7 @@ domain:pcdn.yximgs.com
 domain:pemsrv.com
 domain:pglstatp-toutiao.com
 domain:pkoplink.com
+domain:posthog.com
 domain:pplive-p2p.com
 domain:px.effirst.com
 domain:qchannel01.cn

@@ -832,6 +832,7 @@ DOMAIN-SUFFIX,adjust.io
 DOMAIN-SUFFIX,admobile.top
 DOMAIN-SUFFIX,ads.95516.com
 DOMAIN-SUFFIX,ads.cup.com.cn
+DOMAIN-SUFFIX,ads.trafficjunky.net
 DOMAIN-SUFFIX,adsmoloco.com
 DOMAIN-SUFFIX,adtianmai.com
 DOMAIN-SUFFIX,adukwai.com
@@ -1039,6 +1040,7 @@ DOMAIN-SUFFIX,pcdn.yximgs.com
 DOMAIN-SUFFIX,pemsrv.com
 DOMAIN-SUFFIX,pglstatp-toutiao.com
 DOMAIN-SUFFIX,pkoplink.com
+DOMAIN-SUFFIX,posthog.com
 DOMAIN-SUFFIX,pplive-p2p.com
 DOMAIN-SUFFIX,px.effirst.com
 DOMAIN-SUFFIX,qchannel01.cn
