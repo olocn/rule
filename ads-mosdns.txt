@@ -853,6 +853,7 @@ domain:analytics.plex.tv
 domain:anythinktech.com
 domain:api.miwifi.com
 domain:api.share.mob.com
+domain:api.vc.bilibili.com
 domain:api.wxcjgg.cn
 domain:apihw.yazhijian.com
 domain:apm-a.pinduoduo.com
@@ -934,6 +935,7 @@ domain:getui.com
 domain:getui.net
 domain:gjfzpt.cn
 domain:global-iuni.checktrustworthiness.com
+domain:grpc.biliapi.net
 domain:haosou.com
 domain:heima911.com
 domain:hiaiabc.com
@@ -948,6 +950,7 @@ domain:httpdns.alicdn.com
 domain:httpdns.baidu.com
 domain:httpdns.baidubce.com
 domain:httpdns.bcelive.com
+domain:httpdns.bilivideo.com
 domain:httpdns.browser.miui.com
 domain:httpdns.c.cdnhwc2.com
 domain:httpdns.calorietech.com

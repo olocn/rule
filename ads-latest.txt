@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-10-04)
+# Auto merged Surge rules (2026-10-05)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -854,6 +854,7 @@ DOMAIN-SUFFIX,analytics.plex.tv
 DOMAIN-SUFFIX,anythinktech.com
 DOMAIN-SUFFIX,api.miwifi.com
 DOMAIN-SUFFIX,api.share.mob.com
+DOMAIN-SUFFIX,api.vc.bilibili.com
 DOMAIN-SUFFIX,api.wxcjgg.cn
 DOMAIN-SUFFIX,apihw.yazhijian.com
 DOMAIN-SUFFIX,apm-a.pinduoduo.com
@@ -935,6 +936,7 @@ DOMAIN-SUFFIX,getui.com
 DOMAIN-SUFFIX,getui.net
 DOMAIN-SUFFIX,gjfzpt.cn
 DOMAIN-SUFFIX,global-iuni.checktrustworthiness.com
+DOMAIN-SUFFIX,grpc.biliapi.net
 DOMAIN-SUFFIX,haosou.com
 DOMAIN-SUFFIX,heima911.com
 DOMAIN-SUFFIX,hiaiabc.com
@@ -949,6 +951,7 @@ DOMAIN-SUFFIX,httpdns.alicdn.com
 DOMAIN-SUFFIX,httpdns.baidu.com
 DOMAIN-SUFFIX,httpdns.baidubce.com
 DOMAIN-SUFFIX,httpdns.bcelive.com
+DOMAIN-SUFFIX,httpdns.bilivideo.com
 DOMAIN-SUFFIX,httpdns.browser.miui.com
 DOMAIN-SUFFIX,httpdns.c.cdnhwc2.com
 DOMAIN-SUFFIX,httpdns.calorietech.com
