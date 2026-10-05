@@ -554,7 +554,6 @@
         "pagead2.googleadservices.com",
         "pagead2.googlesyndication.com",
         "pay.sboot.cn",
-        "pcm-img.zhls.qq.com",
         "pgdt.gtimg.cn",
         "pgdt.ugdtimg.com",
         "pica-a-display.diwodiwo.xyz",
@@ -1148,7 +1147,8 @@
         "yunpan.com",
         "yunpan.com.cn",
         "zeroonead.com",
-        "zhangyuyidong.cn"
+        "zhangyuyidong.cn",
+        "zhls.qq.com"
       ],
       "domain_keyword": [
         "-ad.sm.cn",

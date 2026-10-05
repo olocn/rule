@@ -549,7 +549,6 @@ full:p66-ad.adkwai.com
 full:pagead2.googleadservices.com
 full:pagead2.googlesyndication.com
 full:pay.sboot.cn
-full:pcm-img.zhls.qq.com
 full:pgdt.gtimg.cn
 full:pgdt.ugdtimg.com
 full:pica-a-display.diwodiwo.xyz
@@ -1142,6 +1141,7 @@ domain:yunpan.com
 domain:yunpan.com.cn
 domain:zeroonead.com
 domain:zhangyuyidong.cn
+domain:zhls.qq.com
 keyword:-ad.sm.cn
 keyword:-ad.video.yximgs.com
 keyword:-ad.wtzw.com

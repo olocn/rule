@@ -550,7 +550,6 @@ DOMAIN,p66-ad.adkwai.com
 DOMAIN,pagead2.googleadservices.com
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pay.sboot.cn
-DOMAIN,pcm-img.zhls.qq.com
 DOMAIN,pgdt.gtimg.cn
 DOMAIN,pgdt.ugdtimg.com
 DOMAIN,pica-a-display.diwodiwo.xyz
@@ -1143,6 +1142,7 @@ DOMAIN-SUFFIX,yunpan.com
 DOMAIN-SUFFIX,yunpan.com.cn
 DOMAIN-SUFFIX,zeroonead.com
 DOMAIN-SUFFIX,zhangyuyidong.cn
+DOMAIN-SUFFIX,zhls.qq.com
 DOMAIN-KEYWORD,-ad.sm.cn
 DOMAIN-KEYWORD,-ad.video.yximgs.com
 DOMAIN-KEYWORD,-ad.wtzw.com
