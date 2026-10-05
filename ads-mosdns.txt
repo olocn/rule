@@ -831,7 +831,6 @@ domain:adjust.io
 domain:admobile.top
 domain:ads.95516.com
 domain:ads.cup.com.cn
-domain:ads.trafficjunky.net
 domain:adsmoloco.com
 domain:adtianmai.com
 domain:adukwai.com
@@ -926,6 +925,7 @@ domain:enrichgw.10010.com
 domain:erer.homeborn.cn
 domain:event.northghost.com
 domain:events.data.microsoft.com
+domain:exoclick.com
 domain:fancydsp.com
 domain:fp.amap.com
 domain:free-aos-cdn-image.amap.com
@@ -1105,6 +1105,7 @@ domain:track.sitetag.us
 domain:tracker.samplicio.us
 domain:tracking.intl.miui.com
 domain:trade.m.xiaomiyoupin.com
+domain:trafficjunky.net
 domain:trk.pinduoduo.com
 domain:ubixioe.com
 domain:uhabo.com
