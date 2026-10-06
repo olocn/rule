@@ -1,6 +1,7 @@
 DOMAIN-SUFFIX,manga2026.xyz
 DOMAIN-SUFFIX,xipu.com
 
+DOMAIN-SUFFIX,flyertrip.com
 DOMAIN-SUFFIX,dsx.ac
 DOMAIN-SUFFIX,95516.net
 DOMAIN-SUFFIX,alililibaba.uk
