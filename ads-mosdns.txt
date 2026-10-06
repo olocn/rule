@@ -935,7 +935,6 @@ domain:getui.com
 domain:getui.net
 domain:gjfzpt.cn
 domain:global-iuni.checktrustworthiness.com
-domain:grpc.biliapi.net
 domain:haosou.com
 domain:heima911.com
 domain:hiaiabc.com
