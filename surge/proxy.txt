@@ -15,6 +15,8 @@ DOMAIN-SUFFIX,jjmhw9.top
 DOMAIN-SUFFIX,jmapiproxy1.cc
 
 
+DOMAIN-SUFFIX,adapty.io
+DOMAIN-SUFFIX,adaptytech.com
 DOMAIN-SUFFIX,bgm.tv
 DOMAIN-SUFFIX,anibaka.com
 DOMAIN-SUFFIX,girigirilove.com
