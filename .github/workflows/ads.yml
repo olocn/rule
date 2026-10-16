@@ -87,121 +87,7 @@ jobs:
           from pathlib import Path
           from datetime import date
           import re
-
-          # ======================================================
           # Configuration
-          # ======================================================
-          SOURCE_1 = Path(".tmp/source-1.txt")
-          SOURCE_2 = Path(".tmp/source-2.txt")
-          OUTPUT_SURGE = Path("ads-latest.txt")
-          OUTPUT_MOSDNS = Path("ads-mosdns.txt")
-          OUTPUT_QX = Path("ads-qx.snippet")
-          OUTPUT_MIHOMO = Path("qx/ads-mihomo.yaml")
-          OUTPUT_MIHOMO_DOMAIN = Path(".tmp/ads-mihomo已将 Mihomo 的 YAML 规则集修改为 `behavior: domain` 格式（仅保留完整域名与 `+.` 后缀匹配，剔除 `DOMAIN-KEYWORD`），由于 `qx/ads-mihomo.yaml` 和 `.tmp/ads-mihomo-domain.txt` 的规则内容完全一致，已将二者逻辑合并，并同步更新了第 10 步的校验逻辑。
-
-### 核心修改对比
-
-1. **步骤 4 (Python 处理 - 第 14 & 15 节)**：先统一生成去重排序后的 `domain` 规则列表（`DOMAIN` 原样输出，`DOMAIN-SUFFIX` 转换为 `+.domain`，忽略 `DOMAIN-KEYWORD`），随后直接复用该列表生成 `qx/ads-mihomo.yaml` 和 `.tmp/ads-mihomo-domain.txt`。
-2. **步骤 10 (Validate Mihomo YAML)**：增加正则校验，确保 YAML 内的规则严格符合 `+.example.com` 或 `example.com` 格式，不再包含 `DOMAIN,` 等前缀。
-
----
-
-### 完整 GitHub Actions 配置文件
-
-```yaml
-name: ads-rules
-on:
-  push:
-    branches:
-      - master
-    paths:
-      - 'ad.txt'
-  schedule:
-    - cron: '0 */12 * * *'
-  workflow_dispatch:
-permissions:
-  contents: write
-concurrency:
-  group: ads-rules
-  cancel-in-progress: false
-jobs:
-  build:
-    runs-on: ubuntu-24.04
-    timeout-minutes: 15
-    env:
-      FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-      PYTHONUNBUFFERED: "1"
-    steps:
-      # ==========================================================
-      # 1. Checkout
-      # ==========================================================
-      - name: Checkout
-        uses: actions/checkout@v5
-        with:
-          fetch-depth: 1
-      # ==========================================================
-      # 2. Prepare
-      # ==========================================================
-      - name: Prepare
-        shell: bash
-        run: |
-          set -euo pipefail
-          mkdir -p .tmp
-          mkdir -p qx
-          echo "Python:"
-          python3 --version
-          echo "Curl:"
-          curl --version | head -n 1
-      # ==========================================================
-      # 3. Download source rules
-      # ==========================================================
-      - name: Download source rules
-        shell: bash
-        run: |
-          set -euo pipefail
-          echo "========================================"
-          echo "Downloading source 1"
-          echo "========================================"
-          curl -fL \
-            --retry 5 \
-            --retry-delay 2 \
-            --retry-all-errors \
-            --connect-timeout 15 \
-            --max-time 180 \
-            -o .tmp/source-1.txt \
-            "[https://raw.githubusercontent.com/olocn/rule/refs/heads/master/ad.txt](https://raw.githubusercontent.com/olocn/rule/refs/heads/master/ad.txt)"
-          echo "========================================"
-          echo "Downloading source 2"
-          echo "========================================"
-          curl -fL \
-            --retry 5 \
-            --retry-delay 2 \
-            --retry-all-errors \
-            --connect-timeout 15 \
-            --max-time 180 \
-            -o .tmp/source-2.txt \
-            "[https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list](https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list)"
-          test -s .tmp/source-1.txt
-          test -s .tmp/source-2.txt
-          echo
-          echo "Source 1 lines: $(wc -l < .tmp/source-1.txt)"
-          echo "Source 2 lines: $(wc -l < .tmp/source-2.txt)"
-      # ==========================================================
-      # 4. Python processing
-      # ==========================================================
-      - name: Process rules
-        shell: bash
-        run: |
-          set -euo pipefail
-          python3 <<'PY'
-          import json
-          from pathlib import Path
-          from datetime import date
-          import re
-
-          # ======================================================
-          # Configuration
-          # ======================================================
           SOURCE_1 = Path(".tmp/source-1.txt")
           SOURCE_2 = Path(".tmp/source-2.txt")
           OUTPUT_SURGE = Path("ads-latest.txt")
@@ -210,54 +96,44 @@ jobs:
           OUTPUT_MIHOMO = Path("qx/ads-mihomo.yaml")
           OUTPUT_MIHOMO_DOMAIN = Path(".tmp/ads-mihomo-domain.txt")
           OUTPUT_SINGBOX = Path("qx/ads-singbox.json")
-
           VALID_TYPES = {
               "DOMAIN",
               "DOMAIN-SUFFIX",
               "DOMAIN-KEYWORD",
               "DOMAIN-SET",
           }
-
-          # ======================================================
           # Hidden Unicode characters
-          # ======================================================
           HIDDEN_CHARS = dict.fromkeys([
               "\ufeff", "\u200b", "\u200c", "\u200d", "\u2060", "\u00ad",
               "\u200e", "\u200f", "\u202a", "\u202b", "\u202c", "\u202d",
               "\u202e", "\u2066", "\u2067", "\u2068", "\u2069",
           ], None)
-
           DOMAIN_RE = re.compile(
               r"^(?=.{1,253}$)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\.)*[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?$",
               re.IGNORECASE,
           )
           IPV4_RE = re.compile(r"^(?:\d{1,3}\.){3}\d{1,3}$")
-
           def clean_text(text: str) -> str:
               text = text.translate(HIDDEN_CHARS)
               text = re.sub(r"\s*#.*$", "", text)
               return text.strip()
-
           def normalize_value(value: str) -> str:
               value = clean_text(value)
               value = value.strip().lower()
               value = value.strip(".")
               return value
-
           def is_ip_or_cidr(value: str) -> bool:
               if "/" in value or ":" in value:
                   return True
               if IPV4_RE.fullmatch(value):
                   return True
               return False
-
           def is_domain(value: str) -> bool:
               if not value or is_ip_or_cidr(value):
                   return False
               if any(ch.isspace() for ch in value):
                   return False
               return bool(DOMAIN_RE.fullmatch(value))
-
           def parse_source_1(line: str):
               line = clean_text(line)
               if not line or "," in line:
@@ -266,7 +142,6 @@ jobs:
               if not is_domain(value):
                   return None
               return "DOMAIN-SUFFIX", value
-
           def parse_source_2(line: str):
               line = clean_text(line)
               if not line or line.startswith("#"):
@@ -281,12 +156,10 @@ jobs:
               if "," in value or any(ch.isspace() for ch in value):
                   return None
               return rule_type, value
-
           def suffix_covers(domain: str, suffix: str) -> bool:
               if not is_domain(domain) or not is_domain(suffix):
                   return False
               return domain == suffix or domain.endswith("." + suffix)
-
           def has_parent_suffix(domain: str, suffix_set: set[str]) -> bool:
               if not is_domain(domain):
                   return False
@@ -298,7 +171,6 @@ jobs:
                   if parent in suffix_set:
                       return True
               return False
-
           # 1. Read Source 1
           source1_rules = []
           with SOURCE_1.open("r", encoding="utf-8", errors="replace") as f:
@@ -306,7 +178,6 @@ jobs:
                   rule = parse_source_1(raw_line)
                   if rule:
                       source1_rules.append(rule)
-
           # 2. Read Source 2
           source2_rules = []
           with SOURCE_2.open("r", encoding="utf-8", errors="replace") as f:
@@ -314,7 +185,6 @@ jobs:
                   rule = parse_source_2(raw_line)
                   if rule:
                       source2_rules.append(rule)
-
           # 3. Merge & Deduplicate
           unique_rules = []
           seen = set()
@@ -322,13 +192,11 @@ jobs:
               if rule not in seen:
                   seen.add(rule)
                   unique_rules.append(rule)
-
           all_suffixes = {val for r_type, val in unique_rules if r_type == "DOMAIN-SUFFIX" and is_domain(val)}
           surviving_suffixes = set()
           for suffix in sorted(all_suffixes, key=lambda x: (x.count("."), x)):
               if not has_parent_suffix(suffix, surviving_suffixes):
                   surviving_suffixes.add(suffix)
-
           final_rules = []
           removed_domain = 0
           for rule_type, value in unique_rules:
@@ -342,10 +210,8 @@ jobs:
                   final_rules.append((rule_type, value))
               elif rule_type == "DOMAIN-KEYWORD":
                   final_rules.append((rule_type, value))
-
           TYPE_ORDER = {"DOMAIN": 0, "DOMAIN-SUFFIX": 1, "DOMAIN-KEYWORD": 2, "DOMAIN-SET": 3}
           final_rules.sort(key=lambda rule: (TYPE_ORDER[rule[0]], rule[1]))
-
           checked_rules = []
           final_seen = set()
           for rule in final_rules:
@@ -353,12 +219,10 @@ jobs:
                   final_seen.add(rule)
                   checked_rules.append(rule)
           final_rules = checked_rules
-
           # 11. Surge
           surge_lines = [f"# Auto merged Surge rules ({date.today().isoformat()})"]
           for rule_type, value in final_rules:
               surge_lines.append(f"{rule_type},{value}")
-
           # 12. MosDNS
           mosdns_lines = []
           for rule_type, value in final_rules:
@@ -368,7 +232,6 @@ jobs:
                   mosdns_lines.append(f"domain:{value}")
               elif rule_type == "DOMAIN-KEYWORD":
                   mosdns_lines.append(f"keyword:{value}")
-
           # 13. Quantumult X
           qx_lines = []
           for rule_type, value in final_rules:
@@ -378,9 +241,7 @@ jobs:
                   qx_lines.append(f"host-suffix,{value},reject")
               elif rule_type == "DOMAIN-KEYWORD":
                   qx_lines.append(f"host-keyword,{value},reject")
-
           # 14 & 15. Mihomo Domain Rules (YAML & MRS text source)
-          # 仅保留 DOMAIN 与 DOMAIN-SUFFIX（转换为 +.），不包含 KEYWORD
           mrs_lines = []
           for rule_type, value in final_rules:
               if rule_type in ("DOMAIN", "DOMAIN-SET"):
@@ -388,7 +249,6 @@ jobs:
               elif rule_type == "DOMAIN-SUFFIX":
                   mrs_lines.append(f"+.{value}")
           mrs_lines = sorted(set(mrs_lines))
-
           mihomo_lines = [
               "# Auto merged Mihomo rules",
               f"# Generated: {date.today().isoformat()}",
@@ -397,10 +257,7 @@ jobs:
           ]
           for domain_rule in mrs_lines:
               mihomo_lines.append(f"  - '{domain_rule}'")
-
-          # ======================================================
           # 16. Generate Sing-box Rule Set JSON (version: 5)
-          # ======================================================
           sb_domain = []
           sb_domain_suffix = []
           sb_domain_keyword = []
@@ -411,7 +268,6 @@ jobs:
                   sb_domain_suffix.append(value)
               elif rule_type == "DOMAIN-KEYWORD":
                   sb_domain_keyword.append(value)
-
           sb_rule_item = {}
           if sb_domain:
               sb_rule_item["domain"] = sorted(set(sb_domain))
@@ -419,12 +275,10 @@ jobs:
               sb_rule_item["domain_suffix"] = sorted(set(sb_domain_suffix))
           if sb_domain_keyword:
               sb_rule_item["domain_keyword"] = sorted(set(sb_domain_keyword))
-
           singbox_data = {
               "version": 5,
               "rules": [sb_rule_item] if sb_rule_item else []
           }
-
           # Atomic write
           def atomic_write(path: Path, lines):
               path.parent.mkdir(parents=True, exist_ok=True)
@@ -432,14 +286,12 @@ jobs:
               data = "\n".join(lines) + "\n"
               tmp.write_text(data, encoding="utf-8", newline="\n")
               tmp.replace(path)
-
           atomic_write(OUTPUT_SURGE, surge_lines)
           atomic_write(OUTPUT_MOSDNS, mosdns_lines)
           atomic_write(OUTPUT_QX, qx_lines)
           atomic_write(OUTPUT_MIHOMO, mihomo_lines)
           atomic_write(OUTPUT_MIHOMO_DOMAIN, mrs_lines)
           atomic_write(OUTPUT_SINGBOX, [json.dumps(singbox_data, indent=2, ensure_ascii=False)])
-
           print(f"Generated Sing-box JSON with {len(sb_domain)} domains, {len(sb_domain_suffix)} suffixes, {len(sb_domain_keyword)} keywords.")
           PY
       # ==========================================================
@@ -457,7 +309,7 @@ jobs:
               --retry 5 \
               --retry-delay 2 \
               --retry-all-errors \
-              "[https://api.github.com/repos/MetaCubeX/mihomo/releases/latest](https://api.github.com/repos/MetaCubeX/mihomo/releases/latest)" \
+              "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest" \
             | jq -r '
                 .assets[]
                 | select(
@@ -527,7 +379,6 @@ jobs:
       # 8. Validate MosDNS
       # ==========================================================
       - name: Validate MosDNS
-      # ... (保持不变)
         shell: bash
         run: |
           set -euo pipefail
@@ -620,7 +471,7 @@ jobs:
           echo "Mihomo MRS validation OK:"
           ls -lh qx/ads-mihomo.mrs
       # ==========================================================
-      # 12. Validate Sing-box JSON (New)
+      # 12. Validate Sing-box JSON
       # ==========================================================
       - name: Validate Sing-box JSON
         shell: bash
