@@ -996,7 +996,6 @@ domain:magsrv.com
 domain:mall.bilibili.com
 domain:mask.icloud.com
 domain:mcdn.bilivideo.cn
-domain:mdap.alipay.com
 domain:mdn.open.wo.cn
 domain:mediacloud.xiaohongshu.com
 domain:mentamob.com

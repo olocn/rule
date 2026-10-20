@@ -997,7 +997,6 @@ DOMAIN-SUFFIX,magsrv.com
 DOMAIN-SUFFIX,mall.bilibili.com
 DOMAIN-SUFFIX,mask.icloud.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
-DOMAIN-SUFFIX,mdap.alipay.com
 DOMAIN-SUFFIX,mdn.open.wo.cn
 DOMAIN-SUFFIX,mediacloud.xiaohongshu.com
 DOMAIN-SUFFIX,mentamob.com
