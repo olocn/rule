@@ -5,15 +5,12 @@ windy-78.site
 exoclick.com
 trafficjunky.net
 posthog.com
-zhls.qq.com
 Global-iuni.checktrustworthiness.com
 
 stats.v2core.com
 tracker.samplicio.us
 afs.ampaeservices.com
 events.data.microsoft.com
-adashx.ut.amap.com
-crashlytics.com
 scorecardresearch.com
 bangdao-tech.com
 tfogc.com
@@ -27,8 +24,6 @@ cnzz.com
 fancydsp.com
 statisticslinks.com
 pemsrv.com
-volces.com
-www.googleadservices.com
 heima911.com
 mobsurl.com
 rongcfg.com
@@ -51,53 +46,29 @@ xhey.top
 bridgeoos.com
 openinstall.io
 shangkmo.com
-
 bvmlt.top
 track.sitetag.us
-acs.waptest.taobao.com
+
 starplucker.cyapi.cn
 
 bytepluses.com
 braze.eu
-qchannel03.cn
+
 hkyzmssdk.kunlunjyk.com
 px.effirst.com
 safebrowsing.apple
-iadsdk.apple.com
+
 bugsnag.com
 ingest.sentry.io
 miaozhen.com
-analytics.plex.tv
 
-#18comic
-chnsrv.com
-magsrv.com
-clarity.ms
-ai-girls.media
-campfirecroutondecorator.com
-analytics.google.com
-dreamserve.dev
-snaptrckr.fun
+apple-safebrowsing.googleapis.com
 
-#百度
-66mobi.com
-wuchucloud.net
-
-rongnav.com
 #p2p
 # 字节跳动系
-bytefcdnrd.com
 pcdn.volcvideo.com
 nexusedgeio.com
-# 小米
-siomxity.net
-siomxity.com
 
-# 阿里
-umid.daily.alibaba.net
-fp.amap.com
-tbcache.com
-acs.youku.com
 pcdn.livelive.cn
 
 # QQ
@@ -107,23 +78,8 @@ ahdohpiechei.com
 vlivep2p.tc.qq.com
 erer.homeborn.cn
 p.tencentmusic.com
-stun.douyucdn.cn
-stun1.douyucdn.cn
-dyp2p-ali.douyucdn.cn
-dyp2p-hw.douyucdn.cn
-p2p-ali.douyucdn.cn
-p2pchunk-hw.douyucdn.cn
-p2pchunk-table.douyucdn.cn
-p2pchunk-ws.douyucdn.cn
-p2perrorlog.douyucdn.cn
-p2plive-ali.douyucdn.cn
-p2plive-ws.douyucdn.cn
-p2plog.douyucdn.cn
-p2pvod-ws.douyucdn.cn
 p2p.huya.com
-# 爱奇艺
-data-qvs.iqiyi.com
-tpa-hcdn.iqiyi.com
+
 # 其它
 ndcpp.com
 hypercachenode.com
@@ -149,11 +105,6 @@ ws-p2p.com
 pcdn.xmcdn.com
 stun.hitv.com
 
-#2345
-2345.com
-2345.cn
-2345.net
-2345.cc
 
 #美的
 iot.smartmidea.net
@@ -178,7 +129,6 @@ data.bilibili.com
 
 #  彩云
 abyss.cyapi.cn
-ad.cyapi.cn
 gather.colorfulclouds.net
 
 #  wps
@@ -202,21 +152,11 @@ adintl.cn
 xcultur.com
 api.wxcjgg.cn
 
-sogaha.cn
-anythinktech.com
-toponadss.com
 
 #  微信
-#dns.weixin.qq.com
-#dns.weixin.qq.com.cn
-#aedns.weixin.qq.com
-appcfg.v.qq.com
-
-# 云闪付
-ads.95516.com
-#switch.cup.com.cn
-#tysdk.95516.com
-ads.cup.com.cn
+dns.weixin.qq.com
+dns.weixin.qq.com.cn
+aedns.weixin.qq.com
 
 #httpdns
 42.81.232.18/32
@@ -269,36 +209,16 @@ dns.weibo.cn
 39.97.128.148/32
 39.97.130.51/32
 
-#小红书
-apppush-rts.xiaohongshu.com
-mediacloud.xiaohongshu.com
-
 
 # 小米
 app.chat.xiaomi.net
 httpdns.browser.miui.com
-resolver.msg.xiaomi.net
 trade.m.xiaomiyoupin.com
-tracking.intl.miui.com
 s.miwifi.com
 api.miwifi.com
 app.miwifi.com
 log.miwifi.com
 
-#拼夕夕
-stun.ekiga.net
-#api.pinduoduo.com
-apm-a.pinduoduo.com
-apm-b.pinduoduo.com
-m-apm.pinduoduo.com
-log.pinduoduo.com
-t-log.pinduoduo.com
-m-log.pinduoduo.com
-crash.pinduoduo.com
-track.pinduoduo.com
-trk.pinduoduo.com
-th.pinduoduo.com
-click.pinduoduo.com
 
 # 车来了
 logs.chelaile.net.cn
@@ -320,10 +240,6 @@ msmp.abchina.com.cn
 
 # 猫头鹰
 www.skyjos.com
-
-#高德
-amap-aos-info-nogw.amap.com
-free-aos-cdn-image.amap.com
 
 #一键登录
 #中国移动
@@ -355,8 +271,58 @@ admobile.top
 t44r60.com
 xdmi4s.com
 bossjs.rosfky.cn
-oia.zhihu.com
 
+
+deepermobile.com
+
+blackhole.m.jd.com
+jddebug.com
+icostapp.com
+browser-intake-datadoghq.com
+
+
+#什么值得买
+analytics-api-01.smzdm.com
+analytics-api.smzdm.com
+adx-api.zdmimg.com
+
+aaid.uyunad.com
+www.soboten.com
+detailroi.com
+
+adukwai.com
+
+
+
+# doc
+event.northghost.com
+appsflyersdk.com
+appcenter.ms
+
+# 百度
+yongche.baidu.com
+
+hicloud.com
+sogou.com
+sogoucdn.com
+dftoutiao.com
+huaweicloud.com
+huawei.com
+umengcloud.com
+umeng.com
+umengcloud.cn
+umeng.cn
+
+jads.co
+ra7.xyz
+app-analytics-services.com
+js96110.com.cn
+rou.one
+tagtic.cn
+cdn.rdrads.com
+img.ra12.xyz
+chaseherbalpasty.com
+muzzleexterminator.com
 # 360
 qianxin.com
 360.cn
@@ -388,82 +354,8 @@ qiku.com
 yunpan.cn
 yunpan.com.cn
 
-URL-REGEX,\d+\.\d+\.\d+\.\d+\/adpub
-URL-REGEX,\d+\.\d+\.\d+\.\d+\/d4
-URL-REGEX,\d+\.\d+\.\d+\.\d+/v\d+/d
-URL-REGEX,\d+\.\d+\.\d+\.\d+/d\d*
-URL-REGEX,/\d+/resolve
-URL-REGEX,/\d+/sign_d
-
-deepermobile.com
-
-blackhole.m.jd.com
-jddebug.com
-icostapp.com
-browser-intake-datadoghq.com
-
-
-#肉
-rou.one
-
-tagtic.cn
-cdn.rdrads.com
-img.ra12.xyz
-chaseherbalpasty.com
-muzzleexterminator.com
-
-amazon-adsystem.com
-
-#什么值得买
-analytics-api-01.smzdm.com
-analytics-api.smzdm.com
-adx-api.zdmimg.com
-aaid.uyunad.com
-www.soboten.com
-detailroi.com
-adukwai.com
-
-doubleclick.net
-www.google-analytics.com
-apple-safebrowsing.googleapis.com
-
-ad.gameley.com
-jpush.cn
-jpush.io
-jiguang.cn
-advlion.com
-
-jads.co
-
-# doc
-event.northghost.com
-appsflyersdk.com
-appcenter.ms
-
-# 百度
-afd.baidu.com
-qchannel01.cn
-# newclient.map.baidu.com
-yongche.baidu.com
-ecom.map.baidu.com
-
-hicloud.com
-sogou.com
-sogoucdn.com
-
-
-dftoutiao.com
-huaweicloud.com
-huawei.com
-umengcloud.com
-umeng.com
-umengcloud.cn
-umeng.cn
-
-ra7.xyz
-app-analytics-services.com
-
-js96110.com.cn
-mask.icloud.com
-
-fourier.taobao.com⁠
+#2345
+2345.com
+2345.cn
+2345.net
+2345.cc
