@@ -5,6 +5,7 @@ DOMAIN,1500026601.vodplayer.wxamedia.com
 DOMAIN,8le8le.com
 DOMAIN,8rn1y79f02-1.algolianet.com
 DOMAIN,a0.app.xiaomi.com
+DOMAIN,aaid.umeng.com
 DOMAIN,abtest-ch.snssdk.com
 DOMAIN,ad-api.4pyun.com
 DOMAIN,ad-cdn.qingting.fm
@@ -181,6 +182,8 @@ DOMAIN,ali-p2p-v2.pull.yximgs.com
 DOMAIN,alicoccdncnc-xn.inter.71edge.com
 DOMAIN,alicoccdnct-xn.inter.71edge.com
 DOMAIN,alltbcsp2p.baidu.com
+DOMAIN,alog.umeng.com
+DOMAIN,alogus.umeng.com
 DOMAIN,als.baidu.com
 DOMAIN,amdcopen.m.taobao.com
 DOMAIN,an.facebook.com
@@ -237,7 +240,9 @@ DOMAIN,applog.uc.cn
 DOMAIN,applog.zijieapi.com
 DOMAIN,applovin.com
 DOMAIN,aqyad.com
+DOMAIN,aspect-upush.umeng.com
 DOMAIN,audid-api.taobao.com
+DOMAIN,audid.umeng.com
 DOMAIN,b1-data.ads.heytapmobi.com
 DOMAIN,badjs.weixinbridge.com
 DOMAIN,baichuan-sdk.alicdn.com
@@ -277,6 +282,7 @@ DOMAIN,canvas-cdn.gdt.qq.com
 DOMAIN,catalog.fjwhcbsh.com
 DOMAIN,cbjs.baidu.com
 DOMAIN,ccc-x.jd.com
+DOMAIN,ccs.umeng.com
 DOMAIN,cdn-ad.wtzw.com
 DOMAIN,cdn-ads.oss-cn-shanghai.aliyuncs.com
 DOMAIN,cdn-plugin-sync-upgrade-juui.hismarttv.com
@@ -298,6 +304,9 @@ DOMAIN,click4.chinaliftoff.io
 DOMAIN,clog.miguvideo.com
 DOMAIN,cloooud.com
 DOMAIN,cn-api.anythinktech.com
+DOMAIN,cnlogs.umeng.com
+DOMAIN,cnlogs.umengcloud.com
+DOMAIN,cnzz.com
 DOMAIN,collect.kugou.com
 DOMAIN,commdata.v.qq.com
 DOMAIN,config.chsmarttv.com
@@ -354,6 +363,7 @@ DOMAIN,flurry.com
 DOMAIN,frontend-perf-service.e.kuaishou.com
 DOMAIN,fxgate.baidu.com
 DOMAIN,g-staic.ganjingworld.com
+DOMAIN,g.dtv.cn.miaozhen.com
 DOMAIN,g.fancyapi.com
 DOMAIN,g2.ganjing.world
 DOMAIN,game.loveota.com
@@ -585,6 +595,7 @@ DOMAIN,pica-ad-api.diwodiwo.xyz
 DOMAIN,pig.pupuapi.com
 DOMAIN,pixon.ads-pixiv.net
 DOMAIN,pl.cp31.ott.cibntv.net
+DOMAIN,plbslog.umeng.com
 DOMAIN,pms.mb.qq.com
 DOMAIN,policy.video.ptqy.gitv.tv
 DOMAIN,pos.baidu.com
@@ -608,6 +619,7 @@ DOMAIN,res1.applovin.com
 DOMAIN,res1.hubcloud.com.cn
 DOMAIN,res2.hubcloud.com.cn
 DOMAIN,res3.hubcloud.com.cn
+DOMAIN,resolve.umeng.com
 DOMAIN,review.gdtimg.com
 DOMAIN,rlog.popin.cc
 DOMAIN,rms-drcn.platform.dbankcloud.cn
@@ -702,6 +714,7 @@ DOMAIN,tdsdk.cpatrk.net
 DOMAIN,tdsdk.xdrig.com
 DOMAIN,telecome.cn
 DOMAIN,telemetry.sdk.inmobi.com
+DOMAIN,tencent-dtv.m.cn.miaozhen.com
 DOMAIN,test.ad.xiaomi.com
 DOMAIN,test.e.ad.xiaomi.com
 DOMAIN,tj.b.qq.com
@@ -747,6 +760,7 @@ DOMAIN,tx-ad.a.yximgs.com
 DOMAIN,tx-kmpaudio.pull.yximgs.com
 DOMAIN,tx-p2p-pull.live-voip.com
 DOMAIN,tx-p2p-v2.pull.yximgs.com
+DOMAIN,tytx.m.cn.miaozhen.com
 DOMAIN,tz.sec.xiaomi.com
 DOMAIN,uapi.ads.heytapmobi.com
 DOMAIN,udc.yahoo.com
@@ -754,6 +768,8 @@ DOMAIN,udcm.yahoo.com
 DOMAIN,uedas.qidian.com
 DOMAIN,ulog-sdk.gifshow.com
 DOMAIN,ulogjs.gifshow.com
+DOMAIN,ulogs.umeng.com
+DOMAIN,ulogs.umengcloud.com
 DOMAIN,umengacs.m.taobao.com
 DOMAIN,umengjmacs.m.taobao.com
 DOMAIN,umini.shujupie.com
@@ -768,6 +784,7 @@ DOMAIN,upgrade-update.hismarttv.com
 DOMAIN,uranus.jd.com
 DOMAIN,us.l.qq.com
 DOMAIN,usr-api.aiclk.com
+DOMAIN,utoken.umeng.com
 DOMAIN,v.110route.cn
 DOMAIN,v.adx.hubcloud.com.cn
 DOMAIN,v1-ad.video.yximgs.com
@@ -817,6 +834,7 @@ DOMAIN,wxsnsdythumb.wxs.qq.com
 DOMAIN,xadsmartget.adgain.cn
 DOMAIN,xc.gdt.qq.com
 DOMAIN,xcx.dcad01.com
+DOMAIN,xiaomi-dtv.m.cn.miaozhen.com
 DOMAIN,xlog.jd.com
 DOMAIN,xlviiirdr.com
 DOMAIN,xlviirdr.com
@@ -874,7 +892,6 @@ DOMAIN-SUFFIX,analytics-api-01.smzdm.com
 DOMAIN-SUFFIX,analytics-api.smzdm.com
 DOMAIN-SUFFIX,api.miwifi.com
 DOMAIN-SUFFIX,api.share.mob.com
-DOMAIN-SUFFIX,api.vc.bilibili.com
 DOMAIN-SUFFIX,api.wxcjgg.cn
 DOMAIN-SUFFIX,apihw.yazhijian.com
 DOMAIN-SUFFIX,app-ads-services.com
@@ -890,14 +907,12 @@ DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,auth.wosms.cn
 DOMAIN-SUFFIX,bangdao-tech.com
 DOMAIN-SUFFIX,banguomq.com
-DOMAIN-SUFFIX,baomitu.com
 DOMAIN-SUFFIX,biligame.com
 DOMAIN-SUFFIX,blackhole.m.jd.com
 DOMAIN-SUFFIX,bossjs.rosfky.cn
 DOMAIN-SUFFIX,branch.io
 DOMAIN-SUFFIX,braze.eu
 DOMAIN-SUFFIX,bridgeoos.com
-DOMAIN-SUFFIX,broadcast.chat.bilibili.com
 DOMAIN-SUFFIX,browser-intake-datadoghq.com
 DOMAIN-SUFFIX,bsccdn.net
 DOMAIN-SUFFIX,bsclink.cn
@@ -910,7 +925,6 @@ DOMAIN-SUFFIX,cdn.rdrads.com
 DOMAIN-SUFFIX,channingkiki.top
 DOMAIN-SUFFIX,chaseherbalpasty.com
 DOMAIN-SUFFIX,cm.bilibili.com
-DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,config.cmpassport.com
 DOMAIN-SUFFIX,data.bilibili.com
 DOMAIN-SUFFIX,dataflow.biliapi.com
@@ -921,8 +935,6 @@ DOMAIN-SUFFIX,dftoutiao.com
 DOMAIN-SUFFIX,dlied1.cdntips.net
 DOMAIN-SUFFIX,dns.jd.com
 DOMAIN-SUFFIX,dns.weibo.cn
-DOMAIN-SUFFIX,dns.weixin.qq.com
-DOMAIN-SUFFIX,dns.weixin.qq.com.cn
 DOMAIN-SUFFIX,dnspod.meituan.httpdns.qcloud.com
 DOMAIN-SUFFIX,dnspod.meituan.httpdns.start.qcloud.com
 DOMAIN-SUFFIX,doh.iqiyi.com
@@ -990,11 +1002,9 @@ DOMAIN-SUFFIX,lofter.httpdns.c.163.com
 DOMAIN-SUFFIX,log.miwifi.com
 DOMAIN-SUFFIX,log1.cmpassport.com
 DOMAIN-SUFFIX,logs.chelaile.net.cn
-DOMAIN-SUFFIX,mall.bilibili.com
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
 DOMAIN-SUFFIX,mdn.open.wo.cn
 DOMAIN-SUFFIX,mentamob.com
-DOMAIN-SUFFIX,miaozhen.com
 DOMAIN-SUFFIX,mobsurl.com
 DOMAIN-SUFFIX,mp-prod.smartmidea.net
 DOMAIN-SUFFIX,msmp.abchina.com.cn
@@ -1040,9 +1050,6 @@ DOMAIN-SUFFIX,qiku.com
 DOMAIN-SUFFIX,qwertyuioplkjhg.vip
 DOMAIN-SUFFIX,ra7.xyz
 DOMAIN-SUFFIX,resolvers-cn.httpdns.aliyuncs.com
-DOMAIN-SUFFIX,rong-edge.com
-DOMAIN-SUFFIX,rongcfg.com
-DOMAIN-SUFFIX,ronghub.com
 DOMAIN-SUFFIX,rou.one
 DOMAIN-SUFFIX,s.miwifi.com
 DOMAIN-SUFFIX,safebrowsing.apple
@@ -1069,14 +1076,11 @@ DOMAIN-SUFFIX,tfogc.com
 DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN-SUFFIX,track.sitetag.us
 DOMAIN-SUFFIX,tracker.samplicio.us
-DOMAIN-SUFFIX,trade.m.xiaomiyoupin.com
 DOMAIN-SUFFIX,trafficjunky.net
 DOMAIN-SUFFIX,ubixioe.com
 DOMAIN-SUFFIX,uhabo.com
 DOMAIN-SUFFIX,umeng.cn
-DOMAIN-SUFFIX,umeng.com
 DOMAIN-SUFFIX,umengcloud.cn
-DOMAIN-SUFFIX,umengcloud.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-SUFFIX,verify.cmpassport.com
 DOMAIN-SUFFIX,vlion.cn

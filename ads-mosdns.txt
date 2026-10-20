@@ -4,6 +4,7 @@ full:1500026601.vodplayer.wxamedia.com
 full:8le8le.com
 full:8rn1y79f02-1.algolianet.com
 full:a0.app.xiaomi.com
+full:aaid.umeng.com
 full:abtest-ch.snssdk.com
 full:ad-api.4pyun.com
 full:ad-cdn.qingting.fm
@@ -180,6 +181,8 @@ full:ali-p2p-v2.pull.yximgs.com
 full:alicoccdncnc-xn.inter.71edge.com
 full:alicoccdnct-xn.inter.71edge.com
 full:alltbcsp2p.baidu.com
+full:alog.umeng.com
+full:alogus.umeng.com
 full:als.baidu.com
 full:amdcopen.m.taobao.com
 full:an.facebook.com
@@ -236,7 +239,9 @@ full:applog.uc.cn
 full:applog.zijieapi.com
 full:applovin.com
 full:aqyad.com
+full:aspect-upush.umeng.com
 full:audid-api.taobao.com
+full:audid.umeng.com
 full:b1-data.ads.heytapmobi.com
 full:badjs.weixinbridge.com
 full:baichuan-sdk.alicdn.com
@@ -276,6 +281,7 @@ full:canvas-cdn.gdt.qq.com
 full:catalog.fjwhcbsh.com
 full:cbjs.baidu.com
 full:ccc-x.jd.com
+full:ccs.umeng.com
 full:cdn-ad.wtzw.com
 full:cdn-ads.oss-cn-shanghai.aliyuncs.com
 full:cdn-plugin-sync-upgrade-juui.hismarttv.com
@@ -297,6 +303,9 @@ full:click4.chinaliftoff.io
 full:clog.miguvideo.com
 full:cloooud.com
 full:cn-api.anythinktech.com
+full:cnlogs.umeng.com
+full:cnlogs.umengcloud.com
+full:cnzz.com
 full:collect.kugou.com
 full:commdata.v.qq.com
 full:config.chsmarttv.com
@@ -353,6 +362,7 @@ full:flurry.com
 full:frontend-perf-service.e.kuaishou.com
 full:fxgate.baidu.com
 full:g-staic.ganjingworld.com
+full:g.dtv.cn.miaozhen.com
 full:g.fancyapi.com
 full:g2.ganjing.world
 full:game.loveota.com
@@ -584,6 +594,7 @@ full:pica-ad-api.diwodiwo.xyz
 full:pig.pupuapi.com
 full:pixon.ads-pixiv.net
 full:pl.cp31.ott.cibntv.net
+full:plbslog.umeng.com
 full:pms.mb.qq.com
 full:policy.video.ptqy.gitv.tv
 full:pos.baidu.com
@@ -607,6 +618,7 @@ full:res1.applovin.com
 full:res1.hubcloud.com.cn
 full:res2.hubcloud.com.cn
 full:res3.hubcloud.com.cn
+full:resolve.umeng.com
 full:review.gdtimg.com
 full:rlog.popin.cc
 full:rms-drcn.platform.dbankcloud.cn
@@ -701,6 +713,7 @@ full:tdsdk.cpatrk.net
 full:tdsdk.xdrig.com
 full:telecome.cn
 full:telemetry.sdk.inmobi.com
+full:tencent-dtv.m.cn.miaozhen.com
 full:test.ad.xiaomi.com
 full:test.e.ad.xiaomi.com
 full:tj.b.qq.com
@@ -746,6 +759,7 @@ full:tx-ad.a.yximgs.com
 full:tx-kmpaudio.pull.yximgs.com
 full:tx-p2p-pull.live-voip.com
 full:tx-p2p-v2.pull.yximgs.com
+full:tytx.m.cn.miaozhen.com
 full:tz.sec.xiaomi.com
 full:uapi.ads.heytapmobi.com
 full:udc.yahoo.com
@@ -753,6 +767,8 @@ full:udcm.yahoo.com
 full:uedas.qidian.com
 full:ulog-sdk.gifshow.com
 full:ulogjs.gifshow.com
+full:ulogs.umeng.com
+full:ulogs.umengcloud.com
 full:umengacs.m.taobao.com
 full:umengjmacs.m.taobao.com
 full:umini.shujupie.com
@@ -767,6 +783,7 @@ full:upgrade-update.hismarttv.com
 full:uranus.jd.com
 full:us.l.qq.com
 full:usr-api.aiclk.com
+full:utoken.umeng.com
 full:v.110route.cn
 full:v.adx.hubcloud.com.cn
 full:v1-ad.video.yximgs.com
@@ -816,6 +833,7 @@ full:wxsnsdythumb.wxs.qq.com
 full:xadsmartget.adgain.cn
 full:xc.gdt.qq.com
 full:xcx.dcad01.com
+full:xiaomi-dtv.m.cn.miaozhen.com
 full:xlog.jd.com
 full:xlviiirdr.com
 full:xlviirdr.com
@@ -873,7 +891,6 @@ domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
 domain:api.miwifi.com
 domain:api.share.mob.com
-domain:api.vc.bilibili.com
 domain:api.wxcjgg.cn
 domain:apihw.yazhijian.com
 domain:app-ads-services.com
@@ -889,14 +906,12 @@ domain:atrace.chelaile.net.cn
 domain:auth.wosms.cn
 domain:bangdao-tech.com
 domain:banguomq.com
-domain:baomitu.com
 domain:biligame.com
 domain:blackhole.m.jd.com
 domain:bossjs.rosfky.cn
 domain:branch.io
 domain:braze.eu
 domain:bridgeoos.com
-domain:broadcast.chat.bilibili.com
 domain:browser-intake-datadoghq.com
 domain:bsccdn.net
 domain:bsclink.cn
@@ -909,7 +924,6 @@ domain:cdn.rdrads.com
 domain:channingkiki.top
 domain:chaseherbalpasty.com
 domain:cm.bilibili.com
-domain:cnzz.com
 domain:config.cmpassport.com
 domain:data.bilibili.com
 domain:dataflow.biliapi.com
@@ -920,8 +934,6 @@ domain:dftoutiao.com
 domain:dlied1.cdntips.net
 domain:dns.jd.com
 domain:dns.weibo.cn
-domain:dns.weixin.qq.com
-domain:dns.weixin.qq.com.cn
 domain:dnspod.meituan.httpdns.qcloud.com
 domain:dnspod.meituan.httpdns.start.qcloud.com
 domain:doh.iqiyi.com
@@ -989,11 +1001,9 @@ domain:lofter.httpdns.c.163.com
 domain:log.miwifi.com
 domain:log1.cmpassport.com
 domain:logs.chelaile.net.cn
-domain:mall.bilibili.com
 domain:mcdn.bilivideo.cn
 domain:mdn.open.wo.cn
 domain:mentamob.com
-domain:miaozhen.com
 domain:mobsurl.com
 domain:mp-prod.smartmidea.net
 domain:msmp.abchina.com.cn
@@ -1039,9 +1049,6 @@ domain:qiku.com
 domain:qwertyuioplkjhg.vip
 domain:ra7.xyz
 domain:resolvers-cn.httpdns.aliyuncs.com
-domain:rong-edge.com
-domain:rongcfg.com
-domain:ronghub.com
 domain:rou.one
 domain:s.miwifi.com
 domain:safebrowsing.apple
@@ -1068,14 +1075,11 @@ domain:tfogc.com
 domain:tianmu.mobi
 domain:track.sitetag.us
 domain:tracker.samplicio.us
-domain:trade.m.xiaomiyoupin.com
 domain:trafficjunky.net
 domain:ubixioe.com
 domain:uhabo.com
 domain:umeng.cn
-domain:umeng.com
 domain:umengcloud.cn
-domain:umengcloud.com
 domain:unityads.unity3d.com
 domain:verify.cmpassport.com
 domain:vlion.cn
