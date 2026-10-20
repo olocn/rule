@@ -20,19 +20,15 @@ app-ads-services.com
 adjust.com
 adjust.io
 suishouzj.com
-cnzz.com
 fancydsp.com
 statisticslinks.com
 pemsrv.com
 heima911.com
 mobsurl.com
-rongcfg.com
 yksdks.com
 hpplay.cn
 hiaiabc.com
-ronghub.com
 banguomq.com
-rong-edge.com
 api.share.mob.com
 deepinstall.com
 channingkiki.top
@@ -60,7 +56,6 @@ safebrowsing.apple
 
 bugsnag.com
 ingest.sentry.io
-miaozhen.com
 
 apple-safebrowsing.googleapis.com
 
@@ -116,12 +111,8 @@ mp-prod.smartmidea.net
 mcdn.bilivideo.cn
 dataflow.biliapi.com
 httpdns.bilivideo.com
-mall.bilibili.com
-api.vc.bilibili.com
-broadcast.chat.bilibili.com
 #upos-sz-mirrorcos.bilivideo.com
 biligame.com
-data.bilibili.com⁠
 cm.bilibili.com
 p2p.bilibili.com
 pcdn.bilibili.com
@@ -154,8 +145,8 @@ api.wxcjgg.cn
 
 
 #  微信
-dns.weixin.qq.com
-dns.weixin.qq.com.cn
+#dns.weixin.qq.com
+#dns.weixin.qq.com.cn
 aedns.weixin.qq.com
 
 #httpdns
@@ -179,7 +170,7 @@ httpdns.bcelive.com
 httpdns.c.cdnhwc2.com
 doh.iqiyi.com
 dns.jd.com
-101.124.19.122/3
+101.124.19.122/32
 103.224.222.208/32
 httpdns.kg.qq.com
 httpdns.calorietech.com
@@ -213,7 +204,6 @@ dns.weibo.cn
 # 小米
 app.chat.xiaomi.net
 httpdns.browser.miui.com
-trade.m.xiaomiyoupin.com
 s.miwifi.com
 api.miwifi.com
 app.miwifi.com
@@ -308,8 +298,6 @@ sogoucdn.com
 dftoutiao.com
 huaweicloud.com
 huawei.com
-umengcloud.com
-umeng.com
 umengcloud.cn
 umeng.cn
 
@@ -341,7 +329,6 @@ qihu.com
 360.net
 360webcache.com
 qhupdate.com
-baomitu.com
 360kuai.com
 qhres2.com
 qhimgs.com
