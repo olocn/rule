@@ -23,6 +23,7 @@ full:ad.cctv.com
 full:ad.cyapi.cn
 full:ad.doubleclick.net
 full:ad.duoduo.link
+full:ad.hpplay.cn
 full:ad.maoyan.com
 full:ad.partner.gifshow.com
 full:ad.player.baidu.com
@@ -45,12 +46,15 @@ full:adash-emas.cn-hangzhou.aliyuncs.com
 full:adashbc.ut.taobao.com
 full:adashx.m.taobao.com
 full:adbox.sina.com.cn
+full:adc.hpplay.cn
 full:adcanvas.com
+full:adcdn.hpplay.cn
 full:adcdn.tencentmusic.com
 full:adclick.g.doubleclick.net
 full:adclick.tencentmusic.com
 full:adcolony.com
 full:addata.jd.com
+full:adeng.hpplay.cn
 full:adexp.chinaliftoff.io
 full:adexp.liftoff.io
 full:adexpo.tencentmusic.com
@@ -58,6 +62,8 @@ full:adfilter.imtt.qq.com
 full:adguanggao.eee114.com
 full:adimg.uve.weibo.com
 full:adjust.cn
+full:adjust.com
+full:adks.hpplay.cn
 full:adlink-api.huan.tv
 full:adlog.vivo.com.cn
 full:adm.funshion.com
@@ -308,6 +314,7 @@ full:cnlogs.umengcloud.com
 full:cnzz.com
 full:collect.kugou.com
 full:commdata.v.qq.com
+full:conf.hpplay.cn
 full:config.chsmarttv.com
 full:config.inmobi.com
 full:cpc-service-square.aiclk.com
@@ -383,6 +390,7 @@ full:googletagservices-cn.com
 full:gorgon.youdao.com
 full:gromore.pangolin-sdk-toutiao.com
 full:grs.dbankcloud.com
+full:gslb.hpplay.cn
 full:gvideo.qpic.cn
 full:gw5.push.mcp.weibo.cn
 full:gw6.push.mcp.weibo.cn
@@ -398,6 +406,7 @@ full:hexagon-analytics.com
 full:hlog.bigda.com
 full:hm.baidu.com
 full:hmma.baidu.com
+full:hotupgrade.hpplay.cn
 full:houyi.kkmh.com
 full:hpplay.cdn.cibn.cc
 full:httpdns.ocloud.oppomobile.com
@@ -423,7 +432,9 @@ full:ifacelog.iqiyi.com
 full:ifs.tanx.com
 full:ii.gdt.qq.com
 full:image-ad.sm.cn
+full:image.hpplay.cn
 full:images.outbrainimg.com
+full:imdns.hpplay.cn
 full:img-c.heytapimage.com
 full:img-x.jd.com
 full:img.adnyg.com.w.kunlungr.com
@@ -592,6 +603,7 @@ full:pgdt.ugdtimg.com
 full:pica-a-display.diwodiwo.xyz
 full:pica-ad-api.diwodiwo.xyz
 full:pig.pupuapi.com
+full:pin.hpplay.cn
 full:pixon.ads-pixiv.net
 full:pl.cp31.ott.cibntv.net
 full:plbslog.umeng.com
@@ -623,6 +635,8 @@ full:review.gdtimg.com
 full:rlog.popin.cc
 full:rms-drcn.platform.dbankcloud.cn
 full:roi.soulapp.cn
+full:rp.hpplay.cn
+full:rps.hpplay.cn
 full:rpt.gdt.qq.com
 full:rt.applovin.com
 full:rt.applvn.com
@@ -632,6 +646,7 @@ full:s.amazon-adsystem.com
 full:s1.cdn-sg.advlion.com
 full:s8t.teads.tv
 full:saad.ms.zhangyue.net
+full:saas.hpplay.cn
 full:safebrowsing.urlsec.qq.com
 full:samsung-com.112.2o7.net
 full:samsungads.com
@@ -651,6 +666,7 @@ full:sdk.markmedia.com.cn
 full:sdk.mobads.adwangmai.com
 full:sdkapi.cloooud.com
 full:sdkapp.uve.weibo.com
+full:sdkauth.hpplay.cn
 full:sdkconf.avlyun.com
 full:sdkconfig.ad.intl.xiaomi.com
 full:sdkconfig.ad.xiaomi.com
@@ -673,6 +689,7 @@ full:service.vmos.cn
 full:sf16-static.i18n-pglstatp.com
 full:sigmob.com
 full:skdisplay.jd.com
+full:sl.hpplay.cn
 full:slb-p2p.vcloud.ks-live.com
 full:smad.ms.zhangyue.net
 full:smartad.10010.com
@@ -754,6 +771,7 @@ full:tracking-adnet.vivo.com.cn
 full:tracking.miui.com
 full:tracking.rus.miui.com
 full:tuiguang.meitu.com
+full:tvapp.hpplay.cn
 full:tvuser-ch.cedock.com
 full:tx-ad.a.yximgs.com
 full:tx-kmpaudio.pull.yximgs.com
@@ -799,6 +817,8 @@ full:video-ad.sm.cn
 full:video-dsp.pddpic.com
 full:video.dispatch.tc.qq.com
 full:video.market.xiaomi.com
+full:vipauth.hpplay.cn
+full:vipgslb.hpplay.cn
 full:virusinfo-cloudscan-cn.heytapmobi.com
 full:vlive.qqvideo.tc.qq.com
 full:volc.bj.ad.track.66mobi.com
@@ -874,8 +894,6 @@ domain:ad.gameley.com
 domain:ad.hunyuan.tencent.com
 domain:adashxgc.ut.taobao.com
 domain:adintl.cn
-domain:adjust.com
-domain:adjust.io
 domain:admobile.top
 domain:adsmoloco.com
 domain:adtianmai.com
@@ -957,7 +975,6 @@ domain:hiaiabc.com
 domain:hicloud.com
 domain:hkyzmssdk.kunlunjyk.com
 domain:hmrz.wo.cn
-domain:hpplay.cn
 domain:httpdns-api.aliyuncs.com
 domain:httpdns-sc.aliyuncs.com
 domain:httpdns-sdk.n.netease.com

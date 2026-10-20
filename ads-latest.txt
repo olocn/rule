@@ -24,6 +24,7 @@ DOMAIN,ad.cctv.com
 DOMAIN,ad.cyapi.cn
 DOMAIN,ad.doubleclick.net
 DOMAIN,ad.duoduo.link
+DOMAIN,ad.hpplay.cn
 DOMAIN,ad.maoyan.com
 DOMAIN,ad.partner.gifshow.com
 DOMAIN,ad.player.baidu.com
@@ -46,12 +47,15 @@ DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
 DOMAIN,adashbc.ut.taobao.com
 DOMAIN,adashx.m.taobao.com
 DOMAIN,adbox.sina.com.cn
+DOMAIN,adc.hpplay.cn
 DOMAIN,adcanvas.com
+DOMAIN,adcdn.hpplay.cn
 DOMAIN,adcdn.tencentmusic.com
 DOMAIN,adclick.g.doubleclick.net
 DOMAIN,adclick.tencentmusic.com
 DOMAIN,adcolony.com
 DOMAIN,addata.jd.com
+DOMAIN,adeng.hpplay.cn
 DOMAIN,adexp.chinaliftoff.io
 DOMAIN,adexp.liftoff.io
 DOMAIN,adexpo.tencentmusic.com
@@ -59,6 +63,8 @@ DOMAIN,adfilter.imtt.qq.com
 DOMAIN,adguanggao.eee114.com
 DOMAIN,adimg.uve.weibo.com
 DOMAIN,adjust.cn
+DOMAIN,adjust.com
+DOMAIN,adks.hpplay.cn
 DOMAIN,adlink-api.huan.tv
 DOMAIN,adlog.vivo.com.cn
 DOMAIN,adm.funshion.com
@@ -309,6 +315,7 @@ DOMAIN,cnlogs.umengcloud.com
 DOMAIN,cnzz.com
 DOMAIN,collect.kugou.com
 DOMAIN,commdata.v.qq.com
+DOMAIN,conf.hpplay.cn
 DOMAIN,config.chsmarttv.com
 DOMAIN,config.inmobi.com
 DOMAIN,cpc-service-square.aiclk.com
@@ -384,6 +391,7 @@ DOMAIN,googletagservices-cn.com
 DOMAIN,gorgon.youdao.com
 DOMAIN,gromore.pangolin-sdk-toutiao.com
 DOMAIN,grs.dbankcloud.com
+DOMAIN,gslb.hpplay.cn
 DOMAIN,gvideo.qpic.cn
 DOMAIN,gw5.push.mcp.weibo.cn
 DOMAIN,gw6.push.mcp.weibo.cn
@@ -399,6 +407,7 @@ DOMAIN,hexagon-analytics.com
 DOMAIN,hlog.bigda.com
 DOMAIN,hm.baidu.com
 DOMAIN,hmma.baidu.com
+DOMAIN,hotupgrade.hpplay.cn
 DOMAIN,houyi.kkmh.com
 DOMAIN,hpplay.cdn.cibn.cc
 DOMAIN,httpdns.ocloud.oppomobile.com
@@ -424,7 +433,9 @@ DOMAIN,ifacelog.iqiyi.com
 DOMAIN,ifs.tanx.com
 DOMAIN,ii.gdt.qq.com
 DOMAIN,image-ad.sm.cn
+DOMAIN,image.hpplay.cn
 DOMAIN,images.outbrainimg.com
+DOMAIN,imdns.hpplay.cn
 DOMAIN,img-c.heytapimage.com
 DOMAIN,img-x.jd.com
 DOMAIN,img.adnyg.com.w.kunlungr.com
@@ -593,6 +604,7 @@ DOMAIN,pgdt.ugdtimg.com
 DOMAIN,pica-a-display.diwodiwo.xyz
 DOMAIN,pica-ad-api.diwodiwo.xyz
 DOMAIN,pig.pupuapi.com
+DOMAIN,pin.hpplay.cn
 DOMAIN,pixon.ads-pixiv.net
 DOMAIN,pl.cp31.ott.cibntv.net
 DOMAIN,plbslog.umeng.com
@@ -624,6 +636,8 @@ DOMAIN,review.gdtimg.com
 DOMAIN,rlog.popin.cc
 DOMAIN,rms-drcn.platform.dbankcloud.cn
 DOMAIN,roi.soulapp.cn
+DOMAIN,rp.hpplay.cn
+DOMAIN,rps.hpplay.cn
 DOMAIN,rpt.gdt.qq.com
 DOMAIN,rt.applovin.com
 DOMAIN,rt.applvn.com
@@ -633,6 +647,7 @@ DOMAIN,s.amazon-adsystem.com
 DOMAIN,s1.cdn-sg.advlion.com
 DOMAIN,s8t.teads.tv
 DOMAIN,saad.ms.zhangyue.net
+DOMAIN,saas.hpplay.cn
 DOMAIN,safebrowsing.urlsec.qq.com
 DOMAIN,samsung-com.112.2o7.net
 DOMAIN,samsungads.com
@@ -652,6 +667,7 @@ DOMAIN,sdk.markmedia.com.cn
 DOMAIN,sdk.mobads.adwangmai.com
 DOMAIN,sdkapi.cloooud.com
 DOMAIN,sdkapp.uve.weibo.com
+DOMAIN,sdkauth.hpplay.cn
 DOMAIN,sdkconf.avlyun.com
 DOMAIN,sdkconfig.ad.intl.xiaomi.com
 DOMAIN,sdkconfig.ad.xiaomi.com
@@ -674,6 +690,7 @@ DOMAIN,service.vmos.cn
 DOMAIN,sf16-static.i18n-pglstatp.com
 DOMAIN,sigmob.com
 DOMAIN,skdisplay.jd.com
+DOMAIN,sl.hpplay.cn
 DOMAIN,slb-p2p.vcloud.ks-live.com
 DOMAIN,smad.ms.zhangyue.net
 DOMAIN,smartad.10010.com
@@ -755,6 +772,7 @@ DOMAIN,tracking-adnet.vivo.com.cn
 DOMAIN,tracking.miui.com
 DOMAIN,tracking.rus.miui.com
 DOMAIN,tuiguang.meitu.com
+DOMAIN,tvapp.hpplay.cn
 DOMAIN,tvuser-ch.cedock.com
 DOMAIN,tx-ad.a.yximgs.com
 DOMAIN,tx-kmpaudio.pull.yximgs.com
@@ -800,6 +818,8 @@ DOMAIN,video-ad.sm.cn
 DOMAIN,video-dsp.pddpic.com
 DOMAIN,video.dispatch.tc.qq.com
 DOMAIN,video.market.xiaomi.com
+DOMAIN,vipauth.hpplay.cn
+DOMAIN,vipgslb.hpplay.cn
 DOMAIN,virusinfo-cloudscan-cn.heytapmobi.com
 DOMAIN,vlive.qqvideo.tc.qq.com
 DOMAIN,volc.bj.ad.track.66mobi.com
@@ -875,8 +895,6 @@ DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN-SUFFIX,ad.hunyuan.tencent.com
 DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN-SUFFIX,adintl.cn
-DOMAIN-SUFFIX,adjust.com
-DOMAIN-SUFFIX,adjust.io
 DOMAIN-SUFFIX,admobile.top
 DOMAIN-SUFFIX,adsmoloco.com
 DOMAIN-SUFFIX,adtianmai.com
@@ -958,7 +976,6 @@ DOMAIN-SUFFIX,hiaiabc.com
 DOMAIN-SUFFIX,hicloud.com
 DOMAIN-SUFFIX,hkyzmssdk.kunlunjyk.com
 DOMAIN-SUFFIX,hmrz.wo.cn
-DOMAIN-SUFFIX,hpplay.cn
 DOMAIN-SUFFIX,httpdns-api.aliyuncs.com
 DOMAIN-SUFFIX,httpdns-sc.aliyuncs.com
 DOMAIN-SUFFIX,httpdns-sdk.n.netease.com
