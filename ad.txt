@@ -96,7 +96,6 @@ siomxity.com
 # 阿里
 umid.daily.alibaba.net
 fp.amap.com
-mdap.alipay.com
 tbcache.com
 acs.youku.com
 pcdn.livelive.cn
