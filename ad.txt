@@ -17,8 +17,6 @@ tfogc.com
 branch.io
 amplitude.com
 app-ads-services.com
-adjust.com
-adjust.io
 suishouzj.com
 fancydsp.com
 statisticslinks.com
@@ -26,7 +24,6 @@ pemsrv.com
 heima911.com
 mobsurl.com
 yksdks.com
-hpplay.cn
 hiaiabc.com
 banguomq.com
 api.share.mob.com
