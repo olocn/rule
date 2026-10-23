@@ -7,6 +7,7 @@ trafficjunky.net
 posthog.com
 Global-iuni.checktrustworthiness.com
 
+www.google-analytics.com
 stats.v2core.com
 tracker.samplicio.us
 afs.ampaeservices.com
