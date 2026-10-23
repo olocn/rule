@@ -1117,6 +1117,7 @@ DOMAIN-SUFFIX,wap.cmpassport.com
 DOMAIN-SUFFIX,windy-78.site
 DOMAIN-SUFFIX,ws-p2p.com
 DOMAIN-SUFFIX,www.cmpassport.com
+DOMAIN-SUFFIX,www.google-analytics.com
 DOMAIN-SUFFIX,www.skyjos.com
 DOMAIN-SUFFIX,www.soboten.com
 DOMAIN-SUFFIX,xcamera-filter.oss-cn-beijing.aliyuncs.com
