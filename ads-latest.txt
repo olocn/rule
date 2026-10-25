@@ -432,7 +432,6 @@ DOMAIN,iadcontent.apple.com
 DOMAIN,iadctest.qwapi.com
 DOMAIN,iadmoo.apple.com
 DOMAIN,iadmusicmat.music.126.net
-DOMAIN,iadsdk.apple.com
 DOMAIN,ifacelog.iqiyi.com
 DOMAIN,ifs.tanx.com
 DOMAIN,ii.gdt.qq.com
@@ -1012,6 +1011,7 @@ DOMAIN-SUFFIX,httpsdns.baidu.com
 DOMAIN-SUFFIX,huawei.com
 DOMAIN-SUFFIX,huaweicloud.com
 DOMAIN-SUFFIX,hypercachenode.com
+DOMAIN-SUFFIX,iadsdk.apple.com
 DOMAIN-SUFFIX,icostapp.com
 DOMAIN-SUFFIX,id.mail.wo.cn
 DOMAIN-SUFFIX,ietheivaicai.com

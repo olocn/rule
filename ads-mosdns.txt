@@ -431,7 +431,6 @@ full:iadcontent.apple.com
 full:iadctest.qwapi.com
 full:iadmoo.apple.com
 full:iadmusicmat.music.126.net
-full:iadsdk.apple.com
 full:ifacelog.iqiyi.com
 full:ifs.tanx.com
 full:ii.gdt.qq.com
@@ -1011,6 +1010,7 @@ domain:httpsdns.baidu.com
 domain:huawei.com
 domain:huaweicloud.com
 domain:hypercachenode.com
+domain:iadsdk.apple.com
 domain:icostapp.com
 domain:id.mail.wo.cn
 domain:ietheivaicai.com
