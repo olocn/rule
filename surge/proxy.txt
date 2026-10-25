@@ -1,6 +1,7 @@
 #18漫画
 DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,picacomic.com
+DOMAIN-SUFFIX,jmapiproxy3.cc
 DOMAIN-SUFFIX,jmdanjonproxy.vip
 DOMAIN-SUFFIX,cdnhjk.net
 DOMAIN-SUFFIX,nnhanman.com
