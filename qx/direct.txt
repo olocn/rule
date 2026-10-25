@@ -34,6 +34,7 @@ HOST,app-analytics-services.com,DIRECT
 HOST,app-measurement-cn.com,DIRECT
 HOST,app-measurement.com,DIRECT
 HOST,app-site-association.cdn-apple.com,DIRECT
+HOST,app.moegirl.org.cn,DIRECT
 HOST,appldnld.apple.com,DIRECT
 HOST,appldnld.g.aaplimg.com,DIRECT
 HOST,appleid.cdn-apple.com,DIRECT
@@ -482,6 +483,7 @@ HOST,statics.teams.cdn.office.net,DIRECT
 HOST,status.alibabacloud.com,DIRECT
 HOST,stocks-sparkline-lb.apple.com.akadns.net,DIRECT
 HOST,stocks-sparkline.apple.com,DIRECT
+HOST,storage.moegirl.org.cn,DIRECT
 HOST,store.apple.com,DIRECT
 HOST,store.apple.com.edgekey.net,DIRECT
 HOST,store.apple.com.edgekey.net.globalredir.akadns.net,DIRECT
@@ -19678,6 +19680,7 @@ HOST-SUFFIX,cdqszz.com,DIRECT
 HOST-SUFFIX,cdqz.net,DIRECT
 HOST-SUFFIX,cdrbs.net,DIRECT
 HOST-SUFFIX,cdrcb.com,DIRECT
+HOST-SUFFIX,cdrcbank.com,DIRECT
 HOST-SUFFIX,cdren.net,DIRECT
 HOST-SUFFIX,cdrich.com,DIRECT
 HOST-SUFFIX,cdrjob.com,DIRECT
@@ -25543,6 +25546,7 @@ HOST-SUFFIX,cqyxzz.com,DIRECT
 HOST-SUFFIX,cqyygz.com,DIRECT
 HOST-SUFFIX,cqyyjc.com,DIRECT
 HOST-SUFFIX,cqyysx.com,DIRECT
+HOST-SUFFIX,cqyyxc.com,DIRECT
 HOST-SUFFIX,cqyyzy.com,DIRECT
 HOST-SUFFIX,cqyznews.com,DIRECT
 HOST-SUFFIX,cqzbcg.com,DIRECT
@@ -49052,6 +49056,7 @@ HOST-SUFFIX,ibaitiao.com,DIRECT
 HOST-SUFFIX,ibaizhu.com,DIRECT
 HOST-SUFFIX,ibanana.club,DIRECT
 HOST-SUFFIX,ibanbu.com,DIRECT
+HOST-SUFFIX,ibangbank.com,DIRECT
 HOST-SUFFIX,ibanggo.com,DIRECT
 HOST-SUFFIX,ibangkf.com,DIRECT
 HOST-SUFFIX,ibangtiao.com,DIRECT
@@ -51123,6 +51128,7 @@ HOST-SUFFIX,ishuw.com,DIRECT
 HOST-SUFFIX,isi-gf.com,DIRECT
 HOST-SUFFIX,isiabio.com,DIRECT
 HOST-SUFFIX,isign.ren,DIRECT
+HOST-SUFFIX,isigning.com,DIRECT
 HOST-SUFFIX,isigu.com,DIRECT
 HOST-SUFFIX,isilent.me,DIRECT
 HOST-SUFFIX,isilicontech.com,DIRECT
@@ -65500,7 +65506,6 @@ HOST-SUFFIX,moeelf.com,DIRECT
 HOST-SUFFIX,moefactory.com,DIRECT
 HOST-SUFFIX,moefantasy.com,DIRECT
 HOST-SUFFIX,moefou.org,DIRECT
-HOST-SUFFIX,moegirl.org,DIRECT
 HOST-SUFFIX,moegirl.tw,DIRECT
 HOST-SUFFIX,moehot.com,DIRECT
 HOST-SUFFIX,moehu.org,DIRECT
@@ -66933,6 +66938,7 @@ HOST-SUFFIX,nanningyouhua.com,DIRECT
 HOST-SUFFIX,nannjlnk.com,DIRECT
 HOST-SUFFIX,nanobody-biolab.com,DIRECT
 HOST-SUFFIX,nanochrom.com,DIRECT
+HOST-SUFFIX,nanocorechip.com,DIRECT
 HOST-SUFFIX,nanoeast.net,DIRECT
 HOST-SUFFIX,nanoer.net,DIRECT
 HOST-SUFFIX,nanoinglobal.com,DIRECT
