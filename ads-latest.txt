@@ -653,7 +653,6 @@ DOMAIN,rt.applovin.com
 DOMAIN,rt.applvn.com
 DOMAIN,rtb.adxsenmeng.com
 DOMAIN,rtb.voiceads.cn
-DOMAIN,s.amazon-adsystem.com
 DOMAIN,s1.cdn-sg.advlion.com
 DOMAIN,s8t.teads.tv
 DOMAIN,saad.ms.zhangyue.net
@@ -916,6 +915,7 @@ DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,aedns.weixin.qq.com
 DOMAIN-SUFFIX,afs.ampaeservices.com
 DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,analytics-api-01.smzdm.com
 DOMAIN-SUFFIX,analytics-api.smzdm.com

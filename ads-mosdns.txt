@@ -652,7 +652,6 @@ full:rt.applovin.com
 full:rt.applvn.com
 full:rtb.adxsenmeng.com
 full:rtb.voiceads.cn
-full:s.amazon-adsystem.com
 full:s1.cdn-sg.advlion.com
 full:s8t.teads.tv
 full:saad.ms.zhangyue.net
@@ -915,6 +914,7 @@ domain:adxapi.readgps.com
 domain:aedns.weixin.qq.com
 domain:afs.ampaeservices.com
 domain:ahdohpiechei.com
+domain:amazon-adsystem.com
 domain:amplitude.com
 domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
