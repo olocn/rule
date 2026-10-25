@@ -1094,6 +1094,7 @@ domain:sogoucdn.com
 domain:starplucker.cyapi.cn
 domain:statisticslinks.com
 domain:stats.v2core.com
+domain:status-ipv6.jpush.cn
 domain:stun.hitv.com
 domain:suishouzj.com
 domain:szbdyd.com

@@ -1095,6 +1095,7 @@ DOMAIN-SUFFIX,sogoucdn.com
 DOMAIN-SUFFIX,starplucker.cyapi.cn
 DOMAIN-SUFFIX,statisticslinks.com
 DOMAIN-SUFFIX,stats.v2core.com
+DOMAIN-SUFFIX,status-ipv6.jpush.cn
 DOMAIN-SUFFIX,stun.hitv.com
 DOMAIN-SUFFIX,suishouzj.com
 DOMAIN-SUFFIX,szbdyd.com
