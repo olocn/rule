@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-11-05
+# Generated: 2026-11-06
 # behavior: domain
 payload:
   - '+.17admob.com'
@@ -97,6 +97,7 @@ payload:
   - '+.event.northghost.com'
   - '+.events.data.microsoft.com'
   - '+.exoclick.com'
+  - '+.fancyapi.com'
   - '+.fancydsp.com'
   - '+.gather.colorfulclouds.net'
   - '+.gepush.com'
@@ -626,7 +627,6 @@ payload:
   - 'events.reddit.com'
   - 'events.redditmedia.com'
   - 'eventv1.leidong.rayenergytech.com'
-  - 'fancyapi.com'
   - 'fclog.baidu.com'
   - 'feed-image.baidu.com'
   - 'file.daihuo.qq.com'
@@ -637,7 +637,6 @@ payload:
   - 'g-staic.ganjingworld.com'
   - 'g.cn.miaozhen.com'
   - 'g.dtv.cn.miaozhen.com'
-  - 'g.fancyapi.com'
   - 'g2.ganjing.world'
   - 'game.loveota.com'
   - 'gdfp.gifshow.com'
@@ -733,10 +732,8 @@ payload:
   - 'ks.ferlytc.com'
   - 'ks.pull.yximgs.com'
   - 'kwpush.kuwo.cn'
-  - 'l6.fancyapi.com'
   - 'launcher.smart-tv.cn'
   - 'launcherimg.smart-tv.cn'
-  - 'lftxali.fancyapi.com'
   - 'lh3.googleadsserving.cn'
   - 'litchiads.com'
   - 'live-api.hktvmall.com'
@@ -992,7 +989,6 @@ payload:
   - 't.track.ad.xiaomi.com'
   - 't002.ottcn.com'
   - 't1.teads.tv'
-  - 't2.fancyapi.com'
   - 't7z.cupid.ptqy.gitv.tv'
   - 'tangram.e.qq.com'
   - 'target.ads.jihuoniao.com'

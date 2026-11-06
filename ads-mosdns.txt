@@ -363,7 +363,6 @@ full:events-drcn.op.dbankcloud.cn
 full:events.reddit.com
 full:events.redditmedia.com
 full:eventv1.leidong.rayenergytech.com
-full:fancyapi.com
 full:fclog.baidu.com
 full:feed-image.baidu.com
 full:file.daihuo.qq.com
@@ -374,7 +373,6 @@ full:fxgate.baidu.com
 full:g-staic.ganjingworld.com
 full:g.cn.miaozhen.com
 full:g.dtv.cn.miaozhen.com
-full:g.fancyapi.com
 full:g2.ganjing.world
 full:game.loveota.com
 full:gdfp.gifshow.com
@@ -470,10 +468,8 @@ full:ks-p2p.pull.yximgs.com
 full:ks.ferlytc.com
 full:ks.pull.yximgs.com
 full:kwpush.kuwo.cn
-full:l6.fancyapi.com
 full:launcher.smart-tv.cn
 full:launcherimg.smart-tv.cn
-full:lftxali.fancyapi.com
 full:lh3.googleadsserving.cn
 full:litchiads.com
 full:live-api.hktvmall.com
@@ -729,7 +725,6 @@ full:t.teads.tv
 full:t.track.ad.xiaomi.com
 full:t002.ottcn.com
 full:t1.teads.tv
-full:t2.fancyapi.com
 full:t7z.cupid.ptqy.gitv.tv
 full:tangram.e.qq.com
 full:target.ads.jihuoniao.com
@@ -972,6 +967,7 @@ domain:erer.homeborn.cn
 domain:event.northghost.com
 domain:events.data.microsoft.com
 domain:exoclick.com
+domain:fancyapi.com
 domain:fancydsp.com
 domain:gather.colorfulclouds.net
 domain:gepush.com

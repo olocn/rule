@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-11-05)
+# Auto merged Surge rules (2026-11-06)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -364,7 +364,6 @@ DOMAIN,events-drcn.op.dbankcloud.cn
 DOMAIN,events.reddit.com
 DOMAIN,events.redditmedia.com
 DOMAIN,eventv1.leidong.rayenergytech.com
-DOMAIN,fancyapi.com
 DOMAIN,fclog.baidu.com
 DOMAIN,feed-image.baidu.com
 DOMAIN,file.daihuo.qq.com
@@ -375,7 +374,6 @@ DOMAIN,fxgate.baidu.com
 DOMAIN,g-staic.ganjingworld.com
 DOMAIN,g.cn.miaozhen.com
 DOMAIN,g.dtv.cn.miaozhen.com
-DOMAIN,g.fancyapi.com
 DOMAIN,g2.ganjing.world
 DOMAIN,game.loveota.com
 DOMAIN,gdfp.gifshow.com
@@ -471,10 +469,8 @@ DOMAIN,ks-p2p.pull.yximgs.com
 DOMAIN,ks.ferlytc.com
 DOMAIN,ks.pull.yximgs.com
 DOMAIN,kwpush.kuwo.cn
-DOMAIN,l6.fancyapi.com
 DOMAIN,launcher.smart-tv.cn
 DOMAIN,launcherimg.smart-tv.cn
-DOMAIN,lftxali.fancyapi.com
 DOMAIN,lh3.googleadsserving.cn
 DOMAIN,litchiads.com
 DOMAIN,live-api.hktvmall.com
@@ -730,7 +726,6 @@ DOMAIN,t.teads.tv
 DOMAIN,t.track.ad.xiaomi.com
 DOMAIN,t002.ottcn.com
 DOMAIN,t1.teads.tv
-DOMAIN,t2.fancyapi.com
 DOMAIN,t7z.cupid.ptqy.gitv.tv
 DOMAIN,tangram.e.qq.com
 DOMAIN,target.ads.jihuoniao.com
@@ -973,6 +968,7 @@ DOMAIN-SUFFIX,erer.homeborn.cn
 DOMAIN-SUFFIX,event.northghost.com
 DOMAIN-SUFFIX,events.data.microsoft.com
 DOMAIN-SUFFIX,exoclick.com
+DOMAIN-SUFFIX,fancyapi.com
 DOMAIN-SUFFIX,fancydsp.com
 DOMAIN-SUFFIX,gather.colorfulclouds.net
 DOMAIN-SUFFIX,gepush.com
