@@ -916,6 +916,7 @@ domain:api.miwifi.com
 domain:api.share.mob.com
 domain:api.wxcjgg.cn
 domain:apihw.yazhijian.com
+domain:apmplus.volces.com
 domain:app-ads-services.com
 domain:app-analytics-services.com
 domain:app.chat.xiaomi.net
@@ -964,6 +965,7 @@ domain:dutils.com
 domain:easytomessage.com
 domain:enrichgw.10010.com
 domain:erer.homeborn.cn
+domain:errnewlog.umeng.com
 domain:event.northghost.com
 domain:events.data.microsoft.com
 domain:exoclick.com

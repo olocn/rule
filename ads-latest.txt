@@ -917,6 +917,7 @@ DOMAIN-SUFFIX,api.miwifi.com
 DOMAIN-SUFFIX,api.share.mob.com
 DOMAIN-SUFFIX,api.wxcjgg.cn
 DOMAIN-SUFFIX,apihw.yazhijian.com
+DOMAIN-SUFFIX,apmplus.volces.com
 DOMAIN-SUFFIX,app-ads-services.com
 DOMAIN-SUFFIX,app-analytics-services.com
 DOMAIN-SUFFIX,app.chat.xiaomi.net
@@ -965,6 +966,7 @@ DOMAIN-SUFFIX,dutils.com
 DOMAIN-SUFFIX,easytomessage.com
 DOMAIN-SUFFIX,enrichgw.10010.com
 DOMAIN-SUFFIX,erer.homeborn.cn
+DOMAIN-SUFFIX,errnewlog.umeng.com
 DOMAIN-SUFFIX,event.northghost.com
 DOMAIN-SUFFIX,events.data.microsoft.com
 DOMAIN-SUFFIX,exoclick.com
