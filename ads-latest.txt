@@ -952,6 +952,7 @@ DOMAIN-SUFFIX,deepermobile.com
 DOMAIN-SUFFIX,deepinstall.com
 DOMAIN-SUFFIX,detailroi.com
 DOMAIN-SUFFIX,dftoutiao.com
+DOMAIN-SUFFIX,dg.k.jd.com
 DOMAIN-SUFFIX,dlied1.cdntips.net
 DOMAIN-SUFFIX,dns.jd.com
 DOMAIN-SUFFIX,dns.weibo.cn
@@ -1078,6 +1079,7 @@ DOMAIN-SUFFIX,ra7.xyz
 DOMAIN-SUFFIX,resolvers-cn.httpdns.aliyuncs.com
 DOMAIN-SUFFIX,rou.one
 DOMAIN-SUFFIX,s.miwifi.com
+DOMAIN-SUFFIX,s1.dcloud.net.cn
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,saxysec.com
 DOMAIN-SUFFIX,scorecardresearch.com
@@ -1088,6 +1090,7 @@ DOMAIN-SUFFIX,smsks1.cmpassport.com
 DOMAIN-SUFFIX,smtcdns.com
 DOMAIN-SUFFIX,smtcdns.net
 DOMAIN-SUFFIX,so.com
+DOMAIN-SUFFIX,sofire.baidu.com
 DOMAIN-SUFFIX,sogou.com
 DOMAIN-SUFFIX,sogoucdn.com
 DOMAIN-SUFFIX,starplucker.cyapi.cn
@@ -1098,6 +1101,7 @@ DOMAIN-SUFFIX,suishouzj.com
 DOMAIN-SUFFIX,szbdyd.com
 DOMAIN-SUFFIX,t44r60.com
 DOMAIN-SUFFIX,tagtic.cn
+DOMAIN-SUFFIX,tdid.m.qq.com
 DOMAIN-SUFFIX,tfogc.com
 DOMAIN-SUFFIX,tianmu.mobi
 DOMAIN-SUFFIX,track.sitetag.us

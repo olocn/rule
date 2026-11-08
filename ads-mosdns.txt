@@ -951,6 +951,7 @@ domain:deepermobile.com
 domain:deepinstall.com
 domain:detailroi.com
 domain:dftoutiao.com
+domain:dg.k.jd.com
 domain:dlied1.cdntips.net
 domain:dns.jd.com
 domain:dns.weibo.cn
@@ -1077,6 +1078,7 @@ domain:ra7.xyz
 domain:resolvers-cn.httpdns.aliyuncs.com
 domain:rou.one
 domain:s.miwifi.com
+domain:s1.dcloud.net.cn
 domain:safebrowsing.apple
 domain:saxysec.com
 domain:scorecardresearch.com
@@ -1087,6 +1089,7 @@ domain:smsks1.cmpassport.com
 domain:smtcdns.com
 domain:smtcdns.net
 domain:so.com
+domain:sofire.baidu.com
 domain:sogou.com
 domain:sogoucdn.com
 domain:starplucker.cyapi.cn
@@ -1097,6 +1100,7 @@ domain:suishouzj.com
 domain:szbdyd.com
 domain:t44r60.com
 domain:tagtic.cn
+domain:tdid.m.qq.com
 domain:tfogc.com
 domain:tianmu.mobi
 domain:track.sitetag.us
