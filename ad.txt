@@ -6,7 +6,8 @@ windy-78.site
 
 jpush.cn
 jiguang.cn
-ap-beijing.cls.tencentcs.com
+cls.tencentcs.com
+log.aliyuncs.com
 kf0309.3g.qq.com
 ut.taobao.com
 errnewlog.umeng.com
