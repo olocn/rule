@@ -451,8 +451,6 @@ full:irc.qubiankeji.com
 full:ixav-cse.avlyun.com
 full:iyfbodn.com
 full:janapi.jd.com
-full:jiguang.cn
-full:jpush.cn
 full:jpush.html5.qq.com
 full:jpush.io
 full:jswebcollects.kugou.com
@@ -909,6 +907,7 @@ domain:amazon-adsystem.com
 domain:amplitude.com
 domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
+domain:ap-beijing.cls.tencentcs.com
 domain:api.miwifi.com
 domain:api.share.mob.com
 domain:api.wxcjgg.cn
@@ -1016,7 +1015,9 @@ domain:iot1.midea.com.cn
 domain:iotsdk.midea.com
 domain:jads.co
 domain:jddebug.com
+domain:jiguang.cn
 domain:jomodns.cn
+domain:jpush.cn
 domain:js96110.com.cn
 domain:kf0309.3g.qq.com
 domain:kspcdn.com
@@ -1090,7 +1091,6 @@ domain:sogoucdn.com
 domain:starplucker.cyapi.cn
 domain:statisticslinks.com
 domain:stats.v2core.com
-domain:status-ipv6.jpush.cn
 domain:stun.hitv.com
 domain:suishouzj.com
 domain:szbdyd.com

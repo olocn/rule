@@ -452,8 +452,6 @@ DOMAIN,irc.qubiankeji.com
 DOMAIN,ixav-cse.avlyun.com
 DOMAIN,iyfbodn.com
 DOMAIN,janapi.jd.com
-DOMAIN,jiguang.cn
-DOMAIN,jpush.cn
 DOMAIN,jpush.html5.qq.com
 DOMAIN,jpush.io
 DOMAIN,jswebcollects.kugou.com
@@ -910,6 +908,7 @@ DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,analytics-api-01.smzdm.com
 DOMAIN-SUFFIX,analytics-api.smzdm.com
+DOMAIN-SUFFIX,ap-beijing.cls.tencentcs.com
 DOMAIN-SUFFIX,api.miwifi.com
 DOMAIN-SUFFIX,api.share.mob.com
 DOMAIN-SUFFIX,api.wxcjgg.cn
@@ -1017,7 +1016,9 @@ DOMAIN-SUFFIX,iot1.midea.com.cn
 DOMAIN-SUFFIX,iotsdk.midea.com
 DOMAIN-SUFFIX,jads.co
 DOMAIN-SUFFIX,jddebug.com
+DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,jomodns.cn
+DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,js96110.com.cn
 DOMAIN-SUFFIX,kf0309.3g.qq.com
 DOMAIN-SUFFIX,kspcdn.com
@@ -1091,7 +1092,6 @@ DOMAIN-SUFFIX,sogoucdn.com
 DOMAIN-SUFFIX,starplucker.cyapi.cn
 DOMAIN-SUFFIX,statisticslinks.com
 DOMAIN-SUFFIX,stats.v2core.com
-DOMAIN-SUFFIX,status-ipv6.jpush.cn
 DOMAIN-SUFFIX,stun.hitv.com
 DOMAIN-SUFFIX,suishouzj.com
 DOMAIN-SUFFIX,szbdyd.com
