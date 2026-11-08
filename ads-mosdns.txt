@@ -907,7 +907,6 @@ domain:amazon-adsystem.com
 domain:amplitude.com
 domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
-domain:ap-beijing.cls.tencentcs.com
 domain:api.miwifi.com
 domain:api.share.mob.com
 domain:api.wxcjgg.cn
@@ -943,6 +942,7 @@ domain:bytepluses.com
 domain:cdn.rdrads.com
 domain:channingkiki.top
 domain:chaseherbalpasty.com
+domain:cls.tencentcs.com
 domain:cm.bilibili.com
 domain:config.cmpassport.com
 domain:data.bilibili.com
@@ -1023,6 +1023,7 @@ domain:kf0309.3g.qq.com
 domain:kspcdn.com
 domain:kuiniuca.com
 domain:lofter.httpdns.c.163.com
+domain:log.aliyuncs.com
 domain:log.miwifi.com
 domain:log1.cmpassport.com
 domain:logs.chelaile.net.cn

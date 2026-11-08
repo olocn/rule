@@ -908,7 +908,6 @@ DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,analytics-api-01.smzdm.com
 DOMAIN-SUFFIX,analytics-api.smzdm.com
-DOMAIN-SUFFIX,ap-beijing.cls.tencentcs.com
 DOMAIN-SUFFIX,api.miwifi.com
 DOMAIN-SUFFIX,api.share.mob.com
 DOMAIN-SUFFIX,api.wxcjgg.cn
@@ -944,6 +943,7 @@ DOMAIN-SUFFIX,bytepluses.com
 DOMAIN-SUFFIX,cdn.rdrads.com
 DOMAIN-SUFFIX,channingkiki.top
 DOMAIN-SUFFIX,chaseherbalpasty.com
+DOMAIN-SUFFIX,cls.tencentcs.com
 DOMAIN-SUFFIX,cm.bilibili.com
 DOMAIN-SUFFIX,config.cmpassport.com
 DOMAIN-SUFFIX,data.bilibili.com
@@ -1024,6 +1024,7 @@ DOMAIN-SUFFIX,kf0309.3g.qq.com
 DOMAIN-SUFFIX,kspcdn.com
 DOMAIN-SUFFIX,kuiniuca.com
 DOMAIN-SUFFIX,lofter.httpdns.c.163.com
+DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN-SUFFIX,log.miwifi.com
 DOMAIN-SUFFIX,log1.cmpassport.com
 DOMAIN-SUFFIX,logs.chelaile.net.cn
