@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-11-07
+# Generated: 2026-11-08
 # behavior: domain
 payload:
   - '+.17admob.com'
@@ -26,7 +26,6 @@ payload:
   - '+.abyss.cyapi.cn'
   - '+.ad.gameley.com'
   - '+.ad.hunyuan.tencent.com'
-  - '+.adashxgc.ut.taobao.com'
   - '+.adintl.cn'
   - '+.admobile.top'
   - '+.adsmoloco.com'
@@ -151,6 +150,7 @@ payload:
   - '+.jddebug.com'
   - '+.jomodns.cn'
   - '+.js96110.com.cn'
+  - '+.kf0309.3g.qq.com'
   - '+.kspcdn.com'
   - '+.kuiniuca.com'
   - '+.lofter.httpdns.c.163.com'
@@ -238,6 +238,7 @@ payload:
   - '+.umeng.cn'
   - '+.umengcloud.cn'
   - '+.unityads.unity3d.com'
+  - '+.ut.taobao.com'
   - '+.verify.cmpassport.com'
   - '+.vlion.cn'
   - '+.vlivep2p.tc.qq.com'
@@ -311,7 +312,6 @@ payload:
   - 'adapi.izuiyou.com'
   - 'adapi.yynetwk.com'
   - 'adash-emas.cn-hangzhou.aliyuncs.com'
-  - 'adashbc.ut.taobao.com'
   - 'adashx.m.taobao.com'
   - 'adbox.sina.com.cn'
   - 'adc.hpplay.cn'
@@ -662,7 +662,6 @@ payload:
   - 'gvideo.qpic.cn'
   - 'gw5.push.mcp.weibo.cn'
   - 'gw6.push.mcp.weibo.cn'
-  - 'h-adashx.ut.taobao.com'
   - 'h.trace.qq.com'
   - 'h5.analytics.126.net'
   - 'h5.hpplay.com.cn'

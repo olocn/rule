@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-11-07)
+# Auto merged Surge rules (2026-11-08)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -46,7 +46,6 @@ DOMAIN,ad4.sina.com.cn
 DOMAIN,adapi.izuiyou.com
 DOMAIN,adapi.yynetwk.com
 DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
-DOMAIN,adashbc.ut.taobao.com
 DOMAIN,adashx.m.taobao.com
 DOMAIN,adbox.sina.com.cn
 DOMAIN,adc.hpplay.cn
@@ -397,7 +396,6 @@ DOMAIN,gslb.hpplay.cn
 DOMAIN,gvideo.qpic.cn
 DOMAIN,gw5.push.mcp.weibo.cn
 DOMAIN,gw6.push.mcp.weibo.cn
-DOMAIN,h-adashx.ut.taobao.com
 DOMAIN,h.trace.qq.com
 DOMAIN,h5.analytics.126.net
 DOMAIN,h5.hpplay.com.cn
@@ -897,7 +895,6 @@ DOMAIN-SUFFIX,aaid.uyunad.com
 DOMAIN-SUFFIX,abyss.cyapi.cn
 DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN-SUFFIX,ad.hunyuan.tencent.com
-DOMAIN-SUFFIX,adashxgc.ut.taobao.com
 DOMAIN-SUFFIX,adintl.cn
 DOMAIN-SUFFIX,admobile.top
 DOMAIN-SUFFIX,adsmoloco.com
@@ -1022,6 +1019,7 @@ DOMAIN-SUFFIX,jads.co
 DOMAIN-SUFFIX,jddebug.com
 DOMAIN-SUFFIX,jomodns.cn
 DOMAIN-SUFFIX,js96110.com.cn
+DOMAIN-SUFFIX,kf0309.3g.qq.com
 DOMAIN-SUFFIX,kspcdn.com
 DOMAIN-SUFFIX,kuiniuca.com
 DOMAIN-SUFFIX,lofter.httpdns.c.163.com
@@ -1109,6 +1107,7 @@ DOMAIN-SUFFIX,uhabo.com
 DOMAIN-SUFFIX,umeng.cn
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,ut.taobao.com
 DOMAIN-SUFFIX,verify.cmpassport.com
 DOMAIN-SUFFIX,vlion.cn
 DOMAIN-SUFFIX,vlivep2p.tc.qq.com

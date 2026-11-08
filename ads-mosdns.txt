@@ -45,7 +45,6 @@ full:ad4.sina.com.cn
 full:adapi.izuiyou.com
 full:adapi.yynetwk.com
 full:adash-emas.cn-hangzhou.aliyuncs.com
-full:adashbc.ut.taobao.com
 full:adashx.m.taobao.com
 full:adbox.sina.com.cn
 full:adc.hpplay.cn
@@ -396,7 +395,6 @@ full:gslb.hpplay.cn
 full:gvideo.qpic.cn
 full:gw5.push.mcp.weibo.cn
 full:gw6.push.mcp.weibo.cn
-full:h-adashx.ut.taobao.com
 full:h.trace.qq.com
 full:h5.analytics.126.net
 full:h5.hpplay.com.cn
@@ -896,7 +894,6 @@ domain:aaid.uyunad.com
 domain:abyss.cyapi.cn
 domain:ad.gameley.com
 domain:ad.hunyuan.tencent.com
-domain:adashxgc.ut.taobao.com
 domain:adintl.cn
 domain:admobile.top
 domain:adsmoloco.com
@@ -1021,6 +1018,7 @@ domain:jads.co
 domain:jddebug.com
 domain:jomodns.cn
 domain:js96110.com.cn
+domain:kf0309.3g.qq.com
 domain:kspcdn.com
 domain:kuiniuca.com
 domain:lofter.httpdns.c.163.com
@@ -1108,6 +1106,7 @@ domain:uhabo.com
 domain:umeng.cn
 domain:umengcloud.cn
 domain:unityads.unity3d.com
+domain:ut.taobao.com
 domain:verify.cmpassport.com
 domain:vlion.cn
 domain:vlivep2p.tc.qq.com
