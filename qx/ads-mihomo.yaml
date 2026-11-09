@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-11-08
+# Generated: 2026-11-09
 # behavior: domain
 payload:
   - '+.17admob.com'
