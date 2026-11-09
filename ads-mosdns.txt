@@ -1026,6 +1026,7 @@ domain:kuiniuca.com
 domain:lofter.httpdns.c.163.com
 domain:log.aliyuncs.com
 domain:log.miwifi.com
+domain:log.weixin.qq.com
 domain:log1.cmpassport.com
 domain:logs.chelaile.net.cn
 domain:mcdn.bilivideo.cn

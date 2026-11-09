@@ -1027,6 +1027,7 @@ DOMAIN-SUFFIX,kuiniuca.com
 DOMAIN-SUFFIX,lofter.httpdns.c.163.com
 DOMAIN-SUFFIX,log.aliyuncs.com
 DOMAIN-SUFFIX,log.miwifi.com
+DOMAIN-SUFFIX,log.weixin.qq.com
 DOMAIN-SUFFIX,log1.cmpassport.com
 DOMAIN-SUFFIX,logs.chelaile.net.cn
 DOMAIN-SUFFIX,mcdn.bilivideo.cn
