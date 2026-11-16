@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-11-15
+# Generated: 2026-11-16
 # behavior: domain
 payload:
   - '+.17admob.com'
@@ -435,6 +435,7 @@ payload:
   - 'adx-saas.advlion.com'
   - 'adx.ads.heytapmobi.com'
   - 'adx.ads.oppomobile.com'
+  - 'adx.anythinktech.com'
   - 'adx.appsdk.com.cn'
   - 'adx.sogaha.cn'
   - 'adx.tuia.cn'
@@ -453,6 +454,7 @@ payload:
   - 'alicoccdnct-xn.inter.71edge.com'
   - 'alltbcsp2p.baidu.com'
   - 'alog.umeng.com'
+  - 'alogsus.umeng.com'
   - 'alogus.umeng.com'
   - 'als.baidu.com'
   - 'amdcopen.m.taobao.com'
@@ -530,6 +532,7 @@ payload:
   - 'bes-mtj.baidu.com'
   - 'bgg.baidu.com'
   - 'bianxian.com'
+  - 'bid.shanghailingye.cn'
   - 'biz.weibo.com'
   - 'bj-td-menta-01-callback.advlion.com'
   - 'bj.ad.track.66mobi.com'
@@ -573,7 +576,10 @@ payload:
   - 'click4.chinaliftoff.io'
   - 'clog.miguvideo.com'
   - 'cloooud.com'
+  - 'cn-api-sec.anythinktech.com'
   - 'cn-api.anythinktech.com'
+  - 'cn-da.anythinktech.com'
+  - 'cn-tk.anythinktech.com'
   - 'cnlogs.umeng.com'
   - 'cnlogs.umengcloud.com'
   - 'cnzz.com'
@@ -618,6 +624,9 @@ payload:
   - 'ef-dongfeng.tanx.com'
   - 'engine.dcad01.com'
   - 'entry.baidu.com'
+  - 'errlog.umeng.com'
+  - 'errlogos.umeng.com'
+  - 'errnewlogos.umeng.com'
   - 'et-eus.w.inmobi.com'
   - 'event.tradplusad.com'
   - 'events-drcn.op.dbankcloud.cn'
@@ -964,6 +973,7 @@ payload:
   - 'sms.ads.oppomobile.com'
   - 'sngmta.qq.com'
   - 'snowflake.qq.com'
+  - 'ssapi.anythinktech.com'
   - 'ssp.cloooud.com'
   - 'staging-notify.sec.miui.com'
   - 'stat.dongqiudi.com'
@@ -1019,6 +1029,7 @@ payload:
   - 'tnc3-bjlgy.bytedance.com'
   - 'tnc3-bjlgy.snssdk.com'
   - 'tnc3-bjlgy.toutiaoapi.com'
+  - 'tobapplog.ctobsnssdk.com'
   - 'toblog.ctobsnssdk.com'
   - 'tpa-hcdn.iqiyi.com'
   - 'tpc.googlesyndication-cn.com'

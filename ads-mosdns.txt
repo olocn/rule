@@ -160,6 +160,7 @@ full:adx-os.anythinktech.com
 full:adx-saas.advlion.com
 full:adx.ads.heytapmobi.com
 full:adx.ads.oppomobile.com
+full:adx.anythinktech.com
 full:adx.appsdk.com.cn
 full:adx.sogaha.cn
 full:adx.tuia.cn
@@ -178,6 +179,7 @@ full:alicoccdncnc-xn.inter.71edge.com
 full:alicoccdnct-xn.inter.71edge.com
 full:alltbcsp2p.baidu.com
 full:alog.umeng.com
+full:alogsus.umeng.com
 full:alogus.umeng.com
 full:als.baidu.com
 full:amdcopen.m.taobao.com
@@ -255,6 +257,7 @@ full:beizi.biz
 full:bes-mtj.baidu.com
 full:bgg.baidu.com
 full:bianxian.com
+full:bid.shanghailingye.cn
 full:biz.weibo.com
 full:bj-td-menta-01-callback.advlion.com
 full:bj.ad.track.66mobi.com
@@ -298,7 +301,10 @@ full:click.oneplus.cn
 full:click4.chinaliftoff.io
 full:clog.miguvideo.com
 full:cloooud.com
+full:cn-api-sec.anythinktech.com
 full:cn-api.anythinktech.com
+full:cn-da.anythinktech.com
+full:cn-tk.anythinktech.com
 full:cnlogs.umeng.com
 full:cnlogs.umengcloud.com
 full:cnzz.com
@@ -343,6 +349,9 @@ full:edge.ads.twitch.tv
 full:ef-dongfeng.tanx.com
 full:engine.dcad01.com
 full:entry.baidu.com
+full:errlog.umeng.com
+full:errlogos.umeng.com
+full:errnewlogos.umeng.com
 full:et-eus.w.inmobi.com
 full:event.tradplusad.com
 full:events-drcn.op.dbankcloud.cn
@@ -689,6 +698,7 @@ full:smetrics.samsung.com
 full:sms.ads.oppomobile.com
 full:sngmta.qq.com
 full:snowflake.qq.com
+full:ssapi.anythinktech.com
 full:ssp.cloooud.com
 full:staging-notify.sec.miui.com
 full:stat.dongqiudi.com
@@ -744,6 +754,7 @@ full:tnc3-alisc1.toutiaoapi.com
 full:tnc3-bjlgy.bytedance.com
 full:tnc3-bjlgy.snssdk.com
 full:tnc3-bjlgy.toutiaoapi.com
+full:tobapplog.ctobsnssdk.com
 full:toblog.ctobsnssdk.com
 full:tpa-hcdn.iqiyi.com
 full:tpc.googlesyndication-cn.com
