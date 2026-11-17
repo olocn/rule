@@ -3,6 +3,8 @@ DOMAIN-SUFFIX,colamanhua.com
 DOMAIN-SUFFIX,picacomic.com
 DOMAIN-SUFFIX,jmapiproxy3.cc
 DOMAIN-SUFFIX,jmdanjonproxy.vip
+DOMAIN-SUFFIX,cdnbtd.cc
+DOMAIN-SUFFIX,jmdanjonproxy.xyz
 DOMAIN-SUFFIX,cdnhjk.net
 DOMAIN-SUFFIX,nnhanman.com
 DOMAIN-SUFFIX,jjmhw8.top
@@ -15,7 +17,7 @@ DOMAIN-SUFFIX,aidoku.app
 DOMAIN-SUFFIX,jjmhw9.top
 DOMAIN-SUFFIX,jmapiproxy1.cc
 
-
+DOMAIN-SUFFIX,sehuatang.net
 DOMAIN-SUFFIX,adapty.io
 DOMAIN-SUFFIX,adaptytech.com
 DOMAIN-SUFFIX,bgm.tv
