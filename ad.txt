@@ -2,7 +2,7 @@
 qwertyuioplkjhg.vip
 windy-78.site
 
-Dypnsapi-dualstack.aliyuncs.com
+dypnsapi-dualstack.aliyuncs.com
 qchannel01.cn
 qchannel03.cn
 awaken.amap.com
@@ -267,6 +267,7 @@ onekey2.cmpassport.com
 # 中国联通
 opencloud.wostore.cn
 auth.wosms.cn
+ali.wosms.cn
 id.mail.wo.cn
 mdn.open.wo.cn
 hmrz.wo.cn
