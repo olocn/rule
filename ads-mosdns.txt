@@ -906,6 +906,7 @@ domain:aedns.weixin.qq.com
 domain:afs.ampaeservices.com
 domain:ahdohpiechei.com
 domain:amazon-adsystem.com
+domain:amdc.m.taobao.com
 domain:amplitude.com
 domain:analytics-api-01.smzdm.com
 domain:analytics-api.smzdm.com
@@ -925,6 +926,7 @@ domain:appsflyer.com
 domain:appsflyersdk.com
 domain:atrace.chelaile.net.cn
 domain:auth.wosms.cn
+domain:awaken.amap.com
 domain:bangdao-tech.com
 domain:banguomq.com
 domain:biligame.com
@@ -1049,6 +1051,7 @@ domain:onethingpcs.com
 domain:opencloud.wostore.cn
 domain:openinstall.com
 domain:openinstall.io
+domain:ossproxy.alibaba-inc.com
 domain:p.tencentmusic.com
 domain:p2p.bilibili.com
 domain:p2p.huya.com
@@ -1064,6 +1067,8 @@ domain:pkoplink.com
 domain:posthog.com
 domain:pplive-p2p.com
 domain:px.effirst.com
+domain:qchannel01.cn
+domain:qchannel03.cn
 domain:qh-cdn.com
 domain:qhimg.com
 domain:qhimgs.com

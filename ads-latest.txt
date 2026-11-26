@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-11-25)
+# Auto merged Surge rules (2026-11-26)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -907,6 +907,7 @@ DOMAIN-SUFFIX,aedns.weixin.qq.com
 DOMAIN-SUFFIX,afs.ampaeservices.com
 DOMAIN-SUFFIX,ahdohpiechei.com
 DOMAIN-SUFFIX,amazon-adsystem.com
+DOMAIN-SUFFIX,amdc.m.taobao.com
 DOMAIN-SUFFIX,amplitude.com
 DOMAIN-SUFFIX,analytics-api-01.smzdm.com
 DOMAIN-SUFFIX,analytics-api.smzdm.com
@@ -926,6 +927,7 @@ DOMAIN-SUFFIX,appsflyer.com
 DOMAIN-SUFFIX,appsflyersdk.com
 DOMAIN-SUFFIX,atrace.chelaile.net.cn
 DOMAIN-SUFFIX,auth.wosms.cn
+DOMAIN-SUFFIX,awaken.amap.com
 DOMAIN-SUFFIX,bangdao-tech.com
 DOMAIN-SUFFIX,banguomq.com
 DOMAIN-SUFFIX,biligame.com
@@ -1050,6 +1052,7 @@ DOMAIN-SUFFIX,onethingpcs.com
 DOMAIN-SUFFIX,opencloud.wostore.cn
 DOMAIN-SUFFIX,openinstall.com
 DOMAIN-SUFFIX,openinstall.io
+DOMAIN-SUFFIX,ossproxy.alibaba-inc.com
 DOMAIN-SUFFIX,p.tencentmusic.com
 DOMAIN-SUFFIX,p2p.bilibili.com
 DOMAIN-SUFFIX,p2p.huya.com
@@ -1065,6 +1068,8 @@ DOMAIN-SUFFIX,pkoplink.com
 DOMAIN-SUFFIX,posthog.com
 DOMAIN-SUFFIX,pplive-p2p.com
 DOMAIN-SUFFIX,px.effirst.com
+DOMAIN-SUFFIX,qchannel01.cn
+DOMAIN-SUFFIX,qchannel03.cn
 DOMAIN-SUFFIX,qh-cdn.com
 DOMAIN-SUFFIX,qhimg.com
 DOMAIN-SUFFIX,qhimgs.com

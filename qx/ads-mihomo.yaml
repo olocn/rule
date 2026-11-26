@@ -1,5 +1,5 @@
 # Auto merged Mihomo rules
-# Generated: 2026-11-25
+# Generated: 2026-11-26
 # behavior: domain
 payload:
   - '+.17admob.com'
@@ -38,6 +38,7 @@ payload:
   - '+.afs.ampaeservices.com'
   - '+.ahdohpiechei.com'
   - '+.amazon-adsystem.com'
+  - '+.amdc.m.taobao.com'
   - '+.amplitude.com'
   - '+.analytics-api-01.smzdm.com'
   - '+.analytics-api.smzdm.com'
@@ -57,6 +58,7 @@ payload:
   - '+.appsflyersdk.com'
   - '+.atrace.chelaile.net.cn'
   - '+.auth.wosms.cn'
+  - '+.awaken.amap.com'
   - '+.bangdao-tech.com'
   - '+.banguomq.com'
   - '+.biligame.com'
@@ -181,6 +183,7 @@ payload:
   - '+.opencloud.wostore.cn'
   - '+.openinstall.com'
   - '+.openinstall.io'
+  - '+.ossproxy.alibaba-inc.com'
   - '+.p.tencentmusic.com'
   - '+.p2p.bilibili.com'
   - '+.p2p.huya.com'
@@ -196,6 +199,8 @@ payload:
   - '+.posthog.com'
   - '+.pplive-p2p.com'
   - '+.px.effirst.com'
+  - '+.qchannel01.cn'
+  - '+.qchannel03.cn'
   - '+.qh-cdn.com'
   - '+.qhimg.com'
   - '+.qhimgs.com'
