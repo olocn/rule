@@ -963,6 +963,7 @@ domain:dnspod.meituan.httpdns.qcloud.com
 domain:dnspod.meituan.httpdns.start.qcloud.com
 domain:doh.iqiyi.com
 domain:dutils.com
+domain:dypnsapi-dualstack.aliyuncs.com
 domain:easytomessage.com
 domain:enrichgw.10010.com
 domain:erer.homeborn.cn

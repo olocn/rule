@@ -95,6 +95,7 @@ payload:
   - '+.dnspod.meituan.httpdns.start.qcloud.com'
   - '+.doh.iqiyi.com'
   - '+.dutils.com'
+  - '+.dypnsapi-dualstack.aliyuncs.com'
   - '+.easytomessage.com'
   - '+.enrichgw.10010.com'
   - '+.erer.homeborn.cn'
