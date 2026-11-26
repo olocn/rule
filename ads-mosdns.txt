@@ -905,6 +905,7 @@ domain:adxapi.readgps.com
 domain:aedns.weixin.qq.com
 domain:afs.ampaeservices.com
 domain:ahdohpiechei.com
+domain:ali.wosms.cn
 domain:amazon-adsystem.com
 domain:amdc.m.taobao.com
 domain:amplitude.com
@@ -1025,6 +1026,7 @@ domain:jiguang.cn
 domain:jomodns.cn
 domain:jpush.cn
 domain:js96110.com.cn
+domain:kcart.alipay.com
 domain:kf0309.3g.qq.com
 domain:kspcdn.com
 domain:kuiniuca.com

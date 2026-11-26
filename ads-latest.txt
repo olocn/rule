@@ -906,6 +906,7 @@ DOMAIN-SUFFIX,adxapi.readgps.com
 DOMAIN-SUFFIX,aedns.weixin.qq.com
 DOMAIN-SUFFIX,afs.ampaeservices.com
 DOMAIN-SUFFIX,ahdohpiechei.com
+DOMAIN-SUFFIX,ali.wosms.cn
 DOMAIN-SUFFIX,amazon-adsystem.com
 DOMAIN-SUFFIX,amdc.m.taobao.com
 DOMAIN-SUFFIX,amplitude.com
@@ -1026,6 +1027,7 @@ DOMAIN-SUFFIX,jiguang.cn
 DOMAIN-SUFFIX,jomodns.cn
 DOMAIN-SUFFIX,jpush.cn
 DOMAIN-SUFFIX,js96110.com.cn
+DOMAIN-SUFFIX,kcart.alipay.com
 DOMAIN-SUFFIX,kf0309.3g.qq.com
 DOMAIN-SUFFIX,kspcdn.com
 DOMAIN-SUFFIX,kuiniuca.com
