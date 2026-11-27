@@ -1,4 +1,4 @@
-# Auto merged Surge rules (2026-11-26)
+# Auto merged Surge rules (2026-11-27)
 DOMAIN,1500020991.vodplayer.wxamedia.com
 DOMAIN,1500022744.vodplayer.wxamedia.com
 DOMAIN,1500026601.vodplayer.wxamedia.com
@@ -46,7 +46,6 @@ DOMAIN,ad4.sina.com.cn
 DOMAIN,adapi.izuiyou.com
 DOMAIN,adapi.yynetwk.com
 DOMAIN,adash-emas.cn-hangzhou.aliyuncs.com
-DOMAIN,adashx.m.taobao.com
 DOMAIN,adbox.sina.com.cn
 DOMAIN,adc.hpplay.cn
 DOMAIN,adcanvas.com
@@ -895,6 +894,9 @@ DOMAIN-SUFFIX,aaid.uyunad.com
 DOMAIN-SUFFIX,abyss.cyapi.cn
 DOMAIN-SUFFIX,ad.gameley.com
 DOMAIN-SUFFIX,ad.hunyuan.tencent.com
+DOMAIN-SUFFIX,adashx.m.taobao.com
+DOMAIN-SUFFIX,adashx.ut.cainiao.com
+DOMAIN-SUFFIX,adashx.ut.dingtalk.com
 DOMAIN-SUFFIX,adintl.cn
 DOMAIN-SUFFIX,admobile.top
 DOMAIN-SUFFIX,adsmoloco.com
@@ -1123,6 +1125,7 @@ DOMAIN-SUFFIX,uhabo.com
 DOMAIN-SUFFIX,umeng.cn
 DOMAIN-SUFFIX,umengcloud.cn
 DOMAIN-SUFFIX,unityads.unity3d.com
+DOMAIN-SUFFIX,ut.amap.com
 DOMAIN-SUFFIX,ut.taobao.com
 DOMAIN-SUFFIX,verify.cmpassport.com
 DOMAIN-SUFFIX,vlion.cn

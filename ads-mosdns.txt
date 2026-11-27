@@ -45,7 +45,6 @@ full:ad4.sina.com.cn
 full:adapi.izuiyou.com
 full:adapi.yynetwk.com
 full:adash-emas.cn-hangzhou.aliyuncs.com
-full:adashx.m.taobao.com
 full:adbox.sina.com.cn
 full:adc.hpplay.cn
 full:adcanvas.com
@@ -894,6 +893,9 @@ domain:aaid.uyunad.com
 domain:abyss.cyapi.cn
 domain:ad.gameley.com
 domain:ad.hunyuan.tencent.com
+domain:adashx.m.taobao.com
+domain:adashx.ut.cainiao.com
+domain:adashx.ut.dingtalk.com
 domain:adintl.cn
 domain:admobile.top
 domain:adsmoloco.com
@@ -1122,6 +1124,7 @@ domain:uhabo.com
 domain:umeng.cn
 domain:umengcloud.cn
 domain:unityads.unity3d.com
+domain:ut.amap.com
 domain:ut.taobao.com
 domain:verify.cmpassport.com
 domain:vlion.cn
