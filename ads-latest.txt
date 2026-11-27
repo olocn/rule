@@ -307,7 +307,6 @@ DOMAIN,cn-da.anythinktech.com
 DOMAIN,cn-tk.anythinktech.com
 DOMAIN,cnlogs.umeng.com
 DOMAIN,cnlogs.umengcloud.com
-DOMAIN,cnzz.com
 DOMAIN,collect.kugou.com
 DOMAIN,commdata.v.qq.com
 DOMAIN,conf.hpplay.cn
@@ -952,6 +951,7 @@ DOMAIN-SUFFIX,channingkiki.top
 DOMAIN-SUFFIX,chaseherbalpasty.com
 DOMAIN-SUFFIX,cls.tencentcs.com
 DOMAIN-SUFFIX,cm.bilibili.com
+DOMAIN-SUFFIX,cnzz.com
 DOMAIN-SUFFIX,config.cmpassport.com
 DOMAIN-SUFFIX,data.bilibili.com
 DOMAIN-SUFFIX,dataflow.biliapi.com
@@ -1124,6 +1124,7 @@ DOMAIN-SUFFIX,ubixioe.com
 DOMAIN-SUFFIX,uhabo.com
 DOMAIN-SUFFIX,umeng.cn
 DOMAIN-SUFFIX,umengcloud.cn
+DOMAIN-SUFFIX,umsns.com
 DOMAIN-SUFFIX,unityads.unity3d.com
 DOMAIN-SUFFIX,ut.amap.com
 DOMAIN-SUFFIX,ut.taobao.com

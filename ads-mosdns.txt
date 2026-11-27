@@ -306,7 +306,6 @@ full:cn-da.anythinktech.com
 full:cn-tk.anythinktech.com
 full:cnlogs.umeng.com
 full:cnlogs.umengcloud.com
-full:cnzz.com
 full:collect.kugou.com
 full:commdata.v.qq.com
 full:conf.hpplay.cn
@@ -951,6 +950,7 @@ domain:channingkiki.top
 domain:chaseherbalpasty.com
 domain:cls.tencentcs.com
 domain:cm.bilibili.com
+domain:cnzz.com
 domain:config.cmpassport.com
 domain:data.bilibili.com
 domain:dataflow.biliapi.com
@@ -1123,6 +1123,7 @@ domain:ubixioe.com
 domain:uhabo.com
 domain:umeng.cn
 domain:umengcloud.cn
+domain:umsns.com
 domain:unityads.unity3d.com
 domain:ut.amap.com
 domain:ut.taobao.com
