@@ -5,6 +5,7 @@ windy-78.site
 cnzz.com
 umsns.com
 ut.amap.com
+amdc-thirdparty.alipay.com
 adashx.m.taobao.com
 adashx.ut.dingtalk.com
 adashx.ut.cainiao.com
