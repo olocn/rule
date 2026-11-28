@@ -908,6 +908,7 @@ domain:afs.ampaeservices.com
 domain:ahdohpiechei.com
 domain:ali.wosms.cn
 domain:amazon-adsystem.com
+domain:amdc-thirdparty.alipay.com
 domain:amdc.m.taobao.com
 domain:amplitude.com
 domain:analytics-api-01.smzdm.com
